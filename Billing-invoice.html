@@ -450,150 +450,160 @@
 
         /* Challenges Section */
         .challenges-section {
-            background: var(--card-bg);
+            margin-bottom: 80px;
+        }
+
+        .challenges-container {
+            background: rgba(15, 23, 42, 0.5);
             border-radius: 20px;
-            padding: 80px 60px;
-            margin-top: 80px;
-            border: 1px solid var(--card-border);
-            position: relative;
-            overflow: hidden;
+            padding: 50px;
+            border: 1px solid rgba(100, 116, 139, 0.2);
         }
 
         .challenges-title {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--secondary);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            background: var(--tech-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .challenges-grid {
+        .challenges-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 20px;
         }
 
         .challenge-item {
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 15px;
-            padding: 30px;
-            border-left: 4px solid var(--accent);
-        }
-
-        .challenge-item i {
-            color: var(--accent);
-            font-size: 1.5rem;
+            display: flex;
+            align-items: flex-start;
             margin-bottom: 15px;
         }
 
-        .challenge-title {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--light);
+        .challenge-icon {
+            color: #ef4444;
+            margin-right: 15px;
+            font-size: 1.2rem;
+            margin-top: 3px;
         }
 
-        .challenge-description {
-            color: var(--gray);
+        .challenge-text {
+            color: #94a3b8;
+            line-height: 1.7;
         }
 
-        /* Process Visualization */
+        /* Process Section */
         .process-section {
-            position: relative;
+            margin-bottom: 60px;
         }
-
-        .process-visual {
+        
+        .process-steps {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            margin-top: 60px;
             position: relative;
+            margin-top: 50px;
         }
-
-        .process-step {
-            text-align: center;
-            width: 180px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .process-step::before {
+        
+        .process-steps::before {
             content: '';
             position: absolute;
             top: 40px;
-            left: 90px;
-            width: 100%;
+            left: 0;
+            right: 0;
             height: 2px;
-            background: var(--tech-gradient);
-            z-index: -1;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            z-index: 1;
         }
-
-        .process-step:last-child::before {
-            display: none;
+        
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            flex: 1;
         }
-
-        .step-icon {
+        
+        .step-number {
             width: 80px;
             height: 80px;
-            background: var(--tech-gradient);
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
             font-size: 1.8rem;
+            font-weight: 700;
             color: var(--dark);
-            box-shadow: 0 5px 15px rgba(0, 102, 255, 0.3);
+            position: relative;
         }
-
+        
         .step-title {
             font-size: 1.2rem;
-            margin-bottom: 10px;
             color: var(--light);
+            margin-bottom: 10px;
         }
-
+        
         .step-description {
             color: var(--gray);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
         }
+        
 
         /* Technology Stack */
-        .tech-stack {
-            margin-top: 80px;
+         /* Technology Stack Section */
+        .tech-section {
+            background: rgba(10, 10, 26, 0.7);
+            border-radius: 10px;
+            padding: 60px;
+            margin-bottom: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
-
+        
+        .tech-section h2 {
+            text-align: center;
+            color: var(--secondary);
+            margin-bottom: 40px;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
         .tech-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
-            margin-top: 40px;
         }
-
+        
         .tech-category {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 30px;
             text-align: center;
-            border: 1px solid var(--card-border);
         }
-
-        .tech-icon {
-            font-size: 2.5rem;
-            color: var(--secondary);
-            margin-bottom: 20px;
-        }
-
-        .tech-title {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
+        
+        .tech-category h3 {
             color: var(--light);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            font-family: 'Orbitron', sans-serif;
         }
-
-        .tech-list {
-            list-style: none;
+        
+        .tech-items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
-
-        .tech-list li {
+        
+        .tech-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 15px;
+            border-radius: 8px;
             color: var(--gray);
-            margin-bottom: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .tech-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--light);
+            transform: translateY(-3px);
         }
 
         /* Benefits Section */
@@ -1063,172 +1073,180 @@
     </section>
 
     <!-- Challenges Section -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="challenges-section">
-                <h2 class="challenges-title">Challenges Without a Smart Billing System</h2>
-                <div class="challenges-grid">
-                    <div class="challenge-item">
+    <!-- Challenges Section -->
+<section class="section-padding challenges-section">
+    <div class="container">
+        <div class="challenges-container">
+            <h2 class="challenges-title">Challenges Without a Smart Billing System</h2>
+            <div class="challenges-list">
+                <div class="challenge-item">
+                    <div class="challenge-icon">
                         <i class="fas fa-exclamation-circle"></i>
-                        <h3 class="challenge-title">Manual Invoice Errors</h3>
-                        <p class="challenge-description">Manual data entry leads to errors that can result in revenue
-                            loss and client dissatisfaction.</p>
                     </div>
-
-                    <div class="challenge-item">
-                        <i class="fas fa-clock"></i>
-                        <h3 class="challenge-title">Payment Delays</h3>
-                        <p class="challenge-description">Slow invoicing processes cause delays in payments and
-                            complicate financial reconciliations.</p>
+                    <p class="challenge-text">Manual data entry leads to errors that can result in revenue loss and client dissatisfaction</p>
+                </div>
+                
+                <div class="challenge-item">
+                    <div class="challenge-icon">
+                        <i class="fas fa-exclamation-circle"></i>
                     </div>
-
-                    <div class="challenge-item">
-                        <i class="fas fa-eye-slash"></i>
-                        <h3 class="challenge-title">Poor Financial Visibility</h3>
-                        <p class="challenge-description">Lack of real-time insights into cash flow and financial health
-                            hinders strategic decision-making.</p>
+                    <p class="challenge-text">Slow invoicing processes cause delays in payments and complicate financial reconciliations</p>
+                </div>
+                
+                <div class="challenge-item">
+                    <div class="challenge-icon">
+                        <i class="fas fa-exclamation-circle"></i>
                     </div>
-
-                    <div class="challenge-item">
-                        <i class="fas fa-file-contract"></i>
-                        <h3 class="challenge-title">Tax Compliance Issues</h3>
-                        <p class="challenge-description">Difficulty in maintaining accurate tax records and compliance
-                            reporting increases audit risks.</p>
+                    <p class="challenge-text">Lack of real-time insights into cash flow and financial health hinders strategic decision-making</p>
+                </div>
+                
+                <div class="challenge-item">
+                    <div class="challenge-icon">
+                        <i class="fas fa-exclamation-circle"></i>
                     </div>
-
-                    <div class="challenge-item">
-                        <i class="fas fa-redo"></i>
-                        <h3 class="challenge-title">No Recurring Billing</h3>
-                        <p class="challenge-description">Manual handling of subscription payments leads to
-                            inefficiencies and potential revenue leakage.</p>
+                    <p class="challenge-text">Difficulty in maintaining accurate tax records and compliance reporting increases audit risks</p>
+                </div>
+                
+                <div class="challenge-item">
+                    <div class="challenge-icon">
+                        <i class="fas fa-exclamation-circle"></i>
                     </div>
-
-                    <div class="challenge-item">
-                        <i class="fas fa-chart-pie"></i>
-                        <h3 class="challenge-title">Limited Reporting</h3>
-                        <p class="challenge-description">Inadequate reporting capabilities make it difficult to analyze
-                            business performance and trends.</p>
+                    <p class="challenge-text">Manual handling of subscription payments leads to inefficiencies and potential revenue leakage</p>
+                </div>
+                
+                <div class="challenge-item">
+                    <div class="challenge-icon">
+                        <i class="fas fa-exclamation-circle"></i>
                     </div>
+                    <p class="challenge-text">Inadequate reporting capabilities make it difficult to analyze business performance and trends</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Process Visualization -->
-    <section class="process-section section-padding">
-        <div class="container">
-            <h2 class="section-title">Our Development <span>Process</span></h2>
-            <p class="section-subtitle">A systematic approach to building your perfect billing and invoice solution</p>
-
-            <div class="process-visual">
-                <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-clipboard-list"></i>
-                    </div>
-                    <h3 class="step-title">Requirement Analysis</h3>
-                    <p class="step-description">Understand your billing workflow, payment structure, and compliance
-                        needs</p>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-pencil-ruler"></i>
-                    </div>
-                    <h3 class="step-title">System Design</h3>
-                    <p class="step-description">Build UI/UX wireframes and data architecture for ease of use</p>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3 class="step-title">Development</h3>
-                    <p class="step-description">Code and connect payment gateways, databases, and modules</p>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-vial"></i>
-                    </div>
-                    <h3 class="step-title">Testing & Validation</h3>
-                    <p class="step-description">Verify accuracy in transactions and security compliance</p>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3 class="step-title">Deployment & Support</h3>
-                    <p class="step-description">Launch on cloud and provide ongoing updates and maintenance</p>
-                </div>
-            </div>
+    <!-- Process Section -->
+<div class="process-section">
+    <h2 class="section-title">Our Development <span>Process</span></h2>
+    <p class="section-subtitle">A systematic approach to building your perfect billing and invoice solution</p>
+    
+    <div class="process-steps">
+        <div class="process-step">
+            <div class="step-number">1</div>
+            <h3 class="step-title">Requirement Analysis</h3>
+            <p class="step-description">Understand your billing workflow, payment structure, and compliance needs</p>
         </div>
-    </section>
+        
+        <div class="process-step">
+            <div class="step-number">2</div>
+            <h3 class="step-title">System Design</h3>
+            <p class="step-description">Build UI/UX wireframes and data architecture for ease of use</p>
+        </div>
+        
+        <div class="process-step">
+            <div class="step-number">3</div>
+            <h3 class="step-title">Development</h3>
+            <p class="step-description">Code and connect payment gateways, databases, and modules</p>
+        </div>
+        
+        <div class="process-step">
+            <div class="step-number">4</div>
+            <h3 class="step-title">Testing & Validation</h3>
+            <p class="step-description">Verify accuracy in transactions and security compliance</p>
+        </div>
+        
+        <div class="process-step">
+            <div class="step-number">5</div>
+            <h3 class="step-title">Deployment</h3>
+            <p class="step-description">Launch on cloud with minimal business disruption</p>
+        </div>
+        
+        <div class="process-step">
+            <div class="step-number">6</div>
+            <h3 class="step-title">Support & Updates</h3>
+            <p class="step-description">Provide ongoing maintenance and feature enhancements</p>
+        </div>
+    </div>
+</div>
 
     <!-- Technology Stack -->
     <section class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Technology <span>Stack</span></h2>
-            <p class="section-subtitle">We leverage cutting-edge technologies to build secure, scalable, and efficient
-                billing solutions</p>
+    <div class="container">
+        <div class="tech-section">
+            <h2>Our Technology Stack</h2>
+            <p class="section-subtitle">We leverage cutting-edge technologies to build secure, scalable, and efficient billing solutions</p>
 
-            <div class="tech-stack">
-                <div class="tech-grid">
-                    <div class="tech-category">
-                        <div class="tech-icon">
-                            <i class="fab fa-react"></i>
-                        </div>
-                        <h3 class="tech-title">Frontend</h3>
-                        <ul class="tech-list">
-                            <li>React, Angular</li>
-                            <li>TypeScript, JavaScript</li>
-                            <li>HTML5, CSS3</li>
-                            <li>Bootstrap, Material UI</li>
-                        </ul>
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <h3>Frontend Technologies</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">React</div>
+                        <div class="tech-item">Angular</div>
+                        <div class="tech-item">TypeScript</div>
+                        <div class="tech-item">JavaScript</div>
+                        <div class="tech-item">HTML5/CSS3</div>
                     </div>
-
-                    <div class="tech-category">
-                        <div class="tech-icon">
-                            <i class="fas fa-server"></i>
-                        </div>
-                        <h3 class="tech-title">Backend</h3>
-                        <ul class="tech-list">
-                            <li>Node.js, Laravel</li>
-                            <li>Python, .NET</li>
-                            <li>PostgreSQL, MongoDB</li>
-                            <li>MySQL, Redis</li>
-                        </ul>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>Backend Technologies</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">Node.js</div>
+                        <div class="tech-item">Python</div>
+                        <div class="tech-item">Laravel</div>
+                        <div class="tech-item">.NET</div>
+                        <div class="tech-item">Java</div>
                     </div>
-
-                    <div class="tech-category">
-                        <div class="tech-icon">
-                            <i class="fas fa-money-check-alt"></i>
-                        </div>
-                        <h3 class="tech-title">Payment Gateways</h3>
-                        <ul class="tech-list">
-                            <li>Stripe, Razorpay</li>
-                            <li>PayPal, Cashfree</li>
-                            <li>Square, Authorize.net</li>
-                            <li>Multiple currency support</li>
-                        </ul>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>Databases</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">PostgreSQL</div>
+                        <div class="tech-item">MySQL</div>
+                        <div class="tech-item">MongoDB</div>
+                        <div class="tech-item">Redis</div>
+                        <div class="tech-item">SQL Server</div>
                     </div>
-
-                    <div class="tech-category">
-                        <div class="tech-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3 class="tech-title">Security</h3>
-                        <ul class="tech-list">
-                            <li>SSL Encryption</li>
-                            <li>OAuth2.0, JWT</li>
-                            <li>Role-based access</li>
-                            <li>Data encryption at rest</li>
-                        </ul>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>Payment Gateways</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">Stripe</div>
+                        <div class="tech-item">Razorpay</div>
+                        <div class="tech-item">PayPal</div>
+                        <div class="tech-item">Square</div>
+                        <div class="tech-item">Authorize.net</div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>Security & Compliance</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">SSL Encryption</div>
+                        <div class="tech-item">OAuth2.0</div>
+                        <div class="tech-item">JWT Tokens</div>
+                        <div class="tech-item">PCI DSS</div>
+                        <div class="tech-item">GDPR Compliance</div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>Cloud & Deployment</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">AWS</div>
+                        <div class="tech-item">Azure</div>
+                        <div class="tech-item">Google Cloud</div>
+                        <div class="tech-item">Docker</div>
+                        <div class="tech-item">Kubernetes</div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Benefits Section -->
     <section class="section-padding">

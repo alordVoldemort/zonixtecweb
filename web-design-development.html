@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <link rel="icon" href="./Assets/WhatsApp Image 2025-10-15 at 15.47.06.jpeg" sizes="32x32" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -21,13 +24,13 @@
             --gray: #888;
             --success: #27ae60;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #0f172a, #1e293b);
@@ -35,46 +38,59 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Orbitron', sans-serif;
             font-weight: 600;
             margin-bottom: 1rem;
         }
-        
+
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         .section-padding {
             padding: 80px 0;
         }
-        
+
         .section-title {
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 3rem;
             position: relative;
         }
-        
+
         .section-title span {
             color: var(--secondary);
             position: relative;
         }
-        
+
         .section-title span.pulse {
             animation: pulse 2s infinite;
         }
-        
+
         @keyframes pulse {
-            0% { text-shadow: 0 0 5px var(--secondary); }
-            50% { text-shadow: 0 0 20px var(--secondary), 0 0 30px var(--secondary); }
-            100% { text-shadow: 0 0 5px var(--secondary); }
+            0% {
+                text-shadow: 0 0 5px var(--secondary);
+            }
+
+            50% {
+                text-shadow: 0 0 20px var(--secondary), 0 0 30px var(--secondary);
+            }
+
+            100% {
+                text-shadow: 0 0 5px var(--secondary);
+            }
         }
-        
+
         .hero-subtitle {
             text-align: center;
             font-size: 1.2rem;
@@ -84,7 +100,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         /* Header Styles */
         header {
             background: rgba(15, 23, 42, 0.85);
@@ -96,18 +112,18 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
             border-bottom: 1px solid rgba(100, 116, 139, 0.2);
         }
-        
+
         header.scrolled {
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         }
-        
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 0;
         }
-        
+
         .logo {
             font-family: 'Orbitron', sans-serif;
             font-size: 1.8rem;
@@ -115,20 +131,21 @@
             color: var(--light);
             text-decoration: none;
         }
-        
+
         .logo span {
             color: var(--secondary);
         }
-        
+
         .logo .tech {
-color: var(--secondary);        }
-        
+            color: var(--secondary);
+        }
+
         .nav-links {
             display: flex;
             align-items: center;
             gap: 30px;
         }
-        
+
         .nav-links a {
             color: var(--light);
             text-decoration: none;
@@ -136,11 +153,12 @@ color: var(--secondary);        }
             transition: color 0.3s ease;
             position: relative;
         }
-        
-        .nav-links a:hover, .nav-links a.active {
+
+        .nav-links a:hover,
+        .nav-links a.active {
             color: var(--secondary);
         }
-        
+
         .nav-links a.active::after {
             content: '';
             position: absolute;
@@ -150,7 +168,7 @@ color: var(--secondary);        }
             height: 2px;
             background-color: var(--secondary);
         }
-        
+
         .cta-buttons {
             background: linear-gradient(45deg, var(--primary), var(--secondary));
             color: var(--dark);
@@ -159,18 +177,18 @@ color: var(--secondary);        }
             font-weight: 600;
             transition: all 0.3s ease;
         }
-        
+
         .cta-buttons:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0, 102, 255, 0.3);
         }
-        
+
         .mobile-menu-btn {
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
         }
-        
+
         /* ===== Dropdown Styles ===== */
         .dropdown {
             position: relative;
@@ -236,32 +254,35 @@ color: var(--secondary);        }
 
 
 
-          .dropdown-scroll {
-    max-height: 300px; /* Slightly less than parent to account for padding */
-    overflow-y: auto; /* Enable vertical scrolling */
-    padding: 8px 0; /* Add padding to scroll container */
-}
+        .dropdown-scroll {
+            max-height: 300px;
+            /* Slightly less than parent to account for padding */
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+            padding: 8px 0;
+            /* Add padding to scroll container */
+        }
 
-/* Custom scrollbar styling */
-.dropdown-scroll::-webkit-scrollbar {
-    width: 6px;
-}
+        /* Custom scrollbar styling */
+        .dropdown-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
 
-.dropdown-scroll::-webkit-scrollbar-track {
-    background: rgba(15, 23, 42, 0.5);
-    border-radius: 3px;
-}
+        .dropdown-scroll::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 3px;
+        }
 
-.dropdown-scroll::-webkit-scrollbar-thumb {
-    background: var(--secondary);
-    border-radius: 3px;
-}
+        .dropdown-scroll::-webkit-scrollbar-thumb {
+            background: var(--secondary);
+            border-radius: 3px;
+        }
 
-.dropdown-scroll::-webkit-scrollbar-thumb:hover {
-    background: var(--primary);
-}
+        .dropdown-scroll::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
 
-        
+
 
 
 
@@ -270,12 +291,13 @@ color: var(--secondary);        }
                 opacity: 0;
                 transform: translateY(-8px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         /* Service Hero */
         .service-hero {
             padding-top: 150px;
@@ -284,7 +306,7 @@ color: var(--secondary);        }
             position: relative;
             overflow: hidden;
         }
-        
+
         .service-hero::before {
             content: '';
             position: absolute;
@@ -295,20 +317,20 @@ color: var(--secondary);        }
             background: radial-gradient(circle at top right, rgba(0, 102, 255, 0.1), transparent 70%);
             z-index: -1;
         }
-        
+
         .service-hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
             color: var(--primary);
         }
-        
+
         .service-hero p {
             font-size: 1.3rem;
             color: var(--gray);
             max-width: 800px;
             margin: 0 auto 2rem;
         }
-        
+
         .hero-cta {
             display: inline-block;
             background: linear-gradient(45deg, var(--primary), var(--secondary));
@@ -321,76 +343,78 @@ color: var(--secondary);        }
             transition: all 0.3s ease;
             margin-top: 20px;
         }
-        
+
         .hero-cta:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 102, 255, 0.3);
         }
-        
-       .overview-section {
-    background: rgba(10, 10, 26, 0.7);
-    border-radius: 10px;
-    padding: 60px;
-    margin-bottom: 60px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
 
-.overview-section h2 {
-    text-align: center;
-    color: var(--secondary);
-    margin-bottom: 40px;
-    font-size: 2.2rem;
-}
+        .overview-section {
+            background: rgba(10, 10, 26, 0.7);
+            border-radius: 10px;
+            padding: 60px;
+            margin-bottom: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
 
-.overview-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
+        .overview-section h2 {
+            text-align: center;
+            color: var(--secondary);
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+        }
 
-.overview-text {
-    font-size: 1.1rem;
-    color: var(--gray);
-    line-height: 1.8;
-    text-align: left; /* Ensure text is left-aligned */
-}
+        .overview-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
 
-.overview-text p {
-    margin-bottom: 20px;
-    text-align: justify; /* Optional: makes text look more polished */
-}
+        .overview-text {
+            font-size: 1.1rem;
+            color: var(--gray);
+            line-height: 1.8;
+            text-align: left;
+            /* Ensure text is left-aligned */
+        }
 
-.overview-highlight-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
+        .overview-text p {
+            margin-bottom: 20px;
+            text-align: justify;
+            /* Optional: makes text look more polished */
+        }
 
-.overview-highlight {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--secondary);
-    text-align: center;
-    padding: 30px;
-    background: rgba(0, 102, 255, 0.1);
-    border-radius: 10px;
-    border: 1px solid rgba(0, 102, 255, 0.3);
-    line-height: 1.4;
-}
+        .overview-highlight-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .overview-highlight {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--secondary);
+            text-align: center;
+            padding: 30px;
+            background: rgba(0, 102, 255, 0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(0, 102, 255, 0.3);
+            line-height: 1.4;
+        }
 
         /* Service Offerings */
         .offerings-section {
             margin-bottom: 60px;
         }
-        
+
         .offerings-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
-        
+
         .offering-card {
             background: rgba(10, 10, 26, 0.7);
             border-radius: 10px;
@@ -399,13 +423,13 @@ color: var(--secondary);        }
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.3s ease;
         }
-        
+
         .offering-card:hover {
             transform: translateY(-10px);
             border-color: var(--primary);
             box-shadow: 0 15px 30px rgba(0, 102, 255, 0.2);
         }
-        
+
         .offering-icon {
             width: 80px;
             height: 80px;
@@ -418,29 +442,29 @@ color: var(--secondary);        }
             font-size: 2rem;
             color: var(--dark);
         }
-        
+
         .offering-title {
             font-size: 1.5rem;
             color: var(--light);
             margin-bottom: 15px;
         }
-        
+
         .offering-description {
             color: var(--gray);
             line-height: 1.6;
         }
-        
+
         /* Features Section */
         .features-section {
             margin-bottom: 60px;
         }
-        
+
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
         }
-        
+
         .feature-item {
             background: rgba(10, 10, 26, 0.7);
             padding: 25px;
@@ -451,12 +475,12 @@ color: var(--secondary);        }
             gap: 15px;
             transition: all 0.3s ease;
         }
-        
+
         .feature-item:hover {
             border-color: var(--success);
             transform: translateY(-5px);
         }
-        
+
         .feature-icon {
             width: 50px;
             height: 50px;
@@ -469,130 +493,118 @@ color: var(--secondary);        }
             font-size: 1.3rem;
             flex-shrink: 0;
         }
-        
+
         .feature-content h3 {
             color: var(--light);
             font-size: 1.2rem;
             margin-bottom: 10px;
         }
-        
+
         .feature-content p {
             color: var(--gray);
             margin: 0;
         }
-        
+
         /* Challenges Section */
         .challenges-section {
-            background: rgba(10, 10, 26, 0.7);
-            border-radius: 10px;
-            padding: 60px;
-            margin-bottom: 60px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 80px;
         }
-        
-        .challenges-section h2 {
+
+        .challenges-container {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 20px;
+            padding: 50px;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+        }
+
+        .challenges-title {
             text-align: center;
-            color: var(--secondary);
-            margin-bottom: 40px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-        
-        .challenges-grid {
+
+        .challenges-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            gap: 20px;
         }
-        
+
         .challenge-item {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 25px;
-            border-radius: 10px;
             display: flex;
             align-items: flex-start;
-            gap: 15px;
-            transition: all 0.3s ease;
+            margin-bottom: 15px;
         }
-        
-        .challenge-item:hover {
-            background: rgba(255, 255, 255, 0.05);
-            transform: translateY(-5px);
-        }
-        
+
         .challenge-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 51, 102, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent);
-            font-size: 1.3rem;
-            flex-shrink: 0;
-        }
-        
-        .challenge-content h3 {
-            color: var(--light);
+            color: #ef4444;
+            margin-right: 15px;
             font-size: 1.2rem;
-            margin-bottom: 10px;
+            margin-top: 3px;
         }
-        
-        .challenge-content p {
-            color: var(--gray);
-            margin: 0;
+
+        .challenge-text {
+            color: #94a3b8;
+            line-height: 1.7;
         }
-        
+
+
         /* Advantage Section */
         .advantage-section {
             margin-bottom: 60px;
         }
-        
+
         .advantage-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
             align-items: center;
         }
-        
+
         .advantage-text {
             font-size: 1.1rem;
             color: var(--gray);
             line-height: 1.8;
         }
-        
+
         .advantage-text p {
             margin-bottom: 20px;
         }
-        
+
         .advantage-list {
             list-style: none;
             margin-top: 20px;
         }
-        
+
         .advantage-list li {
             margin-bottom: 15px;
             display: flex;
             align-items: flex-start;
             gap: 10px;
         }
-        
+
         .advantage-list i {
             color: var(--secondary);
             margin-top: 5px;
             flex-shrink: 0;
         }
-        
+
         /* Process Section */
         .process-section {
             margin-bottom: 60px;
         }
-        
+
         .process-steps {
             display: flex;
             justify-content: space-between;
             position: relative;
             margin-top: 50px;
         }
-        
+
         .process-steps::before {
             content: '';
             position: absolute;
@@ -603,14 +615,14 @@ color: var(--secondary);        }
             background: linear-gradient(to right, var(--primary), var(--secondary));
             z-index: 1;
         }
-        
+
         .process-step {
             text-align: center;
             position: relative;
             z-index: 2;
             flex: 1;
         }
-        
+
         .step-number {
             width: 80px;
             height: 80px;
@@ -625,18 +637,18 @@ color: var(--secondary);        }
             color: var(--dark);
             position: relative;
         }
-        
+
         .step-title {
             font-size: 1.2rem;
             color: var(--light);
             margin-bottom: 10px;
         }
-        
+
         .step-description {
             color: var(--gray);
             font-size: 0.95rem;
         }
-        
+
         /* Technology Stack */
         .tech-section {
             background: rgba(10, 10, 26, 0.7);
@@ -645,35 +657,35 @@ color: var(--secondary);        }
             margin-bottom: 60px;
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
+
         .tech-section h2 {
             text-align: center;
             color: var(--secondary);
             margin-bottom: 40px;
         }
-        
+
         .tech-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
         }
-        
+
         .tech-category {
             text-align: center;
         }
-        
+
         .tech-category h3 {
             color: var(--light);
             margin-bottom: 20px;
             font-size: 1.3rem;
         }
-        
+
         .tech-items {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-        
+
         .tech-item {
             background: rgba(255, 255, 255, 0.05);
             padding: 12px 15px;
@@ -681,24 +693,24 @@ color: var(--secondary);        }
             color: var(--gray);
             transition: all 0.3s ease;
         }
-        
+
         .tech-item:hover {
             background: rgba(255, 255, 255, 0.08);
             color: var(--light);
             transform: translateY(-3px);
         }
-        
+
         /* Impact Section */
         .impact-section {
             margin-bottom: 60px;
         }
-        
+
         .impact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 25px;
         }
-        
+
         .impact-item {
             background: rgba(10, 10, 26, 0.7);
             padding: 30px;
@@ -707,12 +719,12 @@ color: var(--secondary);        }
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.3s ease;
         }
-        
+
         .impact-item:hover {
             border-color: var(--secondary);
             transform: translateY(-5px);
         }
-        
+
         .impact-icon {
             width: 70px;
             height: 70px;
@@ -725,18 +737,18 @@ color: var(--secondary);        }
             font-size: 1.8rem;
             margin: 0 auto 20px;
         }
-        
+
         .impact-item h3 {
             color: var(--light);
             font-size: 1.2rem;
             margin-bottom: 15px;
         }
-        
+
         .impact-item p {
             color: var(--gray);
             margin: 0;
         }
-        
+
         /* FAQ Section */
         .faq-section {
             background: rgba(10, 10, 26, 0.7);
@@ -745,18 +757,18 @@ color: var(--secondary);        }
             margin-bottom: 60px;
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
+
         .faq-section h2 {
             text-align: center;
             color: var(--secondary);
             margin-bottom: 40px;
         }
-        
+
         .faq-container {
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         .faq-item {
             background: rgba(255, 255, 255, 0.03);
             border-radius: 10px;
@@ -764,7 +776,7 @@ color: var(--secondary);        }
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
+
         .faq-question {
             padding: 25px 30px;
             cursor: pointer;
@@ -776,20 +788,20 @@ color: var(--secondary);        }
             color: var(--light);
             transition: all 0.3s ease;
         }
-        
+
         .faq-question:hover {
             color: var(--secondary);
         }
-        
+
         .faq-question i {
             transition: transform 0.3s ease;
             color: var(--primary);
         }
-        
+
         .faq-item.active .faq-question i {
             transform: rotate(180deg);
         }
-        
+
         .faq-answer {
             padding: 0 30px;
             max-height: 0;
@@ -798,12 +810,12 @@ color: var(--secondary);        }
             color: var(--gray);
             line-height: 1.7;
         }
-        
+
         .faq-item.active .faq-answer {
             padding: 0 30px 25px;
             max-height: 500px;
         }
-        
+
         /* CTA Section */
         .cta-section {
             padding: 80px 40px;
@@ -813,12 +825,12 @@ color: var(--secondary);        }
             border-radius: 10px;
             margin-top: 60px;
         }
-        
+
         .cta-section h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
         }
-        
+
         .cta-section p {
             font-size: 1.2rem;
             margin-bottom: 30px;
@@ -826,7 +838,7 @@ color: var(--secondary);        }
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .cta-button {
             display: inline-block;
             background: var(--dark);
@@ -838,43 +850,43 @@ color: var(--secondary);        }
             font-size: 1.1rem;
             transition: all 0.3s ease;
         }
-        
+
         .cta-button:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
-        
+
         /* Footer */
         .footer {
             /* background: var(--dark-light); */
             padding: 60px 0 20px;
             margin-top: 80px;
         }
-        
+
         .footer-container {
             display: grid;
             grid-template-columns: repeat(4, minmax(150px, 1fr));
             gap: 40px;
             margin-bottom: 40px;
         }
-        
+
         .footer-col h3 {
             color: var(--secondary);
             margin-bottom: 20px;
             font-size: 1.3rem;
         }
-        
+
         .footer-col p {
             color: var(--gray);
             margin-bottom: 20px;
         }
-        
+
         .footer-links {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-        
+
         .footer-links a {
             color: var(--gray);
             text-decoration: none;
@@ -883,15 +895,15 @@ color: var(--secondary);        }
             align-items: center;
             gap: 10px;
         }
-        
+
         .footer-links a:hover {
             color: var(--secondary);
         }
-        
+
         .footer-links a i {
             font-size: 0.8rem;
         }
-        
+
         .footer-bottom {
             text-align: center;
             padding-top: 20px;
@@ -920,26 +932,28 @@ color: var(--secondary);        }
 
         .footer-links ul ul {
             margin-left: 15px;
-            border-left: 1px solid rgba(255,255,255,0.2);
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
             padding-left: 15px;
         }
 
         /* Responsive Styles */
         @media (max-width: 992px) {
-            .overview-content, .advantage-content {
+
+            .overview-content,
+            .advantage-content {
                 grid-template-columns: 1fr;
             }
-            
+
             .process-steps {
                 flex-direction: column;
                 gap: 40px;
             }
-            
+
             .process-steps::before {
                 display: none;
             }
         }
-        
+
         @media (max-width: 768px) {
             .footer-container {
                 display: flex;
@@ -947,11 +961,12 @@ color: var(--secondary);        }
                 gap: 40px;
                 margin-bottom: 40px;
             }
-            
-            .nav-links a:hover, .nav-links a.active {
+
+            .nav-links a:hover,
+            .nav-links a.active {
                 color: var(--secondary);
             }
-            
+
             .nav-links {
                 display: none;
                 position: absolute;
@@ -963,43 +978,50 @@ color: var(--secondary);        }
                 padding: 20px;
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
             }
-            
+
             .nav-links.active {
                 display: flex;
             }
-            
+
             .mobile-menu-btn {
                 display: block;
             }
-            
+
             .service-hero h1 {
                 font-size: 2.5rem;
             }
-            
+
             .section-title {
                 font-size: 2rem;
             }
-            
-            .overview-section, .tech-section, .faq-section {
+
+            .overview-section,
+            .tech-section,
+            .faq-section {
                 padding: 40px 20px;
             }
-            
+
             .cta-section {
                 padding: 60px 20px;
             }
         }
-        
+
         @media (max-width: 576px) {
-            .offerings-grid, .features-grid, .challenges-grid, .impact-grid {
+
+            .offerings-grid,
+            .features-grid,
+            .challenges-grid,
+            .impact-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .tech-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header id="header">
@@ -1011,10 +1033,11 @@ color: var(--secondary);        }
                 <div class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="aboutus.html">About</a>
-                    
+
                     <!-- Services Dropdown -->
                     <div class="dropdown">
-                        <a href="Services.html" class="active dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                        <a href="Services.html" class="active dropdown-toggle">Services <i
+                                class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-content">
                             <div class="dropdown-scroll">
                                 <a href="web-design-development.html">Web Design & Development</a>
@@ -1031,7 +1054,7 @@ color: var(--secondary);        }
                             </div>
                         </div>
                     </div>
-                    
+
                     <a href="carrer.html">Career</a>
                     <a href="contact.html">Contact</a>
                     <a href="contact.html" class="cta-buttons">Get Started</a>
@@ -1042,37 +1065,42 @@ color: var(--secondary);        }
             </nav>
         </div>
     </header>
-    
+
     <!-- Service Hero -->
     <section class="service-hero">
         <div class="container">
             <h1>Web Design & Development Services</h1>
-            <p>Empower your brand with responsive designs, seamless performance, and modern web experiences that engage users and drive business growth.</p>
+            <p>Empower your brand with responsive designs, seamless performance, and modern web experiences that engage
+                users and drive business growth.</p>
             <a href="contact.html" class="hero-cta">Let's Build Your Digital Presence</a>
         </div>
     </section>
-    
+
     <!-- Overview Section -->
     <section class="section-padding">
         <div class="container">
             <div class="overview-section">
-            <h2>Design | Develop | Deliver</h2>
-            <div class="overview-content">
-                <div class="overview-text">
-                    <p>At Zonixtec, we create digital experiences that leave a lasting impression. Our Web Design & Development services blend creativity with technology—building responsive, fast, and visually stunning websites that reflect your brand's vision while ensuring flawless performance across devices.</p>
-                    <p>From concept to code, we make sure your website becomes your strongest business asset.</p>
-                </div>
-                <div class="overview-highlight-container">
-                    <div class="overview-highlight">Your Vision, Our Code, Exceptional Results</div>
+                <h2>Design | Develop | Deliver</h2>
+                <div class="overview-content">
+                    <div class="overview-text">
+                        <p>At Zonixtec, we create digital experiences that leave a lasting impression. Our Web Design &
+                            Development services blend creativity with technology—building responsive, fast, and
+                            visually stunning websites that reflect your brand's vision while ensuring flawless
+                            performance across devices.</p>
+                        <p>From concept to code, we make sure your website becomes your strongest business asset.</p>
+                    </div>
+                    <div class="overview-highlight-container">
+                        <div class="overview-highlight">Your Vision, Our Code, Exceptional Results</div>
+                    </div>
                 </div>
             </div>
-        </div>
-            
+
             <!-- Service Offerings -->
             <div class="offerings-section">
                 <h2 class="section-title">Our Web Design & Development <span>Services</span></h2>
-                <p class="hero-subtitle">Crafted to meet diverse business goals—whether it's building a corporate website, an e-commerce store, or a custom web application.</p>
-                
+                <p class="hero-subtitle">Crafted to meet diverse business goals—whether it's building a corporate
+                    website, an e-commerce store, or a custom web application.</p>
+
                 <div class="offerings-grid">
                     <!-- Offering 1 -->
                     <div class="offering-card">
@@ -1080,51 +1108,56 @@ color: var(--secondary);        }
                             <i class="fas fa-palette"></i>
                         </div>
                         <h3 class="offering-title">UI/UX Design</h3>
-                        <p class="offering-description">Create visually appealing and user-friendly interfaces that boost engagement and conversions.</p>
+                        <p class="offering-description">Create visually appealing and user-friendly interfaces that
+                            boost engagement and conversions.</p>
                     </div>
-                    
+
                     <!-- Offering 2 -->
                     <div class="offering-card">
                         <div class="offering-icon">
                             <i class="fas fa-laptop-code"></i>
                         </div>
                         <h3 class="offering-title">Responsive Web Development</h3>
-                        <p class="offering-description">Ensure seamless performance across all devices and browsers with mobile-first approach.</p>
+                        <p class="offering-description">Ensure seamless performance across all devices and browsers with
+                            mobile-first approach.</p>
                     </div>
-                    
+
                     <!-- Offering 3 -->
                     <div class="offering-card">
                         <div class="offering-icon">
                             <i class="fas fa-shopping-cart"></i>
                         </div>
                         <h3 class="offering-title">E-commerce Solutions</h3>
-                        <p class="offering-description">Build secure, scalable, and conversion-optimized online stores with integrated payment systems.</p>
+                        <p class="offering-description">Build secure, scalable, and conversion-optimized online stores
+                            with integrated payment systems.</p>
                     </div>
-                    
+
                     <!-- Offering 4 -->
                     <div class="offering-card">
                         <div class="offering-icon">
                             <i class="fas fa-cogs"></i>
                         </div>
                         <h3 class="offering-title">CMS Development</h3>
-                        <p class="offering-description">Manage and update your content effortlessly with custom WordPress, Drupal, or headless CMS solutions.</p>
+                        <p class="offering-description">Manage and update your content effortlessly with custom
+                            WordPress, Drupal, or headless CMS solutions.</p>
                     </div>
-                    
+
                     <!-- Offering 5 -->
                     <div class="offering-card">
                         <div class="offering-icon">
                             <i class="fas fa-code"></i>
                         </div>
                         <h3 class="offering-title">Custom Web Applications</h3>
-                        <p class="offering-description">Tailor-made web solutions to automate workflows, enhance productivity, and solve unique business challenges.</p>
+                        <p class="offering-description">Tailor-made web solutions to automate workflows, enhance
+                            productivity, and solve unique business challenges.</p>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Features Section -->
             <div class="features-section">
                 <h2 class="section-title">Features of Our <span>Solutions</span></h2>
-                
+
                 <div class="features-grid">
                     <div class="feature-item">
                         <div class="feature-icon">
@@ -1135,7 +1168,7 @@ color: var(--secondary);        }
                             <p>Superior user experience designed to engage visitors and drive conversions.</p>
                         </div>
                     </div>
-                    
+
                     <div class="feature-item">
                         <div class="feature-icon">
                             <i class="fas fa-search"></i>
@@ -1145,7 +1178,7 @@ color: var(--secondary);        }
                             <p>Built with search engine visibility in mind from the ground up.</p>
                         </div>
                     </div>
-                    
+
                     <div class="feature-item">
                         <div class="feature-icon">
                             <i class="fas fa-expand-arrows-alt"></i>
@@ -1155,7 +1188,7 @@ color: var(--secondary);        }
                             <p>Future-proof solutions designed for long-term growth and expansion.</p>
                         </div>
                     </div>
-                    
+
                     <div class="feature-item">
                         <div class="feature-icon">
                             <i class="fas fa-tachometer-alt"></i>
@@ -1165,7 +1198,7 @@ color: var(--secondary);        }
                             <p>Optimized for speed with mobile responsiveness as a core feature.</p>
                         </div>
                     </div>
-                    
+
                     <div class="feature-item">
                         <div class="feature-icon">
                             <i class="fas fa-shield-alt"></i>
@@ -1175,7 +1208,7 @@ color: var(--secondary);        }
                             <p>Robust security measures and data protection protocols implemented throughout.</p>
                         </div>
                     </div>
-                    
+
                     <div class="feature-item">
                         <div class="feature-icon">
                             <i class="fas fa-plug"></i>
@@ -1187,72 +1220,60 @@ color: var(--secondary);        }
                     </div>
                 </div>
             </div>
-            
+
             <!-- Challenges Section -->
             <div class="challenges-section">
-                <h2>Challenges Without a Well-Developed Website</h2>
-                
-                <div class="challenges-grid">
-                    <div class="challenge-item">
-                        <div class="challenge-icon">
-                            <i class="fas fa-users-slash"></i>
+                <div class="challenges-container">
+                    <h2 class="challenges-title">Challenges Without a Well-Developed Website</h2>
+                    <div class="challenges-list">
+                        <div class="challenge-item">
+                            <div class="challenge-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <p class="challenge-text">Poor user experience driving customers away with confusing
+                                navigation and outdated design.</p>
                         </div>
-                        <div class="challenge-content">
-                            <h3>Poor User Experience</h3>
-                            <p>Driving customers away with confusing navigation and outdated design.</p>
+                        <div class="challenge-item">
+                            <div class="challenge-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <p class="challenge-text">Low search visibility missing out on potential customers due to
+                                poor search engine rankings.</p>
                         </div>
-                    </div>
-                    
-                    <div class="challenge-item">
-                        <div class="challenge-icon">
-                            <i class="fas fa-chart-line-down"></i>
+                        <div class="challenge-item">
+                            <div class="challenge-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <p class="challenge-text">Inefficient processes with manual workflows and no automation,
+                                wasting time and resources.</p>
                         </div>
-                        <div class="challenge-content">
-                            <h3>Low Search Visibility</h3>
-                            <p>Missing out on potential customers due to poor search engine rankings.</p>
+                        <div class="challenge-item">
+                            <div class="challenge-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <p class="challenge-text">Inconsistent branding with outdated design that fails to reflect
+                                your current brand identity.</p>
                         </div>
-                    </div>
-                    
-                    <div class="challenge-item">
-                        <div class="challenge-icon">
-                            <i class="fas fa-tasks"></i>
-                        </div>
-                        <div class="challenge-content">
-                            <h3>Inefficient Processes</h3>
-                            <p>Manual workflows with no automation, wasting time and resources.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="challenge-item">
-                        <div class="challenge-icon">
-                            <i class="fas fa-paint-brush"></i>
-                        </div>
-                        <div class="challenge-content">
-                            <h3>Inconsistent Branding</h3>
-                            <p>Outdated design that fails to reflect your current brand identity and values.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="challenge-item">
-                        <div class="challenge-icon">
-                            <i class="fas fa-hourglass-half"></i>
-                        </div>
-                        <div class="challenge-content">
-                            <h3>Missed Opportunities</h3>
-                            <p>Losing leads and conversions due to slow or unresponsive websites.</p>
+                        <div class="challenge-item">
+                            <div class="challenge-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <p class="challenge-text">Missed opportunities losing leads and conversions due to slow or
+                                unresponsive websites.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Advantage Section -->
             <div class="advantage-section">
                 <h2 class="section-title">The Zonixtec <span>Advantage</span></h2>
-                
+
                 <div class="advantage-content">
                     <div>
-                        <p>We go beyond just building websites—we craft digital ecosystems that engage users and grow your business.</p>
-                        
+                        <p>We go beyond just building websites—we craft digital ecosystems that engage users and grow
+                            your business.</p>
+
                         <ul class="advantage-list">
                             <li><i class="fas fa-check"></i> Tailored design reflecting your brand identity</li>
                             <li><i class="fas fa-check"></i> End-to-end development using modern frameworks</li>
@@ -1262,41 +1283,44 @@ color: var(--secondary);        }
                         </ul>
                     </div>
                     <div class="advantage-text">
-                        <p>Our approach combines technical expertise with creative vision to deliver websites that not only look great but perform exceptionally well.</p>
-                        <p>We understand that your website is often the first impression potential customers have of your business, which is why we focus on creating experiences that convert visitors into loyal customers.</p>
+                        <p>Our approach combines technical expertise with creative vision to deliver websites that not
+                            only look great but perform exceptionally well.</p>
+                        <p>We understand that your website is often the first impression potential customers have of
+                            your business, which is why we focus on creating experiences that convert visitors into
+                            loyal customers.</p>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Process Section -->
             <div class="process-section">
                 <h2 class="section-title">Our Development <span>Process</span></h2>
-                
+
                 <div class="process-steps">
                     <div class="process-step">
                         <div class="step-number">1</div>
                         <h3 class="step-title">Discovery & Research</h3>
                         <p class="step-description">Understand business goals, audience, and design preferences</p>
                     </div>
-                    
+
                     <div class="process-step">
                         <div class="step-number">2</div>
                         <h3 class="step-title">Wireframing & UI Design</h3>
                         <p class="step-description">Create visual layouts and design prototypes</p>
                     </div>
-                    
+
                     <div class="process-step">
                         <div class="step-number">3</div>
                         <h3 class="step-title">Development</h3>
                         <p class="step-description">Convert designs into high-performing, responsive websites</p>
                     </div>
-                    
+
                     <div class="process-step">
                         <div class="step-number">4</div>
                         <h3 class="step-title">Testing & QA</h3>
                         <p class="step-description">Ensure flawless performance and cross-browser compatibility</p>
                     </div>
-                    
+
                     <div class="process-step">
                         <div class="step-number">5</div>
                         <h3 class="step-title">Deployment & Maintenance</h3>
@@ -1304,11 +1328,11 @@ color: var(--secondary);        }
                     </div>
                 </div>
             </div>
-            
+
             <!-- Technology Stack -->
             <div class="tech-section">
                 <h2>Our Technology Stack</h2>
-                
+
                 <div class="tech-grid">
                     <div class="tech-category">
                         <h3>Languages & Frameworks</h3>
@@ -1321,7 +1345,7 @@ color: var(--secondary);        }
                             <div class="tech-item">Node.js</div>
                         </div>
                     </div>
-                    
+
                     <div class="tech-category">
                         <h3>Backend Technologies</h3>
                         <div class="tech-items">
@@ -1331,7 +1355,7 @@ color: var(--secondary);        }
                             <div class="tech-item">Laravel</div>
                         </div>
                     </div>
-                    
+
                     <div class="tech-category">
                         <h3>Databases</h3>
                         <div class="tech-items">
@@ -1340,7 +1364,7 @@ color: var(--secondary);        }
                             <div class="tech-item">PostgreSQL</div>
                         </div>
                     </div>
-                    
+
                     <div class="tech-category">
                         <h3>CMS Platforms</h3>
                         <div class="tech-items">
@@ -1350,7 +1374,7 @@ color: var(--secondary);        }
                             <div class="tech-item">Shopify</div>
                         </div>
                     </div>
-                    
+
                     <div class="tech-category">
                         <h3>Cloud & Hosting</h3>
                         <div class="tech-items">
@@ -1362,11 +1386,11 @@ color: var(--secondary);        }
                     </div>
                 </div>
             </div>
-            
+
             <!-- Impact Section -->
             <div class="impact-section">
                 <h2 class="section-title">Impact on Your <span>Business</span></h2>
-                
+
                 <div class="impact-grid">
                     <div class="impact-item">
                         <div class="impact-icon">
@@ -1375,7 +1399,7 @@ color: var(--secondary);        }
                         <h3>Enhanced Brand Credibility</h3>
                         <p>Build trust and establish authority with a professional online presence</p>
                     </div>
-                    
+
                     <div class="impact-item">
                         <div class="impact-icon">
                             <i class="fas fa-chart-bar"></i>
@@ -1383,7 +1407,7 @@ color: var(--secondary);        }
                         <h3>Higher Engagement & Conversions</h3>
                         <p>Turn visitors into customers with optimized user journeys</p>
                     </div>
-                    
+
                     <div class="impact-item">
                         <div class="impact-icon">
                             <i class="fas fa-search-location"></i>
@@ -1391,7 +1415,7 @@ color: var(--secondary);        }
                         <h3>Improved Search Rankings</h3>
                         <p>Increase visibility and attract more organic traffic</p>
                     </div>
-                    
+
                     <div class="impact-item">
                         <div class="impact-icon">
                             <i class="fas fa-cogs"></i>
@@ -1399,7 +1423,7 @@ color: var(--secondary);        }
                         <h3>Streamlined Processes</h3>
                         <p>Automate workflows and improve operational efficiency</p>
                     </div>
-                    
+
                     <div class="impact-item">
                         <div class="impact-icon">
                             <i class="fas fa-hand-holding-usd"></i>
@@ -1409,11 +1433,11 @@ color: var(--secondary);        }
                     </div>
                 </div>
             </div>
-            
+
             <!-- FAQ Section -->
             <div class="faq-section">
                 <h2>Frequently Asked Questions</h2>
-                
+
                 <div class="faq-container">
                     <div class="faq-item">
                         <div class="faq-question">
@@ -1421,61 +1445,72 @@ color: var(--secondary);        }
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>Every industry—from retail and healthcare to finance and education—benefits from a well-designed, responsive website. We've worked with clients across various sectors to create tailored solutions that address their specific needs and challenges.</p>
+                            <p>Every industry—from retail and healthcare to finance and education—benefits from a
+                                well-designed, responsive website. We've worked with clients across various sectors to
+                                create tailored solutions that address their specific needs and challenges.</p>
                         </div>
                     </div>
-                    
+
                     <div class="faq-item">
                         <div class="faq-question">
                             <span>How long does it take to build a website?</span>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>Project duration varies by complexity, but we deliver most websites within 4–8 weeks. Simple brochure websites may take less time, while complex e-commerce platforms or custom web applications may require additional development time.</p>
+                            <p>Project duration varies by complexity, but we deliver most websites within 4–8 weeks.
+                                Simple brochure websites may take less time, while complex e-commerce platforms or
+                                custom web applications may require additional development time.</p>
                         </div>
                     </div>
-                    
+
                     <div class="faq-item">
                         <div class="faq-question">
                             <span>Can you redesign my existing website?</span>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>Absolutely! We specialize in redesigning outdated sites into modern, high-performing platforms. We can work with your existing content and structure or completely reimagine your digital presence while maintaining your brand identity.</p>
+                            <p>Absolutely! We specialize in redesigning outdated sites into modern, high-performing
+                                platforms. We can work with your existing content and structure or completely reimagine
+                                your digital presence while maintaining your brand identity.</p>
                         </div>
                     </div>
-                    
+
                     <div class="faq-item">
                         <div class="faq-question">
                             <span>Will my website be mobile-friendly?</span>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>Yes. All our websites are 100% responsive, ensuring smooth performance across all devices. We follow mobile-first design principles to ensure optimal user experience on smartphones, tablets, and desktops.</p>
+                            <p>Yes. All our websites are 100% responsive, ensuring smooth performance across all
+                                devices. We follow mobile-first design principles to ensure optimal user experience on
+                                smartphones, tablets, and desktops.</p>
                         </div>
                     </div>
-                    
+
                     <div class="faq-item">
                         <div class="faq-question">
                             <span>Do you provide post-launch support?</span>
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>Yes, we offer comprehensive maintenance, updates, and continuous optimization to keep your site secure and efficient. Our support packages include regular backups, security monitoring, performance optimization, and content updates.</p>
+                            <p>Yes, we offer comprehensive maintenance, updates, and continuous optimization to keep
+                                your site secure and efficient. Our support packages include regular backups, security
+                                monitoring, performance optimization, and content updates.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- CTA Section -->
             <div class="cta-section">
                 <h2>Ready to Transform Your Digital Presence?</h2>
-                <p>Let's build a website that not only looks amazing but drives real business results. Our team is ready to bring your vision to life with cutting-edge web design and development solutions.</p>
+                <p>Let's build a website that not only looks amazing but drives real business results. Our team is ready
+                    to bring your vision to life with cutting-edge web design and development solutions.</p>
                 <a href="contact.html" class="cta-button">Start Your Project Today</a>
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -1484,7 +1519,7 @@ color: var(--secondary);        }
                 <div class="footer-col">
                     <h3>Solutions</h3>
                     <div class="footer-links">
-                        
+
                         <!-- Next-Gen Tech Dropdown -->
                         <div class="footer-dropdown">
                             <div class="footer-dropdown-header">
@@ -1492,7 +1527,8 @@ color: var(--secondary);        }
                                 <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
                             </div>
                             <div class="footer-dropdown-content">
-                                <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> AI & Machine Learning</a>
+                                <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> AI & Machine
+                                    Learning</a>
                                 <a href="CloudSolutions.html"><i class="fas fa-chevron-right"></i> Cloud Solutions</a>
                             </div>
                         </div>
@@ -1505,12 +1541,16 @@ color: var(--secondary);        }
                             </div>
                             <div class="footer-dropdown-content">
                                 <a href="AIServices.html"><i class="fas fa-chevron-right"></i> AI Services Overview</a>
-                                <a href="AIStrategy.html"><i class="fas fa-chevron-right"></i> AI Strategy & Consulting</a>
+                                <a href="AIStrategy.html"><i class="fas fa-chevron-right"></i> AI Strategy &
+                                    Consulting</a>
                                 <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> Machine Learning</a>
-                                <a href="NLP.html"><i class="fas fa-chevron-right"></i> Natural Language Processing (NLP)</a>
+                                <a href="NLP.html"><i class="fas fa-chevron-right"></i> Natural Language Processing
+                                    (NLP)</a>
                                 <a href="ComputerVision.html"><i class="fas fa-chevron-right"></i> Computer Vision</a>
-                                <a href="PredictiveAnalytics.html"><i class="fas fa-chevron-right"></i> Predictive Analysis</a>
-                                <a href="ProcessAutomation.html"><i class="fas fa-chevron-right"></i> Process Automation</a>
+                                <a href="PredictiveAnalytics.html"><i class="fas fa-chevron-right"></i> Predictive
+                                    Analysis</a>
+                                <a href="ProcessAutomation.html"><i class="fas fa-chevron-right"></i> Process
+                                    Automation</a>
                             </div>
                         </div>
 
@@ -1521,8 +1561,10 @@ color: var(--secondary);        }
                                 <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
                             </div>
                             <div class="footer-dropdown-content">
-                                <a href="CustomSoftware.html"><i class="fas fa-chevron-right"></i> Custom Software Development</a>
-                                <a href="MobileDevelopment.html"><i class="fas fa-chevron-right"></i> Mobile App Development</a>
+                                <a href="CustomSoftware.html"><i class="fas fa-chevron-right"></i> Custom Software
+                                    Development</a>
+                                <a href="MobileDevelopment.html"><i class="fas fa-chevron-right"></i> Mobile App
+                                    Development</a>
                             </div>
                         </div>
 
@@ -1598,9 +1640,11 @@ color: var(--secondary);        }
             display: none;
             margin-left: 15px;
         }
+
         .footer-dropdown.open .footer-dropdown-content {
             display: block;
         }
+
         .footer-dropdown-header {
             display: flex;
             color: var(--gray);
@@ -1608,6 +1652,7 @@ color: var(--secondary);        }
             cursor: pointer;
             margin: 5px 0;
         }
+
         .footer-dropdown-header:hover {
             color: var(--secondary);
         }
@@ -1623,13 +1668,13 @@ color: var(--secondary);        }
 
     <script>
         // Mobile menu toggle
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
             document.querySelector('.nav-links').classList.toggle('active');
             document.querySelector('body').classList.toggle('menu-open');
         });
-        
+
         // Header scroll effect
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const header = document.getElementById('header');
             if (window.scrollY > 50) {
                 header.classList.add('scrolled');
@@ -1637,7 +1682,7 @@ color: var(--secondary);        }
                 header.classList.remove('scrolled');
             }
         });
-        
+
         // FAQ Accordion
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
@@ -1649,4 +1694,5 @@ color: var(--secondary);        }
 
     <script src="Customscroll.js"></script>
 </body>
+
 </html>

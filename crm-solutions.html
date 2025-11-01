@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRM Solutions | Zonixtec - Transform Customer Relationships</title>
     <meta name="description" content="Empower your business with Zonixtec's CRM solutions—custom-built platforms for sales automation, customer engagement, and data-driven decision-making.">
-    <link rel="icon" href="./Assets/WhatsApp Image 2025-10-15 at 15.47.06.jpeg" sizes="32x32" type="image/png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="./Assets/WhatsApp Image 2025-10-15 at 15.47.06.jpeg" sizes="32x32" type="image/png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         :root {
-            --primary: #0066ff;
-            --primary-dark: #0044cc;
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
             --secondary: #00f2ff;
-            --accent: #ff3366;
-            --dark: #050511;
-            --dark-light: #0a0a1a;
-            --light: #f5f5f5; 
-            --gray: #94a3b8;
-            --success: #27ae60;
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --card-border: rgba(255, 255, 255, 0.1);
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --accent: #8b5cf6;
             --tech-gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+            --success: #10b981;
+            --warning: #f59e0b;
         }
 
         * {
@@ -33,21 +33,27 @@
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #0f172a, #1e293b);
             color: var(--light);
             line-height: 1.6;
             overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
         }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 700;
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 20%);
+            z-index: -1;
         }
 
         .container {
@@ -62,42 +68,44 @@
         }
 
         .section-title {
-            font-size: 3rem;
+            font-size: 2.5rem;
+            font-family: 'Orbitron', sans-serif;
             text-align: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 3rem;
             position: relative;
         }
-
+        
         .section-title span {
             color: var(--secondary);
             position: relative;
         }
 
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.3rem;
-            color: var(--gray);
-            margin-bottom: 4rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+        .section-title span.pulse {
+            animation: pulse 2s infinite;
         }
 
-        /* Header Styles */
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--tech-gradient);
+            border-radius: 2px;
+        }
+
+        /* ===== Header Styles ===== */
         header {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(10px);
             position: fixed;
             top: 0;
-            left: 0;
             width: 100%;
             z-index: 1000;
-            background-color: rgba(15, 23, 42, 0.9);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        header.scrolled {
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(100, 116, 139, 0.2);
         }
 
         nav {
@@ -113,6 +121,8 @@
             font-weight: 700;
             color: var(--light);
             text-decoration: none;
+            display: flex;
+            align-items: center;
         }
 
         .logo span {
@@ -120,60 +130,660 @@
         }
 
         .logo .tech {
-            color: var(--primary);
+            color: var(--secondary);
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--secondary);
+            font-size: 1.5rem;
         }
 
         .nav-links {
             display: flex;
+            gap: 25px;
             align-items: center;
-            gap: 30px;
         }
 
         .nav-links a {
             color: var(--light);
             text-decoration: none;
+            font-size: 1rem;
             font-weight: 500;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
             position: relative;
         }
 
-        .nav-links a:hover, .nav-links a.active {
+        .nav-links a:not(.cta-button):hover {
             color: var(--secondary);
-        }
-
-        .nav-links a.active::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: var(--secondary);
         }
 
         .cta-button {
             background: var(--tech-gradient);
-            color: var(--dark);
-            padding: 12px 25px;
+            color: white;
+            padding: 10px 20px;
             border-radius: 30px;
             font-weight: 600;
             transition: all 0.3s ease;
-            text-decoration: none;
-            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 102, 255, 0.4);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
         }
 
         .mobile-menu-btn {
             display: none;
+            color: var(--light);
             font-size: 1.5rem;
             cursor: pointer;
-            color: var(--light);
         }
-           /* ===== Dropdown Styles ===== */
+
+        /* CRM Section */
+        .crm-section {
+            padding: 150px 0 100px;
+            position: relative;
+        }
+
+        .crm-hero {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 80px;
+        }
+
+        .hero-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: var(--tech-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            margin-bottom: 30px;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .benefit-card {
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--tech-gradient);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(37, 99, 235, 0.3);
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .benefit-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .benefit-text {
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+        /* Service Types Section */
+        .service-types {
+            margin-bottom: 80px;
+        }
+
+        .service-types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-type-card {
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-type-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--tech-gradient);
+        }
+
+        .service-type-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(37, 99, 235, 0.3);
+        }
+
+        .service-type-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .service-type-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .service-type-text {
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+        /* Challenges Section */
+        .challenges-section {
+            margin-bottom: 80px;
+        }
+
+        .challenges-container {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 20px;
+            padding: 50px;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+        }
+
+        .challenges-title {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            background: var(--tech-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .challenges-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .challenge-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .challenge-icon {
+            color: #ef4444;
+            margin-right: 15px;
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .challenge-text {
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+        /* What We Bring Section */
+        .what-we-bring {
+            margin-bottom: 80px;
+        }
+
+        .what-we-bring-container {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 20px;
+            padding: 50px;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+        }
+
+        .what-we-bring-title {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            background: var(--tech-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .what-we-bring-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .what-we-bring-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .what-we-bring-icon {
+            color: var(--success);
+            margin-right: 15px;
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .what-we-bring-text {
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+        /* Development Process Section */
+        .process-section {
+            margin-bottom: 80px;
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            z-index: 1;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            flex: 1;
+            padding: 0 15px;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark);
+            position: relative;
+        }
+
+        .step-title {
+            font-size: 1.2rem;
+            font-family: 'Orbitron', sans-serif;
+            color: var(--light);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .step-description {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Technology Stack Section */
+         /* Technology Stack */
+        .tech-section {
+            background: rgba(10, 10, 26, 0.7);
+            border-radius: 10px;
+            padding: 60px;
+            margin-bottom: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .tech-section h2 {
+            text-align: center;
+            color: var(--secondary);
+            margin-bottom: 40px;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .tech-category {
+            text-align: center;
+        }
+        
+        .tech-category h3 {
+            color: var(--light);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .tech-items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .tech-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 15px;
+            border-radius: 8px;
+            color: var(--gray);
+            transition: all 0.3s ease;
+        }
+        
+        .tech-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--light);
+            transform: translateY(-3px);
+        }
+
+        .impact-section {
+            margin-bottom: 80px;
+        }
+
+        .impact-container {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 20px;
+            padding: 50px;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+        }
+
+        .impact-title {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            background: var(--tech-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .impact-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .impact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .impact-icon {
+            color: var(--success);
+            margin-right: 15px;
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .impact-text {
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+        .cta-container {
+            background: var(--tech-gradient);
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .cta-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-description {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .cta-button-large {
+            background: var(--dark);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+        }
+
+        .cta-button-large:hover {
+            transform: translateY(-3px);
+            background: rgba(15, 23, 42, 0.9);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .faq-section {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 20px;
+            padding: 50px;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+        }
+
+        .faq-title {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            background: var(--tech-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.2);
+            padding-bottom: 20px;
+        }
+
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            color: #94a3b8;
+            line-height: 1.7;
+            padding-right: 20px;
+        }
+
+        .faq-toggle {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .footer {
+            padding: 70px 0 0;
+            border-top: 1px solid rgba(100, 116, 139, 0.2);
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(255px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col {
+            padding: 20px;
+        }
+
+        .footer-col h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .footer-links a {
+            display: flex;
+            align-items: center;
+            color: var(--gray);
+            text-decoration: none;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+
+        .footer-links i {
+            margin-right: 10px;
+            color: var(--gray);
+            font-size: 0.8rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(37, 99, 235, 0.2);
+            border-radius: 50%;
+            color: var(--light);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--tech-gradient);
+            transform: translateY(-5px);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+        }
+
+        .form-control {
+            padding: 12px 15px;
+            border-radius: 5px;
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            background: rgba(15, 23, 42, 0.5);
+            color: var(--light);
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .form-control::placeholder {
+            color: #94a3b8;
+        }
+
+        .submit-btn {
+            background: var(--tech-gradient);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+        }
+
+        /* ===== Dropdown Styles ===== */
         .dropdown {
             position: relative;
             display: inline-block;
@@ -238,11 +848,8 @@
 
         .dropdown-scroll {
             max-height: 300px;
-            /* Slightly less than parent to account for padding */
             overflow-y: auto;
-            /* Enable vertical scrolling */
             padding: 8px 0;
-            /* Add padding to scroll container */
         }
 
         /* Custom scrollbar styling */
@@ -264,875 +871,211 @@
             background: var(--primary);
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(-8px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Hero Section */
-        .crm-hero {
-            padding: 180px 0 100px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .crm-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background:
-                radial-gradient(circle at 20% 80%, rgba(0, 102, 255, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(0, 242, 255, 0.1) 0%, transparent 50%);
-            z-index: -1;
-        }
-
-        .hero-content {
-            display: flex;
-            align-items: center;
-            gap: 60px;
-        }
-
-        .hero-text {
-            flex: 1;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-        }
-
-        .hero-title span {
-            background: var(--tech-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-subtitle {
-            font-size: 1.8rem;
-            color: var(--secondary);
-            margin-bottom: 2rem;
-            font-weight: 500;
-        }
-
-        .hero-description {
-            font-size: 1.2rem;
-            color: var(--gray);
-            margin-bottom: 3rem;
-            line-height: 1.8;
-        }
-
-        .hero-visual {
-            flex: 1;
-            position: relative;
-            height: 500px;
-        }
-
-        .floating-cards {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-
-        .floating-card {
-            position: absolute;
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--card-border);
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: transform 0.5s ease, opacity 0.5s ease;
-        }
-
-        .floating-card:nth-child(1) {
-            top: 10%;
-            left: 10%;
-            width: 200px;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .floating-card:nth-child(2) {
-            top: 50%;
-            right: -14%;
-            z-index: 1;
-            width: 200px;
-            animation: float 7s ease-in-out infinite 1s;
-        }
-
-        .floating-card:nth-child(3) {
-            bottom: 10%;
-            left: 44%;
-            width: 200px;
-            animation: float 5s ease-in-out infinite 0.5s;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-            100% {
-                transform: translateY(0px);
-            }
-        }
-
-        .card-icon {
-            font-size: 2.5rem;
-            color: var(--secondary);
-            margin-bottom: 15px;
-        }
-
-        .card-title {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: var(--light);
-        }
-
-        .card-text {
-            color: var(--gray);
+        .footer-bottom {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid rgba(100, 116, 139, 0.2);
+            color: #94a3b8;
             font-size: 0.9rem;
         }
 
-        /* Service Types Section */
-        .service-types {
-            border-radius: 20px;
-            padding: 60px;
-            margin-bottom: 80px;
+        .footer-bottom i {
+            color: #ef4444;
+            margin: 0 5px;
         }
 
-        .service-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .service-title {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--secondary);
-        }
-
-        .service-subtitle {
-            color: var(--gray);
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 40px 30px;
-            text-align: center;
-            border: 1px solid var(--card-border);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: var(--tech-gradient);
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            color: var(--secondary);
-            margin-bottom: 25px;
-        }
-
-        .service-card-title {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--light);
-        }
-
-        .service-card-description {
-            color: var(--gray);
-            line-height: 1.6;
-        }
-
-        /* Features Section */
-        .features-section {
-            margin-bottom: 80px;
-            background: var(--dark-light);
-            border-radius: 20px;
-            padding: 60px;
-            border: 1px solid var(--card-border);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .feature-item {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 30px;
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-            border: 1px solid var(--card-border);
-            transition: all 0.3s ease;
-        }
-
-        .feature-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            border-color: var(--success);
-        }
-
-        .feature-icon {
-            color: var(--success);
-            font-size: 1.5rem;
-            margin-top: 2px;
-            flex-shrink: 0;
-            width: 40px;
-            height: 40px;
-            background: rgba(39, 174, 96, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .feature-content {
-            flex: 1;
-        }
-
-        .feature-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--light);
-            margin-bottom: 8px;
-            font-family: 'Orbitron', sans-serif;
-        }
-
-        .feature-description {
-            color: var(--gray);
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-
-        /* Challenges Section */
-        .challenges-section {
-            background: var(--card-bg);
-            border-radius: 20px;
-            padding: 60px;
-            margin-bottom: 80px;
-            border: 1px solid var(--card-border);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .challenges-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--accent), #ff6b6b);
-        }
-
-        .challenges-title {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--accent);
-            text-align: center;
-            font-family: 'Orbitron', sans-serif;
-        }
-
-        .challenges-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: var(--gray);
-            margin-bottom: 3rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .challenges-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .challenge-card {
-            background: rgba(255, 51, 102, 0.05);
-            border-radius: 15px;
-            padding: 30px;
-            border: 1px solid rgba(255, 51, 102, 0.2);
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .challenge-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(255, 51, 102, 0.15);
-            border-color: var(--accent);
-        }
-
-        .challenge-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 51, 102, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            color: var(--accent);
-            font-size: 1.5rem;
-        }
-
-        .challenge-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--light);
-            margin-bottom: 12px;
-            font-family: 'Orbitron', sans-serif;
-        }
-
-        .challenge-description {
-            color: var(--gray);
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-
-        .challenges-list {
-            list-style: none;
-            display: none; /* Hide the old list format */
-        }
-
-        /* Advantage Section */
-        .advantage-section {
-            margin-bottom: 80px;
-        }
-
-        .advantage-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .advantage-card {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 40px 30px;
-            text-align: center;
-            border: 1px solid var(--card-border);
-            transition: all 0.3s ease;
-        }
-
-        .advantage-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .advantage-icon {
-            font-size: 3rem;
-            color: var(--secondary);
-            margin-bottom: 25px;
-        }
-
-        .advantage-title {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--light);
-        }
-
-        .advantage-description {
-            color: var(--gray);
-            line-height: 1.6;
-        }
-
-        /* Process Section */
-        .process-section {
-            margin-bottom: 80px;
-        }
-
-        .process-carousel {
-            display: flex;
-            overflow-x: auto;
-            gap: 30px;
-            padding: 20px 0;
-            scroll-snap-type: x mandatory;
-        }
-
-        .process-carousel::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        .process-carousel::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
-        }
-
-        .process-carousel::-webkit-scrollbar-thumb {
-            background: var(--secondary);
-            border-radius: 4px;
-        }
-
-        .process-step {
-            min-width: 300px;
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 40px 30px;
-            text-align: center;
-            border: 1px solid var(--card-border);
-            scroll-snap-align: start;
-        }
-
-        .step-number {
-            font-size: 3rem;
-            color: var(--secondary);
-            margin-bottom: 20px;
-            font-family: 'Orbitron', sans-serif;
-        }
+        @media (min-width: 768px) {
 
-        .step-title {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--light);
-        }
-
-        .step-description {
-            color: var(--gray);
-            line-height: 1.6;
-        }
-
-        /* Technology Stack */
-        .tech-stack {
-            padding: 60px;
-            margin-bottom: 80px;
-        }
-
-        .tech-grid {
-            display: grid;
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-        .tech-category {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            border: 1px solid var(--card-border);
-            transition: all 0.3s ease;
-        }
-
-        .tech-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            border-color: var(--secondary);
-        }
-
-        .tech-category-title {
-            font-size: 1.4rem;
-            margin-bottom: 25px;
-            color: var(--secondary);
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 600;
-        }
-
-        .tech-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 1.5rem;
-            color: var(--dark);
-        }
-
-        .tech-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .tech-list li {
-            margin-bottom: 12px;
-            color: var(--gray);
-            padding: 8px 15px;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .tech-list li:hover {
-            background: rgba(0, 242, 255, 0.1);
-            color: var(--light);
-            transform: translateX(5px);
-        }
-
-        /* Impact Section */
-        .impact-section {
-            margin-bottom: 80px;
-        }
-
-        .impact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .impact-card {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 40px 30px;
-            text-align: center;
-            border: 1px solid var(--card-border);
-            transition: all 0.3s ease;
-        }
-
-        .impact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .impact-icon {
-            font-size: 3rem;
-            color: var(--success);
-            margin-bottom: 25px;
-        }
-
-        .impact-title {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--light);
-        }
-
-        .impact-description {
-            color: var(--gray);
-            line-height: 1.6;
-        }
-
-        /* FAQ Section */
-        .faq-section {
-            margin-bottom: 80px;
-        }
-
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: var(--card-bg);
-            border-radius: 10px;
-            margin-bottom: 20px;
-            border: 1px solid var(--card-border);
-            overflow: hidden;
-        }
-
-        .faq-question {
-            padding: 20px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--light);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .faq-answer {
-            padding: 0 20px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-            color: var(--gray);
-        }
-
-        .faq-item.active .faq-answer {
-            padding: 0 20px 20px;
-            max-height: 500px;
-        }
-
-        .faq-item.active .faq-toggle {
-            transform: rotate(180deg);
-        }
-
-        .faq-toggle {
-            transition: transform 0.3s ease;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: var(--tech-gradient);
-            border-radius: 20px;
-            padding: 80px 40px;
-            text-align: center;
-            margin-top: 80px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.1"><path fill="%23ffffff" d="M500,100 C700,100 900,200 900,500 C900,800 700,900 500,900 C300,900 100,800 100,500 C100,200 300,100 500,100 Z"/></svg>') no-repeat center center;
-            background-size: 80%;
-        }
-
-        .cta-title {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            color: var(--dark);
-        }
-
-        .cta-subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
-            color: var(--dark);
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-button-large {
-            background: var(--dark);
-            color: var(--light);
-            padding: 18px 40px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .cta-button-large:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-        }
+            .dropdown-scroll {
+                max-height: 250px;
+            }
 
-        /* Footer */
-        .footer {
-            padding: 60px 0 20px;
-        }
-
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-col h3 {
-            color: var(--secondary);
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-        }
-
-        .footer-col p {
-            color: var(--gray);
-            margin-bottom: 20px;
-        }
-
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .footer-links a {
-            color: var(--gray);
-            text-decoration: none;
-            transition: color 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+            .footer-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
 
-        .footer-links a:hover {
-            color: var(--secondary);
-        }
-
-        .footer-links a i {
-            font-size: 0.8rem;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            color: var(--gray);
-        }
-
-        /* Footer Dropdown Styles */
-        .footer-dropdown-content {
-            display: none;
-            margin-left: 15px;
-        }
-
-        .footer-dropdown.open .footer-dropdown-content {
-            display: block;
-        }
-
-        .footer-dropdown-header {
-            display: flex;
-            color: var(--gray);
-            justify-content: space-between;
-            cursor: pointer;
-            margin: 5px 0;
-        }
+            .footer-col {
+                padding: 18px 1px;
+            }
 
-        .footer-dropdown-header:hover {
-            color: var(--secondary);
+            .footer-col h3 {
+                font-family: 'Orbitron', sans-serif;
+                font-size: 1.3rem;
+                margin-bottom: 20px;
+                color: var(--secondary);
+                position: relative;
+                padding-bottom: 10px;
+            }
         }
 
-        /* Responsive Styles */
+        /* Responsive styles */
         @media (max-width: 992px) {
-            .hero-content {
+            .services-overview {
                 flex-direction: column;
             }
-            
-            .footer-container {
-                grid-template-columns: repeat(2, 1fr);
+
+            .service-detail {
+                flex-direction: column;
+            }
+
+            .process-step {
+                min-width: 200px;
             }
         }
 
         @media (max-width: 768px) {
-            .section-title {
+            .services-hero-title {
                 font-size: 2.5rem;
             }
-            
-            .hero-title {
-                font-size: 3rem;
-            }
-            
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: var(--dark);
-                flex-direction: column;
-                padding: 20px;
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-            }
-            
-            .nav-links.active {
-                display: flex;
+
+            .section-title {
+                font-size: 2rem;
             }
 
-            /* Mobile dropdown styles */
-            .dropdown {
-                width: 100%;
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
             }
 
-            .dropdown-content {
-                position: static;
-                background: rgba(15, 23, 42, 0.9);
-                box-shadow: none;
-                border: 1px solid rgba(100, 116, 139, 0.2);
-                border-radius: 8px;
-                margin: 10px 0;
-                display: none;
-                width: 100%;
-                padding: 8px 0;
-            }
-
-            .dropdown.active .dropdown-content {
-                display: block;
-            }
-
-            .dropdown-toggle {
-                justify-content: space-between;
-                padding: 15px 20px;
-            }
-
-            .dropdown-scroll {
-                max-height: none;
-                padding: 0;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .service-types, .tech-stack, .challenges-section {
+            .cta-section {
                 padding: 40px 20px;
             }
-            
-            .cta-section {
-                padding: 60px 20px;
+
+            .detailed-services {
+                padding: 30px;
             }
-            
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                font-size: 2.8rem;
+            }
+
+            .cta-container {
+                padding: 40px 20px;
+            }
+
             .cta-title {
-                font-size: 2.5rem;
+                font-size: 2rem;
+            }
+
+            .process-container,
+            .faq-section,
+            .challenges-container,
+            .what-we-bring-container,
+            .impact-container {
+                padding: 30px 20px;
             }
         }
 
         @media (max-width: 576px) {
-            .section-title {
-                font-size: 2rem;
-            }
-            
             .hero-title {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
-            
-            .service-grid, .features-grid, .advantage-grid, .impact-grid {
-                grid-template-columns: 1fr;
+
+            .process-step {
+                min-width: 100%;
             }
-            
+
+            .cta-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background-color: rgba(15, 23, 42, 0.95);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                transition: right 0.3s ease;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                z-index: 1000;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .hero-text p {
+                font-size: 16px;
+            }
+
+            .hero-ai-face {
+                display: none;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .cta-button,
+            .secondary-button {
+                width: 100%;
+                text-align: center;
+            }
+
+            .section-header h2 {
+                font-size: 30px;
+            }
+
             .footer-container {
                 grid-template-columns: 1fr;
+                gap: 30px;
             }
+        }
+
+        /*  Get Start Button    */
+        .cta-buttons {
+            background: linear-gradient(45deg, var(--primary), #5ed6eb);
+            color: var(--dark);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-buttons:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 102, 255, 0.3);
+        }
+
+        .cta-buttons:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(100, 149, 255, 0.4);
+        }
+
+        .faq-toggle {
+            font-size: 1.2rem;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-toggle.active {
+            transform: rotate(180deg);
         }
     </style>
 </head>
 
 <body>
-    <!-- Header -->
     <header id="header">
         <div class="container">
             <nav>
@@ -1142,17 +1085,19 @@
                 <div class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="aboutus.html">About</a>
-                       <div class="dropdown">
-                        <a href="Services.html" class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+
+                    <!-- <a href="Services.html">Services</a> -->
+                    <div class="dropdown">
+                        <a href="Services.html" class="active dropdown-toggle">Services <i
+                                class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-content">
                             <div class="dropdown-scroll">
-
                                 <a href="web-design-development.html">Web Design & Development</a>
                                 <a href="web-app-development.html">Web App Development</a>
                                 <a href="CustomSoftware.html">Custom Software Development</a>
                                 <a href="crm-solutions.html">Custom CRM Solutions</a>
                                 <a href="erp-solutions.html">Custom ERP Solutions</a>
-                                <a href="Billing-invoice">Billing-Invoice</a>
+                                <a href="Billing-invoice.html">Billing-Invoice</a>
                                 <a href="AIStrategy.html">AI Strategy & Consulting</a>
                                 <a href="DigitalMarketing.html">Digital Marketing Services</a>
                                 <a href="MobileDevelopment.html">Mobile App Development</a>
@@ -1163,7 +1108,7 @@
                     </div>
                     <a href="carrer.html">Career</a>
                     <a href="contact.html">Contact</a>
-                    <a href="contact.html" class="cta-button">Get Started</a>
+                    <a href="contact.html" class="cta-buttons">Get Started</a>
                 </div>
                 <div class="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
@@ -1172,527 +1117,439 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="crm-hero section-padding">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">CRM Development & <span>Integration Services</span></h1>
-                    <p class="hero-subtitle">Connect. Engage. Grow.</p>
+    <main>
+        <section class="crm-section">
+            <div class="container">
+                <div class="crm-hero">
+                    <h1 class="hero-title">Custom CRM Solutions</h1>
+                    <h2 class="hero-subtitle">Transform Customer Relationships with Intelligent CRM Systems</h2>
                     <p class="hero-description">At Zonixtec, we build intelligent CRM systems that help businesses manage customer relationships seamlessly. Our CRM solutions go beyond tracking interactions—they empower your sales, marketing, and service teams with actionable insights, automation, and unified communication channels. Whether you're a startup or an enterprise, we create CRMs that adapt to your workflow, not the other way around.</p>
-                    <a href="#contact" class="cta-button">Let's Build Your CRM Solution</a>
+                    <a href="contact.html" class="cta-button">Start Your CRM Project</a>
                 </div>
-                <div class="hero-visual">
-                    <div class="floating-cards">
-                        <div class="floating-card">
-                            <div class="card-icon">
-                                <i class="fas fa-chart-line"></i>
+
+                <div class="service-types">
+                    <h2 class="section-title">Our CRM Development Services</h2>
+                    <div class="service-types-grid">
+                        <div class="service-type-card">
+                            <div class="service-type-icon">
+                                <i class="fas fa-cogs"></i>
                             </div>
-                            <h3 class="card-title">Sales Automation</h3>
-                            <p class="card-text">Streamline your sales process with intelligent automation</p>
+                            <h3 class="service-type-title">Custom CRM Development</h3>
+                            <p class="service-type-text">Tailor-made systems aligned with your unique sales, marketing, and support processes.</p>
                         </div>
-                        <div class="floating-card">
-                            <div class="card-icon">
-                                <i class="fas fa-users"></i>
+
+                        <div class="service-type-card">
+                            <div class="service-type-icon">
+                                <i class="fas fa-link"></i>
                             </div>
-                            <h3 class="card-title">360° Customer View</h3>
-                            <p class="card-text">Get complete visibility into customer interactions</p>
+                            <h3 class="service-type-title">CRM Integration</h3>
+                            <p class="service-type-text">Seamlessly connect your existing tools (ERP, email, telephony, etc.) for unified data flow.</p>
                         </div>
-                        <div class="floating-card">
-                            <div class="card-icon">
+
+                        <div class="service-type-card">
+                            <div class="service-type-icon">
                                 <i class="fas fa-robot"></i>
                             </div>
-                            <h3 class="card-title">AI-Powered Insights</h3>
-                            <p class="card-text">Leverage AI for predictive analytics and recommendations</p>
+                            <h3 class="service-type-title">Sales & Marketing Automation</h3>
+                            <p class="service-type-text">Automate repetitive tasks—lead management, email campaigns, and follow-ups.</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Service Types Section -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="service-types">
-                <div class="service-header">
-                    <h2 class="service-title">About the Service & Types</h2>
-                    <p class="service-subtitle">Our CRM systems are designed to bring all your customer data and business operations under one intelligent platform.</p>
+                        <div class="service-type-card">
+                            <div class="service-type-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h3 class="service-type-title">Analytics & Reporting</h3>
+                            <p class="service-type-text">Get real-time insights into sales performance and customer behavior.</p>
+                        </div>
+
+                        <div class="service-type-card">
+                            <div class="service-type-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <h3 class="service-type-title">Cloud-based CRM Solutions</h3>
+                            <p class="service-type-text">Secure and scalable platforms accessible from anywhere.</p>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="service-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-cogs"></i>
+
+                <h2 class="section-title">Features of Our CRM Solutions</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-users"></i>
                         </div>
-                        <h3 class="service-card-title">Custom CRM Development</h3>
-                        <p class="service-card-description">Tailor-made systems aligned with your unique sales, marketing, and support processes.</p>
+                        <h3 class="benefit-title">360° Customer View</h3>
+                        <p class="benefit-text">Centralized customer database with complete visibility into all interactions, purchase history, and communication touchpoints.</p>
                     </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-link"></i>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
                         </div>
-                        <h3 class="service-card-title">CRM Integration</h3>
-                        <p class="service-card-description">Seamlessly connect your existing tools (ERP, email, telephony, etc.) for unified data flow.</p>
+                        <h3 class="benefit-title">Sales Pipeline Management</h3>
+                        <p class="benefit-text">Advanced lead scoring, pipeline tracking, and sales forecasting with real-time analytics to boost conversion rates.</p>
                     </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
                             <i class="fas fa-robot"></i>
                         </div>
-                        <h3 class="service-card-title">Sales & Marketing Automation</h3>
-                        <p class="service-card-description">Automate repetitive tasks—lead management, email campaigns, and follow-ups.</p>
+                        <h3 class="benefit-title">Automated Workflows</h3>
+                        <p class="benefit-text">Smart automation for follow-ups, notifications, and task assignments to eliminate manual work and increase efficiency.</p>
                     </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <h3 class="service-card-title">Analytics & Reporting</h3>
-                        <p class="service-card-description">Get real-time insights into sales performance and customer behavior.</p>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <h3 class="service-card-title">Cloud-based CRM Solutions</h3>
-                        <p class="service-card-description">Secure and scalable platforms accessible from anywhere.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Features Section -->
-    <section class="features-section section-padding">
-        <div class="container">
-            <h2 class="section-title">Features of Our <span>CRM Solutions</span></h2>
-            <p class="section-subtitle">Discover the powerful features that make our CRM solutions stand out and drive business growth.</p>
-            
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="benefit-title">Security & Access Control</h3>
+                        <p class="benefit-text">Role-based permissions and advanced data security measures to protect sensitive customer information.</p>
                     </div>
-                    <div class="feature-content">
-                        <h3 class="feature-title">360° Customer View</h3>
-                        <p class="feature-description">Centralized customer database with complete visibility into all interactions, purchase history, and communication touchpoints.</p>
-                    </div>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3 class="feature-title">Sales Pipeline Management</h3>
-                        <p class="feature-description">Advanced lead scoring, pipeline tracking, and sales forecasting with real-time analytics to boost conversion rates.</p>
-                    </div>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3 class="feature-title">Automated Workflows</h3>
-                        <p class="feature-description">Smart automation for follow-ups, notifications, and task assignments to eliminate manual work and increase efficiency.</p>
-                    </div>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3 class="feature-title">Security & Access Control</h3>
-                        <p class="feature-description">Role-based permissions and advanced data security measures to protect sensitive customer information.</p>
-                    </div>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-plug"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3 class="feature-title">Seamless Integrations</h3>
-                        <p class="feature-description">Connect with third-party apps, APIs, and existing tools for unified data flow across your business ecosystem.</p>
-                    </div>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-tachometer-alt"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3 class="feature-title">Custom Dashboards</h3>
-                        <p class="feature-description">Personalized analytics dashboards with KPI tracking and real-time reporting for data-driven decision making.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Challenges Section -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="challenges-section">
-                <h2 class="challenges-title">Challenges Without a CRM</h2>
-                <p class="challenges-subtitle">Discover the critical business problems that arise when customer relationship management is left unstructured.</p>
-                
-                <div class="challenges-grid">
-                    <div class="challenge-card">
-                        <div class="challenge-icon">
-                            <i class="fas fa-puzzle-piece"></i>
-                        </div>
-                        <h3 class="challenge-title">Scattered Customer Data</h3>
-                        <p class="challenge-description">Customer information spread across emails, spreadsheets, and sticky notes leads to missed opportunities and poor customer experience.</p>
-                    </div>
-                    
-                    <div class="challenge-card">
-                        <div class="challenge-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h3 class="challenge-title">Manual Lead Tracking</h3>
-                        <p class="challenge-description">Time-consuming manual processes for tracking leads and follow-ups result in delayed responses and lost potential sales.</p>
-                    </div>
-                    
-                    <div class="challenge-card">
-                        <div class="challenge-icon">
-                            <i class="fas fa-users-slash"></i>
-                        </div>
-                        <h3 class="challenge-title">Poor Team Coordination</h3>
-                        <p class="challenge-description">Lack of coordination between sales, marketing, and support teams creates communication gaps and inconsistent customer interactions.</p>
-                    </div>
-                    
-                    <div class="challenge-card">
-                        <div class="challenge-icon">
-                            <i class="fas fa-chart-pie"></i>
-                        </div>
-                        <h3 class="challenge-title">Limited Analytics</h3>
-                        <p class="challenge-description">Inability to analyze customer behavior, sales trends, and performance metrics prevents data-driven business decisions.</p>
-                    </div>
-                    
-                    <div class="challenge-card">
-                        <div class="challenge-icon">
-                            <i class="fas fa-dollar-sign"></i>
-                        </div>
-                        <h3 class="challenge-title">Revenue Loss</h3>
-                        <p class="challenge-description">Poor customer retention, missed follow-ups, and inefficient sales processes directly impact revenue and business growth.</p>
-                    </div>
-                    
-                    <div class="challenge-card">
-                        <div class="challenge-icon">
-                            <i class="fas fa-exclamation-triangle"></i>
-                        </div>
-                        <h3 class="challenge-title">Missed Opportunities</h3>
-                        <p class="challenge-description">Without proper tracking and automation, valuable leads slip through the cracks and potential deals are never pursued.</p>
-                    </div>
-                </div>
-                
-                <!-- Keep the old list for fallback but hidden -->
-                <ul class="challenges-list">
-                    <li><i class="fas fa-times"></i> <span>Scattered customer data and missed opportunities</span></li>
-                    <li><i class="fas fa-times"></i> <span>Inefficient manual tracking of leads and follow-ups</span></li>
-                    <li><i class="fas fa-times"></i> <span>Poor coordination between sales and marketing teams</span></li>
-                    <li><i class="fas fa-times"></i> <span>Inability to analyze customer behavior and trends</span></li>
-                    <li><i class="fas fa-times"></i> <span>Lost revenue due to poor customer retention</span></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Advantage Section -->
-    <section class="advantage-section section-padding">
-        <div class="container">
-            <h2 class="section-title">What We Bring – <span>The Zonixtec Advantage</span></h2>
-            <p class="section-subtitle">We don't just develop CRMs—we build growth engines for your business.</p>
-            
-            <div class="advantage-grid">
-                <div class="advantage-card">
-                    <div class="advantage-icon">
-                        <i class="fas fa-puzzle-piece"></i>
-                    </div>
-                    <h3 class="advantage-title">Fully Customizable</h3>
-                    <p class="advantage-description">Modules designed for your workflow</p>
-                </div>
-                
-                <div class="advantage-card">
-                    <div class="advantage-icon">
-                        <i class="fas fa-plug"></i>
-                    </div>
-                    <h3 class="advantage-title">Seamless Integration</h3>
-                    <p class="advantage-description">With ERP, social media, and communication tools</p>
-                </div>
-                
-                <div class="advantage-card">
-                    <div class="advantage-icon">
-                        <i class="fas fa-chart-pie"></i>
-                    </div>
-                    <h3 class="advantage-title">Real-time Insights</h3>
-                    <p class="advantage-description">For informed decision-making</p>
-                </div>
-                
-                <div class="advantage-card">
-                    <div class="advantage-icon">
-                        <i class="fas fa-cloud-upload-alt"></i>
-                    </div>
-                    <h3 class="advantage-title">Flexible Deployment</h3>
-                    <p class="advantage-description">Cloud or on-premise deployment flexibility</p>
-                </div>
-                
-                <div class="advantage-card">
-                    <div class="advantage-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="advantage-title">Secure Data Handling</h3>
-                    <p class="advantage-description">With role-based permissions</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="process-section section-padding">
-        <div class="container">
-            <h2 class="section-title">How We'll Do It <span>(Development Process)</span></h2>
-            
-            <div class="process-carousel">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3 class="step-title">Requirement Analysis</h3>
-                    <p class="step-description">Understand your business model, sales process, and goals</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3 class="step-title">Design & Architecture</h3>
-                    <p class="step-description">Create data models, workflows, and UI/UX layouts</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3 class="step-title">Development & Integration</h3>
-                    <p class="step-description">Build and connect CRM modules with your existing systems</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3 class="step-title">Testing & Quality Assurance</h3>
-                    <p class="step-description">Validate data accuracy, security, and performance</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">5</div>
-                    <h3 class="step-title">Deployment & Training</h3>
-                    <p class="step-description">Launch and onboard your team for smooth adoption</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technology Stack -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="tech-stack">
-                <h2 class="section-title">Technology <span>Stack</span></h2>
-                <p class="section-subtitle">We leverage cutting-edge technologies to build robust, scalable, and future-ready CRM solutions.</p>
-                
-                <div class="tech-grid">
-                    <div class="tech-category">
-                        <div class="tech-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3 class="tech-category-title">Languages & Frameworks</h3>
-                        <ul class="tech-list">
-                            <li>JavaScript</li>
-                            <li>Node.js</li>
-                            <li>React</li>
-                            <li>Angular</li>
-                            <li>Python</li>
-                            <li>Laravel</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="tech-category">
-                        <div class="tech-icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h3 class="tech-category-title">Databases</h3>
-                        <ul class="tech-list">
-                            <li>MongoDB</li>
-                            <li>MySQL</li>
-                            <li>PostgreSQL</li>
-                            <li>Redis</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="tech-category">
-                        <div class="tech-icon">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <h3 class="tech-category-title">Cloud Platforms</h3>
-                        <ul class="tech-list">
-                            <li>AWS</li>
-                            <li>Azure</li>
-                            <li>Google Cloud</li>
-                            <li>Digital Ocean</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="tech-category">
-                        <div class="tech-icon">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
                             <i class="fas fa-plug"></i>
                         </div>
-                        <h3 class="tech-category-title">Integration Tools</h3>
-                        <ul class="tech-list">
-                            <li>Zapier</li>
-                            <li>RESTful APIs</li>
-                            <li>GraphQL</li>
-                            <li>Webhooks</li>
-                        </ul>
+                        <h3 class="benefit-title">Seamless Integrations</h3>
+                        <p class="benefit-text">Connect with third-party apps, APIs, and existing tools for unified data flow across your business ecosystem.</p>
                     </div>
-                    
-                    <div class="tech-category">
-                        <div class="tech-icon">
-                            <i class="fas fa-chart-bar"></i>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-tachometer-alt"></i>
                         </div>
-                        <h3 class="tech-category-title">Analytics</h3>
-                        <ul class="tech-list">
-                            <li>Power BI</li>
-                            <li>Tableau</li>
-                            <li>Google Analytics</li>
-                            <li>Mixpanel</li>
-                        </ul>
+                        <h3 class="benefit-title">Custom Dashboards</h3>
+                        <p class="benefit-text">Personalized analytics dashboards with KPI tracking and real-time reporting for data-driven decision making.</p>
                     </div>
                 </div>
+
+                <div class="challenges-section">
+                    <div class="challenges-container">
+                        <h2 class="challenges-title">Challenges Without a CRM</h2>
+                        <div class="challenges-list">
+                            <div class="challenge-item">
+                                <div class="challenge-icon">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <p class="challenge-text">Scattered customer data and missed opportunities</p>
+                            </div>
+                            <div class="challenge-item">
+                                <div class="challenge-icon">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <p class="challenge-text">Inefficient manual tracking of leads and follow-ups</p>
+                            </div>
+                            <div class="challenge-item">
+                                <div class="challenge-icon">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <p class="challenge-text">Poor coordination between sales and marketing teams</p>
+                            </div>
+                            <div class="challenge-item">
+                                <div class="challenge-icon">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <p class="challenge-text">Inability to analyze customer behavior and trends</p>
+                            </div>
+                            <div class="challenge-item">
+                                <div class="challenge-icon">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <p class="challenge-text">Lost revenue due to poor customer retention</p>
+                            </div>
+                            <div class="challenge-item">
+                                <div class="challenge-icon">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <p class="challenge-text">Missed opportunities for upselling and cross-selling</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="what-we-bring">
+                    <div class="what-we-bring-container">
+                        <h2 class="what-we-bring-title">What We Bring to the Table</h2>
+                        <div class="what-we-bring-list">
+                            <div class="what-we-bring-item">
+                                <div class="what-we-bring-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="what-we-bring-text">Fully customizable modules designed for your workflow</p>
+                            </div>
+                            <div class="what-we-bring-item">
+                                <div class="what-we-bring-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="what-we-bring-text">Seamless integration with ERP, social media, and communication tools</p>
+                            </div>
+                            <div class="what-we-bring-item">
+                                <div class="what-we-bring-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="what-we-bring-text">Real-time insights for informed decision-making</p>
+                            </div>
+                            <div class="what-we-bring-item">
+                                <div class="what-we-bring-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="what-we-bring-text">Flexible cloud or on-premise deployment options</p>
+                            </div>
+                            <div class="what-we-bring-item">
+                                <div class="what-we-bring-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="what-we-bring-text">Secure data handling with role-based permissions</p>
+                            </div>
+                            <div class="what-we-bring-item">
+                                <div class="what-we-bring-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="what-we-bring-text">Proven track record of successful CRM implementations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process-section">
+                    <h2 class="section-title">Our Development <span>Process</span></h2>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <h3 class="step-title">Requirement Analysis</h3>
+                            <p class="step-description">Understand your business model, sales process, and goals to define CRM requirements.</p>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <h3 class="step-title">Design & Architecture</h3>
+                            <p class="step-description">Create data models, workflows, and UI/UX layouts for your CRM system.</p>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <h3 class="step-title">Development & Integration</h3>
+                            <p class="step-description">Build and connect CRM modules with your existing systems and tools.</p>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <h3 class="step-title">Testing & Quality Assurance</h3>
+                            <p class="step-description">Validate data accuracy, security, and performance of the CRM system.</p>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="step-number">5</div>
+                            <h3 class="step-title">Deployment</h3>
+                            <p class="step-description">Implement the CRM solution with minimal disruption to your operations.</p>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="step-number">6</div>
+                            <h3 class="step-title">Training & Support</h3>
+                            <p class="step-description">Onboard your team and provide ongoing support for optimal CRM usage.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technology Stack -->
+<div class="tech-section">
+    <h2>Our Technology Stack</h2>
+    
+    <div class="tech-grid">
+        <div class="tech-category">
+            <h3>Frontend Technologies</h3>
+            <div class="tech-items">
+                <div class="tech-item">React</div>
+                <div class="tech-item">Angular</div>
+                <div class="tech-item">Vue.js</div>
+                <div class="tech-item">TypeScript</div>
+                <div class="tech-item">HTML5/CSS3</div>
             </div>
         </div>
-    </section>
-
-    <!-- Impact Section -->
-    <section class="impact-section section-padding">
-        <div class="container">
-            <h2 class="section-title">The Impact of CRM on <span>Your Business</span></h2>
-            
-            <div class="impact-grid">
-                <div class="impact-card">
-                    <div class="impact-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="impact-title">Improved Lead Conversion</h3>
-                    <p class="impact-description">Streamlined sales processes and better lead management boost conversion rates and sales efficiency.</p>
-                </div>
-                
-                <div class="impact-card">
-                    <div class="impact-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="impact-title">Enhanced Customer Retention</h3>
-                    <p class="impact-description">Personalized interactions and timely support enhance customer loyalty and satisfaction.</p>
-                </div>
-                
-                <div class="impact-card">
-                    <div class="impact-icon">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h3 class="impact-title">Data-Driven Marketing</h3>
-                    <p class="impact-description">Actionable customer insights enable targeted campaigns and effective campaign management.</p>
-                </div>
-                
-                <div class="impact-card">
-                    <div class="impact-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3 class="impact-title">Seamless Collaboration</h3>
-                    <p class="impact-description">Break down silos with unified customer data accessible across departments.</p>
-                </div>
-                
-                <div class="impact-card">
-                    <div class="impact-icon">
-                        <i class="fas fa-rupee-sign"></i>
-                    </div>
-                    <h3 class="impact-title">Increased ROI</h3>
-                    <p class="impact-description">Automation reduces manual work while insights help optimize sales and marketing spend.</p>
-                </div>
+        
+        <div class="tech-category">
+            <h3>Backend Technologies</h3>
+            <div class="tech-items">
+                <div class="tech-item">Node.js</div>
+                <div class="tech-item">Python</div>
+                <div class="tech-item">Java</div>
+                <div class="tech-item">.NET</div>
+                <div class="tech-item">PHP</div>
             </div>
         </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section section-padding">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
-            
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        What industries can benefit from a CRM?
-                        <i class="fas fa-chevron-down faq-toggle"></i>
-                    </div>
-                    <div class="faq-answer">
-                        Every industry—retail, finance, healthcare, real estate, and more—can benefit from improved customer relationship management.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Can you integrate CRM with my existing tools?
-                        <i class="fas fa-chevron-down faq-toggle"></i>
-                    </div>
-                    <div class="faq-answer">
-                        Yes, we integrate with ERPs, accounting tools, marketing software, and communication platforms.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Is a custom CRM better than ready-made ones like Salesforce or HubSpot?
-                        <i class="fas fa-chevron-down faq-toggle"></i>
-                    </div>
-                    <div class="faq-answer">
-                        A custom CRM offers flexibility, scalability, and control—perfect for businesses with unique workflows or data needs.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Do you provide cloud-based CRM solutions?
-                        <i class="fas fa-chevron-down faq-toggle"></i>
-                    </div>
-                    <div class="faq-answer">
-                        Absolutely. We build both on-premise and cloud-based CRMs, depending on your requirements.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        How secure is my CRM data?
-                        <i class="fas fa-chevron-down faq-toggle"></i>
-                    </div>
-                    <div class="faq-answer">
-                        We implement encryption, access control, and compliance measures to ensure complete data security.
-                    </div>
-                </div>
+        
+        <div class="tech-category">
+            <h3>Databases</h3>
+            <div class="tech-items">
+                <div class="tech-item">PostgreSQL</div>
+                <div class="tech-item">MySQL</div>
+                <div class="tech-item">MongoDB</div>
+                <div class="tech-item">Redis</div>
+                <div class="tech-item">SQL Server</div>
             </div>
         </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section-padding" id="contact">
-        <div class="container">
-            <div class="cta-section">
-                <h2 class="cta-title">Ready to Transform Your Customer Relationships?</h2>
-                <p class="cta-subtitle">Let's build a CRM solution that drives growth, improves efficiency, and enhances customer satisfaction. Contact us for a free consultation and discover how our CRM expertise can benefit your business.</p>
-                <a href="contact.html" class="cta-button-large">Schedule a Free Consultation</a>
+        
+        <div class="tech-category">
+            <h3>CRM Platforms</h3>
+            <div class="tech-items">
+                <div class="tech-item">Salesforce</div>
+                <div class="tech-item">HubSpot</div>
+                <div class="tech-item">Zoho</div>
+                <div class="tech-item">Microsoft Dynamics</div>
+                <div class="tech-item">Custom Solutions</div>
             </div>
         </div>
-    </section>
+        
+        <div class="tech-category">
+            <h3>Cloud & Integration</h3>
+            <div class="tech-items">
+                <div class="tech-item">AWS</div>
+                <div class="tech-item">Azure</div>
+                <div class="tech-item">Google Cloud</div>
+                <div class="tech-item">REST APIs</div>
+                <div class="tech-item">Webhooks</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>AI & Analytics</h3>
+            <div class="tech-items">
+                <div class="tech-item">Machine Learning</div>
+                <div class="tech-item">Predictive Analytics</div>
+                <div class="tech-item">Data Visualization</div>
+                <div class="tech-item">Business Intelligence</div>
+                <div class="tech-item">Automation Tools</div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <!-- Footer -->
-   <footer class="footer">
+                <div class="impact-section">
+                    <div class="impact-container">
+                        <h2 class="impact-title">Business Impact</h2>
+                        <div class="impact-list">
+                            <div class="impact-item">
+                                <div class="impact-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <p class="impact-text">Improved lead conversion and sales efficiency</p>
+                            </div>
+                            <div class="impact-item">
+                                <div class="impact-icon">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                                <p class="impact-text">Increased revenue through better customer retention</p>
+                            </div>
+                            <div class="impact-item">
+                                <div class="impact-icon">
+                                    <i class="fas fa-user-check"></i>
+                                </div>
+                                <p class="impact-text">Enhanced customer experience and satisfaction</p>
+                            </div>
+                            <div class="impact-item">
+                                <div class="impact-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <p class="impact-text">Improved data security and compliance</p>
+                            </div>
+                            <div class="impact-item">
+                                <div class="impact-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <p class="impact-text">Faster response times to customer inquiries</p>
+                            </div>
+                            <div class="impact-item">
+                                <div class="impact-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <p class="impact-text">Competitive advantage through data-driven insights</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-container">
+                    <h2 class="cta-title">Ready to Transform Your Customer Relationships?</h2>
+                    <p class="cta-description">Let's build a CRM solution that drives growth, improves efficiency, and enhances customer satisfaction. Contact us for a free consultation and discover how our CRM expertise can benefit your business.</p>
+                    <a href="contact.html" class="cta-button-large">Schedule a Free Consultation</a>
+                </div>
+
+                <div class="faq-section">
+                    <h2 class="faq-title">Frequently Asked Questions</h2>
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                What industries can benefit from a CRM?
+                                <span class="faq-toggle fas fa-chevron-down"></span>
+                            </div>
+                            <p class="faq-answer" style="display:none;">Every industry—retail, finance, healthcare, real estate, and more—can benefit from improved customer relationship management. CRMs help businesses of all sizes streamline customer interactions and improve sales processes.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                Can you integrate CRM with my existing tools?
+                                <span class="faq-toggle fas fa-chevron-down"></span>
+                            </div>
+                            <p class="faq-answer" style="display:none;">Yes, we integrate with ERPs, accounting tools, marketing software, and communication platforms. Our CRM solutions are designed to work seamlessly with your existing technology ecosystem.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                Is a custom CRM better than ready-made ones like Salesforce or HubSpot?
+                                <span class="faq-toggle fas fa-chevron-down"></span>
+                            </div>
+                            <p class="faq-answer" style="display:none;">A custom CRM offers flexibility, scalability, and control—perfect for businesses with unique workflows or data needs. While off-the-shelf solutions work for standard requirements, custom CRMs are tailored to your specific business processes.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                Do you provide cloud-based CRM solutions?
+                                <span class="faq-toggle fas fa-chevron-down"></span>
+                            </div>
+                            <p class="faq-answer" style="display:none;">Absolutely. We build both on-premise and cloud-based CRMs, depending on your requirements. Cloud-based solutions offer accessibility from anywhere and reduced IT infrastructure costs.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                How secure is my CRM data?
+                                <span class="faq-toggle fas fa-chevron-down"></span>
+                            </div>
+                            <p class="faq-answer" style="display:none;">We implement encryption, access control, and compliance measures to ensure complete data security. Our CRMs include role-based permissions and audit trails to protect sensitive customer information.</p>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const faqItems = document.querySelectorAll('.faq-item');
+                        faqItems.forEach(item => {
+                            const question = item.querySelector('.faq-question');
+                            const answer = item.querySelector('.faq-answer');
+                            question.addEventListener('click', () => {
+                                const isActive = item.classList.contains('active');
+                                // Hide all answers
+                                faqItems.forEach(i => {
+                                    i.classList.remove('active');
+                                    i.querySelector('.faq-answer').style.display = 'none';
+                                });
+                                // Toggle current
+                                if (!isActive) {
+                                    item.classList.add('active');
+                                    answer.style.display = 'block';
+                                } else {
+                                    item.classList.remove('active');
+                                    answer.style.display = 'none';
+                                }
+                            });
+                        });
+                    });
+                </script>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
         <div class="container">
             <div class="footer-container">
                 <!-- Solutions Section with Dropdown -->
@@ -1807,6 +1664,19 @@
                         <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a>
                     </div>
                 </div>
+
+                <!-- Newsletter Section -->
+                <!-- <div class="footer-col">
+        <h3>Newsletter</h3>
+        <p>Subscribe to our newsletter to receive updates on our latest services, technology insights, and industry trends.</p>
+        <div class="form-group" id="newsletter-group">
+          <input type="email" class="form-control" id="newsletter-email" placeholder="Your Email" required>
+          <button class="submit-btn" id="newsletter-btn" type="button">Subscribe</button>
+        </div>
+        <div id="newsletter-thankyou" style="display:none; color: #27ae60; margin-top:10px;">
+          Thank you for subscribing!
+        </div>
+      </div> -->
             </div>
 
             <div class="footer-bottom">
@@ -1815,24 +1685,31 @@
         </div>
     </footer>
 
+
     <style>
         .footer-dropdown-content {
             display: none;
             margin-left: 15px;
         }
-    
+
         .footer-dropdown.open .footer-dropdown-content {
             display: block;
         }
-    
+
         .footer-dropdown-header {
             display: flex;
             color: var(--gray);
+            /* transform: ; */
             justify-content: space-between;
             cursor: pointer;
             margin: 5px 0;
         }
+
+        .footer-dropdown-header:hover {
+            color: var(--secondary);
+        }
     </style>
+
 
     <script>
         document.querySelectorAll('.footer-dropdown-header').forEach(header => {
@@ -1843,104 +1720,16 @@
         });
     </script>
 
+
+
     <script>
-        // Mobile menu toggle
         document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
             document.querySelector('.nav-links').classList.toggle('active');
         });
 
-        // Mobile dropdown functionality
-        document.addEventListener('DOMContentLoaded', function () {
-            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-
-            dropdownToggles.forEach(toggle => {
-                toggle.addEventListener('click', function (e) {
-                    if (window.innerWidth <= 768) {
-                        e.preventDefault();
-                        const dropdown = this.parentElement;
-                        dropdown.classList.toggle('active');
-
-                        // Close other dropdowns
-                        document.querySelectorAll('.dropdown').forEach(otherDropdown => {
-                            if (otherDropdown !== dropdown) {
-                                otherDropdown.classList.remove('active');
-                            }
-                        });
-                    }
-                });
-            });
-
-            // Close dropdowns when clicking outside
-            document.addEventListener('click', function (e) {
-                if (!e.target.closest('.dropdown') && !e.target.closest('.mobile-menu-btn')) {
-                    document.querySelectorAll('.dropdown').forEach(dropdown => {
-                        dropdown.classList.remove('active');
-                    });
-                }
-            });
-        });
-
-        // Header scroll effect
-        window.addEventListener('scroll', function () {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // FAQ toggle functionality
-        const faqItems = document.querySelectorAll('.faq-item');
-        
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-            
-            question.addEventListener('click', () => {
-                // Close all other items
-                faqItems.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
-                    }
-                });
-                
-                // Toggle current item
-                item.classList.toggle('active');
-            });
-        });
-
-        // Floating cards animation on scroll
-        const floatingCards = document.querySelectorAll('.floating-card');
-
-        function checkScroll() {
-            floatingCards.forEach(card => {
-                const cardTop = card.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-
-                if (cardTop < windowHeight * 0.8) {
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }
-            });
-        }
-
-        // Initial state for animation
-        floatingCards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-        });
-
-        window.addEventListener('scroll', checkScroll);
-        window.addEventListener('load', checkScroll);
-
-        // Footer dropdown functionality
-        document.querySelectorAll('.footer-dropdown-header').forEach(header => {
-            header.addEventListener('click', () => {
-                const parent = header.parentElement;
-                parent.classList.toggle('open');
-            });
-        });
     </script>
+
     <script src="Customscroll.js"></script>
 </body>
+
 </html>

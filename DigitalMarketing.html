@@ -528,50 +528,55 @@
             line-height: 1.7;
         }
 
-        .tech-stack {
-            margin-bottom: 80px;
+        /* Technology Stack Section */
+        .tech-section {
+            background: rgba(10, 10, 26, 0.7);
+            border-radius: 10px;
+            padding: 60px;
+            margin-bottom: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
-
-        .tech-title {
+        
+        .tech-section h2 {
             text-align: center;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
-            margin-bottom: 50px;
-            background: var(--tech-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--secondary);
+            margin-bottom: 40px;
         }
-
+        
         .tech-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
         }
-
-        .tech-item {
-            background: rgba(15, 23, 42, 0.6);
-            border-radius: 10px;
-            padding: 25px 15px;
+        
+        .tech-category {
             text-align: center;
-            border: 1px solid rgba(100, 116, 139, 0.2);
-            transition: transform 0.3s ease;
         }
-
+        
+        .tech-category h3 {
+            color: var(--light);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .tech-items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .tech-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 15px;
+            border-radius: 8px;
+            color: var(--gray);
+            transition: all 0.3s ease;
+        }
+        
         .tech-item:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-
-        .tech-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: var(--secondary);
-        }
-
-        .tech-name {
-            font-size: 1.1rem;
-            font-weight: 500;
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--light);
+            transform: translateY(-3px);
         }
 
         .impact-section {
@@ -1426,59 +1431,77 @@
                     </div>
                 </div>
 
-                <div class="tech-stack">
-                    <h2 class="tech-title">Our Technology Stack</h2>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fas fa-search"></i>
-                            </div>
-                            <div class="tech-name">Google Search Console</div>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fas fa-chart-pie"></i>
-                            </div>
-                            <div class="tech-name">Ahrefs</div>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <div class="tech-name">SEMrush</div>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fab fa-google"></i>
-                            </div>
-                            <div class="tech-name">Google Analytics</div>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                            <div class="tech-name">Hotjar</div>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fas fa-cube"></i>
-                            </div>
-                            <div class="tech-name">HubSpot</div>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="tech-name">Mailchimp</div>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fas fa-bolt"></i>
-                            </div>
-                            <div class="tech-name">Zapier</div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Technology Stack -->
+<div class="tech-section">
+    <h2>Our Technology Stack</h2>
+    <div class="tech-grid">
+        <div class="tech-category">
+            <h3>SEO & Analytics</h3>
+            <div class="tech-items">
+                <div class="tech-item">Google Search Console</div>
+                <div class="tech-item">Ahrefs</div>
+                <div class="tech-item">SEMrush</div>
+                <div class="tech-item">Google Analytics</div>
+                <div class="tech-item">Google Tag Manager</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>User Behavior & Testing</h3>
+            <div class="tech-items">
+                <div class="tech-item">Hotjar</div>
+                <div class="tech-item">Crazy Egg</div>
+                <div class="tech-item">Optimizely</div>
+                <div class="tech-item">Google Optimize</div>
+                <div class="tech-item">Mouseflow</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Marketing Automation</h3>
+            <div class="tech-items">
+                <div class="tech-item">HubSpot</div>
+                <div class="tech-item">Mailchimp</div>
+                <div class="tech-item">ActiveCampaign</div>
+                <div class="tech-item">Marketo</div>
+                <div class="tech-item">Pardot</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Social Media & Ads</h3>
+            <div class="tech-items">
+                <div class="tech-item">Meta Business Suite</div>
+                <div class="tech-item">Hootsuite</div>
+                <div class="tech-item">Buffer</div>
+                <div class="tech-item">Google Ads</div>
+                <div class="tech-item">LinkedIn Ads</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Integration & Automation</h3>
+            <div class="tech-items">
+                <div class="tech-item">Zapier</div>
+                <div class="tech-item">Make (Integromat)</div>
+                <div class="tech-item">API Integrations</div>
+                <div class="tech-item">Webhooks</div>
+                <div class="tech-item">Custom Scripts</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Content & Design</h3>
+            <div class="tech-items">
+                <div class="tech-item">Canva</div>
+                <div class="tech-item">Adobe Creative Suite</div>
+                <div class="tech-item">Figma</div>
+                <div class="tech-item">WordPress</div>
+                <div class="tech-item">Shopify</div>
+            </div>
+        </div>
+    </div>
+</div>
 
                 <div class="impact-section">
                     <div class="impact-container">

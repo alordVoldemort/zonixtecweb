@@ -422,38 +422,46 @@
             margin-bottom: 80px;
         }
 
-        .challenges-grid {
+        .challenges-container {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 20px;
+            padding: 50px;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+        }
+
+        .challenges-title {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            background: var(--tech-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .challenges-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            gap: 20px;
         }
 
-        .challenge-card {
-            background: rgba(15, 23, 42, 0.6);
-            border-radius: 10px;
-            padding: 25px;
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            position: relative;
-        }
-
-        .challenge-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(135deg, #ef4444, #f97316);
-        }
-
-        .challenge-icon {
-            font-size: 2rem;
-            color: #ef4444;
+        .challenge-item {
+            display: flex;
+            align-items: flex-start;
             margin-bottom: 15px;
         }
 
+        .challenge-icon {
+            color: #ef4444;
+            margin-right: 15px;
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
         .challenge-text {
-            color: #cbd5e1;
+            color: #94a3b8;
+            line-height: 1.7;
         }
 
         /* Process Section */
@@ -1101,57 +1109,50 @@
     </section>
     
     <!-- Challenges Section -->
-    <section class="section-padding challenges-section">
-        <div class="container">
-            <h2 class="section-title">Challenges Without NLP</h2>
-            <div class="challenges-grid">
-                <div class="challenge-card">
+    <!-- Challenges Section -->
+<section class="section-padding challenges-section">
+    <div class="container">
+        <div class="challenges-container">
+            <h2 class="challenges-title">Challenges Without NLP</h2>
+            <div class="challenges-list">
+                <div class="challenge-item">
                     <div class="challenge-icon">
-                        <i class="fas fa-database"></i>
+                        <i class="fas fa-exclamation-circle"></i>
                     </div>
-                    <div class="challenge-text">
-                        <p>Overwhelming amounts of unstructured text data that's difficult to process manually</p>
-                    </div>
+                    <p class="challenge-text">Overwhelming amounts of unstructured text data that's difficult to process manually</p>
                 </div>
                 
-                <div class="challenge-card">
+                <div class="challenge-item">
                     <div class="challenge-icon">
-                        <i class="fas fa-headset"></i>
+                        <i class="fas fa-exclamation-circle"></i>
                     </div>
-                    <div class="challenge-text">
-                        <p>Slow and manual customer support processes leading to poor customer experiences</p>
-                    </div>
+                    <p class="challenge-text">Slow and manual customer support processes leading to poor customer experiences</p>
                 </div>
                 
-                <div class="challenge-card">
+                <div class="challenge-item">
                     <div class="challenge-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-exclamation-circle"></i>
                     </div>
-                    <div class="challenge-text">
-                        <p>Missed business opportunities due to inability to extract insights from text data</p>
-                    </div>
+                    <p class="challenge-text">Missed business opportunities due to inability to extract insights from text data</p>
                 </div>
                 
-                <div class="challenge-card">
+                <div class="challenge-item">
                     <div class="challenge-icon">
-                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-exclamation-circle"></i>
                     </div>
-                    <div class="challenge-text">
-                        <p>Inability to track customer emotions and sentiment at scale across channels</p>
-                    </div>
+                    <p class="challenge-text">Inability to track customer emotions and sentiment at scale across channels</p>
                 </div>
                 
-                <div class="challenge-card">
+                <div class="challenge-item">
                     <div class="challenge-icon">
-                        <i class="fas fa-clock"></i>
+                        <i class="fas fa-exclamation-circle"></i>
                     </div>
-                    <div class="challenge-text">
-                        <p>Wasted time reading through repetitive documents and communications</p>
-                    </div>
+                    <p class="challenge-text">Wasted time reading through repetitive documents and communications</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     
     <!-- Solution Section -->
     <section class="section-padding">

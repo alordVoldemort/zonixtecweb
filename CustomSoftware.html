@@ -18,7 +18,7 @@ We design scalable, secure, and user-friendly applications tailored to your busi
         :root {
             --primary: #2563eb;
             --primary-dark: #1d4ed8;
-            --secondary: #06b6d4;
+            --secondary: #00f2ff;
             --dark: #0f172a;
             --light: #f8fafc;
             --gray: #64748b;
@@ -69,11 +69,20 @@ We design scalable, secure, and user-friendly applications tailored to your busi
         }
 
         .section-title {
-            font-family: 'Orbitron', sans-serif;
             font-size: 2.5rem;
+            font-family: 'Orbitron', sans-serif;
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 3rem;
             position: relative;
+        }
+        
+        .section-title span {
+            color: var(--secondary);
+            position: relative;
+        }
+
+        .section-title span.pulse {
+            animation: pulse 2s infinite;
         }
 
         .section-title::after {
@@ -150,9 +159,9 @@ We design scalable, secure, and user-friendly applications tailored to your busi
             color: var(--secondary);
         }
 
-       
 
-       .cta-button {
+
+        .cta-button {
             background: var(--tech-gradient);
             color: white;
             padding: 10px 20px;
@@ -410,110 +419,124 @@ We design scalable, secure, and user-friendly applications tailored to your busi
             line-height: 1.7;
         }
 
-        .process-container {
-            background: rgba(15, 23, 42, 0.5);
-            border-radius: 20px;
-            padding: 50px;
+        /* Development Process Section - Updated to match Web App Development page */
+        .process-section {
             margin-bottom: 80px;
-            border: 1px solid rgba(100, 116, 139, 0.2);
-        }
-
-        .process-title {
-            text-align: center;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
-            margin-bottom: 50px;
-            background: var(--tech-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .process-steps {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            z-index: 1;
         }
 
         .process-step {
-            flex: 1;
-            min-width: 250px;
-            max-width: 300px;
             text-align: center;
-            padding: 30px;
             position: relative;
+            z-index: 2;
+            flex: 1;
+            padding: 0 15px;
         }
 
         .step-number {
-            width: 50px;
-            height: 50px;
-            background: var(--tech-gradient);
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
+            font-size: 1.8rem;
             font-weight: 700;
-            font-size: 1.2rem;
+            color: var(--dark);
+            position: relative;
         }
 
         .step-title {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-family: 'Orbitron', sans-serif;
+            color: var(--light);
+            margin-bottom: 10px;
             font-weight: 600;
         }
 
         .step-description {
-            color: #94a3b8;
-            line-height: 1.7;
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
 
-        .tech-stack {
-            margin-bottom: 80px;
-        }
 
-        .tech-title {
+
+        /* Technology Stack Section */
+
+        /* Technology Stack */
+        .tech-section {
+            background: rgba(10, 10, 26, 0.7);
+            border-radius: 10px;
+            margin-top: 80px;
+            padding: 60px;
+            margin-bottom: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .tech-section h2 {
             text-align: center;
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
-            margin-bottom: 50px;
-            background: var(--tech-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--secondary);
+            margin-bottom: 40px;
         }
-
+        
         .tech-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
         }
-
-        .tech-item {
-            background: rgba(15, 23, 42, 0.6);
-            border-radius: 10px;
-            padding: 25px 15px;
+        
+        .tech-category {
             text-align: center;
-            border: 1px solid rgba(100, 116, 139, 0.2);
-            transition: transform 0.3s ease;
         }
-
+        
+        .tech-category h3 {
+            color: var(--light);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .tech-items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .tech-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 15px;
+            border-radius: 8px;
+            color: var(--gray);
+            transition: all 0.3s ease;
+        }
+        
         .tech-item:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--light);
+            transform: translateY(-3px);
         }
-
-        .tech-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: var(--secondary);
-        }
-
-        .tech-name {
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
+        
 
         .impact-section {
             margin-bottom: 80px;
@@ -782,7 +805,7 @@ We design scalable, secure, and user-friendly applications tailored to your busi
             box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
         }
 
-           /* ===== Dropdown Styles ===== */
+        /* ===== Dropdown Styles ===== */
         .dropdown {
             position: relative;
             display: inline-block;
@@ -846,29 +869,32 @@ We design scalable, secure, and user-friendly applications tailored to your busi
         }
 
         .dropdown-scroll {
-    max-height: 300px; /* Slightly less than parent to account for padding */
-    overflow-y: auto; /* Enable vertical scrolling */
-    padding: 8px 0; /* Add padding to scroll container */
-}
+            max-height: 300px;
+            /* Slightly less than parent to account for padding */
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+            padding: 8px 0;
+            /* Add padding to scroll container */
+        }
 
-/* Custom scrollbar styling */
-.dropdown-scroll::-webkit-scrollbar {
-    width: 6px;
-}
+        /* Custom scrollbar styling */
+        .dropdown-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
 
-.dropdown-scroll::-webkit-scrollbar-track {
-    background: rgba(15, 23, 42, 0.5);
-    border-radius: 3px;
-}
+        .dropdown-scroll::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 3px;
+        }
 
-.dropdown-scroll::-webkit-scrollbar-thumb {
-    background: var(--secondary);
-    border-radius: 3px;
-}
+        .dropdown-scroll::-webkit-scrollbar-thumb {
+            background: var(--secondary);
+            border-radius: 3px;
+        }
 
-.dropdown-scroll::-webkit-scrollbar-thumb:hover {
-    background: var(--primary);
-}
+        .dropdown-scroll::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
 
         .footer-bottom {
             text-align: center;
@@ -885,9 +911,10 @@ We design scalable, secure, and user-friendly applications tailored to your busi
 
         @media (min-width: 768px) {
 
-                   .dropdown-scroll {
-        max-height: 250px; /* Smaller scroll container for mobile */
-    }
+            .dropdown-scroll {
+                max-height: 250px;
+                /* Smaller scroll container for mobile */
+            }
 
             .footer-container {
                 grid-template-columns: repeat(4, 1fr);
@@ -1072,16 +1099,6 @@ We design scalable, secure, and user-friendly applications tailored to your busi
         .faq-toggle.active {
             transform: rotate(180deg);
         }
-
-
-
-
-        
-        
-
-
-
-
     </style>
 </head>
 
@@ -1098,7 +1115,8 @@ We design scalable, secure, and user-friendly applications tailored to your busi
 
                     <!-- <a href="Services.html">Services</a> -->
                     <div class="dropdown">
-                        <a href="Services.html" class="active dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                        <a href="Services.html" class="active dropdown-toggle">Services <i
+                                class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-content">
                             <div class="dropdown-scroll">
                                 <a href="web-design-development.html">Web Design & Development</a>
@@ -1152,7 +1170,8 @@ We design scalable, secure, and user-friendly applications tailored to your busi
                                 <i class="fas fa-globe"></i>
                             </div>
                             <h3 class="service-type-title">Web Applications</h3>
-                            <p class="service-type-text">Robust, scalable, and interactive platforms for businesses of all sizes.</p>
+                            <p class="service-type-text">Robust, scalable, and interactive platforms for businesses of
+                                all sizes.</p>
                         </div>
 
                         <div class="service-type-card">
@@ -1160,7 +1179,8 @@ We design scalable, secure, and user-friendly applications tailored to your busi
                                 <i class="fas fa-mobile-alt"></i>
                             </div>
                             <h3 class="service-type-title">Mobile Applications</h3>
-                            <p class="service-type-text">Native & cross-platform apps for Android, iOS, and hybrid environments.</p>
+                            <p class="service-type-text">Native & cross-platform apps for Android, iOS, and hybrid
+                                environments.</p>
                         </div>
 
                         <div class="service-type-card">
@@ -1168,7 +1188,8 @@ We design scalable, secure, and user-friendly applications tailored to your busi
                                 <i class="fas fa-building"></i>
                             </div>
                             <h3 class="service-type-title">Enterprise Solutions</h3>
-                            <p class="service-type-text">Streamlined software for managing operations, finance, and workforce.</p>
+                            <p class="service-type-text">Streamlined software for managing operations, finance, and
+                                workforce.</p>
                         </div>
 
                         <div class="service-type-card">
@@ -1176,7 +1197,8 @@ We design scalable, secure, and user-friendly applications tailored to your busi
                                 <i class="fas fa-cloud"></i>
                             </div>
                             <h3 class="service-type-title">SaaS Development</h3>
-                            <p class="service-type-text">Cloud-based applications with subscription models for B2B & B2C.</p>
+                            <p class="service-type-text">Cloud-based applications with subscription models for B2B &
+                                B2C.</p>
                         </div>
 
                         <div class="service-type-card">
@@ -1184,7 +1206,8 @@ We design scalable, secure, and user-friendly applications tailored to your busi
                                 <i class="fas fa-plug"></i>
                             </div>
                             <h3 class="service-type-title">API & Integration Services</h3>
-                            <p class="service-type-text">Seamless data flow between your existing tools and new systems.</p>
+                            <p class="service-type-text">Seamless data flow between your existing tools and new systems.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -1247,48 +1270,48 @@ We design scalable, secure, and user-friendly applications tailored to your busi
                 </div>
 
                 <div class="challenges-section">
-  <div class="challenges-container">
-    <h2 class="challenges-title">Challenges Without Custom Software</h2>
-    <div class="challenges-list">
-      <div class="challenge-item">
-         <div class="challenge-icon">
-            <i class="fas fa-exclamation-circle"></i>
-        </div>
-        <p class="challenge-text">Limited flexibility with off-the-shelf products</p>
-      </div>
-      <div class="challenge-item">
-         <div class="challenge-icon">
+                    <div class="challenges-container">
+                        <h2 class="challenges-title">Challenges Without Custom Software</h2>
+                        <div class="challenges-list">
+                            <div class="challenge-item">
+                                <div class="challenge-icon">
                                     <i class="fas fa-exclamation-circle"></i>
                                 </div>
-        <p class="challenge-text">High costs due to unused features</p>
-      </div>
-      <div class="challenge-item">
-         <div class="challenge-icon">
+                                <p class="challenge-text">Limited flexibility with off-the-shelf products</p>
+                            </div>
+                            <div class="challenge-item">
+                                <div class="challenge-icon">
                                     <i class="fas fa-exclamation-circle"></i>
                                 </div>
-        <p class="challenge-text">Security vulnerabilities in generic software</p>
-      </div>
-      <div class="challenge-item">
-        <div class="challenge-icon">
+                                <p class="challenge-text">High costs due to unused features</p>
+                            </div>
+                            <div class="challenge-item">
+                                <div class="challenge-icon">
                                     <i class="fas fa-exclamation-circle"></i>
                                 </div>
-        <p class="challenge-text">Poor integration with existing systems</p>
-      </div>
-      <div class="challenge-item">
-         <div class="challenge-icon">
+                                <p class="challenge-text">Security vulnerabilities in generic software</p>
+                            </div>
+                            <div class="challenge-item">
+                                <div class="challenge-icon">
                                     <i class="fas fa-exclamation-circle"></i>
                                 </div>
-        <p class="challenge-text">Inability to scale with business growth</p>
-      </div>
-      <div class="challenge-item">
-        <div class="challenge-icon">
+                                <p class="challenge-text">Poor integration with existing systems</p>
+                            </div>
+                            <div class="challenge-item">
+                                <div class="challenge-icon">
                                     <i class="fas fa-exclamation-circle"></i>
                                 </div>
-        <p class="challenge-text">Lack of competitive advantage</p>
-      </div>
-    </div>
-  </div>
-</div>
+                                <p class="challenge-text">Inability to scale with business growth</p>
+                            </div>
+                            <div class="challenge-item">
+                                <div class="challenge-icon">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <p class="challenge-text">Lack of competitive advantage</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
                 <div class="what-we-bring">
@@ -1336,7 +1359,7 @@ We design scalable, secure, and user-friendly applications tailored to your busi
                 </div>
 
                 <div class="process-container">
-                    <h2 class="process-title">Our Development Process</h2>
+                    <h2 class="section-title">Our Development <span>Process</span></h2>
                     <div class="process-steps">
                         <div class="process-step">
                             <div class="step-number">1</div>
@@ -1382,59 +1405,63 @@ We design scalable, secure, and user-friendly applications tailored to your busi
                     </div>
                 </div>
 
-                <div class="tech-stack">
-                    <h2 class="tech-title">Our Technology Stack</h2>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fab fa-react"></i>
-                            </div>
-                            <div class="tech-name">React</div>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fab fa-angular"></i>
-                            </div>
-                            <div class="tech-name">Angular</div>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fab fa-vuejs"></i>
-                            </div>
-                            <div class="tech-name">Vue.js</div>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fab fa-node-js"></i>
-                            </div>
-                            <div class="tech-name">Node.js</div>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fab fa-python"></i>
-                            </div>
-                            <div class="tech-name">Python</div>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fab fa-java"></i>
-                            </div>
-                            <div class="tech-name">Java</div>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <div class="tech-name">SQL/NoSQL</div>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fab fa-aws"></i>
-                            </div>
-                            <div class="tech-name">AWS</div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Technology Stack -->
+<div class="tech-section">
+    <h2>Our Technology Stack</h2>
+    
+    <div class="tech-grid">
+        <div class="tech-category">
+            <h3>Languages & Frameworks</h3>
+            <div class="tech-items">
+                <div class="tech-item">HTML5</div>
+                <div class="tech-item">CSS3</div>
+                <div class="tech-item">JavaScript</div>
+                <div class="tech-item">React</div>
+                <div class="tech-item">Angular</div>
+                <div class="tech-item">Node.js</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Backend Technologies</h3>
+            <div class="tech-items">
+                <div class="tech-item">PHP</div>
+                <div class="tech-item">Python</div>
+                <div class="tech-item">Express.js</div>
+                <div class="tech-item">Laravel</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Databases</h3>
+            <div class="tech-items">
+                <div class="tech-item">MongoDB</div>
+                <div class="tech-item">MySQL</div>
+                <div class="tech-item">PostgreSQL</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>CMS Platforms</h3>
+            <div class="tech-items">
+                <div class="tech-item">WordPress</div>
+                <div class="tech-item">Drupal</div>
+                <div class="tech-item">Strapi</div>
+                <div class="tech-item">Shopify</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Cloud & Hosting</h3>
+            <div class="tech-items">
+                <div class="tech-item">AWS</div>
+                <div class="tech-item">Azure</div>
+                <div class="tech-item">Google Cloud</div>
+                <div class="tech-item">DigitalOcean</div>
+            </div>
+        </div>
+    </div>
+</div>
 
                 <div class="impact-section">
                     <div class="impact-container">
@@ -1573,117 +1600,124 @@ We design scalable, secure, and user-friendly applications tailored to your busi
         </section>
     </main>
 
-   <footer class="footer">
-  <div class="container">
-    <div class="footer-container">
-      <!-- Solutions Section with Dropdown -->
-      <div class="footer-col">
-        <h3>Solutions</h3>
-        <div class="footer-links">
-          
-          <!-- Next-Gen Tech Dropdown -->
-          <div class="footer-dropdown">
-            <div class="footer-dropdown-header">
-              <span><i class="fas fa-chevron-right"></i> Next-Gen Tech</span>
-              <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-            </div>
-            <div class="footer-dropdown-content">
-              <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> AI & Machine Learning</a>
-              <a href="CloudSolutions.html"><i class="fas fa-chevron-right"></i> Cloud Solutions</a>
-            </div>
-          </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <!-- Solutions Section with Dropdown -->
+                <div class="footer-col">
+                    <h3>Solutions</h3>
+                    <div class="footer-links">
 
-          <!-- AI Services Dropdown -->
-          <div class="footer-dropdown">
-            <div class="footer-dropdown-header">
-              <span><i class="fas fa-chevron-right"></i> AI Services</span>
-              <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-            </div>
-            <div class="footer-dropdown-content">
-              <a href="AIServices.html"><i class="fas fa-chevron-right"></i> AI Services Overview</a>
-              <a href="AIStrategy.html"><i class="fas fa-chevron-right"></i> AI Strategy & Consulting</a>
-              <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> Machine Learning</a>
-              <a href="NLP.html"><i class="fas fa-chevron-right"></i> Natural Language Processing (NLP)</a>
-              <a href="ComputerVision.html"><i class="fas fa-chevron-right"></i> Computer Vision</a>
-              <a href="PredictiveAnalytics.html"><i class="fas fa-chevron-right"></i> Predictive Analysis</a>
-              <a href="ProcessAutomation.html"><i class="fas fa-chevron-right"></i> Process Automation</a>
-            </div>
-          </div>
+                        <!-- Next-Gen Tech Dropdown -->
+                        <div class="footer-dropdown">
+                            <div class="footer-dropdown-header">
+                                <span><i class="fas fa-chevron-right"></i> Next-Gen Tech</span>
+                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                            </div>
+                            <div class="footer-dropdown-content">
+                                <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> AI & Machine
+                                    Learning</a>
+                                <a href="CloudSolutions.html"><i class="fas fa-chevron-right"></i> Cloud Solutions</a>
+                            </div>
+                        </div>
 
-          <!-- Core Development Dropdown -->
-          <div class="footer-dropdown">
-            <div class="footer-dropdown-header">
-              <span><i class="fas fa-chevron-right"></i> Core Development</span>
-              <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-            </div>
-            <div class="footer-dropdown-content">
-              <a href="CustomSoftware.html"><i class="fas fa-chevron-right"></i> Custom Software Development</a>
-              <a href="MobileDevelopment.html"><i class="fas fa-chevron-right"></i> Mobile App Development</a>
-            </div>
-          </div>
+                        <!-- AI Services Dropdown -->
+                        <div class="footer-dropdown">
+                            <div class="footer-dropdown-header">
+                                <span><i class="fas fa-chevron-right"></i> AI Services</span>
+                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                            </div>
+                            <div class="footer-dropdown-content">
+                                <a href="AIServices.html"><i class="fas fa-chevron-right"></i> AI Services Overview</a>
+                                <a href="AIStrategy.html"><i class="fas fa-chevron-right"></i> AI Strategy &
+                                    Consulting</a>
+                                <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> Machine Learning</a>
+                                <a href="NLP.html"><i class="fas fa-chevron-right"></i> Natural Language Processing
+                                    (NLP)</a>
+                                <a href="ComputerVision.html"><i class="fas fa-chevron-right"></i> Computer Vision</a>
+                                <a href="PredictiveAnalytics.html"><i class="fas fa-chevron-right"></i> Predictive
+                                    Analysis</a>
+                                <a href="ProcessAutomation.html"><i class="fas fa-chevron-right"></i> Process
+                                    Automation</a>
+                            </div>
+                        </div>
 
-          <!-- Design & Experience Dropdown -->
-          <div class="footer-dropdown">
-            <div class="footer-dropdown-header">
-              <span><i class="fas fa-chevron-right"></i> Design & Experience</span>
-              <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-            </div>
-            <div class="footer-dropdown-content">
-              <a href="ui.html"><i class="fas fa-chevron-right"></i> UI/UX Design</a>
-            </div>
-          </div>
-        </div>
-      </div>
+                        <!-- Core Development Dropdown -->
+                        <div class="footer-dropdown">
+                            <div class="footer-dropdown-header">
+                                <span><i class="fas fa-chevron-right"></i> Core Development</span>
+                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                            </div>
+                            <div class="footer-dropdown-content">
+                                <a href="CustomSoftware.html"><i class="fas fa-chevron-right"></i> Custom Software
+                                    Development</a>
+                                <a href="MobileDevelopment.html"><i class="fas fa-chevron-right"></i> Mobile App
+                                    Development</a>
+                            </div>
+                        </div>
 
-      <!-- Insights Section -->
-      <div class="footer-col">
-        <h3>Insights</h3>
-        <div class="footer-links">
-          <a href="CaseStudies.html"><i class="fas fa-chevron-right"></i> Case Studies</a>
-          <a href="Blogs.html"><i class="fas fa-chevron-right"></i> Blogs</a>
-          <a href="CEOdesk.html"><i class="fas fa-chevron-right"></i> From CEO's Desk</a>
-          <!-- <a href="FutureZonixtec.html"><i class="fas fa-chevron-right"></i> Future of Zonixtec</a> -->
-          <a href="FAQs.html"><i class="fas fa-chevron-right"></i> FAQs</a>
-          <a href="Guides.html"><i class="fas fa-chevron-right"></i> Guides</a>
-          <a href="HowTos.html"><i class="fas fa-chevron-right"></i> How-tos</a>
-        </div>
-      </div>
+                        <!-- Design & Experience Dropdown -->
+                        <div class="footer-dropdown">
+                            <div class="footer-dropdown-header">
+                                <span><i class="fas fa-chevron-right"></i> Design & Experience</span>
+                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                            </div>
+                            <div class="footer-dropdown-content">
+                                <a href="ui.html"><i class="fas fa-chevron-right"></i> UI/UX Design</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-      <!-- Company Section -->
-    <div class="footer-col">
-        <h3>Company</h3>
-        <div class="footer-links">
-            <a href="aboutus.html"><i class="fas fa-chevron-right"></i> About Us</a>
-            <a href="aboutus.html"><i class="fas fa-chevron-right"></i> Our Story</a>
-            <!-- <a href="aboutus.html"><i class="fas fa-chevron-right"></i> Mission & Vision</a> -->
-            <a href="aboutus.html" id="aboutLink">
-                <i class="fas fa-chevron-right"></i> Mission & Vision
-            </a>
-    
-    
-            <a href="aboutus.html" id="OurJou"><i class="fas fa-chevron-right"></i> Our Journey</a>
-            <a href="aboutus.html" id="OurCore"><i class="fas fa-chevron-right"></i> Core Values</a>
-            <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
-            <a href="Leadership.html"><i class="fas fa-chevron-right"></i> Leadership</a>
-        </div>
-    </div>
+                <!-- Insights Section -->
+                <div class="footer-col">
+                    <h3>Insights</h3>
+                    <div class="footer-links">
+                        <a href="CaseStudies.html"><i class="fas fa-chevron-right"></i> Case Studies</a>
+                        <a href="Blogs.html"><i class="fas fa-chevron-right"></i> Blogs</a>
+                        <a href="CEOdesk.html"><i class="fas fa-chevron-right"></i> From CEO's Desk</a>
+                        <!-- <a href="FutureZonixtec.html"><i class="fas fa-chevron-right"></i> Future of Zonixtec</a> -->
+                        <a href="FAQs.html"><i class="fas fa-chevron-right"></i> FAQs</a>
+                        <a href="Guides.html"><i class="fas fa-chevron-right"></i> Guides</a>
+                        <a href="HowTos.html"><i class="fas fa-chevron-right"></i> How-tos</a>
+                    </div>
+                </div>
 
-      <!-- Quick Links Section -->
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <div class="footer-links">
-          <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
-          <a href="FAQs.html"><i class="fas fa-chevron-right"></i> FAQ Section</a>
-          <a href="Blogs.html"><i class="fas fa-chevron-right"></i> Blogs</a>
-          <a href="Testimonials.html"><i class="fas fa-chevron-right"></i> Testimonials</a>
-          <a href="aboutus.html"><i class="fas fa-chevron-right"></i> About Us</a>
-          <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
-          <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a>
-        </div>
-      </div>
+                <!-- Company Section -->
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <div class="footer-links">
+                        <a href="aboutus.html"><i class="fas fa-chevron-right"></i> About Us</a>
+                        <a href="aboutus.html"><i class="fas fa-chevron-right"></i> Our Story</a>
+                        <!-- <a href="aboutus.html"><i class="fas fa-chevron-right"></i> Mission & Vision</a> -->
+                        <a href="aboutus.html" id="aboutLink">
+                            <i class="fas fa-chevron-right"></i> Mission & Vision
+                        </a>
 
-      <!-- Newsletter Section -->
-      <!-- <div class="footer-col">
+
+                        <a href="aboutus.html" id="OurJou"><i class="fas fa-chevron-right"></i> Our Journey</a>
+                        <a href="aboutus.html" id="OurCore"><i class="fas fa-chevron-right"></i> Core Values</a>
+                        <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
+                        <a href="Leadership.html"><i class="fas fa-chevron-right"></i> Leadership</a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
+                        <a href="FAQs.html"><i class="fas fa-chevron-right"></i> FAQ Section</a>
+                        <a href="Blogs.html"><i class="fas fa-chevron-right"></i> Blogs</a>
+                        <a href="Testimonials.html"><i class="fas fa-chevron-right"></i> Testimonials</a>
+                        <a href="aboutus.html"><i class="fas fa-chevron-right"></i> About Us</a>
+                        <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
+                        <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a>
+                    </div>
+                </div>
+
+                <!-- Newsletter Section -->
+                <!-- <div class="footer-col">
         <h3>Newsletter</h3>
         <p>Subscribe to our newsletter to receive updates on our latest services, technology insights, and industry trends.</p>
         <div class="form-group" id="newsletter-group">
@@ -1694,45 +1728,48 @@ We design scalable, secure, and user-friendly applications tailored to your busi
           Thank you for subscribing!
         </div>
       </div> -->
-    </div>
+            </div>
 
-    <div class="footer-bottom">
-      <p>&copy; 2024 Zonixtec. All Rights Reserved. | Designed with by Zonixtec Team</p>
-    </div>
-  </div>
-</footer>
-
-
-<style>
-.footer-dropdown-content {
-  display: none;
-  margin-left: 15px;
-}
-.footer-dropdown.open .footer-dropdown-content {
-  display: block;
-}
-.footer-dropdown-header {
-  display: flex;
-  color: var(--gray);
-  /* transform: ; */
-  justify-content: space-between;
-  cursor: pointer;
-  margin: 5px 0;
-}
-.footer-dropdown-header:hover {
-  color: var(--secondary);
-}
-</style>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Zonixtec. All Rights Reserved. | Designed with by Zonixtec Team</p>
+            </div>
+        </div>
+    </footer>
 
 
-<script>
-document.querySelectorAll('.footer-dropdown-header').forEach(header => {
-  header.addEventListener('click', () => {
-    const parent = header.parentElement;
-    parent.classList.toggle('open');
-  });
-});
-</script>
+    <style>
+        .footer-dropdown-content {
+            display: none;
+            margin-left: 15px;
+        }
+
+        .footer-dropdown.open .footer-dropdown-content {
+            display: block;
+        }
+
+        .footer-dropdown-header {
+            display: flex;
+            color: var(--gray);
+            /* transform: ; */
+            justify-content: space-between;
+            cursor: pointer;
+            margin: 5px 0;
+        }
+
+        .footer-dropdown-header:hover {
+            color: var(--secondary);
+        }
+    </style>
+
+
+    <script>
+        document.querySelectorAll('.footer-dropdown-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const parent = header.parentElement;
+                parent.classList.toggle('open');
+            });
+        });
+    </script>
 
 
 

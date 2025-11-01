@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zonixtec - UI/UX Design Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="./Assets/WhatsApp Image 2025-10-15 at 15.47.06.jpeg" sizes="32x32" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
@@ -48,7 +51,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: 
+            background:
                 radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.1) 0%, transparent 20%),
                 radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 20%);
             z-index: -1;
@@ -70,6 +73,7 @@
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 60px;
+            margin-top: 60px;
             position: relative;
         }
 
@@ -108,11 +112,11 @@
         .logo {
             font-family: 'Orbitron', sans-serif;
             font-size: 1.8rem;
-            font-weight: 700; 
+            font-weight: 700;
             color: var(--light);
             text-decoration: none;
             display: flex;
-            align-items: center;    
+            align-items: center;
             z-index: 1001;
         }
 
@@ -149,19 +153,19 @@
         .nav-links a:not(.cta-button):hover {
             color: var(--secondary) !important;
         }
- 
-        
+
+
 
         .nav-links a:not(.cta-button):hover::after {
             width: 100%;
-        } 
+        }
 
 
 
 
 
 
-          /* ===== Dropdown Styles ===== */
+        /* ===== Dropdown Styles ===== */
         .dropdown {
             position: relative;
             display: inline-block;
@@ -225,29 +229,32 @@
         }
 
         .dropdown-scroll {
-    max-height: 300px; /* Slightly less than parent to account for padding */
-    overflow-y: auto; /* Enable vertical scrolling */
-    padding: 8px 0; /* Add padding to scroll container */
-}
+            max-height: 300px;
+            /* Slightly less than parent to account for padding */
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+            padding: 8px 0;
+            /* Add padding to scroll container */
+        }
 
-/* Custom scrollbar styling */
-.dropdown-scroll::-webkit-scrollbar {
-    width: 6px;
-}
+        /* Custom scrollbar styling */
+        .dropdown-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
 
-.dropdown-scroll::-webkit-scrollbar-track {
-    background: rgba(15, 23, 42, 0.5);
-    border-radius: 3px;
-}
+        .dropdown-scroll::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 3px;
+        }
 
-.dropdown-scroll::-webkit-scrollbar-thumb {
-    background: var(--secondary);
-    border-radius: 3px;
-}
+        .dropdown-scroll::-webkit-scrollbar-thumb {
+            background: var(--secondary);
+            border-radius: 3px;
+        }
 
-.dropdown-scroll::-webkit-scrollbar-thumb:hover {
-    background: var(--primary);
-}
+        .dropdown-scroll::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
 
 
         .cta-button {
@@ -277,7 +284,7 @@
             border: none;
             outline: none;
         }
-        
+
         /* UX/UI Hero Section */
         .uxui-hero {
             padding: 150px 0 100px;
@@ -285,7 +292,7 @@
             max-width: 900px;
             margin: 0 auto;
         }
-        
+
         .uxui-hero h1 {
             font-family: 'Orbitron', sans-serif;
             font-size: 3.5rem;
@@ -296,20 +303,20 @@
             background-clip: text;
             line-height: 1.2;
         }
-        
+
         .uxui-hero p {
             font-size: 1.2rem;
             color: var(--secondary);
             margin-bottom: 30px;
         }
-        
+
         .uxui-hero .description {
             font-size: 1.1rem;
             color: #cbd5e1;
             margin-bottom: 40px;
             line-height: 1.8;
         }
-        
+
         /* Service Overview Section */
         .service-overview {
             display: flex;
@@ -317,11 +324,11 @@
             gap: 50px;
             margin-bottom: 100px;
         }
-        
+
         .service-content {
             flex: 1;
         }
-        
+
         .service-content h2 {
             font-family: 'Orbitron', sans-serif;
             font-size: 2.2rem;
@@ -331,13 +338,13 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .service-content p {
             color: #94a3b8;
             line-height: 1.7;
             margin-bottom: 30px;
         }
-        
+
         .service-image {
             flex: 1;
             border-radius: 15px;
@@ -345,13 +352,13 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(100, 116, 139, 0.2);
         }
-        
+
         .service-image img {
             width: 100%;
             height: auto;
             display: block;
         }
-        
+
         /* Services Grid */
         .services-grid {
             display: grid;
@@ -359,7 +366,7 @@
             gap: 30px;
             margin-bottom: 100px;
         }
-        
+
         .service-card {
             background: rgba(15, 23, 42, 0.6);
             border-radius: 15px;
@@ -369,7 +376,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .service-card::before {
             content: '';
             position: absolute;
@@ -379,186 +386,218 @@
             height: 5px;
             background: var(--tech-gradient);
         }
-        
+
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(37, 99, 235, 0.3);
         }
-        
+
         .service-icon {
             font-size: 2.5rem;
             color: var(--secondary);
             margin-bottom: 20px;
         }
-        
+
         .service-title {
             font-size: 1.5rem;
             margin-bottom: 15px;
             font-weight: 600;
         }
-        
+
         .service-text {
             color: #94a3b8;
             line-height: 1.7;
         }
-        
+
         /* Challenges & Solutions Section */
-        .challenges-solutions {
-            display: flex;
-            gap: 50px;
-            margin-bottom: 100px;
-        }
-        
-        .challenges, .solutions {
-            flex: 1;
-            background: rgba(15, 23, 42, 0.5);
-            border-radius: 15px;
-            padding: 40px;
-            border: 1px solid rgba(100, 116, 139, 0.2);
-        }
-        
-        .challenges h2, .solutions h2 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-            color: var(--secondary);
-        }
-        
-        .challenges ul, .solutions ul {
-            list-style-type: none;
-        }
-        
-        .challenges li, .solutions li {
-            margin-bottom: 15px;
-            padding-left: 30px;
-            position: relative;
-            color: #94a3b8;
-        }
-        
-        .challenges li::before {
-            content: '✕';
-            position: absolute;
-            left: 0;
-            color: #ef4444;
-            font-weight: bold;
-        }
-        
-        .solutions li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--success);
-            font-weight: bold;
-        }
-        
+        /* Challenges & Solutions Section */
+.challenges-solutions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.challenges-column, .solutions-column {
+    background: rgba(15, 23, 42, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid rgba(100, 116, 139, 0.2);
+}
+
+.challenges-title {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.column-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: var(--secondary);
+    position: relative;
+}
+
+.column-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--secondary);
+    border-radius: 2px;
+}
+
+.challenges-list, .solutions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.challenge-item, .solution-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.challenge-icon {
+    color: #ef4444;
+    margin-right: 15px;
+    font-size: 1.2rem;
+    margin-top: 3px;
+}
+
+.solution-icon {
+    color: var(--success);
+    margin-right: 15px;
+    font-size: 1.2rem;
+    margin-top: 3px;
+}
+
+.challenge-text, .solution-text {
+    color: #94a3b8;
+    line-height: 1.7;
+}
+
         /* Process Section */
-        .process-container {
-            background: rgba(15, 23, 42, 0.5);
-            border-radius: 20px;
-            padding: 50px;
-            margin-bottom: 100px;
-            border: 1px solid rgba(100, 116, 139, 0.2);
+        .process-section {
+            margin-bottom: 60px;
         }
-        
-        .process-title {
-            text-align: center;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
-            margin-bottom: 50px;
-            background: var(--tech-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
+
         .process-steps {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-        }
-        
-        .process-step {
-            flex: 1;
-            min-width: 250px;
-            max-width: 300px;
-            text-align: center;
-            padding: 30px;
+            justify-content: space-between;
             position: relative;
+            margin-top: 50px;
         }
-        
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            z-index: 1;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            flex: 1;
+        }
+
         .step-number {
-            width: 50px;
-            height: 50px;
-            background: var(--tech-gradient);
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
+            font-size: 1.8rem;
             font-weight: 700;
-            font-size: 1.2rem;
+            color: var(--dark);
+            position: relative;
         }
-        
+
         .step-title {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--light);
+            margin-bottom: 10px;
         }
-        
+
         .step-description {
-            color: #94a3b8;
-            line-height: 1.7;
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Technology Stack Section */
+        .tech-section {
+            background: rgba(10, 10, 26, 0.7);
+            border-radius: 10px;
+            padding: 60px;
+            margin-bottom: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         
-        /* Technology Stack */
-        .tech-stack {
-            margin-bottom: 100px;
-        }
-        
-        .tech-title {
+        .tech-section h2 {
             text-align: center;
+            color: var(--secondary);
+            margin-bottom: 40px;
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
-            margin-bottom: 50px;
-            background: var(--tech-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
         
         .tech-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .tech-category {
+            text-align: center;
+        }
+        
+        .tech-category h3 {
+            color: var(--light);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .tech-items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
         
         .tech-item {
-            background: rgba(15, 23, 42, 0.6);
-            border-radius: 10px;
-            padding: 25px 15px;
-            text-align: center;
-            border: 1px solid rgba(100, 116, 139, 0.2);
-            transition: transform 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 15px;
+            border-radius: 8px;
+            color: var(--gray);
+            transition: all 0.3s ease;
         }
         
         .tech-item:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--light);
+            transform: translateY(-3px);
         }
-        
-        .tech-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: var(--secondary);
-        }
-        
-        .tech-name {
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-        
+
         /* Impact Section */
         .impact-section {
             background: rgba(15, 23, 42, 0.5);
@@ -567,7 +606,7 @@
             margin-bottom: 100px;
             border: 1px solid rgba(100, 116, 139, 0.2);
         }
-        
+
         .impact-title {
             text-align: center;
             font-family: 'Orbitron', sans-serif;
@@ -578,29 +617,29 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .impact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
-        
+
         .impact-item {
             text-align: center;
             padding: 30px 20px;
         }
-        
+
         .impact-icon {
             font-size: 3rem;
             color: var(--secondary);
             margin-bottom: 20px;
         }
-        
+
         .impact-text {
             font-size: 1.1rem;
             color: #94a3b8;
         }
-        
+
         /* CTA Section */
         .cta-container {
             background: var(--tech-gradient);
@@ -609,20 +648,20 @@
             text-align: center;
             margin-bottom: 100px;
         }
-        
+
         .cta-title {
             font-family: 'Orbitron', sans-serif;
             font-size: 2.5rem;
             margin-bottom: 20px;
         }
-        
+
         .cta-description {
             max-width: 700px;
             margin: 0 auto 30px;
             font-size: 1.1rem;
             line-height: 1.7;
         }
-        
+
         .cta-button-large {
             background: linear-gradient(45deg, var(--primary), var(--secondary));
             color: white;
@@ -636,13 +675,13 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             display: inline-block;
         }
-        
+
         .cta-button-large:hover {
             transform: translateY(-3px);
             background: rgba(15, 23, 42, 0.9);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
         }
-        
+
         /* FAQ Section */
         .faq-section {
             background: rgba(15, 23, 42, 0.5);
@@ -650,7 +689,7 @@
             padding: 50px;
             border: 1px solid rgba(100, 116, 139, 0.2);
         }
-        
+
         .faq-title {
             text-align: center;
             font-family: 'Orbitron', sans-serif;
@@ -661,12 +700,12 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .faq-container {
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         .faq-item {
             margin-bottom: 20px;
             border-bottom: 1px solid rgba(100, 116, 139, 0.2);
@@ -682,7 +721,7 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .faq-answer {
             color: #94a3b8;
             line-height: 1.7;
@@ -691,20 +730,20 @@
             overflow: hidden;
             transition: max-height 0.3s ease;
         }
-        
+
         .faq-item.active .faq-answer {
             max-height: 500px;
         }
-        
+
         .faq-toggle {
             font-size: 1.2rem;
             transition: transform 0.3s ease;
         }
-        
+
         .faq-item.active .faq-toggle {
             transform: rotate(180deg);
         }
-        
+
         /* Footer Styles */
         .footer {
             /* background: rgba(2, 6, 23, 0.9); */
@@ -878,11 +917,11 @@
             .service-overview {
                 flex-direction: column;
             }
-            
+
             .challenges-solutions {
                 flex-direction: column;
             }
-            
+
             .process-step {
                 min-width: 200px;
             }
@@ -892,23 +931,25 @@
             .uxui-hero h1 {
                 font-size: 2.5rem;
             }
-            
+
             .section-title {
                 font-size: 2rem;
             }
-            
+
             .cta-container {
                 padding: 40px 20px;
             }
-            
+
             .cta-title {
                 font-size: 2rem;
             }
-            
-            .process-container, .faq-section, .impact-section {
+
+            .process-container,
+            .faq-section,
+            .impact-section {
                 padding: 30px 20px;
             }
-            
+
             .nav-links {
                 position: fixed;
                 top: 0;
@@ -927,46 +968,48 @@
                 padding: 20px;
                 box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
             }
-            
+
             .nav-links.active {
                 right: 0;
             }
-            
+
             .mobile-menu-btn {
                 display: block;
                 z-index: 1001;
             }
         }
-        
+
         @media (max-width: 576px) {
             .uxui-hero h1 {
                 font-size: 2.2rem;
             }
-            
+
             .process-step {
                 min-width: 100%;
             }
-            
+
             .cta-title {
                 font-size: 1.8rem;
             }
-            
+
             .uxui-hero {
                 padding-top: 120px;
             }
-            
+
             .nav-links {
                 width: 85%;
             }
         }
 
         @media (min-width: 768px) {
-            .footer-container { 
-                grid-template-columns: repeat(4, 1fr); 
+            .footer-container {
+                grid-template-columns: repeat(4, 1fr);
             }
-            .footer-col { 
-                padding: 18px 1px; 
+
+            .footer-col {
+                padding: 18px 1px;
             }
+
             .footer-col h3 {
                 font-family: 'Orbitron', sans-serif;
                 font-size: 1.3rem;
@@ -978,7 +1021,8 @@
         }
     </style>
 </head>
-<body> 
+
+<body>
     <header id="header">
         <div class="container">
             <nav>
@@ -989,7 +1033,8 @@
                     <a href="index.html">Home</a>
                     <a href="aboutus.html">About</a>
                     <div class="dropdown">
-                        <a href="Services.html" class="active dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                        <a href="Services.html" class="active dropdown-toggle">Services <i
+                                class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-content">
                             <div class="dropdown-scroll">
                                 <a href="web-design-development.html">Web Design & Development</a>
@@ -1016,7 +1061,7 @@
             </nav>
         </div>
     </header>
-    
+
     <section class="section-padding">
         <div class="container">
             <!-- Hero Section -->
@@ -1024,32 +1069,37 @@
                 <h1>UI/UX Design Services</h1>
                 <p>User-Centered Design for Exceptional Digital Experiences</p>
                 <p class="description">
-                    At Zonixtec, we believe that great design is more than just aesthetics—it's about creating meaningful, user-friendly, and engaging digital experiences. Our UI/UX design services ensure your applications and websites are intuitive, accessible, and aligned with your brand identity.
+                    At Zonixtec, we believe that great design is more than just aesthetics—it's about creating
+                    meaningful, user-friendly, and engaging digital experiences. Our UI/UX design services ensure your
+                    applications and websites are intuitive, accessible, and aligned with your brand identity.
                 </p>
                 <button class="cta-button-large">Let's Design Your Success Story</button>
             </div>
-            
+
             <!-- Service Overview -->
             <div class="service-overview">
                 <div class="service-content">
                     <h2>About Our UI/UX Design Service</h2>
                     <p>
-                        Our UI/UX design approach blends creativity with functionality, ensuring every click, swipe, and interaction delivers value. From wireframes to interactive prototypes, we design experiences that delight users and drive business results.
+                        Our UI/UX design approach blends creativity with functionality, ensuring every click, swipe, and
+                        interaction delivers value. From wireframes to interactive prototypes, we design experiences
+                        that delight users and drive business results.
                     </p>
                     <p>
-                        We combine research, technology, and design thinking to create solutions that not only look beautiful but also perform exceptionally well across all devices and platforms.
+                        We combine research, technology, and design thinking to create solutions that not only look
+                        beautiful but also perform exceptionally well across all devices and platforms.
                     </p>
                 </div>
                 <div class="service-image">
                     <!-- Placeholder for UX/UI design image -->
                     <div style="width:100%; height:100%; overflow:hidden;">
-  <img src="./uploads/UX_UI Design Services.jpg" alt="Not Found"
-       style="width:100%; height:100%; object-fit:cover; padding: 20px; object-position:center; display:block;">
-</div>
+                        <img src="./uploads/UX_UI Design Services.jpg" alt="Not Found"
+                            style="width:100%; height:100%; object-fit:cover; padding: 20px; object-position:center; display:block;">
+                    </div>
 
                 </div>
             </div>
-            
+
             <!-- Services Grid -->
             <h2 class="section-title">Our UI/UX Services</h2>
             <div class="services-grid">
@@ -1058,159 +1108,234 @@
                         <i class="fas fa-search"></i>
                     </div>
                     <h3 class="service-title">UX Research & Strategy</h3>
-                    <p class="service-text">Understanding user behavior and needs through comprehensive research to create data-driven design strategies.</p>
+                    <p class="service-text">Understanding user behavior and needs through comprehensive research to
+                        create data-driven design strategies.</p>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-pencil-ruler"></i>
                     </div>
                     <h3 class="service-title">UI Design & Prototyping</h3>
-                    <p class="service-text">Crafting beautiful, interactive interfaces with detailed prototypes that bring your vision to life.</p>
+                    <p class="service-text">Crafting beautiful, interactive interfaces with detailed prototypes that
+                        bring your vision to life.</p>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <h3 class="service-title">Responsive & Adaptive Design</h3>
-                    <p class="service-text">Creating seamless experiences across all devices and screen sizes for maximum accessibility.</p>
+                    <p class="service-text">Creating seamless experiences across all devices and screen sizes for
+                        maximum accessibility.</p>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-vial"></i>
                     </div>
                     <h3 class="service-title">Usability Testing</h3>
-                    <p class="service-text">Optimizing workflows and interfaces through real user feedback and iterative testing processes.</p>
+                    <p class="service-text">Optimizing workflows and interfaces through real user feedback and iterative
+                        testing processes.</p>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-book"></i>
                     </div>
                     <h3 class="service-title">Design System & Guidelines</h3>
-                    <p class="service-text">Establishing comprehensive design systems to ensure consistent brand identity across all touchpoints.</p>
+                    <p class="service-text">Establishing comprehensive design systems to ensure consistent brand
+                        identity across all touchpoints.</p>
                 </div>
             </div>
-            
+
             <!-- Challenges & Solutions -->
-            <div class="challenges-solutions">
-                <div class="challenges">
-                    <h2>Challenges Without UI/UX Design</h2>
-                    <ul>
-                        <li>Confusing navigation frustrates users</li>
-                        <li>Poor user engagement lowers retention</li>
-                        <li>Outdated visuals harm brand credibility</li>
-                        <li>Higher bounce rates and lower conversions</li>
-                    </ul>
-                </div>
-                
-                <div class="solutions">
-                    <h2>Our Solutions</h2>
-                    <ul>
-                        <li>Increase user satisfaction</li>
-                        <li>Boost retention rates</li>
-                        <li>Improve overall brand value</li>
-                        <li>Drive higher conversions</li>
-                    </ul>
+            <!-- Challenges & Solutions Section -->
+<div class="challenges-section">
+    <div class="challenges-container">
+        <h2 class="challenges-title">Challenges & Solutions</h2>
+        
+        <div class="challenges-solutions-grid">
+            <!-- Challenges Column -->
+            <div class="challenges-column">
+                <h3 class="column-title">Challenges Without UI/UX Design</h3>
+                <div class="challenges-list">
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p class="challenge-text">Confusing navigation frustrates users</p>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p class="challenge-text">Poor user engagement lowers retention</p>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p class="challenge-text">Outdated visuals harm brand credibility</p>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p class="challenge-text">Higher bounce rates and lower conversions</p>
+                    </div>
                 </div>
             </div>
             
+            <!-- Solutions Column -->
+            <div class="solutions-column">
+                <h3 class="column-title">Our Solutions</h3>
+                <div class="solutions-list">
+                    <div class="solution-item">
+                        <div class="solution-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <p class="solution-text">Increase user satisfaction</p>
+                    </div>
+                    <div class="solution-item">
+                        <div class="solution-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <p class="solution-text">Boost retention rates</p>
+                    </div>
+                    <div class="solution-item">
+                        <div class="solution-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <p class="solution-text">Improve overall brand value</p>
+                    </div>
+                    <div class="solution-item">
+                        <div class="solution-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <p class="solution-text">Drive higher conversions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
             <!-- Process Section -->
-            <div class="process-container">
-                <h2 class="process-title">Our Design Process</h2>
+            <div class="process-section">
+                <h2 class="section-title">Our Design <span>Process</span></h2>
+
                 <div class="process-steps">
                     <div class="process-step">
                         <div class="step-number">1</div>
                         <h3 class="step-title">Research & Discovery</h3>
-                        <p class="step-description">Understanding your business, audience, and goals through comprehensive research and analysis.</p>
+                        <p class="step-description">Understanding your business, audience, and goals through
+                            comprehensive research and analysis</p>
                     </div>
-                    
+
                     <div class="process-step">
                         <div class="step-number">2</div>
                         <h3 class="step-title">Wireframing & Prototyping</h3>
-                        <p class="step-description">Structuring seamless user flows and creating interactive prototypes for validation.</p>
+                        <p class="step-description">Structuring seamless user flows and creating interactive prototypes
+                            for validation</p>
                     </div>
-                    
+
                     <div class="process-step">
                         <div class="step-number">3</div>
                         <h3 class="step-title">UI Design</h3>
-                        <p class="step-description">Creating visually appealing, brand-aligned interfaces with attention to every detail.</p>
+                        <p class="step-description">Creating visually appealing, brand-aligned interfaces with attention
+                            to every detail</p>
                     </div>
-                    
+
                     <div class="process-step">
                         <div class="step-number">4</div>
                         <h3 class="step-title">Usability Testing</h3>
-                        <p class="step-description">Refining designs through user feedback and iterative testing to ensure optimal experiences.</p>
+                        <p class="step-description">Refining designs through user feedback and iterative testing to
+                            ensure optimal experiences</p>
                     </div>
-                    
+
                     <div class="process-step">
                         <div class="step-number">5</div>
                         <h3 class="step-title">Final Delivery</h3>
-                        <p class="step-description">Handing off pixel-perfect, developer-ready designs with comprehensive documentation.</p>
+                        <p class="step-description">Handing off pixel-perfect, developer-ready designs with
+                            comprehensive documentation</p>
                     </div>
                 </div>
             </div>
-            
-            <!-- Technology Stack -->
-            <div class="tech-stack">
-                <h2 class="tech-title">Our Design Technology Stack</h2>
-                <div class="tech-grid">
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fab fa-figma"></i>
-                        </div>
-                        <div class="tech-name">Figma</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fab fa-adobe"></i>
-                            <!-- <i class="fab fa-adobe" style="color:#FF0000; font-size:32px;"></i> -->
-                            <i class="fa-utility fa-semibold fa-at"></i>
 
-                        </div>
-                        <div class="tech-name">Adobe XD</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fab fa-sketch"></i>
-                        </div>
-                        <div class="tech-name">Sketch</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <div class="tech-name">InVision</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fas fa-cube"></i>
-                        </div>
-                        <div class="tech-name">Marvel</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fas fa-project-diagram"></i>
-                        </div>
-                        <div class="tech-name">Miro</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <div class="tech-name">Zeplin</div>
-                    </div>
-                </div>
+            <!-- Technology Stack -->
+<div class="tech-section">
+    <h2>Our Design Technology Stack</h2>
+
+    <div class="tech-grid">
+        <div class="tech-category">
+            <h3>Design & Prototyping</h3>
+            <div class="tech-items">
+                <div class="tech-item">Figma</div>
+                <div class="tech-item">Adobe XD</div>
+                <div class="tech-item">Sketch</div>
+                <div class="tech-item">InVision Studio</div>
+                <div class="tech-item">Proto.io</div>
             </div>
-            
+        </div>
+        
+        <div class="tech-category">
+            <h3>Collaboration & Wireframing</h3>
+            <div class="tech-items">
+                <div class="tech-item">Miro</div>
+                <div class="tech-item">Figma Jam</div>
+                <div class="tech-item">Whimsical</div>
+                <div class="tech-item">Balsamiq</div>
+                <div class="tech-item">Axure RP</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>User Research & Testing</h3>
+            <div class="tech-items">
+                <div class="tech-item">UserTesting</div>
+                <div class="tech-item">Hotjar</div>
+                <div class="tech-item">Maze</div>
+                <div class="tech-item">Optimal Workshop</div>
+                <div class="tech-item">UsabilityHub</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Design Systems</h3>
+            <div class="tech-items">
+                <div class="tech-item">Storybook</div>
+                <div class="tech-item">Zeroheight</div>
+                <div class="tech-item">Figma Design Systems</div>
+                <div class="tech-item">Lingo</div>
+                <div class="tech-item">Supernova</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Handoff & Development</h3>
+            <div class="tech-items">
+                <div class="tech-item">Zeplin</div>
+                <div class="tech-item">Avocode</div>
+                <div class="tech-item">Abstract</div>
+                <div class="tech-item">Marvel</div>
+                <div class="tech-item">Framer</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Animation & Interaction</h3>
+            <div class="tech-items">
+                <div class="tech-item">Principle</div>
+                <div class="tech-item">ProtoPie</div>
+                <div class="tech-item">After Effects</div>
+                <div class="tech-item">Lottie</div>
+                <div class="tech-item">Rive</div>
+            </div>
+        </div>
+    </div>
+</div>
+
             <!-- Impact Section -->
             <div class="impact-section">
                 <h2 class="impact-title">The Impact of UI/UX Design</h2>
@@ -1221,21 +1346,21 @@
                         </div>
                         <div class="impact-text">Increased user satisfaction and trust</div>
                     </div>
-                    
+
                     <div class="impact-item">
                         <div class="impact-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <div class="impact-text">Higher conversion rates and ROI</div>
                     </div>
-                    
+
                     <div class="impact-item">
                         <div class="impact-icon">
                             <i class="fas fa-sync-alt"></i>
                         </div>
                         <div class="impact-text">Improved user retention and loyalty</div>
                     </div>
-                    
+
                     <div class="impact-item">
                         <div class="impact-icon">
                             <i class="fas fa-bullhorn"></i>
@@ -1244,16 +1369,18 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- CTA Section -->
             <div class="cta-container">
                 <h2 class="cta-title">Ready to Transform Your Digital Experience?</h2>
                 <p class="cta-description">
-                    Let's collaborate to create intuitive, beautiful, and effective designs that engage your users and drive business growth. Our design team is ready to bring your vision to life.
+                    Let's collaborate to create intuitive, beautiful, and effective designs that engage your users and
+                    drive business growth. Our design team is ready to bring your vision to life.
                 </p>
-                <button class="cta-button-large" onclick="window.location.href='contact.html'">Start Your Design Project Today</button>
+                <button class="cta-button-large" onclick="window.location.href='contact.html'">Start Your Design Project
+                    Today</button>
             </div>
-            
+
             <!-- FAQ Section -->
             <div class="faq-section">
                 <h2 class="faq-title">Frequently Asked Questions</h2>
@@ -1264,165 +1391,179 @@
                             <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
                         </div>
                         <div class="faq-answer">
-                            UX (User Experience) design focuses on the overall feel and functionality of a product, ensuring it's intuitive and meets user needs. UI (User Interface) design deals with the visual elements—colors, typography, and layout—that users interact with.
+                            UX (User Experience) design focuses on the overall feel and functionality of a product,
+                            ensuring it's intuitive and meets user needs. UI (User Interface) design deals with the
+                            visual elements—colors, typography, and layout—that users interact with.
                         </div>
                     </div>
-                    
+
                     <div class="faq-item">
                         <div class="faq-question">
                             How long does a typical UI/UX design project take?
                             <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
                         </div>
                         <div class="faq-answer">
-                            Project timelines vary based on complexity. A simple website redesign might take 4-6 weeks, while a comprehensive application design could take 8-12 weeks. We provide detailed timelines after our initial discovery phase.
+                            Project timelines vary based on complexity. A simple website redesign might take 4-6 weeks,
+                            while a comprehensive application design could take 8-12 weeks. We provide detailed
+                            timelines after our initial discovery phase.
                         </div>
                     </div>
-                    
+
                     <div class="faq-item">
                         <div class="faq-question">
                             Do you provide design assets for development?
                             <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
                         </div>
                         <div class="faq-answer">
-                            Yes, we deliver all necessary design assets including style guides, component libraries, and developer handoff files to ensure smooth implementation of our designs.
+                            Yes, we deliver all necessary design assets including style guides, component libraries, and
+                            developer handoff files to ensure smooth implementation of our designs.
                         </div>
                     </div>
-                    
+
                     <div class="faq-item">
                         <div class="faq-question">
                             Can you work with our existing brand guidelines?
                             <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
                         </div>
                         <div class="faq-answer">
-                            Absolutely! We can work within your existing brand guidelines or help you establish new ones. Our goal is to create designs that align with and enhance your brand identity.
+                            Absolutely! We can work within your existing brand guidelines or help you establish new
+                            ones. Our goal is to create designs that align with and enhance your brand identity.
                         </div>
                     </div>
-                    
+
                     <div class="faq-item">
                         <div class="faq-question">
                             Do you conduct user testing as part of your process?
                             <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
                         </div>
                         <div class="faq-answer">
-                            Yes, usability testing is a critical part of our design process. We conduct tests at various stages to validate design decisions and ensure the final product meets user expectations.
+                            Yes, usability testing is a critical part of our design process. We conduct tests at various
+                            stages to validate design decisions and ensure the final product meets user expectations.
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <footer class="footer">
-  <div class="container">
-    <div class="footer-container">
-      <!-- Solutions Section with Dropdown -->
-      <div class="footer-col">
-        <h3>Solutions</h3>
-        <div class="footer-links">
-          
-          <!-- Next-Gen Tech Dropdown -->
-          <div class="footer-dropdown">
-            <div class="footer-dropdown-header">
-              <span><i class="fas fa-chevron-right"></i> Next-Gen Tech</span>
-              <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-            </div>
-            <div class="footer-dropdown-content">
-              <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> AI & Machine Learning</a>
-              <a href="CloudSolutions.html"><i class="fas fa-chevron-right"></i> Cloud Solutions</a>
-            </div>
-          </div>
+        <div class="container">
+            <div class="footer-container">
+                <!-- Solutions Section with Dropdown -->
+                <div class="footer-col">
+                    <h3>Solutions</h3>
+                    <div class="footer-links">
 
-          <!-- AI Services Dropdown -->
-          <div class="footer-dropdown">
-            <div class="footer-dropdown-header">
-              <span><i class="fas fa-chevron-right"></i> AI Services</span>
-              <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-            </div>
-            <div class="footer-dropdown-content">
-              <a href="AIServices.html"><i class="fas fa-chevron-right"></i> AI Services Overview</a>
-              <a href="AIStrategy.html"><i class="fas fa-chevron-right"></i> AI Strategy & Consulting</a>
-              <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> Machine Learning</a>
-              <a href="NLP.html"><i class="fas fa-chevron-right"></i> Natural Language Processing (NLP)</a>
-              <a href="ComputerVision.html"><i class="fas fa-chevron-right"></i> Computer Vision</a>
-              <a href="PredictiveAnalytics.html"><i class="fas fa-chevron-right"></i> Predictive Analysis</a>
-              <a href="ProcessAutomation.html"><i class="fas fa-chevron-right"></i> Process Automation</a>
-            </div>
-          </div>
+                        <!-- Next-Gen Tech Dropdown -->
+                        <div class="footer-dropdown">
+                            <div class="footer-dropdown-header">
+                                <span><i class="fas fa-chevron-right"></i> Next-Gen Tech</span>
+                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                            </div>
+                            <div class="footer-dropdown-content">
+                                <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> AI & Machine
+                                    Learning</a>
+                                <a href="CloudSolutions.html"><i class="fas fa-chevron-right"></i> Cloud Solutions</a>
+                            </div>
+                        </div>
 
-          <!-- Core Development Dropdown -->
-          <div class="footer-dropdown">
-            <div class="footer-dropdown-header">
-              <span><i class="fas fa-chevron-right"></i> Core Development</span>
-              <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-            </div>
-            <div class="footer-dropdown-content">
-              <a href="CustomSoftware.html"><i class="fas fa-chevron-right"></i> Custom Software Development</a>
-              <a href="MobileDevelopment.html"><i class="fas fa-chevron-right"></i> Mobile App Development</a>
-            </div>
-          </div>
+                        <!-- AI Services Dropdown -->
+                        <div class="footer-dropdown">
+                            <div class="footer-dropdown-header">
+                                <span><i class="fas fa-chevron-right"></i> AI Services</span>
+                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                            </div>
+                            <div class="footer-dropdown-content">
+                                <a href="AIServices.html"><i class="fas fa-chevron-right"></i> AI Services Overview</a>
+                                <a href="AIStrategy.html"><i class="fas fa-chevron-right"></i> AI Strategy &
+                                    Consulting</a>
+                                <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> Machine Learning</a>
+                                <a href="NLP.html"><i class="fas fa-chevron-right"></i> Natural Language Processing
+                                    (NLP)</a>
+                                <a href="ComputerVision.html"><i class="fas fa-chevron-right"></i> Computer Vision</a>
+                                <a href="PredictiveAnalytics.html"><i class="fas fa-chevron-right"></i> Predictive
+                                    Analysis</a>
+                                <a href="ProcessAutomation.html"><i class="fas fa-chevron-right"></i> Process
+                                    Automation</a>
+                            </div>
+                        </div>
 
-          <!-- Design & Experience Dropdown -->
-          <div class="footer-dropdown">
-            <div class="footer-dropdown-header">
-              <span><i class="fas fa-chevron-right"></i> Design & Experience</span>
-              <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-            </div>
-            <div class="footer-dropdown-content">
-              <a href="ui.html"><i class="fas fa-chevron-right"></i> UI/UX Design</a>
-            </div>
-          </div>
-        </div>
-      </div>
+                        <!-- Core Development Dropdown -->
+                        <div class="footer-dropdown">
+                            <div class="footer-dropdown-header">
+                                <span><i class="fas fa-chevron-right"></i> Core Development</span>
+                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                            </div>
+                            <div class="footer-dropdown-content">
+                                <a href="CustomSoftware.html"><i class="fas fa-chevron-right"></i> Custom Software
+                                    Development</a>
+                                <a href="MobileDevelopment.html"><i class="fas fa-chevron-right"></i> Mobile App
+                                    Development</a>
+                            </div>
+                        </div>
 
-      <!-- Insights Section -->
-      <div class="footer-col">
-        <h3>Insights</h3>
-        <div class="footer-links">
-          <a href="CaseStudies.html"><i class="fas fa-chevron-right"></i> Case Studies</a>
-          <a href="Blogs.html"><i class="fas fa-chevron-right"></i> Blogs</a>
-          <a href="CEOdesk.html"><i class="fas fa-chevron-right"></i> From CEO's Desk</a>
-          <!-- <a href="FutureZonixtec.html"><i class="fas fa-chevron-right"></i> Future of Zonixtec</a> -->
-          <a href="FAQs.html"><i class="fas fa-chevron-right"></i> FAQs</a>
-          <a href="Guides.html"><i class="fas fa-chevron-right"></i> Guides</a>
-          <a href="HowTos.html"><i class="fas fa-chevron-right"></i> How-tos</a>
-        </div>
-      </div>
+                        <!-- Design & Experience Dropdown -->
+                        <div class="footer-dropdown">
+                            <div class="footer-dropdown-header">
+                                <span><i class="fas fa-chevron-right"></i> Design & Experience</span>
+                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                            </div>
+                            <div class="footer-dropdown-content">
+                                <a href="ui.html"><i class="fas fa-chevron-right"></i> UI/UX Design</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-      <!-- Company Section -->
-    <div class="footer-col">
-        <h3>Company</h3>
-        <div class="footer-links">
-            <a href="aboutus.html"><i class="fas fa-chevron-right"></i> About Us</a>
-            <a href="aboutus.html"><i class="fas fa-chevron-right"></i> Our Story</a>
-            <!-- <a href="aboutus.html"><i class="fas fa-chevron-right"></i> Mission & Vision</a> -->
-            <a href="aboutus.html" id="aboutLink">
-                <i class="fas fa-chevron-right"></i> Mission & Vision
-            </a>
-    
-    
-            <a href="aboutus.html" id="OurJou"><i class="fas fa-chevron-right"></i> Our Journey</a>
-            <a href="aboutus.html" id="OurCore"><i class="fas fa-chevron-right"></i> Core Values</a>
-            <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
-            <a href="Leadership.html"><i class="fas fa-chevron-right"></i> Leadership</a>
-        </div>
-    </div>
+                <!-- Insights Section -->
+                <div class="footer-col">
+                    <h3>Insights</h3>
+                    <div class="footer-links">
+                        <a href="CaseStudies.html"><i class="fas fa-chevron-right"></i> Case Studies</a>
+                        <a href="Blogs.html"><i class="fas fa-chevron-right"></i> Blogs</a>
+                        <a href="CEOdesk.html"><i class="fas fa-chevron-right"></i> From CEO's Desk</a>
+                        <!-- <a href="FutureZonixtec.html"><i class="fas fa-chevron-right"></i> Future of Zonixtec</a> -->
+                        <a href="FAQs.html"><i class="fas fa-chevron-right"></i> FAQs</a>
+                        <a href="Guides.html"><i class="fas fa-chevron-right"></i> Guides</a>
+                        <a href="HowTos.html"><i class="fas fa-chevron-right"></i> How-tos</a>
+                    </div>
+                </div>
 
-      <!-- Quick Links Section -->
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <div class="footer-links">
-          <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
-          <a href="FAQs.html"><i class="fas fa-chevron-right"></i> FAQ Section</a>
-          <a href="Blogs.html"><i class="fas fa-chevron-right"></i> Blogs</a>
-          <a href="Testimonials.html"><i class="fas fa-chevron-right"></i> Testimonials</a>
-          <a href="aboutus.html"><i class="fas fa-chevron-right"></i> About Us</a>
-          <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
-          <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a>
-        </div>
-      </div>
+                <!-- Company Section -->
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <div class="footer-links">
+                        <a href="aboutus.html"><i class="fas fa-chevron-right"></i> About Us</a>
+                        <a href="aboutus.html"><i class="fas fa-chevron-right"></i> Our Story</a>
+                        <!-- <a href="aboutus.html"><i class="fas fa-chevron-right"></i> Mission & Vision</a> -->
+                        <a href="aboutus.html" id="aboutLink">
+                            <i class="fas fa-chevron-right"></i> Mission & Vision
+                        </a>
 
-      <!-- Newsletter Section -->
-      <!-- <div class="footer-col">
+
+                        <a href="aboutus.html" id="OurJou"><i class="fas fa-chevron-right"></i> Our Journey</a>
+                        <a href="aboutus.html" id="OurCore"><i class="fas fa-chevron-right"></i> Core Values</a>
+                        <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
+                        <a href="Leadership.html"><i class="fas fa-chevron-right"></i> Leadership</a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
+                        <a href="FAQs.html"><i class="fas fa-chevron-right"></i> FAQ Section</a>
+                        <a href="Blogs.html"><i class="fas fa-chevron-right"></i> Blogs</a>
+                        <a href="Testimonials.html"><i class="fas fa-chevron-right"></i> Testimonials</a>
+                        <a href="aboutus.html"><i class="fas fa-chevron-right"></i> About Us</a>
+                        <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
+                        <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a>
+                    </div>
+                </div>
+
+                <!-- Newsletter Section -->
+                <!-- <div class="footer-col">
         <h3>Newsletter</h3>
         <p>Subscribe to our newsletter to receive updates on our latest services, technology insights, and industry trends.</p>
         <div class="form-group" id="newsletter-group">
@@ -1433,54 +1574,57 @@
           Thank you for subscribing!
         </div>
       </div> -->
-    </div>
+            </div>
 
-    <div class="footer-bottom">
-      <p>&copy; 2024 Zonixtec. All Rights Reserved. | Designed with by Zonixtec Team</p>
-    </div>
-  </div>
-</footer>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Zonixtec. All Rights Reserved. | Designed with by Zonixtec Team</p>
+            </div>
+        </div>
+    </footer>
 
 
-<style>
-.footer-dropdown-content {
-  display: none;
-  margin-left: 15px;
-}
-.footer-dropdown.open .footer-dropdown-content {
-  display: block;
-}
-.footer-dropdown-header {
-  display: flex;
-  color: var(--gray);
-  /* transform: ; */
-  justify-content: space-between;
-  cursor: pointer;
-  margin: 5px 0;
-}
-.footer-dropdown-header:hover {
-  color: var(--secondary);
-}
-</style>
+    <style>
+        .footer-dropdown-content {
+            display: none;
+            margin-left: 15px;
+        }
 
-<script>
-document.querySelectorAll('.footer-dropdown-header').forEach(header => {
-  header.addEventListener('click', () => {
-    const parent = header.parentElement;
-    parent.classList.toggle('open');
-  });
-});
-</script>
-    
+        .footer-dropdown.open .footer-dropdown-content {
+            display: block;
+        }
+
+        .footer-dropdown-header {
+            display: flex;
+            color: var(--gray);
+            /* transform: ; */
+            justify-content: space-between;
+            cursor: pointer;
+            margin: 5px 0;
+        }
+
+        .footer-dropdown-header:hover {
+            color: var(--secondary);
+        }
+    </style>
+
+    <script>
+        document.querySelectorAll('.footer-dropdown-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const parent = header.parentElement;
+                parent.classList.toggle('open');
+            });
+        });
+    </script>
+
     <script>
         // Mobile menu toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
         const menuIcon = mobileMenuBtn.querySelector('i');
-        
-        mobileMenuBtn.addEventListener('click', function() {
+
+        mobileMenuBtn.addEventListener('click', function () {
             navLinks.classList.toggle('active');
-            
+
             // Toggle menu icon between bars and times
             if (navLinks.classList.contains('active')) {
                 menuIcon.classList.remove('fa-bars');
@@ -1490,19 +1634,19 @@ document.querySelectorAll('.footer-dropdown-header').forEach(header => {
                 menuIcon.classList.add('fa-bars');
             }
         });
-        
+
         // Close menu when clicking outside of it
-        document.addEventListener('click', function(event) {
+        document.addEventListener('click', function (event) {
             const isClickInsideNav = navLinks.contains(event.target);
             const isClickOnMenuBtn = mobileMenuBtn.contains(event.target);
-            
+
             if (navLinks.classList.contains('active') && !isClickInsideNav && !isClickOnMenuBtn) {
                 navLinks.classList.remove('active');
                 menuIcon.classList.remove('fa-times');
                 menuIcon.classList.add('fa-bars');
             }
         });
-        
+
         // Close menu when clicking on a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
@@ -1511,16 +1655,16 @@ document.querySelectorAll('.footer-dropdown-header').forEach(header => {
                 menuIcon.classList.add('fa-bars');
             });
         });
-        
+
         // FAQ toggle functionality
         const faqItems = document.querySelectorAll('.faq-item');
-        
+
         faqItems.forEach(item => {
             const question = item.querySelector('.faq-question');
-            
+
             question.addEventListener('click', () => {
                 item.classList.toggle('active');
-                
+
                 // Close other FAQ items
                 faqItems.forEach(otherItem => {
                     if (otherItem !== item && otherItem.classList.contains('active')) {
@@ -1529,14 +1673,14 @@ document.querySelectorAll('.footer-dropdown-header').forEach(header => {
                 });
             });
         });
-        
+
         // Newsletter subscription
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const btn = document.getElementById('newsletter-btn');
             const emailInput = document.getElementById('newsletter-email');
             const thankyou = document.getElementById('newsletter-thankyou');
-            btn.addEventListener('click', function() {
-                if(emailInput.value && /\S+@\S+\.\S+/.test(emailInput.value)) {
+            btn.addEventListener('click', function () {
+                if (emailInput.value && /\S+@\S+\.\S+/.test(emailInput.value)) {
                     thankyou.style.display = 'block';
                     setTimeout(() => { thankyou.style.display = 'none'; }, 3000);
                     emailInput.value = '';
@@ -1550,4 +1694,5 @@ document.querySelectorAll('.footer-dropdown-header').forEach(header => {
     </script>
     <script src="Customscroll.js"></script>
 </body>
+
 </html>

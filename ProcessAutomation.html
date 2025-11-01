@@ -421,43 +421,70 @@
         }
 
         /* Challenges Section */
-        .challenges-section {
-            margin-bottom: 80px;
-        }
+        /* Challenges Section */
+.challenges-section {
+    margin-bottom: 80px;
+}
 
-        .challenges-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
+.challenges-container {
+    background: rgba(15, 23, 42, 0.5);
+    border-radius: 20px;
+    padding: 50px;
+    border: 1px solid rgba(100, 116, 139, 0.2);
+}
 
-        .challenge-card {
-            background: rgba(15, 23, 42, 0.6);
-            border-radius: 10px;
-            padding: 25px;
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            position: relative;
-        }
+.challenges-title {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
 
-        .challenge-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(135deg, #ef4444, #f97316);
-        }
+.challenges-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-        .challenge-icon {
-            font-size: 2rem;
-            color: #ef4444;
-            margin-bottom: 15px;
-        }
+.challenge-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
 
-        .challenge-text {
-            color: #cbd5e1;
-        }
+.challenge-icon {
+    color: #ef4444;
+    margin-right: 15px;
+    font-size: 1.2rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.challenge-text {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .challenges-container {
+        padding: 30px 20px;
+    }
+    
+    .challenges-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .challenge-item {
+        margin-bottom: 12px;
+    }
+}
 
         /* Process Section */
         .process-section {
@@ -1118,57 +1145,50 @@
     </section>
 
     <!-- Challenges Section -->
-    <section class="section-padding challenges-section">
-        <div class="container">
-            <h2 class="section-title">Challenges Without Process Automation</h2>
-            <div class="challenges-grid">
-                <div class="challenge-card">
-                    <div class="challenge-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <div class="challenge-text">
-                        <p>Employees waste valuable hours on repetitive manual tasks instead of strategic work</p>
-                    </div>
-                </div>
-
-                <div class="challenge-card">
+     <!-- Challenges Section -->
+<section class="section-padding challenges-section">
+    <div class="container">
+        <div class="challenges-container">
+            <h2 class="challenges-title">Challenges Without Process Automation</h2>
+            <div class="challenges-list">
+                <div class="challenge-item">
                     <div class="challenge-icon">
                         <i class="fas fa-exclamation-circle"></i>
                     </div>
-                    <div class="challenge-text">
-                        <p>Higher chances of human errors in critical processes affecting quality and compliance</p>
-                    </div>
+                    <p class="challenge-text">Employees waste valuable hours on repetitive manual tasks instead of strategic work</p>
                 </div>
-
-                <div class="challenge-card">
+                
+                <div class="challenge-item">
                     <div class="challenge-icon">
-                        <i class="fas fa-tachometer-alt"></i>
+                        <i class="fas fa-exclamation-circle"></i>
                     </div>
-                    <div class="challenge-text">
-                        <p>Delayed operations impact customer satisfaction and business responsiveness</p>
-                    </div>
+                    <p class="challenge-text">Higher chances of human errors in critical processes affecting quality and compliance</p>
                 </div>
-
-                <div class="challenge-card">
+                
+                <div class="challenge-item">
                     <div class="challenge-icon">
-                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                        <i class="fas fa-exclamation-circle"></i>
                     </div>
-                    <div class="challenge-text">
-                        <p>Increased operational costs due to inefficiency and manual intervention requirements</p>
-                    </div>
+                    <p class="challenge-text">Delayed operations impact customer satisfaction and business responsiveness</p>
                 </div>
-
-                <div class="challenge-card">
+                
+                <div class="challenge-item">
                     <div class="challenge-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-exclamation-circle"></i>
                     </div>
-                    <div class="challenge-text">
-                        <p>Lack of scalability and agility in workflows to handle growing business operations</p>
+                    <p class="challenge-text">Increased operational costs due to inefficiency and manual intervention requirements</p>
+                </div>
+                
+                <div class="challenge-item">
+                    <div class="challenge-icon">
+                        <i class="fas fa-exclamation-circle"></i>
                     </div>
+                    <p class="challenge-text">Lack of scalability and agility in workflows to handle growing business operations</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Solution Section -->
     <section class="section-padding">

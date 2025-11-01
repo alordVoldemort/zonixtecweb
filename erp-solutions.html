@@ -1,69 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ERP Solutions | Zonixtec - Enterprise Resource Planning</title>
-    <link rel="icon" href="./Assets/WhatsApp Image 2025-10-15 at 15.47.06.jpeg" sizes="32x32" type="image/png">
     <meta name="description" content="Optimize your business operations with Zonixtec's ERP solutions—integrating finance, inventory, HR, and operations into one unified platform for smarter, data-driven management.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="./Assets/WhatsApp Image 2025-10-15 at 15.47.06.jpeg" sizes="32x32" type="image/png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         :root {
-            --primary: #0066ff;
-            --primary-dark: #0044cc;
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
             --secondary: #00f2ff;
-            --accent: #ff3366;
-            --dark: #050511;
-            --dark-light: #0a0a1a;
-            --light: #f5f5f5;
-            --gray: #94a3b8;
-            --success: #27ae60;
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --card-border: rgba(255, 255, 255, 0.1);
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --accent: #8b5cf6;
             --tech-gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+            --success: #10b981;
+            --warning: #f59e0b;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
+
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #0f172a, #1e293b);
             color: var(--light);
             line-height: 1.6;
             overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 700;
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 20%);
+            z-index: -1;
         }
-        
+
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         .section-padding {
             padding: 100px 0;
         }
-        
+
         .section-title {
-            font-size: 3rem;
+            font-size: 2.5rem;
+            font-family: 'Orbitron', sans-serif;
             text-align: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 3rem;
             position: relative;
         }
         
@@ -71,487 +79,162 @@
             color: var(--secondary);
             position: relative;
         }
-        
+
         .section-title span.pulse {
             animation: pulse 2s infinite;
         }
-        
-        @keyframes pulse {
-            0% { text-shadow: 0 0 5px var(--secondary); }
-            50% { text-shadow: 0 0 20px var(--secondary), 0 0 30px var(--secondary); }
-            100% { text-shadow: 0 0 5px var(--secondary); }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--tech-gradient);
+            border-radius: 2px;
         }
-        
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.3rem;
-            color: var(--gray);
-            margin-bottom: 4rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        /* Header Styles */
+
+        /* ===== Header Styles ===== */
         header {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(10px);
             position: fixed;
             top: 0;
-            left: 0;
             width: 100%;
             z-index: 1000;
-            background-color: rgba(15, 23, 42, 0.9);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(100, 116, 139, 0.2);
         }
-        
-        header.scrolled {
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-        }
-        
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 0;
         }
-        
+
         .logo {
             font-family: 'Orbitron', sans-serif;
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--light);
             text-decoration: none;
+            display: flex;
+            align-items: center;
         }
-        
+
         .logo span {
             color: var(--secondary);
         }
-        
+
         .logo .tech {
-            color: var(--primary);
+            color: var(--secondary);
         }
-        
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--secondary);
+            font-size: 1.5rem;
+        }
+
         .nav-links {
             display: flex;
+            gap: 25px;
             align-items: center;
-            gap: 30px;
         }
-        
+
         .nav-links a {
             color: var(--light);
             text-decoration: none;
+            font-size: 1rem;
             font-weight: 500;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
             position: relative;
         }
-        
-        .nav-links a:hover, .nav-links a.active {
+
+        .nav-links a:not(.cta-button):hover {
             color: var(--secondary);
         }
-        
-        .nav-links a.active::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: var(--secondary);
-        }
-        
+
         .cta-button {
             background: var(--tech-gradient);
-            color: var(--dark);
-            padding: 12px 25px;
+            color: white;
+            padding: 10px 20px;
             border-radius: 30px;
             font-weight: 600;
             transition: all 0.3s ease;
-            text-decoration: none;
-            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
         }
-        
+
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 102, 255, 0.4);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
         }
-        
+
         .mobile-menu-btn {
             display: none;
+            color: var(--light);
             font-size: 1.5rem;
             cursor: pointer;
-            color: var(--light);
         }
-        
-        /* Hero Section */
-        .erp-hero {
-            padding: 180px 0 100px;
+
+        /* ERP Section */
+        .erp-section {
+            padding: 150px 0 100px;
             position: relative;
-            overflow: hidden;
         }
-        
-        .erp-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(0, 102, 255, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(0, 242, 255, 0.1) 0%, transparent 50%);
-            z-index: -1;
+
+        .erp-hero {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 80px;
         }
-        
-        .hero-content {
-            display: flex;
-            align-items: center;
-            gap: 60px;
-        }
-        
-        .hero-text {
-            flex: 1;
-        }
-        
+
         .hero-title {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-        }
-        
-        .hero-title span {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
             background: var(--tech-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            line-height: 1.2;
         }
-        
+
         .hero-subtitle {
-            font-size: 1.4rem;
-            color: var(--secondary);
-            margin-bottom: 2rem;
-            font-weight: 500;
-        }
-        
-        .hero-description {
             font-size: 1.2rem;
-            color: var(--gray);
-            margin-bottom: 3rem;
-            line-height: 1.8;
-        }
-        
-        .hero-visual {
-            flex: 1;
-            position: relative;
-            height: 500px;
-        }
-        
-        .floating-cards {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .floating-card {
-            position: absolute;
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--card-border);
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: transform 0.5s ease, opacity 0.5s ease;
-        }
-        
-        .floating-card:nth-child(1) {
-            top: 10%;
-            left: 10%;
-            width: 200px;
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        .floating-card:nth-child(2) {
-            top: 50%;
-            right: -14%;
-            z-index: 1;
-            width: 200px;
-            animation: float 7s ease-in-out infinite 1s;
-        }
-        
-        .floating-card:nth-child(3) {
-            bottom: 10%;
-            left: 44%;
-            width: 200px;
-            animation: float 5s ease-in-out infinite 0.5s;
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-        
-        .card-icon {
-            font-size: 2.5rem;
             color: var(--secondary);
-            margin-bottom: 15px;
-        }
-        
-        .card-title {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: var(--light);
-        }
-        
-        .card-text {
-            color: var(--gray);
-            font-size: 0.9rem;
-        }
-        
-        /* Interactive Features Section */
-        .interactive-features {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .features-container {
-            display: flex;
-            flex-direction: column;
-            gap: 80px;
-        }
-        
-        .feature-row {
-            display: flex;
-            align-items: center;
-            gap: 60px;
-        }
-        
-        .feature-row.reverse {
-            flex-direction: row-reverse;
-        }
-        
-        .feature-visual {
-            flex: 1;
-            height: 400px;
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .feature-content {
-            flex: 1;
-        }
-        
-        .feature-title {
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-            color: var(--secondary);
-        }
-        
-        .feature-description {
-            font-size: 1.1rem;
-            color: var(--gray);
-            margin-bottom: 2rem;
-            line-height: 1.7;
-        }
-        
-        .feature-list {
-            list-style: none;
-        }
-        
-        .feature-list li {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
-        
-        .feature-list i {
-            color: var(--success);
-            margin-top: 5px;
-        }
-        
-        /* Process Visualization */
-        .process-section {
-            position: relative;
-        }
-        
-        .process-visual {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 60px;
-            position: relative;
-        }
-        
-        .process-step {
-            text-align: center;
-            width: 180px;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .process-step::before {
-            content: '';
-            position: absolute;
-            top: 40px;
-            left: 90px;
-            width: 100%;
-            height: 2px;
-            background: var(--tech-gradient);
-            z-index: -1;
-        }
-        
-        .process-step:last-child::before {
-            display: none;
-        }
-        
-        .step-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--tech-gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 1.8rem;
-            color: var(--dark);
-            box-shadow: 0 5px 15px rgba(0, 102, 255, 0.3);
-        }
-        
-        .step-title {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: var(--light);
-        }
-        
-        .step-description {
-            color: var(--gray);
-            font-size: 0.9rem;
-        }
-        
-        /* Interactive Demo */
-        .interactive-demo {
-            background: var(--card-bg);
-            border-radius: 20px;
-            padding: 60px;
-            margin-top: 80px;
-            border: 1px solid var(--card-border);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .demo-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .demo-title {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--secondary);
-        }
-        
-        .demo-subtitle {
-            color: var(--gray);
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .demo-container {
-            display: flex;
-            gap: 40px;
-            align-items: center;
-        }
-        
-        .demo-controls {
-            flex: 1;
-        }
-        
-        .control-group {
             margin-bottom: 30px;
         }
-        
-        .control-label {
-            display: block;
-            margin-bottom: 10px;
-            color: var(--light);
-            font-weight: 500;
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            margin-bottom: 40px;
+            line-height: 1.8;
         }
-        
-        .control-slider {
-            width: 100%;
-            height: 8px;
-            -webkit-appearance: none;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
-            outline: none;
-        }
-        
-        .control-slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: var(--secondary);
-            cursor: pointer;
-            box-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
-        }
-        
-        .demo-visual {
-            flex: 1;
-            height: 300px;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .demo-metric {
-            text-align: center;
-        }
-        
-        .metric-value {
-            font-size: 4rem;
-            font-weight: 800;
-            color: var(--secondary);
-            margin-bottom: 10px;
-        }
-        
-        .metric-label {
-            color: var(--gray);
-            font-size: 1.2rem;
-        }
-        
-        /* Benefits Showcase */
-        .benefits-showcase {
+
+        .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin-top: 60px;
+            margin-bottom: 80px;
         }
-        
+
         .benefit-card {
-            background: var(--card-bg);
+            background: rgba(15, 23, 42, 0.6);
             border-radius: 15px;
-            padding: 40px 30px;
-            text-align: center;
-            border: 1px solid var(--card-border);
-            transition: all 0.3s ease;
+            padding: 30px;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
         }
-        
+
         .benefit-card::before {
             content: '';
             position: absolute;
@@ -561,170 +244,545 @@
             height: 5px;
             background: var(--tech-gradient);
         }
-        
+
         .benefit-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(37, 99, 235, 0.3);
         }
-        
+
         .benefit-icon {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: var(--secondary);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
-        
+
         .benefit-title {
             font-size: 1.5rem;
             margin-bottom: 15px;
-            color: var(--light);
+            font-weight: 600;
         }
-        
-        .benefit-description {
-            color: var(--gray);
-            line-height: 1.6;
+
+        .benefit-text {
+            color: #94a3b8;
+            line-height: 1.7;
         }
-        
-        /* Challenges Section */
-        .challenges-section {
-            background: var(--card-bg);
-            border-radius: 20px;
-            padding: 80px 60px;
-            margin-top: 80px;
-            border: 1px solid var(--card-border);
+
+        /* Service Types Section */
+        .service-types {
+            margin-bottom: 80px;
+        }
+
+        .service-types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-type-card {
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
         }
-        
-        .challenges-title {
-            text-align: center;
+
+        .service-type-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--tech-gradient);
+        }
+
+        .service-type-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(37, 99, 235, 0.3);
+        }
+
+        .service-type-icon {
             font-size: 2.5rem;
-            margin-bottom: 3rem;
             color: var(--secondary);
+            margin-bottom: 20px;
         }
-        
-        .challenges-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .challenge-item {
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 15px;
-            padding: 30px;
-            border-left: 4px solid var(--accent);
-        }
-        
-        .challenge-item i {
-            color: var(--accent);
+
+        .service-type-title {
             font-size: 1.5rem;
             margin-bottom: 15px;
+            font-weight: 600;
         }
-        
-        .challenge-title {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
+
+        .service-type-text {
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+        /* Challenges Section */
+        .challenges-section {
+            margin-bottom: 80px;
+        }
+
+        .challenges-container {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 20px;
+            padding: 50px;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+        }
+
+        .challenges-title {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            background: var(--tech-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .challenges-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .challenge-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .challenge-icon {
+            color: #ef4444;
+            margin-right: 15px;
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .challenge-text {
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+        /* What We Bring Section */
+        .what-we-bring {
+            margin-bottom: 80px;
+        }
+
+        .what-we-bring-container {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 20px;
+            padding: 50px;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+        }
+
+        .what-we-bring-title {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            background: var(--tech-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .what-we-bring-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .what-we-bring-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .what-we-bring-icon {
+            color: var(--success);
+            margin-right: 15px;
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .what-we-bring-text {
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+        /* Development Process Section */
+        .process-section {
+            margin-bottom: 80px;
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            z-index: 1;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            flex: 1;
+            padding: 0 15px;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark);
+            position: relative;
+        }
+
+        .step-title {
+            font-size: 1.2rem;
+            font-family: 'Orbitron', sans-serif;
             color: var(--light);
+            margin-bottom: 10px;
+            font-weight: 600;
         }
-        
-        .challenge-description {
+
+        .step-description {
             color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Technology Stack Section */
+        .tech-section {
+            background: rgba(10, 10, 26, 0.7);
+            border-radius: 10px;
+            padding: 60px;
+            margin-bottom: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         
-        /* Technology Stack */
-        .tech-stack {
-            margin-top: 80px;
+        .tech-section h2 {
+            text-align: center;
+            color: var(--secondary);
+            margin-bottom: 40px;
+            font-family: 'Orbitron', sans-serif;
         }
         
         .tech-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
-            margin-top: 40px;
         }
         
         .tech-category {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 30px;
             text-align: center;
-            border: 1px solid var(--card-border);
         }
         
-        .tech-icon {
+        .tech-category h3 {
+            color: var(--light);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .tech-items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .tech-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 15px;
+            border-radius: 8px;
+            color: var(--gray);
+            transition: all 0.3s ease;
+        }
+        
+        .tech-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--light);
+            transform: translateY(-3px);
+        }
+
+        .impact-section {
+            margin-bottom: 80px;
+        }
+
+        .impact-container {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 20px;
+            padding: 50px;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+        }
+
+        .impact-title {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            background: var(--tech-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .impact-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .impact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .impact-icon {
+            color: var(--success);
+            margin-right: 15px;
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .impact-text {
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+        .cta-container {
+            background: var(--tech-gradient);
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .cta-title {
+            font-family: 'Orbitron', sans-serif;
             font-size: 2.5rem;
-            color: var(--secondary);
             margin-bottom: 20px;
         }
-        
-        .tech-title {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: var(--light);
+
+        .cta-description {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+            line-height: 1.7;
         }
-        
-        .tech-list {
-            list-style: none;
+
+        .cta-button-large {
+            background: var(--dark);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            display: inline-block;
         }
-        
-        .tech-list li {
-            color: var(--gray);
-            margin-bottom: 8px;
+
+        .cta-button-large:hover {
+            transform: translateY(-3px);
+            background: rgba(15, 23, 42, 0.9);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
         }
-        
-        /* FAQ Section */
+
         .faq-section {
-            margin-top: 80px;
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 20px;
+            padding: 50px;
+            border: 1px solid rgba(100, 116, 139, 0.2);
         }
-        
+
+        .faq-title {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            background: var(--tech-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
         .faq-container {
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         .faq-item {
-            background: var(--card-bg);
-            border-radius: 15px;
             margin-bottom: 20px;
-            border: 1px solid var(--card-border);
-            overflow: hidden;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.2);
+            padding-bottom: 20px;
         }
-        
+
         .faq-question {
-            padding: 25px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-weight: 600;
-            color: var(--light);
         }
-        
-        .faq-question i {
-            color: var(--secondary);
+
+        .faq-answer {
+            color: #94a3b8;
+            line-height: 1.7;
+            padding-right: 20px;
+        }
+
+        .faq-toggle {
+            font-size: 1.2rem;
             transition: transform 0.3s ease;
         }
-        
-        .faq-answer {
-            padding: 0 25px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-            color: var(--gray);
-        }
-        
-        .faq-item.active .faq-answer {
-            padding: 0 25px 25px;
-            max-height: 500px;
-        }
-        
-        .faq-item.active .faq-question i {
+
+        .faq-item.active .faq-toggle {
             transform: rotate(180deg);
         }
 
+        .footer {
+            padding: 70px 0 0;
+            border-top: 1px solid rgba(100, 116, 139, 0.2);
+        }
 
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(255px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
 
-         /* ===== Dropdown Styles ===== */
+        .footer-col {
+            padding: 20px;
+        }
+
+        .footer-col h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .footer-links a {
+            display: flex;
+            align-items: center;
+            color: var(--gray);
+            text-decoration: none;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+
+        .footer-links i {
+            margin-right: 10px;
+            color: var(--gray);
+            font-size: 0.8rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(37, 99, 235, 0.2);
+            border-radius: 50%;
+            color: var(--light);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--tech-gradient);
+            transform: translateY(-5px);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+        }
+
+        .form-control {
+            padding: 12px 15px;
+            border-radius: 5px;
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            background: rgba(15, 23, 42, 0.5);
+            color: var(--light);
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .form-control::placeholder {
+            color: #94a3b8;
+        }
+
+        .submit-btn {
+            background: var(--tech-gradient);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+        }
+
+        /* ===== Dropdown Styles ===== */
         .dropdown {
             position: relative;
             display: inline-block;
@@ -788,238 +846,235 @@
         }
 
         .dropdown-scroll {
-    max-height: 300px; /* Slightly less than parent to account for padding */
-    overflow-y: auto; /* Enable vertical scrolling */
-    padding: 8px 0; /* Add padding to scroll container */
-}
+            max-height: 300px;
+            overflow-y: auto;
+            padding: 8px 0;
+        }
 
-/* Custom scrollbar styling */
-.dropdown-scroll::-webkit-scrollbar {
-    width: 6px;
-}
+        /* Custom scrollbar styling */
+        .dropdown-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
 
-.dropdown-scroll::-webkit-scrollbar-track {
-    background: rgba(15, 23, 42, 0.5);
-    border-radius: 3px;
-}
+        .dropdown-scroll::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 3px;
+        }
 
-.dropdown-scroll::-webkit-scrollbar-thumb {
-    background: var(--secondary);
-    border-radius: 3px;
-}
+        .dropdown-scroll::-webkit-scrollbar-thumb {
+            background: var(--secondary);
+            border-radius: 3px;
+        }
 
-.dropdown-scroll::-webkit-scrollbar-thumb:hover {
-    background: var(--primary);
-}
+        .dropdown-scroll::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
 
-
-
-        
-        /* CTA Section */
-        .cta-section {
-            background: var(--tech-gradient);
-            border-radius: 20px;
-            padding: 80px 40px;
-            text-align: center;
-            margin-top: 80px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.1"><path fill="%23ffffff" d="M500,100 C700,100 900,200 900,500 C900,800 700,900 500,900 C300,900 100,800 100,500 C100,200 300,100 500,100 Z"/></svg>') no-repeat center center;
-            background-size: 80%;
-        }
-        
-        .cta-title {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            color: var(--dark);
-        }
-        
-        .cta-subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
-            color: var(--dark);
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .cta-button-large {
-            background: var(--dark);
-            color: var(--light);
-            padding: 18px 40px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        .cta-button-large:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-        }
-        
-        /* Footer */
-        .footer {
-            background: rgba(15, 23, 42, 0.9);
-            padding: 80px 0 30px;
-            margin-top: 100px;
-        }
-        
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 50px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-col h3 {
-            color: var(--secondary);
-            margin-bottom: 25px;
-            font-size: 1.3rem;
-        }
-        
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        
-        .footer-links a {
-            color: var(--gray);
-            text-decoration: none;
-            transition: color 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .footer-links a:hover {
-            color: var(--secondary);
-        }
-        
         .footer-bottom {
             text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            color: var(--gray);
+            padding: 20px 0;
+            border-top: 1px solid rgba(100, 116, 139, 0.2);
+            color: #94a3b8;
+            font-size: 0.9rem;
         }
-        
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .hero-content {
-                flex-direction: column;
+
+        .footer-bottom i {
+            color: #ef4444;
+            margin: 0 5px;
+        }
+
+        @media (min-width: 768px) {
+
+            .dropdown-scroll {
+                max-height: 250px;
             }
-            
-            .feature-row, .feature-row.reverse {
-                flex-direction: column;
-            }
-            
-            .process-visual {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 40px;
-            }
-            
-            .process-step::before {
-                display: none;
-            }
-            
-            .demo-container {
-                flex-direction: column;
-            }
-            
+
             .footer-container {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .footer-col {
+                padding: 18px 1px;
+            }
+
+            .footer-col h3 {
+                font-family: 'Orbitron', sans-serif;
+                font-size: 1.3rem;
+                margin-bottom: 20px;
+                color: var(--secondary);
+                position: relative;
+                padding-bottom: 10px;
             }
         }
-        
-        @media (max-width: 768px) {
-            .section-title {
-                font-size: 2.5rem;
-            }
-            
-            .hero-title {
-                font-size: 3rem;
-            }
-            
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: var(--dark);
+
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .services-overview {
                 flex-direction: column;
-                padding: 20px;
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
             }
-            
-            .nav-links.active {
-                display: flex;
+
+            .service-detail {
+                flex-direction: column;
             }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .interactive-demo {
-                padding: 40px 20px;
-            }
-            
-            .challenges-section {
-                padding: 60px 30px;
-            }
-            
-            .cta-section {
-                padding: 60px 20px;
-            }
-            
-            .cta-title {
-                font-size: 2.5rem;
+
+            .process-step {
+                min-width: 200px;
             }
         }
-        
-        @media (max-width: 576px) {
+
+        @media (max-width: 768px) {
+            .services-hero-title {
+                font-size: 2.5rem;
+            }
+
             .section-title {
                 font-size: 2rem;
             }
-            
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .cta-section {
+                padding: 40px 20px;
+            }
+
+            .detailed-services {
+                padding: 30px;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
             .hero-title {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
-            
-            .benefits-showcase {
-                grid-template-columns: 1fr;
+
+            .cta-container {
+                padding: 40px 20px;
             }
-            
-            .challenges-grid {
-                grid-template-columns: 1fr;
+
+            .cta-title {
+                font-size: 2rem;
             }
-            
-            .tech-grid {
-                grid-template-columns: 1fr;
+
+            .process-container,
+            .faq-section,
+            .challenges-container,
+            .what-we-bring-container,
+            .impact-container {
+                padding: 30px 20px;
             }
-            
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .process-step {
+                min-width: 100%;
+            }
+
+            .cta-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background-color: rgba(15, 23, 42, 0.95);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                transition: right 0.3s ease;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                z-index: 1000;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .hero-text p {
+                font-size: 16px;
+            }
+
+            .hero-ai-face {
+                display: none;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .cta-button,
+            .secondary-button {
+                width: 100%;
+                text-align: center;
+            }
+
+            .section-header h2 {
+                font-size: 30px;
+            }
+
             .footer-container {
                 grid-template-columns: 1fr;
+                gap: 30px;
             }
+        }
+
+        /*  Get Start Button    */
+        .cta-buttons {
+            background: linear-gradient(45deg, var(--primary), #5ed6eb);
+            color: var(--dark);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-buttons:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 102, 255, 0.3);
+        }
+
+        .cta-buttons:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(100, 149, 255, 0.4);
+        }
+
+        .faq-toggle {
+            font-size: 1.2rem;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-toggle.active {
+            transform: rotate(180deg);
         }
     </style>
 </head>
+
 <body>
-    <!-- Header -->
     <header id="header">
         <div class="container">
             <nav>
@@ -1029,8 +1084,11 @@
                 <div class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="aboutus.html">About</a>
+
+                    <!-- <a href="Services.html">Services</a> -->
                     <div class="dropdown">
-                        <a href="Services.html" class="active dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                        <a href="Services.html" class="active dropdown-toggle">Services <i
+                                class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-content">
                             <div class="dropdown-scroll">
                                 <a href="web-design-development.html">Web Design & Development</a>
@@ -1049,7 +1107,7 @@
                     </div>
                     <a href="carrer.html">Career</a>
                     <a href="contact.html">Contact</a>
-                    <a href="contact.html" class="cta-button">Get Started</a>
+                    <a href="contact.html" class="cta-buttons">Get Started</a>
                 </div>
                 <div class="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
@@ -1057,408 +1115,439 @@
             </nav>
         </div>
     </header>
-    
-    <!-- Hero Section -->
-    <section class="erp-hero section-padding">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">Enterprise <span>Resource Planning</span></h1>
-                    <p class="hero-subtitle">Integrate. Automate. Accelerate.</p>
+
+    <main>
+        <section class="erp-section">
+            <div class="container">
+                <div class="erp-hero">
+                    <h1 class="hero-title">Custom ERP Solutions</h1>
+                    <h2 class="hero-subtitle">Integrate. Automate. Accelerate.</h2>
                     <p class="hero-description">At Zonixtec, we design powerful ERP solutions that bring every part of your business together—from finance and supply chain to HR and production. Our ERP systems eliminate silos, enhance collaboration, and deliver real-time insights—helping organizations make faster, smarter decisions while improving overall efficiency.</p>
-                    <a href="#contact" class="cta-button">Let's Build Your ERP System</a>
+                    <a href="contact.html" class="cta-button">Start Your ERP Project</a>
                 </div>
-                <div class="hero-visual">
-                    <div class="floating-cards">
-                        <div class="floating-card">
-                            <div class="card-icon">
+
+                <div class="service-types">
+                    <h2 class="section-title">Our ERP Development Services</h2>
+                    <div class="service-types-grid">
+                        <div class="service-type-card">
+                            <div class="service-type-icon">
                                 <i class="fas fa-chart-pie"></i>
                             </div>
-                            <h3 class="card-title">Finance & Accounting</h3>
-                            <p class="card-text">Automate invoices, budgets, and financial reporting</p>
+                            <h3 class="service-type-title">Finance & Accounting</h3>
+                            <p class="service-type-text">Automate invoices, budgets, and financial reporting with comprehensive accounting modules.</p>
                         </div>
-                        <div class="floating-card">
-                            <div class="card-icon">
+
+                        <div class="service-type-card">
+                            <div class="service-type-icon">
                                 <i class="fas fa-warehouse"></i>
                             </div>
-                            <h3 class="card-title">Inventory Management</h3>
-                            <p class="card-text">Track stock levels, suppliers, and logistics in real time</p>
+                            <h3 class="service-type-title">Inventory Management</h3>
+                            <p class="service-type-text">Track stock levels, suppliers, and logistics in real time with advanced inventory control.</p>
                         </div>
-                        <div class="floating-card">
-                            <div class="card-icon">
+
+                        <div class="service-type-card">
+                            <div class="service-type-icon">
                                 <i class="fas fa-users-cog"></i>
                             </div>
-                            <h3 class="card-title">Human Resources</h3>
-                            <p class="card-text">Integrate employee data, payroll, and performance tracking</p>
+                            <h3 class="service-type-title">Human Resources</h3>
+                            <p class="service-type-text">Integrate employee data, payroll, and performance tracking with HR management systems.</p>
+                        </div>
+
+                        <div class="service-type-card">
+                            <div class="service-type-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h3 class="service-type-title">Manufacturing</h3>
+                            <p class="service-type-text">Streamline production planning, quality control, and shop floor management processes.</p>
+                        </div>
+
+                        <div class="service-type-card">
+                            <div class="service-type-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <h3 class="service-type-title">Supply Chain</h3>
+                            <p class="service-type-text">Optimize procurement, logistics, and distribution with integrated supply chain modules.</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Interactive Features Section -->
-    <section class="interactive-features section-padding">
-        <div class="container">
-            <h2 class="section-title">Our ERP <span>Solutions</span></h2>
-            <p class="section-subtitle">Our ERP solutions are tailored to fit your business processes, ensuring seamless integration across all departments and functions</p>
-            
-            <div class="features-container">
-                <div class="feature-row">
-                    <div class="feature-visual">
-                        <div class="demo-metric">
-                            <div class="metric-value">95%</div>
-                            <div class="metric-label">Process Automation</div>
+
+                <h2 class="section-title">Features of Our ERP Solutions</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="benefit-title">Centralized Data</h3>
+                        <p class="benefit-text">Unified reporting dashboard with all your business data in one place for comprehensive insights and decision-making.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3 class="benefit-title">Modular & Scalable</h3>
+                        <p class="benefit-text">Flexible system architecture that grows with your business and adapts to changing operational needs.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3 class="benefit-title">Role-Based Security</h3>
+                        <p class="benefit-text">Multi-user access with comprehensive role-based security controls and permissions for data protection.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3 class="benefit-title">Real-Time Analytics</h3>
+                        <p class="benefit-text">Advanced analytics and performance insights for data-driven decision making across all departments.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3 class="benefit-title">Seamless Integration</h3>
+                        <p class="benefit-text">Integration with CRM, HRMS, billing systems and other business applications for unified operations.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="benefit-title">Mobile & Cloud Access</h3>
+                        <p class="benefit-text">Flexible access options with mobile and cloud deployment for remote operations and management.</p>
+                    </div>
+                </div>
+
+                <div class="challenges-section">
+                    <div class="challenges-container">
+                        <h2 class="challenges-title">Challenges Without ERP</h2>
+                        <div class="challenges-list">
+                            <div class="challenge-item">
+                                <div class="challenge-icon">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <p class="challenge-text">Fragmented business data across departments with no unified view</p>
+                            </div>
+                            <div class="challenge-item">
+                                <div class="challenge-icon">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <p class="challenge-text">Inefficient manual processes causing delays and reduced productivity</p>
+                            </div>
+                            <div class="challenge-item">
+                                <div class="challenge-icon">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <p class="challenge-text">Poor visibility into inventory, finances, and overall business performance</p>
+                            </div>
+                            <div class="challenge-item">
+                                <div class="challenge-icon">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <p class="challenge-text">Multiple data entry points leading to duplication and human errors</p>
+                            </div>
+                            <div class="challenge-item">
+                                <div class="challenge-icon">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <p class="challenge-text">Delayed and inaccurate reporting affecting strategic decision-making</p>
+                            </div>
+                            <div class="challenge-item">
+                                <div class="challenge-icon">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <p class="challenge-text">Lack of coordination between departments leading to inefficiencies</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="feature-content">
-                        <h3 class="feature-title">Finance & Accounting Management</h3>
-                        <p class="feature-description">Automate your financial operations with our comprehensive accounting module that handles everything from invoicing to financial reporting and budget management.</p>
-                        <ul class="feature-list">
-                            <li><i class="fas fa-check-circle"></i> <span>Automated invoicing and payment processing</span></li>
-                            <li><i class="fas fa-check-circle"></i> <span>Real-time budget tracking and financial reporting</span></li>
-                            <li><i class="fas fa-check-circle"></i> <span>Tax compliance and audit trail management</span></li>
-                        </ul>
-                    </div>
                 </div>
-                
-                <div class="feature-row reverse">
-                    <div class="feature-visual">
-                        <div class="demo-metric">
-                            <div class="metric-value">360°</div>
-                            <div class="metric-label">Supply Chain Visibility</div>
+
+
+                <div class="what-we-bring">
+                    <div class="what-we-bring-container">
+                        <h2 class="what-we-bring-title">What We Bring to the Table</h2>
+                        <div class="what-we-bring-list">
+                            <div class="what-we-bring-item">
+                                <div class="what-we-bring-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="what-we-bring-text">Deep industry expertise across manufacturing, retail, and service sectors</p>
+                            </div>
+                            <div class="what-we-bring-item">
+                                <div class="what-we-bring-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="what-we-bring-text">Proven implementation methodologies for successful ERP deployment</p>
+                            </div>
+                            <div class="what-we-bring-item">
+                                <div class="what-we-bring-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="what-we-bring-text">Customizable modules designed for your specific business workflows</p>
+                            </div>
+                            <div class="what-we-bring-item">
+                                <div class="what-we-bring-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="what-we-bring-text">Seamless integration with existing systems and third-party applications</p>
+                            </div>
+                            <div class="what-we-bring-item">
+                                <div class="what-we-bring-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="what-we-bring-text">Comprehensive training and ongoing technical support</p>
+                            </div>
+                            <div class="what-we-bring-item">
+                                <div class="what-we-bring-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="what-we-bring-text">Scalable solutions that grow with your business needs</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="feature-content">
-                        <h3 class="feature-title">Inventory & Supply Chain Management</h3>
-                        <p class="feature-description">Gain complete visibility and control over your inventory and supply chain operations with real-time tracking and predictive analytics.</p>
-                        <ul class="feature-list">
-                            <li><i class="fas fa-check-circle"></i> <span>Real-time inventory tracking and stock level monitoring</span></li>
-                            <li><i class="fas fa-check-circle"></i> <span>Supplier and logistics management</span></li>
-                            <li><i class="fas fa-check-circle"></i> <span>Demand forecasting and procurement planning</span></li>
-                        </ul>
-                    </div>
                 </div>
-                
-                <div class="feature-row">
-                    <div class="feature-visual">
-                        <div class="demo-metric">
-                            <div class="metric-value">70%</div>
-                            <div class="metric-label">Time Savings</div>
+
+                <div class="process-section">
+                    <h2 class="section-title">Our Development <span>Process</span></h2>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <h3 class="step-title">Requirement Analysis</h3>
+                            <p class="step-description">Understand business processes, pain points, and goals to define ERP requirements.</p>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <h3 class="step-title">System Design</h3>
+                            <p class="step-description">Create system architecture and module specifications for your ERP solution.</p>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <h3 class="step-title">Development</h3>
+                            <p class="step-description">Build and customize ERP modules as per your specific business requirements.</p>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <h3 class="step-title">Testing & QA</h3>
+                            <p class="step-description">Validate system functionality, data integrity, and performance metrics.</p>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="step-number">5</div>
+                            <h3 class="step-title">Deployment</h3>
+                            <p class="step-description">Launch system and migrate existing data with minimal business disruption.</p>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="step-number">6</div>
+                            <h3 class="step-title">Training & Support</h3>
+                            <p class="step-description">Train users and provide ongoing technical support for optimal system usage.</p>
                         </div>
                     </div>
-                    <div class="feature-content">
-                        <h3 class="feature-title">Human Resource Management</h3>
-                        <p class="feature-description">Streamline your HR processes with our integrated human resource management system that handles everything from recruitment to retirement.</p>
-                        <ul class="feature-list">
-                            <li><i class="fas fa-check-circle"></i> <span>Employee data management and payroll processing</span></li>
-                            <li><i class="fas fa-check-circle"></i> <span>Performance tracking and appraisal systems</span></li>
-                            <li><i class="fas fa-check-circle"></i> <span>Leave management and attendance tracking</span></li>
-                        </ul>
-                    </div>
                 </div>
+
+               <!-- Technology Stack -->
+<div class="tech-section">
+    <h2>Our Technology Stack</h2>
+    
+    <div class="tech-grid">
+        <div class="tech-category">
+            <h3>Frontend Technologies</h3>
+            <div class="tech-items">
+                <div class="tech-item">React</div>
+                <div class="tech-item">Angular</div>
+                <div class="tech-item">Vue.js</div>
+                <div class="tech-item">TypeScript</div>
+                <div class="tech-item">HTML5/CSS3</div>
             </div>
         </div>
-    </section>
-    
-    <!-- Additional Features -->
-    <section class="section-padding">
-        <div class="container">
-            <h2 class="section-title">ERP <span>Features</span></h2>
-            <p class="section-subtitle">Our ERP solutions come with a comprehensive set of features designed to optimize your business operations</p>
-            
-            <div class="benefits-showcase">
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3 class="benefit-title">Centralized Data</h3>
-                    <p class="benefit-description">Unified reporting dashboard with all your business data in one place for comprehensive insights.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-layer-group"></i>
-                    </div>
-                    <h3 class="benefit-title">Modular & Scalable</h3>
-                    <p class="benefit-description">Flexible system architecture that grows with your business and adapts to changing needs.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <h3 class="benefit-title">Role-Based Security</h3>
-                    <p class="benefit-description">Multi-user access with comprehensive role-based security controls and permissions.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h3 class="benefit-title">Real-Time Analytics</h3>
-                    <p class="benefit-description">Advanced analytics and performance insights for data-driven decision making.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-plug"></i>
-                    </div>
-                    <h3 class="benefit-title">Seamless Integration</h3>
-                    <p class="benefit-description">Integration with CRM, HRMS, billing systems and other business applications.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 class="benefit-title">Mobile & Cloud Access</h3>
-                    <p class="benefit-description">Flexible access options with mobile and cloud deployment for remote operations.</p>
-                </div>
+        
+        <div class="tech-category">
+            <h3>Backend Technologies</h3>
+            <div class="tech-items">
+                <div class="tech-item">Node.js</div>
+                <div class="tech-item">Python</div>
+                <div class="tech-item">Java</div>
+                <div class="tech-item">.NET</div>
+                <div class="tech-item">PHP</div>
             </div>
         </div>
-    </section>
-    
-    <!-- Challenges Section -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="challenges-section">
-                <h2 class="challenges-title">Challenges Without ERP</h2>
-                <div class="challenges-grid">
-                    <div class="challenge-item">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        <h3 class="challenge-title">Fragmented Business Data</h3>
-                        <p class="challenge-description">Data scattered across departments with no unified view of operations.</p>
-                    </div>
-                    
-                    <div class="challenge-item">
-                        <i class="fas fa-tachometer-alt"></i>
-                        <h3 class="challenge-title">Inefficient Processes</h3>
-                        <p class="challenge-description">Manual processes causing delays, errors, and reduced productivity.</p>
-                    </div>
-                    
-                    <div class="challenge-item">
-                        <i class="fas fa-eye-slash"></i>
-                        <h3 class="challenge-title">Poor Visibility</h3>
-                        <p class="challenge-description">Limited insight into inventory, finances, and overall business performance.</p>
-                    </div>
-                    
-                    <div class="challenge-item">
-                        <i class="fas fa-copy"></i>
-                        <h3 class="challenge-title">Data Duplication</h3>
-                        <p class="challenge-description">Multiple data entry points leading to duplication and human errors.</p>
-                    </div>
-                    
-                    <div class="challenge-item">
-                        <i class="fas fa-chart-line"></i>
-                        <h3 class="challenge-title">Inaccurate Reporting</h3>
-                        <p class="challenge-description">Delayed and inaccurate reporting affecting strategic decision-making.</p>
-                    </div>
-                    
-                    <div class="challenge-item">
-                        <i class="fas fa-users"></i>
-                        <h3 class="challenge-title">Departmental Silos</h3>
-                        <p class="challenge-description">Lack of coordination between departments leading to inefficiencies.</p>
-                    </div>
-                </div>
+        
+        <div class="tech-category">
+            <h3>Databases</h3>
+            <div class="tech-items">
+                <div class="tech-item">PostgreSQL</div>
+                <div class="tech-item">MySQL</div>
+                <div class="tech-item">MongoDB</div>
+                <div class="tech-item">SQL Server</div>
+                <div class="tech-item">Oracle</div>
             </div>
         </div>
-    </section>
-    
-    <!-- Process Visualization -->
-    <section class="process-section section-padding">
-        <div class="container">
-            <h2 class="section-title">Our ERP <span>Implementation Process</span></h2>
-            <p class="section-subtitle">A structured approach to ensure successful ERP implementation and adoption</p>
-            
-            <div class="process-visual">
-                <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-clipboard-list"></i>
-                    </div>
-                    <h3 class="step-title">Requirement Analysis</h3>
-                    <p class="step-description">Understand business processes, pain points, and goals</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-pencil-ruler"></i>
-                    </div>
-                    <h3 class="step-title">System Design</h3>
-                    <p class="step-description">Create system architecture and module specifications</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3 class="step-title">Development</h3>
-                    <p class="step-description">Build and customize ERP modules as per requirements</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-vial"></i>
-                    </div>
-                    <h3 class="step-title">Testing & QA</h3>
-                    <p class="step-description">Validate system functionality and data integrity</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3 class="step-title">Deployment</h3>
-                    <p class="step-description">Launch system and migrate existing data</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3 class="step-title">Training & Support</h3>
-                    <p class="step-description">Train users and provide ongoing technical support</p>
-                </div>
+        
+        <div class="tech-category">
+            <h3>ERP Platforms</h3>
+            <div class="tech-items">
+                <div class="tech-item">SAP</div>
+                <div class="tech-item">Oracle ERP</div>
+                <div class="tech-item">Microsoft Dynamics</div>
+                <div class="tech-item">Odoo</div>
+                <div class="tech-item">Custom Solutions</div>
             </div>
         </div>
-    </section>
-    
-    <!-- Technology Stack -->
-    <section class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Our ERP <span>Technology Stack</span></h2>
-            <p class="section-subtitle">We leverage cutting-edge technologies to build robust, scalable, and secure ERP solutions</p>
-            
-            <div class="tech-stack">
-                <div class="tech-grid">
-                    <div class="tech-category">
-                        <div class="tech-icon">
-                            <i class="fas fa-server"></i>
+        
+        <div class="tech-category">
+            <h3>Cloud & Infrastructure</h3>
+            <div class="tech-items">
+                <div class="tech-item">AWS</div>
+                <div class="tech-item">Azure</div>
+                <div class="tech-item">Google Cloud</div>
+                <div class="tech-item">Docker</div>
+                <div class="tech-item">Kubernetes</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Integration & APIs</h3>
+            <div class="tech-items">
+                <div class="tech-item">REST APIs</div>
+                <div class="tech-item">SOAP</div>
+                <div class="tech-item">GraphQL</div>
+                <div class="tech-item">Webhooks</div>
+                <div class="tech-item">EDI</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="impact-section">
+                    <div class="impact-container">
+                        <h2 class="impact-title">Business Impact</h2>
+                        <div class="impact-list">
+                            <div class="impact-item">
+                                <div class="impact-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <p class="impact-text">Increased operational efficiency and productivity</p>
+                            </div>
+                            <div class="impact-item">
+                                <div class="impact-icon">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                                <p class="impact-text">Reduced operational costs through process automation</p>
+                            </div>
+                            <div class="impact-item">
+                                <div class="impact-icon">
+                                    <i class="fas fa-user-check"></i>
+                                </div>
+                                <p class="impact-text">Improved decision-making with real-time data insights</p>
+                            </div>
+                            <div class="impact-item">
+                                <div class="impact-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <p class="impact-text">Enhanced data security and regulatory compliance</p>
+                            </div>
+                            <div class="impact-item">
+                                <div class="impact-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <p class="impact-text">Faster response to market changes and customer needs</p>
+                            </div>
+                            <div class="impact-item">
+                                <div class="impact-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <p class="impact-text">Competitive advantage through streamlined operations</p>
+                            </div>
                         </div>
-                        <h3 class="tech-title">Backend</h3>
-                        <ul class="tech-list">
-                            <li>Java, .NET, Python</li>
-                            <li>Node.js, PHP</li>
-                            <li>SQL Server, MySQL</li>
-                            <li>Oracle, PostgreSQL</li>
-                        </ul>
                     </div>
-                    
-                    <div class="tech-category">
-                        <div class="tech-icon">
-                            <i class="fas fa-desktop"></i>
+                </div>
+
+                <div class="cta-container">
+                    <h2 class="cta-title">Ready to Streamline Your Business Operations?</h2>
+                    <p class="cta-description">Let's build an ERP solution that integrates your departments, automates processes, and delivers actionable insights. Contact us for a free consultation and discover how our ERP expertise can transform your business.</p>
+                    <a href="contact.html" class="cta-button-large">Schedule a Free Consultation</a>
+                </div>
+
+                <div class="faq-section">
+                    <h2 class="faq-title">Frequently Asked Questions</h2>
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                What is ERP and how can it benefit my business?
+                                <span class="faq-toggle fas fa-chevron-down"></span>
+                            </div>
+                            <p class="faq-answer" style="display:none;">ERP (Enterprise Resource Planning) is a software system that integrates and manages core business processes such as finance, HR, manufacturing, supply chain, services, procurement, and others. Benefits include improved efficiency, better data visibility, reduced operational costs, enhanced collaboration, and more informed decision-making.</p>
                         </div>
-                        <h3 class="tech-title">Frontend</h3>
-                        <ul class="tech-list">
-                            <li>React, Angular</li>
-                            <li>Vue.js, TypeScript</li>
-                            <li>HTML5, CSS3</li>
-                            <li>Bootstrap, Material UI</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="tech-category">
-                        <div class="tech-icon">
-                            <i class="fas fa-cloud"></i>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                How long does it take to implement an ERP system?
+                                <span class="faq-toggle fas fa-chevron-down"></span>
+                            </div>
+                            <p class="faq-answer" style="display:none;">Implementation timelines vary based on the complexity of your business processes, the number of modules required, and the level of customization needed. Typically, ERP implementations can range from 3-6 months for small to medium businesses to 12-18 months for large enterprises with complex requirements.</p>
                         </div>
-                        <h3 class="tech-title">Cloud & Infrastructure</h3>
-                        <ul class="tech-list">
-                            <li>AWS, Azure, Google Cloud</li>
-                            <li>Docker, Kubernetes</li>
-                            <li>CI/CD Pipelines</li>
-                            <li>Microservices Architecture</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="tech-category">
-                        <div class="tech-icon">
-                            <i class="fas fa-shield-alt"></i>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                Can ERP be customized to fit our specific business needs?
+                                <span class="faq-toggle fas fa-chevron-down"></span>
+                            </div>
+                            <p class="faq-answer" style="display:none;">Yes, our ERP solutions are highly customizable. We work closely with you to understand your unique business processes and tailor the system to match your specific requirements, workflows, and industry needs.</p>
                         </div>
-                        <h3 class="tech-title">Security</h3>
-                        <ul class="tech-list">
-                            <li>OAuth 2.0, JWT</li>
-                            <li>SSL/TLS Encryption</li>
-                            <li>Role-Based Access Control</li>
-                            <li>Data Encryption at Rest</li>
-                        </ul>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                What kind of training and support do you provide?
+                                <span class="faq-toggle fas fa-chevron-down"></span>
+                            </div>
+                            <p class="faq-answer" style="display:none;">We provide comprehensive training for your team during implementation and offer ongoing technical support. This includes user training sessions, administrator training, documentation, and 24/7 technical support for any issues that may arise.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                Can ERP integrate with our existing systems?
+                                <span class="faq-toggle fas fa-chevron-down"></span>
+                            </div>
+                            <p class="faq-answer" style="display:none;">Yes, our ERP solutions are designed to integrate with your existing systems such as CRM, HRMS, e-commerce platforms, and other business applications through APIs and custom integration solutions.</p>
+                        </div>
                     </div>
                 </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const faqItems = document.querySelectorAll('.faq-item');
+                        faqItems.forEach(item => {
+                            const question = item.querySelector('.faq-question');
+                            const answer = item.querySelector('.faq-answer');
+                            question.addEventListener('click', () => {
+                                const isActive = item.classList.contains('active');
+                                // Hide all answers
+                                faqItems.forEach(i => {
+                                    i.classList.remove('active');
+                                    i.querySelector('.faq-answer').style.display = 'none';
+                                });
+                                // Toggle current
+                                if (!isActive) {
+                                    item.classList.add('active');
+                                    answer.style.display = 'block';
+                                } else {
+                                    item.classList.remove('active');
+                                    answer.style.display = 'none';
+                                }
+                            });
+                        });
+                    });
+                </script>
             </div>
-        </div>
-    </section>
-    
-    <!-- FAQ Section -->
-    <section class="section-padding faq-section">
-        <div class="container">
-            <h2 class="section-title">ERP <span>FAQs</span></h2>
-            <p class="section-subtitle">Find answers to common questions about our ERP solutions</p>
-            
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What is ERP and how can it benefit my business?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>ERP (Enterprise Resource Planning) is a software system that integrates and manages core business processes such as finance, HR, manufacturing, supply chain, services, procurement, and others. Benefits include improved efficiency, better data visibility, reduced operational costs, enhanced collaboration, and more informed decision-making.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>How long does it take to implement an ERP system?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Implementation timelines vary based on the complexity of your business processes, the number of modules required, and the level of customization needed. Typically, ERP implementations can range from 3-6 months for small to medium businesses to 12-18 months for large enterprises with complex requirements.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Can ERP be customized to fit our specific business needs?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes, our ERP solutions are highly customizable. We work closely with you to understand your unique business processes and tailor the system to match your specific requirements, workflows, and industry needs.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What kind of training and support do you provide?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We provide comprehensive training for your team during implementation and offer ongoing technical support. This includes user training sessions, administrator training, documentation, and 24/7 technical support for any issues that may arise.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Can ERP integrate with our existing systems?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes, our ERP solutions are designed to integrate with your existing systems such as CRM, HRMS, e-commerce platforms, and other business applications through APIs and custom integration solutions.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- CTA Section -->
-    <section class="section-padding" id="contact">
-        <div class="container">
-            <div class="cta-section">
-                <h2 class="cta-title">Ready to Streamline Your Business Operations?</h2>
-                <p class="cta-subtitle">Let's build an ERP solution that integrates your departments, automates processes, and delivers actionable insights. Contact us for a free consultation and discover how our ERP expertise can transform your business.</p>
-                <a href="contact.html" class="cta-button-large">Schedule a Free Consultation</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
+        </section>
+    </main>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-container">
@@ -1466,7 +1555,7 @@
                 <div class="footer-col">
                     <h3>Solutions</h3>
                     <div class="footer-links">
-    
+
                         <!-- Next-Gen Tech Dropdown -->
                         <div class="footer-dropdown">
                             <div class="footer-dropdown-header">
@@ -1479,7 +1568,7 @@
                                 <a href="CloudSolutions.html"><i class="fas fa-chevron-right"></i> Cloud Solutions</a>
                             </div>
                         </div>
-    
+
                         <!-- AI Services Dropdown -->
                         <div class="footer-dropdown">
                             <div class="footer-dropdown-header">
@@ -1500,7 +1589,7 @@
                                     Automation</a>
                             </div>
                         </div>
-    
+
                         <!-- Core Development Dropdown -->
                         <div class="footer-dropdown">
                             <div class="footer-dropdown-header">
@@ -1514,7 +1603,7 @@
                                     Development</a>
                             </div>
                         </div>
-    
+
                         <!-- Design & Experience Dropdown -->
                         <div class="footer-dropdown">
                             <div class="footer-dropdown-header">
@@ -1527,7 +1616,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Insights Section -->
                 <div class="footer-col">
                     <h3>Insights</h3>
@@ -1541,7 +1630,7 @@
                         <a href="HowTos.html"><i class="fas fa-chevron-right"></i> How-tos</a>
                     </div>
                 </div>
-    
+
                 <!-- Company Section -->
                 <div class="footer-col">
                     <h3>Company</h3>
@@ -1552,17 +1641,15 @@
                         <a href="aboutus.html" id="aboutLink">
                             <i class="fas fa-chevron-right"></i> Mission & Vision
                         </a>
-    
-    
+
+
                         <a href="aboutus.html" id="OurJou"><i class="fas fa-chevron-right"></i> Our Journey</a>
                         <a href="aboutus.html" id="OurCore"><i class="fas fa-chevron-right"></i> Core Values</a>
                         <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
                         <a href="Leadership.html"><i class="fas fa-chevron-right"></i> Leadership</a>
                     </div>
                 </div>
-    
-    
-    
+
                 <!-- Quick Links Section -->
                 <div class="footer-col">
                     <h3>Quick Links</h3>
@@ -1576,37 +1663,38 @@
                         <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a>
                     </div>
                 </div>
-    
+
                 <!-- Newsletter Section -->
                 <!-- <div class="footer-col">
-            <h3>Newsletter</h3>
-            <p>Subscribe to our newsletter to receive updates on our latest services, technology insights, and industry trends.</p>
-            <div class="form-group" id="newsletter-group">
-              <input type="email" class="form-control" id="newsletter-email" placeholder="Your Email" required>
-              <button class="submit-btn" id="newsletter-btn" type="button">Subscribe</button>
+        <h3>Newsletter</h3>
+        <p>Subscribe to our newsletter to receive updates on our latest services, technology insights, and industry trends.</p>
+        <div class="form-group" id="newsletter-group">
+          <input type="email" class="form-control" id="newsletter-email" placeholder="Your Email" required>
+          <button class="submit-btn" id="newsletter-btn" type="button">Subscribe</button>
+        </div>
+        <div id="newsletter-thankyou" style="display:none; color: #27ae60; margin-top:10px;">
+          Thank you for subscribing!
+        </div>
+      </div> -->
             </div>
-            <div id="newsletter-thankyou" style="display:none; color: #27ae60; margin-top:10px;">
-              Thank you for subscribing!
-            </div>
-          </div> -->
-            </div>
-    
+
             <div class="footer-bottom">
                 <p>&copy; 2024 Zonixtec. All Rights Reserved. | Designed with by Zonixtec Team</p>
             </div>
         </div>
     </footer>
-    
+
+
     <style>
         .footer-dropdown-content {
             display: none;
             margin-left: 15px;
         }
-    
+
         .footer-dropdown.open .footer-dropdown-content {
             display: block;
         }
-    
+
         .footer-dropdown-header {
             display: flex;
             color: var(--gray);
@@ -1615,11 +1703,13 @@
             cursor: pointer;
             margin: 5px 0;
         }
-    
+
         .footer-dropdown-header:hover {
             color: var(--secondary);
         }
     </style>
+
+
     <script>
         document.querySelectorAll('.footer-dropdown-header').forEach(header => {
             header.addEventListener('click', () => {
@@ -1629,66 +1719,16 @@
         });
     </script>
 
+
+
     <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
             document.querySelector('.nav-links').classList.toggle('active');
         });
-        
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-        
-        // FAQ functionality
-        const faqItems = document.querySelectorAll('.faq-item');
-        
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-            
-            question.addEventListener('click', () => {
-                // Close all other FAQ items
-                faqItems.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
-                    }
-                });
-                
-                // Toggle current FAQ item
-                item.classList.toggle('active');
-            });
-        });
-        
-        // Floating cards animation on scroll
-        const floatingCards = document.querySelectorAll('.floating-card');
-        
-        function checkScroll() {
-            floatingCards.forEach(card => {
-                const cardTop = card.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                
-                if (cardTop < windowHeight * 0.8) {
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }
-            });
-        }
-        
-        // Initial state for animation
-        floatingCards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-        });
-        
-        window.addEventListener('scroll', checkScroll);
-        window.addEventListener('load', checkScroll);
+
     </script>
 
     <script src="Customscroll.js"></script>
 </body>
+
 </html>

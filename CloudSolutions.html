@@ -473,58 +473,60 @@
         }
         
         /* Technology Stack */
-        .tech-stack {
-            margin: 80px 0;
+        /* Technology Stack */
+        .tech-section {
+            background: rgba(10, 10, 26, 0.7);
+            border-radius: 10px;
+            margin-top: 80px;
+            padding: 60px;
+            margin-bottom: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .tech-section h2 {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            color: var(--secondary);
+            margin-bottom: 40px;
+        }
+        
+         .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 58px;
+        }
+
+        .tech-category {
             text-align: center;
         }
         
-        .tech-icons {
+        .tech-category h3 {
+            color: var(--light);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .tech-items {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-top: 50px;
+            flex-direction: column;
+            gap: 10px;
         }
         
-        .tech-icon {
-            width: 100px;
-            height: 100px;
-            background: rgba(15, 23, 42, 0.7);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: var(--secondary);
-            transition: all 0.4s ease;
-            transform-style: preserve-3d;
-            animation: floatIcon 6s infinite ease-in-out;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        .tech-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 15px;
+            border-radius: 8px;
+            color: var(--gray);
+            transition: all 0.3s ease;
         }
         
-        .tech-icon:nth-child(1) { animation-delay: 0s; }
-        .tech-icon:nth-child(2) { animation-delay: 1s; }
-        .tech-icon:nth-child(3) { animation-delay: 2s; }
-        .tech-icon:nth-child(4) { animation-delay: 3s; }
-        .tech-icon:nth-child(5) { animation-delay: 4s; }
-        .tech-icon:nth-child(6) { animation-delay: 0s; }
-        .tech-icon:nth-child(7) { animation-delay: 1s; }
-        .tech-icon:nth-child(8) { animation-delay: 2s; }
-        
-        .tech-icon:hover {
-            transform: translateY(-15px) rotateY(180deg) scale(1.1);
-            background: var(--tech-gradient);
-            color: white;
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.5);
+        .tech-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--light);
+            transform: translateY(-3px);
         }
         
-        .tech-name {
-            margin-top: 15px;
-            font-weight: 500;
-            color: #cbd5e1;
-        }
-
-
 
         /* ===== Dropdown Styles ===== */
         .dropdown {
@@ -806,26 +808,47 @@
         .challenges-section {
             margin-bottom: 80px;
         }
-        
+
+        .challenges-container {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 20px;
+            padding: 50px;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+        }
+
+        .challenges-title {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            background: var(--tech-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
         .challenges-list {
-            max-width: 800px;
-            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
-        
+
         .challenge-item {
-            background: rgba(15, 23, 42, 0.6);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-left: 4px solid var(--primary);
             display: flex;
-            align-items: center;
+            align-items: flex-start;
+            margin-bottom: 15px;
         }
-        
+
         .challenge-icon {
             color: #ef4444;
             margin-right: 15px;
             font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .challenge-text {
+            color: #94a3b8;
+            line-height: 1.7;
         }
         
         /* Impact Section */
@@ -1485,62 +1508,50 @@
     </section>
     
     <!-- Challenges Section -->
-    <section class="challenges-section">
-        <div class="container">
-            <h2 class="section-title">Challenges Without Cloud Solutions</h2>
+    <!-- Challenges Section -->
+<section class="section-padding challenges-section">
+    <div class="container">
+        <div class="challenges-container">
+            <h2 class="challenges-title">Challenges Without Cloud Solutions</h2>
             <div class="challenges-list">
                 <div class="challenge-item">
                     <div class="challenge-icon">
-                        <i class="fas fa-exclamation-triangle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
                     </div>
-                    <div>
-                        <h3>High IT infrastructure costs</h3>
-                        <p>Significant capital expenditure on hardware, maintenance, and upgrades without the flexibility of cloud pricing models.</p>
-                    </div>
+                    <p class="challenge-text">Significant capital expenditure on hardware, maintenance, and upgrades without the flexibility of cloud pricing models</p>
                 </div>
                 
                 <div class="challenge-item">
                     <div class="challenge-icon">
-                        <i class="fas fa-exclamation-triangle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
                     </div>
-                    <div>
-                        <h3>Lack of agility and flexibility</h3>
-                        <p>Inability to quickly scale resources up or down based on changing business demands and market conditions.</p>
-                    </div>
+                    <p class="challenge-text">Inability to quickly scale resources up or down based on changing business demands and market conditions</p>
                 </div>
                 
                 <div class="challenge-item">
                     <div class="challenge-icon">
-                        <i class="fas fa-exclamation-triangle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
                     </div>
-                    <div>
-                        <h3>Data loss risks without proper backup</h3>
-                        <p>Vulnerability to data loss from hardware failures, disasters, or security breaches without robust backup solutions.</p>
-                    </div>
+                    <p class="challenge-text">Vulnerability to data loss from hardware failures, disasters, or security breaches without robust backup solutions</p>
                 </div>
                 
                 <div class="challenge-item">
                     <div class="challenge-icon">
-                        <i class="fas fa-exclamation-triangle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
                     </div>
-                    <div>
-                        <h3>Limited scalability for growing businesses</h3>
-                        <p>Restricted growth potential due to infrastructure limitations and lengthy procurement processes for new hardware.</p>
-                    </div>
+                    <p class="challenge-text">Restricted growth potential due to infrastructure limitations and lengthy procurement processes for new hardware</p>
                 </div>
                 
                 <div class="challenge-item">
                     <div class="challenge-icon">
-                        <i class="fas fa-exclamation-triangle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
                     </div>
-                    <div>
-                        <h3>Slower application delivery cycles</h3>
-                        <p>Extended development and deployment timelines due to manual processes and infrastructure constraints.</p>
-                    </div>
+                    <p class="challenge-text">Extended development and deployment timelines due to manual processes and infrastructure constraints</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     
     <!-- What Zonixtec Brings Section -->
     <section class="cta-container">
@@ -1597,52 +1608,78 @@
     </section>
     
     <!-- Technology Stack Section -->
-    <section class="tech-stack">
-        <div class="container">
-            <h2 class="tech-title">Our Technology Stack</h2>
-            <div class="tech-icons">
-                <div class="tech-item">
-                    <i class="fab fa-aws tech-icon"></i>
-                    <div class="tech-name">AWS</div>
-                </div>
-                
-                <div class="tech-item">
-                    <i class="fab fa-microsoft tech-icon"></i>
-                    <div class="tech-name">Azure</div>
-                </div>
-                
-                <div class="tech-item">
-                    <i class="fab fa-google tech-icon"></i>
-                    <div class="tech-name">Google Cloud</div>
-                </div>
-                
-                <div class="tech-item">
-                    <i class="fas fa-database tech-icon"></i>
-                    <div class="tech-name">Oracle Cloud</div>
-                </div>
-                
-                <div class="tech-item">
-                    <i class="fab fa-docker tech-icon"></i>
-                    <div class="tech-name">Docker</div>
-                </div>
-                
-                <div class="tech-item">
-                    <i class="fas fa-cube tech-icon"></i>
-                    <div class="tech-name">Kubernetes</div>
-                </div>
-                
-                <div class="tech-item">
-                    <i class="fas fa-tools tech-icon"></i>
-                    <div class="tech-name">Terraform</div>
-                </div>
-                
-                <div class="tech-item">
-                    <i class="fab fa-jenkins tech-icon"></i>
-                    <div class="tech-name">Jenkins</div>
-                </div>
+    <!-- Technology Stack -->
+<div class="tech-section">
+    <h2>Our Technology Stack</h2>
+
+    <div class="tech-grid">
+        <div class="tech-category">
+            <h3>Cloud Platforms</h3>
+            <div class="tech-items">
+                <div class="tech-item">Amazon Web Services (AWS)</div>
+                <div class="tech-item">Microsoft Azure</div>
+                <div class="tech-item">Google Cloud Platform</div>
+                <div class="tech-item">Oracle Cloud</div>
+                <div class="tech-item">IBM Cloud</div>
             </div>
         </div>
-    </section>
+        
+        <div class="tech-category">
+            <h3>Containerization</h3>
+            <div class="tech-items">
+                <div class="tech-item">Docker</div>
+                <div class="tech-item">Kubernetes</div>
+                <div class="tech-item">Amazon ECS</div>
+                <div class="tech-item">Azure Kubernetes Service</div>
+                <div class="tech-item">Google Kubernetes Engine</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Infrastructure as Code</h3>
+            <div class="tech-items">
+                <div class="tech-item">Terraform</div>
+                <div class="tech-item">AWS CloudFormation</div>
+                <div class="tech-item">Azure Resource Manager</div>
+                <div class="tech-item">Ansible</div>
+                <div class="tech-item">Pulumi</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>CI/CD & DevOps</h3>
+            <div class="tech-items">
+                <div class="tech-item">Jenkins</div>
+                <div class="tech-item">GitLab CI/CD</div>
+                <div class="tech-item">GitHub Actions</div>
+                <div class="tech-item">Azure DevOps</div>
+                <div class="tech-item">AWS CodePipeline</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Monitoring & Security</h3>
+            <div class="tech-items">
+                <div class="tech-item">Prometheus</div>
+                <div class="tech-item">Grafana</div>
+                <div class="tech-item">AWS CloudWatch</div>
+                <div class="tech-item">Azure Monitor</div>
+                <div class="tech-item">Datadog</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Serverless & Databases</h3>
+            <div class="tech-items">
+                <div class="tech-item">AWS Lambda</div>
+                <div class="tech-item">Azure Functions</div>
+                <div class="tech-item">Amazon RDS</div>
+                <div class="tech-item">Azure SQL Database</div>
+                <div class="tech-item">Google Cloud SQL</div>
+            </div>
+        </div>
+    </div>
+</div>
     
     <!-- Impact Section -->
     <section class="impact-section">

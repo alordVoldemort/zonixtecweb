@@ -14,7 +14,7 @@
         :root {
             --primary: #2563eb;
             --primary-dark: #1d4ed8;
-            --secondary: #06b6d4;
+            --secondary: #00f2ff;
             --dark: #0f172a;
             --light: #f8fafc;
             --gray: #64748b;
@@ -344,55 +344,58 @@
             max-width: 600px;
         }
         
-        .tech-stack {
-            margin-bottom: 80px;
-            position: relative;
+        /* Technology Stack Section */
+        .tech-section {
+            background: rgba(10, 10, 26, 0.7);
+            border-radius: 10px;
+            padding: 60px;
+            margin-bottom: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         
-        .tech-title {
+        .tech-section h2 {
             text-align: center;
+            color: var(--secondary);
+            margin-bottom: 40px;
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
-            margin-bottom: 50px;
-            background: var(--tech-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
         
         .tech-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .tech-category {
+            text-align: center;
+        }
+        
+        .tech-category h3 {
+            color: var(--light);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .tech-items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
         
         .tech-item {
-            background: rgba(15, 23, 42, 0.6);
-            border-radius: 10px;
-            padding: 25px 15px;
-            text-align: center;
-            border: 1px solid rgba(100, 116, 139, 0.2);
-            transition: transform 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 15px;
+            border-radius: 8px;
+            color: var(--gray);
+            transition: all 0.3s ease;
         }
         
         .tech-item:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--light);
+            transform: translateY(-3px);
         }
-        
-        .tech-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: var(--secondary);
-        }
-        
-        .tech-name {
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-
-
-
 
 
           /* ===== Dropdown Styles ===== */
@@ -580,59 +583,62 @@
         }
         
         /* Process Section */
+        /* Process Section */
         .process-section {
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
         
-        .process-container {
+        .process-steps {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 50px;
+        }
+        
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            z-index: 1;
         }
         
         .process-step {
-            background: rgba(15, 23, 42, 0.6);
-            border-radius: 15px;
-            padding: 30px;
-            width: 300px;
             text-align: center;
-            border: 1px solid rgba(100, 116, 139, 0.2);
-            transition: all 0.3s ease;
             position: relative;
-        }
-        
-        .process-step:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(37, 99, 235, 0.3);
+            z-index: 2;
+            flex: 1;
         }
         
         .step-number {
-            width: 50px;
-            height: 50px;
-            background: var(--tech-gradient);
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.8rem;
             font-weight: 700;
+            color: var(--dark);
+            position: relative;
         }
         
         .step-title {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--light);
+            margin-bottom: 10px;
         }
         
         .step-description {
-            color: #94a3b8;
-            line-height: 1.7;
+            color: var(--gray);
+            font-size: 0.95rem;
         }
-        
+
         /* Challenges Section */
         .challenges-section {
             margin-bottom: 80px;
@@ -1361,125 +1367,114 @@
             </div>
             
             <!-- Process Section -->
-            <div class="process-section">
-                <h2 class="section-title">Our Development Process</h2>
-                <div class="process-container">
-                    <div class="process-step">
-                        <div class="step-number">1</div>
-                        <h3 class="step-title">Discovery & Strategy</h3>
-                        <p class="step-description">We analyze your requirements, target audience, and business goals to create a comprehensive development strategy.</p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">2</div>
-                        <h3 class="step-title">UI/UX Design</h3>
-                        <p class="step-description">Our design team creates intuitive, engaging interfaces that prioritize user experience and drive engagement.</p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">3</div>
-                        <h3 class="step-title">Development</h3>
-                        <p class="step-description">We build your application using the latest technologies and best practices for performance and scalability.</p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">4</div>
-                        <h3 class="step-title">Testing & QA</h3>
-                        <p class="step-description">Rigorous testing across devices and platforms ensures your app delivers a flawless user experience.</p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">5</div>
-                        <h3 class="step-title">Deployment</h3>
-                        <p class="step-description">We handle app store submission and deployment, ensuring your app reaches your audience seamlessly.</p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">6</div>
-                        <h3 class="step-title">Support & Maintenance</h3>
-                        <p class="step-description">Ongoing support, updates, and maintenance keep your app performing optimally and adapting to changes.</p>
-                    </div>
-                </div>
-            </div>
+           <div class="process-section">
+    <h2 class="section-title">Our Development <span>Process</span></h2>
+    
+    <div class="process-steps">
+        <div class="process-step">
+            <div class="step-number">1</div>
+            <h3 class="step-title">Discovery & Research</h3>
+            <p class="step-description">Understand business goals, audience, and design preferences</p>
+        </div>
+        
+        <div class="process-step">
+            <div class="step-number">2</div>
+            <h3 class="step-title">Wireframing & UI Design</h3>
+            <p class="step-description">Create visual layouts and design prototypes</p>
+        </div>
+        
+        <div class="process-step">
+            <div class="step-number">3</div>
+            <h3 class="step-title">Development</h3>
+            <p class="step-description">Convert designs into high-performing, responsive websites</p>
+        </div>
+        
+        <div class="process-step">
+            <div class="step-number">4</div>
+            <h3 class="step-title">Testing & QA</h3>
+            <p class="step-description">Ensure flawless performance and cross-browser compatibility</p>
+        </div>
+        
+        <div class="process-step">
+            <div class="step-number">5</div>
+            <h3 class="step-title">Deployment & Maintenance</h3>
+            <p class="step-description">Launch with confidence and provide continuous improvements</p>
+        </div>
+    </div>
+</div>
             
             <!-- Technology Stack Section -->
-            <div class="tech-stack">
-                <h2 class="tech-title">Our Technology Stack</h2>
-                <div class="tech-grid">
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fab fa-apple"></i>
-                        </div>
-                        <div class="tech-name">iOS</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fab fa-android"></i>
-                        </div>
-                        <div class="tech-name">Android</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fab fa-react"></i>
-                        </div>
-                        <div class="tech-name">React Native</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <div class="tech-icon">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" width="40" height="40">
-</div>
-
-                        </div>
-                        <div class="tech-name">Flutter</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fab fa-js"></i>
-                        </div>
-                        <div class="tech-name">JavaScript</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fab fa-swift"></i>
-                        </div>
-                        <div class="tech-name">Swift</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fab fa-java"></i>
-                        </div>
-                        <div class="tech-name">Java</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fab fa-aws"></i>
-                        </div>
-                        <div class="tech-name">AWS</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fas fa-fire"></i>
-                        </div>
-                        <div class="tech-name">Firebase</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <div class="tech-name">SQL & NoSQL</div>
-                    </div>
-                </div>
+            <!-- Technology Stack -->
+<div class="tech-section">
+    <h2>Our Technology Stack</h2>
+    <div class="tech-grid">
+        <div class="tech-category">
+            <h3>Native Development</h3>
+            <div class="tech-items">
+                <div class="tech-item">iOS (Swift)</div>
+                <div class="tech-item">Android (Kotlin)</div>
+                <div class="tech-item">Java</div>
+                <div class="tech-item">Objective-C</div>
+                <div class="tech-item">Xcode</div>
             </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Cross-Platform</h3>
+            <div class="tech-items">
+                <div class="tech-item">React Native</div>
+                <div class="tech-item">Flutter</div>
+                <div class="tech-item">Ionic</div>
+                <div class="tech-item">Xamarin</div>
+                <div class="tech-item">PhoneGap</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Programming Languages</h3>
+            <div class="tech-items">
+                <div class="tech-item">JavaScript</div>
+                <div class="tech-item">TypeScript</div>
+                <div class="tech-item">Dart</div>
+                <div class="tech-item">Kotlin</div>
+                <div class="tech-item">Swift</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Backend & APIs</h3>
+            <div class="tech-items">
+                <div class="tech-item">Node.js</div>
+                <div class="tech-item">Python</div>
+                <div class="tech-item">REST APIs</div>
+                <div class="tech-item">GraphQL</div>
+                <div class="tech-item">WebSocket</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Cloud & Databases</h3>
+            <div class="tech-items">
+                <div class="tech-item">Firebase</div>
+                <div class="tech-item">AWS Amplify</div>
+                <div class="tech-item">MongoDB</div>
+                <div class="tech-item">PostgreSQL</div>
+                <div class="tech-item">SQLite</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>DevOps & Tools</h3>
+            <div class="tech-items">
+                <div class="tech-item">Docker</div>
+                <div class="tech-item">Jenkins</div>
+                <div class="tech-item">Fastlane</div>
+                <div class="tech-item">Git</div>
+                <div class="tech-item">App Store Connect</div>
+            </div>
+        </div>
+    </div>
+</div>
             
             <!-- Challenges Section -->
             <div class="challenges-section">

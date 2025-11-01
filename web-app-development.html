@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web App Development Services | Zonixtec</title>
-    <meta name="description" content="Build high-performance, scalable, and secure web applications with Zonixtec's Web App Development services—crafted to automate workflows, enhance user experience, and drive digital growth.">
+    <meta name="description"
+        content="Build high-performance, scalable, and secure web applications with Zonixtec's Web App Development services—crafted to automate workflows, enhance user experience, and drive digital growth.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" href="./Assets/WhatsApp Image 2025-10-15 at 15.47.06.jpeg" sizes="32x32" type="image/png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-             --primary: #0066ff;
+            --primary: #0066ff;
             --primary-dark: #0044cc;
             --secondary: #00f2ff;
             --dark: #0f172a;
@@ -65,10 +69,14 @@
         }
 
         .section-title {
-            font-family: 'Orbitron', sans-serif;
             font-size: 2.5rem;
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title span {
+            color: var(--secondary);
             position: relative;
         }
 
@@ -142,7 +150,8 @@
             color: var(--light);
         }
 
-        .nav-links a:hover, .nav-links a.active {
+        .nav-links a:hover,
+        .nav-links a.active {
             color: var(--secondary);
         }
 
@@ -214,9 +223,13 @@
         }
 
         .hero-subtitle {
+            text-align: center;
             font-size: 1.2rem;
-            color: var(--secondary);
-            margin-bottom: 30px;
+            color: var(--gray);
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .hero-description {
@@ -227,6 +240,18 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        /* Add these font declarations at the top of your CSS */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
         }
 
         /* Overview Section */
@@ -377,7 +402,8 @@
             transform: rotateY(180deg);
         }
 
-        .flashcard-front, .flashcard-back {
+        .flashcard-front,
+        .flashcard-back {
             position: absolute;
             width: 100%;
             height: 100%;
@@ -509,98 +535,114 @@
 
         .process-steps {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
+            justify-content: space-between;
+            position: relative;
             margin-top: 50px;
         }
 
-        .process-step {
-            background: rgba(15, 23, 42, 0.6);
-            border-radius: 15px;
-            padding: 30px;
-            width: 250px;
-            text-align: center;
-            border: 1px solid rgba(100, 116, 139, 0.2);
-            position: relative;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            z-index: 1;
         }
 
-        .process-step:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(37, 99, 235, 0.3);
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            flex: 1;
+            padding: 0 15px;
         }
 
         .step-number {
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40px;
-            height: 40px;
-            background: var(--tech-gradient);
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
-            font-size: 1.2rem;
-            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.4);
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark);
+            position: relative;
         }
 
         .step-title {
-            font-size: 1.3rem;
-            margin: 20px 0 15px;
+            font-size: 1.2rem;
+            color: var(--light);
+            margin-bottom: 10px;
             font-weight: 600;
         }
 
-        .step-desc {
-            color: #94a3b8;
-            line-height: 1.7;
+        .step-description {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
 
-        /* Technology Stack Section */
-        .tech-stack-section {
-            margin-bottom: 80px;
+
+
+
+        /* Technology Stack Section - Exact match to Web Design page */
+        .tech-section {
+            background: rgba(10, 10, 26, 0.7);
+            border-radius: 10px;
+            padding: 60px;
+            margin-bottom: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .tech-categories {
+        .tech-section h2 {
+            text-align: center;
+            color: var(--secondary);
+            margin-bottom: 40px;
+        }
+
+        .tech-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
         }
 
         .tech-category {
-            background: rgba(15, 23, 42, 0.6);
-            border-radius: 15px;
-            padding: 25px;
-            border: 1px solid rgba(100, 116, 139, 0.2);
-        }
-
-        .tech-category-title {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            font-weight: 600;
-            color: var(--secondary);
             text-align: center;
         }
 
-        .tech-list {
+        .tech-category h3 {
+            color: var(--light);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .tech-items {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             gap: 10px;
-            justify-content: center;
         }
 
         .tech-item {
-            background: rgba(37, 99, 235, 0.1);
-            color: var(--secondary);
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            border: 1px solid rgba(37, 99, 235, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 15px;
+            border-radius: 8px;
+            color: var(--gray);
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
         }
+
+        .tech-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--light);
+            transform: translateY(-3px);
+        }
+
 
         /* FAQ Section */
         .faq-section {
@@ -759,7 +801,7 @@
             color: #94a3b8;
         }
 
-         /* ===== Dropdown Styles ===== */
+        /* ===== Dropdown Styles ===== */
         .dropdown {
             position: relative;
             display: inline-block;
@@ -823,29 +865,32 @@
         }
 
         .dropdown-scroll {
-    max-height: 300px; /* Slightly less than parent to account for padding */
-    overflow-y: auto; /* Enable vertical scrolling */
-    padding: 8px 0; /* Add padding to scroll container */
-}
+            max-height: 300px;
+            /* Slightly less than parent to account for padding */
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+            padding: 8px 0;
+            /* Add padding to scroll container */
+        }
 
-/* Custom scrollbar styling */
-.dropdown-scroll::-webkit-scrollbar {
-    width: 6px;
-}
+        /* Custom scrollbar styling */
+        .dropdown-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
 
-.dropdown-scroll::-webkit-scrollbar-track {
-    background: rgba(15, 23, 42, 0.5);
-    border-radius: 3px;
-}
+        .dropdown-scroll::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 3px;
+        }
 
-.dropdown-scroll::-webkit-scrollbar-thumb {
-    background: var(--secondary);
-    border-radius: 3px;
-}
+        .dropdown-scroll::-webkit-scrollbar-thumb {
+            background: var(--secondary);
+            border-radius: 3px;
+        }
 
-.dropdown-scroll::-webkit-scrollbar-thumb:hover {
-    background: var(--primary);
-}
+        .dropdown-scroll::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
 
 
         .submit-btn {
@@ -898,6 +943,7 @@
                 transform: scaleX(0);
                 opacity: 0;
             }
+
             to {
                 transform: scaleX(1);
                 opacity: 1;
@@ -913,16 +959,16 @@
             .services-overview {
                 flex-direction: column;
             }
-            
+
             .stats-grid {
                 grid-template-columns: 1fr 1fr;
             }
-            
+
             .process-steps {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .process-step {
                 width: 100%;
                 max-width: 400px;
@@ -933,23 +979,23 @@
             .services-hero-title {
                 font-size: 2.8rem;
             }
-            
+
             .section-title {
                 font-size: 2rem;
             }
-            
+
             .stats-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .cta-section {
                 padding: 40px 20px;
             }
-            
+
             .cta-title {
                 font-size: 2rem;
             }
-            
+
             .nav-links {
                 position: fixed;
                 top: 0;
@@ -967,13 +1013,13 @@
                 transition: right 0.3s ease;
                 z-index: 999;
             }
-            
+
             .nav-links a {
                 width: 100%;
                 padding: 15px 30px;
                 border-bottom: 1px solid rgba(100, 116, 139, 0.1);
             }
-            
+
             .nav-links a.active::after {
                 content: '';
                 position: absolute;
@@ -983,12 +1029,12 @@
                 height: 2px;
                 background-color: var(--secondary);
             }
-            
+
             /* Mobile dropdown styles */
             .dropdown {
                 width: 100%;
             }
-            
+
             .dropdown-content {
                 position: static;
                 background: rgba(15, 23, 42, 0.8);
@@ -1000,25 +1046,25 @@
                 width: 100%;
                 padding: 0;
             }
-            
+
             .dropdown.active .dropdown-content {
                 display: block;
             }
-            
+
             .dropdown-toggle {
                 justify-content: space-between;
             }
-            
+
             .dropdown-content a {
                 padding-left: 50px;
                 font-size: 0.9rem;
             }
-            
+
             .mobile-menu-btn {
                 display: block;
                 z-index: 1000;
             }
-            
+
             .footer-container {
                 grid-template-columns: 1fr;
             }
@@ -1028,12 +1074,13 @@
             .services-hero-title {
                 font-size: 2.2rem;
             }
-            
+
             .cta-title {
                 font-size: 1.8rem;
             }
-            
-            .flashcards-grid, .features-grid {
+
+            .flashcards-grid,
+            .features-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -1106,6 +1153,7 @@
                 opacity: 0;
                 transform: translateY(-8px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1117,7 +1165,7 @@
             .dropdown {
                 width: 100%;
             }
-            
+
             .dropdown-content {
                 position: static;
                 background: rgba(15, 23, 42, 0.9);
@@ -1129,16 +1177,16 @@
                 width: 100%;
                 padding: 8px 0;
             }
-            
+
             .dropdown.active .dropdown-content {
                 display: block;
             }
-            
+
             .dropdown-toggle {
                 justify-content: space-between;
                 padding: 15px 30px;
             }
-            
+
             .dropdown-content a {
                 padding: 12px 40px;
                 font-size: 0.9rem;
@@ -1150,7 +1198,7 @@
             display: none;
             margin-left: 15px;
         }
-        
+
         .footer-dropdown.open .footer-dropdown-content {
             display: block;
         }
@@ -1164,6 +1212,7 @@
         }
     </style>
 </head>
+
 <body>
     <header id="header">
         <div class="container">
@@ -1174,10 +1223,11 @@
                 <div class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="aboutus.html">About</a>
-                    
+
                     <!-- Services Dropdown -->
                     <div class="dropdown">
-                        <a href="Services.html" class="active dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                        <a href="Services.html" class="active dropdown-toggle">Services <i
+                                class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-content">
                             <div class="dropdown-scroll">
                                 <a href="web-design-development.html">Web Design & Development</a>
@@ -1194,7 +1244,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <a href="carrer.html">Career</a>
                     <a href="contact.html">Contact</a>
                     <a href="contact.html" class="cta-buttons">Get Started</a>
@@ -1205,19 +1255,22 @@
             </nav>
         </div>
     </header>
-    
+
     <!-- Web App Development Hero Section -->
     <section class="services-hero">
         <div class="container">
             <div class="services-hero-content">
                 <h1 class="services-hero-title">Web App Development Services</h1>
                 <p class="hero-subtitle">Build Smart. Scale Fast. Perform Better.</p>
-                <p class="hero-description">At Zonixtec, we transform ideas into powerful web applications that empower businesses to scale seamlessly. Our Web App Development services focus on creating interactive, secure, and high-performing applications that deliver exceptional user experiences—whether it's a business automation tool, enterprise platform, or customer-facing app.</p>
+                <p class="hero-description">At Zonixtec, we transform ideas into powerful web applications that empower
+                    businesses to scale seamlessly. Our Web App Development services focus on creating interactive,
+                    secure, and high-performing applications that deliver exceptional user experiences—whether it's a
+                    business automation tool, enterprise platform, or customer-facing app.</p>
                 <a href="contact.html" class="cta-button">Let's Build Your Web App →</a>
             </div>
         </div>
     </section>
-    
+
     <!-- Web App Overview Section -->
     <section class="section-padding">
         <div class="container">
@@ -1225,9 +1278,12 @@
                 <div class="services-intro">
                     <p class="section-subtitle">OUR EXPERTISE</p>
                     <h2>Custom Web Applications for Your Business Needs</h2>
-                    <p>We develop web applications tailored to your business objectives, ensuring performance, reliability, and scalability across every layer. From automating workflows to managing complex data, our solutions are designed to boost efficiency and drive growth.</p>
-                    <p>With expertise in modern frameworks and cloud technologies, we build applications that not only meet today's requirements but are also ready for tomorrow's challenges.</p>
-                    
+                    <p>We develop web applications tailored to your business objectives, ensuring performance,
+                        reliability, and scalability across every layer. From automating workflows to managing complex
+                        data, our solutions are designed to boost efficiency and drive growth.</p>
+                    <p>With expertise in modern frameworks and cloud technologies, we build applications that not only
+                        meet today's requirements but are also ready for tomorrow's challenges.</p>
+
                     <div class="stats-grid">
                         <div class="stat-card">
                             <div class="stat-value">100%</div>
@@ -1245,7 +1301,8 @@
                 </div>
                 <div class="services-image">
                     <!-- Image with fallback placeholder -->
-                    <img src="./uploads/web-app-development.jpg" alt="Web App Development" onerror="this.style.display='none'; document.getElementById('image-placeholder').style.display='flex';">
+                    <img src="../uploads/web-app-development.jpg" alt="Web App Development"
+                        onerror="this.style.display='none'; document.getElementById('image-placeholder').style.display='flex';">
                     <div class="image-placeholder" id="image-placeholder" style="display:none;">
                         <i class="fas fa-code"></i>
                         <p>Web App Development</p>
@@ -1254,7 +1311,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Key Offerings Section -->
     <section class="section-padding flashcards-section">
         <div class="container">
@@ -1271,12 +1328,14 @@
                         </div>
                         <div class="flashcard-back">
                             <h3 class="service-title">E-Commerce Web Apps</h3>
-                            <p class="service-desc">Build secure, scalable, and feature-rich e-commerce platforms with integrated payment gateways, inventory management, and personalized shopping experiences.</p>
+                            <p class="service-desc">Build secure, scalable, and feature-rich e-commerce platforms with
+                                integrated payment gateways, inventory management, and personalized shopping
+                                experiences.</p>
                             <a href="contact.html" class="service-cta">Get Started</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Service 2 -->
                 <div class="flashcard">
                     <div class="flashcard-inner">
@@ -1288,12 +1347,13 @@
                         </div>
                         <div class="flashcard-back">
                             <h3 class="service-title">Business Intelligence Dashboards</h3>
-                            <p class="service-desc">Transform raw data into actionable insights with interactive dashboards that help you make informed business decisions in real-time.</p>
+                            <p class="service-desc">Transform raw data into actionable insights with interactive
+                                dashboards that help you make informed business decisions in real-time.</p>
                             <a href="contact.html" class="service-cta">Get Started</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Service 3 -->
                 <div class="flashcard">
                     <div class="flashcard-inner">
@@ -1305,12 +1365,13 @@
                         </div>
                         <div class="flashcard-back">
                             <h3 class="service-title">Workflow Automation Apps</h3>
-                            <p class="service-desc">Streamline business processes with custom workflow automation applications that reduce manual tasks and improve operational efficiency.</p>
+                            <p class="service-desc">Streamline business processes with custom workflow automation
+                                applications that reduce manual tasks and improve operational efficiency.</p>
                             <a href="contact.html" class="service-cta">Get Started</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Service 4 -->
                 <div class="flashcard">
                     <div class="flashcard-inner">
@@ -1322,12 +1383,13 @@
                         </div>
                         <div class="flashcard-back">
                             <h3 class="service-title">CRM & ERP Solutions</h3>
-                            <p class="service-desc">Develop custom CRM and ERP systems that centralize customer data, automate sales processes, and optimize resource planning.</p>
+                            <p class="service-desc">Develop custom CRM and ERP systems that centralize customer data,
+                                automate sales processes, and optimize resource planning.</p>
                             <a href="contact.html" class="service-cta">Get Started</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Service 5 -->
                 <div class="flashcard">
                     <div class="flashcard-inner">
@@ -1339,12 +1401,13 @@
                         </div>
                         <div class="flashcard-back">
                             <h3 class="service-title">Cloud-Based Applications</h3>
-                            <p class="service-desc">Build scalable cloud-native applications that offer flexibility, security, and high availability across multiple platforms and devices.</p>
+                            <p class="service-desc">Build scalable cloud-native applications that offer flexibility,
+                                security, and high availability across multiple platforms and devices.</p>
                             <a href="contact.html" class="service-cta">Get Started</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Service 6 -->
                 <div class="flashcard">
                     <div class="flashcard-inner">
@@ -1356,7 +1419,8 @@
                         </div>
                         <div class="flashcard-back">
                             <h3 class="service-title">Progressive Web Apps (PWA)</h3>
-                            <p class="service-desc">Create fast, reliable, and engaging Progressive Web Apps that work offline and provide a native app-like experience.</p>
+                            <p class="service-desc">Create fast, reliable, and engaging Progressive Web Apps that work
+                                offline and provide a native app-like experience.</p>
                             <a href="contact.html" class="service-cta">Get Started</a>
                         </div>
                     </div>
@@ -1364,7 +1428,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Key Features Section -->
     <section class="section-padding features-section">
         <div class="container">
@@ -1375,54 +1439,60 @@
                         <i class="fas fa-rocket"></i>
                     </div>
                     <h3 class="feature-title">High Performance</h3>
-                    <p class="feature-desc">We build web applications optimized for speed and performance, ensuring fast load times and smooth user interactions even under heavy traffic.</p>
+                    <p class="feature-desc">We build web applications optimized for speed and performance, ensuring fast
+                        load times and smooth user interactions even under heavy traffic.</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3 class="feature-title">Security First</h3>
-                    <p class="feature-desc">Security is integrated into every layer of our development process, protecting your data and users from potential threats.</p>
+                    <p class="feature-desc">Security is integrated into every layer of our development process,
+                        protecting your data and users from potential threats.</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-expand-arrows-alt"></i>
                     </div>
                     <h3 class="feature-title">Scalable Architecture</h3>
-                    <p class="feature-desc">Our applications are built with scalable architectures that grow with your business, handling increased users and data without performance degradation.</p>
+                    <p class="feature-desc">Our applications are built with scalable architectures that grow with your
+                        business, handling increased users and data without performance degradation.</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-mobile"></i>
                     </div>
                     <h3 class="feature-title">Responsive Design</h3>
-                    <p class="feature-desc">We create web applications that provide optimal viewing experiences across all devices, from desktops to smartphones.</p>
+                    <p class="feature-desc">We create web applications that provide optimal viewing experiences across
+                        all devices, from desktops to smartphones.</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-sync"></i>
                     </div>
                     <h3 class="feature-title">Agile Development</h3>
-                    <p class="feature-desc">We follow agile methodologies to deliver incremental value, incorporate feedback, and ensure your project stays aligned with business goals.</p>
+                    <p class="feature-desc">We follow agile methodologies to deliver incremental value, incorporate
+                        feedback, and ensure your project stays aligned with business goals.</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-headset"></i>
                     </div>
                     <h3 class="feature-title">Ongoing Support</h3>
-                    <p class="feature-desc">We provide continuous maintenance and support to keep your web application secure, updated, and performing at its best.</p>
+                    <p class="feature-desc">We provide continuous maintenance and support to keep your web application
+                        secure, updated, and performing at its best.</p>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Development Process Section -->
-    <section class="section-padding process-section">
+    <!-- <section class="section-padding process-section">
         <div class="container">
             <h2 class="section-title">Our Web App Development Process</h2>
             <div class="process-steps">
@@ -1463,60 +1533,119 @@
                 </div>
             </div>
         </div>
-    </section>
-    
-    <!-- Technology Stack Section -->
-    <section class="section-padding tech-stack-section">
+    </section> -->
+
+    <!-- Development Process Section -->
+    <section class="section-padding process-section">
         <div class="container">
-            <h2 class="section-title">Our Technology Stack</h2>
-            <div class="tech-categories">
-                <div class="tech-category">
-                    <h3 class="tech-category-title">Frontend</h3>
-                    <div class="tech-list">
-                        <span class="tech-item">React</span>
-                        <span class="tech-item">Angular</span>
-                        <span class="tech-item">Vue.js</span>
-                        <span class="tech-item">TypeScript</span>
-                        <span class="tech-item">HTML5/CSS3</span>
-                    </div>
+            <h2 class="section-title">Our Web App Development Process</h2>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Discovery & Planning</h3>
+                    <p class="step-description">We analyze your requirements, define project scope, and create a
+                        detailed development roadmap.</p>
                 </div>
-                
-                <div class="tech-category">
-                    <h3 class="tech-category-title">Backend</h3>
-                    <div class="tech-list">
-                        <span class="tech-item">Node.js</span>
-                        <span class="tech-item">Python</span>
-                        <span class="tech-item">PHP</span>
-                        <span class="tech-item">Java</span>
-                        <span class="tech-item">.NET</span>
-                    </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">UI/UX Design</h3>
+                    <p class="step-description">Our designers create intuitive and engaging user interfaces that enhance
+                        user experience.</p>
                 </div>
-                
-                <div class="tech-category">
-                    <h3 class="tech-category-title">Databases</h3>
-                    <div class="tech-list">
-                        <span class="tech-item">MySQL</span>
-                        <span class="tech-item">PostgreSQL</span>
-                        <span class="tech-item">MongoDB</span>
-                        <span class="tech-item">Redis</span>
-                        <span class="tech-item">Firebase</span>
-                    </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Development & Testing</h3>
+                    <p class="step-description">We build your web application using modern technologies and
+                        simultaneously run rigorous functionality, performance, and security tests.</p>
                 </div>
-                
-                <div class="tech-category">
-                    <h3 class="tech-category-title">Cloud & DevOps</h3>
-                    <div class="tech-list">
-                        <span class="tech-item">AWS</span>
-                        <span class="tech-item">Azure</span>
-                        <span class="tech-item">Google Cloud</span>
-                        <span class="tech-item">Docker</span>
-                        <span class="tech-item">Kubernetes</span>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Deployment</h3>
+                    <p class="step-description">We deploy your application to production environments with minimal
+                        downtime.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h3 class="step-title">Support & Maintenance</h3>
+                    <p class="step-description">We provide ongoing support, updates, and enhancements to keep your
+                        application running smoothly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <!-- Technology Stack Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="tech-section">
+                <h2>Our Technology Stack</h2>
+
+                <div class="tech-grid">
+                    <div class="tech-category">
+                        <h3>Frontend Technologies</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">React</div>
+                            <div class="tech-item">Angular</div>
+                            <div class="tech-item">Vue.js</div>
+                            <div class="tech-item">TypeScript</div>
+                            <div class="tech-item">HTML5/CSS3</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3>Backend Technologies</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">Node.js</div>
+                            <div class="tech-item">Python</div>
+                            <div class="tech-item">PHP</div>
+                            <div class="tech-item">Java</div>
+                            <div class="tech-item">.NET</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3>Databases</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">MySQL</div>
+                            <div class="tech-item">PostgreSQL</div>
+                            <div class="tech-item">MongoDB</div>
+                            <div class="tech-item">Redis</div>
+                            <div class="tech-item">Firebase</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3>Cloud & DevOps</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">AWS</div>
+                            <div class="tech-item">Azure</div>
+                            <div class="tech-item">Google Cloud</div>
+                            <div class="tech-item">Docker</div>
+                            <div class="tech-item">Kubernetes</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3>Mobile & PWA</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">React Native</div>
+                            <div class="tech-item">Flutter</div>
+                            <div class="tech-item">Ionic</div>
+                            <div class="tech-item">PWA</div>
+                            <div class="tech-item">Capacitor</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- FAQ Section -->
     <section class="section-padding faq-section">
         <div class="container">
@@ -1528,64 +1657,77 @@
                         <i class="fas fa-chevron-down faq-toggle"></i>
                     </div>
                     <div class="faq-answer">
-                        The timeline depends on the complexity and features of your web application. A simple application may take 4-8 weeks, while more complex enterprise solutions can take 3-6 months. We provide a detailed timeline after the initial discovery phase.
+                        The timeline depends on the complexity and features of your web application. A simple
+                        application may take 4-8 weeks, while more complex enterprise solutions can take 3-6 months. We
+                        provide a detailed timeline after the initial discovery phase.
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <div class="faq-question">
                         Do you provide post-development support and maintenance?
                         <i class="fas fa-chevron-down faq-toggle"></i>
                     </div>
                     <div class="faq-answer">
-                        Yes, we offer comprehensive support and maintenance packages that include bug fixes, security updates, performance optimization, and feature enhancements to ensure your web application remains secure and up-to-date.
+                        Yes, we offer comprehensive support and maintenance packages that include bug fixes, security
+                        updates, performance optimization, and feature enhancements to ensure your web application
+                        remains secure and up-to-date.
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <div class="faq-question">
                         Can you integrate third-party APIs into my web application?
                         <i class="fas fa-chevron-down faq-toggle"></i>
                     </div>
                     <div class="faq-answer">
-                        Absolutely. We have extensive experience integrating various third-party APIs including payment gateways, CRM systems, email services, social media platforms, and more to extend the functionality of your web application.
+                        Absolutely. We have extensive experience integrating various third-party APIs including payment
+                        gateways, CRM systems, email services, social media platforms, and more to extend the
+                        functionality of your web application.
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <div class="faq-question">
                         How do you ensure the security of web applications?
                         <i class="fas fa-chevron-down faq-toggle"></i>
                     </div>
                     <div class="faq-answer">
-                        We follow security best practices throughout the development process, including secure coding standards, regular security testing, data encryption, authentication and authorization mechanisms, and compliance with industry security standards.
+                        We follow security best practices throughout the development process, including secure coding
+                        standards, regular security testing, data encryption, authentication and authorization
+                        mechanisms, and compliance with industry security standards.
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <div class="faq-question">
                         Can you migrate my existing web application to a new technology stack?
                         <i class="fas fa-chevron-down faq-toggle"></i>
                     </div>
                     <div class="faq-answer">
-                        Yes, we specialize in application modernization and migration services. We can help migrate your legacy applications to modern, scalable technology stacks while preserving data integrity and business logic.
+                        Yes, we specialize in application modernization and migration services. We can help migrate your
+                        legacy applications to modern, scalable technology stacks while preserving data integrity and
+                        business logic.
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- CTA Section -->
     <section class="section-padding">
         <div class="container">
             <div class="cta-section">
                 <h2 class="cta-title">Ready to Build Your Next Web Application?</h2>
-                <p class="cta-subtitle">Let's discuss your project requirements and create a custom web application that drives your business forward. Our team is ready to bring your vision to life with cutting-edge technology and innovative solutions.</p>
-                <button class="cta-button-large" onclick="window.location.href='contact.html'">Start Your Project Today</button>
+                <p class="cta-subtitle">Let's discuss your project requirements and create a custom web application that
+                    drives your business forward. Our team is ready to bring your vision to life with cutting-edge
+                    technology and innovative solutions.</p>
+                <button class="cta-button-large" onclick="window.location.href='contact.html'">Start Your Project
+                    Today</button>
             </div>
         </div>
     </section>
-    
+
     <footer class="footer">
         <div class="container">
             <div class="footer-container">
@@ -1593,7 +1735,7 @@
                 <div class="footer-col">
                     <h3>Solutions</h3>
                     <div class="footer-links">
-                        
+
                         <!-- Next-Gen Tech Dropdown -->
                         <div class="footer-dropdown">
                             <div class="footer-dropdown-header">
@@ -1601,7 +1743,8 @@
                                 <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
                             </div>
                             <div class="footer-dropdown-content">
-                                <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> AI & Machine Learning</a>
+                                <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> AI & Machine
+                                    Learning</a>
                                 <a href="CloudSolutions.html"><i class="fas fa-chevron-right"></i> Cloud Solutions</a>
                             </div>
                         </div>
@@ -1614,12 +1757,16 @@
                             </div>
                             <div class="footer-dropdown-content">
                                 <a href="AIServices.html"><i class="fas fa-chevron-right"></i> AI Services Overview</a>
-                                <a href="AIStrategy.html"><i class="fas fa-chevron-right"></i> AI Strategy & Consulting</a>
+                                <a href="AIStrategy.html"><i class="fas fa-chevron-right"></i> AI Strategy &
+                                    Consulting</a>
                                 <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> Machine Learning</a>
-                                <a href="NLP.html"><i class="fas fa-chevron-right"></i> Natural Language Processing (NLP)</a>
+                                <a href="NLP.html"><i class="fas fa-chevron-right"></i> Natural Language Processing
+                                    (NLP)</a>
                                 <a href="ComputerVision.html"><i class="fas fa-chevron-right"></i> Computer Vision</a>
-                                <a href="PredictiveAnalytics.html"><i class="fas fa-chevron-right"></i> Predictive Analysis</a>
-                                <a href="ProcessAutomation.html"><i class="fas fa-chevron-right"></i> Process Automation</a>
+                                <a href="PredictiveAnalytics.html"><i class="fas fa-chevron-right"></i> Predictive
+                                    Analysis</a>
+                                <a href="ProcessAutomation.html"><i class="fas fa-chevron-right"></i> Process
+                                    Automation</a>
                             </div>
                         </div>
 
@@ -1630,9 +1777,12 @@
                                 <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
                             </div>
                             <div class="footer-dropdown-content">
-                                <a href="CustomSoftware.html"><i class="fas fa-chevron-right"></i> Custom Software Development</a>
-                                <a href="web-app-development.html"><i class="fas fa-chevron-right"></i> Web App Development</a>
-                                <a href="MobileDevelopment.html"><i class="fas fa-chevron-right"></i> Mobile App Development</a>
+                                <a href="CustomSoftware.html"><i class="fas fa-chevron-right"></i> Custom Software
+                                    Development</a>
+                                <a href="web-app-development.html"><i class="fas fa-chevron-right"></i> Web App
+                                    Development</a>
+                                <a href="MobileDevelopment.html"><i class="fas fa-chevron-right"></i> Mobile App
+                                    Development</a>
                             </div>
                         </div>
 
@@ -1718,21 +1868,21 @@
 
     <script>
         // Mobile menu toggle
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
             document.querySelector('.nav-links').classList.toggle('active');
         });
-        
+
         // Mobile dropdown functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-            
+
             dropdownToggles.forEach(toggle => {
-                toggle.addEventListener('click', function(e) {
+                toggle.addEventListener('click', function (e) {
                     if (window.innerWidth <= 768) {
                         e.preventDefault();
                         const dropdown = this.parentElement;
                         dropdown.classList.toggle('active');
-                        
+
                         // Close other dropdowns
                         document.querySelectorAll('.dropdown').forEach(otherDropdown => {
                             if (otherDropdown !== dropdown) {
@@ -1742,22 +1892,22 @@
                     }
                 });
             });
-            
+
             // Close dropdowns when clicking outside
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', function (e) {
                 if (!e.target.closest('.dropdown') && !e.target.closest('.mobile-menu-btn')) {
                     document.querySelectorAll('.dropdown').forEach(dropdown => {
                         dropdown.classList.remove('active');
                     });
                 }
             });
-            
+
             // FAQ functionality
             const faqItems = document.querySelectorAll('.faq-item');
-            
+
             faqItems.forEach(item => {
                 const question = item.querySelector('.faq-question');
-                
+
                 question.addEventListener('click', () => {
                     // Close other FAQ items
                     faqItems.forEach(otherItem => {
@@ -1765,12 +1915,12 @@
                             otherItem.classList.remove('active');
                         }
                     });
-                    
+
                     // Toggle current FAQ item
                     item.classList.toggle('active');
                 });
             });
-            
+
             // Footer dropdown functionality
             document.querySelectorAll('.footer-dropdown-header').forEach(header => {
                 header.addEventListener('click', () => {
@@ -1778,11 +1928,11 @@
                     parent.classList.toggle('open');
                 });
             });
-            
+
             // Show image placeholder if image fails to load
             const image = document.querySelector('.services-image img');
             const placeholder = document.getElementById('image-placeholder');
-            
+
             if (image && image.naturalWidth === 0) {
                 image.style.display = 'none';
                 placeholder.style.display = 'flex';
@@ -1791,4 +1941,5 @@
     </script>
     <script src="Customscroll.js"></script>
 </body>
+
 </html>

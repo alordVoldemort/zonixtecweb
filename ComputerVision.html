@@ -68,6 +68,7 @@
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 60px;
+            margin-top: 60px;
             position: relative;
         }
 
@@ -369,64 +370,55 @@
         }
         
         /* Challenges & Solutions Section */
-        .challenges-solutions {
-            display: flex;
-            gap: 50px;
-            margin-bottom: 100px;
-        }
-        
-        .challenges, .solutions {
-            flex: 1;
-            background: rgba(15, 23, 42, 0.5);
-            border-radius: 15px;
-            padding: 40px;
-            border: 1px solid rgba(100, 116, 139, 0.2);
-        }
-        
-        .challenges h2, .solutions h2 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-            color: var(--secondary);
-        }
-        
-        .challenges ul, .solutions ul {
-            list-style-type: none;
-        }
-        
-        .challenges li, .solutions li {
-            margin-bottom: 15px;
-            padding-left: 30px;
-            position: relative;
-            color: #94a3b8;
-        }
-        
-        .challenges li::before {
-            content: '✕';
-            position: absolute;
-            left: 0;
-            color: #ef4444;
-            font-weight: bold;
-        }
-        
-        .solutions li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--success);
-            font-weight: bold;
-        }
-        
-        /* Process Section */
-        .process-container {
-            background: rgba(15, 23, 42, 0.5);
-            border-radius: 20px;
-            padding: 50px;
-            margin-bottom: 100px;
-            border: 1px solid rgba(100, 116, 139, 0.2);
-        }
-        
-        .process-title {
+        /* Challenges & Solutions Section */
+.challenges-solutions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.challenges-column, .solutions-column {
+    background: rgba(15, 23, 42, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid rgba(100, 116, 139, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.challenges-column:hover, .solutions-column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.column-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: var(--secondary);
+    position: relative;
+}
+
+.column-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--secondary);
+    border-radius: 2px;
+}
+
+.challenges-list, .solutions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.challenges-title {
             text-align: center;
             font-family: 'Orbitron', sans-serif;
             font-size: 2.2rem;
@@ -436,93 +428,189 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
+.challenge-item, .solution-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.challenge-icon {
+    color: #ef4444;
+    margin-right: 15px;
+    font-size: 1.2rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.solution-icon {
+    color: var(--success);
+    margin-right: 15px;
+    font-size: 1.2rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.challenge-text, .solution-text {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .challenges-solutions-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .challenges-column, .solutions-column {
+        padding: 25px 20px;
+    }
+}
         
-        .process-steps {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-        }
+       /* Development Process Section */
+.process-container {
+    margin-bottom: 80px;
+}
+
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 50px;
+}
+
+.process-steps::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    z-index: 1;
+}
+
+.process-step {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    padding: 0 15px;
+}
+
+.step-number {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark);
+    position: relative;
+}
+
+.step-title {
+    font-size: 1.2rem;
+    font-family: 'Orbitron', sans-serif;
+    color: var(--light);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.step-description {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Technology Stack Section */
+.tech-section {
+    background: rgba(10, 10, 26, 0.7);
+    border-radius: 10px;
+    margin-top: 80px;
+    padding: 60px;
+    margin-bottom: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tech-section h2 {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    color: var(--secondary);
+    margin-bottom: 40px;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.tech-category {
+    text-align: center;
+}
+
+.tech-category h3 {
+    color: var(--light);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.tech-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tech-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: var(--gray);
+    transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--light);
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .process-step {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .process-steps {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .process-steps::before {
+        display: none;
+    }
+    
+    .tech-section {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .process-step {
+        min-width: 100%;
+    }
+}
         
-        .process-step {
-            flex: 1;
-            min-width: 250px;
-            max-width: 300px;
-            text-align: center;
-            padding: 30px;
-            position: relative;
-        }
-        
-        .step-number {
-            width: 50px;
-            height: 50px;
-            background: var(--tech-gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-        
-        .step-title {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        
-        .step-description {
-            color: #94a3b8;
-            line-height: 1.7;
-        }
-        
-        /* Technology Stack */
-        .tech-stack {
-            margin-bottom: 100px;
-        }
-        
-        .tech-title {
-            text-align: center;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
-            margin-bottom: 50px;
-            background: var(--tech-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
-        }
-        
-        .tech-item {
-            background: rgba(15, 23, 42, 0.6);
-            border-radius: 10px;
-            padding: 25px 15px;
-            text-align: center;
-            border: 1px solid rgba(100, 116, 139, 0.2);
-            transition: transform 0.3s ease;
-        }
-        
-        .tech-item:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-        
-        .tech-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: var(--secondary);
-        }
-        
-        .tech-name {
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
         
         /* Impact Section */
         .impact-section {
@@ -1095,138 +1183,177 @@
             </div>
             
             <!-- Challenges & Solutions -->
-            <div class="challenges-solutions">
-                <div class="challenges">
-                    <h2>Challenges Without Computer Vision</h2>
-                    <ul>
-                        <li>Manual monitoring is time-consuming and error-prone</li>
-                        <li>Limited ability to process large amounts of visual data</li>
-                        <li>Higher risks in security, quality control, and surveillance</li>
-                        <li>Missed opportunities in automation and personalization</li>
-                    </ul>
-                </div>
-                
-                <div class="solutions">
-                    <h2>Our Solutions</h2>
-                    <ul>
-                        <li>Automate visual tasks and reduce human error</li>
-                        <li>Process massive amounts of visual data efficiently</li>
-                        <li>Enhance security and quality control with AI</li>
-                        <li>Unlock new automation and personalization opportunities</li>
-                    </ul>
+           <!-- Challenges & Solutions Section -->
+<div class="challenges-section">
+    <div class="challenges-container">
+        <h2 class="challenges-title">Challenges & Solutions</h2>
+        
+        <div class="challenges-solutions-grid">
+            <!-- Challenges Column -->
+            <div class="challenges-column">
+                <h3 class="column-title">Challenges Without Computer Vision</h3>
+                <div class="challenges-list">
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p class="challenge-text">Manual monitoring is time-consuming and error-prone</p>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p class="challenge-text">Limited ability to process large amounts of visual data</p>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p class="challenge-text">Higher risks in security, quality control, and surveillance</p>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p class="challenge-text">Missed opportunities in automation and personalization</p>
+                    </div>
                 </div>
             </div>
+            
+            <!-- Solutions Column -->
+            <div class="solutions-column">
+                <h3 class="column-title">Our Solutions</h3>
+                <div class="solutions-list">
+                    <div class="solution-item">
+                        <div class="solution-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <p class="solution-text">Automate visual tasks and reduce human error</p>
+                    </div>
+                    <div class="solution-item">
+                        <div class="solution-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <p class="solution-text">Process massive amounts of visual data efficiently</p>
+                    </div>
+                    <div class="solution-item">
+                        <div class="solution-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <p class="solution-text">Enhance security and quality control with AI</p>
+                    </div>
+                    <div class="solution-item">
+                        <div class="solution-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <p class="solution-text">Unlock new automation and personalization opportunities</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
             
             <!-- Process Section -->
-            <div class="process-container">
-                <h2 class="process-title">Our Development Process</h2>
-                <div class="process-steps">
-                    <div class="process-step">
-                        <div class="step-number">1</div>
-                        <h3 class="step-title">Requirement Analysis</h3>
-                        <p class="step-description">Understanding business needs & data sources to define project scope and objectives.</p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">2</div>
-                        <h3 class="step-title">Data Preparation</h3>
-                        <p class="step-description">Cleaning, annotating, and organizing image/video datasets for model training.</p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">3</div>
-                        <h3 class="step-title">Model Development</h3>
-                        <p class="step-description">Training deep learning models (CNNs, RNNs, YOLO, ResNet) tailored to your needs.</p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">4</div>
-                        <h3 class="step-title">Testing & Validation</h3>
-                        <p class="step-description">Ensuring accuracy and robustness in real-world scenarios through rigorous testing.</p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">5</div>
-                        <h3 class="step-title">Integration</h3>
-                        <p class="step-description">Deploying models into your existing applications or systems for seamless operation.</p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">6</div>
-                        <h3 class="step-title">Continuous Monitoring</h3>
-                        <p class="step-description">Regular improvements with feedback loops to maintain optimal performance.</p>
-                    </div>
-                </div>
-            </div>
+            <!-- Process Section -->
+<div class="process-container">
+    <h2 class="section-title">Our Development <span>Process</span></h2>
+    <div class="process-steps">
+        <div class="process-step">
+            <div class="step-number">1</div>
+            <h3 class="step-title">Requirement Analysis</h3>
+            <p class="step-description">Understanding business needs & data sources to define project scope and objectives.</p>
+        </div>
+        
+        <div class="process-step">
+            <div class="step-number">2</div>
+            <h3 class="step-title">Data Preparation</h3>
+            <p class="step-description">Cleaning, annotating, and organizing image/video datasets for model training.</p>
+        </div>
+        
+        <div class="process-step">
+            <div class="step-number">3</div>
+            <h3 class="step-title">Model Development</h3>
+            <p class="step-description">Training deep learning models (CNNs, RNNs, YOLO, ResNet) tailored to your needs.</p>
+        </div>
+        
+        <div class="process-step">
+            <div class="step-number">4</div>
+            <h3 class="step-title">Testing & Validation</h3>
+            <p class="step-description">Ensuring accuracy and robustness in real-world scenarios through rigorous testing.</p>
+        </div>
+        
+        <div class="process-step">
+            <div class="step-number">5</div>
+            <h3 class="step-title">Integration</h3>
+            <p class="step-description">Deploying models into your existing applications or systems for seamless operation.</p>
+        </div>
+        
+        <div class="process-step">
+            <div class="step-number">6</div>
+            <h3 class="step-title">Continuous Monitoring</h3>
+            <p class="step-description">Regular improvements with feedback loops to maintain optimal performance.</p>
+        </div>
+    </div>
+</div>
             
             <!-- Technology Stack -->
-            <div class="tech-stack">
-                <h2 class="tech-title">Our Technology Stack</h2>
-                <div class="tech-grid">
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fas fa-cube"></i>
-                        </div>
-                        <div class="tech-name">TensorFlow</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fas fa-fire"></i>
-                        </div>
-                        <div class="tech-name">PyTorch</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                        <div class="tech-name">OpenCV</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <div class="tech-name">YOLO</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="tech-name">Detectron2</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fas fa-layer-group"></i>
-                        </div>
-                        <div class="tech-name">Keras</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fab fa-aws"></i>
-                        </div>
-                        <div class="tech-name">AWS Rekognition</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fab fa-google"></i>
-                        </div>
-                        <div class="tech-name">Google Vision AI</div>
-                    </div>
-                    
-                    <div class="tech-item">
-                        <div class="tech-icon">
-                            <i class="fab fa-microsoft"></i>
-                        </div>
-                        <div class="tech-name">Azure Cognitive Services</div>
-                    </div>
-                </div>
+            <!-- Technology Stack -->
+<div class="tech-section">
+    <h2>Our Technology Stack</h2>
+    
+    <div class="tech-grid">
+        <div class="tech-category">
+            <h3>Deep Learning Frameworks</h3>
+            <div class="tech-items">
+                <div class="tech-item">TensorFlow</div>
+                <div class="tech-item">PyTorch</div>
+                <div class="tech-item">Keras</div>
+                <div class="tech-item">Detectron2</div>
             </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Computer Vision Libraries</h3>
+            <div class="tech-items">
+                <div class="tech-item">OpenCV</div>
+                <div class="tech-item">YOLO</div>
+                <div class="tech-item">Dlib</div>
+                <div class="tech-item">Scikit-image</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Cloud AI Services</h3>
+            <div class="tech-items">
+                <div class="tech-item">AWS Rekognition</div>
+                <div class="tech-item">Google Vision AI</div>
+                <div class="tech-item">Azure Cognitive Services</div>
+                <div class="tech-item">IBM Watson Visual</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Deployment Platforms</h3>
+            <div class="tech-items">
+                <div class="tech-item">Docker</div>
+                <div class="tech-item">Kubernetes</div>
+                <div class="tech-item">AWS SageMaker</div>
+                <div class="tech-item">Google AI Platform</div>
+            </div>
+        </div>
+        
+        <div class="tech-category">
+            <h3>Programming Languages</h3>
+            <div class="tech-items">
+                <div class="tech-item">Python</div>
+                <div class="tech-item">C++</div>
+                <div class="tech-item">JavaScript</div>
+                <div class="tech-item">Java</div>
+            </div>
+        </div>
+    </div>
+</div>
             
             <!-- Impact Section -->
             <div class="impact-section">
