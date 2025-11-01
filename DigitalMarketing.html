@@ -469,41 +469,35 @@
             line-height: 1.7;
         }
 
+         /* Process Section */
+        .process-section {
+            margin: 80px 0;
+        }
+        
         .process-container {
-            background: rgba(15, 23, 42, 0.5);
-            border-radius: 20px;
-            padding: 50px;
-            margin-bottom: 80px;
-            border: 1px solid rgba(100, 116, 139, 0.2);
-        }
-
-        .process-title {
-            text-align: center;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
-            margin-bottom: 50px;
-            background: var(--tech-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .process-steps {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 30px;
         }
-
+        
         .process-step {
-            flex: 1;
-            min-width: 250px;
-            max-width: 300px;
-            text-align: center;
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 15px;
             padding: 30px;
+            width: 300px;
+            text-align: center;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+            transition: all 0.3s ease;
             position: relative;
         }
-
+        
+        .process-step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(37, 99, 235, 0.3);
+        }
+        
         .step-number {
             width: 50px;
             height: 50px;
@@ -513,16 +507,17 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
-            font-weight: 700;
+            font-family: 'Orbitron', sans-serif;
             font-size: 1.2rem;
+            font-weight: 700;
         }
-
+        
         .step-title {
             font-size: 1.3rem;
             margin-bottom: 15px;
             font-weight: 600;
         }
-
+        
         .step-description {
             color: #94a3b8;
             line-height: 1.7;
@@ -541,6 +536,7 @@
             text-align: center;
             color: var(--secondary);
             margin-bottom: 40px;
+            font-family: 'Orbitron', sans-serif;
         }
         
         .tech-grid {
@@ -557,6 +553,7 @@
             color: var(--light);
             margin-bottom: 20px;
             font-size: 1.3rem;
+            font-family: 'Orbitron', sans-serif;
         }
         
         .tech-items {
@@ -1396,41 +1393,43 @@
                     </div>
                 </div>
 
-                <div class="process-container">
-                    <h2 class="process-title">How We'll Do It</h2>
-                    <div class="process-steps">
-                        <div class="process-step">
-                            <div class="step-number">1</div>
-                            <h3 class="step-title">Market Research & Strategy</h3>
-                            <p class="step-description">Identify audience behavior, competitors, and marketing goals.</p>
-                        </div>
-
-                        <div class="process-step">
-                            <div class="step-number">2</div>
-                            <h3 class="step-title">Campaign Planning</h3>
-                            <p class="step-description">Design SEO, social media, and ad strategies aligned with your objectives.</p>
-                        </div>
-
-                        <div class="process-step">
-                            <div class="step-number">3</div>
-                            <h3 class="step-title">Content Creation & Optimization</h3>
-                            <p class="step-description">Develop engaging, keyword-rich content for all digital channels.</p>
-                        </div>
-
-                        <div class="process-step">
-                            <div class="step-number">4</div>
-                            <h3 class="step-title">Execution & Monitoring</h3>
-                            <p class="step-description">Launch campaigns and track results in real time.</p>
-                        </div>
-
-                        <div class="process-step">
-                            <div class="step-number">5</div>
-                            <h3 class="step-title">Reporting & Optimization</h3>
-                            <p class="step-description">Analyze performance and continuously refine strategies for better ROI.</p>
-                        </div>
-                    </div>
+                
+        <div class="container">
+            <h2 class="section-title">How We'll Do It</h2>
+            <div class="process-container">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Market Research & Strategy</h3>
+                    <p class="step-description">Identify audience behavior, competitors, and marketing goals.</p>
                 </div>
-
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Campaign Planning</h3>
+                    <p class="step-description">Design SEO, social media, and ad strategies aligned with your objectives.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Content Creation & Optimization</h3>
+                    <p class="step-description">Develop engaging, keyword-rich content for all digital channels.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Execution & Monitoring</h3>
+                    <p class="step-description">Launch campaigns and track results in real time.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h3 class="step-title">Reporting & Optimization</h3>
+                    <p class="step-description">Analyze performance and continuously refine strategies for better ROI.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
                 <!-- Technology Stack -->
 <div class="tech-section">
     <h2>Our Technology Stack</h2>
