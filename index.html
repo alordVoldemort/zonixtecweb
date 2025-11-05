@@ -292,10 +292,7 @@
         }
 
         /* Ensure proper touch target sizes */
-        @media (max-width: 768px) {
-
-          
-        }
+        @media (max-width: 768px) {}
 
         /* Hero Section with Video Background and Slider */
         .hero {
@@ -1440,26 +1437,43 @@
         }
 
         .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: #f5f6fa;
-            border-radius: 50%;
-            color: var(--primary);
-            font-size: 1.4rem;
-            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.08);
-            text-decoration: none;
-        }
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #f5f6fa;
+    border-radius: 50%;
+    color: var(--primary);
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.08);
+    text-decoration: none;
+    /* Remove mobile tap highlight */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Prevent focus outline on click */
+    outline: none;
+}
 
-        .social-links a:hover {
-            background: var(--primary);
-            color: #fff;
-            box-shadow: 0 4px 16px rgba(52, 152, 219, 0.18);
-        }
+.social-links a:hover {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(52, 152, 219, 0.18);
+    transform: translateY(-2px);
+}
 
+/* Remove any active/focus states that cause square highlights */
+.social-links a:active,
+.social-links a:focus {
+    background: var(--primary);
+    color: #fff;
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.18);
+    outline: none;
+}
         .contact-form {
             background: rgba(15, 23, 42, 0.85);
             padding: 30px;
@@ -1653,12 +1667,12 @@
                 position: relative;
             }
 
-           
 
-            
+
+
 
             /* Mobile dropdown styles */
-           
+
 
             .hero h1 {
                 font-size: 2.2rem;
@@ -1941,6 +1955,7 @@
         .scroll-content h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
+            margin-top: 50px;
             color: var(--light);
             font-family: 'Orbitron', sans-serif;
         }
@@ -1948,6 +1963,7 @@
         .scroll-content h2 em {
             color: var(--secondary);
             font-style: normal;
+            margin-top: 20px;
         }
 
         .scroll-text {
@@ -2041,16 +2057,97 @@
         }
 
         @keyframes progressBar {
-            0% { width: 0; }
-            20% { width: 40px; }
-            40% { width: 80px; }
-            60% { width: 120px; }
-            80% { width: 160px; }
-            100% { width: 200px; }
+            0% {
+                width: 0;
+            }
+
+            20% {
+                width: 40px;
+            }
+
+            40% {
+                width: 80px;
+            }
+
+            60% {
+                width: 120px;
+            }
+
+            80% {
+                width: 160px;
+            }
+
+            100% {
+                width: 200px;
+            }
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
+
+            /* Slider responsive styles */
+            .slider-nav {
+                padding: 0 15px;
+            }
+
+            .prev-btn,
+            .next-btn {
+                display: flex;
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+                background: rgba(255, 255, 255, 0.15);
+                border: 1px solid rgba(0, 242, 255, 0.4);
+            }
+
+            .dropdown-scroll {
+                max-height: 250px;
+            }
+
+            .hero {
+                height: 100vh;
+                min-height: 500px;
+                position: relative;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+                line-height: 1.2;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+                margin-bottom: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .secondary-button {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+                padding: 15px 25px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .services-header h2,
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .hero-content {
+                padding: 0 15px;
+                max-width: 100%;
+            }
+
+            /* Scroll section mobile styles */
             .scroll-container {
                 height: 70vh;
                 max-height: 600px;
@@ -2161,9 +2258,12 @@
         }
 
         @keyframes pulse-glow {
-            0%, 100% {
+
+            0%,
+            100% {
                 box-shadow: 0 8px 25px rgba(0, 102, 255, 0.4);
             }
+
             50% {
                 box-shadow: 0 8px 35px rgba(0, 242, 255, 0.6);
             }
@@ -2227,6 +2327,7 @@
                 opacity: 0;
                 transform: translateY(80px) scale(0.95);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0) scale(1);
@@ -2412,6 +2513,7 @@
                 opacity: 0;
                 transform: translate(-50%, -50%) scale(0.5);
             }
+
             100% {
                 opacity: 1;
                 transform: translate(-50%, -50%) scale(1);
@@ -2487,6 +2589,22 @@
             }
         }
 
+        @media (max-width: 768px) {
+    .social-links a {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+    }
+    
+    .social-links a:active {
+        transform: scale(0.95);
+        background: var(--primary);
+        color: #fff;
+    }
+}
+
+
+
+
         @media (max-width: 480px) {
             .book-call-btn {
                 padding: 10px 16px;
@@ -2551,6 +2669,111 @@
                 font-size: 0.9rem;
             }
         }
+
+
+        /* iPad and Tablet Specific Navbar Fixes */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Navbar container adjustments */
+    header .container {
+        padding: 0 20px;
+    }
+    
+    /* Nav links spacing and alignment */
+    .nav-links {
+        gap: 20px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    /* Individual nav items */
+    .nav-links a {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+        white-space: nowrap;
+    }
+    
+    /* CTA button specific styling for tablets */
+    .nav-links .cta-buttons {
+        font-size: 0.85rem;
+        padding: 10px 16px;
+        white-space: nowrap;
+        margin-left: 10px;
+    }
+    
+    /* Dropdown menu adjustments */
+    .dropdown-content {
+        min-width: 200px;
+        right: 0;
+        left: auto;
+    }
+    
+    /* Logo sizing */
+    .logo img {
+        height: 35px;
+    }
+    
+    /* Ensure even spacing */
+    .nav-links > *:not(:last-child) {
+        margin-right: 5px;
+    }
+}
+
+/* Additional iPad Pro specific fixes */
+@media (min-width: 1025px) and (max-width: 1366px) {
+    .nav-links {
+        gap: 25px;
+    }
+    
+    .nav-links a {
+        font-size: 0.95rem;
+        padding: 10px 15px;
+    }
+    
+    .nav-links .cta-buttons {
+        font-size: 0.9rem;
+        padding: 12px 20px;
+    }
+}
+
+/* Prevent mobile menu from showing on tablets */
+@media (min-width: 769px) {
+    .mobile-menu-btn {
+        display: none !important;
+    }
+    
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/* Ensure dropdowns work properly on tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    .dropdown-content {
+        position: absolute;
+        top: 100%;
+        background: rgba(10, 10, 26, 0.95);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 15px 0;
+    }
+    
+    .dropdown-scroll {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+    
+    .dropdown-content a {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+}
     </style>
 </head>
 
@@ -2604,8 +2827,9 @@
                         <i class="fas fa-phone-alt"></i>Book A 30 Min Call
                     </a>
                 </div>
-                
-                <button class="mobile-menu-btn" aria-label="Toggle mobile menu" onclick="window.toggleMobileMenu && window.toggleMobileMenu()">
+
+                <button class="mobile-menu-btn" aria-label="Toggle mobile menu"
+                    onclick="window.toggleMobileMenu && window.toggleMobileMenu()">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -2723,8 +2947,10 @@
             <h2><strong>First</strong>, we established our <em>foundation</em></h2>
             <div class="scroll-text">
                 <img src="./Assets/aboutus1.webp" alt="Zonixtec Foundation">
-                <p>We started <code class="selector">Zonixtec</code> with a simple mission: to bridge the gap between businesses and cutting-edge technology.</p>
-                <p>Our journey began with passionate developers who believed that <code class="property">technology should empower</code>, not complicate business operations.</p>
+                <p>We started <code class="selector">Zonixtec</code> with a simple mission: to bridge the gap between
+                    businesses and cutting-edge technology.</p>
+                <p>Our journey began with passionate developers who believed that <code
+                        class="property">technology should empower</code>, not complicate business operations.</p>
             </div>
         </div>
     </section>
@@ -2734,8 +2960,12 @@
             <h2><strong>Next</strong>, we focused on <em>innovation</em></h2>
             <div class="scroll-text">
                 <img src="./Assets/aboutus1.webp" alt="Innovation at Zonixtec">
-                <p>We embrace <code class="property">AI technologies</code> and <code class="property">modern development practices</code> to create solutions that scale with your business growth.</p>
-                <p>Our team continuously explores emerging technologies like <code class="selector">Machine Learning</code>, <code class="selector">Cloud Computing</code>, and <code class="selector">Process Automation</code>.</p>
+                <p>We embrace <code class="property">AI technologies</code> and <code
+                        class="property">modern development practices</code> to create solutions that scale with your
+                    business growth.</p>
+                <p>Our team continuously explores emerging technologies like <code
+                        class="selector">Machine Learning</code>, <code class="selector">Cloud Computing</code>, and
+                    <code class="selector">Process Automation</code>.</p>
             </div>
         </div>
     </section>
@@ -2745,8 +2975,12 @@
             <h2><strong>Then</strong>, we committed to <em>excellence</em></h2>
             <div class="scroll-text">
                 <img src="./Assets/aboutus1.webp" alt="Excellence in Development">
-                <p>Every project we deliver is built with <code class="property">precision</code>, <code class="property">scalability</code>, and <code class="property">user-centric design</code> principles.</p>
-                <p>From <code class="selector">custom CRM solutions</code> to <code class="selector">AI-powered applications</code>, we ensure each solution meets the highest standards.</p>
+                <p>Every project we deliver is built with <code class="property">precision</code>, <code
+                        class="property">scalability</code>, and <code class="property">user-centric design</code>
+                    principles.</p>
+                <p>From <code class="selector">custom CRM solutions</code> to <code
+                        class="selector">AI-powered applications</code>, we ensure each solution meets the highest
+                    standards.</p>
             </div>
         </div>
     </section>
@@ -2756,8 +2990,11 @@
             <h2><strong>Now</strong>, we shape the <em>future</em></h2>
             <div class="scroll-text">
                 <img src="./Assets/aboutus1.webp" alt="Future Technology">
-                <p>We're not just building software; we're crafting <code class="property">digital experiences</code> that transform how businesses operate and grow.</p>
-                <p>Our expertise spans across <code class="selector">web development</code>, <code class="selector">mobile applications</code>, <code class="selector">AI consulting</code>, and <code class="selector">cloud solutions</code>.</p>
+                <p>We're not just building software; we're crafting <code class="property">digital experiences</code>
+                    that transform how businesses operate and grow.</p>
+                <p>Our expertise spans across <code class="selector">web development</code>, <code
+                        class="selector">mobile applications</code>, <code class="selector">AI consulting</code>, and
+                    <code class="selector">cloud solutions</code>.</p>
             </div>
         </div>
     </section>
@@ -2771,7 +3008,8 @@
                     <li>Build solutions that <strong>solve real problems</strong> and deliver measurable results</li>
                     <li>Create technology that is intuitive, scalable, and future-ready</li>
                     <li>Partner with businesses to drive growth through digital innovation</li>
-                    <li>Deliver <strong>CRM, ERP, Billing Software, Website Development</strong>, and Mobile Applications</li>
+                    <li>Deliver <strong>CRM, ERP, Billing Software, Website Development</strong>, and Mobile
+                        Applications</li>
                     <li>Make businesses <strong>smarter, faster, and future-ready</strong></li>
                 </ul>
             </div>
@@ -2866,7 +3104,7 @@
     </section>
 
     <!-- Stats Section -->
-    
+
 
     <!-- Industries Section -->
     <section class="industries section-padding" id="industries">
@@ -3050,7 +3288,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        
+
                     </div>
                 </div>
 
@@ -3665,7 +3903,7 @@
             // Enhanced pause/resume functionality
             const heroSection = document.querySelector('.hero');
             const sliderControls = document.querySelectorAll('.prev-btn, .next-btn');
-            
+
             if (heroSection) {
                 // Pause on hover
                 heroSection.addEventListener('mouseenter', () => {
@@ -3775,7 +4013,7 @@
             <button class="close-modal" onclick="closeBookingModal()">
                 <i class="fas fa-times"></i>
             </button>
-            
+
             <div class="modal-header">
                 <h2>Book Your Free 30-Minute Consultation</h2>
                 <p>Let's discuss how we can help transform your business</p>
@@ -3846,7 +4084,7 @@
 
     <!-- Success Message Overlay -->
     <div class="success-message" id="bookingSuccess">
-        <i class="fas fa-check-circle"></i> 
+        <i class="fas fa-check-circle"></i>
         <strong>Your Call is Booked!</strong>
         <p>Our team will connect with you as soon as possible. Thank you for choosing Zonixtec!</p>
     </div>
@@ -3857,7 +4095,7 @@
             const modal = document.getElementById('bookingModal');
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
-            
+
             // Set minimum date to today
             const today = new Date().toISOString().split('T')[0];
             document.getElementById('bookingDate').setAttribute('min', today);
@@ -3870,21 +4108,21 @@
         }
 
         // Close modal when clicking outside
-        document.getElementById('bookingModal')?.addEventListener('click', function(e) {
+        document.getElementById('bookingModal')?.addEventListener('click', function (e) {
             if (e.target === this) {
                 closeBookingModal();
             }
         });
 
         // Close modal with Escape key
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 closeBookingModal();
             }
         });
 
         // Handle booking form submission
-        document.getElementById('bookingForm')?.addEventListener('submit', async function(e) {
+        document.getElementById('bookingForm')?.addEventListener('submit', async function (e) {
             e.preventDefault();
 
             const submitBtn = this.querySelector('.submit-booking-btn');
@@ -3909,10 +4147,10 @@
             try {
                 // Send to database API
                 const apiPath = 'https://zonixtec.com/server/booking/save-booking.php';
-                
+
                 console.log('📤 Sending booking to:', apiPath);
                 console.log('📋 Data:', bookingData);
-                
+
                 const response = await fetch(apiPath, {
                     method: 'POST',
                     headers: {
@@ -3922,7 +4160,7 @@
                 });
 
                 console.log('📡 Response status:', response.status);
-                
+
                 const result = await response.json();
                 console.log('� Response data:', result);
 
@@ -3959,7 +4197,7 @@
 
     <!-- About Section Auto-Scroll Animation -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const scrollItems = document.querySelectorAll('.scroll-content-item');
             let currentIndex = 0;
             let autoScrollInterval;
@@ -3967,12 +4205,12 @@
             function showSlide(index) {
                 // Remove active class from all items
                 scrollItems.forEach(item => item.classList.remove('active'));
-                
+
                 // Add active class to current item
                 if (scrollItems[index]) {
                     scrollItems[index].classList.add('active');
                 }
-                
+
                 currentIndex = index;
             }
 
@@ -4012,11 +4250,78 @@
                 });
             }
         });
+
+        // Tablet navbar alignment fix
+function optimizeNavbarForTablet() {
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelector('.nav-links');
+    const isTablet = window.innerWidth >= 769 && window.innerWidth <= 1024;
+    
+    if (isTablet && navLinks) {
+        // Ensure proper flex alignment
+        navLinks.style.display = 'flex';
+        navLinks.style.alignItems = 'center';
+        navLinks.style.justifyContent = 'flex-end';
+        navLinks.style.gap = '20px';
+        navLinks.style.flexWrap = 'nowrap';
+        
+        // Adjust CTA button spacing
+        const ctaButton = document.querySelector('.cta-buttons');
+        if (ctaButton) {
+            ctaButton.style.marginLeft = '10px';
+            ctaButton.style.flexShrink = '0';
+        }
+        
+        // Adjust dropdown positioning
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+            dropdown.style.position = 'relative';
+        });
+    }
+}
+
+// Run on load and resize
+document.addEventListener('DOMContentLoaded', optimizeNavbarForTablet);
+window.addEventListener('resize', optimizeNavbarForTablet);
+
+// Handle tablet touch events for dropdowns
+document.addEventListener('DOMContentLoaded', function() {
+    const isTablet = window.innerWidth >= 769 && window.innerWidth <= 1024;
+    
+    if (isTablet) {
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                const dropdown = this.parentElement;
+                const isOpen = dropdown.classList.contains('active');
+                
+                // Close all other dropdowns
+                document.querySelectorAll('.dropdown.active').forEach(d => {
+                    if (d !== dropdown) d.classList.remove('active');
+                });
+                
+                // Toggle current dropdown
+                dropdown.classList.toggle('active');
+            });
+        });
+        
+        // Close dropdowns when clicking outside
+        document.addEventListener('touchstart', function(e) {
+            if (!e.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown.active').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        });
+    }
+});
     </script>
 
     <script src="Customscroll.js"></script>
     <script src="script/navbar.js"></script>
-    
+
     <!-- Chatbot -->
     <link rel="stylesheet" href="./CSS/chatbot.css">
     <script src="./script/chatbot.js"></script>
@@ -4024,4 +4329,3 @@
 </body>
 
 </html>
-
