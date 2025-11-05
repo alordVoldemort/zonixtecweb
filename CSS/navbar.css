@@ -165,6 +165,36 @@ nav {
 }
 
 @media (max-width: 768px) {
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex: 1;
+    justify-content:flex-start;
+}
+
+
+
+.nav-links > a,
+.nav-links .dropdown > a {
+    color: var(--light);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    justify-content: center;
+}
+    
+
+
+
+
+
+
     .mobile-menu-btn {
         display: flex;
     }
@@ -199,5 +229,69 @@ nav {
     
     .dropdown.active .dropdown-content {
         max-height: 600px;
+    }
+}
+
+
+@media only screen and (min-width:768px) {
+    .nav-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+}
+    
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        /* Existing styles */
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: rgba(10, 10, 26, 0.98);
+        flex-direction: column;
+        padding: 80px 20px 20px;
+        transition: right 0.4s ease;
+        overflow-y: auto;
+        z-index: 1001;
+        box-shadow: -5px 0 20px rgba(0,0,0,0.15);
+    }
+    .nav-links.active {
+        right: 0;
+    }
+    /* Prevent scrolling behind sidebar when active */
+    body.mobile-menu-open {
+        overflow: hidden;
+    }
+    /* Dropdown styling for mobile */
+    .dropdown-content {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        max-height: 0;
+        overflow: hidden;
+        box-shadow: none;
+        margin-top: 0;
+        border-radius: 0;
+        padding: 0;
+        background: none;
+        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .dropdown.active .dropdown-content {
+        max-height: 600px;
+        padding: 5px 0 10px;
+        background: rgba(10, 10, 26, 0.96);
     }
 }
