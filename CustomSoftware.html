@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Custom Software Development Services | Zonixtec</title>
     <meta name="description" content="Unlock innovation with Zonixtec's custom software development services.
 We design scalable, secure, and user-friendly applications tailored to your business needs.">
@@ -908,6 +908,273 @@ We design scalable, secure, and user-friendly applications tailored to your busi
             color: #ef4444;
             margin: 0 5px;
         }
+        /* ===== RESPONSIVE FIXES ===== */
+@media (max-width: 1200px) {
+    .process-steps {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .process-steps::before {
+        display: none;
+    }
+    
+    .process-step {
+        flex: 0 0 calc(33.333% - 20px);
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .process-step {
+        flex: 0 0 calc(50% - 20px);
+    }
+    
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .software-section {
+        padding: 120px 0 60px;
+    }
+    
+    .software-hero {
+        margin: 0 auto 50px;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .benefits-grid,
+    .service-types-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .benefit-card,
+    .service-type-card {
+        padding: 20px;
+    }
+    
+    .process-steps {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    
+    .process-step {
+        flex: 0 0 100%;
+        max-width: 300px;
+    }
+    
+    .step-number {
+        width: 60px;
+        height: 60px;
+        font-size: 1.4rem;
+    }
+    
+    .tech-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .tech-section {
+        padding: 40px 20px;
+        margin: 40px 0;
+    }
+    
+    .challenges-container,
+    .what-we-bring-container,
+    .impact-container,
+    .faq-section {
+        padding: 30px 20px;
+    }
+    
+    .challenges-title,
+    .what-we-bring-title,
+    .impact-title,
+    .faq-title {
+        font-size: 1.8rem;
+    }
+    
+    .cta-container {
+        padding: 40px 20px;
+        margin-bottom: 50px;
+    }
+    
+    .cta-title {
+        font-size: 1.8rem;
+    }
+    
+    .cta-description {
+        font-size: 1rem;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .footer-col {
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .benefit-icon,
+    .service-type-icon {
+        font-size: 2rem;
+    }
+    
+    .benefit-title,
+    .service-type-title {
+        font-size: 1.3rem;
+    }
+    
+    .process-step {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    
+    .step-title {
+        font-size: 1.1rem;
+    }
+    
+    .step-description {
+        font-size: 0.9rem;
+    }
+    
+    .cta-button,
+    .cta-button-large {
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+    }
+    
+    .faq-question {
+        font-size: 1.1rem;
+    }
+}
+
+/* Fix for mobile menu */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 80px;
+        gap: 20px;
+        transition: right 0.3s ease;
+        z-index: 999;
+        overflow-y: auto;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links a {
+        padding: 12px 20px;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .dropdown-content {
+        position: static;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        padding: 10px 0 10px 20px;
+    }
+    
+    .dropdown-content a {
+        margin: 5px 0;
+        padding: 8px 15px;
+    }
+}
+
+/* Fix for form elements on mobile */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .form-group-modal {
+        width: 100%;
+    }
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Improve touch targets for mobile */
+@media (max-width: 768px) {
+    .cta-button,
+    .cta-button-large,
+    .nav-links a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .faq-question {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+}
 
         @media (min-width: 768px) {
 
