@@ -159,6 +159,8 @@
             }
         }
 
+
+
         /* Mobile animation optimizations */
         @media (max-width: 768px) {
 
@@ -264,25 +266,71 @@
         }
 
         /* Prevent layout shifts on mobile */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 15px;
-            }
+        /* Consolidated Mobile Responsive Styles */
+@media (max-width: 768px) {
+    /* Ensure consistent container padding */
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Hero section adjustments for fixed header */
+    .hero {
+        margin-top: 70px; /* Account for fixed header */
+        height: calc(100vh - 70px);
+        min-height: 400px;
+    }
+    
+    /* Fix any potential z-index conflicts */
+    .hero-content {
+        z-index: 1;
+    }
+    
+    /* Ensure proper spacing in other sections */
+    .section-padding {
+        padding: 60px 0;
+    }
+    
+    /* Adjust section titles for mobile */
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Services grid adjustment */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* Testimonials adjustment */
+    .testimonials-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
 
-            .hero-content {
-                padding: 0 15px;
-                width: 100%;
-            }
-
-            .about-container,
-            .contact-container,
-            .services-grid,
-            .industries-container {
-                width: 100%;
-                margin: 0;
-                padding: 0;
-            }
-        }
+/* Very small screen optimizations */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .secondary-button {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
+}
 
         /* Fix viewport height issues on mobile */
         .hero {
@@ -1942,9 +1990,9 @@
         }
 
         .scroll-content {
-            max-width: 1000px;
             text-align: center;
             padding: 40px;
+            margin-bottom: 40px;
             background: rgba(10, 10, 26, 0.8);
             border-radius: 20px;
             border: 1px solid rgba(0, 242, 255, 0.2);
@@ -2185,6 +2233,7 @@
             .scroll-content {
                 padding: 20px 15px;
                 margin: 0 15px;
+                margin-bottom: 30px;
             }
 
             .scroll-content h2 {
@@ -2669,7 +2718,6 @@
                 font-size: 0.9rem;
             }
         }
-
 
         /* iPad and Tablet Specific Navbar Fixes */
 @media (min-width: 769px) and (max-width: 1024px) {
