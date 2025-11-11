@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Why Zonixtec - Your Trusted Technology Partner</title>
+    <link rel="stylesheet" href="./CSS/allDropdown.css">
+    <link rel="stylesheet" href="./CSS/chatbot.css">
+    <link rel="stylesheet" href="./CSS/navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -61,6 +64,14 @@
 
         .containerr {
             width: 100%;
+            overflow: hidden;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .containerrr {
+            width: 100%;
+            display: none;
             overflow: hidden;
             max-width: 900px;
             margin: 0 auto;
@@ -131,24 +142,7 @@
             align-items: center;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--light);
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a:not(.cta-buttons):hover {
-            color: var(--secondary);
-        }
+        
 
         .cta-buttons {
             background: linear-gradient(45deg, var(--primary), var(--secondary));
@@ -369,6 +363,12 @@
             justify-content: center;
             margin-bottom: 25px;
         }
+        .testimonial-controls3 {
+            display: inline-flex;
+            gap: 18px;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
 
         .testimonial-nav {
             background: none;
@@ -510,6 +510,42 @@
             font-size: 0.9rem;
         }
 
+
+
+
+
+
+
+        
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px 20px;
+            color: var(--light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 0.95rem;
+            border: 4px solid transparent;
+            margin: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .dropdown-content a:hover {
+            background: rgba(37, 99, 235, 0.15);
+            color: var(--secondary);
+            border: 1px solid var(--secondary);
+            transform: translateX(5px);
+        }
+
+        
+         .dropdown-toggle {
+                justify-content: space-between;
+                padding: 15px 30px;
+            }
+
+        
+
         /* Responsive Styles */
         @media (max-width: 880px) {
             .why-flex {
@@ -526,10 +562,45 @@
                 flex: 0 0 100%;
                 min-width: 100%;
             }
+            .containerrr {
+            width: 100%;
+            display: none;
+            overflow: hidden;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .benefits-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
         }
 
         @media (max-width: 768px) {
-            .nav-links {
+
+            .benefits-row {
+            display: list-item;
+            flex-wrap: wrap;
+            gap: 30px;
+            overflow: hidden;
+            max-width: 320px;
+            margin-bottom: 40px;
+        }
+
+            .containerrr {
+            width: 100%;
+            display: block;
+            overflow: hidden;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+            /* .nav-links {
                 position: fixed;
                 top: 0;
                 right: -100%;
@@ -548,7 +619,7 @@
 
             .nav-links.active {
                 right: 0;
-            }
+            } */
 
             .mobile-menu-btn {
                 display: flex;
@@ -585,19 +656,77 @@
     <header id="header">
         <div class="container">
             <nav>
-                <a href="#" class="logo">
-                    <span style="color: var(--light);">Zonix</span><span style="color: var(--secondary);">tec</span>
+                <a href="index.html" class="logo">
+                    <img src="./Assets/Logo.svg" alt="Zonixtec Logo" style="height: 40px; width: auto;">
                 </a>
                 <div class="nav-links">
-                    <a href="#">About Us</a>
-                    <a href="#">Services</a>
-                    <a href="#">Career</a>
-                    <a href="#">Contact</a>
-                    <a href="#" class="cta-buttons">
-                        <i class="fas fa-phone-alt"></i> Book A 30 Min Call
+    
+                    <!-- <a href="aboutus.html">About Us</a> -->
+                    <!-- ABOUT DROPDOWN TRIGGER -->
+                    <a href="#" class="about-toggle">About Us</a>
+    
+                    <!-- ABOUT DROPDOWN PANEL -->
+                    <div class="about-dropdown">
+                        <div>
+                            <h2>About Us</h2>
+                        </div>
+    
+                        <div class="about-container">
+    
+                            <div class="about-links">
+                                <div>
+                                    <a href="aboutus.html">About Zonixtec</a>
+                                    <a href="Why-Zonixtec.html">Why Zonixtec?</a>
+                                    <a href="#">Our Journey</a>
+                                </div>
+                                <div>
+                                    <a href="#">From CEO’s Desk</a>
+                                    <a href="#">Leadership</a>
+                                    <a href="#">Case Study</a>
+                                </div>
+                            </div>
+    
+                            <span class="about-close">&times;</span>
+    
+                            <div class="about-image">
+                                <img src="./Assets/ai-nuclear-energy-background-future-innovation-disruptive-technology 3.png"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+    
+    
+    
+    
+                    <div class="dropdown">
+                        <a href="Services.html" class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <div class="dropdown-scroll">
+                                <a href="web-design-development.html">Web Design & Development</a>
+                                <a href="web-app-development.html">Web App Development</a>
+                                <a href="CustomSoftware.html">Custom Software Development</a>
+                                <a href="crm-solutions.html">Custom CRM Solutions</a>
+                                <a href="erp-solutions.html">Custom ERP Solutions</a>
+                                <a href="Billing-invoice.html">Billing-Invoice Solutions</a>
+                                <a href="AIStrategy.html">AI Strategy & Consulting</a>
+                                <a href="DigitalMarketing.html">Digital Marketing Services</a>
+                                <a href="MobileDevelopment.html">Mobile App Development</a>
+                                <a href="ui.html">UI/UX Design Services</a>
+                                <a href="CloudSolutions.html">Cloud Solutions</a>
+                                <a href="hrms-solutions.html">HRMS Solutions</a>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <a href="carrer.html">Career</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="javascript:void(0);" class="cta-buttons" onclick="openBookingModal()">
+                        <i class="fas fa-phone-alt"></i>Book A 30 Min Call
                     </a>
                 </div>
-                <button class="mobile-menu-btn" aria-label="Toggle mobile menu" onclick="toggleMobileMenu()">
+    
+                <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -697,22 +826,38 @@
             <h2 class="section-title">How Choosing Zonixtec Helps Your Business</h2>
             <p class="section-subtitle">Your Trusted Partner for Reliable & Scalable Digital Solutions</p>
 
+
+            <div class="containerrr">
+                <div class="testimonial-controls3">
+                    <button id="testimonialPrev" class="testimonial-nav" aria-label="Previous">
+                        <i class="fa fa-chevron-circle-left"></i>
+                    </button>
+                    <button id="testimonialNext" class="testimonial-nav" aria-label="Next">
+                        <i class="fa fa-chevron-circle-right"></i>
+                    </button>
+                </div>
+            </div>
             <div class="container benefits-row">
-                <div class="benefit-box">
-                    <img src="./Assets/Faster workflow execution.png"> </img>
-                </div>
-                <div class="benefit-box">
-                    <!-- <img src="./Assets/Faster workflow execution.png"
-                                                            style="width: 100%; height: 150px; background: rgba(100, 200, 255, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--secondary); margin-bottom: 14px;">
-                                                            </img> -->
-                    <img src="./Assets/Faster workflow execution.png"> </img>
-                </div>
-                <div class="benefit-box">
-                    <img src="./Assets/Faster workflow execution.png"> </img>
-                </div>
-                <div class="benefit-box">
-                    <img src="./Assets/Faster workflow execution.png"> </img>
-                </div>
+                <!-- <div class="containerr testimonial1"> -->
+                    <div id="feature-list" class="testimonial-container">
+                        <div class="benefit-box">
+                            <img src="./Assets/Faster workflow execution.png"> </img>
+                        </div>
+                        <div class="benefit-box">
+                            <!-- <img src="./Assets/Faster workflow execution.png"
+                                                                                    style="width: 100%; height: 150px; background: rgba(100, 200, 255, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--secondary); margin-bottom: 14px;">
+                                                                                    </img> -->
+                            <img src="./Assets/Faster workflow execution.png"> </img>
+                        </div>
+                        <div class="benefit-box">
+                            <img src="./Assets/Faster workflow execution.png"> </img>
+                        </div>
+                        <div class="benefit-box">
+                            <img src="./Assets/Faster workflow execution.png"> </img>
+                        </div>
+
+                    </div>
+                
             </div>
 
         </section>
@@ -837,34 +982,119 @@
         <footer class="footer">
             <div class="container">
                 <div class="footer-container">
+                    <!-- Solutions Section with Dropdown -->
                     <div class="footer-col">
                         <h3>Solutions</h3>
                         <div class="footer-links">
-                            <a href="#"><i class="fas fa-chevron-right"></i> AI Services</a>
-                            <a href="#"><i class="fas fa-chevron-right"></i> Cloud Solutions</a>
-                            <a href="#"><i class="fas fa-chevron-right"></i> Custom Software</a>
-                            <a href="#"><i class="fas fa-chevron-right"></i> Mobile Development</a>
+        
+                            <!-- Next-Gen Tech Dropdown -->
+                            <div class="footer-dropdown">
+                                <div class="footer-dropdown-header">
+                                    <span><i class="fas fa-chevron-right"></i> Next-Gen Tech</span>
+                                    <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                                </div>
+                                <div class="footer-dropdown-content">
+                                    <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> AI & Machine
+                                        Learning</a>
+                                    <a href="CloudSolutions.html"><i class="fas fa-chevron-right"></i> Cloud Solutions</a>
+                                </div>
+                            </div>
+        
+                            <!-- AI Services Dropdown -->
+                            <div class="footer-dropdown">
+                                <div class="footer-dropdown-header">
+                                    <span><i class="fas fa-chevron-right"></i> AI Services</span>
+                                    <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                                </div>
+                                <div class="footer-dropdown-content">
+                                    <a href="AIServices.html"><i class="fas fa-chevron-right"></i> AI Services Overview</a>
+                                    <a href="AIStrategy.html"><i class="fas fa-chevron-right"></i> AI Strategy &
+                                        Consulting</a>
+                                    <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> Machine Learning</a>
+                                    <a href="NLP.html"><i class="fas fa-chevron-right"></i> Natural Language Processing
+                                        (NLP)</a>
+                                    <a href="ComputerVision.html"><i class="fas fa-chevron-right"></i> Computer Vision</a>
+                                    <a href="PredictiveAnalytics.html"><i class="fas fa-chevron-right"></i> Predictive
+                                        Analysis</a>
+                                    <a href="ProcessAutomation.html"><i class="fas fa-chevron-right"></i> Process
+                                        Automation</a>
+                                </div>
+                            </div>
+        
+                            <!-- Core Development Dropdown -->
+                            <div class="footer-dropdown">
+                                <div class="footer-dropdown-header">
+                                    <span><i class="fas fa-chevron-right"></i> Core Development</span>
+                                    <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                                </div>
+                                <div class="footer-dropdown-content">
+                                    <a href="CustomSoftware.html"><i class="fas fa-chevron-right"></i> Custom Software
+                                        Development</a>
+                                    <a href="MobileDevelopment.html"><i class="fas fa-chevron-right"></i> Mobile App
+                                        Development</a>
+                                </div>
+                            </div>
+        
+                            <!-- Design & Experience Dropdown -->
+                            <div class="footer-dropdown">
+                                <div class="footer-dropdown-header">
+                                    <span><i class="fas fa-chevron-right"></i> Design & Experience</span>
+                                    <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                                </div>
+                                <div class="footer-dropdown-content">
+                                    <a href="ui.html"><i class="fas fa-chevron-right"></i> UI/UX Design</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
+        
+                    <!-- Insights Section -->
+                    <div class="footer-col">
+                        <h3>Insights</h3>
+                        <div class="footer-links">
+                            <a href="CaseStudies.html"><i class="fas fa-chevron-right"></i> Case Studies</a>
+                            <a href="Blogs.html"><i class="fas fa-chevron-right"></i> Blogs</a>
+                            <a href="CEOdesk.html"><i class="fas fa-chevron-right"></i> From CEO's Desk</a>
+                            <!-- <a href="FutureZonixtec.html"><i class="fas fa-chevron-right"></i> Future of Zonixtec</a> -->
+                            <a href="FAQs.html"><i class="fas fa-chevron-right"></i> FAQs</a>
+                            <a href="Guides.html"><i class="fas fa-chevron-right"></i> Guides</a>
+                            <a href="HowTos.html"><i class="fas fa-chevron-right"></i> How-tos</a>
+                        </div>
+                    </div>
+        
+                    <!-- Company Section -->
                     <div class="footer-col">
                         <h3>Company</h3>
                         <div class="footer-links">
-                            <a href="#"><i class="fas fa-chevron-right"></i> About Us</a>
-                            <a href="#"><i class="fas fa-chevron-right"></i> Careers</a>
-                            <a href="#"><i class="fas fa-chevron-right"></i> Contact</a>
+                            <a href="aboutus.html"><i class="fas fa-chevron-right"></i> About Us</a>
+                            <a href="aboutus.html"><i class="fas fa-chevron-right"></i> Our Story</a>
+                            <!-- <a href="aboutus.html"><i class="fas fa-chevron-right"></i> Mission & Vision</a> -->
+                            <a href="aboutus.html" id="aboutLink">
+                                <i class="fas fa-chevron-right"></i> Mission & Vision
+                            </a>
+        
+        
+                            <a href="aboutus.html" id="OurJou"><i class="fas fa-chevron-right"></i> Our Journey</a>
+                            <a href="aboutus.html" id="OurCore"><i class="fas fa-chevron-right"></i> Core Values</a>
+                            <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
+                            <a href="Leadership.html"><i class="fas fa-chevron-right"></i> Leadership</a>
                         </div>
                     </div>
+        
+                    <!-- Quick Links Section -->
                     <div class="footer-col">
                         <h3>Quick Links</h3>
                         <div class="footer-links">
-                            <a href="#"><i class="fas fa-chevron-right"></i> Home</a>
-                            <a href="#"><i class="fas fa-chevron-right"></i> Testimonials</a>
-                            <a href="#"><i class="fas fa-chevron-right"></i> Case Studies</a>
+                            <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
+                            <a href="Testimonials.html"><i class="fas fa-chevron-right"></i> Testimonials</a>
+                            <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
+                            <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a>
                         </div>
                     </div>
                 </div>
+        
                 <div class="footer-bottom">
-                    <p>&copy; 2024 Zonixtec. All Rights Reserved. | Designed with ❤️ by Zonixtec Team</p>
+                    <p>&copy; 2024 Zonixtec. All Rights Reserved. | Designed with by Zonixtec Team</p>
                 </div>
             </div>
         </footer>
@@ -876,13 +1106,14 @@
 
     <script>
         // ==============================
-        // WHAT MAKES ZONIXTEC DIFFERENT SLIDER
+        // WHAT MAKES ZONIXTEC DIFFERENT SLIDER (AUTO + MANUAL)
         // ==============================
         let featureIndex = 0;
         const featureList = document.getElementById("feature-list");
         const featureBoxes = featureList.children;
         const featurePrevBtn = document.getElementById("featurePrev");
         const featureNextBtn = document.getElementById("featureNext");
+        let featureAutoSlide;
 
         function getVisibleFeatures() {
             return window.innerWidth > 880 ? 2 : 1;
@@ -899,8 +1130,10 @@
             const visibleFeatures = getVisibleFeatures();
             const maxIndex = featureBoxes.length - visibleFeatures;
             featureIndex += direction;
+
             if (featureIndex < 0) featureIndex = 0;
-            if (featureIndex > maxIndex) featureIndex = maxIndex;
+            if (featureIndex > maxIndex) featureIndex = 0; // loop back to start
+
             const cardWidth = featureBoxes[0].offsetWidth;
             const gap = 34;
             const offset = featureIndex * (cardWidth + gap);
@@ -908,25 +1141,53 @@
             updateFeatureButtons();
         }
 
-        featurePrevBtn.addEventListener("click", () => scrollFeatures(-1));
-        featureNextBtn.addEventListener("click", () => scrollFeatures(1));
+        // Auto-slide setup
+        function startFeatureAutoSlide() {
+            featureAutoSlide = setInterval(() => {
+                scrollFeatures(1);
+            }, 1000); // every 4 seconds
+        }
+
+        function stopFeatureAutoSlide() {
+            clearInterval(featureAutoSlide);
+        }
+
+        // Event listeners
+        featurePrevBtn.addEventListener("click", () => {
+            stopFeatureAutoSlide();
+            scrollFeatures(-1);
+            startFeatureAutoSlide();
+        });
+
+        featureNextBtn.addEventListener("click", () => {
+            stopFeatureAutoSlide();
+            scrollFeatures(1);
+            startFeatureAutoSlide();
+        });
+
+        featureList.addEventListener("mouseenter", stopFeatureAutoSlide);
+        featureList.addEventListener("mouseleave", startFeatureAutoSlide);
+
         window.addEventListener("resize", () => {
             featureIndex = 0;
             featureList.style.transform = "translateX(0)";
             updateFeatureButtons();
         });
+
         updateFeatureButtons();
+        startFeatureAutoSlide();
     </script>
     
     <script>
         // ==============================
-        // CLIENT TESTIMONIAL SLIDER
+        // CLIENT TESTIMONIAL SLIDER (AUTO + MANUAL)
         // ==============================
         let testimonialIndex = 0;
         const testimonialList = document.getElementById('testimonial-list');
         const testimonials = testimonialList.children;
         const testimonialPrev = document.getElementById('testimonialPrev');
         const testimonialNext = document.getElementById('testimonialNext');
+        let testimonialAutoSlide;
 
         function getVisibleCards() {
             return window.innerWidth > 880 ? 2 : 1;
@@ -943,8 +1204,10 @@
             const visibleCards = getVisibleCards();
             const maxIndex = testimonials.length - visibleCards;
             testimonialIndex += direction;
+
             if (testimonialIndex < 0) testimonialIndex = 0;
-            if (testimonialIndex > maxIndex) testimonialIndex = maxIndex;
+            if (testimonialIndex > maxIndex) testimonialIndex = 0; // loop back to start
+
             const cardWidth = testimonials[0].offsetWidth;
             const gap = 34;
             const offset = testimonialIndex * (cardWidth + gap);
@@ -952,15 +1215,46 @@
             updateTestimonialButtons();
         }
 
-        testimonialPrev.addEventListener("click", () => scrollTestimonials(-1));
-        testimonialNext.addEventListener("click", () => scrollTestimonials(1));
+        // Auto-slide setup
+        function startTestimonialAutoSlide() {
+            testimonialAutoSlide = setInterval(() => {
+                scrollTestimonials(1);
+            }, 1000); // every 5 seconds
+        }
+
+        function stopTestimonialAutoSlide() {
+            clearInterval(testimonialAutoSlide);
+        }
+
+        testimonialPrev.addEventListener("click", () => {
+            stopTestimonialAutoSlide();
+            scrollTestimonials(-1);
+            startTestimonialAutoSlide();
+        });
+
+        testimonialNext.addEventListener("click", () => {
+            stopTestimonialAutoSlide();
+            scrollTestimonials(1);
+            startTestimonialAutoSlide();
+        });
+
+        testimonialList.addEventListener("mouseenter", stopTestimonialAutoSlide);
+        testimonialList.addEventListener("mouseleave", startTestimonialAutoSlide);
+
         window.addEventListener("resize", () => {
             testimonialIndex = 0;
             testimonialList.style.transform = "translateX(0)";
             updateTestimonialButtons();
         });
+
         updateTestimonialButtons();
+        startTestimonialAutoSlide();
     </script>
+
+    <script src="./script/navbar.js"></script>
+    <script src="./script/chatbot.js"></script>
+    
+
 
 </body>
 
