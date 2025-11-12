@@ -267,7 +267,7 @@
             /* background: rgba(30, 41, 59, 0.85); */
             /* border-radius: 14px; */
             padding: 22px 10px 18px 10px;
-            min-width: 170px;
+            min-width: 208px;
             max-width: 220px;
             text-align: center;
             /* border: 1px solid #23334a; */
@@ -645,6 +645,8 @@
 
         @media (max-width: 768px) {
 
+            
+
 
              .containerr {
             width: 100%;
@@ -738,6 +740,8 @@
         }
 
         @media (max-width: 600px) {
+
+            
             .section-title {
                 font-size: 1.3rem;
             }
@@ -772,6 +776,8 @@
             
         }
     </style>
+
+   
 </head>
 
 <body>
@@ -945,45 +951,39 @@
 
 
         <!-- Benefits Section -->
-        <section class="section-padding">
-            <h2 class="section-title">How Choosing Zonixtec Helps Your Business</h2>
-            <p class="section-subtitle">Your Trusted Partner for Reliable & Scalable Digital Solutions</p>
+       <section class="section-padding">
+  <h2 class="section-title">How Choosing Zonixtec Helps Your Business</h2>
+  <p class="section-subtitle">
+    Your Trusted Partner for Reliable & Scalable Digital Solutions
+  </p>
 
+  <!-- <div class="containerrr">
+    <div class="testimonial-controls3">
+      <button id="testimonialPrev" class="testimonial-nav" aria-label="Previous">
+        <i class="fa fa-chevron-circle-left"></i>
+      </button>
+      <button id="testimonialNext" class="testimonial-nav" aria-label="Next">
+        <i class="fa fa-chevron-circle-right"></i>
+      </button>
+    </div>
+  </div> -->
 
-            <div class="containerrr">
-                <div class="testimonial-controls3">
-                    <button id="testimonialPrev" class="testimonial-nav" aria-label="Previous">
-                        <i class="fa fa-chevron-circle-left"></i>
-                    </button>
-                    <button id="testimonialNext" class="testimonial-nav" aria-label="Next">
-                        <i class="fa fa-chevron-circle-right"></i>
-                    </button>
+  <div class="container benefits-row">
+    
+
+      <div class="testimonial-wrapper">
+                    <div id="testimonial-list" class="testimonial-container">
+                       
+      <div class="benefit-box"><img src="./Assets/Faster workflow execution.png" alt="Faster workflow execution"></div>
+      <div class="benefit-box"><img src="./Assets/Better customer experience.png" alt="Better customer experience"></div>
+      <div class="benefit-box"><img src="./Assets/Higher productivity.png" alt="Higher productivity"></div>
+      <div class="benefit-box"><img src="./Assets/Scalable systems for future growth.png" alt="Scalable systems"></div>
+    </div>
+                    
                 </div>
-            </div>
-            <div class="container benefits-row">
-                <!-- <div class="containerr testimonial1"> -->
-                    <div id="feature-list" class="testimonial-container">
-                        <div class="benefit-box">
-                            <img src="./Assets/Faster workflow execution.png"> </img>
-                        </div>
-                        <div class="benefit-box">
-                            <!-- <img src="./Assets/Faster workflow execution.png"
-                                                                                    style="width: 100%; height: 150px; background: rgba(100, 200, 255, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--secondary); margin-bottom: 14px;">
-                                                                                    </img> -->
-                            <img src="./Assets/Better customer experience.png"> </img>
-                        </div>
-                        <div class="benefit-box">
-                            <img src="./Assets/Higher productivity.png"> </img>
-                        </div>
-                        <div class="benefit-box">
-                            <img src="./Assets/Scalable systems for future growth.png"> </img>
-                        </div>
+  </div>
+</section>
 
-                    </div>
-                
-            </div>
-
-        </section>
 
         <!-- Testimonials Section -->
         <section class="section-padding" id="testimonials">
@@ -1903,6 +1903,85 @@
         // Make functions global for onclick handlers
         window.changeSlide = changeSlide;
     </script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  let featureIndex = 0;
+  const featureList = document.getElementById("feature-list");
+  const featureBoxes = featureList ? featureList.children : [];
+  const featurePrevBtn = document.getElementById("testimonialPrev");
+  const featureNextBtn = document.getElementById("testimonialNext");
+  let featureAutoSlide;
+
+  if (!featureList || featureBoxes.length === 0) return;
+
+  // Number of visible slides based on screen width
+  function getVisibleFeatures() {
+    // if (window.innerWidth > 1200) return 3; // desktop
+    if (window.innerWidth > 880) return 2;  // tablet
+    return 1;                               // mobile
+  }
+
+  // Scroll feature cards
+  function scrollFeatures(direction = 1) {
+    const visible = getVisibleFeatures();
+    const maxIndex = featureBoxes.length - visible;
+    featureIndex += direction;
+
+    if (featureIndex > maxIndex) featureIndex = 0; // loop start
+    if (featureIndex < 0) featureIndex = maxIndex; // loop end
+
+    const cardWidth = featureBoxes[0].offsetWidth;
+    const gap = 34;
+    const offset = featureIndex * (cardWidth + gap);
+    featureList.style.transform = `translateX(-${offset}px)`;
+  }
+
+  // Start auto-slide
+  function startFeatureAutoSlide() {
+    stopFeatureAutoSlide();
+    featureAutoSlide = setInterval(() => {
+      scrollFeatures(1);
+    }, 1000); // every 2.5s
+  }
+
+  // Stop auto-slide
+  function stopFeatureAutoSlide() {
+    if (featureAutoSlide) clearInterval(featureAutoSlide);
+  }
+
+  // Manual navigation
+  featurePrevBtn.addEventListener("click", () => {
+    stopFeatureAutoSlide();
+    scrollFeatures(-1);
+    startFeatureAutoSlide();
+  });
+
+  featureNextBtn.addEventListener("click", () => {
+    stopFeatureAutoSlide();
+    scrollFeatures(1);
+    startFeatureAutoSlide();
+  });
+
+  // Pause on hover (optional)
+  featureList.addEventListener("mouseenter", stopFeatureAutoSlide);
+  featureList.addEventListener("mouseleave", startFeatureAutoSlide);
+
+  // Reset on resize
+  window.addEventListener("resize", () => {
+    featureIndex = 0;
+    featureList.style.transform = "translateX(0)";
+    startFeatureAutoSlide();
+  });
+
+  // Initialize slider
+  startFeatureAutoSlide();
+});
+</script>
+
+
+
 
     <script src="./script/navbar.js"></script>
     <script src="./script/chatbot.js"></script>
