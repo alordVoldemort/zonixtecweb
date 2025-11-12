@@ -951,22 +951,11 @@
 
 
         <!-- Benefits Section -->
-       <section class="section-padding">
+       <!-- <section class="section-padding">
   <h2 class="section-title">How Choosing Zonixtec Helps Your Business</h2>
   <p class="section-subtitle">
     Your Trusted Partner for Reliable & Scalable Digital Solutions
   </p>
-
-  <!-- <div class="containerrr">
-    <div class="testimonial-controls3">
-      <button id="testimonialPrev" class="testimonial-nav" aria-label="Previous">
-        <i class="fa fa-chevron-circle-left"></i>
-      </button>
-      <button id="testimonialNext" class="testimonial-nav" aria-label="Next">
-        <i class="fa fa-chevron-circle-right"></i>
-      </button>
-    </div>
-  </div> -->
 
   <div class="container benefits-row">
     
@@ -982,31 +971,34 @@
                     
                 </div>
   </div>
+</section> -->
+
+        <!-- How Choosing Zonixtec Helps Your Business -->
+<section class="section-padding">
+  <h2 class="section-title">How Choosing Zonixtec Helps Your Business</h2>
+  <div class="container benefits-row">
+    <div class="testimonial-wrapper" id="benefit-wrapper">
+      <div id="benefit-list" class="testimonial-container">
+        <div class="benefit-box"><img src="./Assets/Faster workflow execution.png" alt="Faster workflow execution"></div>
+        <div class="benefit-box"><img src="./Assets/Better customer experience.png" alt="Better customer experience"></div>
+        <div class="benefit-box"><img src="./Assets/Higher productivity.png" alt="Higher productivity"></div>
+        <div class="benefit-box"><img src="./Assets/Scalable systems for future growth.png" alt="Scalable systems"></div>
+      </div>
+    </div>
+  </div>
 </section>
 
 
-        <!-- Testimonials Section -->
+        
+
+
+
         <section class="section-padding" id="testimonials">
-            <h2 class="section-title">Client Testimonials</h2>
-            <p class="section-subtitle" style="margin-bottom:24px;">
-                Discover what our clients say about working with Zonixtec and the transformative impact our software
-                solutions have made on their businesses.
-            </p>
-
-            <div class="container">
-                <div class="testimonial-controls">
-                    <button id="testimonialPrev" class="testimonial-nav" aria-label="Previous">
-                        <i class="fa fa-chevron-circle-left"></i>
-                    </button>
-                    <button id="testimonialNext" class="testimonial-nav" aria-label="Next">
-                        <i class="fa fa-chevron-circle-right"></i>
-                    </button>
-                </div>
-
-                <div class="testimonial-wrapper">
-                    <div id="testimonial-list" class="testimonial-container">
-                        <!-- Testimonial 1 -->
-                        <div class="testimonial-card">
+  <h2 class="section-title">Client Testimonials</h2>
+  <div class="container">
+    <div class="testimonial-wrapper" id="testimonial-wrapper">
+      <div id="testimonial-list" class="testimonial-container">
+            <div class="testimonial-card">
                             <h3>[Client Name]</h3>
                             <span class="platform">[Platform Type]</span>
                             <p>
@@ -1088,10 +1080,11 @@
                                 productivity increased by 50%."
                             </p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         <!-- CTA Section -->
         <div class="container">
@@ -1304,78 +1297,9 @@
         startFeatureAutoSlide();
     </script>
     
-    <script>
-        // ==============================
-        // CLIENT TESTIMONIAL SLIDER (AUTO + MANUAL)
-        // ==============================
-        let testimonialIndex = 0;
-        const testimonialList = document.getElementById('testimonial-list');
-        const testimonials = testimonialList.children;
-        const testimonialPrev = document.getElementById('testimonialPrev');
-        const testimonialNext = document.getElementById('testimonialNext');
-        let testimonialAutoSlide;
+   
 
-        function getVisibleCards() {
-            return window.innerWidth > 880 ? 2 : 1;
-        }
-
-        function updateTestimonialButtons() {
-            const visibleCards = getVisibleCards();
-            const maxIndex = testimonials.length - visibleCards;
-            testimonialPrev.disabled = testimonialIndex === 0;
-            testimonialNext.disabled = testimonialIndex >= maxIndex;
-        }
-
-        function scrollTestimonials(direction) {
-            const visibleCards = getVisibleCards();
-            const maxIndex = testimonials.length - visibleCards;
-            testimonialIndex += direction;
-
-            if (testimonialIndex < 0) testimonialIndex = 0;
-            if (testimonialIndex > maxIndex) testimonialIndex = 0; // loop back to start
-
-            const cardWidth = testimonials[0].offsetWidth;
-            const gap = 34;
-            const offset = testimonialIndex * (cardWidth + gap);
-            testimonialList.style.transform = `translateX(-${offset}px)`;
-            updateTestimonialButtons();
-        }
-
-        // Auto-slide setup
-        function startTestimonialAutoSlide() {
-            testimonialAutoSlide = setInterval(() => {
-                scrollTestimonials(1);
-            }, 1000); // every 1 seconds
-        }
-
-        function stopTestimonialAutoSlide() {
-            clearInterval(testimonialAutoSlide);
-        }
-
-        testimonialPrev.addEventListener("click", () => {
-            stopTestimonialAutoSlide();
-            scrollTestimonials(-1);
-            startTestimonialAutoSlide();
-        });
-
-        testimonialNext.addEventListener("click", () => {
-            stopTestimonialAutoSlide();
-            scrollTestimonials(1);
-            startTestimonialAutoSlide();
-        });
-
-        testimonialList.addEventListener("mouseenter", stopTestimonialAutoSlide);
-        testimonialList.addEventListener("mouseleave", startTestimonialAutoSlide);
-
-        window.addEventListener("resize", () => {
-            testimonialIndex = 0;
-            testimonialList.style.transform = "translateX(0)";
-            updateTestimonialButtons();
-        });
-
-        updateTestimonialButtons();
-        startTestimonialAutoSlide();
-    </script>
+    
     
     <script>
         // Header animation on load
@@ -1980,7 +1904,63 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
+<script>// ==============================
+// GENERIC AUTO SCROLLER FUNCTION
+// ==============================
+function createAutoScroller(containerId, interval = 3000) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
 
+  const items = container.children;
+  let index = 0;
+  let autoScroll;
+
+  function getVisibleItems() {
+    return window.innerWidth > 880 ? 2 : 1;
+  }
+
+  function scrollItems() {
+    const visible = getVisibleItems();
+    const maxIndex = items.length - visible;
+    index = (index + 1) > maxIndex ? 0 : (index + 1);
+
+    const cardWidth = items[0].offsetWidth;
+    const gap = 34;
+    const offset = index * (cardWidth + gap);
+    container.style.transform = `translateX(-${offset}px)`;
+  }
+
+  function startAutoScroll() {
+    autoScroll = setInterval(scrollItems, interval);
+  }
+
+  function stopAutoScroll() {
+    clearInterval(autoScroll);
+  }
+
+  // Start + pause on hover
+  startAutoScroll();
+  container.addEventListener("mouseenter", stopAutoScroll);
+  container.addEventListener("mouseleave", startAutoScroll);
+
+  // Reset on resize
+  window.addEventListener("resize", () => {
+    index = 0;
+    container.style.transform = "translateX(0)";
+  });
+}
+
+// ==============================
+// INITIALIZE BOTH SLIDERS
+// ==============================
+document.addEventListener("DOMContentLoaded", () => {
+  // 1️⃣ For the "How Choosing Zonixtec Helps Your Business" benefits section
+  createAutoScroller("benefit-list", 2000);
+
+  // 2️⃣ For the "Client Testimonials" section
+  createAutoScroller("testimonial-list", 2000);
+});
+</script>
 
 
     <script src="./script/navbar.js"></script>
