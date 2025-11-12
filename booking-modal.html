@@ -1,81 +1,391 @@
 <!-- Booking Modal -->
-<div class="modal" id="bookingModal">
-    <div class="modal-content">
-        <button class="close-modal" onclick="closeBookingModal()">
-            <i class="fas fa-times"></i>
-        </button>
-        
-        <div class="modal-header">
-            <h2>Book Your Free 30-Minute Consultation</h2>
-            <p>Let's discuss how we can help transform your business</p>
-        </div>
+<html>
 
-        <form class="booking-form" id="bookingForm">
-            <div class="form-row">
-                <div class="form-group-modal">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Free 30-Minute Consultation | Zonixtec</title>
+
+  <!-- Flatpickr CSS + JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./CSS/booking-modal.css">
+
+  <style>
+    /* --- Button Styles --- */
+    .step-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 20px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 26px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #0066ff, #00c6ff);
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 102, 255, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #0052cc, #00aaff);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 102, 255, 0.4);
+    }
+
+    .btn-primary:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: #00aaff;
+      transform: translateY(-2px);
+    }
+
+    .btn-primary i,
+    .btn-secondary i {
+      font-size: 14px;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-primary:hover i {
+      transform: translateX(4px);
+    }
+
+    .btn-secondary:hover i {
+      transform: translateX(-4px);
+    }
+
+    /* --- Calendar Input Styles --- */
+    .calendar-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .calendar-input {
+      width: 100%;
+      max-width: 280px;
+      padding: 12px 16px;
+      font-size: 15px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .calendar-input:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: #00aaff;
+    }
+
+    .flatpickr-calendar {
+      background: #0a0a0a;
+      color: #fff;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .flatpickr-day.selected {
+      background: linear-gradient(135deg, #0066ff, #00c6ff);
+      color: #fff;
+      border: none;
+    }
+
+    .flatpickr-day.today {
+      border-color: #00aaff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="modal" id="bookingModal">
+    <div class="modal-content">
+      <section class="booking-hero">
+        <div class="container">
+          <h1 id="pageTitle">Book Your Free 30-Minute Consultation</h1>
+          <p>Let's discuss how we can help transform your business with our expert solutions</p>
+          <div class="service-highlight" id="serviceHighlight">
+          </div>
+        </div>
+      </section>
+
+      <section class="booking-container">
+        <div class="booking-main-container">
+          <!-- Progress Indicator -->
+          <div class="progress-indicator">
+            <div class="progress-step active" id="progress1" data-step="1"></div>
+            <div class="progress-line" id="line1"></div>
+            <div class="progress-step" id="progress2" data-step="2"></div>
+            <div class="progress-line" id="line2"></div>
+            <div class="progress-step" id="progress3" data-step="3"></div>
+            <div class="progress-line" id="line3"></div>
+            <div class="progress-step" id="progress4" data-step="4"></div>
+          </div>
+
+          <!-- Step 1 -->
+          <div class="booking-step discovery-info-section active" id="step1">
+            <div class="step-header">
+              <div class="step-number">1</div>
+              <h2 class="step-title">Zonixtec — 30-Minute Discovery Call</h2>
+            </div>
+
+            <div class="discovery-subtitle">
+              Duration: 30 Minutes | Mode: Web Conference
+            </div>
+
+            <div class="session-overview-compact">
+              <h4 class="session-title">In this quick session, we'll cover:</h4>
+              <div class="session-items-grid">
+                <div class="session-item"><i class="fas fa-check-circle"></i><span>Introduction &
+                    Requirement Understanding</span></div>
+                <div class="session-item"><i class="fas fa-check-circle"></i><span>Relevant Use Case Demo</span></div>
+                <div class="session-item"><i class="fas fa-check-circle"></i><span>Technology Solutions &
+                    Offerings</span></div>
+                <div class="session-item"><i class="fas fa-check-circle"></i><span>Project Roadmap & Next
+                    Steps</span></div>
+              </div>
+
+              <div class="discovery-goal">
+                <strong>Goal:</strong>
+                <p>Understand your needs and explore how Zonixtec can deliver the right tech solutions for your project.</p>
+              </div>
+            </div>
+
+            <div class="form-navigation">
+              <button class="btn-primary" onclick="nextStep(1)">
+                Next: Select Date <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Date Selection -->
+          <div class="booking-step calendar-section" id="step2">
+            <div class="step-header">
+              <div class="step-number">2</div>
+              <h2 class="step-title">Select Your Preferred Date</h2>
+            </div>
+
+            <div class="calendar-container">
+              <input type="text" id="dateInput" class="calendar-input" placeholder="Click to select date" readonly>
+            </div>
+
+            <div class="step-navigation">
+              <button class="btn-secondary" onclick="previousStep(2)">
+                <i class="fas fa-arrow-left"></i> Back
+              </button>
+
+              <button class="btn-primary" id="dateNextBtn" onclick="nextStep(2)" disabled>
+                Next: Select Time <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3: Time Selection -->
+          <div class="booking-step time-section" id="step3">
+            <div class="step-header">
+              <div class="step-number">3</div>
+              <h2 class="step-title">Choose Your Time Slot</h2>
+            </div>
+
+            <div class="time-slots-container">
+              <div class="time-slots" id="timeSlots">
+                <div class="time-slot" data-time="10:30">10:30 AM</div>
+                <div class="time-slot" data-time="11:30">11:30 AM</div>
+                <div class="time-slot" data-time="12:00">12:00 PM</div>
+                <div class="time-slot" data-time="12:30">12:30 PM</div>
+                <div class="time-slot" data-time="13:00">1:00 PM</div>
+                <div class="time-slot" data-time="13:30">1:30 PM</div>
+                <div class="time-slot" data-time="14:00">2:00 PM</div>
+                <div class="time-slot" data-time="14:30">2:30 PM</div>
+                <div class="time-slot" data-time="15:00">3:00 PM</div>
+                <div class="time-slot" data-time="15:30">3:30 PM</div>
+                <div class="time-slot" data-time="16:00">4:00 PM</div>
+                <div class="time-slot" data-time="16:30">4:30 PM</div>
+                <div class="time-slot" data-time="17:00">5:00 PM</div>
+              </div>
+            </div>
+
+            <div class="step-navigation">
+              <button class="btn-secondary" onclick="previousStep(3)">
+                <i class="fas fa-arrow-left"></i> Back
+              </button>
+
+              <button class="btn-primary" id="timeNextBtn" onclick="nextStep(3)" disabled>
+                Next: Your Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 4: Contact Information -->
+          <div class="booking-step contact-form-section" id="step4">
+            <div class="step-header">
+              <div class="step-number">4</div>
+              <h2 class="step-title">Your Information</h2>
+            </div>
+
+            <form class="booking-form-page" id="bookingFormPage">
+              <div class="form-fields">
+                <div class="form-row">
+                  <div class="form-group-page">
                     <label>Full Name <span>*</span></label>
                     <input type="text" id="bookingName" placeholder="Enter your full name" required>
-                </div>
-                <div class="form-group-modal">
+                  </div>
+                  <div class="form-group-page">
                     <label>Email Address <span>*</span></label>
                     <input type="email" id="bookingEmail" placeholder="your@email.com" required>
+                  </div>
                 </div>
-            </div>
 
-            <div class="form-row">
-                <div class="form-group-modal">
+                <div class="form-row">
+                  <div class="form-group-page">
                     <label>Phone Number <span>*</span></label>
                     <input type="tel" id="bookingPhone" placeholder="+91 999999999" required>
-                </div>
-                <div class="form-group-modal">
+                  </div>
+                  <div class="form-group-page">
                     <label>Company Name</label>
                     <input type="text" id="bookingCompany" placeholder="Your company (optional)">
+                  </div>
                 </div>
-            </div>
 
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Preferred Date <span>*</span></label>
-                    <input type="date" id="bookingDate" required>
+                <div class="form-group-page full-width">
+                  <label>Message / Additional Details</label>
+                  <textarea id="bookingMessage"
+                    placeholder="Tell us about your project, specific requirements, or any questions you have..."></textarea>
                 </div>
-                <div class="form-group-modal">
-                    <label>Preferred Time <span>*</span></label>
-                    <input type="time" id="bookingTime" required>
-                </div>
-            </div>
+              </div>
 
-            <div class="form-group-modal">
-                <label>Service Interested In <span>*</span></label>
-                <select id="bookingService" required>
-                    <option value="">Select a service</option>
-                    <option value="CRM Solutions">CRM Solutions</option>
-                    <option value="ERP Solutions">ERP Solutions</option>
-                    <option value="Billing Software">Billing Software</option>
-                    <option value="Website Development">Website Development</option>
-                    <option value="Mobile App Development">Mobile App Development</option>
-                    <option value="AI Solutions">AI Solutions</option>
-                    <option value="Cloud Solutions">Cloud Solutions</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="UI/UX Design">UI/UX Design</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
+              <div class="step-navigation">
+                <button type="button" class="btn-secondary" onclick="previousStep(4)">
+                  <i class="fas fa-arrow-left"></i> Back
+                </button>
+                <button type="submit" class="btn-primary">
+                  <i class="fas fa-calendar-check"></i>
+                  Book My Free Consultation
+                </button>
+              </div>
+            </form>
+          </div>
 
-            <div class="form-group-modal">
-                <label>Message / Additional Details</label>
-                <textarea id="bookingMessage" placeholder="Tell us about your project or questions..."></textarea>
-            </div>
+        </div>
+      </section>
 
-            <button type="submit" class="submit-booking-btn">
-                <i class="fas fa-calendar-check"></i> Book My Call
-            </button>
-        </form>
+      <div class="success-message-page" id="bookingSuccessPage">
+        <i class="fas fa-check-circle"></i>
+        <strong>Your Call is Booked!</strong>
+        <p>Our team will connect with you as soon as possible. Thank you for choosing Zonixtec!</p>
+      </div>
     </div>
-</div>
+  </div>
 
-<!-- Success Message Overlay -->
-<div class="success-message" id="bookingSuccess">
-    <i class="fas fa-check-circle"></i> 
+  <div class="success-message" id="bookingSuccess">
+    <i class="fas fa-check-circle"></i>
     <strong>Your Call is Booked!</strong>
     <p>Our team will connect with you as soon as possible. Thank you for choosing Zonixtec!</p>
-</div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+
+      // ✅ Initialize Flatpickr once DOM is ready
+      flatpickr("#dateInput", {
+        minDate: "today",
+        dateFormat: "F j, Y",
+        allowInput: false,
+        onChange: (selectedDates) => {
+          if (selectedDates.length > 0) {
+            document.getElementById("dateNextBtn").disabled = false;
+          }
+        }
+      });
+
+      // ✅ Step Navigation Logic
+      window.nextStep = function (step) {
+        if (step < 4) {
+          document.getElementById(`step${step}`).classList.remove("active");
+          document.getElementById(`step${step}`).classList.add("completed");
+          const nextStepEl = document.getElementById(`step${step + 1}`);
+          nextStepEl.classList.add("active");
+          updateProgress(step + 1);
+          document.querySelector(".booking-main-container")
+            .scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      };
+
+      window.previousStep = function (step) {
+        if (step > 1) {
+          document.getElementById(`step${step}`).classList.remove("active");
+          const prevEl = document.getElementById(`step${step - 1}`);
+          prevEl.classList.remove("completed");
+          prevEl.classList.add("active");
+          updateProgress(step - 1);
+        }
+      };
+
+      // ✅ Progress UI Handler
+      function updateProgress(step) {
+        for (let i = 1; i <= 4; i++) {
+          const progressStep = document.getElementById(`progress${i}`);
+          const progressLine = document.getElementById(`line${i}`);
+          progressStep.classList.remove("active", "completed");
+          if (progressLine) progressLine.classList.remove("completed");
+
+          if (i < step) {
+            progressStep.classList.add("completed");
+            if (progressLine) progressLine.classList.add("completed");
+          } else if (i === step) {
+            progressStep.classList.add("active");
+          }
+        }
+      }
+
+      // ✅ Time Slot Selection
+      document.querySelectorAll(".time-slot").forEach(slot => {
+        slot.addEventListener("click", () => {
+          document.querySelectorAll(".time-slot").forEach(s => s.classList.remove("selected"));
+          slot.classList.add("selected");
+          document.getElementById("timeNextBtn").disabled = false;
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
