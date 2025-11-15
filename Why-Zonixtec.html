@@ -116,33 +116,38 @@
     }
 }
 
-/* Tablet & Mobile (below 1024px): Enable Slider */
-@media (max-width: 1024px) {
+/* Tablet View (769px - 1024px): Show all 4 cards in grid */
+@media (max-width: 1024px) and (min-width: 769px) {
     .benefits-wrapper {
-        overflow: hidden;
-        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: center;
+        overflow: visible !important;
     }
 
     #benefits-slider-wrapper {
-        position: relative;
-        overflow: hidden;
         width: 100%;
+        overflow: visible !important;
     }
 
     #benefits-slider-list {
         display: flex;
-        flex-wrap: nowrap;
-        gap: 34px;
-        transition: transform 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
-        padding: 20px 0;
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: center;
+        transform: none !important;
+        transition: none !important;
     }
-}
 
-/* Tablet View (769px - 1024px) */
-@media (max-width: 1024px) and (min-width: 769px) {
     .benefits-card {
-        flex: 0 0 calc(50% - 17px);
-        min-width: calc(50% - 17px);
+        flex: 0 0 calc(50% - 12.5px);
+        min-width: calc(50% - 12.5px);
+        max-width: calc(50% - 12.5px);
+    }
+
+    .benefits-card img {
+        max-width: 100%;
     }
 }
 
@@ -152,10 +157,36 @@
         font-size: 1.8rem;
     }
 
+    .benefits-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        overflow: visible !important;
+    }
+
+    #benefits-slider-wrapper {
+        width: 100%;
+        overflow: visible !important;
+    }
+
+    #benefits-slider-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        transform: none !important;
+        transition: none !important;
+    }
+
     .benefits-card {
-        /* flex: 0 0 100%; */
-        /* min-width: 100%;
-        max-width: 100%; */
+        flex: 0 0 calc(50% - 10px);
+        min-width: calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+
+    .benefits-card img {
+        max-width: 100%;
     }
 }
 
@@ -168,6 +199,16 @@
 
     .benefits-section-padding {
         padding: 60px 0;
+    }
+
+    .benefits-card {
+        flex: 0 0 calc(50% - 8px);
+        min-width: calc(50% - 8px);
+        max-width: calc(50% - 8px);
+    }
+
+    #benefits-slider-list {
+        gap: 16px;
     }
 }</style>
     <style>
@@ -519,10 +560,11 @@
         }
 
         .testimonial-controls2 {
-            display: none;
+            display: flex;
             gap: 18px;
-            justify-content: center;
+            justify-content: flex-start;
             margin-bottom: 25px;
+            align-items: center;
         }
         .testimonial-controls3 {
             display: none;
@@ -571,24 +613,84 @@
             cursor: not-allowed;
         }
 
-        .testimonial-nav2 {
-            background: none;
-            border: none;
-            color: #41e0ff;
-            font-size: 2.2rem;
-            cursor: pointer;
-            transition: color .15s, transform 0.2s;
-            padding: 5px;
+    .testimonial-nav2 {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+        /* Previous button - Blue with white icon */
+        #featurePrev {
+            background: #0066ff;
+            color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 102, 255, 0.3);
         }
 
-        .testimonial-nav2:hover:not(:disabled) {
-            color: #00f2ff;
-            transform: scale(1.1);
+        #featurePrev:hover:not(:disabled) {
+            background: #0052cc;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 102, 255, 0.4);
+        }
+
+        /* Next button - Grey with black icon */
+        #featureNext {
+            background: #e2e8f0;
+            color: #1e293b;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #featureNext:hover:not(:disabled) {
+            background: #cbd5e1;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Testimonial Previous button - Blue with white icon */
+        #testimonialPrev {
+            background: #0066ff;
+            color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 102, 255, 0.3);
+        }
+
+        #testimonialPrev:hover:not(:disabled) {
+            background: #0052cc;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 102, 255, 0.4);
+        }
+
+        /* Testimonial Next button - Grey with black icon */
+        #testimonialNext {
+            background: #e2e8f0;
+            color: #1e293b;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #testimonialNext:hover:not(:disabled) {
+            background: #cbd5e1;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .testimonial-nav2:active:not(:disabled) {
+            transform: scale(0.95);
         }
 
         .testimonial-nav2:disabled {
-            opacity: 0.3;
+            opacity: 0.4;
             cursor: not-allowed;
+            transform: none;
+        }
+
+        .testimonial-nav2 i {
+            position: relative;
+            z-index: 1;
         }
 
         /* CTA Section */
@@ -802,9 +904,17 @@
         }
 
         @media (max-width: 768px) {
+            .testimonial-controls2 {
+                justify-content: center;
+                margin-bottom: 20px;
+            }
 
-            
-
+            .testimonial-nav2 {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+                padding: 10px;
+            }
 
              .containerr {
             width: 100%;
@@ -898,7 +1008,12 @@
         }
 
         @media (max-width: 600px) {
-
+            .testimonial-nav2 {
+                width: 40px;
+                height: 40px;
+                font-size: 1.3rem;
+                padding: 8px;
+            }
             
             .section-title {
                 font-size: 1.3rem;
@@ -1025,7 +1140,7 @@
 
     <main>
         <!-- Why Zonixtec Section -->
-        <section class="section-padding" style="margin-top:120px;">
+<section class="section-padding" style="margin-top:120px; padding:10px 0;">
             <h2 class="section-title">WHY ZONIXTEC ?</h2>
             <div class="container why-flex">
                 <div class="why-desc">
@@ -1045,20 +1160,21 @@
 
         <!-- What Makes Different Section -->
         <!-- What Makes Zonixtec Different Section -->
-        <section class="section-padding">
+<section class="section-padding" style="padding: 20px 0 !important;">
             <h2 class="section-title">What Makes Zonixtec Different</h2>
             <p class="section-subtitle">Your Trusted Partner for Reliable & Scalable Digital Solutions</p>
         
             <div class="containerr">
                 <!-- Navigation Buttons -->
-                <div class="testimonial-controls2">
-                    <button id="featurePrev" class="testimonial-nav2" aria-label="Previous">
-                        <i class="fa fa-chevron-circle-left"></i>
-                    </button>
-                    <button id="featureNext" class="testimonial-nav2" aria-label="Next">
-                        <i class="fa fa-chevron-circle-right"></i>
-                    </button>
-                </div>
+               <div class="testimonial-controls2">
+    <button id="featurePrev" class="testimonial-nav2" aria-label="Previous">
+        <i class="fa fa-chevron-left"></i>
+    </button>
+    <button id="featureNext" class="testimonial-nav2" aria-label="Next">
+        <i class="fa fa-chevron-right"></i>
+    </button>
+</div>
+
         
                 <!-- Slider Wrapper -->
                 <div class="testimonial-wrapper1">
@@ -1154,96 +1270,90 @@
 
 
 
-        <section class="section-padding" id="testimonials">
+<section class="section-padding" id="testimonials" style="padding:0px !important;">
   <h2 class="section-title">Client Testimonials</h2>
   <div class="container">
+    <!-- Navigation Buttons -->
+    <div class="testimonial-controls2">
+        <button id="testimonialPrev" class="testimonial-nav2" aria-label="Previous">
+            <i class="fa fa-chevron-left"></i>
+        </button>
+        <button id="testimonialNext" class="testimonial-nav2" aria-label="Next">
+            <i class="fa fa-chevron-right"></i>
+        </button>
+    </div>
+    
     <div class="testimonial-wrapper" id="testimonial-wrapper">
       <div id="testimonial-list" class="testimonial-container">
-            <div class="testimonial-card">
-                            <h3>[Client Name]</h3>
-                            <span class="platform">[Platform Type]</span>
-                            <p>
-                                "Zonixtec Management System helped us automate platform operations. The platform made
-                                real-time tracking error-free, cutting down manual effort by hours each week. Their
-                                team's proactive support and care made the whole experience seamless."
-                            </p>
-                        </div>
+           <!-- Testimonial 1 -->
+<div class="testimonial-card">
+    <h3>Krishnal Tagunde</h3>
+    <span class="platform">Founder, Kaleshwari Temple</span>
+    <p>
+        "Zonixtec designed a beautiful and functional website for our temple. Their team understood our vision perfectly 
+        and delivered everything with dedication and professionalism. Within 3 months, our website traffic grew by 150%, 
+        and we now receive 40% more online donations."
+    </p>
+</div>
 
-                        <!-- Testimonial 2 -->
-                        <div class="testimonial-card">
-                            <h3>Morya Cars</h3>
-                            <span class="platform">Car Management Platform</span>
-                            <div class="stars">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <p>
-                                "Zonixtec developed a CRM system that transformed how we buy and sell pre-owned
-                                vehicles. Tracking leads, customers, and inventory has become effortless. Within 3
-                                months, our sales efficiency improved by 45%. Their team truly understood our business
-                                and delivered a solution that drives real results."
-                            </p>
-                        </div>
+<!-- Testimonial 2 -->
+<div class="testimonial-card">
+    <h3>Dhanashree Mhaske</h3>
+    <span class="platform">Financial Market Expert</span>
+    <p>
+        "The software solutions from Zonixtec have helped me streamline my trading operations. Their timely support and 
+        understanding of my workflow made a real difference. With their system, I now save 20+ hours per week, and my 
+        trading efficiency has improved by 35%."
+    </p>
+</div>
 
-                        <!-- Testimonial 3 -->
-                        <div class="testimonial-card">
-                            <h3>Tech Solutions Inc</h3>
-                            <span class="platform">ERP Platform</span>
-                            <div class="stars">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <p>
-                                "Working with Zonixtec was a game-changer for our operations. Their ERP solution
-                                streamlined our entire workflow and improved team productivity by 60%. The support team
-                                is always responsive and helpful."
-                            </p>
-                        </div>
+<!-- Testimonial 3 -->
+<div class="testimonial-card">
+    <h3>Uma Borade</h3>
+    <span class="platform">Owner, Jewellery Shop</span>
+    <p>
+        "Thanks to Zonixtec, managing my jewellery inventory and billing has become much easier. Their system is reliable 
+        and perfectly suited for small businesses like mine. I reduced manual errors by 70% and increased billing speed by 3x."
+    </p>
+</div>
 
-                        <!-- Testimonial 4 -->
-                        <div class="testimonial-card">
-                            <h3>Digital Mart</h3>
-                            <span class="platform">E-commerce Platform</span>
-                            <div class="stars">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <p>
-                                "The custom e-commerce solution Zonixtec built for us exceeded all expectations. Our
-                                online sales increased by 80% in the first quarter, and the platform handles our growing
-                                customer base effortlessly."
-                            </p>
-                        </div>
+<!-- Testimonial 4 -->
+<div class="testimonial-card">
+    <h3>EasyEAuction</h3>
+    <span class="platform">Auction Management Platform</span>
+    <p>
+        "Zonixtec’s Auction Management System helped us automate 80% of our auction operations. The platform made 
+        real-time bidding smooth and error-free, cutting down manual effort by 30+ hours each week. Their team’s proactive 
+        support and genuine care made the whole experience seamless and stress-free."
+    </p>
+</div>
 
-                        <!-- Testimonial 5 -->
-                        <div class="testimonial-card">
-                            <h3>Healthcare Plus</h3>
-                            <span class="platform">Patient Management System</span>
-                            <div class="stars">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <p>
-                                "Zonixtec's patient management system revolutionized our clinic operations. Appointment
-                                scheduling, patient records, and billing are now seamlessly integrated. Our staff
-                                productivity increased by 50%."
-                            </p>
-                        </div>
+<!-- Testimonial 5 -->
+<div class="testimonial-card">
+    <h3>Cobbler Management Services</h3>
+    <span class="platform">CRM & Business Tracking System</span>
+    <p>
+        "Working with Zonixtec was a game-changer for us. The Cobbler CRM they built reduced our manual tracking time 
+        by 40% and improved customer follow-ups by 50%. What I loved most was their patience and commitment to 
+        understanding our small business challenges—it truly felt like they were part of our team."
+    </p>
+</div>
+
+<!-- Testimonial 6 -->
+<div class="testimonial-card">
+    <h3>Morya Cars</h3>
+    <span class="platform">Pre-owned Car Management Platform</span>
+    <p>
+        "Zonixtec developed a CRM system that transformed how we manage the buying and selling of pre-owned vehicles. 
+        Tracking leads, customers, and inventory has become effortless. Within three months, our sales efficiency 
+        improved by 45%, and we saved over ₹1 lakh in operational costs. Their team truly understood our business 
+        and delivered a solution that drives real results."
+    </p>
+</div>
+
       </div>
     </div>
-  </div>
+  </div>    
 </section>
 
 
@@ -1254,7 +1364,9 @@
                 <p>Whether you're planning a CRM, ERP, website, mobile app, or a custom digital solution — we’re
                 here to build it with dedication and expertise.</p>
                 
-                <a href="#" class="cta-button"><img src="./Assets/phone-call 1.svg" alt="">book 30 min call.</a>
+<a href="javascript:void(0);" class="cta-button" onclick="openBookingModal()">
+    <img src="./Assets/phone-call 1.svg" alt="">Book A 30 Min Call.
+</a>
             </div>
         </div>
 
@@ -1382,7 +1494,9 @@
 
 
 
-         <!-- Chatbot -->
+
+
+         <!-- Chatbot ------------------------------------------->
      <script src="./script/chatbot.js"></script>
 
 
@@ -1474,7 +1588,6 @@
 
     
 
-
     <script>
         // ==============================
         // WHAT MAKES ZONIXTEC DIFFERENT SLIDER (AUTO + MANUAL)
@@ -1512,32 +1625,14 @@
             updateFeatureButtons();
         }
 
-        // Auto-slide setup
-        function startFeatureAutoSlide() {
-            featureAutoSlide = setInterval(() => {
-                scrollFeatures(1);
-            }, 1000); // every 1 seconds
-        }
-
-        function stopFeatureAutoSlide() {
-            clearInterval(featureAutoSlide);
-        }
-
-        // Event listeners
+        // Event listeners - Manual navigation only (no auto-slide)
         featurePrevBtn.addEventListener("click", () => {
-            stopFeatureAutoSlide();
             scrollFeatures(-1);
-            startFeatureAutoSlide();
         });
 
         featureNextBtn.addEventListener("click", () => {
-            stopFeatureAutoSlide();
             scrollFeatures(1);
-            startFeatureAutoSlide();
         });
-
-        featureList.addEventListener("mouseenter", stopFeatureAutoSlide);
-        featureList.addEventListener("mouseleave", startFeatureAutoSlide);
 
         window.addEventListener("resize", () => {
             featureIndex = 0;
@@ -1546,7 +1641,6 @@
         });
 
         updateFeatureButtons();
-        startFeatureAutoSlide();
     </script>
     
    
@@ -2082,78 +2176,61 @@
 
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  let featureIndex = 0;
-  const featureList = document.getElementById("feature-list");
-  const featureBoxes = featureList ? featureList.children : [];
-  const featurePrevBtn = document.getElementById("testimonialPrev");
-  const featureNextBtn = document.getElementById("testimonialNext");
-  let featureAutoSlide;
+        // ==============================
+        // CLIENT TESTIMONIALS SLIDER (MANUAL NAVIGATION)
+        // ==============================
+        document.addEventListener("DOMContentLoaded", function () {
+            let testimonialIndex = 0;
+            const testimonialList = document.getElementById("testimonial-list");
+            const testimonialCards = testimonialList ? testimonialList.children : [];
+            const testimonialPrevBtn = document.getElementById("testimonialPrev");
+            const testimonialNextBtn = document.getElementById("testimonialNext");
 
-  if (!featureList || featureBoxes.length === 0) return;
+            if (testimonialList && testimonialCards.length > 0 && testimonialPrevBtn && testimonialNextBtn) {
+                function getVisibleTestimonials() {
+                    return window.innerWidth > 880 ? 2 : 1;
+                }
 
-  // Number of visible slides based on screen width
-  function getVisibleFeatures() {
-    // if (window.innerWidth > 1200) return 3; // desktop
-    if (window.innerWidth > 880) return 2;  // tablet
-    return 1;                               // mobile
-  }
+                function updateTestimonialButtons() {
+                    const visibleTestimonials = getVisibleTestimonials();
+                    const maxIndex = testimonialCards.length - visibleTestimonials;
+                    testimonialPrevBtn.disabled = testimonialIndex === 0;
+                    testimonialNextBtn.disabled = testimonialIndex >= maxIndex;
+                }
 
-  // Scroll feature cards
-  function scrollFeatures(direction = 1) {
-    const visible = getVisibleFeatures();
-    const maxIndex = featureBoxes.length - visible;
-    featureIndex += direction;
+                function scrollTestimonials(direction) {
+                    const visibleTestimonials = getVisibleTestimonials();
+                    const maxIndex = testimonialCards.length - visibleTestimonials;
+                    testimonialIndex += direction;
 
-    if (featureIndex > maxIndex) featureIndex = 0; // loop start
-    if (featureIndex < 0) featureIndex = maxIndex; // loop end
+                    if (testimonialIndex < 0) testimonialIndex = 0;
+                    if (testimonialIndex > maxIndex) testimonialIndex = maxIndex;
 
-    const cardWidth = featureBoxes[0].offsetWidth;
-    const gap = 34;
-    const offset = featureIndex * (cardWidth + gap);
-    featureList.style.transform = `translateX(-${offset}px)`;
-  }
+                    const cardWidth = testimonialCards[0].offsetWidth;
+                    const gap = 34;
+                    const offset = testimonialIndex * (cardWidth + gap);
+                    testimonialList.style.transform = `translateX(-${offset}px)`;
+                    updateTestimonialButtons();
+                }
 
-  // Start auto-slide
-  function startFeatureAutoSlide() {
-    stopFeatureAutoSlide();
-    featureAutoSlide = setInterval(() => {
-      scrollFeatures(1);
-    }, 1000); // every 2.5s
-  }
+                // Event listeners - Manual navigation only (no auto-slide)
+                testimonialPrevBtn.addEventListener("click", () => {
+                    scrollTestimonials(-1);
+                });
 
-  // Stop auto-slide
-  function stopFeatureAutoSlide() {
-    if (featureAutoSlide) clearInterval(featureAutoSlide);
-  }
+                testimonialNextBtn.addEventListener("click", () => {
+                    scrollTestimonials(1);
+                });
 
-  // Manual navigation
-  featurePrevBtn.addEventListener("click", () => {
-    stopFeatureAutoSlide();
-    scrollFeatures(-1);
-    startFeatureAutoSlide();
-  });
+                window.addEventListener("resize", () => {
+                    testimonialIndex = 0;
+                    testimonialList.style.transform = "translateX(0)";
+                    updateTestimonialButtons();
+                });
 
-  featureNextBtn.addEventListener("click", () => {
-    stopFeatureAutoSlide();
-    scrollFeatures(1);
-    startFeatureAutoSlide();
-  });
-
-  // Pause on hover (optional)
-  featureList.addEventListener("mouseenter", stopFeatureAutoSlide);
-  featureList.addEventListener("mouseleave", startFeatureAutoSlide);
-
-  // Reset on resize
-  window.addEventListener("resize", () => {
-    featureIndex = 0;
-    featureList.style.transform = "translateX(0)";
-    startFeatureAutoSlide();
-  });
-
-  // Initialize slider
-  startFeatureAutoSlide();
-});
+                updateTestimonialButtons();
+            }
+        });
 </script>
 
 <script>// ==============================
@@ -2203,79 +2280,24 @@ function createAutoScroller(containerId, interval = 3000) {
 }
 
 // ==============================
-// INITIALIZE BOTH SLIDERS
+// INITIALIZE SLIDERS
 // ==============================
 document.addEventListener("DOMContentLoaded", () => {
-  // 1️⃣ For the "How Choosing Zonixtec Helps Your Business" benefits section
-  createAutoScroller("benefit-list", 2000);
-
-  // 2️⃣ For the "Client Testimonials" section
-  createAutoScroller("testimonial-list", 2000);
+  // Benefits section now shows all 4 cards statically on all devices (no auto-scroll needed)
+  // Note: Testimonials now use manual navigation buttons (no auto-scroll)
 });
 </script>
 
 <script>
     // ==============================
-// BENEFITS SECTION AUTO SCROLLER (Mobile & Tablet Only)
+// BENEFITS SECTION - All views show all 4 cards (no slider needed)
 // ==============================
 function initBenefitsSlider() {
-  // Only run on mobile and tablet (disable on desktop)
-  if (window.innerWidth >= 1025) return;
-
+  // Disable slider for all screen sizes - show all 4 cards statically
   const sliderContainer = document.getElementById("benefits-slider-list");
-  if (!sliderContainer) return;
-
-  const benefitCards = sliderContainer.children;
-  let currentIndex = 0;
-  let autoScrollInterval;
-
-  function getVisibleCards() {
-    if (window.innerWidth > 768) return 2; // Tablet: 2 items
-    return 1; // Mobile: 1 item
+  if (sliderContainer) {
+    sliderContainer.style.transform = "translateX(0)";
   }
-
-  function scrollBenefits() {
-    const visibleCards = getVisibleCards();
-    const maxIndex = benefitCards.length - visibleCards;
-    currentIndex = (currentIndex + 1) > maxIndex ? 0 : (currentIndex + 1);
-
-    const cardWidth = benefitCards[0].offsetWidth;
-    const gap = 34;
-    const scrollOffset = currentIndex * (cardWidth + gap);
-    sliderContainer.style.transform = `translateX(-${scrollOffset}px)`;
-  }
-
-  function startBenefitsAutoScroll() {
-    stopBenefitsAutoScroll();
-    autoScrollInterval = setInterval(scrollBenefits, 1000); // Change every 2.5 seconds
-  }
-
-  function stopBenefitsAutoScroll() {
-    if (autoScrollInterval) {
-      clearInterval(autoScrollInterval);
-    }
-  }
-
-  // Start auto-scroll
-  startBenefitsAutoScroll();
-
-  // Pause on hover
-  sliderContainer.addEventListener("mouseenter", stopBenefitsAutoScroll);
-  sliderContainer.addEventListener("mouseleave", startBenefitsAutoScroll);
-
-  // Handle resize
-  window.addEventListener("resize", () => {
-    if (window.innerWidth >= 1025) {
-      // Desktop: Stop slider and reset
-      stopBenefitsAutoScroll();
-      sliderContainer.style.transform = "translateX(0)";
-    } else {
-      // Mobile/Tablet: Restart slider
-      currentIndex = 0;
-      sliderContainer.style.transform = "translateX(0)";
-      startBenefitsAutoScroll();
-    }
-  });
 }
 
 // Initialize on DOM load
