@@ -116,6 +116,15 @@
             font-weight: 700;
             color: var(--light);
             text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+            display: block;
         }
         
         .logo span {
@@ -198,17 +207,11 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            background: transparent;
         }
         
         .ceo-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at top right, rgba(0, 102, 255, 0.1), transparent 70%);
-            z-index: -1;
+            display: none;
         }
         
         .ceo-hero h1 {
@@ -229,7 +232,7 @@
         /* The Beginning Section - Purple Gradient */
         .beginning-section {
             margin: 30px 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: none;
             position: relative;
         }
 
@@ -747,11 +750,8 @@
             color: var(--secondary);
         }
 
-        .highlight-box{
-            width: 100%;
-            height: 100%;
-        }
-
+        /* Removed conflicting highlight-box styles - using more specific styles below */
+        
         .highlight-boxx{
             width: 100%;
             height: 30%;
@@ -762,11 +762,11 @@
             gap: 20px;
 
         }
-         .set img{
-            
-        width: 50px;
-        height: 50px;
-
+         .set img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            flex-shrink: 0;
         }
 
         .set-item {
@@ -908,7 +908,7 @@
     width: 100%;
     max-width: 550px;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 10px;
 }
 
@@ -934,6 +934,15 @@
     width: 80px;
     height: 80px;
     margin-bottom: 15px;
+    object-fit: contain;
+}
+
+/* Ensure images inside icon circles are properly sized */
+.highlight-item .icon-circle img,
+.highlight-item .icon-circlee img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
 }
 
 .set {
@@ -951,9 +960,10 @@
 }
 
 .set img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     flex-shrink: 0;
+    object-fit: contain;
 }
 
 .set h3 {
@@ -992,8 +1002,15 @@
     }
     
     .highlight-wrapper {
-        flex-direction: column;
-        gap: 5px;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    .highlight-box {
+        min-width: 200px;
+        max-width: 300px;
     }
     
     .set {
@@ -1053,8 +1070,13 @@
     }
     
     .set img {
-        width: 35px;
-        height: 35px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .icon {
+        width: 45px;
+        height: 45px;
     }
 }
 
@@ -1078,8 +1100,8 @@
     }
     
     .highlight-box img, .highlight-boxx img {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
     }
     
     .set {
@@ -1092,8 +1114,19 @@
     }
     
     .set img {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .icon-circle img,
+    .icon-circlee img {
+        width: 25px;
+        height: 25px;
     }
     
     .set h3 {
@@ -1113,23 +1146,114 @@
     }
 }
 
+/* Specific fix for iPhone 12 Pro (390x844) - Building Our Home section */
+@media (max-width: 390px) {
+    .beginning-card {
+        padding: 20px 15px;
+        gap: 25px;
+    }
+    
+    .beginning-left {
+        width: 100%;
+    }
+    
+    .beginning-desc {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+    
+    .highlight-wrapper {
+        margin-top: 20px;
+        gap: 15px;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .highlight-box {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    
+    .highlight-boxx {
+        width: 100%;
+    }
+    
+    .set {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 12px 8px;
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    /* Position divs (icons) in first row */
+    .set > div:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .set > div:nth-child(3) {
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Position h3s (text) in second row */
+    .set > h3:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+        margin: 0;
+        text-align: center;
+    }
+    
+    .set > h3:nth-child(4) {
+        grid-column: 2;
+        grid-row: 2;
+        margin: 0;
+        text-align: center;
+    }
+    
+    .set img,
+    .set .icon {
+        width: 45px;
+        height: 45px;
+        flex-shrink: 0;
+        margin: 0 auto;
+        display: block;
+        object-fit: contain;
+    }
+    
+    .set h3 {
+        font-size: 0.75rem;
+        margin: 0;
+        text-align: center;
+        line-height: 1.2;
+        width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .beginning-right {
+        width: 100%;
+    }
+    
+    .beginning-right img {
+        max-width: 100%;
+        width: 100%;
+    }
+}
 
 
-        .highlight-box img{
-            width: 90%;
-            height: 50%;
-            margin-bottom: 5px;
-        }
 
-         .highlight-boxx img{
-            width: 90%;
-            height: 50%;
-        }
-
-         .highlight-boxx{
-            width: 100%;
-            height: 100%;
-        }
+        /* Removed conflicting percentage-based image styles - using fixed sizes instead */
 
 
 
@@ -1160,6 +1284,18 @@
             
             .mobile-menu-btn {
                 display: block;
+            }
+            
+            .ceo-hero {
+                padding-top: 40px;
+            }
+            
+            .beginning-section {
+                margin-top: 0;
+            }
+            
+            .beginning-title {
+                margin-top: 30px;
             }
             
             .ceo-hero h1 {
@@ -1349,55 +1485,79 @@
     .highlight-wrapper {
   display: flex;
   justify-content: center;
-  gap: 5px;
+  gap: 20px;
   flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.highlight-box {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .highlight-item {
   display: flex;
-  align-items: center;
-  gap: 9px;
+  align-items: flex-start;
+  gap: 15px;
   text-align: left;
+  width: 100%;
 }
 
-.icon-circle {
-  width: 55px;
-  height: 55px;
-  background-color: #0d0d0d; /* black circle */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 28px;
-}
-
-
+.icon-circle,
 .icon-circlee {
   width: 55px;
   height: 55px;
+  min-width: 55px;
+  min-height: 55px;
   background-color: #0d0d0d; /* black circle */
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 34px;
-}
-
-.icon {
-  width: 25px;
-  height: 25px;
-}
-
-.highlight-box h3 {
-  font-size: 18px;
-  color: #fff;
+  flex-shrink: 0;
   margin: 0;
 }
 
-.highlight-box p {
+.icon-circle img,
+.icon-circlee img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.highlight-item > div:last-child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 0;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.highlight-box h3,
+.highlight-item h3 {
+  font-size: 18px;
+  color: #fff;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.highlight-box p,
+.highlight-item p {
   color: #cfcfcf;
   font-size: 14px;
-  margin: 4px 0 0;
+  margin: 0;
+  line-height: 1.4;
 }
 </style>
 
@@ -1615,10 +1775,7 @@
             margin-right: auto;
         }
 
-        .highlight-wrapper {
-        /* flex-direction: row; */
-        /* display: flex; */
-    }
+        /* Highlight wrapper styles are defined elsewhere */
         
 
 
@@ -1839,6 +1996,11 @@
     
     .beginning-highlights {
         grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 576px) {
+    .beginning-title {
+        margin-top: 30px !important;
     }
 }
 </style>
