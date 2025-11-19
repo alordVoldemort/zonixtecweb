@@ -1265,7 +1265,7 @@
         }
 
         /* Testimonials Section */
-        .testimonials-section {
+        /* .testimonials-section {
             padding: 80px 0;
             background: rgba(15, 23, 42, 0.85);
             position: relative;
@@ -1423,8 +1423,96 @@
         .project-title {
             color: var(--gray);
             font-size: 0.9rem;
-        }
+        } */
 
+
+/* Section */
+.testimonials-section {
+    padding: 60px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Continuous Scroll Container */
+.testimonials-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.testimonials-wrapper {
+    display: flex;
+    animation: scroll-left 35s linear infinite;
+    gap: 25px;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    min-width: 350px;
+    max-width: 350px;
+    height: 350px; /* SAME HEIGHT FOR ALL */
+    background: rgba(15, 23, 42, 0.85);
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Inner Content */
+.testimonial-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.quote-icon {
+    font-size: 25px;
+    color: #ff8c00;
+    margin-bottom: 10px;
+}
+
+/* Name, Position */
+.client-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.client-position {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Paragraph */
+.testimonial-quote {
+    flex-grow: 1;
+    font-size: 15px;
+    color: white;
+    line-height: 1.5;
+}
+
+/* Stars */
+.rating {
+    margin-top: 15px;
+}
+
+.rating i {
+    color: #0513d1;
+}
+
+/* Animation */
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+        
         /* Contact Section */
         .contact {
             padding: 70px 0;
@@ -3062,7 +3150,7 @@
                     
                     <!-- <a href="aboutus.html">About Us</a> -->
                     <!-- ABOUT DROPDOWN TRIGGER -->
-                    <a href="#" class="about-toggle">About Us</a>
+                    <!-- <a href="#" class="about-toggle">About Us</a> -->
                     
                     <!-- ABOUT DROPDOWN PANEL -->
                     <div class="about-dropdown">
@@ -3625,140 +3713,99 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials-section section-padding" id="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2>Client Testimonials</h2>
-                <p>Discover what our clients say about working with Zonixtec and the transformative impact our software
-                    solutions have made on their businesses.</p>
-            </div>
+    
+<section class="testimonials-section section-padding" id="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <h2>Client Testimonials</h2>
+            <p>Discover what our clients say about working with Zonixtec.</p>
+        </div>
 
-            <div class="testimonials-container">
-                <!-- Testimonial 1 -->
+        <div class="testimonials-container">
+            <div class="testimonials-wrapper">
+
+                <!-- CARD TEMPLATE (Same height, same structure) -->
                 <div class="testimonial-card">
                     <div class="testimonial-inner">
                         <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
                         <h3 class="client-name">Krishnal Tagunde</h3>
                         <p class="client-position">Founder, Kaleshwari Temple</p>
-                        <p class="testimonial-quote">"Zonixtec designed a beautiful and functional website for our
-                            temple. Their team understood our vision perfectly and delivered everything with dedication
-                            and professionalism. Within 3 months, <strong>our website traffic grew by 150%, and we now
-                                receive 40% more online donations.</strong>"</p>
+                        <p class="testimonial-quote">Zonixtec helped us increase website traffic by 150% and online donations by 40% using a clean and responsive website.</p>
                         <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                     </div>
                 </div>
 
-                <!-- Testimonial 2 -->
+                <!-- Card 2 -->
                 <div class="testimonial-card">
                     <div class="testimonial-inner">
                         <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
                         <h3 class="client-name">Dhanashree Mhaske</h3>
-                        <p class="client-position">Financial Market Expert</p>
-                        <p class="testimonial-quote">"The software solutions from Zonixtec have helped me streamline my
-                            trading operations. Their timely support and understanding of my workflow made a real
-                            difference. <strong>With their system, I now save 20+ hours per week, and my trading
-                                efficiency has improved by 35%.</strong>"</p>
+                        <p class="client-position">Financial Expert</p>
+                        <p class="testimonial-quote">Their automation tools saved me 20+ hours every week and increased trading efficiency by 35% with smooth workflow integration.</p>
                         <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                         </div>
                     </div>
                 </div>
 
-                <!-- Testimonial 3 -->
+                <!-- Card 3 -->
                 <div class="testimonial-card">
                     <div class="testimonial-inner">
                         <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
                         <h3 class="client-name">Uma Borade</h3>
-                        <p class="client-position">Owner, Jewellery Shop</p>
-                        <p class="testimonial-quote">"Thanks to Zonixtec, managing my jewellery inventory and billing
-                            has become much easier. Their system is reliable and perfectly suited for small businesses
-                            like mine. <strong>I reduced manual errors by 70% and increased billing speed by
-                                3x.</strong>"</p>
+                        <p class="client-position">Jewellery Business</p>
+                        <p class="testimonial-quote">Zonixtec reduced our billing errors by 70% and made our operations 3× faster with their efficient inventory and billing system.</p>
                         <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                     </div>
                 </div>
 
-                <!-- Testimonial 4 - EasyEAuction -->
+                <!-- Card 4 -->
                 <div class="testimonial-card">
                     <div class="testimonial-inner">
                         <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
                         <h3 class="client-name">EasyEAuction</h3>
-                        <p class="client-position">EasyEAuction Platform</p>
-                        <p class="testimonial-quote">"Zonixtec’s Auction Management System helped us automate 80% of our
-                            auction operations. The platform made real-time bidding smooth and error-free, cutting down
-                            manual effort by 30+ hours each week. Their team’s proactive support and genuine care made
-                            the whole experience seamless and stress-free"</p>
+                        <p class="client-position">Auction Platform</p>
+                        <p class="testimonial-quote">Their auction system automated 80% of our processes and saved 30+ working hours weekly with smooth real-time bidding.</p>
                         <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                     </div>
                 </div>
 
-                <!-- Testimonial 5 - Morya Cars -->
+                <!-- Card 5 -->
                 <div class="testimonial-card">
                     <div class="testimonial-inner">
                         <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
                         <h3 class="client-name">Morya Cars</h3>
-                        <p class="client-position">Car Management Platform</p>
-                        <p class="testimonial-quote">"Zonixtec developed a CRM system that transformed how we manage the
-                            buying and selling of pre-owned vehicles. Tracking leads, customers, and inventory has
-                            become effortless. Within three months, our sales efficiency improved by 45%, and we saved
-                            over ₹1 lakh in operational costs. Their team truly understood our business and delivered a
-                            solution that drives real results"</p>
+                        <p class="client-position">Car CRM User</p>
+                        <p class="testimonial-quote">With Zonixtec CRM, our sales efficiency improved by 45% and saved more than ₹1 lakh in operational costs.</p>
                         <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <!-- <i class="fas fa-star"></i> -->
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                     </div>
                 </div>
 
-                <!-- Testimonial 6 - Cobbler Management Services -->
+                <!-- Card 6 -->
                 <div class="testimonial-card">
                     <div class="testimonial-inner">
                         <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
-                        <h3 class="client-name">Cobbler Management Services</h3>
-                        <p class="client-position">CRM & Business Automation System</p>
-                        <p class="testimonial-quote">""Working with Zonixtec was a game-changer for us. The Cobbler CRM
-                            they built reduced our manual tracking time by 40% and improved customer follow-ups by 50%.
-                            What I loved most was their patience and commitment to understanding our small business
-                            challenges—it truly felt like they were part of our team"</p>
+                        <h3 class="client-name">Cobbler Services</h3>
+                        <p class="client-position">CRM Business</p>
+                        <p class="testimonial-quote">Customer follow-ups improved by 50% and manual work reduced by 40% thanks to their automated CRM platform.</p>
                         <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-
                     </div>
                 </div>
 
-
             </div>
-    </section>
+        </div>
+    </div>
+</section>
 
     <!-- Contact Section -->
     <!-- Contact Section -->
@@ -4719,11 +4766,6 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
 
-    // Booking Modal Functionality for the multi-step form //
-
-
-
-    //end Booking Modal Functionality //
 
 
     <script src="Customscroll.js"></script>
