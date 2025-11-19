@@ -136,6 +136,11 @@ nav {
   transition: transform .3s, opacity .3s;
 }
 
+/* ---------- Mobile Close Button (hidden on desktop by default) ---------- */
+.mobile-close-btn {
+  display: none;
+}
+
 /* Hamburger lines */
 
 /* When active (menu open), turn to X */
@@ -207,8 +212,41 @@ nav {
   }
   .nav-links.active { right: 0; }
 
+  /* ----- Mobile Close Button ----- */
+  .mobile-close-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: var(--light);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1002;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-close-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--secondary);
+    color: var(--secondary);
+    transform: rotate(90deg) scale(1.1);
+  }
+
+  .mobile-close-btn:active {
+    transform: rotate(90deg) scale(0.95);
+  }
+
   /* ----- Links inside sidebar ----- */
-  .nav-links > a,
+  .nav-links > a:not(.mobile-close-btn),
   .nav-links .dropdown > a {
     width: 100%;
     text-align: left;
@@ -269,4 +307,5 @@ nav {
 /* ============================================================= */
 @media (min-width: 769px) {
   .nav-links { justify-content: flex-end; }
+  .mobile-close-btn { display: none !important; }
 }

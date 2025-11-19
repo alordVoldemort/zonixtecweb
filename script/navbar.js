@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const dropdowns = document.querySelectorAll('.dropdown');
     const body = document.body;
     const hamburgerLines = document.querySelectorAll('.hamburger-line');
+    const mobileCloseBtn = document.querySelector('.mobile-close-btn');
 
     
     let mobileOverlay = document.querySelector('.mobile-overlay');
@@ -50,6 +51,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
     mobileMenuBtn?.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggleMobileMenu();
+    });
+
+    // Close button click handler
+    mobileCloseBtn?.addEventListener('click', function(e) {
         e.stopPropagation();
         toggleMobileMenu();
     });

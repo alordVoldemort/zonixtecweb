@@ -1,1604 +1,2045 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us | Zonixtec - Advanced AI Solutions</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="./CSS/allDropdown.css">
-    <link rel="icon" href="./Assets/WhatsApp Image 2025-10-15 at 15.47.06.jpeg" sizes="32x32" type="image/png">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="./CSS/allDropdown.css" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+      rel="icon"
+      href="./Assets/WhatsApp Image 2025-10-15 at 15.47.06.jpeg"
+      sizes="32x32"
+      type="image/png"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <link rel="stylesheet" href="./CSS/30min-model.css">
+    <link rel="stylesheet" href="./CSS/30min-model.css" />
     <style>
-        :root {
-            --primary: #0066ff;
-            --primary-dark: #0044cc;
-            --secondary: #00f2ff;
-            --dark: #0f172a;
-            --light: #f8fafc;
-            --gray: #64748b;
-            --accent: #8b5cf6;
-            --tech-gradient: linear-gradient(135deg, var(--primary), var(--secondary));
-            --success: #10b981;
-            --warning: #f59e0b;
+      :root {
+        --primary: #0066ff;
+        --primary-dark: #0044cc;
+        --secondary: #00f2ff;
+        --dark: #0f172a;
+        --light: #f8fafc;
+        --gray: #64748b;
+        --accent: #8b5cf6;
+        --tech-gradient: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--secondary)
+        );
+        --success: #10b981;
+        --warning: #f59e0b;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+        color: var(--light);
+        line-height: 1.6;
+        overflow-x: hidden;
+        position: relative;
+        min-height: 100vh;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+            circle at 10% 20%,
+            rgba(37, 99, 235, 0.1) 0%,
+            transparent 20%
+          ),
+          radial-gradient(
+            circle at 90% 80%,
+            rgba(6, 182, 212, 0.1) 0%,
+            transparent 20%
+          );
+        z-index: -1;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .section-padding {
+        padding: 65px 0;
+      }
+
+      .section-title {
+        font-family: "Orbitron", sans-serif;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 60px;
+        position: relative;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--tech-gradient);
+        border-radius: 2px;
+      }
+
+      /* ===== Header Styles ===== */
+      header {
+        background: rgba(15, 23, 42, 0.85);
+        backdrop-filter: blur(10px);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid rgba(100, 116, 139, 0.2);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+      }
+
+      .logo {
+        font-family: "Orbitron", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--light);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo span {
+        color: var(--secondary);
+      }
+
+      .logo .tech {
+        color: var(--secondary);
+      }
+
+      .logo i {
+        margin-right: 10px;
+        color: var(--secondary);
+        font-size: 1.5rem;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+      }
+
+      .nav-links a {
+        color: var(--light);
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .nav-links a:not(.cta-buttons):hover {
+        color: var(--secondary);
+      }
+
+      .nav-links a:not(.cta-buttons)::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--secondary);
+        transition: width 0.3s ease;
+      }
+
+      .nav-links a:not(.cta-buttons):hover::after {
+        width: 100%;
+      }
+
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: var(--secondary);
+      }
+
+      .cta-buttons {
+        background: linear-gradient(45deg, var(--primary), var(--secondary));
+        color: var(--dark);
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .cta-buttons:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 102, 255, 0.3);
+      }
+
+      .mobile-menu-btn {
+        display: none;
+        color: var(--light);
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      .nav-links a.active::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--secondary);
+      }
+
+      /* ===== Dropdown Styles ===== */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-toggle {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .dropdown-toggle i {
+        font-size: 0.8rem;
+        transition: transform 0.3s ease;
+      }
+
+      .dropdown:hover .dropdown-toggle i {
+        transform: rotate(180deg);
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(15px);
+        min-width: 280px;
+        border-radius: 8px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(100, 116, 139, 0.3);
+        z-index: 1000;
+        padding: 8px 0;
+        margin-top: 8px;
+        overflow: hidden;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+        animation: fadeInUp 0.3s ease;
+      }
+
+      .dropdown-content a {
+        display: block;
+        padding: 12px 20px;
+        color: var(--light);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        font-size: 0.95rem;
+        border-left: 4px solid transparent;
+        margin: 2px 8px;
+        border-radius: 4px;
+      }
+
+      .dropdown-content a:hover {
+        background: rgba(37, 99, 235, 0.15);
+        color: var(--secondary);
+        border-left: 4px solid var(--secondary);
+        transform: translateX(5px);
+      }
+
+      .dropdown-scroll {
+        max-height: 300px;
+        overflow-y: auto;
+        padding: 8px 0;
+      }
+
+      .dropdown-scroll::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .dropdown-scroll::-webkit-scrollbar-track {
+        background: rgba(15, 23, 42, 0.5);
+        border-radius: 3px;
+      }
+
+      .dropdown-scroll::-webkit-scrollbar-thumb {
+        background: var(--secondary);
+        border-radius: 3px;
+      }
+
+      .dropdown-scroll::-webkit-scrollbar-thumb:hover {
+        background: var(--primary);
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(-8px);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
+      }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: var(--light);
-            line-height: 1.6;
-            overflow-x: hidden;
-            position: relative;
-            min-height: 100vh;
-        }
+      /* Contact Hero Section */
+      .contact-hero {
+        padding: 135px 0 10px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
 
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background:
-                radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.1) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 20%);
-            z-index: -1;
-        }
+      .contact-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+          circle at center,
+          rgba(6, 182, 212, 0.1) 0%,
+          transparent 70%
+        );
+        z-index: -1;
+      }
 
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+      .contact-hero-title {
+        font-family: "Orbitron", sans-serif;
+        font-size: 3.8rem;
+        margin-bottom: 20px;
+        background: var(--tech-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1.2;
+        text-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+      }
 
+      .hero-subtitle {
+        font-size: 1.5rem;
+        color: var(--secondary);
+        margin-bottom: 30px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-description {
+        font-size: 1.1rem;
+        color: #cbd5e1;
+        margin-bottom: 40px;
+        line-height: 1.8;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* Contact Section - Improved Layout */
+      .contact-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: start;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .contact-info,
+      .contact-form {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .contact-card {
+        background: rgba(15, 23, 42, 0.6);
+        border-radius: 15px;
+        padding: 30px;
+        border: 1px solid rgba(100, 116, 139, 0.2);
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 30px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .contact-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(37, 99, 235, 0.4);
+      }
+
+      .contact-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--tech-gradient);
+      }
+
+      .contact-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+        color: var(--secondary);
+        font-family: "Orbitron", sans-serif;
+        text-align: center;
+      }
+
+      .info-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 25px;
+        gap: 15px;
+      }
+
+      .info-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgba(37, 99, 235, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        font-size: 1.2rem;
+        flex-shrink: 0;
+        transition: all 0.3s ease;
+      }
+
+      .info-item:hover .info-icon {
+        background: var(--tech-gradient);
+        color: white;
+        transform: scale(1.1);
+      }
+
+      .info-content {
+        flex: 1;
+      }
+
+      .info-content h4 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        color: var(--light);
+        font-weight: 600;
+      }
+
+      .info-content p {
+        color: #94a3b8;
+        line-height: 1.6;
+      }
+
+      .info-content a {
+        color: #94a3b8;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .info-content a:hover {
+        color: var(--secondary);
+      }
+
+      /* Contact Links Grid - Fixed */
+      .contact-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .contact-link-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        border-radius: 10px;
+        background: rgba(15, 23, 42, 0.4);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(100, 116, 139, 0.1);
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+      }
+
+      .contact-link-item:hover {
+        background: rgba(37, 99, 235, 0.1);
+        border-color: rgba(37, 99, 235, 0.3);
+        transform: translateY(-3px);
+        text-decoration: none;
+      }
+
+      .contact-link-icon {
+        background: #f5f6fa;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 12px;
+        color: var(--primary);
+        font-size: 1.4rem;
+        transition: all 0.3s ease;
+      }
+
+      .contact-link-item:hover .contact-link-icon {
+        background: var(--tech-gradient);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+      }
+
+      .contact-link-item span {
+        font-size: 0.9rem;
+        color: #94a3b8;
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+
+      .contact-link-value {
+        color: var(--light);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.3s ease;
+      }
+
+      .contact-link-item:hover .contact-link-value {
+        color: var(--secondary);
+      }
+
+      /* FAQ Section */
+      .faq-section {
+        margin: 50px 0;
+      }
+
+      .faq-item {
+        margin-bottom: 15px;
+        border: 1px solid rgba(100, 116, 139, 0.2);
+        border-radius: 8px;
+        overflow: hidden;
+        background: rgba(15, 23, 42, 0.4);
+      }
+
+      .faq-question {
+        padding: 20px;
+        background: rgba(30, 41, 59, 0.7);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background 0.3s;
+      }
+
+      .faq-question:hover {
+        background: rgba(37, 99, 235, 0.1);
+      }
+
+      .faq-question h4 {
+        margin: 0;
+        font-size: 1.1rem;
+        color: var(--light);
+      }
+
+      .faq-icon {
+        transition: transform 0.3s;
+        color: var(--secondary);
+      }
+
+      .faq-answer {
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+      }
+
+      .faq-item.active .faq-answer {
+        padding: 20px;
+        max-height: 500px;
+      }
+
+      .faq-item.active .faq-icon {
+        transform: rotate(180deg);
+      }
+
+      /* Form Styles */
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: var(--light);
+      }
+
+      .required-asterisk {
+        color: #ef4444;
+        font-weight: 600;
+        margin-left: 3px;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid rgba(100, 116, 139, 0.3);
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: border 0.3s ease, box-shadow 0.3s ease;
+        font-family: inherit;
+        background: rgba(15, 23, 42, 0.5);
+        color: var(--light);
+      }
+
+      /* Autofill styles - override browser defaults */
+      .form-control:-webkit-autofill,
+      .form-control:-webkit-autofill:hover,
+      .form-control:-webkit-autofill:focus,
+      .form-control:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px rgba(15, 23, 42, 0.5) inset !important;
+        -webkit-text-fill-color: var(--light) !important;
+        background-color: rgba(15, 23, 42, 0.5) !important;
+        background-clip: content-box !important;
+        border: 1px solid rgba(100, 116, 139, 0.3) !important;
+        transition: background-color 5000s ease-in-out 0s;
+      }
+
+      .form-control:-webkit-autofill:focus {
+        -webkit-box-shadow: 0 0 0 30px rgba(15, 23, 42, 0.5) inset,
+          0 0 0 2px rgba(37, 99, 235, 0.2) !important;
+        border-color: var(--primary) !important;
+      }
+
+      .form-control:focus {
+        border-color: var(--primary);
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+      }
+
+      .form-control.error {
+        border-color: #ef4444;
+        box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+      }
+
+      .form-control.error:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 30px rgba(15, 23, 42, 0.5) inset,
+          0 0 0 2px rgba(239, 68, 68, 0.2) !important;
+        border-color: #ef4444 !important;
+      }
+
+      .form-control.valid {
+        border-color: var(--success);
+        box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+      }
+
+      .form-control.valid:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 30px rgba(15, 23, 42, 0.5) inset,
+          0 0 0 2px rgba(16, 185, 129, 0.2) !important;
+        border-color: var(--success) !important;
+      }
+
+      .error {
+        display: block;
+        color: #ef4444;
+        font-size: 0.875rem;
+        margin-top: 5px;
+        min-height: 20px;
+        line-height: 1.4;
+      }
+
+      .error:empty {
+        display: none;
+      }
+
+      textarea.form-control {
+        min-height: 150px;
+        resize: vertical;
+      }
+
+      .submit-btn {
+        background: var(--tech-gradient);
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 100%;
+        font-weight: 500;
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+      }
+
+      .submit-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+      }
+
+      /* Map Section */
+      .map-section {
+        margin-top: 30px;
+      }
+
+      .map-container {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(100, 116, 139, 0.2);
+      }
+
+      .map-container iframe {
+        width: 100%;
+        height: 450px;
+        border: none;
+      }
+
+      /* Footer */
+      .footer {
+        padding: 60px 0 20px;
+        border-top: 1px solid rgba(100, 116, 139, 0.2);
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-col {
+        padding: 0;
+      }
+
+      .footer-col h3 {
+        font-family: "Orbitron", sans-serif;
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        color: var(--secondary);
+      }
+
+      .footer-col p {
+        color: var(--gray);
+        margin-bottom: 20px;
+        line-height: 1.7;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .footer-links a {
+        display: flex;
+        align-items: center;
+        color: var(--gray);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        max-width: 100%;
+        margin-bottom: 8px;
+      }
+
+      .footer-links a:hover {
+        color: var(--secondary);
+      }
+
+      .footer-links i {
+        font-size: 0.8rem;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(37, 99, 235, 0.2);
+        border-radius: 50%;
+        color: var(--light);
+        transition: all 0.3s ease;
+      }
+
+      .social-links a:hover {
+        background: var(--tech-gradient);
+        transform: translateY(-5px);
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+      }
+
+      .form-control {
+        padding: 12px 15px;
+        border-radius: 5px;
+        border: 1px solid rgba(100, 116, 139, 0.3);
+        background: rgba(15, 23, 42, 0.5);
+        color: var(--light);
+        font-size: 1rem;
+        margin-bottom: 10px;
+      }
+
+      .form-control::placeholder {
+        color: #94a3b8;
+      }
+
+      .submit-btn {
+        background: var(--tech-gradient);
+        color: white;
+        padding: 12px 20px;
+        border-radius: 5px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+      }
+
+      .submit-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        color: var(--gray);
+        font-size: 0.9rem;
+      }
+
+      .footer-bottom i {
+        color: #ef4444;
+        margin: 0 5px;
+      }
+
+      /* ===== Mobile Responsive Styles ===== */
+      @media (max-width: 1200px) {
         .section-padding {
-            padding: 65px 0;
+          padding: 80px 0;
         }
 
-        .section-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 60px;
-            position: relative;
+        /* Footer adjustments for medium screens */
+        .footer-container {
+          grid-template-columns: repeat(4, minmax(180px, 1fr));
+          gap: 25px;
         }
+      }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--tech-gradient);
-            border-radius: 2px;
+      /* General tablet adjustments (including iPad Pro) */
+      @media (min-width: 768px) and (max-width: 1366px) {
+        .section-padding {
+          padding: 60px 0;
         }
+      }
 
-        /* ===== Header Styles ===== */
-        header {
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            border-bottom: 1px solid rgba(100, 116, 139, 0.2);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-
-        .logo {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--light);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
-
-        .logo span {
-            color: var(--secondary);
-        }
-
-        .logo .tech {
-            color: var(--secondary);
-        }
-
-        .logo i {
-            margin-right: 10px;
-            color: var(--secondary);
-            font-size: 1.5rem;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--light);
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a:not(.cta-buttons):hover {
-            color: var(--secondary);
-        }
-
-        .nav-links a:not(.cta-buttons)::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--secondary);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:not(.cta-buttons):hover::after {
-            width: 100%;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--secondary);
-        }
-
-        .cta-buttons {
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            color: var(--dark);
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .cta-buttons:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 102, 255, 0.3);
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            color: var(--light);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        .nav-links a.active::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: var(--secondary);
-        }
-
-        /* ===== Dropdown Styles ===== */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-toggle {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .dropdown-toggle i {
-            font-size: 0.8rem;
-            transition: transform 0.3s ease;
-        }
-
-        .dropdown:hover .dropdown-toggle i {
-            transform: rotate(180deg);
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: rgba(15, 23, 42, 0.98);
-            backdrop-filter: blur(15px);
-            min-width: 280px;
-            border-radius: 8px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(100, 116, 139, 0.3);
-            z-index: 1000;
-            padding: 8px 0;
-            margin-top: 8px;
-            overflow: hidden;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-            animation: fadeInUp 0.3s ease;
-        }
-
-        .dropdown-content a {
-            display: block;
-            padding: 12px 20px;
-            color: var(--light);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            font-size: 0.95rem;
-            border-left: 4px solid transparent;
-            margin: 2px 8px;
-            border-radius: 4px;
-        }
-
-        .dropdown-content a:hover {
-            background: rgba(37, 99, 235, 0.15);
-            color: var(--secondary);
-            border-left: 4px solid var(--secondary);
-            transform: translateX(5px);
-        }
-
-        .dropdown-scroll {
-            max-height: 300px;
-            overflow-y: auto;
-            padding: 8px 0;
-        }
-
-        .dropdown-scroll::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .dropdown-scroll::-webkit-scrollbar-track {
-            background: rgba(15, 23, 42, 0.5);
-            border-radius: 3px;
-        }
-
-        .dropdown-scroll::-webkit-scrollbar-thumb {
-            background: var(--secondary);
-            border-radius: 3px;
-        }
-
-        .dropdown-scroll::-webkit-scrollbar-thumb:hover {
-            background: var(--primary);
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(-8px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Contact Hero Section */
+      /* iPad Pro specific adjustments (1024 x 1366) */
+      @media (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+        /* Reduce hero padding to balance with navbar */
         .contact-hero {
-            padding: 200px 0 10px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at center, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
-            z-index: -1;
+          padding: 120px 0 40px;
         }
 
         .contact-hero-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 3.8rem;
-            margin-bottom: 20px;
-            background: var(--tech-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.2;
-            text-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+          font-size: 3rem;
+          margin-bottom: 15px;
         }
 
         .hero-subtitle {
-            font-size: 1.5rem;
-            color: var(--secondary);
-            margin-bottom: 30px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+          font-size: 1.3rem;
+          margin-bottom: 20px;
         }
 
         .hero-description {
-            font-size: 1.1rem;
-            color: #cbd5e1;
-            margin-bottom: 40px;
-            line-height: 1.8;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+          font-size: 1rem;
+          margin-bottom: 30px;
         }
 
-        /* Contact Section - Improved Layout */
+        /* Navbar adjustments for iPad Pro - make it more compact */
+        header {
+          padding: 10px 0 !important;
+        }
+
+        nav {
+          padding: 10px 0 !important;
+        }
+
+        .logo img {
+          height: 35px;
+        }
+
+        .nav-links {
+          gap: 18px;
+        }
+
+        .nav-links a {
+          font-size: 0.9rem;
+          padding: 8px 12px;
+        }
+
+        .cta-buttons {
+          font-size: 0.85rem;
+          padding: 8px 16px;
+        }
+
+        /* Contact Section - Stack vertically for iPad Pro */
         .contact-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: start;
-            width: 100%;
-            max-width: 100%;
+          grid-template-columns: 1fr;
+          gap: 30px;
         }
 
-        .contact-info,
+        .contact-info {
+          width: 100%;
+          max-width: 100%;
+        }
+
         .contact-form {
-            width: 100%;
-            max-width: 100%;
+          width: 100%;
+          max-width: 100%;
         }
 
         .contact-card {
-            background: rgba(15, 23, 42, 0.6);
-            border-radius: 15px;
-            padding: 30px;
-            border: 1px solid rgba(100, 116, 139, 0.2);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 30px;
-            width: 100%;
-            box-sizing: border-box;
+          width: 100%;
+          margin-bottom: 25px;
         }
 
-        .contact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(37, 99, 235, 0.4);
+        /* FAQ Section - Full width (already full width in single column) */
+
+        /* Footer adjustments for iPad Pro portrait */
+        .footer-container {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 25px;
+        }
+      }
+
+      /* iPad Pro landscape (1366 x 1024) */
+      @media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+        .contact-hero {
+          padding: 100px 0 30px;
         }
 
-        .contact-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: var(--tech-gradient);
+        .contact-hero-title {
+          font-size: 2.8rem;
+          margin-bottom: 15px;
+        }
+
+        .hero-subtitle {
+          font-size: 1.2rem;
+          margin-bottom: 15px;
+        }
+
+        .hero-description {
+          font-size: 0.95rem;
+          margin-bottom: 25px;
+        }
+
+        /* Navbar adjustments for landscape */
+        header {
+          padding: 8px 0 !important;
+        }
+
+        nav {
+          padding: 8px 0 !important;
+        }
+
+        .logo img {
+          height: 32px;
+        }
+
+        .nav-links {
+          gap: 15px;
+        }
+
+        .nav-links a {
+          font-size: 0.85rem;
+          padding: 6px 10px;
+        }
+
+        .cta-buttons {
+          font-size: 0.8rem;
+          padding: 6px 14px;
+        }
+
+        /* Contact Section - Two columns with FAQ full width */
+        .contact-section {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 25px;
+          align-items: start;
+        }
+
+        .contact-info {
+          display: contents;
+        }
+
+        .contact-form {
+          grid-column: 2;
+          grid-row: 1 / 3;
+        }
+
+        .contact-card {
+          width: 100%;
+          margin-bottom: 0;
+        }
+
+        /* First card (Our Location) - first column */
+        .contact-info .contact-card:first-of-type {
+          grid-column: 1;
+          grid-row: 1;
+        }
+
+        /* FAQ Section - Full width spanning both columns */
+        .contact-info .contact-card:nth-of-type(2) {
+          grid-column: 1 / -1;
+          grid-row: 2;
+          width: 100%;
+        }
+
+        /* Business Hours card - first column, third row */
+        .contact-info .contact-card:last-of-type {
+          grid-column: 1;
+          grid-row: 3;
+        }
+
+        /* Footer adjustments for iPad Pro landscape */
+        .footer-container {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 20px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .contact-hero-title {
+          font-size: 3.2rem;
+        }
+
+        .contact-section {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+
+        .contact-card {
+          margin-bottom: 25px;
+        }
+
+        .contact-links {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 15px;
+        }
+
+        .footer-container {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .dropdown-scroll {
+          max-height: 250px;
+        }
+
+        .logo {
+          font-size: 1.5rem;
+        }
+
+        .mobile-menu-btn {
+          display: block;
+          position: fixed;
+          top: 25px;
+          right: 25px;
+          z-index: 1000;
+          background: none;
+          border: none;
+          color: var(--light);
+          font-size: 1.8rem;
+        }
+
+        /* Hero section */
+        .contact-hero {
+          padding: 120px 0 50px;
+        }
+
+        .contact-hero-title {
+          font-size: 2.8rem;
+          line-height: 1.2;
+        }
+
+        .hero-subtitle {
+          font-size: 1.3rem;
+        }
+
+        /* Contact section improvements */
+        .contact-section {
+          grid-template-columns: 1fr;
+          gap: 25px;
+        }
+
+        .contact-card {
+          padding: 25px;
+          margin-bottom: 20px;
         }
 
         .contact-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 25px;
-            color: var(--secondary);
-            font-family: 'Orbitron', sans-serif;
-            text-align: center;
+          font-size: 1.3rem;
+          margin-bottom: 20px;
         }
 
-        .info-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 25px;
-            gap: 15px;
-        }
-
-        .info-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: rgba(37, 99, 235, 0.15);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            font-size: 1.2rem;
-            flex-shrink: 0;
-            transition: all 0.3s ease;
-        }
-
-        .info-item:hover .info-icon {
-            background: var(--tech-gradient);
-            color: white;
-            transform: scale(1.1);
-        }
-
-        .info-content {
-            flex: 1;
-        }
-
-        .info-content h4 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            color: var(--light);
-            font-weight: 600;
-        }
-
-        .info-content p {
-            color: #94a3b8;
-            line-height: 1.6;
-        }
-
-        .info-content a {
-            color: #94a3b8;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .info-content a:hover {
-            color: var(--secondary);
-        }
-
-        /* Contact Links Grid - Fixed */
         .contact-links {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 30px;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 15px;
+          margin-top: 25px;
         }
 
         .contact-link-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 15px;
-            border-radius: 10px;
-            background: rgba(15, 23, 42, 0.4);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(100, 116, 139, 0.1);
-        }
-
-        .contact-link-item:hover {
-            background: rgba(37, 99, 235, 0.1);
-            border-color: rgba(37, 99, 235, 0.3);
-            transform: translateY(-3px);
+          padding: 12px;
         }
 
         .contact-link-icon {
-            background: #f5f6fa;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 12px;
-            color: var(--primary);
-            font-size: 1.4rem;
-            transition: all 0.3s ease;
+          width: 50px;
+          height: 50px;
+          font-size: 1.2rem;
+          margin-bottom: 10px;
         }
 
-        .contact-link-item:hover .contact-link-icon {
-            background: var(--tech-gradient);
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+        .info-item {
+          margin-bottom: 20px;
         }
 
-        .contact-link-item span {
-            font-size: 0.9rem;
-            color: #94a3b8;
-            margin-bottom: 5px;
-            font-weight: 500;
-        }
-
-        .contact-link-item a {
-            color: var(--light);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-
-        .contact-link-item:hover a {
-            color: var(--secondary);
-        }
-
-        /* FAQ Section */
-        .faq-section {
-            margin: 50px 0;
-        }
-
-        .faq-item {
-            margin-bottom: 15px;
-            border: 1px solid rgba(100, 116, 139, 0.2);
-            border-radius: 8px;
-            overflow: hidden;
-            background: rgba(15, 23, 42, 0.4);
-        }
-
-        .faq-question {
-            padding: 20px;
-            background: rgba(30, 41, 59, 0.7);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background 0.3s;
-        }
-
-        .faq-question:hover {
-            background: rgba(37, 99, 235, 0.1);
-        }
-
-        .faq-question h4 {
-            margin: 0;
-            font-size: 1.1rem;
-            color: var(--light);
-        }
-
-        .faq-icon {
-            transition: transform 0.3s;
-            color: var(--secondary);
-        }
-
-        .faq-answer {
-            padding: 0 20px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-        }
-
-        .faq-item.active .faq-answer {
-            padding: 20px;
-            max-height: 500px;
-        }
-
-        .faq-item.active .faq-icon {
-            transform: rotate(180deg);
-        }
-
-        /* Form Styles */
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: var(--light);
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid rgba(100, 116, 139, 0.3);
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: border 0.3s;
-            font-family: inherit;
-            background: rgba(15, 23, 42, 0.5);
-            color: var(--light);
-        }
-
-        .form-control:focus {
-            border-color: var(--primary);
-            outline: none;
-            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
-        }
-
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            background: var(--tech-gradient);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-            font-weight: 500;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
-        }
-
-        /* Map Section */
-        .map-section {
-            margin-top: 30px;
-        }
-
-        .map-container {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(100, 116, 139, 0.2);
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 450px;
-            border: none;
+        .info-icon {
+          width: 45px;
+          height: 45px;
+          font-size: 1.1rem;
         }
 
         /* Footer */
-        .footer {
-            padding: 70px 0 0;
-            border-top: 1px solid rgba(100, 116, 139, 0.2);
-        }
-
         .footer-container {
-            display: grid;
-            grid-template-columns: repeat(5, minmax(255px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 576px) {
+        /* Header */
+        nav {
+          padding: 15px 0;
         }
 
-        .footer-col {
-            padding: 20px;
+        .mobile-menu-btn {
+          top: 20px;
+          right: 20px;
+          font-size: 1.6rem;
         }
 
-        .footer-col h3 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.4rem;
-            margin-bottom: 20px;
-            color: var(--secondary);
-            position: relative;
-            padding-bottom: 10px;
+        /* Hero section */
+        .contact-hero {
+          padding: 120px 0 40px;
         }
 
-        .footer-col p {
-            color: #cbd5e1;
-            margin-bottom: 20px;
-            line-height: 1.7;
+        .contact-hero-title {
+          font-size: 2.2rem;
+          line-height: 1.3;
         }
 
-        .footer-links a {
-            display: flex;
-            align-items: center;
-            color: var(--gray);
-            text-decoration: none;
-            margin-bottom: 12px;
-            transition: all 0.3s ease;
+        .hero-subtitle {
+          font-size: 1.1rem;
         }
 
-        .footer-links a:hover {
-            color: var(--secondary);
-            transform: translateX(5px);
+        .hero-description {
+          font-size: 1rem;
         }
 
-        .footer-links i {
-            margin-right: 10px;
-            color: var(--gray);
-            font-size: 0.8rem;
+        /* Section titles */
+        .section-title {
+          font-size: 2rem;
+          margin-bottom: 40px;
         }
 
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
+        /* Contact section - Mobile specific */
+        .contact-section {
+          gap: 20px;
         }
 
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(37, 99, 235, 0.2);
-            border-radius: 50%;
-            color: var(--light);
-            transition: all 0.3s ease;
+        .contact-card {
+          padding: 20px;
+          margin-bottom: 15px;
         }
 
-        .social-links a:hover {
-            background: var(--tech-gradient);
-            transform: translateY(-5px);
+        .contact-card h3 {
+          font-size: 1.2rem;
+          margin-bottom: 18px;
         }
 
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            margin-top: 15px;
+        .contact-links {
+          grid-template-columns: 1fr;
+          gap: 12px;
+          margin-top: 20px;
         }
 
-        .form-control {
-            padding: 12px 15px;
-            border-radius: 5px;
-            border: 1px solid rgba(100, 116, 139, 0.3);
-            background: rgba(15, 23, 42, 0.5);
-            color: var(--light);
-            font-size: 1rem;
-            margin-bottom: 10px;
+        .contact-link-item {
+          padding: 15px 10px;
+          border-radius: 8px;
         }
 
-        .form-control::placeholder {
-            color: #94a3b8;
+        .contact-link-icon {
+          width: 45px;
+          height: 45px;
+          font-size: 1.1rem;
+          margin-bottom: 8px;
         }
 
-        .submit-btn {
-            background: var(--tech-gradient);
-            color: white;
-            padding: 12px 20px;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            margin-top: 10px;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+        .contact-link-item span {
+          font-size: 0.85rem;
+          margin-bottom: 4px;
         }
 
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+        .contact-link-item a {
+          font-size: 0.85rem;
         }
 
-        .footer-bottom {
-            text-align: center;
-            padding: 20px 0;
-            border-top: 1px solid rgba(100, 116, 139, 0.2);
-            color: #94a3b8;
-            font-size: 0.9rem;
+        .info-item {
+          margin-bottom: 18px;
+          gap: 12px;
         }
 
-        .footer-bottom i {
-            color: #ef4444;
-            margin: 0 5px;
+        .info-icon {
+          width: 40px;
+          height: 40px;
+          font-size: 1rem;
         }
 
-        /* ===== Mobile Responsive Styles ===== */
-        @media (max-width: 1200px) {
-            .section-padding {
-                padding: 80px 0;
-            }
+        .info-content h4 {
+          font-size: 1rem;
+          margin-bottom: 6px;
         }
 
-        @media (max-width: 992px) {
-            .contact-hero-title {
-                font-size: 3.2rem;
-            }
-
-            .contact-section {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .contact-card {
-                margin-bottom: 25px;
-            }
-
-            .contact-links {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-            }
-
-            .footer-container {
-                grid-template-columns: repeat(3, 1fr);
-            }
+        .info-content p {
+          font-size: 0.9rem;
         }
 
-        @media (max-width: 768px) {
-            .dropdown-scroll {
-                max-height: 250px;
-            }
-
-            .logo {
-                font-size: 1.5rem;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-                position: fixed;
-                top: 25px;
-                right: 25px;
-                z-index: 1000;
-                background: none;
-                border: none;
-                color: var(--light);
-                font-size: 1.8rem;
-            }
-
-            /* Hero section */
-            .contact-hero {
-                padding: 120px 0 50px;
-            }
-
-            .contact-hero-title {
-                font-size: 2.8rem;
-                line-height: 1.2;
-            }
-
-            .hero-subtitle {
-                font-size: 1.3rem;
-            }
-
-            /* Contact section improvements */
-            .contact-section {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-
-            .contact-card {
-                padding: 25px;
-                margin-bottom: 20px;
-            }
-
-            .contact-card h3 {
-                font-size: 1.3rem;
-                margin-bottom: 20px;
-            }
-
-            .contact-links {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-                margin-top: 25px;
-            }
-
-            .contact-link-item {
-                padding: 12px;
-            }
-
-            .contact-link-icon {
-                width: 50px;
-                height: 50px;
-                font-size: 1.2rem;
-                margin-bottom: 10px;
-            }
-
-            .info-item {
-                margin-bottom: 20px;
-            }
-
-            .info-icon {
-                width: 45px;
-                height: 45px;
-                font-size: 1.1rem;
-            }
-
-            /* Footer */
-            .footer-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .footer-col {
-                padding: 18px 5px;
-            }
-
-            .footer-col h3 {
-                font-size: 1.1rem;
-                margin-bottom: 15px;
-            }
-        }
-
-        @media (max-width: 576px) {
-
-            /* Header */
-            nav {
-                padding: 15px 0;
-            }
-
-            .mobile-menu-btn {
-                top: 20px;
-                right: 20px;
-                font-size: 1.6rem;
-            }
-
-            /* Hero section */
-            .contact-hero {
-                padding: 100px 0 40px;
-            }
-
-            .contact-hero-title {
-                font-size: 2.2rem;
-                line-height: 1.3;
-            }
-
-            .hero-subtitle {
-                font-size: 1.1rem;
-            }
-
-            .hero-description {
-                font-size: 1rem;
-            }
-
-            /* Section titles */
-            .section-title {
-                font-size: 2rem;
-                margin-bottom: 40px;
-            }
-
-            /* Contact section - Mobile specific */
-            .contact-section {
-                gap: 20px;
-            }
-
-            .contact-card {
-                padding: 20px;
-                margin-bottom: 15px;
-            }
-
-            .contact-card h3 {
-                font-size: 1.2rem;
-                margin-bottom: 18px;
-            }
-
-            .contact-links {
-                grid-template-columns: 1fr;
-                gap: 12px;
-                margin-top: 20px;
-            }
-
-            .contact-link-item {
-                padding: 15px 10px;
-                border-radius: 8px;
-            }
-
-            .contact-link-icon {
-                width: 45px;
-                height: 45px;
-                font-size: 1.1rem;
-                margin-bottom: 8px;
-            }
-
-            .contact-link-item span {
-                font-size: 0.85rem;
-                margin-bottom: 4px;
-            }
-
-            .contact-link-item a {
-                font-size: 0.85rem;
-            }
-
-            .info-item {
-                margin-bottom: 18px;
-                gap: 12px;
-            }
-
-            .info-icon {
-                width: 40px;
-                height: 40px;
-                font-size: 1rem;
-            }
-
-            .info-content h4 {
-                font-size: 1rem;
-                margin-bottom: 6px;
-            }
-
-            .info-content p {
-                font-size: 0.9rem;
-            }
-
-            /* Footer */
-            .footer-container {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-col {
-                padding: 15px 2px;
-            }
-
-            .footer-col h3 {
-                font-size: 1.1rem;
-            }
-        }
-
-        @media (max-width: 400px) {
-            .contact-hero-title {
-                font-size: 1.9rem;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .contact-card {
-                padding: 15px;
-                margin-bottom: 12px;
-            }
-
-            .contact-card h3 {
-                font-size: 1.1rem;
-                margin-bottom: 15px;
-            }
-
-            .contact-links {
-                gap: 10px;
-                margin-top: 15px;
-            }
-
-            .contact-link-item {
-                padding: 12px 8px;
-            }
-
-            .contact-link-icon {
-                width: 40px;
-                height: 40px;
-                font-size: 1rem;
-                margin-bottom: 6px;
-            }
-
-            .info-item {
-                flex-direction: row;
-                align-items: flex-start;
-                gap: 12px;
-                margin-bottom: 15px;
-                text-align: left;
-            }
-
-            .info-content {
-                text-align: left;
-                flex: 1;
-            }
-
-            .info-content h4 {
-                font-size: 0.95rem;
-            }
-
-            .info-content p {
-                font-size: 0.85rem;
-            }
-        }
-
-        /* Fix layout stability on page load/refresh */
-        body {
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        body.loaded {
-            opacity: 1;
-        }
-
-        /* Prevent layout shift during load */
-        .contact-section,
-        .contact-card,
+        /* Footer */
         .footer-container {
-            min-height: fit-content;
-            will-change: auto;
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 400px) {
+        .contact-hero-title {
+          font-size: 1.9rem;
         }
 
-        /* Optimize for touch devices */
-        @media (hover: none) and (pointer: coarse) {
-            .contact-card:hover {
-                transform: none;
-            }
-
-            .info-icon {
-                pointer-events: none;
-            }
+        .section-title {
+          font-size: 1.8rem;
         }
+
+        .contact-card {
+          padding: 15px;
+          margin-bottom: 12px;
+        }
+
+        .contact-card h3 {
+          font-size: 1.1rem;
+          margin-bottom: 15px;
+        }
+
+        .contact-links {
+          gap: 10px;
+          margin-top: 15px;
+        }
+
+        .contact-link-item {
+          padding: 12px 8px;
+        }
+
+        .contact-link-icon {
+          width: 40px;
+          height: 40px;
+          font-size: 1rem;
+          margin-bottom: 6px;
+        }
+
+        .info-item {
+          flex-direction: row;
+          align-items: flex-start;
+          gap: 12px;
+          margin-bottom: 15px;
+          text-align: left;
+        }
+
+        .info-content {
+          text-align: left;
+          flex: 1;
+        }
+
+        .info-content h4 {
+          font-size: 0.95rem;
+        }
+
+        .info-content p {
+          font-size: 0.85rem;
+        }
+      }
+
+      /* Fix layout stability on page load/refresh */
+      body {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      body.loaded {
+        opacity: 1;
+      }
+
+      /* Prevent layout shift during load */
+      .contact-section,
+      .contact-card,
+      .footer-container {
+        min-height: fit-content;
+        will-change: auto;
+      }
+
+      /* Optimize for touch devices */
+      @media (hover: none) and (pointer: coarse) {
+        .contact-card:hover {
+          transform: none;
+        }
+
+        .info-icon {
+          pointer-events: none;
+        }
+      }
     </style>
 
     <!-- Footer dropdown styles -->
     <style>
-        .footer-dropdown-content {
-            display: none;
-            margin-left: 15px;
-        }
+      .footer-dropdown-content {
+        display: none;
+        margin-left: 15px;
+      }
 
-        .footer-dropdown.open .footer-dropdown-content {
-            display: block;
-        }
+      .footer-dropdown.open .footer-dropdown-content {
+        display: block;
+      }
 
-        .footer-dropdown-header {
-            display: flex;
-            color: var(--gray);
-            justify-content: space-between;
-            cursor: pointer;
-            margin: 5px 0;
-        }
+      .footer-dropdown-header {
+        display: flex;
+        color: var(--gray);
+        justify-content: space-between;
+        cursor: pointer;
+        margin: 5px 0;
+      }
 
-        .footer-dropdown-header:hover {
-            color: var(--secondary);
-        }
+      .footer-dropdown-header:hover {
+        color: var(--secondary);
+      }
     </style>
 
     <!-- Navbar CSS -->
-    <link rel="stylesheet" href="./CSS/navbar.css">
-    <link rel="stylesheet" href="./CSS/booking-modal.css">
-</head>
+    <link rel="stylesheet" href="./CSS/navbar.css" />
+    <link rel="stylesheet" href="./CSS/booking-modal.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Header -->
     <header id="header">
-        <div class="container">
-            <nav>
-                <a href="index.html" class="logo">
-                    <img src="./Assets/Logo.svg" alt="Zonixtec Logo" style="height: 40px; width: auto;">
-                </a>
+      <div class="container">
+        <nav>
+          <a href="index.html" class="logo">
+            <img
+              src="./Assets/Logo.svg"
+              alt="Zonixtec Logo"
+              style="height: 40px; width: auto"
+            />
+          </a>
 
-                <div class="nav-links">
-                     
-                    <a href="#" class="about-toggle">About Us</a>
+          <div class="nav-links">
+            <a href="#" class="about-toggle">About Us</a>
 
-                     <!-- ABOUT DROPDOWN PANEL -->
-                    <div class="about-dropdown">
-                        <div><h2>About Us</h2></div>
+            <!-- ABOUT DROPDOWN PANEL -->
+            <div class="about-dropdown">
+              <div><h2>About Us</h2></div>
 
-                        <div class="about-container">
-                            
-                            <div class="about-links">
-                                <div>
-                                    <a href="aboutus.html">About Zonixtec</a>
-                                    <a href="Why-Zonixtec.html">Why Zonixtec?</a>
-                                    <a href="#">Our Journey</a>
-                                </div>
-                                <div>
-                                    <a href="#">From CEO’s Desk</a>
-                                    <a href="#">Leadership</a>
-                                    <a href="#">Case Study</a>
-                                </div>
-                            </div>
-                    
-                            <span class="about-close">&times;</span>
-                    
-                            <div class="about-image">
-                                <img src="./Assets/ai-nuclear-energy-background-future-innovation-disruptive-technology 3.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                        <div class="dropdown">
-                        <a href="Services.html" class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
-                        <div class="dropdown-content">
-                            <div class="dropdown-scroll">
-                                <a href="web-design-development.html">Web Design & Development</a>
-                                <a href="web-app-development.html">Web App Development</a>
-                                <a href="CustomSoftware.html">Custom Software Development</a>
-                                <a href="crm-solutions.html">Custom CRM Solutions</a>
-                                <a href="erp-solutions.html">Custom ERP Solutions</a>
-                                <a href="Billing-invoice.html">Billing-Invoice Solutions</a>
-                                <a href="AIStrategy.html">AI Strategy & Consulting</a>
-                                <a href="DigitalMarketing.html">Digital Marketing Services</a>
-                                <a href="MobileDevelopment.html">Mobile App Development</a>
-                                <a href="ui.html">UI/UX Design Services</a>
-                                <a href="CloudSolutions.html">Cloud Solutions</a>
-                                 <a href="hrms-solutions.html">HRMS Solutions</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a href="carrer.html">Career</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="javascript:void(0);" class="cta-buttons" onclick="openBookingModal()">
-                        <i class="fas fa-phone-alt"></i>Book A 30 Min Call
-                    </a>
+              <div class="about-container">
+                <div class="about-links">
+                  <div>
+                    <a href="aboutus.html">About Zonixtec</a>
+                    <a href="Why-Zonixtec.html">Why Zonixtec?</a>
+                    <a href="#">Our Journey</a>
+                  </div>
+                  <div>
+                    <a href="#">From CEO’s Desk</a>
+                    <a href="#">Leadership</a>
+                    <a href="#">Case Study</a>
+                  </div>
                 </div>
 
-                <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
-            </nav>
-        </div>
+                <span class="about-close">&times;</span>
+
+                <div class="about-image">
+                  <img
+                    src="./Assets/ai-nuclear-energy-background-future-innovation-disruptive-technology 3.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <a href="Services.html" class="dropdown-toggle"
+                >Services <i class="fas fa-chevron-down"></i
+              ></a>
+              <div class="dropdown-content">
+                <div class="dropdown-scroll">
+                  <a href="web-design-development.html"
+                    >Web Design & Development</a
+                  >
+                  <a href="web-app-development.html">Web App Development</a>
+                  <a href="CustomSoftware.html">Custom Software Development</a>
+                  <a href="crm-solutions.html">Custom CRM Solutions</a>
+                  <a href="erp-solutions.html">Custom ERP Solutions</a>
+                  <a href="Billing-invoice.html">Billing-Invoice Solutions</a>
+                  <a href="AIStrategy.html">AI Strategy & Consulting</a>
+                  <a href="DigitalMarketing.html">Digital Marketing Services</a>
+                  <a href="MobileDevelopment.html">Mobile App Development</a>
+                  <a href="ui.html">UI/UX Design Services</a>
+                  <a href="CloudSolutions.html">Cloud Solutions</a>
+                  <a href="hrms-solutions.html">HRMS Solutions</a>
+                </div>
+              </div>
+            </div>
+
+            <a href="carrer.html">Career</a>
+            <a href="contact.html">Contact</a>
+            <a
+              href="javascript:void(0);"
+              class="cta-buttons"
+              onclick="openBookingModal()"
+            >
+              <i class="fas fa-phone-alt"></i>Book A 30 Min Call
+            </a>
+          </div>
+
+          <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </nav>
+      </div>
     </header>
 
     <!-- Contact Hero Section -->
     <section class="contact-hero">
-        <div class="container">
-            <div class="contact-hero-content">
-                <h1 class="contact-hero-title">Let's Talk!</h1>
-                <p class="hero-subtitle">We'd love to hear from you. Let's explore how our services can support your
-                    vision</p>
-                <p class="hero-description">Reach out today to talk about your project. Our team is here to help you
-                    transform your business with AI-powered solutions.</p>
-            </div>
+      <div class="container">
+        <div class="contact-hero-content">
+          <h1 class="contact-hero-title">Let's Talk!</h1>
+          <p class="hero-subtitle">
+            We'd love to hear from you. Let's explore how our services can
+            support your vision
+          </p>
+          <p class="hero-description">
+            Reach out today to talk about your project. Our team is here to help
+            you transform your business with AI-powered solutions.
+          </p>
         </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section class="section-padding">
-        <div class="container">
-            <div class="contact-section">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <h3>Our Location</h3>
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="info-content">
-                                <p>
-                                    <a href="https://maps.google.com/?q=Zonixtec IT Services PVT LTD, 2nd Floor, Vasukamal Express, Rohan Sehar Ln, Pan Card Club Rd, behind Beverly Hills Society, Samarth Colony, Baner"
-                                        target="_blank" style="color: inherit; text-decoration: none;">
-                                        Zonixtec IT Services PVT LTD<br>
-                                        2nd Floor, Vasukamal Express, Rohan Sehar Ln, Pan Card Club Rd, behind Beverly
-                                        Hills Society, Samarth Colony, Baner 411045, Pune, Maharashtra, India
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="contact-links">
-                            <div class="contact-link-item">
-                                <div class="contact-link-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <span>Call Us</span>
-                                <a href="tel:+919209670926">
-                                    +91 9209670926
-                                </a>
-                            </div>
-
-                            <div class="contact-link-item">
-                                <div class="contact-link-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <span>Mail Us</span>
-                                <a href="mailto:support@office.zonixtec.com">
-                                    support@office.zonixtec.com
-                                </a>
-                            </div>
-
-                            <div class="contact-link-item">
-                                <div class="contact-link-icon">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </div>
-                                <span>LinkedIn</span>
-                                <a href="https://www.linkedin.com/company/zonixtec-it-services-private-limited/"
-                                    aria-label="LinkedIn">
-                                    Connect
-                                </a>
-                            </div>
-
-                            <div class="contact-link-item">
-                                <div class="contact-link-icon">
-                                    <i class="fab fa-instagram"></i>
-                                </div>
-                                <span>Instagram</span>
-                                <a href="https://www.instagram.com/zonixtec_it_services" aria-label="Instagram">
-                                    Follow
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Section -->
-                    <div class="contact-card">
-                        <h3>Frequently Asked Questions</h3>
-                        <div class="faq-section">
-                            <div class="faq-item">
-                                <div class="faq-question">
-                                    <h4>Why should I choose Zonixtec?</h4>
-                                    <i class="fas fa-chevron-down faq-icon"></i>
-                                </div>
-                                <div class="faq-answer">
-                                    <p>Zonixtec is more than just a technology solutions provider – we're a trusted
-                                        Digital Transformation Partner committed to driving innovation and Business
-                                        growth. We deliver custom AI solutions, Scalable software development, and
-                                        Result-driven digital strategies with proven expertise and a strong technical
-                                        team. We ensure every project creates measurable business impact and long-term
-                                        value.</p>
-                                </div>
-                            </div>
-
-                            <div class="faq-item">
-                                <div class="faq-question">
-                                    <h4>What makes Zonixtec's AI solutions different?</h4>
-                                    <i class="fas fa-chevron-down faq-icon"></i>
-                                </div>
-                                <div class="faq-answer">
-                                    <p>We focus on delivering customized, ROI-driven AI solutions that align with your
-                                        business goals—rather than generic, one-size-fits-all tools.</p>
-                                </div>
-                            </div>
-
-                            <div class="faq-item">
-                                <div class="faq-question">
-                                    <h4>How do I know if my business is ready for AI?</h4>
-                                    <i class="fas fa-chevron-down faq-icon"></i>
-                                </div>
-                                <div class="faq-answer">
-                                    <p>We offer an AI Maturity assessment to evaluate your current systems, data, and
-                                        processes, and then create a roadmap for integration.</p>
-                                </div>
-                            </div>
-
-                            <div class="faq-item">
-                                <div class="faq-question">
-                                    <h4>How can I initiate a partnership with Zonixtec?</h4>
-                                    <i class="fas fa-chevron-down faq-icon"></i>
-                                </div>
-                                <div class="faq-answer">
-                                    <p>Simply reach out through our Contact page or schedule a call with our team. We'll
-                                        discuss your goals and explore the right collaboration model.</p>
-                                </div>
-                            </div>
-
-                            <div class="faq-item">
-                                <div class="faq-question">
-                                    <h4>Do you provide post-deployment support?</h4>
-                                    <i class="fas fa-chevron-down faq-icon"></i>
-                                </div>
-                                <div class="faq-answer">
-                                    <p>Yes, we offer ongoing monitoring, maintenance, and optimization to ensure
-                                        long-term success.</p>
-                                </div>
-                            </div>
-
-                            <div class="faq-item">
-                                <div class="faq-question">
-                                    <h4>How secure is my business data with Zonixtec?</h4>
-                                    <i class="fas fa-chevron-down faq-icon"></i>
-                                </div>
-                                <div class="faq-answer">
-                                    <p>Data Security is a Top Priority. We follow Industry-standard encryption,
-                                        compliance, and governance protocols to ensure your information is safe.</p>
-                                </div>
-                            </div>
-
-                            <div class="faq-item">
-                                <div class="faq-question">
-                                    <h4>What are your Business hours?</h4>
-                                    <i class="fas fa-chevron-down faq-icon"></i>
-                                </div>
-                                <div class="faq-answer">
-                                    <p>We're available to serve you from Monday to Friday, 9:00 AM – 6:00 PM (IST). For
-                                        urgent support, you can always drop us an email—we'll get back to you as soon as
-                                        possible.</p>
-                                </div>
-                            </div>
-
-                            <div class="faq-item">
-                                <div class="faq-question">
-                                    <h4>How can I get in touch with your team?</h4>
-                                    <i class="fas fa-chevron-down faq-icon"></i>
-                                </div>
-                                <div class="faq-answer">
-                                    <p>It's too simple - You can easily reach us through Phone, email, or social media
-                                        (LinkedIn & Instagram). For quick queries, simply fill out the contact form and
-                                        our team will respond within 24–48 hours.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-card">
-                        <h3>Business Hours</h3>
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="info-content">
-                                <h4>Working Days</h4>
-
-                                <p>Monday - Friday: 9:00 AM - 6:00PM</p>
-                                <p>2nd Saturday And 4th Saturday: 10:00 AM - 6:00 PM</p>
-
-                                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                                <p>1st and 3rd saturday: 9:00 AM - 6:00 PM </p>
-                            </div>
-                        </div>
-
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-headset"></i>
-                            </div>
-                            <div class="info-content">
-                                <h4>Support Availability</h4>
-                                <p>Technical Support: Available during business hours</p>
-                                <p>Extended Support: Can be arranged based on requirements</p>
-
-                            </div>
-                        </div>
-                    </div>
+      <div class="container">
+        <div class="contact-section">
+          <div class="contact-info">
+            <div class="contact-card">
+              <h3>Our Location</h3>
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-map-marker-alt"></i>
                 </div>
-
-                <div class="contact-form">
-                    <div class="contact-card">
-                        <h3>Do you still have any queries?</h3>
-                        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
-                            <input type="hidden" name="access_key" value="7ec1a1e9-5be7-4efb-8b82-3823e290426f">
-                            <input type="hidden" name="redirect" value="https://zonixtec.com/thank-you.html">
-                            <input type="hidden" name="email" value="">
-
-                            <div class="form-group">
-                                <label class="form-label" for="name">Full Name</label>
-                                <input type="text" id="name" name="name" class="form-control"
-                                    placeholder="Enter your name" required pattern="^[A-Za-z\s]{2,}$"
-                                    title="Full name should only contain letters and spaces.">
-                            </div>
-
-                            <div class="form-group">
-                                <label class="form-label" for="email">Email Address</label>
-                                <input type="email" id="email" name="email" class="form-control"
-                                    placeholder="Enter your email" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
-                                    title="Please enter a valid email address.">
-                            </div>
-
-                            <div class="form-group">
-                                <label class="form-label" for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" class="form-control"
-                                    placeholder="Enter your phone number" pattern="^[0-9+\-\s]{7,15}$"
-                                    title="Please enter a valid phone number." inputmode="tel"
-                                    oninput="this.value=this.value.replace(/[^0-9+\-\s]/g,'');">
-                            </div>
-
-                            <div class="form-group">
-                                <label class="form-label" for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" class="form-control"
-                                    placeholder="What is this regarding?" required pattern=".{3,}"
-                                    title="Subject must be at least 3 characters.">
-                            </div>
-
-                            <div class="form-group">
-                                <label class="form-label" for="message">Your Message</label>
-                                <textarea id="message" name="message" class="form-control"
-                                    placeholder="How can we help you?" required minlength="10"
-                                    style="font-family: inherit;"
-                                    title="Message must be at least 10 characters."></textarea>
-                            </div>
-
-                            <button type="submit" class="submit-btn">Send Message</button>
-                        </form>
-                    </div>
+                <div class="info-content">
+                  <p>
+                    <a
+                      href="https://maps.google.com/?q=Zonixtec IT Services PVT LTD, 2nd Floor, Vasukamal Express, Rohan Sehar Ln, Pan Card Club Rd, behind Beverly Hills Society, Samarth Colony, Baner"
+                      target="_blank"
+                      style="color: inherit; text-decoration: none"
+                    >
+                      Zonixtec IT Services PVT LTD<br />
+                      2nd Floor, Vasukamal Express, Rohan Sehar Ln, Pan Card
+                      Club Rd, behind Beverly Hills Society, Samarth Colony,
+                      Baner 411045, Pune, Maharashtra, India
+                    </a>
+                  </p>
                 </div>
+              </div>
+
+              <div class="contact-links">
+                <a href="tel:+919209670926" class="contact-link-item">
+                  <div class="contact-link-icon">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <span>Call Us</span>
+                  <span class="contact-link-value"> +91 9209670926 </span>
+                </a>
+
+                <a
+                  href="mailto:support@office.zonixtec.com"
+                  class="contact-link-item"
+                >
+                  <div class="contact-link-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <span>Mail Us</span>
+                  <span class="contact-link-value">
+                    support@office.zonixtec.com
+                  </span>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/company/zonixtec-it-services-private-limited/"
+                  class="contact-link-item"
+                  aria-label="LinkedIn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div class="contact-link-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                  </div>
+                  <span>LinkedIn</span>
+                  <span class="contact-link-value">Connect</span>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/zonixtec_it_services"
+                  class="contact-link-item"
+                  aria-label="Instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div class="contact-link-icon">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                  <span>Instagram</span>
+                  <span class="contact-link-value">Follow</span>
+                </a>
+              </div>
             </div>
+
+            <!-- FAQ Section -->
+            <div class="contact-card">
+              <h3>Frequently Asked Questions</h3>
+              <div class="faq-section">
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <h4>Why should I choose Zonixtec?</h4>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                  </div>
+                  <div class="faq-answer">
+                    <p>
+                      Zonixtec is more than just a technology solutions provider
+                      – we're a trusted Digital Transformation Partner committed
+                      to driving innovation and Business growth. We deliver
+                      custom AI solutions, Scalable software development, and
+                      Result-driven digital strategies with proven expertise and
+                      a strong technical team. We ensure every project creates
+                      measurable business impact and long-term value.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <h4>What makes Zonixtec's AI solutions different?</h4>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                  </div>
+                  <div class="faq-answer">
+                    <p>
+                      We focus on delivering customized, ROI-driven AI solutions
+                      that align with your business goals—rather than generic,
+                      one-size-fits-all tools.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <h4>How do I know if my business is ready for AI?</h4>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                  </div>
+                  <div class="faq-answer">
+                    <p>
+                      We offer an AI Maturity assessment to evaluate your
+                      current systems, data, and processes, and then create a
+                      roadmap for integration.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <h4>How can I initiate a partnership with Zonixtec?</h4>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                  </div>
+                  <div class="faq-answer">
+                    <p>
+                      Simply reach out through our Contact page or schedule a
+                      call with our team. We'll discuss your goals and explore
+                      the right collaboration model.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <h4>Do you provide post-deployment support?</h4>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                  </div>
+                  <div class="faq-answer">
+                    <p>
+                      Yes, we offer ongoing monitoring, maintenance, and
+                      optimization to ensure long-term success.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <h4>How secure is my business data with Zonixtec?</h4>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                  </div>
+                  <div class="faq-answer">
+                    <p>
+                      Data Security is a Top Priority. We follow
+                      Industry-standard encryption, compliance, and governance
+                      protocols to ensure your information is safe.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <h4>What are your Business hours?</h4>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                  </div>
+                  <div class="faq-answer">
+                    <p>
+                      We're available to serve you from Monday to Friday, 9:00
+                      AM – 6:00 PM (IST). For urgent support, you can always
+                      drop us an email—we'll get back to you as soon as
+                      possible.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <h4>How can I get in touch with your team?</h4>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                  </div>
+                  <div class="faq-answer">
+                    <p>
+                      It's too simple - You can easily reach us through Phone,
+                      email, or social media (LinkedIn & Instagram). For quick
+                      queries, simply fill out the contact form and our team
+                      will respond within 24–48 hours.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <h3>Business Hours</h3>
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="info-content">
+                  <h4>Working Days</h4>
+
+                  <p>Monday - Friday: 9:00 AM - 6:00PM</p>
+                  <p>2nd Saturday And 4th Saturday: 10:00 AM - 6:00 PM</p>
+
+                  <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                  <p>1st and 3rd saturday: 9:00 AM - 6:00 PM</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-headset"></i>
+                </div>
+                <div class="info-content">
+                  <h4>Support Availability</h4>
+                  <p>Technical Support: Available during business hours</p>
+                  <p>Extended Support: Can be arranged based on requirements</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <div class="contact-card">
+              <h3>Do you still have any queries?</h3>
+              <form
+                id="contactForm"
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                novalidate
+              >
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="7ec1a1e9-5be7-4efb-8b82-3823e290426f"
+                />
+                <input
+                  type="hidden"
+                  name="redirect"
+                  value="https://zonixtec.com/thank-you.html"
+                />
+                <input type="hidden" name="email" value="" />
+
+                <div class="form-group">
+                  <label class="form-label" for="name"
+                    >Full Name <span class="required-asterisk">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-control"
+                    placeholder="Enter your name"
+                    required
+                  />
+                  <small class="error" id="nameError"></small>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="email"
+                    >Email Address
+                    <span class="required-asterisk">*</span></label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="Enter your email"
+                    required
+                  />
+                  <small class="error" id="emailError"></small>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="phone"
+                    >Phone Number
+                    <span class="required-asterisk">*</span></label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="form-control"
+                    placeholder="Enter your 10-digit phone number"
+                    required
+                    inputmode="tel"
+                    maxlength="10"
+                  />
+                  <small class="error" id="phoneError"></small>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="subject"
+                    >Subject <span class="required-asterisk">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    class="form-control"
+                    placeholder="What is this regarding?"
+                    required
+                  />
+                  <small class="error" id="subjectError"></small>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="message"
+                    >Your Message
+                    <span class="required-asterisk">*</span></label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-control"
+                    placeholder="How can we help you?"
+                    required
+                    style="font-family: inherit"
+                  ></textarea>
+                  <small class="error" id="messageError"></small>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Map Section -->
     <section class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Visit Our Office</h2>
-            <div class="map-section">
-                <div class="map-container">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.401332749888!2d73.77138097393669!3d18.555936668095473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf75fdccb443%3A0x95033d622663a25!2sZonixtec%20IT%20Services%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1750761310434!5m2!1sen!2sin"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="section-title">Visit Our Office</h2>
+        <div class="map-section">
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.401332749888!2d73.77138097393669!3d18.555936668095473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf75fdccb443%3A0x95033d622663a25!2sZonixtec%20IT%20Services%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1750761310434!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer Section -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-container">
-                <!-- Solutions Section with Dropdown -->
-                <div class="footer-col">
-                    <h3>Solutions</h3>
-                    <div class="footer-links">
-
-                        <!-- Next-Gen Tech Dropdown -->
-                        <div class="footer-dropdown">
-                            <div class="footer-dropdown-header">
-                                <span><i class="fas fa-chevron-right"></i> Next-Gen Tech</span>
-                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-                            </div>
-                            <div class="footer-dropdown-content">
-                                <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> AI & Machine
-                                    Learning</a>
-                                <a href="CloudSolutions.html"><i class="fas fa-chevron-right"></i> Cloud Solutions</a>
-                            </div>
-                        </div>
-
-                        <!-- AI Services Dropdown -->
-                        <div class="footer-dropdown">
-                            <div class="footer-dropdown-header">
-                                <span><i class="fas fa-chevron-right"></i> AI Services</span>
-                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-                            </div>
-                            <div class="footer-dropdown-content">
-                                <a href="AIServices.html"><i class="fas fa-chevron-right"></i> AI Services Overview</a>
-                                <a href="AIStrategy.html"><i class="fas fa-chevron-right"></i> AI Strategy &
-                                    Consulting</a>
-                                <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> Machine Learning</a>
-                                <a href="NLP.html"><i class="fas fa-chevron-right"></i> Natural Language Processing
-                                    (NLP)</a>
-                                <a href="ComputerVision.html"><i class="fas fa-chevron-right"></i> Computer Vision</a>
-                                <a href="PredictiveAnalytics.html"><i class="fas fa-chevron-right"></i> Predictive
-                                    Analysis</a>
-                                <a href="ProcessAutomation.html"><i class="fas fa-chevron-right"></i> Process
-                                    Automation</a>
-                            </div>
-                        </div>
-
-                        <!-- Core Development Dropdown -->
-                        <div class="footer-dropdown">
-                            <div class="footer-dropdown-header">
-                                <span><i class="fas fa-chevron-right"></i> Core Development</span>
-                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-                            </div>
-                            <div class="footer-dropdown-content">
-                                <a href="CustomSoftware.html"><i class="fas fa-chevron-right"></i> Custom Software
-                                    Development</a>
-                                <a href="MobileDevelopment.html"><i class="fas fa-chevron-right"></i> Mobile App
-                                    Development</a>
-                            </div>
-                        </div>
-
-                        <!-- Design & Experience Dropdown -->
-                        <div class="footer-dropdown">
-                            <div class="footer-dropdown-header">
-                                <span><i class="fas fa-chevron-right"></i> Design & Experience</span>
-                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-                            </div>
-                            <div class="footer-dropdown-content">
-                                <a href="ui.html"><i class="fas fa-chevron-right"></i>UI/UX Design</a>
-                            </div>
-                        </div>
-                    </div>
+      <div class="container">
+        <div class="footer-container">
+          <!-- Solutions Section with Dropdown -->
+          <div class="footer-col">
+            <h3>Solutions</h3>
+            <div class="footer-links">
+              <!-- Next-Gen Tech Dropdown -->
+              <div class="footer-dropdown">
+                <div class="footer-dropdown-header">
+                  <span
+                    ><i class="fas fa-chevron-right"></i> Next-Gen Tech</span
+                  >
+                  <span class="dropdown-toggle"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
                 </div>
-
-                <!-- Insights Section -->
-                <div class="footer-col">
-                    <h3>Insights</h3>
-                    <div class="footer-links">
-                        <a href="CaseStudies.html"><i class="fas fa-chevron-right"></i> Case Studies</a>
-                        <a href="Blogs.html"><i class="fas fa-chevron-right"></i> Blogs</a>
-                        <a href="CEOdesk.html"><i class="fas fa-chevron-right"></i> From CEO's Desk</a>
-                        <!-- <a href="FutureZonixtec.html"><i class="fas fa-chevron-right"></i> Future of Zonixtec</a> -->
-                        <a href="FAQs.html"><i class="fas fa-chevron-right"></i> FAQs</a>
-                        <a href="Guides.html"><i class="fas fa-chevron-right"></i> Guides</a>
-                        <a href="HowTos.html"><i class="fas fa-chevron-right"></i> How-tos</a>
-                    </div>
+                <div class="footer-dropdown-content">
+                  <a href="MachineLearning.html"
+                    ><i class="fas fa-chevron-right"></i> AI & Machine
+                    Learning</a
+                  >
+                  <a href="CloudSolutions.html"
+                    ><i class="fas fa-chevron-right"></i> Cloud Solutions</a
+                  >
                 </div>
+              </div>
 
-                <!-- Company Section -->
-                <div class="footer-col">
-                    <h3>Company</h3>
-                    <div class="footer-links">
-                        <a href="aboutus.html"><i class="fas fa-chevron-right"></i> About Us</a>
-                        <a href="aboutus.html"><i class="fas fa-chevron-right"></i> Our Story</a>
-                        <!-- <a href="aboutus.html"><i class="fas fa-chevron-right"></i> Mission & Vision</a> -->
-                        <a href="aboutus.html" id="aboutLink">
-                            <i class="fas fa-chevron-right"></i> Mission & Vision
-                        </a>
-
-                        <a href="aboutus.html" id="OurJou"><i class="fas fa-chevron-right"></i> Our Journey</a>
-                        <a href="aboutus.html" id="OurCore"><i class="fas fa-chevron-right"></i> Core Values</a>
-                        <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
-                        <a href="Leadership.html"><i class="fas fa-chevron-right"></i> Leadership</a>
-                    </div>
+              <!-- AI Services Dropdown -->
+              <div class="footer-dropdown">
+                <div class="footer-dropdown-header">
+                  <span><i class="fas fa-chevron-right"></i> AI Services</span>
+                  <span class="dropdown-toggle"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
                 </div>
-
-                <!-- Quick Links Section -->
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <div class="footer-links">
-                        <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
-                        <a href="Testimonials.html"><i class="fas fa-chevron-right"></i> Testimonials</a>
-                        <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
-                        <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a>
-                    </div>
+                <div class="footer-dropdown-content">
+                  <a href="AIServices.html"
+                    ><i class="fas fa-chevron-right"></i> AI Services
+                    Overview</a
+                  >
+                  <a href="AIStrategy.html"
+                    ><i class="fas fa-chevron-right"></i> AI Strategy &
+                    Consulting</a
+                  >
+                  <a href="MachineLearning.html"
+                    ><i class="fas fa-chevron-right"></i> Machine Learning</a
+                  >
+                  <a href="NLP.html"
+                    ><i class="fas fa-chevron-right"></i> Natural Language
+                    Processing (NLP)</a
+                  >
+                  <a href="ComputerVision.html"
+                    ><i class="fas fa-chevron-right"></i> Computer Vision</a
+                  >
+                  <a href="PredictiveAnalytics.html"
+                    ><i class="fas fa-chevron-right"></i> Predictive Analysis</a
+                  >
+                  <a href="ProcessAutomation.html"
+                    ><i class="fas fa-chevron-right"></i> Process Automation</a
+                  >
                 </div>
+              </div>
 
-                <!-- Newsletter Section -->
-                <!-- <div class="footer-col">
+              <!-- Core Development Dropdown -->
+              <div class="footer-dropdown">
+                <div class="footer-dropdown-header">
+                  <span
+                    ><i class="fas fa-chevron-right"></i> Core Development</span
+                  >
+                  <span class="dropdown-toggle"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
+                </div>
+                <div class="footer-dropdown-content">
+                  <a href="CustomSoftware.html"
+                    ><i class="fas fa-chevron-right"></i> Custom Software
+                    Development</a
+                  >
+                  <a href="MobileDevelopment.html"
+                    ><i class="fas fa-chevron-right"></i> Mobile App
+                    Development</a
+                  >
+                </div>
+              </div>
+
+              <!-- Design & Experience Dropdown -->
+              <div class="footer-dropdown">
+                <div class="footer-dropdown-header">
+                  <span
+                    ><i class="fas fa-chevron-right"></i> Design &
+                    Experience</span
+                  >
+                  <span class="dropdown-toggle"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
+                </div>
+                <div class="footer-dropdown-content">
+                  <a href="ui.html"
+                    ><i class="fas fa-chevron-right"></i>UI/UX Design</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Insights Section -->
+          <div class="footer-col">
+            <h3>Insights</h3>
+            <div class="footer-links">
+              <a href="CaseStudies.html"
+                ><i class="fas fa-chevron-right"></i> Case Studies</a
+              >
+              <a href="Blogs.html"
+                ><i class="fas fa-chevron-right"></i> Blogs</a
+              >
+              <a href="CEOdesk.html"
+                ><i class="fas fa-chevron-right"></i> From CEO's Desk</a
+              >
+              <!-- <a href="FutureZonixtec.html"><i class="fas fa-chevron-right"></i> Future of Zonixtec</a> -->
+              <a href="FAQs.html"><i class="fas fa-chevron-right"></i> FAQs</a>
+              <a href="Guides.html"
+                ><i class="fas fa-chevron-right"></i> Guides</a
+              >
+              <a href="HowTos.html"
+                ><i class="fas fa-chevron-right"></i> How-tos</a
+              >
+            </div>
+          </div>
+
+          <!-- Company Section -->
+          <div class="footer-col">
+            <h3>Company</h3>
+            <div class="footer-links">
+              <a href="aboutus.html"
+                ><i class="fas fa-chevron-right"></i> About Us</a
+              >
+              <a href="aboutus.html"
+                ><i class="fas fa-chevron-right"></i> Our Story</a
+              >
+              <!-- <a href="aboutus.html"><i class="fas fa-chevron-right"></i> Mission & Vision</a> -->
+              <a href="aboutus.html" id="aboutLink">
+                <i class="fas fa-chevron-right"></i> Mission & Vision
+              </a>
+
+              <a href="aboutus.html" id="OurJou"
+                ><i class="fas fa-chevron-right"></i> Our Journey</a
+              >
+              <a href="aboutus.html" id="OurCore"
+                ><i class="fas fa-chevron-right"></i> Core Values</a
+              >
+              <a href="carrer.html"
+                ><i class="fas fa-chevron-right"></i> Careers</a
+              >
+              <a href="Leadership.html"
+                ><i class="fas fa-chevron-right"></i> Leadership</a
+              >
+            </div>
+          </div>
+
+          <!-- Quick Links Section -->
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <div class="footer-links">
+              <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
+              <a href="Testimonials.html"
+                ><i class="fas fa-chevron-right"></i> Testimonials</a
+              >
+              <a href="carrer.html"
+                ><i class="fas fa-chevron-right"></i> Careers</a
+              >
+              <a href="contact.html"
+                ><i class="fas fa-chevron-right"></i> Contact Us</a
+              >
+            </div>
+          </div>
+
+          <!-- Newsletter Section -->
+          <!-- <div class="footer-col">
         <h3>Newsletter</h3>
         <p>Subscribe to our newsletter to receive updates on our latest services, technology insights, and industry trends.</p>
         <div class="form-group" id="newsletter-group">
@@ -1609,303 +2050,560 @@
           Thank you for subscribing!
         </div>
       </div> -->
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2024 Zonixtec. All Rights Reserved. | Designed with by Zonixtec Team</p>
-            </div>
         </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 Zonixtec. All Rights Reserved. | Designed with by
+            Zonixtec Team
+          </p>
+        </div>
+      </div>
     </footer>
 
     <script>
-        // Footer dropdown functionality
-        document.querySelectorAll('.footer-dropdown-header').forEach(header => {
-            header.addEventListener('click', () => {
-                const parent = header.parentElement;
-                parent.classList.toggle('open');
-            });
+      // Footer dropdown functionality
+      document.querySelectorAll(".footer-dropdown-header").forEach((header) => {
+        header.addEventListener("click", () => {
+          const parent = header.parentElement;
+          parent.classList.toggle("open");
         });
+      });
 
-        // FAQ functionality
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const faqItem = question.parentElement;
+      // FAQ functionality
+      document.querySelectorAll(".faq-question").forEach((question) => {
+        question.addEventListener("click", () => {
+          const faqItem = question.parentElement;
 
-                // Close other FAQs
-                document.querySelectorAll('.faq-item').forEach(item => {
-                    if (item !== faqItem && item.classList.contains('active')) {
-                        item.classList.remove('active');
-                    }
-                });
+          // Close other FAQs
+          document.querySelectorAll(".faq-item").forEach((item) => {
+            if (item !== faqItem && item.classList.contains("active")) {
+              item.classList.remove("active");
+            }
+          });
 
-                // Toggle current FAQ
-                faqItem.classList.toggle('active');
-            });
+          // Toggle current FAQ
+          faqItem.classList.toggle("active");
         });
+      });
 
-        // Form validation
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            // Full Name: only letters and spaces
-            const name = document.getElementById('name');
-            if (!/^[A-Za-z\s]{2,}$/.test(name.value.trim())) {
-                alert('Full name should only contain letters and spaces.');
-                name.focus();
-                e.preventDefault();
-                return false;
-            }
-            // Email: basic email pattern
-            const email = document.getElementById('email');
-            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
-                alert('Please enter a valid email address.');
-                email.focus();
-                e.preventDefault();
-                return false;
-            }
-            // Phone: optional, but if filled, must be valid and only numbers, +, -, space
-            const phone = document.getElementById('phone');
-            if (phone.value && !/^[0-9+\-\s]{7,15}$/.test(phone.value.trim())) {
-                alert('Please enter a valid phone number.');
-                phone.focus();
-                e.preventDefault();
-                return false;
-            }
-            // Subject: at least 3 characters
-            const subject = document.getElementById('subject');
-            if (subject.value.trim().length < 3) {
-                alert('Subject must be at least 3 characters.');
-                subject.focus();
-                e.preventDefault();
-                return false;
-            }
-            // Message: at least 10 characters
-            const message = document.getElementById('message');
-            if (message.value.trim().length < 10) {
-                alert('Message must be at least 10 characters.');
-                message.focus();
-                e.preventDefault();
-                return false;
-            }
-        });
+      // Real-time Form Validation
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("contactForm");
+        if (!form) return; // Exit if form doesn't exist
 
-        // Fix layout stability and prevent alignment issues on page load
-        document.addEventListener('DOMContentLoaded', function () {
-            // Add loaded class to body to fade in content
-            setTimeout(() => {
-                document.body.classList.add('loaded');
-            }, 100);
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const phoneInput = document.getElementById("phone");
+        const subjectInput = document.getElementById("subject");
+        const messageInput = document.getElementById("message");
 
-            // Force layout recalculation to prevent alignment issues
-            const sections = document.querySelectorAll('.contact-section, .footer-container');
-            sections.forEach(section => {
-                section.style.display = 'none';
-                section.offsetHeight; // Force reflow
-                section.style.display = '';
-            });
-        });
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+        const phoneError = document.getElementById("phoneError");
+        const subjectError = document.getElementById("subjectError");
+        const messageError = document.getElementById("messageError");
 
-        // Viewport height fix for mobile
-        function setVh() {
-            let vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        // Validation state tracking
+        const validationState = {
+          name: false,
+          email: false,
+          phone: false,
+          subject: false,
+          message: false,
+        };
+
+        // Validation Functions
+        function validateName(value) {
+          const trimmed = value.trim();
+          if (trimmed.length === 0) {
+            return { valid: false, message: "Full name is required." };
+          }
+          if (!/^[A-Za-z\s]+$/.test(trimmed)) {
+            return {
+              valid: false,
+              message: "Full name should contain only letters and spaces.",
+            };
+          }
+          if (trimmed.length < 2) {
+            return {
+              valid: false,
+              message: "Full name must be at least 2 characters.",
+            };
+          }
+          if (trimmed.length > 50) {
+            return {
+              valid: false,
+              message: "Full name must not exceed 50 characters.",
+            };
+          }
+          return { valid: true, message: "" };
         }
 
-        setVh();
-        window.addEventListener('resize', setVh);
-        window.addEventListener('orientationchange', () => {
-            setTimeout(setVh, 100);
+        function validateEmail(value) {
+          const trimmed = value.trim();
+          if (trimmed.length === 0) {
+            return { valid: false, message: "Email is required." };
+          }
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(trimmed)) {
+            return {
+              valid: false,
+              message: "Please enter a valid email address.",
+            };
+          }
+          return { valid: true, message: "" };
+        }
+
+        function validatePhone(value) {
+          const trimmed = value.trim();
+          if (trimmed.length === 0) {
+            return { valid: false, message: "Phone number is required." };
+          }
+          // Remove any non-digit characters
+          const digitsOnly = trimmed.replace(/\D/g, "");
+          if (digitsOnly.length !== 10) {
+            return {
+              valid: false,
+              message:
+                "Enter a valid 10-digit Indian phone number starting with 6–9.",
+            };
+          }
+          if (!/^[6-9]/.test(digitsOnly)) {
+            return {
+              valid: false,
+              message:
+                "Enter a valid 10-digit Indian phone number starting with 6–9.",
+            };
+          }
+          return { valid: true, message: "" };
+        }
+
+        function validateSubject(value) {
+          const trimmed = value.trim();
+          if (trimmed.length === 0) {
+            return { valid: false, message: "Subject is required." };
+          }
+          if (trimmed.length < 2) {
+            return {
+              valid: false,
+              message: "Subject must be at least 2 characters.",
+            };
+          }
+          return { valid: true, message: "" };
+        }
+
+        function validateMessage(value) {
+          const trimmed = value.trim();
+          if (trimmed.length === 0) {
+            return { valid: false, message: "Message is required." };
+          }
+          if (trimmed.length < 5) {
+            return {
+              valid: false,
+              message: "Message must be at least 5 characters.",
+            };
+          }
+          return { valid: true, message: "" };
+        }
+
+        // Update UI based on validation result
+        function updateFieldValidation(
+          input,
+          errorElement,
+          isValid,
+          errorMessage
+        ) {
+          if (isValid) {
+            input.classList.remove("error");
+            input.classList.add("valid");
+            errorElement.textContent = "";
+          } else {
+            input.classList.remove("valid");
+            input.classList.add("error");
+            errorElement.textContent = errorMessage;
+          }
+        }
+
+        // Real-time validation handlers
+        function handleNameValidation() {
+          const result = validateName(nameInput.value);
+          validationState.name = result.valid;
+          updateFieldValidation(
+            nameInput,
+            nameError,
+            result.valid,
+            result.message
+          );
+        }
+
+        function handleEmailValidation() {
+          const result = validateEmail(emailInput.value);
+          validationState.email = result.valid;
+          updateFieldValidation(
+            emailInput,
+            emailError,
+            result.valid,
+            result.message
+          );
+        }
+
+        function handlePhoneValidation() {
+          // Only allow digits
+          phoneInput.value = phoneInput.value.replace(/\D/g, "");
+          const result = validatePhone(phoneInput.value);
+          validationState.phone = result.valid;
+          updateFieldValidation(
+            phoneInput,
+            phoneError,
+            result.valid,
+            result.message
+          );
+        }
+
+        function handleSubjectValidation() {
+          const result = validateSubject(subjectInput.value);
+          validationState.subject = result.valid;
+          updateFieldValidation(
+            subjectInput,
+            subjectError,
+            result.valid,
+            result.message
+          );
+        }
+
+        function handleMessageValidation() {
+          const result = validateMessage(messageInput.value);
+          validationState.message = result.valid;
+          updateFieldValidation(
+            messageInput,
+            messageError,
+            result.valid,
+            result.message
+          );
+        }
+
+        // Check if all fields are valid
+        function isFormValid() {
+          return Object.values(validationState).every(
+            (valid) => valid === true
+          );
+        }
+
+        // Attach event listeners for real-time validation
+        nameInput.addEventListener("input", handleNameValidation);
+        nameInput.addEventListener("keyup", handleNameValidation);
+        nameInput.addEventListener("blur", handleNameValidation);
+
+        emailInput.addEventListener("input", handleEmailValidation);
+        emailInput.addEventListener("keyup", handleEmailValidation);
+        emailInput.addEventListener("blur", handleEmailValidation);
+
+        phoneInput.addEventListener("input", handlePhoneValidation);
+        phoneInput.addEventListener("keyup", handlePhoneValidation);
+        phoneInput.addEventListener("blur", handlePhoneValidation);
+
+        subjectInput.addEventListener("input", handleSubjectValidation);
+        subjectInput.addEventListener("keyup", handleSubjectValidation);
+        subjectInput.addEventListener("blur", handleSubjectValidation);
+
+        messageInput.addEventListener("input", handleMessageValidation);
+        messageInput.addEventListener("keyup", handleMessageValidation);
+        messageInput.addEventListener("blur", handleMessageValidation);
+
+        // Form submission validation
+        form.addEventListener("submit", function (e) {
+          // Validate all fields on submit
+          handleNameValidation();
+          handleEmailValidation();
+          handlePhoneValidation();
+          handleSubjectValidation();
+          handleMessageValidation();
+
+          if (!isFormValid()) {
+            e.preventDefault();
+            // Focus on first invalid field
+            if (!validationState.name) {
+              nameInput.focus();
+            } else if (!validationState.email) {
+              emailInput.focus();
+            } else if (!validationState.phone) {
+              phoneInput.focus();
+            } else if (!validationState.subject) {
+              subjectInput.focus();
+            } else if (!validationState.message) {
+              messageInput.focus();
+            }
+            return false;
+          }
         });
+      });
+
+      // Fix layout stability and prevent alignment issues on page load
+      document.addEventListener("DOMContentLoaded", function () {
+        // Add loaded class to body to fade in content
+        setTimeout(() => {
+          document.body.classList.add("loaded");
+        }, 100);
+
+        // Force layout recalculation to prevent alignment issues
+        const sections = document.querySelectorAll(
+          ".contact-section, .footer-container"
+        );
+        sections.forEach((section) => {
+          section.style.display = "none";
+          section.offsetHeight; // Force reflow
+          section.style.display = "";
+        });
+      });
+
+      // Viewport height fix for mobile
+      function setVh() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
+      }
+
+      setVh();
+      window.addEventListener("resize", setVh);
+      window.addEventListener("orientationchange", () => {
+        setTimeout(setVh, 100);
+      });
     </script>
 
     <script src="Customscroll.js"></script>
 
     <!-- Chatbot -->
-    <link rel="stylesheet" href="./CSS/chatbot.css">
+    <link rel="stylesheet" href="./CSS/chatbot.css" />
     <script src="./script/chatbot.js"></script>
 
     <!-- Booking Modal -->
-     <!--open booking 30 min call modal -->
+    <!--open booking 30 min call modal -->
 
     <div id="bookingModal" class="booking-modal">
-        <div class="booking-modal-content">
+      <div class="booking-modal-content">
+        <!-- CLOSE BUTTON -->
+        <span class="booking-modal-close" onclick="closeBookingModal()"
+          >&times;</span
+        >
 
-            <!-- CLOSE BUTTON -->
-            <span class="booking-modal-close" onclick="closeBookingModal()">&times;</span>
-
-            <!-- STEP PROGRESS -->
-            <div class="booking-progress-indicator">
-                <div class="booking-progress-step booking-active" id="progress1" data-step="1"></div>
-                <div class="booking-progress-line" id="line1"></div>
-                <div class="booking-progress-step" id="progress2" data-step="2"></div>
-                <div class="booking-progress-line" id="line2"></div>
-                <div class="booking-progress-step" id="progress3" data-step="3"></div>
-                <div class="booking-progress-line" id="line3"></div>
-                <div class="booking-progress-step" id="progress4" data-step="4"></div>
-            </div>
-
-            <!-- STEP 1 -->
-            <div class="booking-modal-step booking-active" id="step1">
-                <div class="booking-step-header">
-                    <div class="booking-step-number">1</div>
-                    <h2 class="booking-step-title">Zonixtec — 30-Minute Discovery Call</h2>
-                </div>
-
-                <div class="booking-discovery-subtitle">
-                    Duration: 30 Minutes | Mode: Web Conference
-                </div>
-
-                <div class="booking-session-overview">
-                    <h4 class="booking-session-title">In this quick session, we'll cover:</h4>
-                    <div class="booking-session-items-grid">
-                        <div class="booking-session-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Introduction & Requirement Understanding</span>
-                        </div>
-                        <div class="booking-session-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Relevant Use Case Demo</span>
-                        </div>
-                        <div class="booking-session-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Technology Solutions & Offerings</span>
-                        </div>
-                        <div class="booking-session-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Project Roadmap & Next Steps</span>
-                        </div>
-                    </div>
-
-                    <div class="booking-discovery-goal">
-                        <strong>Goal:</strong>
-                        <p>Understand your needs and explore how Zonixtec can deliver the right tech solutions for your
-                            project.</p>
-                    </div>
-                </div>
-
-                <div class="booking-step-navigation">
-                    <div></div>
-                    <button class="booking-btn-primary" onclick="nextStep(1)">
-                        Next: Select Date <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- STEP 2 -->
-            <div class="booking-modal-step" id="step2">
-                <div class="booking-step-header">
-                    <div class="booking-step-number">2</div>
-                    <h2 class="booking-step-title">Select Your Preferred Date</h2>
-                </div>
-
-                <input type="text" id="dateInput" class="booking-calendar-input" placeholder="Pick a date" readonly />
-
-                <div class="booking-step-navigation">
-                    <button class="booking-btn-secondary" onclick="previousStep(2)">
-                        <i class="fas fa-arrow-left"></i> Back
-                    </button>
-                    <button class="booking-btn-primary" id="dateNextBtn" onclick="nextStep(2)" disabled>
-                        Next: Select Time <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- STEP 3 -->
-            <div class="booking-modal-step" id="step3">
-                <div class="booking-step-header">
-                    <div class="booking-step-number">3</div>
-                    <h2 class="booking-step-title">Choose Your Time Slot</h2>
-                </div>
-
-                <div class="booking-time-slots">
-                    <div class="booking-time-slot" data-time="10:30">10:30 AM</div>
-                    <div class="booking-time-slot" data-time="11:30">11:30 AM</div>
-                    <div class="booking-time-slot" data-time="12:00">12:00 PM</div>
-                    <div class="booking-time-slot" data-time="12:30">12:30 PM</div>
-                    <div class="booking-time-slot" data-time="13:00">1:00 PM</div>
-                    <div class="booking-time-slot" data-time="13:30">1:30 PM</div>
-                    <div class="booking-time-slot" data-time="14:00">2:00 PM</div>
-                    <div class="booking-time-slot" data-time="14:30">2:30 PM</div>
-                    <div class="booking-time-slot" data-time="15:00">3:00 PM</div>
-                    <div class="booking-time-slot" data-time="15:30">3:30 PM</div>
-                    <div class="booking-time-slot" data-time="16:00">4:00 PM</div>
-                    <div class="booking-time-slot" data-time="16:30">4:30 PM</div>
-                    <div class="booking-time-slot" data-time="17:00">5:00 PM</div>
-                </div>
-
-                <div class="booking-step-navigation">
-                    <button class="booking-btn-secondary" onclick="previousStep(3)">
-                        <i class="fas fa-arrow-left"></i> Back
-                    </button>
-                    <button class="booking-btn-primary" id="timeNextBtn" onclick="nextStep(3)" disabled>
-                        Next: Your Info <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- STEP 4 -->
-            <div class="booking-modal-step" id="step4">
-                <div class="booking-step-header">
-                    <div class="booking-step-number">4</div>
-                    <h2 class="booking-step-title">Your Information</h2>
-                </div>
-
-                <form class="booking-modal-form" id="bookingFormPage">
-
-                    <div class="form-group-row">
-                        <label for="bookingName">Full Name</label>
-                        <input type="text" id="bookingName" placeholder="Enter your full name" required />
-                    </div>
-                    <span class="error-text" id="nameError"></span>
-
-                    <div class="form-group-row">
-                        <label for="bookingEmail">Email</label>
-                        <input type="email" id="bookingEmail" placeholder="Enter your email" required />
-                    </div>
-                    <span class="error-text" id="emailError"></span>
-
-                    <div class="form-group-row">
-                        <label for="bookingPhone">Phone</label>
-                        <input type="tel" id="bookingPhone" placeholder="Enter your phone number" required />
-                    </div>
-                    <span class="error-text" id="phoneError"></span>
-
-                    <div class="form-group-row">
-                        <label for="bookingCompany">Company</label>
-                        <input type="text" id="bookingCompany" placeholder="Company (optional)" />
-                    </div>
-
-                    <div class="form-group-row">
-                        <label for="bookingMessage">Message</label>
-                        <textarea id="bookingMessage" placeholder="Describe what services you need..."></textarea>
-                    </div>
-
-                    <div class="booking-step-navigation">
-                        <button type="button" class="booking-btn-secondary" onclick="previousStep(4)">
-                            <i class="fas fa-arrow-left"></i> Back
-                        </button>
-
-                        <button type="submit" class="booking-btn-primary">
-                            <i class="fas fa-calendar-check"></i> Book My Free Consultation
-                        </button>
-                    </div>
-
-                </form>
-
-
-
-            </div>
-
-            <!-- SUCCESS -->
-            <div id="bookingSuccessPage" class="booking-success-message">
-                <i class="fas fa-check-circle"></i>
-                <h3>Your Call is Booked!</h3>
-                <p>Our team will contact you shortly. Thank you!</p>
-            </div>
-
+        <!-- STEP PROGRESS -->
+        <div class="booking-progress-indicator">
+          <div
+            class="booking-progress-step booking-active"
+            id="progress1"
+            data-step="1"
+          ></div>
+          <div class="booking-progress-line" id="line1"></div>
+          <div class="booking-progress-step" id="progress2" data-step="2"></div>
+          <div class="booking-progress-line" id="line2"></div>
+          <div class="booking-progress-step" id="progress3" data-step="3"></div>
+          <div class="booking-progress-line" id="line3"></div>
+          <div class="booking-progress-step" id="progress4" data-step="4"></div>
         </div>
-    </div>
-   
 
-    
+        <!-- STEP 1 -->
+        <div class="booking-modal-step booking-active" id="step1">
+          <div class="booking-step-header">
+            <div class="booking-step-number">1</div>
+            <h2 class="booking-step-title">
+              Zonixtec — 30-Minute Discovery Call
+            </h2>
+          </div>
+
+          <div class="booking-discovery-subtitle">
+            Duration: 30 Minutes | Mode: Web Conference
+          </div>
+
+          <div class="booking-session-overview">
+            <h4 class="booking-session-title">
+              In this quick session, we'll cover:
+            </h4>
+            <div class="booking-session-items-grid">
+              <div class="booking-session-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Introduction & Requirement Understanding</span>
+              </div>
+              <div class="booking-session-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Relevant Use Case Demo</span>
+              </div>
+              <div class="booking-session-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Technology Solutions & Offerings</span>
+              </div>
+              <div class="booking-session-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Project Roadmap & Next Steps</span>
+              </div>
+            </div>
+
+            <div class="booking-discovery-goal">
+              <strong>Goal:</strong>
+              <p>
+                Understand your needs and explore how Zonixtec can deliver the
+                right tech solutions for your project.
+              </p>
+            </div>
+          </div>
+
+          <div class="booking-step-navigation">
+            <div></div>
+            <button class="booking-btn-primary" onclick="nextStep(1)">
+              Next: Select Date <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="booking-modal-step" id="step2">
+          <div class="booking-step-header">
+            <div class="booking-step-number">2</div>
+            <h2 class="booking-step-title">Select Your Preferred Date</h2>
+          </div>
+
+          <input
+            type="text"
+            id="dateInput"
+            class="booking-calendar-input"
+            placeholder="Pick a date"
+            readonly
+          />
+
+          <div class="booking-step-navigation">
+            <button class="booking-btn-secondary" onclick="previousStep(2)">
+              <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <button
+              class="booking-btn-primary"
+              id="dateNextBtn"
+              onclick="nextStep(2)"
+              disabled
+            >
+              Next: Select Time <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="booking-modal-step" id="step3">
+          <div class="booking-step-header">
+            <div class="booking-step-number">3</div>
+            <h2 class="booking-step-title">Choose Your Time Slot</h2>
+          </div>
+
+          <div class="booking-time-slots">
+            <div class="booking-time-slot" data-time="10:30">10:30 AM</div>
+            <div class="booking-time-slot" data-time="11:30">11:30 AM</div>
+            <div class="booking-time-slot" data-time="12:00">12:00 PM</div>
+            <div class="booking-time-slot" data-time="12:30">12:30 PM</div>
+            <div class="booking-time-slot" data-time="13:00">1:00 PM</div>
+            <div class="booking-time-slot" data-time="13:30">1:30 PM</div>
+            <div class="booking-time-slot" data-time="14:00">2:00 PM</div>
+            <div class="booking-time-slot" data-time="14:30">2:30 PM</div>
+            <div class="booking-time-slot" data-time="15:00">3:00 PM</div>
+            <div class="booking-time-slot" data-time="15:30">3:30 PM</div>
+            <div class="booking-time-slot" data-time="16:00">4:00 PM</div>
+            <div class="booking-time-slot" data-time="16:30">4:30 PM</div>
+            <div class="booking-time-slot" data-time="17:00">5:00 PM</div>
+          </div>
+
+          <div class="booking-step-navigation">
+            <button class="booking-btn-secondary" onclick="previousStep(3)">
+              <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <button
+              class="booking-btn-primary"
+              id="timeNextBtn"
+              onclick="nextStep(3)"
+              disabled
+            >
+              Next: Your Info <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="booking-modal-step" id="step4">
+          <div class="booking-step-header">
+            <div class="booking-step-number">4</div>
+            <h2 class="booking-step-title">Your Information</h2>
+          </div>
+
+          <form class="booking-modal-form" id="bookingFormPage">
+            <div class="form-group-row">
+              <label for="bookingName">Full Name</label>
+              <input
+                type="text"
+                id="bookingName"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+            <span class="error-text" id="nameError"></span>
+
+            <div class="form-group-row">
+              <label for="bookingEmail">Email</label>
+              <input
+                type="email"
+                id="bookingEmail"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <span class="error-text" id="emailError"></span>
+
+            <div class="form-group-row">
+              <label for="bookingPhone">Phone</label>
+              <input
+                type="tel"
+                id="bookingPhone"
+                placeholder="Enter your phone number"
+                required
+              />
+            </div>
+            <span class="error-text" id="phoneError"></span>
+
+            <div class="form-group-row">
+              <label for="bookingCompany">Company</label>
+              <input
+                type="text"
+                id="bookingCompany"
+                placeholder="Company (optional)"
+              />
+            </div>
+
+            <div class="form-group-row">
+              <label for="bookingMessage">Message</label>
+              <textarea
+                id="bookingMessage"
+                placeholder="Describe what services you need..."
+              ></textarea>
+            </div>
+
+            <div class="booking-step-navigation">
+              <button
+                type="button"
+                class="booking-btn-secondary"
+                onclick="previousStep(4)"
+              >
+                <i class="fas fa-arrow-left"></i> Back
+              </button>
+
+              <button type="submit" class="booking-btn-primary">
+                <i class="fas fa-calendar-check"></i> Book My Free Consultation
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- SUCCESS -->
+        <div id="bookingSuccessPage" class="booking-success-message">
+          <i class="fas fa-check-circle"></i>
+          <h3>Your Call is Booked!</h3>
+          <p>Our team will contact you shortly. Thank you!</p>
+        </div>
+      </div>
+    </div>
 
     <!-- Booking Modal Script -->
     <script src="./script/booking-modal.js"></script>
@@ -1914,7 +2612,5 @@
     <script src="./script/30min-booking.js"></script>
 
     <script src="./script/allabout.js"></script>
-
-</body>
-
+  </body>
 </html>
