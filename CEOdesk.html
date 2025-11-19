@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,14 @@
     <link rel="stylesheet" href="CustomDrop.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./CSS/30min-model.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
     <style>
         :root {
             --primary: #0066ff;
@@ -21,13 +28,13 @@
             --gray: #888;
             --success: #27ae60;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #0f172a, #1e293b);
@@ -35,48 +42,61 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Orbitron', sans-serif;
             font-weight: 600;
             margin-bottom: 20px;
             margin-top: 20px;
         }
 
-        
-        
 
-        
+
+
+
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
-        
+
+
         .section-title {
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 3rem;
             position: relative;
         }
-        
+
         .section-title span {
             color: var(--secondary);
             position: relative;
         }
-        
+
         .section-title span.pulse {
             animation: pulse 2s infinite;
         }
-        
+
         @keyframes pulse {
-            0% { text-shadow: 0 0 5px var(--secondary); }
-            50% { text-shadow: 0 0 20px var(--secondary), 0 0 30px var(--secondary); }
-            100% { text-shadow: 0 0 5px var(--secondary); }
+            0% {
+                text-shadow: 0 0 5px var(--secondary);
+            }
+
+            50% {
+                text-shadow: 0 0 20px var(--secondary), 0 0 30px var(--secondary);
+            }
+
+            100% {
+                text-shadow: 0 0 5px var(--secondary);
+            }
         }
-        
+
         .hero-subtitle {
             text-align: center;
             font-size: 1.2rem;
@@ -86,7 +106,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         /* Header Styles */
         header {
             background: rgba(15, 23, 42, 0.85);
@@ -98,18 +118,18 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
             border-bottom: 1px solid rgba(100, 116, 139, 0.2);
         }
-        
+
         header.scrolled {
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         }
-        
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 0;
         }
-        
+
         .logo {
             font-family: 'Orbitron', sans-serif;
             font-size: 1.8rem;
@@ -119,35 +139,35 @@
             display: flex;
             align-items: center;
         }
-        
+
         .logo img {
             height: 40px;
             width: auto;
             object-fit: contain;
             display: block;
         }
-        
+
         .logo span {
             color: var(--secondary);
         }
-        
+
         .logo .tech {
             color: var(--secondary);
         }
-        
-        
-        
+
+
+
         .cta-buttons:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0, 102, 255, 0.3);
         }
-        
+
         .mobile-menu-btn {
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
         }
-        
+
         /* ===== Dropdown Styles ===== */
         .dropdown {
             position: relative;
@@ -194,12 +214,13 @@
                 opacity: 0;
                 transform: translateY(-8px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         /* CEO Hero Section */
         .ceo-hero {
             padding-top: 80px;
@@ -209,17 +230,17 @@
             overflow: hidden;
             background: transparent;
         }
-        
+
         .ceo-hero::before {
             display: none;
         }
-        
+
         .ceo-hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
             color: var(--light);
         }
-        
+
         .ceo-hero p {
             font-size: 1.3rem;
             color: var(--secondary);
@@ -227,7 +248,7 @@
             margin: 0 auto 2rem;
             align-items: center;
         }
-        
+
 
         /* The Beginning Section - Purple Gradient */
         .beginning-section {
@@ -281,12 +302,12 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             overflow: hidden;
         }
-        
+
         .content-area {
             background-color: #050511;
             padding: 3rem;
         }
-        
+
         h1 {
             font-size: 2.5rem;
             text-align: center;
@@ -295,7 +316,7 @@
             color: white;
             font-weight: 700;
         }
-        
+
         .year {
             font-size: 1.2rem;
             text-align: center;
@@ -303,7 +324,7 @@
             margin-bottom: 1.5rem;
             font-weight: 500;
         }
-        
+
         .description {
             font-size: 1.1rem;
             line-height: 1.7;
@@ -311,15 +332,15 @@
             align-items: center;
 
         }
-        
-        
+
+
         .stats-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
-        
+
         .stat-card {
             background: linear-gradient(135deg, #3C3586 0%, #304B8F 100%);
             border-radius: 8px;
@@ -329,37 +350,37 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         .stat-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
         }
-        
+
         .stat-value {
             font-size: 2.5rem;
             font-weight: 700;
             color: white;
             margin-bottom: 0.5rem;
         }
-        
+
         .stat-label {
             font-size: 1.1rem;
             color: #e2e8f0;
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
-        
+
         .stat-desc {
             font-size: 0.9rem;
             color: white;
         }
-        
+
         .divider {
             height: 1px;
             background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
             margin: 2rem 0;
         }
-        
+
         .cta-button {
             display: inline-block;
             background-color: #4299e1;
@@ -373,317 +394,321 @@
             cursor: pointer;
             font-size: 1rem;
         }
-        
+
         .cta-button:hover {
             background-color: #3182ce;
         }
-        
+
         @media (max-width: 768px) {
             .content-area {
                 padding: 2rem;
             }
-            
+
             h1 {
                 font-size: 2rem;
             }
-            
+
             .stats-container {
                 grid-template-columns: 1fr;
             }
         }
 
-        
-
-/* Building Our Home Section - Reversed Gradient */
-.home-section {
-    background: linear-gradient(135deg, #442781, #295692);
-    border-radius: 10px;
-    padding: 50px;
-    margin: 60px 0;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    position: relative;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.home-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.1), transparent 70%);
-    border-radius: 10px;
-}
-
-.home-title {
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 15px;
-    text-align: center;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.home-subtitle {
-    font-size: 1.3rem;
-    color: #e0e0e0;
-    margin-bottom: 40px;
-    text-align: center;
-    font-weight: 500;
-}
-
-.home-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-}
-
-.home-text p {
-    color: #e0e0e0;
-    margin-bottom: 25px;
-    line-height: 1.8;
-    font-size: 1.1rem;
-}
-
-.home-services {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-}
-
-.home-service {
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 8px;
-    padding: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    border-left: 4px solid #00f2ff;
-    backdrop-filter: blur(10px);
-}
-
-.home-service:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.2);
-    border-color: #00f2ff;
-    box-shadow: 0 10px 25px rgba(0, 242, 255, 0.2);
-}
-
-.home-service h4 {
-    color: #00f2ff;
-    margin-bottom: 10px;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-
-.home-service p {
-    color: #e0e0e0;
-    font-size: 1rem;
-    margin: 0;
-    line-height: 1.5;
-}
-
-/* Main card box */
-.beginning-card {
-    width: 100%;
-    max-width: 1250px;
-    padding: 50px;
-    background: linear-gradient(135deg, #442781 0%, #295692 100%);
-    border-radius: 22px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-}
-
-/* Text content */
-.beginning-left {
-    flex: 1;
-    color: white;
-}
-
-.beginning-title {
-    font-size: 38px;
-    font-weight: 700;
-    margin-bottom: 4px;
-    margin-top: 30px;
-}
 
 
-.beginning-desc {
-    font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 15px;
-}
+        /* Building Our Home Section - Reversed Gradient */
+        .home-section {
+            background: linear-gradient(135deg, #442781, #295692);
+            border-radius: 10px;
+            padding: 50px;
+            margin: 60px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
 
-/* Image Section */
-.beginning-right img {
-    width: 100%;
-    max-width: 550px;
-    height: auto;
-    object-fit: cover;
-}
+        .home-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.1), transparent 70%);
+            border-radius: 10px;
+        }
 
-/* Responsive */
-@media (max-width: 992px) {
-    .beginning-card {
-        flex-direction: column;
-        text-align: center;
-    }
+        .home-title {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+            text-align: center;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
 
-    .beginning-right img {
-        max-width: 100%;
-    }
-}
+        .home-subtitle {
+            font-size: 1.3rem;
+            color: #e0e0e0;
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .home-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .home-text p {
+            color: #e0e0e0;
+            margin-bottom: 25px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .home-services {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .home-service {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            border-left: 4px solid #00f2ff;
+            backdrop-filter: blur(10px);
+        }
+
+        .home-service:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+            border-color: #00f2ff;
+            box-shadow: 0 10px 25px rgba(0, 242, 255, 0.2);
+        }
+
+        .home-service h4 {
+            color: #00f2ff;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .home-service p {
+            color: #e0e0e0;
+            font-size: 1rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Main card box */
+        .beginning-card {
+            width: 100%;
+            max-width: 1250px;
+            padding: 50px;
+            background: linear-gradient(135deg, #442781 0%, #295692 100%);
+            border-radius: 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Text content */
+        .beginning-left {
+            flex: 1;
+            color: white;
+        }
+
+        .beginning-title {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            margin-top: 30px;
+        }
 
 
-/* Responsive Styles */
-@media (max-width: 992px) {
-    .beginning-content,
-    .breakthrough-content,
-    .home-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .beginning-highlights,
-    .breakthrough-stats,
-    .home-services {
-        grid-template-columns: 1fr;
-    }
-}
+        .beginning-desc {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
 
-@media (max-width: 768px) {
-    .beginning-section,
-    .breakthrough-section,
-    .home-section {
-        padding: 30px 20px;
-    }
-    
-    .beginning-title,
-    .breakthrough-title,
-    .home-title {
-        font-size: 2rem;
-    }
-    
-    .breakthrough-stat-number {
-        font-size: 2.5rem;
-    }
+        /* Image Section */
+        .beginning-right img {
+            width: 100%;
+            max-width: 550px;
+            height: auto;
+            object-fit: cover;
+        }
 
-    
-    .beginning-highlights {
-        grid-template-columns: 1fr;
-    }
-}
-        
-/* The Future Section */
-.future-section {
-    background: rgba(10, 10, 26, 0.7);
-    border-radius: 10px;
-    padding: 50px;
-    margin: 60px 0;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    position: relative;
-}
+        /* Responsive */
+        @media (max-width: 992px) {
+            .beginning-card {
+                flex-direction: column;
+                text-align: center;
+            }
 
-.future-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 150px;
-    height: 150px;
-    background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
-    opacity: 0.1;
-}
+            .beginning-right img {
+                max-width: 100%;
+            }
+        }
 
-.future-title {
-    font-size: 2.2rem;
-    color: var(--secondary);
-    margin-bottom: 30px;
-    text-align: center;
-}
 
-.future-content {
-    color: var(--gray);
-    line-height: 1.8;
-    font-size: 1.1rem;
-}
+        /* Responsive Styles */
+        @media (max-width: 992px) {
 
-.future-content p {
-    margin-bottom: 25px;
-}
+            .beginning-content,
+            .breakthrough-content,
+            .home-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
 
-.future-content strong {
-    color: var(--secondary);
-}
+            .beginning-highlights,
+            .breakthrough-stats,
+            .home-services {
+                grid-template-columns: 1fr;
+            }
+        }
 
-/* Responsive Styles for New Sections */
-@media (max-width: 992px) {
-    .beginning-content,
-    .breakthrough-content,
-    .home-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .breakthrough-stats,
-    .home-services {
-        grid-template-columns: 1fr;
-    }
-}
+        @media (max-width: 768px) {
 
-@media (max-width: 768px) {
-    .beginning-section,
-    .breakthrough-section,
-    .home-section,
-    .future-section {
-        padding: 30px 20px;
-    }
-    
-    .breakthrough-stat-number {
-        font-size: 2.2rem;
-    }
-    
-    .home-service {
-        padding: 15px;
-    }
-}
-        
+            .beginning-section,
+            .breakthrough-section,
+            .home-section {
+                padding: 30px 20px;
+            }
+
+            .beginning-title,
+            .breakthrough-title,
+            .home-title {
+                font-size: 2rem;
+            }
+
+            .breakthrough-stat-number {
+                font-size: 2.5rem;
+            }
+
+
+            .beginning-highlights {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* The Future Section */
+        .future-section {
+            background: rgba(10, 10, 26, 0.7);
+            border-radius: 10px;
+            padding: 50px;
+            margin: 60px 0;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+        }
+
+        .future-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+            opacity: 0.1;
+        }
+
+        .future-title {
+            font-size: 2.2rem;
+            color: var(--secondary);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .future-content {
+            color: var(--gray);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .future-content p {
+            margin-bottom: 25px;
+        }
+
+        .future-content strong {
+            color: var(--secondary);
+        }
+
+        /* Responsive Styles for New Sections */
+        @media (max-width: 992px) {
+
+            .beginning-content,
+            .breakthrough-content,
+            .home-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .breakthrough-stats,
+            .home-services {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .beginning-section,
+            .breakthrough-section,
+            .home-section,
+            .future-section {
+                padding: 30px 20px;
+            }
+
+            .breakthrough-stat-number {
+                font-size: 2.2rem;
+            }
+
+            .home-service {
+                padding: 15px;
+            }
+        }
+
         /* Footer */
         .footer {
             /* background: var(--dark-light); */
             padding: 60px 0 20px;
             margin-top: 80px;
         }
-        
+
         .footer-container {
             display: grid;
             grid-template-columns: repeat(4, minmax(150px, 1fr));
             gap: 40px;
             margin-bottom: 40px;
         }
-        
+
         .footer-col h3 {
             color: var(--secondary);
             margin-bottom: 20px;
             font-size: 1.3rem;
         }
-        
+
         .footer-col p {
             color: var(--gray);
             margin-bottom: 20px;
         }
-        
+
         .footer-links {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-        
+
         .footer-links a {
             color: var(--gray);
             text-decoration: none;
@@ -692,15 +717,15 @@
             align-items: center;
             gap: 10px;
         }
-        
+
         .footer-links a:hover {
             color: var(--secondary);
         }
-        
+
         .footer-links a i {
             font-size: 0.8rem;
         }
-        
+
         .footer-bottom {
             text-align: center;
             padding-top: 20px;
@@ -729,16 +754,19 @@
 
         .footer-links ul ul {
             margin-left: 15px;
-            border-left: 1px solid rgba(255,255,255,0.2);
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
             padding-left: 15px;
         }
+
         .footer-dropdown-content {
             display: none;
             margin-left: 15px;
         }
+
         .footer-dropdown.open .footer-dropdown-content {
             display: block;
         }
+
         .footer-dropdown-header {
             display: flex;
             color: var(--gray);
@@ -746,23 +774,26 @@
             cursor: pointer;
             margin: 5px 0;
         }
+
         .footer-dropdown-header:hover {
             color: var(--secondary);
         }
 
         /* Removed conflicting highlight-box styles - using more specific styles below */
-        
-        .highlight-boxx{
+
+        .highlight-boxx {
             width: 100%;
             height: 30%;
         }
-        .set{
+
+        .set {
             display: flex;
             margin: 23px;
             gap: 20px;
 
         }
-         .set img {
+
+        .set img {
             width: 50px;
             height: 50px;
             object-fit: contain;
@@ -770,486 +801,490 @@
         }
 
         .set-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 15px;
-    flex: 1;
-    min-width: 200px;
-}
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            flex: 1;
+            min-width: 200px;
+        }
 
         /* Building Our Home Section - Reversed Gradient */
-.home-section {
-    background: linear-gradient(135deg, #442781, #295692);
-    border-radius: 10px;
-    padding: 50px;
-    margin: 60px 0;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    position: relative;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
+        .home-section {
+            background: linear-gradient(135deg, #442781, #295692);
+            border-radius: 10px;
+            padding: 50px;
+            margin: 60px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
 
-.home-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.1), transparent 70%);
-    border-radius: 10px;
-}
+        .home-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.1), transparent 70%);
+            border-radius: 10px;
+        }
 
-.home-title {
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 15px;
-    text-align: center;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
+        .home-title {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+            text-align: center;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
 
-.home-subtitle {
-    font-size: 1.3rem;
-    color: #e0e0e0;
-    margin-bottom: 40px;
-    text-align: center;
-    font-weight: 500;
-}
+        .home-subtitle {
+            font-size: 1.3rem;
+            color: #e0e0e0;
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 500;
+        }
 
-.home-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-}
+        .home-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
 
-.home-text p {
-    color: #e0e0e0;
-    margin-bottom: 25px;
-    line-height: 1.8;
-    font-size: 1.1rem;
-}
+        .home-text p {
+            color: #e0e0e0;
+            margin-bottom: 25px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
 
-.home-services {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-}
+        .home-services {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
 
-.home-service {
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 8px;
-    padding: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    border-left: 4px solid #00f2ff;
-    backdrop-filter: blur(10px);
-}
+        .home-service {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            border-left: 4px solid #00f2ff;
+            backdrop-filter: blur(10px);
+        }
 
-.home-service:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.2);
-    border-color: #00f2ff;
-    box-shadow: 0 10px 25px rgba(0, 242, 255, 0.2);
-}
+        .home-service:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+            border-color: #00f2ff;
+            box-shadow: 0 10px 25px rgba(0, 242, 255, 0.2);
+        }
 
-.home-service h4 {
-    color: #00f2ff;
-    margin-bottom: 10px;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
+        .home-service h4 {
+            color: #00f2ff;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
 
-.home-service p {
-    color: #e0e0e0;
-    font-size: 1rem;
-    margin: 0;
-    line-height: 1.5;
-}
+        .home-service p {
+            color: #e0e0e0;
+            font-size: 1rem;
+            margin: 0;
+            line-height: 1.5;
+        }
 
-/* Main card box */
-.beginning-card {
-    width: 100%;
-    max-width: 1250px;
-    padding: 50px;
-    background: linear-gradient(135deg, #442781 0%, #295692 100%);
-    border-radius: 22px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-    margin: 0 auto;
-}
+        /* Main card box */
+        .beginning-card {
+            width: 100%;
+            max-width: 1250px;
+            padding: 50px;
+            background: linear-gradient(135deg, #442781 0%, #295692 100%);
+            border-radius: 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+        }
 
-/* Text content */
-.beginning-left {
-    flex: 1;
-    color: white;
-}
+        /* Text content */
+        .beginning-left {
+            flex: 1;
+            color: white;
+        }
 
-.beginning-title {
-    font-size: 38px;
-    font-weight: 700;
-    margin-bottom: 4px;
-    margin-top: 30px;
-}
+        .beginning-title {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            margin-top: 30px;
+        }
 
-.beginning-desc {
-    font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 15px;
-}
+        .beginning-desc {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
 
-/* Image Section */
-.beginning-right img {
-    width: 100%;
-    max-width: 550px;
-    height: auto;
-    object-fit: contain;
-    border-radius: 10px;
-}
+        /* Image Section */
+        .beginning-right img {
+            width: 100%;
+            max-width: 550px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 10px;
+        }
 
-/* Highlight wrapper */
-.highlight-wrapper {
-    
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    margin-top: 30px;
-}
+        /* Highlight wrapper */
+        .highlight-wrapper {
 
-.highlight-box, .highlight-boxx {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            margin-top: 30px;
+        }
 
-.highlight-box img, .highlight-boxx img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 15px;
-    object-fit: contain;
-}
+        .highlight-box,
+        .highlight-boxx {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
 
-/* Ensure images inside icon circles are properly sized */
-.highlight-item .icon-circle img,
-.highlight-item .icon-circlee img {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-}
+        .highlight-box img,
+        .highlight-boxx img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+            object-fit: contain;
+        }
 
-.set {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    width: 100%;
-}
+        /* Ensure images inside icon circles are properly sized */
+        .highlight-item .icon-circle img,
+        .highlight-item .icon-circlee img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
 
-.set > div {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 15px;
-}
+        .set {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            width: 100%;
+        }
 
-.set img {
-    width: 50px;
-    height: 50px;
-    flex-shrink: 0;
-    object-fit: contain;
-}
+        .set>div {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
 
-.set h3 {
-    color: #00f2ff;
-    font-size: 1.1rem;
-    margin: 0;
-}
+        .set img {
+            width: 50px;
+            height: 50px;
+            flex-shrink: 0;
+            object-fit: contain;
+        }
 
-/* Responsive Styles for Building Our Home Section */
-@media (max-width: 1200px) {
-    .beginning-card {
-        padding: 40px;
-        gap: 40px;
-    }
-    
-    .beginning-title {
-        font-size: 32px;
-    }
-    
-    .beginning-right img {
-        max-width: 450px;
-    }
-}
+        .set h3 {
+            color: #00f2ff;
+            font-size: 1.1rem;
+            margin: 0;
+        }
 
-@media (max-width: 992px) {
-    .beginning-card {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-        padding: 30px;
-    }
-    
-    .beginning-right img {
-        max-width: 100%;
-        order: -1; /* Image first on mobile */
-    }
-    
-    .highlight-wrapper {
-        flex-direction: row;
-        gap: 20px;
-        justify-content: center;
-        align-items: flex-start;
-    }
-    
-    .highlight-box {
-        min-width: 200px;
-        max-width: 300px;
-    }
-    
-    .set {
-        flex-direction: row;
-        gap: 15px;
-    }
-    
-    .set > div {
-        justify-content: center;
-    }
-    
-    .home-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-}
+        /* Responsive Styles for Building Our Home Section */
+        @media (max-width: 1200px) {
+            .beginning-card {
+                padding: 40px;
+                gap: 40px;
+            }
 
-@media (max-width: 768px) {
-    .home-section {
-        padding: 30px 20px;
-        margin: 40px 0;
-    }
-    
-    .beginning-card {
-        padding: 25px 20px;
-        border-radius: 15px;
-    }
-    
-    .beginning-title {
-        font-size: 28px;
-        margin-top: 20px;
-    }
-    
-    .beginning-desc {
-        font-size: 15px;
-    }
-    
-    .home-title {
-        font-size: 2rem;
-    }
-    
-    .home-subtitle {
-        font-size: 1.1rem;
-        margin-bottom: 30px;
-    }
-    
-    .home-service {
-        padding: 20px;
-    }
-    
-    .home-service h4 {
-        font-size: 1.1rem;
-    }
-    
-    .set h3 {
-        font-size: 1rem;
-    }
-    
-    .set img {
-        width: 45px;
-        height: 45px;
-    }
-    
-    .icon {
-        width: 45px;
-        height: 45px;
-    }
-}
+            .beginning-title {
+                font-size: 32px;
+            }
 
-@media (max-width: 576px) {
-    .home-section {
-        padding: 25px 15px;
-        margin: 30px 0;
-    }
-    
-    .beginning-card {
-        padding: 20px 15px;
-        gap: 20px;
-    }
-    
-    .beginning-title {
-        font-size: 24px;
-    }
-    
-    .beginning-desc {
-        font-size: 14px;
-    }
-    
-    .highlight-box img, .highlight-boxx img {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .set {
-        gap: 10px;
-    }
-    
-    .set > div {
-        gap: 10px;
-        margin-bottom: 10px;
-    }
-    
-    .set img {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .icon {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .icon-circle img,
-    .icon-circlee img {
-        width: 25px;
-        height: 25px;
-    }
-    
-    .set h3 {
-        font-size: 0.9rem;
-    }
-    
-    .home-service {
-        padding: 15px;
-    }
-    
-    .home-service h4 {
-        font-size: 1rem;
-    }
-    
-    .home-service p {
-        font-size: 0.9rem;
-    }
-}
+            .beginning-right img {
+                max-width: 450px;
+            }
+        }
 
-/* Specific fix for iPhone 12 Pro (390x844) - Building Our Home section */
-@media (max-width: 390px) {
-    .beginning-card {
-        padding: 20px 15px;
-        gap: 25px;
-    }
-    
-    .beginning-left {
-        width: 100%;
-    }
-    
-    .beginning-desc {
-        font-size: 13px;
-        line-height: 1.6;
-        margin-bottom: 15px;
-    }
-    
-    .highlight-wrapper {
-        margin-top: 20px;
-        gap: 15px;
-        width: 100%;
-        flex-direction: column;
-        align-items: stretch;
-    }
-    
-    .highlight-box {
-        min-width: 100%;
-        max-width: 100%;
-    }
-    
-    .highlight-boxx {
-        width: 100%;
-    }
-    
-    .set {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
-        gap: 12px 8px;
-        margin: 10px 0;
-        width: 100%;
-    }
-    
-    /* Position divs (icons) in first row */
-    .set > div:nth-child(1) {
-        grid-column: 1;
-        grid-row: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .set > div:nth-child(3) {
-        grid-column: 2;
-        grid-row: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    /* Position h3s (text) in second row */
-    .set > h3:nth-child(2) {
-        grid-column: 1;
-        grid-row: 2;
-        margin: 0;
-        text-align: center;
-    }
-    
-    .set > h3:nth-child(4) {
-        grid-column: 2;
-        grid-row: 2;
-        margin: 0;
-        text-align: center;
-    }
-    
-    .set img,
-    .set .icon {
-        width: 45px;
-        height: 45px;
-        flex-shrink: 0;
-        margin: 0 auto;
-        display: block;
-        object-fit: contain;
-    }
-    
-    .set h3 {
-        font-size: 0.75rem;
-        margin: 0;
-        text-align: center;
-        line-height: 1.2;
-        width: 100%;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-    
-    .beginning-right {
-        width: 100%;
-    }
-    
-    .beginning-right img {
-        max-width: 100%;
-        width: 100%;
-    }
-}
+        @media (max-width: 992px) {
+            .beginning-card {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+                padding: 30px;
+            }
+
+            .beginning-right img {
+                max-width: 100%;
+                order: -1;
+                /* Image first on mobile */
+            }
+
+            .highlight-wrapper {
+                flex-direction: row;
+                gap: 20px;
+                justify-content: center;
+                align-items: flex-start;
+            }
+
+            .highlight-box {
+                min-width: 200px;
+                max-width: 300px;
+            }
+
+            .set {
+                flex-direction: row;
+                gap: 15px;
+            }
+
+            .set>div {
+                justify-content: center;
+            }
+
+            .home-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .home-section {
+                padding: 30px 20px;
+                margin: 40px 0;
+            }
+
+            .beginning-card {
+                padding: 25px 20px;
+                border-radius: 15px;
+            }
+
+            .beginning-title {
+                font-size: 28px;
+                margin-top: 20px;
+            }
+
+            .beginning-desc {
+                font-size: 15px;
+            }
+
+            .home-title {
+                font-size: 2rem;
+            }
+
+            .home-subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 30px;
+            }
+
+            .home-service {
+                padding: 20px;
+            }
+
+            .home-service h4 {
+                font-size: 1.1rem;
+            }
+
+            .set h3 {
+                font-size: 1rem;
+            }
+
+            .set img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .icon {
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .home-section {
+                padding: 25px 15px;
+                margin: 30px 0;
+            }
+
+            .beginning-card {
+                padding: 20px 15px;
+                gap: 20px;
+            }
+
+            .beginning-title {
+                font-size: 24px;
+            }
+
+            .beginning-desc {
+                font-size: 14px;
+            }
+
+            .highlight-box img,
+            .highlight-boxx img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .set {
+                gap: 10px;
+            }
+
+            .set>div {
+                gap: 10px;
+                margin-bottom: 10px;
+            }
+
+            .set img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .icon-circle img,
+            .icon-circlee img {
+                width: 25px;
+                height: 25px;
+            }
+
+            .set h3 {
+                font-size: 0.9rem;
+            }
+
+            .home-service {
+                padding: 15px;
+            }
+
+            .home-service h4 {
+                font-size: 1rem;
+            }
+
+            .home-service p {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Specific fix for iPhone 12 Pro (390x844) - Building Our Home section */
+        @media (max-width: 390px) {
+            .beginning-card {
+                padding: 20px 15px;
+                gap: 25px;
+            }
+
+            .beginning-left {
+                width: 100%;
+            }
+
+            .beginning-desc {
+                font-size: 13px;
+                line-height: 1.6;
+                margin-bottom: 15px;
+            }
+
+            .highlight-wrapper {
+                margin-top: 20px;
+                gap: 15px;
+                width: 100%;
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .highlight-box {
+                min-width: 100%;
+                max-width: 100%;
+            }
+
+            .highlight-boxx {
+                width: 100%;
+            }
+
+            .set {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto;
+                gap: 12px 8px;
+                margin: 10px 0;
+                width: 100%;
+            }
+
+            /* Position divs (icons) in first row */
+            .set>div:nth-child(1) {
+                grid-column: 1;
+                grid-row: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .set>div:nth-child(3) {
+                grid-column: 2;
+                grid-row: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            /* Position h3s (text) in second row */
+            .set>h3:nth-child(2) {
+                grid-column: 1;
+                grid-row: 2;
+                margin: 0;
+                text-align: center;
+            }
+
+            .set>h3:nth-child(4) {
+                grid-column: 2;
+                grid-row: 2;
+                margin: 0;
+                text-align: center;
+            }
+
+            .set img,
+            .set .icon {
+                width: 45px;
+                height: 45px;
+                flex-shrink: 0;
+                margin: 0 auto;
+                display: block;
+                object-fit: contain;
+            }
+
+            .set h3 {
+                font-size: 0.75rem;
+                margin: 0;
+                text-align: center;
+                line-height: 1.2;
+                width: 100%;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+
+            .beginning-right {
+                width: 100%;
+            }
+
+            .beginning-right img {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
 
 
 
@@ -1257,23 +1292,23 @@
 
 
 
-        
 
-        
+
+
 
         /* Responsive Styles */
         @media (max-width: 992px) {
-             .highlight-boxx{
-            width: 100%;
-            /* margin-left: -12px; */
-            height: 100%;
-        }
+            .highlight-boxx {
+                width: 100%;
+                /* margin-left: -12px; */
+                height: 100%;
+            }
 
             .vision-section {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-        
+
         @media (max-width: 768px) {
             .footer-container {
                 display: flex;
@@ -1281,84 +1316,86 @@
                 gap: 40px;
                 margin-bottom: 40px;
             }
-            
+
             .mobile-menu-btn {
                 display: block;
             }
-            
+
             .ceo-hero {
                 padding-top: 40px;
             }
-            
+
             .beginning-section {
                 margin-top: 0;
             }
-            
+
             .beginning-title {
                 margin-top: 30px;
             }
-            
+
             .ceo-hero h1 {
                 font-size: 2.5rem;
             }
-            
+
             .section-title {
                 font-size: 2rem;
             }
-            
+
             .ceo-section {
                 padding: 30px 20px;
             }
-            
+
             .ceo-quote {
                 font-size: 1.5rem;
             }
-            
+
             .newsletter-section {
                 padding: 40px 20px;
             }
-            
+
             .newsletter-form {
                 flex-direction: column;
                 gap: 15px;
             }
-            
-            .newsletter-input, .newsletter-btn {
+
+            .newsletter-input,
+            .newsletter-btn {
                 border-radius: 30px;
                 width: 100%;
             }
-            
+
             .ceo-stats {
                 flex-direction: column;
                 gap: 20px;
             }
         }
-        
+
         @media (max-width: 576px) {
 
-            
+
 
 
             .beginning-card {
-    width: 100%;
-    max-width: 1250px;
-    padding: 12px;
-    background: linear-gradient(135deg, #442781 0%, #295692 100%);
-    border-radius: 22px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-}
+                width: 100%;
+                max-width: 1250px;
+                padding: 12px;
+                background: linear-gradient(135deg, #442781 0%, #295692 100%);
+                border-radius: 22px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 50px;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            }
+
             .vision-section {
                 grid-template-columns: 1fr;
             }
-            
+
             .ceo-hero h1 {
                 font-size: 2rem;
             }
-            
+
             .ceo-quote {
                 font-size: 1.3rem;
             }
@@ -1368,6 +1405,7 @@
     <link rel="stylesheet" href="./CSS/navbar.css">
     <link rel="stylesheet" href="./CSS/booking-modal.css">
 </head>
+
 <body>
     <!-- Header -->
     <header id="header">
@@ -1407,8 +1445,9 @@
                         <i class="fas fa-phone-alt"></i>Book A 30 Min Call
                     </a>
                 </div>
-                
-                <button class="mobile-menu-btn" aria-label="Toggle mobile menu" onclick="window.toggleMobileMenu && window.toggleMobileMenu()">
+
+                <button class="mobile-menu-btn" aria-label="Toggle mobile menu"
+                    onclick="window.toggleMobileMenu && window.toggleMobileMenu()">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -1416,7 +1455,7 @@
             </nav>
         </div>
     </header>
-    
+
     <!-- CEO Hero Section -->
     <section class="ceo-hero">
         <div class="container">
@@ -1424,194 +1463,199 @@
             <p>Some Journeys Start With Code. Ours Started With A Belief That Technology Can Truly Change Lives.</p>
         </div>
     </section>
-    
+
     <!-- The Beginning Section -->
-<div class="container">
-    <div class="section-header">
-        <h2 class="beginning-title">The Beginning</h2>
-        <p class="beginning-subtitle">A Journey of Passion & Purpose</p>
+    <div class="container">
+        <div class="section-header">
+            <h2 class="beginning-title">The Beginning</h2>
+            <p class="beginning-subtitle">A Journey of Passion & Purpose</p>
+        </div>
     </div>
-</div>
     <section class="beginning-section">
-            <div class="beginning-card">
-                <div class="beginning-left">
-                    <p class="beginning-desc">
-                        When I think back to the early days of Zonixtec IT Services, I remember sitting
-                        in a small room with just five passionate developers, all sharing one dream:
-                        to build technology that truly makes a difference.
-                    </p>
+        <div class="beginning-card">
+            <div class="beginning-left">
+                <p class="beginning-desc">
+                    When I think back to the early days of Zonixtec IT Services, I remember sitting
+                    in a small room with just five passionate developers, all sharing one dream:
+                    to build technology that truly makes a difference.
+                </p>
 
-                    <p class="beginning-desc">
-                        I often tell people, the idea wasn't just to write code — it was to create solutions
-                        that solve real problems, help businesses grow, and push the boundaries of what
-                        technology can do.
-                    </p>
+                <p class="beginning-desc">
+                    I often tell people, the idea wasn't just to write code — it was to create solutions
+                    that solve real problems, help businesses grow, and push the boundaries of what
+                    technology can do.
+                </p>
 
-                    <div class="highlight-wrapper">
-                        <div class="highlight-box">
-                            <div class="highlight-item">
-                                <div class="icon-circle">
-                                    <img src="./Assets/Vector.svg" alt="Innovation Icon" />
-                                </div>
-                                <div>
-                                    <h3>Quality Focused</h3>
-                                    <p>Excellence in every line of code</p>
-                                </div>
+                <div class="highlight-wrapper">
+                    <div class="highlight-box">
+                        <div class="highlight-item">
+                            <div class="icon-circle">
+                                <img src="./Assets/Vector.svg" alt="Innovation Icon" />
+                            </div>
+                            <div>
+                                <h3>Quality Focused</h3>
+                                <p>Excellence in every line of code</p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="highlight-box">
-                            <div class="highlight-item">
-                                <div class="icon-circlee">
-                                    <img src="./Assets/Vector (1).svg" alt="Collaboration Icon" />
-                                </div>
-                                <div>
-                                    <h3>Client Satisfaction</h3>
-                                    <p>Your success is our mission</p>
-                                </div>
+                    <div class="highlight-box">
+                        <div class="highlight-item">
+                            <div class="icon-circlee">
+                                <img src="./Assets/Vector (1).svg" alt="Collaboration Icon" />
+                            </div>
+                            <div>
+                                <h3>Client Satisfaction</h3>
+                                <p>Your success is our mission</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                 <div class="beginning-right">
+            </div>
+            <div class="beginning-right">
                 <img src="Assets/f66bd6d71df987ce9f925f8f235198e943023de5.jpg" alt="Handshake" />
             </div>
-            </div>
+        </div>
         </div>
     </section>
 
 
-<style>
-    .highlight-wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  align-items: flex-start;
-}
+    <style>
+        .highlight-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
 
-.highlight-box {
-  flex: 1;
-  min-width: 200px;
-  max-width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
+        .highlight-box {
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
 
-.highlight-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  text-align: left;
-  width: 100%;
-}
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            text-align: left;
+            width: 100%;
+        }
 
-.icon-circle,
-.icon-circlee {
-  width: 55px;
-  height: 55px;
-  min-width: 55px;
-  min-height: 55px;
-  background-color: #0d0d0d; /* black circle */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  margin: 0;
-}
+        .icon-circle,
+        .icon-circlee {
+            width: 55px;
+            height: 55px;
+            min-width: 55px;
+            min-height: 55px;
+            background-color: #0d0d0d;
+            /* black circle */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            margin: 0;
+        }
 
-.icon-circle img,
-.icon-circlee img {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-}
+        .icon-circle img,
+        .icon-circlee img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
 
-.highlight-item > div:last-child {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-top: 0;
-}
+        .highlight-item>div:last-child {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 0;
+        }
 
-.icon {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
+        .icon {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
 
-.highlight-box h3,
-.highlight-item h3 {
-  font-size: 18px;
-  color: #fff;
-  margin: 0 0 8px 0;
-  line-height: 1.3;
-}
+        .highlight-box h3,
+        .highlight-item h3 {
+            font-size: 18px;
+            color: #fff;
+            margin: 0 0 8px 0;
+            line-height: 1.3;
+        }
 
-.highlight-box p,
-.highlight-item p {
-  color: #cfcfcf;
-  font-size: 14px;
-  margin: 0;
-  line-height: 1.4;
-}
-</style>
+        .highlight-box p,
+        .highlight-item p {
+            color: #cfcfcf;
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.4;
+        }
+    </style>
 
- <!-- The Breakthrough Section -->
-  <div class="container">
-    <div class="section-header">
+    <!-- The Breakthrough Section -->
+    <div class="container">
+        <div class="section-header">
             <h1>The Breakthrough</h1>
             <div class="year">2024: A Milestone Year</div>
+        </div>
     </div>
-  </div>
     <section class="milestone-section">
         <div class="content-area">
-            
+
             <p class="description">
-                2024 was a milestone year. We secured our first major enterprise client and delivered a custom CRM solution that boosted their sales by 45%. That moment wasn't just a number on a report — it was validation that our vision of AI-powered solutions, High-end technologies, and tailored software development could create tangible results.
+                2024 was a milestone year. We secured our first major enterprise client and delivered a custom CRM
+                solution that boosted their sales by 45%. That moment wasn't just a number on a report — it was
+                validation that our vision of AI-powered solutions, High-end technologies, and tailored software
+                development could create tangible results.
             <p>
-                I still remember the celebration in that small office — a mix of relief, pride, and excitement for what was to come.
+                I still remember the celebration in that small office — a mix of relief, pride, and excitement for what
+                was to come.
             </p>
             </p>
-            
+
             <div class="stats-container">
                 <div class="stat-card">
                     <div class="stat-value">45%</div>
                     <div class="stat-label">Sales Boost</div>
                     <div class="stat-desc">for our first enterprise client</div>
                 </div>
-                
+
                 <div class="stat-card">
                     <div class="stat-value">1st</div>
                     <div class="stat-label">Major Client</div>
                     <div class="stat-desc">enterprise partnership secured</div>
                 </div>
-                
+
                 <div class="stat-card">
                     <div class="stat-value">CRM</div>
                     <div class="stat-label">Custom Solution</div>
                     <div class="stat-desc">AI-powered platform delivered</div>
                 </div>
             </div>
-            
+
             <div class="divider"></div>
-            
+
         </div>
     </section>
 
 
-<!-- <div class="container">
+    <!-- <div class="container">
     <div class="section-header">
         <h2 class="beginning-title">Building Our Home</h2>
         <p class="beginning-subtitle">2024: A Milestone Year</p>
     </div>
 </div> -->
 
-<!-- <section class="beginning-section">
+    <!-- <section class="beginning-section">
     <div class="container">
         <div class="beginning-card">
             <div class="beginning-left">
@@ -1653,121 +1697,132 @@
 </section> -->
 
 
-<div class="container">
-    <div class="section-header">
-        <h2 class="beginning-title">Building Our Home</h2>
-        <p class="beginning-subtitle">2024: A Milestone Year</p>
-    </div>
-</div>
-
-<section class="beginning-section">
     <div class="container">
-        <div class="beginning-card">
-            <div class="beginning-left">
-                <p class="beginning-desc">
-                    Later that year, we took another bold step: opening our own office. It wasn't just a physical space — it became the heartbeat of our culture.
-                </p>
-
-                <p class="beginning-desc">
-                    A place where ideas collide, creativity flourishes, and collaboration drives impact. Today, Zonixtec has grown beyond those first five developers, delivering AI-powered solutions, cloud services, and digital transformation projects for clients across industries, all while keeping Quality and Client satisfaction at the center.
-                </p>
-
-                <div class="highlight-wrapper">
-                    <div class="highlight-boxx">
-                        <div class="set">
-                            <div><img class="icon" src="./Assets//recommendations-ai-svgrepo-com 1.png" alt="Rocket Icon" /></div>
-                            <h3>CRM & ERP Solutions</h3>
-
-                             <div><img class="icon" src="./Assets//cloud-generic-svgrepo-com 1.png" alt="Handshake Icon" /></div>
-                            <h3>Billing  Services</h3>
-
-                        </div>
-                        <div class="set">
-                            <div><img class="icon" src="./Assets//cloud-asset-inventory-svgrepo-com 1.png" alt="Handshake Icon" /></div>
-                            <h3>Digital Transformation</h3>
-
-                            <div><img class="icon" src="./Assets//cloud-shell-svgrepo-com 1.png" alt="Handshake Icon" /></div>
-                            <h3>Custom Development</h3>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="beginning-right">
-                <img src="Assets/cabinet-svgrepo-com 1.png" alt="Handshake" />
-            </div>
+        <div class="section-header">
+            <h2 class="beginning-title">Building Our Home</h2>
+            <p class="beginning-subtitle">2024: A Milestone Year</p>
         </div>
     </div>
-</section>
 
+    <section class="beginning-section">
+        <div class="container">
+            <div class="beginning-card">
+                <div class="beginning-left">
+                    <p class="beginning-desc">
+                        Later that year, we took another bold step: opening our own office. It wasn't just a physical
+                        space — it became the heartbeat of our culture.
+                    </p>
 
+                    <p class="beginning-desc">
+                        A place where ideas collide, creativity flourishes, and collaboration drives impact. Today,
+                        Zonixtec has grown beyond those first five developers, delivering AI-powered solutions, cloud
+                        services, and digital transformation projects for clients across industries, all while keeping
+                        Quality and Client satisfaction at the center.
+                    </p>
 
+                    <div class="highlight-wrapper">
+                        <div class="highlight-boxx">
+                            <div class="set">
+                                <div><img class="icon" src="./Assets//recommendations-ai-svgrepo-com 1.png"
+                                        alt="Rocket Icon" /></div>
+                                <h3>CRM & ERP Solutions</h3>
 
-  <div class="container">
-    <div class="section-header">
-            <h1>The Future</h1>
-    </div>
-  </div>
-    <section class="milestone-section">
-        <div class="content-area">
-           <h3 style="text-align: center;">Looking Forward</h3>
-            <div style="text-align: center;">
-    <p>
-        Looking forward, I see limitless possibilities. Our mission is clear: to push boundaries, embrace emerging
-        high-end technologies, and create solutions that empower businesses while making an impact on people's lives.
-    </p>
-    <p>
-        At Zonixtec, every project, every innovation, and every success story is a testament to our belief that
-        technology, when combined with passion and purpose, can truly transform the way organizations grow.
-    </p>
-</div>
+                                <div><img class="icon" src="./Assets//cloud-generic-svgrepo-com 1.png"
+                                        alt="Handshake Icon" /></div>
+                                <h3>Billing Services</h3>
 
-            <h2 style="text-align: center;">
-                This is more than a company. It's a journey.
-            </h2>
-            
-             <p style="text-align: center;">
-    And I'm inviting you — our clients, partners, and team members — to walk it with us.
-</p>
+                            </div>
+                            <div class="set">
+                                <div><img class="icon" src="./Assets//cloud-asset-inventory-svgrepo-com 1.png"
+                                        alt="Handshake Icon" /></div>
+                                <h3>Digital Transformation</h3>
 
-            </p>    
+                                <div><img class="icon" src="./Assets//cloud-shell-svgrepo-com 1.png"
+                                        alt="Handshake Icon" /></div>
+                                <h3>Custom Development</h3>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="beginning-right">
+                    <img src="Assets/cabinet-svgrepo-com 1.png" alt="Handshake" />
+                </div>
+            </div>
         </div>
     </section>
 
 
-<style>
 
-/* Inner Card */
-.beginning-container {
-    max-width: 1150px;
-    width: 90%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
-.beginning-title {
-    font-size: 36px;
-    font-weight: 900;
-    margin-top: 80px;
-    align-items: center;
-    margin-bottom: 5px;
-}
+    <div class="container">
+        <div class="section-header">
+            <h1>The Future</h1>
+        </div>
+    </div>
+    <section class="milestone-section">
+        <div class="content-area">
+            <h3 style="text-align: center;">Looking Forward</h3>
+            <div style="text-align: center;">
+                <p>
+                    Looking forward, I see limitless possibilities. Our mission is clear: to push boundaries, embrace
+                    emerging
+                    high-end technologies, and create solutions that empower businesses while making an impact on
+                    people's lives.
+                </p>
+                <p>
+                    At Zonixtec, every project, every innovation, and every success story is a testament to our belief
+                    that
+                    technology, when combined with passion and purpose, can truly transform the way organizations grow.
+                </p>
+            </div>
 
-.beginning-subtitle {
-    color: #d1d1d1;
-    margin-bottom: 10px;
-    font-size: 18px;
-}
+            <h2 style="text-align: center;">
+                This is more than a company. It's a journey.
+            </h2>
 
-.beginning-desc {
-    font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 18px;
-}
-.section-header {
+            <p style="text-align: center;">
+                And I'm inviting you — our clients, partners, and team members — to walk it with us.
+            </p>
+
+            </p>
+        </div>
+    </section>
+
+
+    <style>
+        /* Inner Card */
+        .beginning-container {
+            max-width: 1150px;
+            width: 90%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .beginning-title {
+            font-size: 36px;
+            font-weight: 900;
+            margin-top: 80px;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .beginning-subtitle {
+            color: #d1d1d1;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .beginning-desc {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        .section-header {
             text-align: center;
             margin-bottom: 17px;
             max-width: 800px;
@@ -1776,237 +1831,240 @@
         }
 
         /* Highlight wrapper styles are defined elsewhere */
-        
 
 
-/* Responsive */
-@media (max-width: 992px) {
-    .beginning-container {
-        flex-direction: column;
-        text-align: center;
-    }
 
-    .highlight-wrapper {
-        flex-direction: row;
-        /* margin-left:-28px ; */
-    }
-}
+        /* Responsive */
+        @media (max-width: 992px) {
+            .beginning-container {
+                flex-direction: column;
+                text-align: center;
+            }
 
-
-/* The Breakthrough Section */
-.breakthrough-section {
-    background: rgba(10, 10, 26, 0.7);
-    border-radius: 10px;
-    padding: 50px;
-    margin: 60px 0;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    position: relative;
-}
-
-.breakthrough-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 150px;
-    height: 150px;
-    background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
-    opacity: 0.1;
-}
-
-.breakthrough-title {
-    font-size: 2.2rem;
-    color: var(--secondary);
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.breakthrough-subtitle {
-    font-size: 1.2rem;
-    color: var(--gray);
-    margin-bottom: 40px;
-    text-align: center;
-    font-weight: 500;
-}
-
-.breakthrough-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-
-.breakthrough-text p {
-    color: var(--gray);
-    margin-bottom: 25px;
-    line-height: 1.8;
-    font-size: 1.1rem;
-}
-
-.breakthrough-stats {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-.breakthrough-stat {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    padding: 25px;
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-}
-
-.breakthrough-stat:hover {
-    transform: translateY(-5px);
-    border-color: var(--primary);
-    box-shadow: 0 10px 25px rgba(0, 102, 255, 0.2);
-}
-
-.breakthrough-stat-number {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: var(--secondary);
-    display: block;
-    line-height: 1;
-    margin-bottom: 10px;
-}
-
-.breakthrough-stat-label {
-    color: var(--light);
-    font-size: 1rem;
-    line-height: 1.4;
-}
-
-/* Building Our Home Section */
-.home-section {
-    background: rgba(10, 10, 26, 0.7);
-    border-radius: 10px;
-    padding: 50px;
-    margin: 60px 0;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    position: relative;
-}
-
-.home-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 150px;
-    height: 150px;
-    background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
-    opacity: 0.1;
-}
-
-.home-title {
-    font-size: 2.2rem;
-    color: var(--secondary);
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.home-subtitle {
-    font-size: 1.2rem;
-    color: var(--gray);
-    margin-bottom: 40px;
-    text-align: center;
-    font-weight: 500;
-}
-
-.home-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-
-.home-text p {
-    color: var(--gray);
-    margin-bottom: 25px;
-    line-height: 1.8;
-    font-size: 1.1rem;
-}
-
-.home-services {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-}
-
-.home-service {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    padding: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    border-left: 4px solid var(--secondary);
-}
-
-.home-service:hover {
-    background: rgba(0, 102, 255, 0.1);
-    border-color: var(--primary);
-    transform: translateY(-5px);
-}
-
-.home-service h4 {
-    color: var(--secondary);
-    margin-bottom: 8px;
-    font-size: 1.2rem;
-}
-
-.home-service p {
-    color: var(--gray);
-    font-size: 0.95rem;
-    margin: 0;
-    line-height: 1.5;
-}
-
-/* Responsive Styles */
-@media (max-width: 992px) {
-    .beginning-content,
-    .breakthrough-content,
-    .home-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .beginning-highlights,
-    .breakthrough-stats,
-    .home-services {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .beginning-section,
-    .breakthrough-section,
-    .home-section {
-        padding: 1px 1px;
-    }
-    
-    .breakthrough-stat-number {
-        font-size: 2.2rem;
-    }
-    
-    .home-service {
-        padding: 15px;
-    }
-    
-    .beginning-highlights {
-        grid-template-columns: 1fr;
-    }
-}
-@media (max-width: 576px) {
-    .beginning-title {
-        margin-top: 30px !important;
-    }
-}
-</style>
+            .highlight-wrapper {
+                flex-direction: row;
+                /* margin-left:-28px ; */
+            }
+        }
 
 
-    
+        /* The Breakthrough Section */
+        .breakthrough-section {
+            background: rgba(10, 10, 26, 0.7);
+            border-radius: 10px;
+            padding: 50px;
+            margin: 60px 0;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+        }
+
+        .breakthrough-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+            opacity: 0.1;
+        }
+
+        .breakthrough-title {
+            font-size: 2.2rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .breakthrough-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .breakthrough-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .breakthrough-text p {
+            color: var(--gray);
+            margin-bottom: 25px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .breakthrough-stats {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .breakthrough-stat {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .breakthrough-stat:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 25px rgba(0, 102, 255, 0.2);
+        }
+
+        .breakthrough-stat-number {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--secondary);
+            display: block;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .breakthrough-stat-label {
+            color: var(--light);
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        /* Building Our Home Section */
+        .home-section {
+            background: rgba(10, 10, 26, 0.7);
+            border-radius: 10px;
+            padding: 50px;
+            margin: 60px 0;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+        }
+
+        .home-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+            opacity: 0.1;
+        }
+
+        .home-title {
+            font-size: 2.2rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .home-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .home-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .home-text p {
+            color: var(--gray);
+            margin-bottom: 25px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .home-services {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .home-service {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .home-service:hover {
+            background: rgba(0, 102, 255, 0.1);
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .home-service h4 {
+            color: var(--secondary);
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        .home-service p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+
+            .beginning-content,
+            .breakthrough-content,
+            .home-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .beginning-highlights,
+            .breakthrough-stats,
+            .home-services {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .beginning-section,
+            .breakthrough-section,
+            .home-section {
+                padding: 1px 1px;
+            }
+
+            .breakthrough-stat-number {
+                font-size: 2.2rem;
+            }
+
+            .home-service {
+                padding: 15px;
+            }
+
+            .beginning-highlights {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .beginning-title {
+                margin-top: 30px !important;
+            }
+        }
+    </style>
+
+
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -2015,7 +2073,7 @@
                 <div class="footer-col">
                     <h3>Solutions</h3>
                     <div class="footer-links">
-                        
+
                         <!-- Next-Gen Tech Dropdown -->
                         <div class="footer-dropdown">
                             <div class="footer-dropdown-header">
@@ -2023,7 +2081,8 @@
                                 <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
                             </div>
                             <div class="footer-dropdown-content">
-                                <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> AI & Machine Learning</a>
+                                <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> AI & Machine
+                                    Learning</a>
                                 <a href="CloudSolutions.html"><i class="fas fa-chevron-right"></i> Cloud Solutions</a>
                             </div>
                         </div>
@@ -2036,12 +2095,16 @@
                             </div>
                             <div class="footer-dropdown-content">
                                 <a href="AIServices.html"><i class="fas fa-chevron-right"></i> AI Services Overview</a>
-                                <a href="AIStrategy.html"><i class="fas fa-chevron-right"></i> AI Strategy & Consulting</a>
+                                <a href="AIStrategy.html"><i class="fas fa-chevron-right"></i> AI Strategy &
+                                    Consulting</a>
                                 <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> Machine Learning</a>
-                                <a href="NLP.html"><i class="fas fa-chevron-right"></i> Natural Language Processing (NLP)</a>
+                                <a href="NLP.html"><i class="fas fa-chevron-right"></i> Natural Language Processing
+                                    (NLP)</a>
                                 <a href="ComputerVision.html"><i class="fas fa-chevron-right"></i> Computer Vision</a>
-                                <a href="PredictiveAnalytics.html"><i class="fas fa-chevron-right"></i> Predictive Analysis</a>
-                                <a href="ProcessAutomation.html"><i class="fas fa-chevron-right"></i> Process Automation</a>
+                                <a href="PredictiveAnalytics.html"><i class="fas fa-chevron-right"></i> Predictive
+                                    Analysis</a>
+                                <a href="ProcessAutomation.html"><i class="fas fa-chevron-right"></i> Process
+                                    Automation</a>
                             </div>
                         </div>
 
@@ -2052,8 +2115,10 @@
                                 <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
                             </div>
                             <div class="footer-dropdown-content">
-                                <a href="CustomSoftware.html"><i class="fas fa-chevron-right"></i> Custom Software Development</a>
-                                <a href="MobileDevelopment.html"><i class="fas fa-chevron-right"></i> Mobile App Development</a>
+                                <a href="CustomSoftware.html"><i class="fas fa-chevron-right"></i> Custom Software
+                                    Development</a>
+                                <a href="MobileDevelopment.html"><i class="fas fa-chevron-right"></i> Mobile App
+                                    Development</a>
                             </div>
                         </div>
 
@@ -2133,13 +2198,13 @@
 
     <script>
         // Mobile menu toggle
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
             document.querySelector('.nav-links').classList.toggle('active');
             document.querySelector('body').classList.toggle('menu-open');
         });
-        
+
         // Header scroll effect
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const header = document.getElementById('header');
             if (window.scrollY > 50) {
                 header.classList.add('scrolled');
@@ -2147,9 +2212,9 @@
                 header.classList.remove('scrolled');
             }
         });
-        
+
         // Newsletter form submission
-        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+        document.querySelector('.newsletter-form').addEventListener('submit', function (e) {
             e.preventDefault();
             const email = this.querySelector('.newsletter-input').value;
             if (email) {
@@ -2167,91 +2232,187 @@
 
 
     <!-- Booking Modal -->
-<div class="modal" id="bookingModal">
-    <div class="modal-content">
-        <button class="close-modal" onclick="closeBookingModal()">
-            <i class="fas fa-times"></i>
-        </button>
-        
-        <div class="modal-header">
-            <h2>Book Your Free 30-Minute Consultation</h2>
-            <p>Let's discuss how we can help transform your business</p>
+    <div id="bookingModal" class="booking-modal">
+        <div class="booking-modal-content">
+
+            <!-- CLOSE BUTTON -->
+            <span class="booking-modal-close" onclick="closeBookingModal()">&times;</span>
+
+            <!-- STEP PROGRESS -->
+            <div class="booking-progress-indicator">
+                <div class="booking-progress-step booking-active" id="progress1" data-step="1"></div>
+                <div class="booking-progress-line" id="line1"></div>
+                <div class="booking-progress-step" id="progress2" data-step="2"></div>
+                <div class="booking-progress-line" id="line2"></div>
+                <div class="booking-progress-step" id="progress3" data-step="3"></div>
+                <div class="booking-progress-line" id="line3"></div>
+                <div class="booking-progress-step" id="progress4" data-step="4"></div>
+            </div>
+
+            <!-- STEP 1 -->
+            <div class="booking-modal-step booking-active" id="step1">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">1</div>
+                    <h2 class="booking-step-title">Zonixtec — 30-Minute Discovery Call</h2>
+                </div>
+
+                <div class="booking-discovery-subtitle">
+                    Duration: 30 Minutes | Mode: Web Conference
+                </div>
+
+                <div class="booking-session-overview">
+                    <h4 class="booking-session-title">In this quick session, we'll cover:</h4>
+                    <div class="booking-session-items-grid">
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Introduction & Requirement Understanding</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Relevant Use Case Demo</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Technology Solutions & Offerings</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Project Roadmap & Next Steps</span>
+                        </div>
+                    </div>
+
+                    <div class="booking-discovery-goal">
+                        <strong>Goal:</strong>
+                        <p>Understand your needs and explore how Zonixtec can deliver the right tech solutions for your
+                            project.</p>
+                    </div>
+                </div>
+
+                <div class="booking-step-navigation">
+                    <div></div>
+                    <button class="booking-btn-primary" onclick="nextStep(1)">
+                        Next: Select Date <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="booking-modal-step" id="step2">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">2</div>
+                    <h2 class="booking-step-title">Select Your Preferred Date</h2>
+                </div>
+
+                <input type="text" id="dateInput" class="booking-calendar-input" placeholder="Pick a date" readonly />
+
+                <div class="booking-step-navigation">
+                    <button class="booking-btn-secondary" onclick="previousStep(2)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="booking-btn-primary" id="dateNextBtn" onclick="nextStep(2)" disabled>
+                        Next: Select Time <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="booking-modal-step" id="step3">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">3</div>
+                    <h2 class="booking-step-title">Choose Your Time Slot</h2>
+                </div>
+
+                <div class="booking-time-slots">
+                    <div class="booking-time-slot" data-time="10:30">10:30 AM</div>
+                    <div class="booking-time-slot" data-time="11:30">11:30 AM</div>
+                    <div class="booking-time-slot" data-time="12:00">12:00 PM</div>
+                    <div class="booking-time-slot" data-time="12:30">12:30 PM</div>
+                    <div class="booking-time-slot" data-time="13:00">1:00 PM</div>
+                    <div class="booking-time-slot" data-time="13:30">1:30 PM</div>
+                    <div class="booking-time-slot" data-time="14:00">2:00 PM</div>
+                    <div class="booking-time-slot" data-time="14:30">2:30 PM</div>
+                    <div class="booking-time-slot" data-time="15:00">3:00 PM</div>
+                    <div class="booking-time-slot" data-time="15:30">3:30 PM</div>
+                    <div class="booking-time-slot" data-time="16:00">4:00 PM</div>
+                    <div class="booking-time-slot" data-time="16:30">4:30 PM</div>
+                    <div class="booking-time-slot" data-time="17:00">5:00 PM</div>
+                </div>
+
+                <div class="booking-step-navigation">
+                    <button class="booking-btn-secondary" onclick="previousStep(3)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="booking-btn-primary" id="timeNextBtn" onclick="nextStep(3)" disabled>
+                        Next: Your Info <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="booking-modal-step" id="step4">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">4</div>
+                    <h2 class="booking-step-title">Your Information</h2>
+                </div>
+
+                <form class="booking-modal-form" id="bookingFormPage">
+
+                    <div class="form-group-row">
+                        <label for="bookingName">Full Name</label>
+                        <input type="text" id="bookingName" placeholder="Enter your full name" required />
+                    </div>
+                    <span class="error-text" id="nameError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingEmail">Email</label>
+                        <input type="email" id="bookingEmail" placeholder="Enter your email" required />
+                    </div>
+                    <span class="error-text" id="emailError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingPhone">Phone</label>
+                        <input type="tel" id="bookingPhone" placeholder="Enter your phone number" required />
+                    </div>
+                    <span class="error-text" id="phoneError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingCompany">Company</label>
+                        <input type="text" id="bookingCompany" placeholder="Company (optional)" />
+                    </div>
+
+                    <div class="form-group-row">
+                        <label for="bookingMessage">Message</label>
+                        <textarea id="bookingMessage" placeholder="Describe what services you need..."></textarea>
+                    </div>
+
+                    <div class="booking-step-navigation">
+                        <button type="button" class="booking-btn-secondary" onclick="previousStep(4)">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </button>
+
+                        <button type="submit" class="booking-btn-primary">
+                            <i class="fas fa-calendar-check"></i> Book My Free Consultation
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- SUCCESS -->
+            <div id="bookingSuccessPage" class="booking-success-message">
+                <i class="fas fa-check-circle"></i>
+                <h3>Your Call is Booked!</h3>
+                <p>Our team will contact you shortly. Thank you!</p>
+            </div>
+
         </div>
-
-        <form class="booking-form" id="bookingForm">
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Full Name <span>*</span></label>
-                    <input type="text" id="bookingName" placeholder="Enter your full name" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Email Address <span>*</span></label>
-                    <input type="email" id="bookingEmail" placeholder="your@email.com" required>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Phone Number <span>*</span></label>
-                    <input type="tel" id="bookingPhone" placeholder="+91 999999999" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Company Name</label>
-                    <input type="text" id="bookingCompany" placeholder="Your company (optional)">
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Preferred Date <span>*</span></label>
-                    <input type="date" id="bookingDate" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Preferred Time <span>*</span></label>
-                    <input type="time" id="bookingTime" required>
-                </div>
-            </div>
-
-            <div class="form-group-modal">
-                <label>Service Interested In <span>*</span></label>
-                <select id="bookingService" required>
-                    <option value="">Select a service</option>
-                    <option value="CRM Solutions">CRM Solutions</option>
-                    <option value="ERP Solutions">ERP Solutions</option>
-                    <option value="Billing Software">Billing Software</option>
-                    <option value="Website Development">Website Development</option>
-                    <option value="Mobile App Development">Mobile App Development</option>
-                    <option value="AI Solutions">AI Solutions</option>
-                    <option value="Cloud Solutions">Cloud Solutions</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="UI/UX Design">UI/UX Design</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-
-            <div class="form-group-modal">
-                <label>Message / Additional Details</label>
-                <textarea id="bookingMessage" placeholder="Tell us about your project or questions..."></textarea>
-            </div>
-
-            <button type="submit" class="submit-booking-btn">
-                <i class="fas fa-calendar-check"></i> Book My Call
-            </button>
-        </form>
     </div>
-</div>
-
-<!-- Success Message Overlay -->
-<div class="success-message" id="bookingSuccess">
-    <i class="fas fa-check-circle"></i> 
-    <strong>Your Call is Booked!</strong>
-    <p>Our team will connect with you as soon as possible. Thank you for choosing Zonixtec!</p>
-</div>
 
 
     <!-- Booking Modal Script -->
-    <script src="./script/booking-modal.js"></script>
+    <script src="./script/30min-booking.js"></script>
     <script src="./script/navbar.js"></script>
 
 </body>
+
 </html>
