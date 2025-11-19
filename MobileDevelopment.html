@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+
     <title>Mobile App Development - Zonixtec</title>
-    <meta name="description" content="Unlock business growth with Zonixtec's mobile app development services. We design, develop, and optimize high-performing iOS & Android apps tailored to your goals.">
+    <meta name="description"
+        content="Unlock business growth with Zonixtec's mobile app development services. We design, develop, and optimize high-performing iOS & Android apps tailored to your goals.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="./Assets/WhatsApp Image 2025-10-15 at 15.47.06.jpeg" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="./CSS/allDropdown.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="./CSS/30min-model.css">
     <style>
         :root {
             --primary: #2563eb;
@@ -48,7 +58,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: 
+            background:
                 radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.1) 0%, transparent 20%),
                 radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 20%);
             z-index: -1;
@@ -107,11 +117,11 @@
         .logo {
             font-family: 'Orbitron', sans-serif;
             font-size: 1.8rem;
-            font-weight: 700; 
+            font-weight: 700;
             color: var(--light);
             text-decoration: none;
             display: flex;
-            align-items: center;    
+            align-items: center;
         }
 
         .logo span {
@@ -185,19 +195,19 @@
             font-size: 1.5rem;
             cursor: pointer;
         }
-        
+
         /* Mobile Development Section */
         .mobile-section {
             padding: 150px 0 100px;
             position: relative;
         }
-        
+
         .mobile-hero {
             text-align: center;
             max-width: 800px;
             margin: 0 auto 80px;
         }
-        
+
         .hero-title {
             font-family: 'Orbitron', sans-serif;
             font-size: 3.5rem;
@@ -208,32 +218,32 @@
             background-clip: text;
             line-height: 1.2;
         }
-        
+
         .hero-subtitle {
             font-size: 1.2rem;
             color: var(--secondary);
             margin-bottom: 30px;
         }
-        
+
         .hero-description {
             font-size: 1.1rem;
             color: #cbd5e1;
             margin-bottom: 40px;
             line-height: 1.8;
         }
-        
+
         .mobile-content {
             display: flex;
             flex-wrap: wrap;
             gap: 50px;
             margin-bottom: 80px;
         }
-        
+
         .mobile-info {
             flex: 1;
             min-width: 300px;
         }
-        
+
         .mobile-phone-container {
             flex: 1;
             min-width: 300px;
@@ -242,7 +252,7 @@
             perspective: 1000px;
             background: transparent;
         }
-        
+
         .phone-controls {
             position: absolute;
             bottom: 20px;
@@ -252,7 +262,7 @@
             display: flex;
             gap: 10px;
         }
-        
+
         .phone-btn {
             background: rgba(199, 206, 223, 0.7);
             border: 1px solid var(--secondary);
@@ -263,18 +273,69 @@
             transition: all 0.3s ease;
             font-size: 0.9rem;
         }
-        
+
         .phone-btn:hover {
             background: var(--tech-gradient);
         }
         
+         /* Features Section */
+        .features-section {
+            margin-bottom: 60px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-item {
+            background: rgba(10, 10, 26, 0.7);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            border-color: var(--success);
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(39, 174, 96, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--success);
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .feature-content h3 {
+            color: var(--light);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-content p {
+            color: var(--gray);
+            margin: 0;
+        }
+
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-bottom: 80px;
         }
-        
+
         .feature-card {
             background: rgba(15, 23, 42, 0.6);
             border-radius: 15px;
@@ -284,7 +345,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .feature-card::before {
             content: '';
             position: absolute;
@@ -294,30 +355,30 @@
             height: 5px;
             background: var(--tech-gradient);
         }
-        
+
         .feature-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(37, 99, 235, 0.3);
         }
-        
+
         .feature-icon {
             font-size: 2.5rem;
             color: var(--secondary);
             margin-bottom: 20px;
         }
-        
+
         .feature-title {
             font-size: 1.5rem;
             margin-bottom: 15px;
             font-weight: 600;
         }
-        
+
         .feature-text {
             color: #94a3b8;
             line-height: 1.7;
         }
-        
+
         .info-display {
             background: rgba(15, 23, 42, 0.7);
             border-radius: 15px;
@@ -331,20 +392,20 @@
             flex-direction: column;
             text-align: center;
         }
-        
+
         .info-title {
             font-size: 1.8rem;
             margin-bottom: 15px;
             font-family: 'Orbitron', sans-serif;
             color: var(--secondary);
         }
-        
+
         .info-description {
             color: #cbd5e1;
             line-height: 1.7;
             max-width: 600px;
         }
-        
+
         /* Technology Stack Section */
         .tech-section {
             background: rgba(10, 10, 26, 0.7);
@@ -353,37 +414,37 @@
             margin-bottom: 60px;
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
+
         .tech-section h2 {
             text-align: center;
             color: var(--secondary);
             margin-bottom: 40px;
             font-family: 'Orbitron', sans-serif;
         }
-        
+
         .tech-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
         }
-        
+
         .tech-category {
             text-align: center;
         }
-        
+
         .tech-category h3 {
             color: var(--light);
             margin-bottom: 20px;
             font-size: 1.3rem;
             font-family: 'Orbitron', sans-serif;
         }
-        
+
         .tech-items {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-        
+
         .tech-item {
             background: rgba(255, 255, 255, 0.05);
             padding: 12px 15px;
@@ -400,7 +461,7 @@
             margin-top: 30px;
             transition: all 0.3s ease;
         }
-        
+
         .tech-item:hover {
             background: rgba(255, 255, 255, 0.08);
             color: var(--light);
@@ -408,7 +469,7 @@
         }
 
 
-          /* ===== Dropdown Styles ===== */
+        /* ===== Dropdown Styles ===== */
         .dropdown {
             position: relative;
             display: inline-block;
@@ -472,31 +533,34 @@
         } */
 
         .dropdown-scroll {
-    max-height: 300px; /* Slightly less than parent to account for padding */
-    overflow-y: auto; /* Enable vertical scrolling */
-    padding: 8px 0; /* Add padding to scroll container */
-}
+            max-height: 300px;
+            /* Slightly less than parent to account for padding */
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+            padding: 8px 0;
+            /* Add padding to scroll container */
+        }
 
-/* Custom scrollbar styling */
-.dropdown-scroll::-webkit-scrollbar {
-    width: 6px;
-}
+        /* Custom scrollbar styling */
+        .dropdown-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
 
-.dropdown-scroll::-webkit-scrollbar-track {
-    background: rgba(15, 23, 42, 0.5);
-    border-radius: 3px;
-}
+        .dropdown-scroll::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 3px;
+        }
 
-.dropdown-scroll::-webkit-scrollbar-thumb {
-    background: var(--secondary);
-    border-radius: 3px;
-}
+        .dropdown-scroll::-webkit-scrollbar-thumb {
+            background: var(--secondary);
+            border-radius: 3px;
+        }
 
-.dropdown-scroll::-webkit-scrollbar-thumb:hover {
-    background: var(--primary);
-}
+        .dropdown-scroll::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
 
-        
+
         .cta-container {
             background: var(--tech-gradient);
             border-radius: 20px;
@@ -504,20 +568,20 @@
             text-align: center;
             margin-bottom: 80px;
         }
-        
+
         .cta-title {
             font-family: 'Orbitron', sans-serif;
             font-size: 2.5rem;
             margin-bottom: 20px;
         }
-        
+
         .cta-description {
             max-width: 700px;
             margin: 0 auto 30px;
             font-size: 1.1rem;
             line-height: 1.7;
         }
-        
+
         .cta-button-large {
             background: linear-gradient(45deg, var(--primary), var(--secondary));
             color: white;
@@ -531,24 +595,24 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             display: inline-block;
         }
-        
+
         .cta-button-large:hover {
             transform: translateY(-3px);
             background: rgba(15, 23, 42, 0.9);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
         }
-        
+
         /* Service Types Section */
         .service-types {
             margin-bottom: 80px;
         }
-        
+
         .service-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
-        
+
         .service-card {
             background: rgba(15, 23, 42, 0.6);
             border-radius: 15px;
@@ -558,7 +622,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .service-card::before {
             content: '';
             position: absolute;
@@ -568,43 +632,43 @@
             height: 5px;
             background: var(--tech-gradient);
         }
-        
+
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(37, 99, 235, 0.3);
         }
-        
+
         .service-icon {
             font-size: 2.5rem;
             color: var(--secondary);
             margin-bottom: 20px;
         }
-        
+
         .service-title {
             font-size: 1.5rem;
             margin-bottom: 15px;
             font-weight: 600;
         }
-        
+
         .service-description {
             color: #94a3b8;
             line-height: 1.7;
         }
-        
+
         /* Process Section */
         /* Process Section */
         .process-section {
             margin-bottom: 60px;
         }
-        
+
         .process-steps {
             display: flex;
             justify-content: space-between;
             position: relative;
             margin-top: 50px;
         }
-        
+
         .process-steps::before {
             content: '';
             position: absolute;
@@ -615,14 +679,14 @@
             background: linear-gradient(to right, var(--primary), var(--secondary));
             z-index: 1;
         }
-        
+
         .process-step {
             text-align: center;
             position: relative;
             z-index: 2;
             flex: 1;
         }
-        
+
         .step-number {
             width: 80px;
             height: 80px;
@@ -637,55 +701,78 @@
             color: var(--dark);
             position: relative;
         }
-        
+
         .step-title {
             font-size: 1.2rem;
             color: var(--light);
             margin-bottom: 10px;
         }
-        
+
         .step-description {
             color: var(--gray);
             font-size: 0.95rem;
         }
 
         /* Challenges Section */
-        .challenges-section {
+       .challenges-section {
             margin-bottom: 80px;
         }
-        
+
+        .challenges-container {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 20px;
+            padding: 13px;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+        }
+
+        .challenges-title {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
         .challenges-list {
-            max-width: 800px;
-            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
-        
+
         .challenge-item {
-            background: rgba(15, 23, 42, 0.6);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-left: 4px solid var(--primary);
             display: flex;
-            align-items: center;
+            align-items: flex-start;
+            margin-bottom: 15px;
         }
-        
+
         .challenge-icon {
             color: #ef4444;
             margin-right: 15px;
             font-size: 1.2rem;
+            margin-top: 3px;
         }
-        
+
+        .challenge-text {
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+
+    
         /* Impact Section */
         .impact-section {
             margin-bottom: 80px;
         }
-        
+
         .impact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
-        
+
         .impact-card {
             background: rgba(15, 23, 42, 0.6);
             border-radius: 15px;
@@ -694,40 +781,40 @@
             text-align: center;
             transition: all 0.3s ease;
         }
-        
+
         .impact-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(37, 99, 235, 0.3);
         }
-        
+
         .impact-icon {
             font-size: 2.5rem;
             color: var(--success);
             margin-bottom: 20px;
         }
-        
+
         .impact-title {
             font-size: 1.3rem;
             margin-bottom: 15px;
             font-weight: 600;
         }
-        
+
         .impact-description {
             color: #94a3b8;
             line-height: 1.7;
         }
-        
+
         /* FAQ Section */
         .faq-section {
             margin-bottom: 80px;
         }
-        
+
         .faq-container {
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         .faq-item {
             background: rgba(15, 23, 42, 0.6);
             border-radius: 10px;
@@ -735,7 +822,7 @@
             overflow: hidden;
             border: 1px solid rgba(100, 116, 139, 0.2);
         }
-        
+
         .faq-question {
             padding: 20px;
             cursor: pointer;
@@ -744,11 +831,11 @@
             align-items: center;
             font-weight: 500;
         }
-        
+
         .faq-question i {
             transition: transform 0.3s ease;
         }
-        
+
         .faq-answer {
             padding: 0 20px;
             max-height: 0;
@@ -756,26 +843,26 @@
             transition: max-height 0.3s ease, padding 0.3s ease;
             color: #94a3b8;
         }
-        
+
         .faq-item.active .faq-answer {
             padding: 0 20px 20px;
             max-height: 500px;
         }
-        
+
         .faq-item.active .faq-question i {
             transform: rotate(180deg);
         }
-        
+
         /* Responsive styles */
         @media (max-width: 992px) {
             .mobile-content {
                 flex-direction: column;
             }
-            
+
             .mobile-phone-container {
                 height: 400px;
             }
-            
+
             .section-title {
                 font-size: 2rem;
             }
@@ -785,112 +872,125 @@
             .hero-title {
                 font-size: 2.8rem;
             }
-            
+
             .mobile-phone-container {
                 height: 350px;
             }
-            
+
             .nav-links {
                 display: none;
             }
-            
+
             .mobile-menu-btn {
                 display: block;
             }
         }
-        
+
         @media (max-width: 576px) {
             .hero-title {
                 font-size: 2.2rem;
             }
-            
+
             .mobile-section {
                 padding-top: 120px;
             }
-            
+
             .mobile-phone-container {
                 height: 300px;
             }
-            
+
             .mobile-phone-container {
                 height: 280px;
             }
-            
+
             .phone-controls {
                 flex-direction: column;
                 gap: 8px;
             }
         }
-        
+
         /* Fallback for mobile when WebGL isn't supported */
         .phone-fallback {
-    display: flex !important; /* Force display */
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #1e293b, #0f172a);
-    border-radius: 20px;
-    border: 2px solid var(--secondary);
-    position: relative;
-    overflow: hidden;
-}
+            display: flex !important;
+            /* Force display */
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border-radius: 20px;
+            border: 2px solid var(--secondary);
+            position: relative;
+            overflow: hidden;
+        }
 
-.phone-fallback-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    padding: 20px;
-    width: 90%;
-}
+        .phone-fallback-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 20px;
+            width: 90%;
+        }
 
-.phone-image-container {
-    width: 100%;
-    height: 200px; /* Adjust height as needed */
-    margin: 15px 0;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 2px solid rgba(6, 182, 212, 0.3);
-}
+        .phone-image-container {
+            width: 100%;
+            height: 200px;
+            /* Adjust height as needed */
+            margin: 15px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid rgba(6, 182, 212, 0.3);
+        }
 
-.phone-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
+        .phone-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
 
-.fallback-icon {
-    font-size: 2.5rem;
-    color: var(--secondary);
-    margin-bottom: 15px;
-}
+        .fallback-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
 
-.phone-fallback-content h3 {
-    color: var(--secondary);
-    margin-bottom: 10px;
-    font-family: 'Orbitron', sans-serif;
-}
+        .phone-fallback-content h3 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+            font-family: 'Orbitron', sans-serif;
+        }
 
-.phone-fallback-content p {
-    color: #cbd5e1;
-    line-height: 1.6;
-}
-        
-        
+        .phone-fallback-content p {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+
         .fallback-icon {
             font-size: 3rem;
             color: var(--secondary);
             margin-bottom: 15px;
             animation: pulse 2s infinite;
         }
-        
+
         @keyframes pulse {
-            0% { transform: scale(1); opacity: 0.7; }
-            50% { transform: scale(1.1); opacity: 1; }
-            100% { transform: scale(1); opacity: 0.7; }
+            0% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
         }
-        
+
         /* WebGL warning */
         #webgl-warning {
             display: none;
@@ -909,7 +1009,7 @@
             justify-content: center;
             align-items: center;
         }
-        
+
         .footer {
             /* background: rgba(2, 6, 23, 0.9); */
             padding: 70px 0 0;
@@ -1046,48 +1146,49 @@
             color: #ef4444;
             margin: 0 5px;
         }
-        
+
         @media (max-width: 768px) {
             .services-hero-title {
                 font-size: 2.5rem;
             }
-            
+
             .section-title {
                 font-size: 2rem;
             }
-            
+
             .stats-grid {
                 grid-template-columns: 1fr 1fr;
             }
-            
+
             .cta-section {
                 padding: 40px 20px;
             }
-            
+
             .detailed-services {
                 padding: 30px;
             }
-            
+
             .benefits-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .hero-title {
                 font-size: 2.8rem;
             }
-            
+
             .cta-container {
                 padding: 40px 20px;
             }
-            
+
             .cta-title {
                 font-size: 2rem;
             }
-            
-            .process-container, .faq-section {
+
+            .process-container,
+            .faq-section {
                 padding: 30px 20px;
             }
-            
+
             .nav-links {
                 position: fixed;
                 top: 0;
@@ -1106,47 +1207,47 @@
                 padding: 20px;
                 box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
             }
-            
+
             .nav-links.active {
                 right: 0;
             }
-            
+
             .mobile-menu-btn {
                 display: block;
                 z-index: 1001;
             }
-            
+
             .tech-cube-container {
                 height: 300px;
             }
         }
-        
+
         @media (max-width: 576px) {
             .hero-title {
                 font-size: 2.2rem;
             }
-            
+
             .process-step {
                 min-width: 100%;
             }
-            
+
             .cta-title {
                 font-size: 1.8rem;
             }
-            
+
             .software-section {
                 padding-top: 120px;
             }
-            
+
             .tech-cube-container {
                 height: 250px;
             }
-            
+
             .nav-links {
                 width: 85%;
             }
         }
-        
+
         /*  Get Start Button    */
         .cta-buttons {
             background: linear-gradient(45deg, var(--primary), var(--secondary));
@@ -1176,14 +1277,16 @@
             outline: none;
             box-shadow: 0 0 0 3px rgba(100, 149, 255, 0.4);
         }
-        
+
         @media (min-width: 768px) {
-            .footer-container { 
-                grid-template-columns: repeat(4, 1fr); 
+            .footer-container {
+                grid-template-columns: repeat(4, 1fr);
             }
-            .footer-col { 
-                padding: 18px 1px; 
+
+            .footer-col {
+                padding: 18px 1px;
             }
+
             .footer-col h3 {
                 font-family: 'Orbitron', sans-serif;
                 font-size: 1.3rem;
@@ -1201,6 +1304,7 @@
     <link rel="stylesheet" href="./CSS/navbar.css">
     <link rel="stylesheet" href="./CSS/booking-modal.css">
 </head>
+
 <body>
     <!-- Header -->
     <header id="header">
@@ -1267,8 +1371,9 @@
                         <i class="fas fa-phone-alt"></i>Book A 30 Min Call
                     </a>
                 </div>
-                
-                <button class="mobile-menu-btn" aria-label="Toggle mobile menu" onclick="window.toggleMobileMenu && window.toggleMobileMenu()">
+
+                <button class="mobile-menu-btn" aria-label="Toggle mobile menu"
+                    onclick="window.toggleMobileMenu && window.toggleMobileMenu()">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -1276,76 +1381,91 @@
             </nav>
         </div>
     </header>
-    
+
     <section class="mobile-section">
         <div class="container">
             <div class="mobile-hero">
                 <h1 class="hero-title">Transform Your Business with Mobile Innovation</h1>
-                <p class="hero-subtitle">Cutting-edge Mobile Solutions for the Modern World</p>
                 <p class="hero-description">
-                    At Zonixtec, we craft innovative mobile applications that transform user experiences. Our mobile development expertise spans iOS, Android, and cross-platform solutions designed to elevate your business to new heights.
+                    At Zonixtec, we craft innovative mobile applications that transform user experiences. Our mobile
+                    development expertise spans iOS, Android, and cross-platform solutions designed to elevate your
+                    business to new heights.
+
+                    At Zonixtec, we specialize in creating mobile apps that do more than just look
+good—they perform, engage, and deliver measurable business value. Whether you need a
+native iOS app, a powerful Android solution, or a cross-platform app, our team ensures a
+smooth user experience and cutting-edge functionality that scales with your business.
                 </p>
-                <a href="booking.html?service=mobile-development" class="cta-button-large">Start Your App Journey Today</a>
+                <a href="booking.html?service=mobile-development" class="cta-button-large">Start Your App Journey
+                    Today</a>
             </div>
-            
+
             <div class="mobile-content">
                 <div class="mobile-info">
                     <h2 class="section-title">Mobile Development Excellence</h2>
                     <p class="hero-description">
-                        We specialize in creating high-performance mobile applications that deliver exceptional user experiences. Our mobile solutions are built with cutting-edge technologies and designed for scalability, security, and seamless integration.
+                        We specialize in creating high-performance mobile applications that deliver exceptional user
+                        experiences. Our mobile solutions are built with cutting-edge technologies and designed for
+                        scalability, security, and seamless integration.
                     </p>
-                    
+
                     <div class="features-grid">
                         <div class="feature-card">
                             <div class="feature-icon">
                                 <i class="fas fa-mobile-alt"></i>
                             </div>
                             <h3 class="feature-title">Intuitive UI/UX Design</h3>
-                            <p class="feature-text">Create engaging user experiences with intuitive interfaces that keep users coming back.</p>
+                            <p class="feature-text">Create engaging user experiences with intuitive interfaces that keep
+                                users coming back.</p>
                         </div>
-                        
+
                         <div class="feature-card">
                             <div class="feature-icon">
                                 <i class="fas fa-sync-alt"></i>
                             </div>
                             <h3 class="feature-title">Native & Cross-Platform Expertise</h3>
-                            <p class="feature-text">Build apps for any platform with our expertise in native and cross-platform development.</p>
+                            <p class="feature-text">Build apps for any platform with our expertise in native and
+                                cross-platform development.</p>
                         </div>
-                        
+
                         <div class="feature-card">
                             <div class="feature-icon">
                                 <i class="fas fa-bolt"></i>
                             </div>
                             <h3 class="feature-title">Fast & Secure Performance</h3>
-                            <p class="feature-text">Deliver lightning-fast performance with enterprise-grade security measures.</p>
+                            <p class="feature-text">Deliver lightning-fast performance with enterprise-grade security
+                                measures.</p>
                         </div>
-                        
+
                         <div class="feature-card">
                             <div class="feature-icon">
                                 <i class="fas fa-plug"></i>
                             </div>
                             <h3 class="feature-title">API & Third-Party Integrations</h3>
-                            <p class="feature-text">Seamlessly integrate with existing systems and third-party services.</p>
+                            <p class="feature-text">Seamlessly integrate with existing systems and third-party services.
+                            </p>
                         </div>
-                        
+
                         <div class="feature-card">
                             <div class="feature-icon">
                                 <i class="fas fa-cloud"></i>
                             </div>
                             <h3 class="feature-title">Cloud-Ready Architecture</h3>
-                            <p class="feature-text">Build scalable applications with cloud-native architecture for future growth.</p>
+                            <p class="feature-text">Build scalable applications with cloud-native architecture for
+                                future growth.</p>
                         </div>
-                        
+
                         <div class="feature-card">
                             <div class="feature-icon">
                                 <i class="fas fa-expand-arrows-alt"></i>
                             </div>
                             <h3 class="feature-title">Scalable & Future-Proof Solutions</h3>
-                            <p class="feature-text">Create applications that grow with your business and adapt to future needs.</p>
+                            <p class="feature-text">Create applications that grow with your business and adapt to future
+                                needs.</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="mobile-phone-container">
                     <div id="webgl-warning">
                         <div class="phone-fallback">
@@ -1354,17 +1474,18 @@
                                     <i class="fas fa-mobile-alt"></i>
                                 </div>
                                 <div style="width:100%; height:100%; overflow:hidden;">
-  <img src="./uploads/Mobile App Development.jpg" alt="Not Found"
-       style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
-</div>
+                                    <img src="./uploads/Mobile App Development.jpg" alt="Not Found"
+                                        style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
+                                </div>
                                 <h3>Mobile App Development</h3>
-                                <p>Your browser doesn't support WebGL, but we're still ready to build your next mobile application!</p>
+                                <p>Your browser doesn't support WebGL, but we're still ready to build your next mobile
+                                    application!</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Service Types Section -->
             <div class="service-types">
                 <h2 class="section-title">Our Mobile Development Services</h2>
@@ -1374,90 +1495,252 @@
                             <i class="fab fa-apple"></i>
                         </div>
                         <h3 class="service-title">iOS App Development</h3>
-                        <p class="service-description">Native iOS applications built with Swift and SwiftUI, optimized for all Apple devices and following Apple's design guidelines.</p>
+ 
+                        <p class="service-description">Native iOS applications built with Swift and SwiftUI, optimized
+                            for all Apple devices and following Apple's design guidelines.</p>
+
+                        <p class="service-description">Secure, reliable, and performance-driven apps for Apple
+devices.</p>
+
                     </div>
-                    
+
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fab fa-android"></i>
                         </div>
                         <h3 class="service-title">Android App Development</h3>
-                        <p class="service-description">Native Android applications using Kotlin and Java, designed for diverse device compatibility and optimal performance.</p>
+                        <p class="service-description">Native Android applications using Kotlin and Java, designed for
+                            diverse device compatibility and optimal performance.</p>
+
+                        <p class="service-description">Scalable apps that reach millions of Android users.</p>
                     </div>
-                    
+
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-code"></i>
                         </div>
                         <h3 class="service-title">Cross-Platform Development</h3>
-                        <p class="service-description">Efficient cross-platform solutions using React Native and Flutter for consistent experiences across iOS and Android.</p>
+                        <p class="service-description">Efficient cross-platform solutions using React Native and Flutter
+                            for consistent experiences across iOS and Android.</p>
+
+                        <h3 class="service-title">Cross-Platform App Development</h3>
+                        <p class="service-description">Cost-effective apps with one codebase for
+multiple platforms.</p>
                     </div>
-                    
+
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-shopping-cart"></i>
                         </div>
                         <h3 class="service-title">E-commerce Mobile Apps</h3>
-                        <p class="service-description">Feature-rich e-commerce applications with secure payment gateways, product catalogs, and seamless shopping experiences.</p>
+                        <p class="service-description">Feature-rich e-commerce applications with secure payment
+                            gateways, product catalogs, and seamless shopping experiences.</p>
                     </div>
-                    
+
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-building"></i>
                         </div>
                         <h3 class="service-title">Enterprise Mobile Solutions</h3>
-                        <p class="service-description">Secure enterprise applications with features like encryption, biometric authentication, and compliance with industry standards.</p>
+                        <p class="service-description">Secure enterprise applications with features like encryption,
+                            biometric authentication, and compliance with industry standards.</p>
                     </div>
-                    
+
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-gamepad"></i>
                         </div>
                         <h3 class="service-title">Mobile Game Development</h3>
-                        <p class="service-description">Engaging mobile games with captivating graphics, smooth gameplay, and monetization strategies.</p>
+                        <p class="service-description">Engaging mobile games with captivating graphics, smooth gameplay,
+                            and monetization strategies.</p>
+
+                        <h3 class="service-title">Progressive Web Apps (PWAs) </h3>
+                        <p class="service-description">Lightweight apps with an app-like experience on
+browsers.</p>
                     </div>
                 </div>
             </div>
             
+
+            <!-- Features Section -->
+            <div class="features-section">
+                <h2 class="section-title">Features of Our <span>Solutions</span></h2>
+
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Intuitive UI/UX</h3>
+                            <p>Superior user experience designed to engage visitors and drive conversions.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>SEO-Optimized Structure</h3>
+                            <p>Built with search engine visibility in mind from the ground up.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Scalable Architecture</h3>
+                            <p>Future-proof solutions designed for long-term growth and expansion.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Fast-Loading Performance</h3>
+                            <p>Optimized for speed with mobile responsiveness as a core feature.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Secure Coding Practices</h3>
+                            <p>Robust security measures and data protection protocols implemented throughout.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Seamless Integration</h3>
+                            <p>Easy integration with APIs, CRMs, payment systems, and third-party services.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Process Section -->
-           <div class="process-section">
-    <h2 class="section-title">Our Development <span>Process</span></h2>
-    
-    <div class="process-steps">
-        <div class="process-step">
-            <div class="step-number">1</div>
-            <h3 class="step-title">Discovery & Research</h3>
-            <p class="step-description">Understand business goals, audience, and design preferences</p>
-        </div>
-        
-        <div class="process-step">
-            <div class="step-number">2</div>
-            <h3 class="step-title">Wireframing & UI Design</h3>
-            <p class="step-description">Create visual layouts and design prototypes</p>
-        </div>
-        
-        <div class="process-step">
-            <div class="step-number">3</div>
-            <h3 class="step-title">Development</h3>
-            <p class="step-description">Convert designs into high-performing, responsive websites</p>
-        </div>
-        
-        <div class="process-step">
-            <div class="step-number">4</div>
-            <h3 class="step-title">Testing & QA</h3>
-            <p class="step-description">Ensure flawless performance and cross-browser compatibility</p>
-        </div>
-        
-        <div class="process-step">
-            <div class="step-number">5</div>
-            <h3 class="step-title">Deployment & Maintenance</h3>
-            <p class="step-description">Launch with confidence and provide continuous improvements</p>
-        </div>
-    </div>
-</div>
-            
+            <div class="process-section">
+                <h2 class="section-title">Our Development <span>Process</span></h2>
+
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Discovery & Research</h3>
+                        <p class="step-description">Understand business goals, audience, and design preferences</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Wireframing & UI Design</h3>
+                        <p class="step-description">Create visual layouts and design prototypes</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Development</h3>
+                        <p class="step-description">Convert designs into high-performing, responsive websites</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">Testing & QA</h3>
+                        <p class="step-description">Ensure flawless performance and cross-browser compatibility</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <h3 class="step-title">Deployment & Maintenance</h3>
+                        <p class="step-description">Launch with confidence and provide continuous improvements</p>
+                    </div>
+                </div>
+            </div>
+
             <!-- Technology Stack Section -->
             <!-- Technology Stack -->
+
+            <div class="tech-section">
+                <h2>Our Technology Stack</h2>
+                <div class="tech-grid">
+                    <div class="tech-category">
+                        <h3>Native Development</h3>
+                        <div class="tech-items">
+                            <div class="tech-itemm">iOS (Swift)</div>
+                            <div class="tech-item">Android (Kotlin)</div>
+                            <div class="tech-item">Java</div>
+                            <div class="tech-item">Objective-C</div>
+                            <div class="tech-item">Xcode</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3>Cross-Platform</h3>
+                        <div class="tech-items">
+                            <div class="tech-itemm">React Native</div>
+                            <div class="tech-item">Flutter</div>
+                            <div class="tech-item">Ionic</div>
+                            <div class="tech-item">Xamarin</div>
+                            <div class="tech-item">PhoneGap</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3>Programming Languages</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">JavaScript</div>
+                            <div class="tech-item">TypeScript</div>
+                            <div class="tech-item">Dart</div>
+                            <div class="tech-item">Kotlin</div>
+                            <div class="tech-item">Swift</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3>Backend & APIs</h3>
+                        <div class="tech-items">
+                            <div class="tech-itemm">Node.js</div>
+                            <div class="tech-item">Python</div>
+                            <div class="tech-item">REST APIs</div>
+                            <div class="tech-item">GraphQL</div>
+                            <div class="tech-item">WebSocket</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3>Cloud & Databases</h3>
+                        <div class="tech-items">
+                            <div class="tech-itemm">Firebase</div>
+                            <div class="tech-item">AWS Amplify</div>
+                            <div class="tech-item">MongoDB</div>
+                            <div class="tech-item">PostgreSQL</div>
+                            <div class="tech-item">SQLite</div>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3>DevOps & Tools</h3>
+                        <div class="tech-items">
+                            <div class="tech-itemm">Docker</div>
+                            <div class="tech-item">Jenkins</div>
+                            <div class="tech-item">Fastlane</div>
+                            <div class="tech-item">Git</div>
+                            <div class="tech-item">App Store Connect</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Technology Stack -->
+
 <div class="tech-section">
     <h2>Our Technology Stack</h2>
     <div class="tech-grid">
@@ -1539,10 +1822,11 @@
                         </div>
                         <div>
                             <h3>Device Fragmentation</h3>
-                            <p>Ensuring consistent performance across thousands of different device models and screen sizes.</p>
+                            <p>Ensuring consistent performance across thousands of different device models and screen
+                                sizes.</p>
                         </div>
                     </div>
-                    
+
                     <div class="challenge-item">
                         <div class="challenge-icon">
                             <i class="fas fa-exclamation-triangle"></i>
@@ -1552,29 +1836,58 @@
                             <p>Balancing feature-rich applications with optimal performance and battery efficiency.</p>
                         </div>
                     </div>
-                    
+
                     <div class="challenge-item">
                         <div class="challenge-icon">
                             <i class="fas fa-exclamation-triangle"></i>
                         </div>
                         <div>
                             <h3>Security Concerns</h3>
-                            <p>Protecting user data and preventing vulnerabilities in an increasingly connected world.</p>
+                            <p>Protecting user data and preventing vulnerabilities in an increasingly connected world.
+                            </p>
                         </div>
                     </div>
-                    
+
                     <div class="challenge-item">
                         <div class="challenge-icon">
                             <i class="fas fa-exclamation-triangle"></i>
+                <div class="challenges-container">
+                    <h2 class="challenges-title">Challenges Without Mobile App Development</h2>
+                    <div class="challenges-list">
+                        <div class="challenge-item">
+                            <div class="challenge-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <p class="challenge-text">Losing mobile-first customers to competitors</p>
                         </div>
-                        <div>
-                            <h3>Platform Guidelines</h3>
-                            <p>Navigating the complex approval processes and guidelines of app stores.</p>
+                        <div class="challenge-item">
+                            <div class="challenge-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <p class="challenge-text">Lack of direct engagement with users.</p>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <p class="challenge-text">Difficulty in offering personalized experiences.</p>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <p class="challenge-text">Missed revenue opportunities in app-driven marketplaces.</p>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <p class="challenge-text">Poor brand visibility in the mobile ecosystem.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Impact Section -->
             <div class="impact-section">
                 <h2 class="section-title">Business Impact of Mobile Apps</h2>
@@ -1584,36 +1897,108 @@
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <h3 class="impact-title">Increased Revenue</h3>
-                        <p class="impact-description">Mobile apps can increase customer engagement and drive direct sales through in-app purchases and mobile commerce.</p>
+                        <p class="impact-description">Mobile apps can increase customer engagement and drive direct
+                            sales through in-app purchases and mobile commerce.</p>
                     </div>
-                    
+
                     <div class="impact-card">
                         <div class="impact-icon">
                             <i class="fas fa-users"></i>
                         </div>
                         <h3 class="impact-title">Enhanced Customer Engagement</h3>
-                        <p class="impact-description">Stay connected with your customers through push notifications, personalized content, and seamless experiences.</p>
+                        <p class="impact-description">Stay connected with your customers through push notifications,
+                            personalized content, and seamless experiences.</p>
                     </div>
-                    
+
                     <div class="impact-card">
                         <div class="impact-icon">
                             <i class="fas fa-bullhorn"></i>
                         </div>
                         <h3 class="impact-title">Brand Visibility</h3>
-                        <p class="impact-description">A presence on users' home screens increases brand recall and creates ongoing touchpoints with your audience.</p>
+                        <p class="impact-description">A presence on users' home screens increases brand recall and
+                            creates ongoing touchpoints with your audience.</p>
                     </div>
-                    
+
                     <div class="impact-card">
                         <div class="impact-icon">
                             <i class="fas fa-cogs"></i>
                         </div>
                         <h3 class="impact-title">Operational Efficiency</h3>
-                        <p class="impact-description">Streamline business processes, improve communication, and increase productivity with custom mobile solutions.</p>
+                        <p class="impact-description">Streamline business processes, improve communication, and increase
+                            productivity with custom mobile solutions.</p>
                     </div>
                 </div>
             </div>
-            
+
             <!-- FAQ Section -->
+            <!-- FAQ Section -->
+
+            <div class="faq-section">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How long does it take to develop a mobile app?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The timeline varies based on complexity, features, and platform. A basic app can take 2-4
+                                months, while more complex applications may require 6+ months. We provide detailed
+                                timelines after understanding your specific requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Should I choose native or cross-platform development?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Native development offers optimal performance and platform-specific features, while
+                                cross-platform solutions are more cost-effective and faster to develop. We'll help you
+                                choose the right approach based on your budget, timeline, and performance requirements.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How much does mobile app development cost?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Costs vary significantly based on features, complexity, and platforms. Basic apps start
+                                around $15,000, while enterprise solutions can range from $50,000 to $200,000+. We
+                                provide transparent pricing after a detailed requirements analysis.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you provide post-launch support?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we offer comprehensive post-launch support including bug fixes, updates for new OS
+                                versions, feature enhancements, and performance monitoring. We provide flexible support
+                                packages to meet your ongoing needs.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do you ensure app security?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We implement multiple security layers including data encryption, secure API
+                                communication, biometric authentication, code obfuscation, and regular security audits.
+                                We follow industry best practices and compliance standards for data protection.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- FAQ Section -->
 <div class="faq-section">
     <h2 class="section-title">Frequently Asked Questions</h2>
@@ -1624,37 +2009,30 @@
                 <i class="fas fa-chevron-down"></i>
             </div>
             <div class="faq-answer">
-                <p>The timeline varies based on complexity, features, and platform. A basic app can take 2-4 months, while more complex applications may require 6+ months. We provide detailed timelines after understanding your specific requirements.</p>
+                <p>It depends on the complexity and features. Simple apps may take 2-3 months, while
+feature-rich apps can take 6+ months.</p>
             </div>
         </div>
         
         <div class="faq-item">
             <div class="faq-question">
-                <span>Should I choose native or cross-platform development?</span>
+                <span>Do you build apps for both iOS and Android?</span>
                 <i class="fas fa-chevron-down"></i>
             </div>
             <div class="faq-answer">
-                <p>Native development offers optimal performance and platform-specific features, while cross-platform solutions are more cost-effective and faster to develop. We'll help you choose the right approach based on your budget, timeline, and performance requirements.</p>
+                <p>Yes, we develop native apps for iOS & Android, as well as cross-platform apps to cover both
+with a single codebase.</p>
             </div>
         </div>
         
         <div class="faq-item">
             <div class="faq-question">
-                <span>How much does mobile app development cost?</span>
+                <span>Can you help upgrade or maintain an existing app?</span>
                 <i class="fas fa-chevron-down"></i>
             </div>
             <div class="faq-answer">
-                <p>Costs vary significantly based on features, complexity, and platforms. Basic apps start around $15,000, while enterprise solutions can range from $50,000 to $200,000+. We provide transparent pricing after a detailed requirements analysis.</p>
-            </div>
-        </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>Do you provide post-launch support?</span>
-                <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-                <p>Yes, we offer comprehensive post-launch support including bug fixes, updates for new OS versions, feature enhancements, and performance monitoring. We provide flexible support packages to meet your ongoing needs.</p>
+                <p>Absolutely! We provide app modernization, upgrades, bug fixes, and ongoing maintenance
+services.</p>
             </div>
         </div>
         
@@ -1664,18 +2042,29 @@
                 <i class="fas fa-chevron-down"></i>
             </div>
             <div class="faq-answer">
-                <p>We implement multiple security layers including data encryption, secure API communication, biometric authentication, code obfuscation, and regular security audits. We follow industry best practices and compliance standards for data protection.</p>
+                <p>We follow best practices like encryption, secure authentication, API protection, and regular
+security audits.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Will you also help publish my app to the App Store/Google Play?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Yes, our team assists in end-to-end deployment, including app store compliance, submission,
+and approvals.</p>
             </div>
         </div>
     </div>
 </div>
 
-
-            
             <div class="cta-container">
                 <h2 class="cta-title">Ready for Mobile Transformation?</h2>
                 <p class="cta-description">
-                    Let's create a mobile experience that engages your users and drives business growth. Our team of mobile experts is ready to bring your vision to life.
+                    Let's create a mobile experience that engages your users and drives business growth. Our team of
+                    mobile experts is ready to bring your vision to life.
                 </p>
                 <a href="booking.html?service=mobile-development" class="cta-button-large">Start Your Mobile Project</a>
             </div>
@@ -1683,6 +2072,28 @@
     </section>
 
     <script>
+
+        // FAQ functionality with auto-collapse
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // Close all FAQ items first
+                document.querySelectorAll('.faq-item').forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+
+                // If the clicked item wasn't active, open it
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+<script>
+
     // FAQ functionality with auto-collapse
     document.querySelectorAll('.faq-question').forEach(question => {
         question.addEventListener('click', () => {
@@ -1703,113 +2114,120 @@
 </script>
     
     <footer class="footer">
-  <div class="container">
-    <div class="footer-container">
-      <!-- Solutions Section with Dropdown -->
-      <div class="footer-col">
-        <h3>Solutions</h3>
-        <div class="footer-links">
-          
-          <!-- Next-Gen Tech Dropdown -->
-          <div class="footer-dropdown">
-            <div class="footer-dropdown-header">
-              <span><i class="fas fa-chevron-right"></i> Next-Gen Tech</span>
-              <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-            </div>
-            <div class="footer-dropdown-content">
-              <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> AI & Machine Learning</a>
-              <a href="CloudSolutions.html"><i class="fas fa-chevron-right"></i> Cloud Solutions</a>
-            </div>
-          </div>
+        <div class="container">
+            <div class="footer-container">
+                <!-- Solutions Section with Dropdown -->
+                <div class="footer-col">
+                    <h3>Solutions</h3>
+                    <div class="footer-links">
 
-          <!-- AI Services Dropdown -->
-          <div class="footer-dropdown">
-            <div class="footer-dropdown-header">
-              <span><i class="fas fa-chevron-right"></i> AI Services</span>
-              <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-            </div>
-            <div class="footer-dropdown-content">
-              <a href="AIServices.html"><i class="fas fa-chevron-right"></i> AI Services Overview</a>
-              <a href="AIStrategy.html"><i class="fas fa-chevron-right"></i> AI Strategy & Consulting</a>
-              <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> Machine Learning</a>
-              <a href="NLP.html"><i class="fas fa-chevron-right"></i> Natural Language Processing (NLP)</a>
-              <a href="ComputerVision.html"><i class="fas fa-chevron-right"></i> Computer Vision</a>
-              <a href="PredictiveAnalytics.html"><i class="fas fa-chevron-right"></i> Predictive Analysis</a>
-              <a href="ProcessAutomation.html"><i class="fas fa-chevron-right"></i> Process Automation</a>
-            </div>
-          </div>
+                        <!-- Next-Gen Tech Dropdown -->
+                        <div class="footer-dropdown">
+                            <div class="footer-dropdown-header">
+                                <span><i class="fas fa-chevron-right"></i> Next-Gen Tech</span>
+                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                            </div>
+                            <div class="footer-dropdown-content">
+                                <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> AI & Machine
+                                    Learning</a>
+                                <a href="CloudSolutions.html"><i class="fas fa-chevron-right"></i> Cloud Solutions</a>
+                            </div>
+                        </div>
 
-          <!-- Core Development Dropdown -->
-          <div class="footer-dropdown">
-            <div class="footer-dropdown-header">
-              <span><i class="fas fa-chevron-right"></i> Core Development</span>
-              <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-            </div>
-            <div class="footer-dropdown-content">
-              <a href="CustomSoftware.html"><i class="fas fa-chevron-right"></i> Custom Software Development</a>
-              <a href="MobileDevelopment.html"><i class="fas fa-chevron-right"></i> Mobile App Development</a>
-            </div>
-          </div>
+                        <!-- AI Services Dropdown -->
+                        <div class="footer-dropdown">
+                            <div class="footer-dropdown-header">
+                                <span><i class="fas fa-chevron-right"></i> AI Services</span>
+                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                            </div>
+                            <div class="footer-dropdown-content">
+                                <a href="AIServices.html"><i class="fas fa-chevron-right"></i> AI Services Overview</a>
+                                <a href="AIStrategy.html"><i class="fas fa-chevron-right"></i> AI Strategy &
+                                    Consulting</a>
+                                <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> Machine Learning</a>
+                                <a href="NLP.html"><i class="fas fa-chevron-right"></i> Natural Language Processing
+                                    (NLP)</a>
+                                <a href="ComputerVision.html"><i class="fas fa-chevron-right"></i> Computer Vision</a>
+                                <a href="PredictiveAnalytics.html"><i class="fas fa-chevron-right"></i> Predictive
+                                    Analysis</a>
+                                <a href="ProcessAutomation.html"><i class="fas fa-chevron-right"></i> Process
+                                    Automation</a>
+                            </div>
+                        </div>
 
-          <!-- Design & Experience Dropdown -->
-          <div class="footer-dropdown">
-            <div class="footer-dropdown-header">
-              <span><i class="fas fa-chevron-right"></i> Design & Experience</span>
-              <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-            </div>
-            <div class="footer-dropdown-content">
-              <a href="ui.html"><i class="fas fa-chevron-right"></i> UI/UX Design</a>
-            </div>
-          </div>
-        </div>
-      </div>
+                        <!-- Core Development Dropdown -->
+                        <div class="footer-dropdown">
+                            <div class="footer-dropdown-header">
+                                <span><i class="fas fa-chevron-right"></i> Core Development</span>
+                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                            </div>
+                            <div class="footer-dropdown-content">
+                                <a href="CustomSoftware.html"><i class="fas fa-chevron-right"></i> Custom Software
+                                    Development</a>
+                                <a href="MobileDevelopment.html"><i class="fas fa-chevron-right"></i> Mobile App
+                                    Development</a>
+                            </div>
+                        </div>
 
-      <!-- Insights Section -->
-      <div class="footer-col">
-        <h3>Insights</h3>
-        <div class="footer-links">
-          <a href="CaseStudies.html"><i class="fas fa-chevron-right"></i> Case Studies</a>
-          <a href="Blogs.html"><i class="fas fa-chevron-right"></i> Blogs</a>
-          <a href="CEOdesk.html"><i class="fas fa-chevron-right"></i> From CEO's Desk</a>
-          <!-- <a href="FutureZonixtec.html"><i class="fas fa-chevron-right"></i> Future of Zonixtec</a> -->
-          <a href="FAQs.html"><i class="fas fa-chevron-right"></i> FAQs</a>
-          <a href="Guides.html"><i class="fas fa-chevron-right"></i> Guides</a>
-          <a href="HowTos.html"><i class="fas fa-chevron-right"></i> How-tos</a>
-        </div>
-      </div>
+                        <!-- Design & Experience Dropdown -->
+                        <div class="footer-dropdown">
+                            <div class="footer-dropdown-header">
+                                <span><i class="fas fa-chevron-right"></i> Design & Experience</span>
+                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                            </div>
+                            <div class="footer-dropdown-content">
+                                <a href="ui.html"><i class="fas fa-chevron-right"></i> UI/UX Design</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-      <!-- Company Section -->
-    <div class="footer-col">
-        <h3>Company</h3>
-        <div class="footer-links">
-            <a href="aboutus.html"><i class="fas fa-chevron-right"></i> About Us</a>
-            <a href="aboutus.html"><i class="fas fa-chevron-right"></i> Our Story</a>
-            <!-- <a href="aboutus.html"><i class="fas fa-chevron-right"></i> Mission & Vision</a> -->
-            <a href="aboutus.html" id="aboutLink">
-                <i class="fas fa-chevron-right"></i> Mission & Vision
-            </a>
-    
-    
-            <a href="aboutus.html" id="OurJou"><i class="fas fa-chevron-right"></i> Our Journey</a>
-            <a href="aboutus.html" id="OurCore"><i class="fas fa-chevron-right"></i> Core Values</a>
-            <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
-            <a href="Leadership.html"><i class="fas fa-chevron-right"></i> Leadership</a>
-        </div>
-    </div>
+                <!-- Insights Section -->
+                <div class="footer-col">
+                    <h3>Insights</h3>
+                    <div class="footer-links">
+                        <a href="CaseStudies.html"><i class="fas fa-chevron-right"></i> Case Studies</a>
+                        <a href="Blogs.html"><i class="fas fa-chevron-right"></i> Blogs</a>
+                        <a href="CEOdesk.html"><i class="fas fa-chevron-right"></i> From CEO's Desk</a>
+                        <!-- <a href="FutureZonixtec.html"><i class="fas fa-chevron-right"></i> Future of Zonixtec</a> -->
+                        <a href="FAQs.html"><i class="fas fa-chevron-right"></i> FAQs</a>
+                        <a href="Guides.html"><i class="fas fa-chevron-right"></i> Guides</a>
+                        <a href="HowTos.html"><i class="fas fa-chevron-right"></i> How-tos</a>
+                    </div>
+                </div>
 
-      <!-- Quick Links Section -->
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <div class="footer-links">
-          <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
-          <a href="Testimonials.html"><i class="fas fa-chevron-right"></i> Testimonials</a>
-          <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
-          <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a>
-        </div>
-      </div>
+                <!-- Company Section -->
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <div class="footer-links">
+                        <a href="aboutus.html"><i class="fas fa-chevron-right"></i> About Us</a>
+                        <a href="aboutus.html"><i class="fas fa-chevron-right"></i> Our Story</a>
+                        <!-- <a href="aboutus.html"><i class="fas fa-chevron-right"></i> Mission & Vision</a> -->
+                        <a href="aboutus.html" id="aboutLink">
+                            <i class="fas fa-chevron-right"></i> Mission & Vision
+                        </a>
 
-      <!-- Newsletter Section -->
-      <!-- <div class="footer-col">
+
+                        <a href="aboutus.html" id="OurJou"><i class="fas fa-chevron-right"></i> Our Journey</a>
+                        <a href="aboutus.html" id="OurCore"><i class="fas fa-chevron-right"></i> Core Values</a>
+                        <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
+                        <a href="Leadership.html"><i class="fas fa-chevron-right"></i> Leadership</a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
+                        <a href="Testimonials.html"><i class="fas fa-chevron-right"></i> Testimonials</a>
+                        <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
+                        <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a>
+                    </div>
+                </div>
+
+                <!-- Newsletter Section -->
+                <!-- <div class="footer-col">
         <h3>Newsletter</h3>
         <p>Subscribe to our newsletter to receive updates on our latest services, technology insights, and industry trends.</p>
         <div class="form-group" id="newsletter-group">
@@ -1820,55 +2238,59 @@
           Thank you for subscribing!
         </div>
       </div> -->
+            </div>
     </div>
 
-    <div class="footer-bottom">
-      <p>&copy; 2024 Zonixtec. All Rights Reserved. | Designed with by Zonixtec Team</p>
-    </div>
-  </div>
-</footer>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Zonixtec. All Rights Reserved. | Designed with by Zonixtec Team</p>
+            </div>
+        </div>
+    </footer>
 
 
-<style>
-.footer-dropdown-content {
-  display: none;
-  margin-left: 15px;
-}
-.footer-dropdown.open .footer-dropdown-content {
-  display: block;
-}
-.footer-dropdown-header {
-  display: flex;
-  color: var(--gray);
-  /* transform: ; */
-  justify-content: space-between;
-  cursor: pointer;
-  margin: 5px 0;
-}
-.footer-dropdown-header:hover {
-  color: var(--secondary);
-}
-</style>
+    <style>
+        .footer-dropdown-content {
+            display: none;
+            margin-left: 15px;
+        }
 
-<script>
-document.querySelectorAll('.footer-dropdown-header').forEach(header => {
-  header.addEventListener('click', () => {
-    const parent = header.parentElement;
-    parent.classList.toggle('open');
-  });
-});
-</script>
+        .footer-dropdown.open .footer-dropdown-content {
+            display: block;
+        }
 
-    
+        .footer-dropdown-header {
+            display: flex;
+            color: var(--gray);
+            /* transform: ; */
+            justify-content: space-between;
+            cursor: pointer;
+            margin: 5px 0;
+        }
+
+        .footer-dropdown-header:hover {
+            color: var(--secondary);
+        }
+    </style>
+
+    <script>
+        document.querySelectorAll('.footer-dropdown-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const parent = header.parentElement;
+                parent.classList.toggle('open');
+            });
+        });
+    </script>
+
+
     <script>
         // Mobile menu functionality
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
         const menuIcon = mobileMenuBtn.querySelector('i');
-        
-        mobileMenuBtn.addEventListener('click', function() {
+
+        mobileMenuBtn.addEventListener('click', function () {
             navLinks.classList.toggle('active');
-            
+
             // Toggle menu icon between bars and times
             if (navLinks.classList.contains('active')) {
                 menuIcon.classList.remove('fa-bars');
@@ -1878,19 +2300,20 @@ document.querySelectorAll('.footer-dropdown-header').forEach(header => {
                 menuIcon.classList.add('fa-bars');
             }
         });
-        
+
         // Close menu when clicking outside of it
         // document.addEventListener('click', function(event) {
         //     const isClickInsideNav = navLinks.contains(event.target);
         //     const isClickOnMenuBtn = mobileMenuBtn.contains(event.target);
-            
+        
+
         //     if (navLinks.classList.contains('active') && !isClickInsideNav && !isClickOnMenuBtn) {
         //         navLinks.classList.remove('active');
         //         menuIcon.classList.remove('fa-times');
         //         menuIcon.classList.add('fa-bars');
         //     }
         // });
-        
+
         // Close menu when clicking on a link
         // document.querySelectorAll('.nav-links a').forEach(link => {
         //     link.addEventListener('click', () => {
@@ -1899,15 +2322,14 @@ document.querySelectorAll('.footer-dropdown-header').forEach(header => {
         //         menuIcon.classList.add('fa-bars');
         //     });
         // });
-    
-        
+
         // Newsletter functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const btn = document.getElementById('newsletter-btn');
             const emailInput = document.getElementById('newsletter-email');
             const thankyou = document.getElementById('newsletter-thankyou');
-            btn.addEventListener('click', function() {
-                if(emailInput.value && /\S+@\S+\.\S+/.test(emailInput.value)) {
+            btn.addEventListener('click', function () {
+                if (emailInput.value && /\S+@\S+\.\S+/.test(emailInput.value)) {
                     thankyou.style.display = 'block';
                     setTimeout(() => { thankyou.style.display = 'none'; }, 3000);
                     emailInput.value = '';
@@ -1918,12 +2340,12 @@ document.querySelectorAll('.footer-dropdown-header').forEach(header => {
                 }
             });
         });
-    
+
         // WebGL support detection
         function isWebGLAvailable() {
             try {
                 const canvas = document.createElement('canvas');
-                return !!(window.WebGLRenderingContext && 
+                return !!(window.WebGLRenderingContext &&
                     (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')));
             } catch (e) {
                 return false;
@@ -1938,92 +2360,198 @@ document.querySelectorAll('.footer-dropdown-header').forEach(header => {
     <script src="./script/chatbot.js"></script>
 
 
-    <!-- Booking Modal -->
-<div class="modal" id="bookingModal">
-    <div class="modal-content">
-        <button class="close-modal" onclick="closeBookingModal()">
-            <i class="fas fa-times"></i>
-        </button>
-        
-        <div class="modal-header">
-            <h2>Book Your Free 30-Minute Consultation</h2>
-            <p>Let's discuss how we can help transform your business</p>
+
+    <!--open booking 30 min call modal -->
+
+    <div id="bookingModal" class="booking-modal">
+        <div class="booking-modal-content">
+
+            <!-- CLOSE BUTTON -->
+            <span class="booking-modal-close" onclick="closeBookingModal()">&times;</span>
+
+            <!-- STEP PROGRESS -->
+            <div class="booking-progress-indicator">
+                <div class="booking-progress-step booking-active" id="progress1" data-step="1"></div>
+                <div class="booking-progress-line" id="line1"></div>
+                <div class="booking-progress-step" id="progress2" data-step="2"></div>
+                <div class="booking-progress-line" id="line2"></div>
+                <div class="booking-progress-step" id="progress3" data-step="3"></div>
+                <div class="booking-progress-line" id="line3"></div>
+                <div class="booking-progress-step" id="progress4" data-step="4"></div>
+            </div>
+
+            <!-- STEP 1 -->
+            <div class="booking-modal-step booking-active" id="step1">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">1</div>
+                    <h2 class="booking-step-title">Zonixtec — 30-Minute Discovery Call</h2>
+                </div>
+
+                <div class="booking-discovery-subtitle">
+                    Duration: 30 Minutes | Mode: Web Conference
+                </div>
+
+                <div class="booking-session-overview">
+                    <h4 class="booking-session-title">In this quick session, we'll cover:</h4>
+                    <div class="booking-session-items-grid">
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Introduction & Requirement Understanding</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Relevant Use Case Demo</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Technology Solutions & Offerings</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Project Roadmap & Next Steps</span>
+                        </div>
+                    </div>
+
+                    <div class="booking-discovery-goal">
+                        <strong>Goal:</strong>
+                        <p>Understand your needs and explore how Zonixtec can deliver the right tech solutions for your
+                            project.</p>
+                    </div>
+                </div>
+
+                <div class="booking-step-navigation">
+                    <div></div>
+                    <button class="booking-btn-primary" onclick="nextStep(1)">
+                        Next: Select Date <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="booking-modal-step" id="step2">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">2</div>
+                    <h2 class="booking-step-title">Select Your Preferred Date</h2>
+                </div>
+
+                <input type="text" id="dateInput" class="booking-calendar-input" placeholder="Pick a date" readonly />
+
+                <div class="booking-step-navigation">
+                    <button class="booking-btn-secondary" onclick="previousStep(2)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="booking-btn-primary" id="dateNextBtn" onclick="nextStep(2)" disabled>
+                        Next: Select Time <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="booking-modal-step" id="step3">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">3</div>
+                    <h2 class="booking-step-title">Choose Your Time Slot</h2>
+                </div>
+
+                <div class="booking-time-slots">
+                    <div class="booking-time-slot" data-time="10:30">10:30 AM</div>
+                    <div class="booking-time-slot" data-time="11:30">11:30 AM</div>
+                    <div class="booking-time-slot" data-time="12:00">12:00 PM</div>
+                    <div class="booking-time-slot" data-time="12:30">12:30 PM</div>
+                    <div class="booking-time-slot" data-time="13:00">1:00 PM</div>
+                    <div class="booking-time-slot" data-time="13:30">1:30 PM</div>
+                    <div class="booking-time-slot" data-time="14:00">2:00 PM</div>
+                    <div class="booking-time-slot" data-time="14:30">2:30 PM</div>
+                    <div class="booking-time-slot" data-time="15:00">3:00 PM</div>
+                    <div class="booking-time-slot" data-time="15:30">3:30 PM</div>
+                    <div class="booking-time-slot" data-time="16:00">4:00 PM</div>
+                    <div class="booking-time-slot" data-time="16:30">4:30 PM</div>
+                    <div class="booking-time-slot" data-time="17:00">5:00 PM</div>
+                </div>
+
+                <div class="booking-step-navigation">
+                    <button class="booking-btn-secondary" onclick="previousStep(3)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="booking-btn-primary" id="timeNextBtn" onclick="nextStep(3)" disabled>
+                        Next: Your Info <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="booking-modal-step" id="step4">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">4</div>
+                    <h2 class="booking-step-title">Your Information</h2>
+                </div>
+
+                <form class="booking-modal-form" id="bookingFormPage">
+
+                    <div class="form-group-row">
+                        <label for="bookingName">Full Name</label>
+                        <input type="text" id="bookingName" placeholder="Enter your full name" required />
+                    </div>
+                    <span class="error-text" id="nameError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingEmail">Email</label>
+                        <input type="email" id="bookingEmail" placeholder="Enter your email" required />
+                    </div>
+                    <span class="error-text" id="emailError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingPhone">Phone</label>
+                        <input type="tel" id="bookingPhone" placeholder="Enter your phone number" required />
+                    </div>
+                    <span class="error-text" id="phoneError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingCompany">Company</label>
+                        <input type="text" id="bookingCompany" placeholder="Company (optional)" />
+                    </div>
+
+                    <div class="form-group-row">
+                        <label for="bookingMessage">Message</label>
+                        <textarea id="bookingMessage" placeholder="Describe what services you need..."></textarea>
+                    </div>
+
+                    <div class="booking-step-navigation">
+                        <button type="button" class="booking-btn-secondary" onclick="previousStep(4)">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </button>
+
+                        <button type="submit" class="booking-btn-primary">
+                            <i class="fas fa-calendar-check"></i> Book My Free Consultation
+                        </button>
+                    </div>
+
+                </form>
+
+
+
+            </div>
+
+            <!-- SUCCESS -->
+            <div id="bookingSuccessPage" class="booking-success-message">
+                <i class="fas fa-check-circle"></i>
+                <h3>Your Call is Booked!</h3>
+                <p>Our team will contact you shortly. Thank you!</p>
+            </div>
+
         </div>
-
-        <form class="booking-form" id="bookingForm">
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Full Name <span>*</span></label>
-                    <input type="text" id="bookingName" placeholder="Enter your full name" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Email Address <span>*</span></label>
-                    <input type="email" id="bookingEmail" placeholder="your@email.com" required>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Phone Number <span>*</span></label>
-                    <input type="tel" id="bookingPhone" placeholder="+91 999999999" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Company Name</label>
-                    <input type="text" id="bookingCompany" placeholder="Your company (optional)">
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Preferred Date <span>*</span></label>
-                    <input type="date" id="bookingDate" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Preferred Time <span>*</span></label>
-                    <input type="time" id="bookingTime" required>
-                </div>
-            </div>
-
-            <div class="form-group-modal">
-                <label>Service Interested In <span>*</span></label>
-                <select id="bookingService" required>
-                    <option value="">Select a service</option>
-                    <option value="CRM Solutions">CRM Solutions</option>
-                    <option value="ERP Solutions">ERP Solutions</option>
-                    <option value="Billing Software">Billing Software</option>
-                    <option value="Website Development">Website Development</option>
-                    <option value="Mobile App Development">Mobile App Development</option>
-                    <option value="AI Solutions">AI Solutions</option>
-                    <option value="Cloud Solutions">Cloud Solutions</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="UI/UX Design">UI/UX Design</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-
-            <div class="form-group-modal">
-                <label>Message / Additional Details</label>
-                <textarea id="bookingMessage" placeholder="Tell us about your project or questions..."></textarea>
-            </div>
-
-            <button type="submit" class="submit-booking-btn">
-                <i class="fas fa-calendar-check"></i> Book My Call
-            </button>
-        </form>
     </div>
-</div>
 
-<!-- Success Message Overlay -->
-<div class="success-message" id="bookingSuccess">
-    <i class="fas fa-check-circle"></i> 
-    <strong>Your Call is Booked!</strong>
-    <p>Our team will connect with you as soon as possible. Thank you for choosing Zonixtec!</p>
-</div>
+
 
 
     <!-- Booking Modal Script -->
     <script src="./script/booking-modal.js"></script>
+    <script src="./script/navbar.js"></script>
+    <script src="./script/30min-booking.js"></script>
+
     <script src="./script/allabout.js"></script>
 
 </body>
+
 </html>

@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Marketing Services | Zonixtec</title>
+
+    <meta name="description"
+        content="Boost your brand's online presence with Zonixtec's Digital Marketing Services—SEO, social media marketing, PPC campaigns, content strategy, and analytics that drive visibility, engagement, and conversions.">
+
     <link rel="stylesheet" href="./CSS/allDropdown.css">
     <meta name="description" content="Boost your brand's online presence with Zonixtec's Digital Marketing Services—SEO, social media marketing, PPC campaigns, content strategy, and analytics that drive visibility, engagement, and conversions.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,7 +17,9 @@
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="./CSS/30min-model.css">
     <style>
         :root {
             --primary: #2563eb;
@@ -470,18 +476,18 @@
             line-height: 1.7;
         }
 
-         /* Process Section */
+        /* Process Section */
         .process-section {
             margin: 80px 0;
         }
-        
+
         .process-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 30px;
         }
-        
+
         .process-step {
             background: rgba(15, 23, 42, 0.6);
             border-radius: 15px;
@@ -492,13 +498,13 @@
             transition: all 0.3s ease;
             position: relative;
         }
-        
+
         .process-step:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(37, 99, 235, 0.3);
         }
-        
+
         .step-number {
             width: 50px;
             height: 50px;
@@ -512,13 +518,13 @@
             font-size: 1.2rem;
             font-weight: 700;
         }
-        
+
         .step-title {
             font-size: 1.3rem;
             margin-bottom: 15px;
             font-weight: 600;
         }
-        
+
         .step-description {
             color: #94a3b8;
             line-height: 1.7;
@@ -533,37 +539,37 @@
             margin-bottom: 60px;
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
+
         .tech-section h2 {
             text-align: center;
             color: var(--secondary);
             margin-bottom: 40px;
             font-family: 'Orbitron', sans-serif;
         }
-        
+
         .tech-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
         }
-        
+
         .tech-category {
             text-align: center;
         }
-        
+
         .tech-category h3 {
             color: var(--light);
             margin-bottom: 20px;
             font-size: 1.3rem;
             font-family: 'Orbitron', sans-serif;
         }
-        
+
         .tech-items {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-        
+
         .tech-item {
             background: rgba(255, 255, 255, 0.05);
             padding: 12px 15px;
@@ -571,7 +577,6 @@
             color: var(--gray);
             transition: all 0.3s ease;
         }
-        
         .tech-itemm {
             background: rgba(255, 255, 255, 0.05);
             padding: 12px 15px;
@@ -1246,8 +1251,9 @@
                         <i class="fas fa-phone-alt"></i>Book A 30 Min Call
                     </a>
                 </div>
-                
-                <button class="mobile-menu-btn" aria-label="Toggle mobile menu" onclick="window.toggleMobileMenu && window.toggleMobileMenu()">
+
+                <button class="mobile-menu-btn" aria-label="Toggle mobile menu"
+                    onclick="window.toggleMobileMenu && window.toggleMobileMenu()">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -1261,8 +1267,16 @@
             <div class="container">
                 <div class="digital-marketing-hero">
                     <h1 class="hero-title">Digital Marketing Services</h1>
+
                     <h2 class="hero-subtitle">Transform Clicks into Customers</h2>
-                    <p class="hero-description">At Zonixtec, we help businesses thrive in the digital landscape with data-driven Digital Marketing solutions that attract, engage, and convert audiences. From search engine optimization to paid campaigns and social media strategy, our services are designed to deliver measurable growth and brand visibility.</p>
+                    <p class="hero-description">At Zonixtec, we help businesses thrive in the digital landscape with
+                        data-driven Digital Marketing solutions that attract, engage, and convert audiences. From search
+                        engine optimization to paid campaigns and social media strategy, our services are designed to
+                        deliver measurable growth and brand visibility.</p>
+                    <a href="booking.html?service=digital-marketing" class="cta-button">Let's Grow Your Digital
+                        Presence</a>
+
+                    <p class="hero-description">At Zonixtec, we help businesses thrive in the digital landscape with data-driven Digital Marketing solutions that attract, engage, and convert audiences. <br>From search engine optimization to paid campaigns and social media strategy, our services are designed to deliver measurable growth and brand visibility.</p>
                     <a href="booking.html?service=digital-marketing" class="cta-button">Let's Grow Your Digital Presence</a>
                 </div>
 
@@ -1274,7 +1288,8 @@
                                 <i class="fas fa-search"></i>
                             </div>
                             <h3 class="service-type-title">Search Engine Optimization (SEO)</h3>
-                            <p class="service-type-text">Enhance your website's visibility and rank higher on Google with on-page and off-page optimization strategies.</p>
+                            <p class="service-type-text">Enhance your website's visibility and rank higher on Google
+                                with on-page and off-page optimization strategies.</p>
                         </div>
 
                         <div class="service-type-card">
@@ -1282,7 +1297,8 @@
                                 <i class="fas fa-hashtag"></i>
                             </div>
                             <h3 class="service-type-title">Social Media Marketing (SMM)</h3>
-                            <p class="service-type-text">Build brand awareness, engage audiences, and generate leads across platforms like LinkedIn, Instagram, Facebook, and X (Twitter).</p>
+                            <p class="service-type-text">Build brand awareness, engage audiences, and generate leads
+                                across platforms like LinkedIn, Instagram, Facebook, and X (Twitter).</p>
                         </div>
 
                         <div class="service-type-card">
@@ -1290,7 +1306,8 @@
                                 <i class="fas fa-ad"></i>
                             </div>
                             <h3 class="service-type-title">Pay-Per-Click (PPC) Advertising</h3>
-                            <p class="service-type-text">Drive instant traffic and ROI with targeted ads on Google, Meta, and other ad networks.</p>
+                            <p class="service-type-text">Drive instant traffic and ROI with targeted ads on Google,
+                                Meta, and other ad networks.</p>
                         </div>
 
                         <div class="service-type-card">
@@ -1298,7 +1315,8 @@
                                 <i class="fas fa-pen-fancy"></i>
                             </div>
                             <h3 class="service-type-title">Content Marketing</h3>
-                            <p class="service-type-text">Create impactful blogs, videos, and campaigns that connect emotionally and educate audiences.</p>
+                            <p class="service-type-text">Create impactful blogs, videos, and campaigns that connect
+                                emotionally and educate audiences.</p>
                         </div>
 
                         <div class="service-type-card">
@@ -1306,7 +1324,8 @@
                                 <i class="fas fa-envelope-open-text"></i>
                             </div>
                             <h3 class="service-type-title">Email Marketing & Automation</h3>
-                            <p class="service-type-text">Nurture leads and retain customers with personalized, automated email campaigns.</p>
+                            <p class="service-type-text">Nurture leads and retain customers with personalized, automated
+                                email campaigns.</p>
                         </div>
 
                         <div class="service-type-card">
@@ -1314,19 +1333,21 @@
                                 <i class="fas fa-chart-bar"></i>
                             </div>
                             <h3 class="service-type-title">Analytics & Reporting</h3>
-                            <p class="service-type-text">Track performance with real-time dashboards and actionable insights to optimize campaigns.</p>
+                            <p class="service-type-text">Track performance with real-time dashboards and actionable
+                                insights to optimize campaigns.</p>
                         </div>
                     </div>
                 </div>
 
-                                <h2 class="section-title">Features of Our Digital Marketing Solutions</h2>
+                <h2 class="section-title">Features of Our Digital Marketing Solutions</h2>
                 <div class="benefits-grid">
                     <div class="benefit-card">
                         <div class="benefit-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <h3 class="benefit-title">Data-Driven Campaign Planning</h3>
-                        <p class="benefit-text">Data-driven campaign planning and optimization to maximize your marketing ROI and performance.</p>
+                        <p class="benefit-text">Data-driven campaign planning and optimization to maximize your
+                            marketing ROI and performance.</p>
                     </div>
 
                     <div class="benefit-card">
@@ -1334,7 +1355,8 @@
                             <i class="fas fa-search"></i>
                         </div>
                         <h3 class="benefit-title">Advanced SEO Strategy</h3>
-                        <p class="benefit-text">Advanced keyword research and SEO strategy to improve your search engine rankings and visibility.</p>
+                        <p class="benefit-text">Advanced keyword research and SEO strategy to improve your search engine
+                            rankings and visibility.</p>
                     </div>
 
                     <div class="benefit-card">
@@ -1342,7 +1364,8 @@
                             <i class="fas fa-users"></i>
                         </div>
                         <h3 class="benefit-title">Targeted Audience Segmentation</h3>
-                        <p class="benefit-text">Targeted audience segmentation and retargeting to reach the right customers at the right time.</p>
+                        <p class="benefit-text">Targeted audience segmentation and retargeting to reach the right
+                            customers at the right time.</p>
                     </div>
 
                     <div class="benefit-card">
@@ -1350,7 +1373,8 @@
                             <i class="fas fa-robot"></i>
                         </div>
                         <h3 class="benefit-title">AI-Powered Analytics</h3>
-                        <p class="benefit-text">AI-based performance analytics and automation for smarter marketing decisions and optimization.</p>
+                        <p class="benefit-text">AI-based performance analytics and automation for smarter marketing
+                            decisions and optimization.</p>
                     </div>
 
                     <div class="benefit-card">
@@ -1358,7 +1382,8 @@
                             <i class="fas fa-sync-alt"></i>
                         </div>
                         <h3 class="benefit-title">Multi-Channel Integration</h3>
-                        <p class="benefit-text">Multi-channel campaign integration (Search, Social, Email) for cohesive brand messaging across platforms.</p>
+                        <p class="benefit-text">Multi-channel campaign integration (Search, Social, Email) for cohesive
+                            brand messaging across platforms.</p>
                     </div>
 
                     <div class="benefit-card">
@@ -1366,7 +1391,8 @@
                             <i class="fas fa-paint-brush"></i>
                         </div>
                         <h3 class="benefit-title">Conversion-Focused Content</h3>
-                        <p class="benefit-text">Creative and conversion-focused content creation that engages audiences and drives results.</p>
+                        <p class="benefit-text">Creative and conversion-focused content creation that engages audiences
+                            and drives results.</p>
                     </div>
                 </div>
 
@@ -1445,6 +1471,8 @@
                         </div>
                     </div>
                 </div>
+
+
 
                 
         <div class="container">
@@ -1555,120 +1583,241 @@
     </div>
 </div>
 
-                <div class="impact-section">
-                    <div class="impact-container">
-                        <h2 class="impact-title">The Impact of Digital Marketing on Your Business</h2>
-                        <div class="impact-list">
-                            <div class="impact-item">
-                                <div class="impact-icon">
-                                    <i class="fas fa-chart-line"></i>
-                                </div>
-                                <p class="impact-text">10x increase in brand visibility across digital channels</p>
-                            </div>
-                            <div class="impact-item">
-                                <div class="impact-icon">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <p class="impact-text">Improved website traffic and lead conversion rates</p>
-                            </div>
-                            <div class="impact-item">
-                                <div class="impact-icon">
-                                    <i class="fas fa-dollar-sign"></i>
-                                </div>
-                                <p class="impact-text">Better ROI through data-driven advertising</p>
-                            </div>
-                            <div class="impact-item">
-                                <div class="impact-icon">
-                                    <i class="fas fa-heart"></i>
-                                </div>
-                                <p class="impact-text">Enhanced customer engagement and loyalty</p>
-                            </div>
-                            <div class="impact-item">
-                                <div class="impact-icon">
-                                    <i class="fas fa-rocket"></i>
-                                </div>
-                                <p class="impact-text">Consistent online growth and brand reputation</p>
-                            </div>
+
+                <div class="container">
+                    <h2 class="section-title">How We'll Do It</h2>
+                    <div class="process-container">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <h3 class="step-title">Market Research & Strategy</h3>
+                            <p class="step-description">Identify audience behavior, competitors, and marketing goals.
+                            </p>
                         </div>
+
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <h3 class="step-title">Campaign Planning</h3>
+                            <p class="step-description">Design SEO, social media, and ad strategies aligned with your
+                                objectives.</p>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <h3 class="step-title">Content Creation & Optimization</h3>
+                            <p class="step-description">Develop engaging, keyword-rich content for all digital channels.
+                            </p>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <h3 class="step-title">Execution & Monitoring</h3>
+                            <p class="step-description">Launch campaigns and track results in real time.</p>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="step-number">5</div>
+                            <h3 class="step-title">Reporting & Optimization</h3>
+                            <p class="step-description">Analyze performance and continuously refine strategies for
+                                better ROI.</p>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+        <!-- Technology Stack -->
+        <div class="tech-section">
+            <h2>Our Technology Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <h3>SEO & Analytics</h3>
+                    <div class="tech-items">
+                        <div class="tech-itemm">Google Search Console</div>
+                        <div class="tech-item">Ahrefs</div>
+                        <div class="tech-item">SEMrush</div>
+                        <div class="tech-item">Google Analytics</div>
+                        <div class="tech-item">Google Tag Manager</div>
                     </div>
                 </div>
 
-                <div class="cta-container">
-                    <h2 class="cta-title">Ready to Transform Your Digital Presence?</h2>
-                    <p class="cta-description">Let's discuss how our digital marketing solutions can drive growth and visibility for your business. Our team of experts is ready to help you attract, engage, and convert your target audience.</p>
-                    <a href="booking.html?service=digital-marketing" class="cta-button-large">Start Your Digital Marketing Journey</a>
-                </div>
-
-                <div class="faq-section">
-                    <h2 class="faq-title">Frequently Asked Questions</h2>
-                    <div class="faq-container">
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                What is Digital Marketing, and why is it important?
-                                <span class="faq-toggle fas fa-chevron-down"></span>
-                            </div>
-                            <p class="faq-answer" style="display:none;">Digital Marketing uses online strategies—SEO, social media, ads, and content—to grow brand awareness, attract leads, and increase sales.</p>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                How long does it take to see results?
-                                <span class="faq-toggle fas fa-chevron-down"></span>
-                            </div>
-                            <p class="faq-answer" style="display:none;">Organic strategies like SEO take 3–6 months, while PPC and social campaigns deliver faster, measurable results.</p>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                Do you handle both B2B and B2C marketing?
-                                <span class="faq-toggle fas fa-chevron-down"></span>
-                            </div>
-                            <p class="faq-answer" style="display:none;">Yes! We tailor strategies for both business types—ensuring the right approach for your target audience.</p>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                Can you manage our social media accounts?
-                                <span class="faq-toggle fas fa-chevron-down"></span>
-                            </div>
-                            <p class="faq-answer" style="display:none;">Absolutely. Our social media team handles everything from content creation to community management.</p>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                How do you measure campaign success?
-                                <span class="faq-toggle fas fa-chevron-down"></span>
-                            </div>
-                            <p class="faq-answer" style="display:none;">We track KPIs such as traffic, conversion rates, engagement, and ROI through analytics dashboards and monthly reports.</p>
-                        </div>
+                <div class="tech-category">
+                    <h3>User Behavior & Testing</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">Hotjar</div>
+                        <div class="tech-item">Crazy Egg</div>
+                        <div class="tech-item">Optimizely</div>
+                        <div class="tech-item">Google Optimize</div>
+                        <div class="tech-item">Mouseflow</div>
                     </div>
                 </div>
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        const faqItems = document.querySelectorAll('.faq-item');
-                        faqItems.forEach(item => {
-                            const question = item.querySelector('.faq-question');
-                            const answer = item.querySelector('.faq-answer');
-                            question.addEventListener('click', () => {
-                                const isActive = item.classList.contains('active');
-                                // Hide all answers
-                                faqItems.forEach(i => {
-                                    i.classList.remove('active');
-                                    i.querySelector('.faq-answer').style.display = 'none';
-                                });
-                                // Toggle current
-                                if (!isActive) {
-                                    item.classList.add('active');
-                                    answer.style.display = 'block';
-                                } else {
-                                    item.classList.remove('active');
-                                    answer.style.display = 'none';
-                                }
-                            });
-                        });
-                    });
-                </script>
+
+                <div class="tech-category">
+                    <h3>Marketing Automation</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">HubSpot</div>
+                        <div class="tech-item">Mailchimp</div>
+                        <div class="tech-item">ActiveCampaign</div>
+                        <div class="tech-item">Marketo</div>
+                        <div class="tech-item">Pardot</div>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>Social Media & Ads</h3>
+                    <div class="tech-items">
+                        <div class="tech-itemm">Meta Business Suite</div>
+                        <div class="tech-item">Hootsuite</div>
+                        <div class="tech-item">Buffer</div>
+                        <div class="tech-item">Google Ads</div>
+                        <div class="tech-item">LinkedIn Ads</div>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>Integration & Automation</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">Zapier</div>
+                        <div class="tech-item">Make (Integromat)</div>
+                        <div class="tech-item">API Integrations</div>
+                        <div class="tech-item">Webhooks</div>
+                        <div class="tech-item">Custom Scripts</div>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3>Content & Design</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">Canva</div>
+                        <div class="tech-item">Adobe Creative Suite</div>
+                        <div class="tech-item">Figma</div>
+                        <div class="tech-item">WordPress</div>
+                        <div class="tech-item">Shopify</div>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <div class="impact-section">
+            <div class="impact-container">
+                <h2 class="impact-title">The Impact of Digital Marketing on Your Business</h2>
+                <div class="impact-list">
+                    <div class="impact-item">
+                        <div class="impact-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <p class="impact-text">10x increase in brand visibility across digital channels</p>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <p class="impact-text">Improved website traffic and lead conversion rates</p>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <p class="impact-text">Better ROI through data-driven advertising</p>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="impact-text">Enhanced customer engagement and loyalty</p>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <p class="impact-text">Consistent online growth and brand reputation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-container">
+            <h2 class="cta-title">Ready to Transform Your Digital Presence?</h2>
+            <p class="cta-description">Let's discuss how our digital marketing solutions can drive growth and visibility
+                for your business. Our team of experts is ready to help you attract, engage, and convert your target
+                audience.</p>
+            <a href="booking.html?service=digital-marketing" class="cta-button-large">Start Your Digital Marketing
+                Journey</a>
+        </div>
+
+        <div class="faq-section">
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is Digital Marketing, and why is it important?
+                        <span class="faq-toggle fas fa-chevron-down"></span>
+                    </div>
+                    <p class="faq-answer" style="display:none;">Digital Marketing uses online strategies—SEO, social
+                        media, ads, and content—to grow brand awareness, attract leads, and increase sales.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How long does it take to see results?
+                        <span class="faq-toggle fas fa-chevron-down"></span>
+                    </div>
+                    <p class="faq-answer" style="display:none;">Organic strategies like SEO take 3–6 months, while PPC
+                        and social campaigns deliver faster, measurable results.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do you handle both B2B and B2C marketing?
+                        <span class="faq-toggle fas fa-chevron-down"></span>
+                    </div>
+                    <p class="faq-answer" style="display:none;">Yes! We tailor strategies for both business
+                        types—ensuring the right approach for your target audience.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can you manage our social media accounts?
+                        <span class="faq-toggle fas fa-chevron-down"></span>
+                    </div>
+                    <p class="faq-answer" style="display:none;">Absolutely. Our social media team handles everything
+                        from content creation to community management.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do you measure campaign success?
+                        <span class="faq-toggle fas fa-chevron-down"></span>
+                    </div>
+                    <p class="faq-answer" style="display:none;">We track KPIs such as traffic, conversion rates,
+                        engagement, and ROI through analytics dashboards and monthly reports.</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const faqItems = document.querySelectorAll('.faq-item');
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question');
+                    const answer = item.querySelector('.faq-answer');
+                    question.addEventListener('click', () => {
+                        const isActive = item.classList.contains('active');
+                        // Hide all answers
+                        faqItems.forEach(i => {
+                            i.classList.remove('active');
+                            i.querySelector('.faq-answer').style.display = 'none';
+                        });
+                        // Toggle current
+                        if (!isActive) {
+                            item.classList.add('active');
+                            answer.style.display = 'block';
+                        } else {
+                            item.classList.remove('active');
+                            answer.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        </script>
+        </div>
         </section>
     </main>
 
@@ -1679,7 +1828,7 @@
                 <div class="footer-col">
                     <h3>Solutions</h3>
                     <div class="footer-links">
-                        
+
                         <!-- Next-Gen Tech Dropdown -->
                         <div class="footer-dropdown">
                             <div class="footer-dropdown-header">
@@ -1687,7 +1836,8 @@
                                 <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
                             </div>
                             <div class="footer-dropdown-content">
-                                <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> AI & Machine Learning</a>
+                                <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> AI & Machine
+                                    Learning</a>
                                 <a href="CloudSolutions.html"><i class="fas fa-chevron-right"></i> Cloud Solutions</a>
                             </div>
                         </div>
@@ -1700,12 +1850,16 @@
                             </div>
                             <div class="footer-dropdown-content">
                                 <a href="AIServices.html"><i class="fas fa-chevron-right"></i> AI Services Overview</a>
-                                <a href="AIStrategy.html"><i class="fas fa-chevron-right"></i> AI Strategy & Consulting</a>
+                                <a href="AIStrategy.html"><i class="fas fa-chevron-right"></i> AI Strategy &
+                                    Consulting</a>
                                 <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> Machine Learning</a>
-                                <a href="NLP.html"><i class="fas fa-chevron-right"></i> Natural Language Processing (NLP)</a>
+                                <a href="NLP.html"><i class="fas fa-chevron-right"></i> Natural Language Processing
+                                    (NLP)</a>
                                 <a href="ComputerVision.html"><i class="fas fa-chevron-right"></i> Computer Vision</a>
-                                <a href="PredictiveAnalytics.html"><i class="fas fa-chevron-right"></i> Predictive Analysis</a>
-                                <a href="ProcessAutomation.html"><i class="fas fa-chevron-right"></i> Process Automation</a>
+                                <a href="PredictiveAnalytics.html"><i class="fas fa-chevron-right"></i> Predictive
+                                    Analysis</a>
+                                <a href="ProcessAutomation.html"><i class="fas fa-chevron-right"></i> Process
+                                    Automation</a>
                             </div>
                         </div>
 
@@ -1716,8 +1870,10 @@
                                 <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
                             </div>
                             <div class="footer-dropdown-content">
-                                <a href="CustomSoftware.html"><i class="fas fa-chevron-right"></i> Custom Software Development</a>
-                                <a href="MobileDevelopment.html"><i class="fas fa-chevron-right"></i> Mobile App Development</a>
+                                <a href="CustomSoftware.html"><i class="fas fa-chevron-right"></i> Custom Software
+                                    Development</a>
+                                <a href="MobileDevelopment.html"><i class="fas fa-chevron-right"></i> Mobile App
+                                    Development</a>
                             </div>
                         </div>
 
@@ -1805,93 +1961,197 @@
     <script src="./script/chatbot.js"></script>
 
 
-    <!-- Booking Modal -->
-<div class="modal" id="bookingModal">
-    <div class="modal-content">
-        <button class="close-modal" onclick="closeBookingModal()">
-            <i class="fas fa-times"></i>
-        </button>
-        
-        <div class="modal-header">
-            <h2>Book Your Free 30-Minute Consultation</h2>
-            <p>Let's discuss how we can help transform your business</p>
+   
+<!--open booking 30 min call modal -->
+
+    <div id="bookingModal" class="booking-modal">
+        <div class="booking-modal-content">
+
+            <!-- CLOSE BUTTON -->
+            <span class="booking-modal-close" onclick="closeBookingModal()">&times;</span>
+
+            <!-- STEP PROGRESS -->
+            <div class="booking-progress-indicator">
+                <div class="booking-progress-step booking-active" id="progress1" data-step="1"></div>
+                <div class="booking-progress-line" id="line1"></div>
+                <div class="booking-progress-step" id="progress2" data-step="2"></div>
+                <div class="booking-progress-line" id="line2"></div>
+                <div class="booking-progress-step" id="progress3" data-step="3"></div>
+                <div class="booking-progress-line" id="line3"></div>
+                <div class="booking-progress-step" id="progress4" data-step="4"></div>
+            </div>
+
+            <!-- STEP 1 -->
+            <div class="booking-modal-step booking-active" id="step1">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">1</div>
+                    <h2 class="booking-step-title">Zonixtec — 30-Minute Discovery Call</h2>
+                </div>
+
+                <div class="booking-discovery-subtitle">
+                    Duration: 30 Minutes | Mode: Web Conference
+                </div>
+
+                <div class="booking-session-overview">
+                    <h4 class="booking-session-title">In this quick session, we'll cover:</h4>
+                    <div class="booking-session-items-grid">
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Introduction & Requirement Understanding</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Relevant Use Case Demo</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Technology Solutions & Offerings</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Project Roadmap & Next Steps</span>
+                        </div>
+                    </div>
+
+                    <div class="booking-discovery-goal">
+                        <strong>Goal:</strong>
+                        <p>Understand your needs and explore how Zonixtec can deliver the right tech solutions for your
+                            project.</p>
+                    </div>
+                </div>
+
+                <div class="booking-step-navigation">
+                    <div></div>
+                    <button class="booking-btn-primary" onclick="nextStep(1)">
+                        Next: Select Date <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="booking-modal-step" id="step2">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">2</div>
+                    <h2 class="booking-step-title">Select Your Preferred Date</h2>
+                </div>
+
+                <input type="text" id="dateInput" class="booking-calendar-input" placeholder="Pick a date" readonly />
+
+                <div class="booking-step-navigation">
+                    <button class="booking-btn-secondary" onclick="previousStep(2)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="booking-btn-primary" id="dateNextBtn" onclick="nextStep(2)" disabled>
+                        Next: Select Time <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="booking-modal-step" id="step3">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">3</div>
+                    <h2 class="booking-step-title">Choose Your Time Slot</h2>
+                </div>
+
+                <div class="booking-time-slots">
+                    <div class="booking-time-slot" data-time="10:30">10:30 AM</div>
+                    <div class="booking-time-slot" data-time="11:30">11:30 AM</div>
+                    <div class="booking-time-slot" data-time="12:00">12:00 PM</div>
+                    <div class="booking-time-slot" data-time="12:30">12:30 PM</div>
+                    <div class="booking-time-slot" data-time="13:00">1:00 PM</div>
+                    <div class="booking-time-slot" data-time="13:30">1:30 PM</div>
+                    <div class="booking-time-slot" data-time="14:00">2:00 PM</div>
+                    <div class="booking-time-slot" data-time="14:30">2:30 PM</div>
+                    <div class="booking-time-slot" data-time="15:00">3:00 PM</div>
+                    <div class="booking-time-slot" data-time="15:30">3:30 PM</div>
+                    <div class="booking-time-slot" data-time="16:00">4:00 PM</div>
+                    <div class="booking-time-slot" data-time="16:30">4:30 PM</div>
+                    <div class="booking-time-slot" data-time="17:00">5:00 PM</div>
+                </div>
+
+                <div class="booking-step-navigation">
+                    <button class="booking-btn-secondary" onclick="previousStep(3)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="booking-btn-primary" id="timeNextBtn" onclick="nextStep(3)" disabled>
+                        Next: Your Info <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="booking-modal-step" id="step4">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">4</div>
+                    <h2 class="booking-step-title">Your Information</h2>
+                </div>
+
+                <form class="booking-modal-form" id="bookingFormPage">
+
+                    <div class="form-group-row">
+                        <label for="bookingName">Full Name</label>
+                        <input type="text" id="bookingName" placeholder="Enter your full name" required />
+                    </div>
+                    <span class="error-text" id="nameError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingEmail">Email</label>
+                        <input type="email" id="bookingEmail" placeholder="Enter your email" required />
+                    </div>
+                    <span class="error-text" id="emailError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingPhone">Phone</label>
+                        <input type="tel" id="bookingPhone" placeholder="Enter your phone number" required />
+                    </div>
+                    <span class="error-text" id="phoneError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingCompany">Company</label>
+                        <input type="text" id="bookingCompany" placeholder="Company (optional)" />
+                    </div>
+
+                    <div class="form-group-row">
+                        <label for="bookingMessage">Message</label>
+                        <textarea id="bookingMessage" placeholder="Describe what services you need..."></textarea>
+                    </div>
+
+                    <div class="booking-step-navigation">
+                        <button type="button" class="booking-btn-secondary" onclick="previousStep(4)">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </button>
+
+                        <button type="submit" class="booking-btn-primary">
+                            <i class="fas fa-calendar-check"></i> Book My Free Consultation
+                        </button>
+                    </div>
+
+                </form>
+
+
+
+            </div>
+
+            <!-- SUCCESS -->
+            <div id="bookingSuccessPage" class="booking-success-message">
+                <i class="fas fa-check-circle"></i>
+                <h3>Your Call is Booked!</h3>
+                <p>Our team will contact you shortly. Thank you!</p>
+            </div>
+
         </div>
-
-        <form class="booking-form" id="bookingForm">
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Full Name <span>*</span></label>
-                    <input type="text" id="bookingName" placeholder="Enter your full name" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Email Address <span>*</span></label>
-                    <input type="email" id="bookingEmail" placeholder="your@email.com" required>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Phone Number <span>*</span></label>
-                    <input type="tel" id="bookingPhone" placeholder="+91 999999999" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Company Name</label>
-                    <input type="text" id="bookingCompany" placeholder="Your company (optional)">
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Preferred Date <span>*</span></label>
-                    <input type="date" id="bookingDate" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Preferred Time <span>*</span></label>
-                    <input type="time" id="bookingTime" required>
-                </div>
-            </div>
-
-            <div class="form-group-modal">
-                <label>Service Interested In <span>*</span></label>
-                <select id="bookingService" required>
-                    <option value="">Select a service</option>
-                    <option value="CRM Solutions">CRM Solutions</option>
-                    <option value="ERP Solutions">ERP Solutions</option>
-                    <option value="Billing Software">Billing Software</option>
-                    <option value="Website Development">Website Development</option>
-                    <option value="Mobile App Development">Mobile App Development</option>
-                    <option value="AI Solutions">AI Solutions</option>
-                    <option value="Cloud Solutions">Cloud Solutions</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="UI/UX Design">UI/UX Design</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-
-            <div class="form-group-modal">
-                <label>Message / Additional Details</label>
-                <textarea id="bookingMessage" placeholder="Tell us about your project or questions..."></textarea>
-            </div>
-
-            <button type="submit" class="submit-booking-btn">
-                <i class="fas fa-calendar-check"></i> Book My Call
-            </button>
-        </form>
     </div>
-</div>
-
-<!-- Success Message Overlay -->
-<div class="success-message" id="bookingSuccess">
-    <i class="fas fa-check-circle"></i> 
-    <strong>Your Call is Booked!</strong>
-    <p>Our team will connect with you as soon as possible. Thank you for choosing Zonixtec!</p>
-</div>
 
 
     <!-- Booking Modal Script -->
     <script src="./script/booking-modal.js"></script>
     <script src="./script/navbar.js"></script>
+
+    <script src="./script/30min-booking.js"></script>
+
     <script src="./script/allabout.js"></script>
+
 
 </body>
 

@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/allDropdown.css">
     <link rel="icon" href="./Assets/WhatsApp Image 2025-10-15 at 15.47.06.jpeg" sizes="32x32" type="image/png">
     <title>Cloud Solutions | Zonixtec – Scalable & Secure Cloud Services for Businesses</title>
-    <meta name="description" content="Zonixtec's Cloud Solutions help businesses scale seamlessly with secure infrastructure, optimized storage, cloud migration, DevOps, and cost-efficient solutions.">
+    <meta name="description"
+        content="Zonixtec's Cloud Solutions help businesses scale seamlessly with secure infrastructure, optimized storage, cloud migration, DevOps, and cost-efficient solutions.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="./CSS/30min-model.css">
     <style>
         :root {
             --primary: #0066ff;
@@ -46,7 +53,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: 
+            background:
                 radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.1) 0%, transparent 20%),
                 radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 20%);
             z-index: -1;
@@ -105,11 +112,11 @@
         .logo {
             font-family: 'Orbitron', sans-serif;
             font-size: 1.8rem;
-            font-weight: 700; 
+            font-weight: 700;
             color: var(--light);
             text-decoration: none;
             display: flex;
-            align-items: center;    
+            align-items: center;
         }
 
         .logo span {
@@ -183,7 +190,7 @@
             font-size: 1.5rem;
             cursor: pointer;
         }
-        
+
         /* Cloud Solutions Hero Section */
         .cloud-hero {
             padding: 200px 0 100px;
@@ -191,7 +198,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .cloud-hero::before {
             content: "";
             position: absolute;
@@ -202,7 +209,7 @@
             background: radial-gradient(circle at center, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
             z-index: -1;
         }
-        
+
         .hero-title {
             font-family: 'Orbitron', sans-serif;
             font-size: 3.8rem;
@@ -214,7 +221,7 @@
             line-height: 1.2;
             text-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
         }
-        
+
         .hero-subtitle {
             font-size: 1.5rem;
             color: var(--secondary);
@@ -223,7 +230,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .hero-description {
             font-size: 1.1rem;
             color: #cbd5e1;
@@ -233,7 +240,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         /* 3D Cloud Animation */
         .cloud-animation {
             position: relative;
@@ -243,7 +250,7 @@
             max-width: 800px;
             perspective: 1200px;
         }
-        
+
         .cloud-data-center {
             position: absolute;
             top: 50%;
@@ -254,7 +261,7 @@
             transform-style: preserve-3d;
             animation: floatCloud 15s infinite ease-in-out;
         }
-        
+
         .cloud-base {
             position: absolute;
             width: 100%;
@@ -265,7 +272,7 @@
             box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
             transform: translateZ(0px);
         }
-        
+
         .cloud-shape {
             position: absolute;
             background: white;
@@ -273,7 +280,7 @@
             opacity: 0.9;
             box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
         }
-        
+
         .cloud-shape:nth-child(1) {
             width: 80px;
             height: 80px;
@@ -281,7 +288,7 @@
             left: 30px;
             transform: translateZ(20px);
         }
-        
+
         .cloud-shape:nth-child(2) {
             width: 100px;
             height: 100px;
@@ -289,7 +296,7 @@
             left: 100px;
             transform: translateZ(40px);
         }
-        
+
         .cloud-shape:nth-child(3) {
             width: 70px;
             height: 70px;
@@ -297,7 +304,7 @@
             left: 40px;
             transform: translateZ(30px);
         }
-        
+
         .cloud-shape:nth-child(4) {
             width: 90px;
             height: 90px;
@@ -305,7 +312,7 @@
             left: 130px;
             transform: translateZ(50px);
         }
-        
+
         .server-rack {
             position: absolute;
             width: 40px;
@@ -316,25 +323,25 @@
             transform-style: preserve-3d;
             animation: pulse 4s infinite ease-in-out;
         }
-        
+
         .server-rack:nth-child(1) {
             bottom: 30px;
             left: 50px;
             transform: translateZ(60px) rotateX(30deg);
         }
-        
+
         .server-rack:nth-child(2) {
             bottom: 30px;
             left: 110px;
             transform: translateZ(80px) rotateX(20deg);
         }
-        
+
         .server-rack:nth-child(3) {
             bottom: 30px;
             left: 170px;
             transform: translateZ(40px) rotateX(25deg);
         }
-        
+
         .server-led {
             position: absolute;
             width: 8px;
@@ -343,11 +350,22 @@
             background: var(--success);
             box-shadow: 0 0 10px var(--success);
         }
-        
-        .server-led:nth-child(1) { top: 15px; left: 10px; }
-        .server-led:nth-child(2) { top: 35px; left: 10px; }
-        .server-led:nth-child(3) { top: 55px; left: 10px; }
-        
+
+        .server-led:nth-child(1) {
+            top: 15px;
+            left: 10px;
+        }
+
+        .server-led:nth-child(2) {
+            top: 35px;
+            left: 10px;
+        }
+
+        .server-led:nth-child(3) {
+            top: 55px;
+            left: 10px;
+        }
+
         .data-line {
             position: absolute;
             background: var(--secondary);
@@ -356,7 +374,7 @@
             animation: dataFlow 3s infinite linear;
             box-shadow: 0 0 5px var(--secondary);
         }
-        
+
         /* Cloud Services Section */
         .cloud-services {
             background: rgba(15, 23, 42, 0.6);
@@ -365,14 +383,14 @@
             margin: 80px 0;
             border: 1px solid rgba(100, 116, 139, 0.2);
         }
-        
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
-        
+
         .service-card {
             background: rgba(30, 41, 59, 0.7);
             border-radius: 15px;
@@ -384,13 +402,13 @@
             overflow: hidden;
             cursor: pointer;
         }
-        
+
         .service-card:hover {
             transform: translateY(-15px) rotateX(5deg) rotateY(5deg);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
             border: 1px solid rgba(37, 99, 235, 0.5);
         }
-        
+
         .service-card::before {
             content: '';
             position: absolute;
@@ -400,7 +418,7 @@
             height: 5px;
             background: var(--tech-gradient);
         }
-        
+
         .service-icon {
             font-size: 3rem;
             margin-bottom: 20px;
@@ -410,34 +428,34 @@
             background-clip: text;
             transition: transform 0.5s ease;
         }
-        
+
         .service-card:hover .service-icon {
             transform: rotateY(360deg);
         }
-        
+
         .service-title {
             font-size: 1.6rem;
             margin-bottom: 15px;
             font-weight: 600;
         }
-        
+
         .service-text {
             color: #94a3b8;
             line-height: 1.7;
         }
-        
+
         /* Cloud Benefits */
         .benefits-section {
             margin: 80px 0;
         }
-        
+
         .benefits-container {
             display: flex;
             flex-wrap: wrap;
             gap: 30px;
             justify-content: center;
         }
-        
+
         .benefit-item {
             flex: 1;
             min-width: 250px;
@@ -450,29 +468,29 @@
             transition: all 0.4s ease;
             transform: translateZ(0);
         }
-        
+
         .benefit-item:hover {
             transform: translateY(-10px) scale(1.03);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
         }
-        
+
         .benefit-icon {
             font-size: 3rem;
             margin-bottom: 20px;
             color: var(--secondary);
         }
-        
+
         .benefit-title {
             font-size: 1.5rem;
             margin-bottom: 15px;
             font-weight: 600;
         }
-        
+
         .benefit-text {
             color: #94a3b8;
             line-height: 1.7;
         }
-        
+
         /* Technology Stack */
         /* Technology Stack */
         .tech-section {
@@ -483,15 +501,15 @@
             margin-bottom: 60px;
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
+
         .tech-section h2 {
             text-align: center;
             font-family: 'Orbitron', sans-serif;
             color: var(--secondary);
             margin-bottom: 40px;
         }
-        
-         .tech-grid {
+
+        .tech-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 58px;
@@ -500,20 +518,20 @@
         .tech-category {
             text-align: center;
         }
-        
+
         .tech-category h3 {
             color: var(--light);
             margin-bottom: 20px;
             font-size: 1.3rem;
             font-family: 'Orbitron', sans-serif;
         }
-        
+
         .tech-items {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-        
+
         .tech-item {
             background: rgba(255, 255, 255, 0.05);
             padding: 12px 15px;
@@ -521,7 +539,7 @@
             color: var(--gray);
             transition: all 0.3s ease;
         }
-        
+
         .tech-itemm {
             background: rgba(255, 255, 255, 0.05);
             padding: 12px 15px;
@@ -536,7 +554,7 @@
             color: var(--light);
             transform: translateY(-3px);
         }
-        
+
 
         /* ===== Dropdown Styles ===== */
         .dropdown {
@@ -603,37 +621,40 @@
 
 
 
-          .dropdown-scroll {
-    max-height: 300px; /* Slightly less than parent to account for padding */
-    overflow-y: auto; /* Enable vertical scrolling */
-    padding: 8px 0; /* Add padding to scroll container */
-}
+        .dropdown-scroll {
+            max-height: 300px;
+            /* Slightly less than parent to account for padding */
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+            padding: 8px 0;
+            /* Add padding to scroll container */
+        }
 
-/* Custom scrollbar styling */
-.dropdown-scroll::-webkit-scrollbar {
-    width: 6px;
-}
+        /* Custom scrollbar styling */
+        .dropdown-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
 
-.dropdown-scroll::-webkit-scrollbar-track {
-    background: rgba(15, 23, 42, 0.5);
-    border-radius: 3px;
-}
+        .dropdown-scroll::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 3px;
+        }
 
-.dropdown-scroll::-webkit-scrollbar-thumb {
-    background: var(--secondary);
-    border-radius: 3px;
-}
+        .dropdown-scroll::-webkit-scrollbar-thumb {
+            background: var(--secondary);
+            border-radius: 3px;
+        }
 
-.dropdown-scroll::-webkit-scrollbar-thumb:hover {
-    background: var(--primary);
-}
-
-        
+        .dropdown-scroll::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
 
 
 
 
-        
+
+
+
         /* CTA Section */
         .cta-container {
             background: var(--tech-gradient);
@@ -644,7 +665,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .cta-container::before {
             content: "";
             position: absolute;
@@ -652,11 +673,11 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
             transform: rotate(30deg);
             z-index: 0;
         }
-        
+
         .cta-title {
             font-family: 'Orbitron', sans-serif;
             font-size: 2.5rem;
@@ -664,7 +685,7 @@
             position: relative;
             z-index: 1;
         }
-        
+
         .cta-description {
             max-width: 700px;
             margin: 0 auto 30px;
@@ -673,7 +694,7 @@
             position: relative;
             z-index: 1;
         }
-        
+
         .cta-button-large {
             background: linear-gradient(45deg, var(--primary), var(--secondary));
             color: white;
@@ -690,13 +711,13 @@
             z-index: 1;
             transform: translateZ(0);
         }
-        
+
         .cta-button-large:hover {
             transform: translateY(-3px) translateZ(10px);
             background: rgba(15, 23, 42, 0.9);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
         }
-        
+
         /* FAQ Section */
         .faq-section {
             background: rgba(15, 23, 42, 0.5);
@@ -705,7 +726,7 @@
             border: 1px solid rgba(100, 116, 139, 0.2);
             margin: 80px 0;
         }
-        
+
         .faq-title {
             text-align: center;
             font-family: 'Orbitron', sans-serif;
@@ -716,18 +737,18 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .faq-container {
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         .faq-item {
             margin-bottom: 20px;
             border-bottom: 1px solid rgba(100, 116, 139, 0.2);
             padding-bottom: 20px;
         }
-        
+
         .faq-question {
             font-size: 1.2rem;
             font-weight: 600;
@@ -737,7 +758,7 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .faq-answer {
             color: #94a3b8;
             line-height: 1.7;
@@ -746,32 +767,32 @@
             overflow: hidden;
             transition: max-height 0.3s ease;
         }
-        
+
         .faq-item.active .faq-answer {
             max-height: 300px;
         }
-        
+
         .faq-toggle {
             font-size: 1.2rem;
             transition: transform 0.3s ease;
         }
-        
+
         .faq-item.active .faq-toggle {
             transform: rotate(180deg);
         }
-        
+
         /* Process Section */
         .process-section {
             margin: 80px 0;
         }
-        
+
         .process-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 30px;
         }
-        
+
         .process-step {
             background: rgba(15, 23, 42, 0.6);
             border-radius: 15px;
@@ -782,13 +803,13 @@
             transition: all 0.3s ease;
             position: relative;
         }
-        
+
         .process-step:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(37, 99, 235, 0.3);
         }
-        
+
         .step-number {
             width: 50px;
             height: 50px;
@@ -802,18 +823,18 @@
             font-size: 1.2rem;
             font-weight: 700;
         }
-        
+
         .step-title {
             font-size: 1.3rem;
             margin-bottom: 15px;
             font-weight: 600;
         }
-        
+
         .step-description {
             color: #94a3b8;
             line-height: 1.7;
         }
-        
+
         /* Challenges Section */
         .challenges-section {
             margin-bottom: 80px;
@@ -860,18 +881,18 @@
             color: #94a3b8;
             line-height: 1.7;
         }
-        
+
         /* Impact Section */
         .impact-section {
             margin-bottom: 80px;
         }
-        
+
         .impact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
-        
+
         .impact-card {
             background: rgba(15, 23, 42, 0.6);
             border-radius: 15px;
@@ -880,76 +901,103 @@
             text-align: center;
             transition: all 0.3s ease;
         }
-        
+
         .impact-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(37, 99, 235, 0.3);
         }
-        
+
         .impact-icon {
             font-size: 2.5rem;
             color: var(--success);
             margin-bottom: 20px;
         }
-        
+
         .impact-title {
             font-size: 1.3rem;
             margin-bottom: 15px;
             font-weight: 600;
         }
-        
+
         .impact-description {
             color: #94a3b8;
             line-height: 1.7;
         }
-        
+
         /* Animations */
         @keyframes floatCloud {
             0% {
                 transform: translate(-50%, -50%) rotateX(0deg) rotateY(0deg);
             }
+
             25% {
                 transform: translate(-50%, -55%) rotateX(5deg) rotateY(5deg);
             }
+
             50% {
                 transform: translate(-50%, -50%) rotateX(0deg) rotateY(10deg);
             }
+
             75% {
                 transform: translate(-50%, -45%) rotateX(-5deg) rotateY(5deg);
             }
+
             100% {
                 transform: translate(-50%, -50%) rotateX(0deg) rotateY(0deg);
             }
         }
-        
+
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
-            70% { box-shadow: 0 0 0 15px rgba(59, 130, 246, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(59, 130, 246, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+            }
         }
-        
+
         @keyframes dataFlow {
-            0% { 
-                width: 0; 
+            0% {
+                width: 0;
                 opacity: 0;
                 transform: rotate(0deg);
             }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { 
-                width: 200px; 
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                width: 200px;
                 opacity: 0;
                 transform: rotate(10deg);
             }
         }
-        
+
         @keyframes floatIcon {
-            0% { transform: translateY(0) rotate(0); }
-            50% { transform: translateY(-20px) rotate(5deg); }
-            100% { transform: translateY(0) rotate(0); }
+            0% {
+                transform: translateY(0) rotate(0);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+
+            100% {
+                transform: translateY(0) rotate(0);
+            }
         }
-        
+
         /* Footer */
         .footer {
             /* background: rgba(2, 6, 23, 0.9); */
@@ -1087,10 +1135,10 @@
             color: #ef4444;
             margin: 0 5px;
         }
-        
+
         /*  Get Start Button    */
         .cta-buttons {
-           background: linear-gradient(45deg, var(--primary), var(--secondary));
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
             color: var(--dark);
             padding: 10px 20px;
             border-radius: 30px;
@@ -1099,12 +1147,12 @@
         }
 
         .cta-buttons:hover {
-             transform: translateY(-3px);
+            transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0, 102, 255, 0.3);
         }
 
-       
-        
+
+
         /* ===== Mobile Responsive Styles ===== */
         @media (max-width: 1200px) {
             .section-padding {
@@ -1116,11 +1164,11 @@
             .hero-title {
                 font-size: 3.2rem;
             }
-            
+
             .services-grid {
                 grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             }
-            
+
             .tech-icon {
                 width: 85px;
                 height: 85px;
@@ -1129,11 +1177,12 @@
         }
 
         @media (max-width: 768px) {
+
             /* Header adjustments */
             .logo {
                 font-size: 1.5rem;
             }
-            
+
             .nav-links {
                 position: fixed;
                 top: 0;
@@ -1163,90 +1212,105 @@
             .cloud-hero {
                 padding: 150px 0 50px;
             }
-            
+
             .hero-title {
                 font-size: 2.8rem;
             }
-            
+
             .hero-subtitle {
                 font-size: 1.3rem;
             }
-            
+
             /* Cloud animation */
             .cloud-animation {
                 height: 500px;
                 width: 95%;
             }
-            
+
             .cloud-data-center {
                 width: 180px;
                 height: 180px;
             }
-            
-            .cloud-shape:nth-child(1) { width: 60px; height: 60px; }
-            .cloud-shape:nth-child(2) { width: 80px; height: 80px; }
-            .cloud-shape:nth-child(3) { width: 50px; height: 50px; }
-            .cloud-shape:nth-child(4) { width: 70px; height: 70px; }
-            
+
+            .cloud-shape:nth-child(1) {
+                width: 60px;
+                height: 60px;
+            }
+
+            .cloud-shape:nth-child(2) {
+                width: 80px;
+                height: 80px;
+            }
+
+            .cloud-shape:nth-child(3) {
+                width: 50px;
+                height: 50px;
+            }
+
+            .cloud-shape:nth-child(4) {
+                width: 70px;
+                height: 70px;
+            }
+
             .server-rack {
                 width: 30px;
                 height: 60px;
             }
-            
+
             /* Services grid */
             .services-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
-            
+
             .service-card {
                 padding: 25px;
             }
-            
+
             /* Benefits section */
             .benefits-container {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .benefit-item {
                 min-width: 100%;
             }
-            
+
             /* Tech stack */
             .tech-icons {
                 gap: 20px;
             }
-            
+
             .tech-icon {
                 width: 80px;
                 height: 80px;
                 font-size: 2.2rem;
             }
-            
+
             /* CTA section */
             .cta-container {
                 padding: 40px 20px;
             }
-            
+
             .cta-title {
                 font-size: 2rem;
             }
-            
+
             /* FAQ section */
             .faq-section {
                 padding: 30px 20px;
             }
-            
+
             .faq-title {
                 font-size: 1.8rem;
                 margin-bottom: 30px;
             }
-            
+
             .faq-question {
                 font-size: 1.1rem;
             }
-            
+
             /* Process section */
             .process-step {
                 min-width: 100%;
@@ -1254,86 +1318,87 @@
         }
 
         @media (max-width: 576px) {
+
             /* Header */
             nav {
                 padding: 15px 0;
             }
-            
+
             /* Hero section */
             .cloud-hero {
                 padding: 130px 0 40px;
             }
-            
+
             .hero-title {
                 font-size: 2.2rem;
                 line-height: 1.3;
             }
-            
+
             .hero-subtitle {
                 font-size: 1.1rem;
             }
-            
+
             .hero-description {
                 font-size: 1rem;
             }
-            
+
             /* Section titles */
             .section-title {
                 font-size: 2rem;
                 margin-bottom: 40px;
             }
-            
+
             /* Cloud animation */
             .cloud-animation {
                 height: 160px;
             }
-            
+
             .cloud-data-center {
                 width: 150px;
                 height: 150px;
             }
-            
+
             /* Services */
             .cloud-services {
                 padding: 40px 20px;
                 margin: 60px 0;
             }
-            
+
             /* Tech stack */
             .tech-icons {
                 gap: 15px;
             }
-            
+
             .tech-icon {
                 width: 70px;
                 height: 70px;
                 font-size: 2rem;
             }
-            
+
             /* CTA */
             .cta-container {
                 padding: 30px 15px;
                 margin: 60px 0;
             }
-            
+
             .cta-title {
                 font-size: 1.7rem;
             }
-            
+
             .cta-description {
                 font-size: 1rem;
             }
-            
+
             /* FAQ */
             .faq-question {
                 font-size: 1rem;
             }
-            
+
             /* Footer */
             .footer-col {
                 padding: 15px;
             }
-            
+
             .footer-col h3 {
                 font-size: 1.3rem;
             }
@@ -1343,30 +1408,32 @@
             .hero-title {
                 font-size: 1.9rem;
             }
-            
+
             .section-title {
                 font-size: 1.8rem;
             }
-            
+
             .tech-icon {
                 width: 65px;
                 height: 65px;
                 font-size: 1.8rem;
             }
-            
+
             .cta-button-large {
                 padding: 12px 30px;
                 font-size: 1rem;
             }
         }
-        
+
         @media (min-width: 768px) {
-            .footer-container { 
-                grid-template-columns: repeat(4, 1fr); 
+            .footer-container {
+                grid-template-columns: repeat(4, 1fr);
             }
-            .footer-col { 
-                padding: 18px 1px; 
+
+            .footer-col {
+                padding: 18px 1px;
             }
+
             .footer-col h3 {
                 font-family: 'Orbitron', sans-serif;
                 font-size: 1.3rem;
@@ -1384,6 +1451,7 @@
     <link rel="stylesheet" href="./CSS/navbar.css">
     <link rel="stylesheet" href="./CSS/booking-modal.css">
 </head>
+
 <body>
     <!-- Header -->
     <header id="header">
@@ -1450,8 +1518,9 @@
                         <i class="fas fa-phone-alt"></i>Book A 30 Min Call
                     </a>
                 </div>
-                
-                <button class="mobile-menu-btn" aria-label="Toggle mobile menu" onclick="window.toggleMobileMenu && window.toggleMobileMenu()">
+
+                <button class="mobile-menu-btn" aria-label="Toggle mobile menu"
+                    onclick="window.toggleMobileMenu && window.toggleMobileMenu()">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -1459,76 +1528,90 @@
             </nav>
         </div>
     </header>
-    
+
     <section class="cloud-hero">
-  <div class="container">
-    <h1 class="hero-title">Cloud Solutions</h1>
-    <p class="hero-subtitle">Scalable & Secure Cloud Services for Businesses</p>
-    <p class="hero-description">
-      In today's fast-paced digital world, scalability, flexibility, and security are the keys to sustainable business growth. Zonixtec's <strong>Cloud Solutions</strong> empower your business to harness the full potential of cloud technology—whether it's <strong>cloud migration</strong>, <strong>data storage</strong>, or <strong>hybrid deployment</strong>.
-    </p>
-    <p class="hero-description">
-      With our end-to-end expertise, you can <strong>reduce costs</strong>, <strong>enhance agility</strong>, and <strong>ensure business continuity</strong> while focusing on what matters most—your customers.
-    </p>
+        <div class="container">
+            <h1 class="hero-title">Cloud Solutions</h1>
+            <p class="hero-subtitle">Scalable & Secure Cloud Services for Businesses</p>
+            <p class="hero-description">
+                In today's fast-paced digital world, scalability, flexibility, and security are the keys to sustainable
+                business growth. Zonixtec's <strong>Cloud Solutions</strong> empower your business to harness the full
+                potential of cloud technology—whether it's <strong>cloud migration</strong>, <strong>data
+                    storage</strong>, or <strong>hybrid deployment</strong>.
+            </p>
+            <p class="hero-description">
+                With our end-to-end expertise, you can <strong>reduce costs</strong>, <strong>enhance agility</strong>,
+                and <strong>ensure business continuity</strong> while focusing on what matters most—your customers.
+            </p>
 
-    <a href="booking.html?service=cloud-solutions" class="cta-button-large">Get Started with Cloud Transformation</a>
+            <a href="booking.html?service=cloud-solutions" class="cta-button-large">Get Started with Cloud
+                Transformation</a>
 
-    <div class="hero-image">
-      <!-- <img src="./uploads/Cloud Solutions.jpg" alt="Cloud Solutions"
+            <div class="hero-image">
+                <!-- <img src="./uploads/Cloud Solutions.jpg" alt="Cloud Solutions"
            style="width:100%; max-width:600px; border-radius:10px; object-fit:cover;"> -->
-    </div>
-  </div>
-</section>
+            </div>
+        </div>
+    </section>
 
-    
+
     <section class="cloud-services">
         <div class="container">
             <h2 class="section-title">About Our Cloud Solutions</h2>
             <p class="hero-description" style="text-align: center; margin-bottom: 40px;">
-                We provide <strong>customized cloud services</strong> designed to suit startups, SMEs, and large enterprises. From <strong>migrating existing systems</strong> to building new cloud-native applications, we ensure reliability, speed, and security.
+                We provide <strong>customized cloud services</strong> designed to suit startups, SMEs, and large
+                enterprises. From <strong>migrating existing systems</strong> to building new cloud-native applications,
+                we ensure reliability, speed, and security.
             </p>
-            
+
             <h3 class="section-title" style="font-size: 2rem; margin-top: 60px;">Types of Cloud Solutions We Offer</h3>
             <div class="services-grid">
                 <div class="service-card">
                     <i class="fas fa-cloud-upload-alt service-icon"></i>
                     <h3 class="service-title">Cloud Migration Services</h3>
-                    <p class="service-text">Seamlessly move apps, data, and workloads to the cloud with minimal disruption and maximum efficiency.</p>
+                    <p class="service-text">Seamlessly move apps, data, and workloads to the cloud with minimal
+                        disruption and maximum efficiency.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-server service-icon"></i>
                     <h3 class="service-title">Cloud Infrastructure Setup</h3>
-                    <p class="service-text">Secure & scalable cloud environments tailored to your specific business requirements and growth objectives.</p>
+                    <p class="service-text">Secure & scalable cloud environments tailored to your specific business
+                        requirements and growth objectives.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-code-branch service-icon"></i>
                     <h3 class="service-title">DevOps & Automation</h3>
-                    <p class="service-text">Faster deployments and continuous delivery pipelines to accelerate your software development lifecycle.</p>
+                    <p class="service-text">Faster deployments and continuous delivery pipelines to accelerate your
+                        software development lifecycle.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-database service-icon"></i>
                     <h3 class="service-title">Cloud Storage & Backup</h3>
-                    <p class="service-text">Reliable storage solutions with comprehensive disaster recovery plans to protect your critical data.</p>
+                    <p class="service-text">Reliable storage solutions with comprehensive disaster recovery plans to
+                        protect your critical data.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-network-wired service-icon"></i>
                     <h3 class="service-title">Hybrid & Multi-Cloud Solutions</h3>
-                    <p class="service-text">Best of public and private cloud worlds combined to optimize performance, security, and cost-efficiency.</p>
+                    <p class="service-text">Best of public and private cloud worlds combined to optimize performance,
+                        security, and cost-efficiency.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-shield-alt service-icon"></i>
                     <h3 class="service-title">Cloud Security Services</h3>
-                    <p class="service-text">End-to-end encryption, compliance management, and advanced threat protection for your cloud environment.</p>
+                    <p class="service-text">End-to-end encryption, compliance management, and advanced threat protection
+                        for your cloud environment.</p>
                 </div>
             </div>
-            
+
             <div class="benefits-section" style="margin-top: 80px;">
                 <h3 class="section-title" style="font-size: 2rem;">Key Features</h3>
                 <div class="benefits-container">
                     <div class="benefit-item">
                         <i class="fas fa-expand-arrows-alt benefit-icon"></i>
                         <h3 class="benefit-title">Scalable Infrastructure</h3>
-                        <p class="benefit-text">Scalable infrastructure for any business size that grows with your needs.</p>
+                        <p class="benefit-text">Scalable infrastructure for any business size that grows with your
+                            needs.</p>
                     </div>
                     <div class="benefit-item">
                         <i class="fas fa-dollar-sign benefit-icon"></i>
@@ -1559,63 +1642,70 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Challenges Section -->
     <!-- Challenges Section -->
-<section class="section-padding challenges-section">
-    <div class="container">
-        <div class="challenges-container">
-            <h2 class="challenges-title">Challenges Without Cloud Solutions</h2>
-            <div class="challenges-list">
-                <div class="challenge-item">
-                    <div class="challenge-icon">
-                        <i class="fas fa-exclamation-circle"></i>
+    <section class="section-padding challenges-section">
+        <div class="container">
+            <div class="challenges-container">
+                <h2 class="challenges-title">Challenges Without Cloud Solutions</h2>
+                <div class="challenges-list">
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p class="challenge-text">Significant capital expenditure on hardware, maintenance, and upgrades
+                            without the flexibility of cloud pricing models</p>
                     </div>
-                    <p class="challenge-text">Significant capital expenditure on hardware, maintenance, and upgrades without the flexibility of cloud pricing models</p>
-                </div>
-                
-                <div class="challenge-item">
-                    <div class="challenge-icon">
-                        <i class="fas fa-exclamation-circle"></i>
+
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p class="challenge-text">Inability to quickly scale resources up or down based on changing
+                            business demands and market conditions</p>
                     </div>
-                    <p class="challenge-text">Inability to quickly scale resources up or down based on changing business demands and market conditions</p>
-                </div>
-                
-                <div class="challenge-item">
-                    <div class="challenge-icon">
-                        <i class="fas fa-exclamation-circle"></i>
+
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p class="challenge-text">Vulnerability to data loss from hardware failures, disasters, or
+                            security breaches without robust backup solutions</p>
                     </div>
-                    <p class="challenge-text">Vulnerability to data loss from hardware failures, disasters, or security breaches without robust backup solutions</p>
-                </div>
-                
-                <div class="challenge-item">
-                    <div class="challenge-icon">
-                        <i class="fas fa-exclamation-circle"></i>
+
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p class="challenge-text">Restricted growth potential due to infrastructure limitations and
+                            lengthy procurement processes for new hardware</p>
                     </div>
-                    <p class="challenge-text">Restricted growth potential due to infrastructure limitations and lengthy procurement processes for new hardware</p>
-                </div>
-                
-                <div class="challenge-item">
-                    <div class="challenge-icon">
-                        <i class="fas fa-exclamation-circle"></i>
+
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p class="challenge-text">Extended development and deployment timelines due to manual processes
+                            and infrastructure constraints</p>
                     </div>
-                    <p class="challenge-text">Extended development and deployment timelines due to manual processes and infrastructure constraints</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-    
+    </section>
+
     <!-- What Zonixtec Brings Section -->
     <section class="cta-container">
         <div class="container">
-            <h2 class="cta-title">What Zonixtec Brings for You – Our Solution</h2>
+            <h2 class="cta-title">What We Bring</h2>
             <p class="cta-description">
-                At Zonixtec, we design and implement the right cloud model for your business—be it public, private, or hybrid. We ensure cost optimization, secure architecture, and scalable solutions that future-proof your digital operations.
+                At Zonixtec, we design and implement the right cloud model for your business—be it public, private, or
+                hybrid. We ensure cost optimization, secure architecture, and scalable solutions that future-proof your
+                digital operations.
             </p>
         </div>
     </section>
-    
+
     <!-- Process Section -->
     <section class="process-section">
         <div class="container">
@@ -1624,47 +1714,74 @@
                 <div class="process-step">
                     <div class="step-number">1</div>
                     <h3 class="step-title">Consultation & Cloud Readiness Assessment</h3>
-                    <p class="step-description">Comprehensive analysis of your current infrastructure and business goals to determine the optimal cloud strategy.</p>
+                    <p class="step-description">Comprehensive analysis of your current infrastructure and business goals
+                        to determine the optimal cloud strategy.</p>
                 </div>
-                
+
                 <div class="process-step">
                     <div class="step-number">2</div>
                     <h3 class="step-title">Architecture Design & Security Planning</h3>
-                    <p class="step-description">Designing secure, scalable cloud architecture tailored to your specific requirements and compliance needs.</p>
+                    <p class="step-description">Designing secure, scalable cloud architecture tailored to your specific
+                        requirements and compliance needs.</p>
                 </div>
-                
+
                 <div class="process-step">
                     <div class="step-number">3</div>
                     <h3 class="step-title">Cloud Migration & Setup</h3>
-                    <p class="step-description">Seamless migration of applications, data, and workloads to the cloud with minimal disruption.</p>
+                    <p class="step-description">Seamless migration of applications, data, and workloads to the cloud
+                        with minimal disruption.</p>
                 </div>
-                
+
                 <div class="process-step">
                     <div class="step-number">4</div>
                     <h3 class="step-title">Automation & DevOps Integration</h3>
-                    <p class="step-description">Implementing CI/CD pipelines and automation tools to accelerate development and deployment cycles.</p>
+                    <p class="step-description">Implementing CI/CD pipelines and automation tools to accelerate
+                        development and deployment cycles.</p>
                 </div>
-                
+
                 <div class="process-step">
                     <div class="step-number">5</div>
                     <h3 class="step-title">Testing, Optimization & Scaling</h3>
-                    <p class="step-description">Rigorous testing, performance optimization, and scaling strategies to ensure optimal cloud performance.</p>
+                    <p class="step-description">Rigorous testing, performance optimization, and scaling strategies to
+                        ensure optimal cloud performance.</p>
                 </div>
-                
+
                 <div class="process-step">
                     <div class="step-number">6</div>
                     <h3 class="step-title">Ongoing Support & Monitoring</h3>
-                    <p class="step-description">24/7 monitoring, maintenance, and continuous optimization to keep your cloud environment running smoothly.</p>
+                    <p class="step-description">24/7 monitoring, maintenance, and continuous optimization to keep your
+                        cloud environment running smoothly.</p>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Technology Stack Section -->
     <!-- Technology Stack -->
-<div class="tech-section">
-    <h2>Our Technology Stack</h2>
+    <div class="tech-section">
+        <h2>Our Technology Stack</h2>
 
+        <div class="tech-grid">
+            <div class="tech-category">
+                <h3>Cloud Platforms</h3>
+                <div class="tech-items">
+                    <div class="tech-itemm">Amazon Web Services (AWS)</div>
+                    <div class="tech-item">Microsoft Azure</div>
+                    <div class="tech-item">Google Cloud Platform</div>
+                    <div class="tech-item">Oracle Cloud</div>
+                    <div class="tech-item">IBM Cloud</div>
+                </div>
+            </div>
+
+            <div class="tech-category">
+                <h3>Containerization</h3>
+                <div class="tech-items">
+                    <div class="tech-itemm">Docker</div>
+                    <div class="tech-item">Kubernetes</div>
+                    <div class="tech-item">Amazon ECS</div>
+                    <div class="tech-item">Azure Kubernetes Service</div>
+                    <div class="tech-item">Google Kubernetes Engine</div>
+                </div>
     <div class="tech-grid">
         <div class="tech-category">
             <h3>Cloud Platforms</h3>
@@ -1685,18 +1802,41 @@
                 <div class="tech-item">Amazon ECS</div>
                 <div class="tech-item">Azure Kubernetes Service</div>
                 <div class="tech-item">Google Kubernetes Engine</div>
+
             </div>
-        </div>
-        
-        <div class="tech-category">
-            <h3>Infrastructure as Code</h3>
-            <div class="tech-items">
-                <div class="tech-item">Terraform</div>
-                <div class="tech-item">AWS CloudFormation</div>
-                <div class="tech-item">Azure Resource Manager</div>
-                <div class="tech-item">Ansible</div>
-                <div class="tech-item">Pulumi</div>
+
+            <div class="tech-category">
+                <h3>Infrastructure as Code</h3>
+                <div class="tech-items">
+                    <div class="tech-item">Terraform</div>
+                    <div class="tech-item">AWS CloudFormation</div>
+                    <div class="tech-item">Azure Resource Manager</div>
+                    <div class="tech-item">Ansible</div>
+                    <div class="tech-item">Pulumi</div>
+                </div>
             </div>
+
+
+            <div class="tech-category">
+                <h3>CI/CD & DevOps</h3>
+                <div class="tech-items">
+                    <div class="tech-itemm">Jenkins</div>
+                    <div class="tech-item">GitLab CI/CD</div>
+                    <div class="tech-item">GitHub Actions</div>
+                    <div class="tech-item">Azure DevOps</div>
+                    <div class="tech-item">AWS CodePipeline</div>
+                </div>
+            </div>
+
+            <div class="tech-category">
+                <h3>Monitoring & Security</h3>
+                <div class="tech-items">
+                    <div class="tech-itemm">Prometheus</div>
+                    <div class="tech-item">Grafana</div>
+                    <div class="tech-item">AWS CloudWatch</div>
+                    <div class="tech-item">Azure Monitor</div>
+                    <div class="tech-item">Datadog</div>
+                </div>
         </div>
         
         <div class="tech-category">
@@ -1719,21 +1859,20 @@
                 <div class="tech-item">Azure Monitor</div>
                 <div class="tech-item">Datadog</div>
             </div>
-        </div>
-        
-        <div class="tech-category">
-            <h3>Serverless & Databases</h3>
-            <div class="tech-items">
-                <div class="tech-item">AWS Lambda</div>
-                <div class="tech-item">Azure Functions</div>
-                <div class="tech-item">Amazon RDS</div>
-                <div class="tech-item">Azure SQL Database</div>
-                <div class="tech-item">Google Cloud SQL</div>
+
+            <div class="tech-category">
+                <h3>Serverless & Databases</h3>
+                <div class="tech-items">
+                    <div class="tech-item">AWS Lambda</div>
+                    <div class="tech-item">Azure Functions</div>
+                    <div class="tech-item">Amazon RDS</div>
+                    <div class="tech-item">Azure SQL Database</div>
+                    <div class="tech-item">Google Cloud SQL</div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-    
+
     <!-- Impact Section -->
     <section class="impact-section">
         <div class="container">
@@ -1744,54 +1883,140 @@
                         <i class="fas fa-chart-line-down"></i>
                     </div>
                     <h3 class="impact-title">Reduced Infrastructure Costs</h3>
-                    <p class="impact-description">Reduce infrastructure costs by up to 40% by eliminating capital expenditures and optimizing resource utilization.</p>
+                    <p class="impact-description">Reduce infrastructure costs by up to 40% by eliminating capital
+                        expenditures and optimizing resource utilization.</p>
                 </div>
-                
+
                 <div class="impact-card">
                     <div class="impact-icon">
                         <i class="fas fa-tachometer-alt"></i>
                     </div>
                     <h3 class="impact-title">Faster Product Delivery</h3>
-                    <p class="impact-description">Faster product delivery with CI/CD pipelines that automate testing and deployment processes.</p>
+                    <p class="impact-description">Faster product delivery with CI/CD pipelines that automate testing and
+                        deployment processes.</p>
                 </div>
-                
+
                 <div class="impact-card">
                     <div class="impact-icon">
                         <i class="fas fa-users"></i>
                     </div>
                     <h3 class="impact-title">Enhanced Collaboration</h3>
-                    <p class="impact-description">Enhanced collaboration across teams globally with centralized data and shared resources.</p>
+                    <p class="impact-description">Enhanced collaboration across teams globally with centralized data and
+                        shared resources.</p>
                 </div>
-                
+
                 <div class="impact-card">
                     <div class="impact-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3 class="impact-title">Increased System Reliability</h3>
-                    <p class="impact-description">Increased system reliability & business continuity with automated backups and disaster recovery.</p>
+                    <p class="impact-description">Increased system reliability & business continuity with automated
+                        backups and disaster recovery.</p>
                 </div>
-                
+
                 <div class="impact-card">
                     <div class="impact-icon">
                         <i class="fas fa-user-check"></i>
                     </div>
                     <h3 class="impact-title">Improved Customer Experience</h3>
-                    <p class="impact-description">Improved customer experience through performance scaling that adapts to user demand.</p>
+                    <p class="impact-description">Improved customer experience through performance scaling that adapts
+                        to user demand.</p>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Final CTA Section -->
     <section class="cta-container">
         <div class="container">
             <h2 class="cta-title">Ready for Cloud Transformation?</h2>
-            <p class="cta-description">Take your business to the next level with our comprehensive cloud solutions. Our experts will guide you through every step of your cloud journey.</p>
-            <a href="booking.html?service=cloud-solutions" class="cta-button-large">Get Started with Cloud Transformation</a>
+            <p class="cta-description">Take your business to the next level with our comprehensive cloud solutions. Our
+                experts will guide you through every step of your cloud journey.</p>
+            <a href="booking.html?service=cloud-solutions" class="cta-button-large">Get Started with Cloud
+                Transformation</a>
         </div>
     </section>
-    
+
     <!-- FAQ Section -->
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="faq-title">Frequently Asked Questions– Cloud Solutions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Why should my business move to the cloud? <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Cloud enables scalability, security, and cost-efficiency, ensuring your systems are
+                        future-ready. It provides flexibility to scale resources as needed, robust security measures,
+                        and converts capital expenses to operational expenses.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Which cloud platform is best for my company? <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        It depends on your business goals. We assess your needs and recommend AWS, Azure, GCP, or hybrid
+                        models based on your specific requirements, existing infrastructure, and strategic objectives.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is cloud migration risky for my data? <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        No. We ensure secure and seamless migration with backup and recovery plans. Our migration
+                        process includes comprehensive planning, testing, and validation to ensure data integrity and
+                        security throughout the transition.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How much do cloud solutions cost? <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Costs vary based on your usage. We design custom packages so you only pay for what you need. Our
+                        pricing models are transparent and scalable, allowing you to optimize costs while maintaining
+                        performance.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do you provide post-deployment support? <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, we offer 24/7 monitoring, maintenance, and optimization to keep your systems running
+                        smoothly. Our support includes proactive monitoring, regular updates, and rapid response to any
+                        issues that may arise.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // FAQ functionality with auto-collapse
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // Close all FAQ items first
+                document.querySelectorAll('.faq-item').forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+
+                // If the clicked item wasn't active, open it
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+
     <!-- FAQ Section -->
 <section class="faq-section">
     <div class="container">
@@ -1862,113 +2087,120 @@
 </script>
     
     <footer class="footer">
-  <div class="container">
-    <div class="footer-container">
-      <!-- Solutions Section with Dropdown -->
-      <div class="footer-col">
-        <h3>Solutions</h3>
-        <div class="footer-links">
-          
-          <!-- Next-Gen Tech Dropdown -->
-          <div class="footer-dropdown">
-            <div class="footer-dropdown-header">
-              <span><i class="fas fa-chevron-right"></i> Next-Gen Tech</span>
-              <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-            </div>
-            <div class="footer-dropdown-content">
-              <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> AI & Machine Learning</a>
-              <a href="CloudSolutions.html"><i class="fas fa-chevron-right"></i> Cloud Solutions</a>
-            </div>
-          </div>
+        <div class="container">
+            <div class="footer-container">
+                <!-- Solutions Section with Dropdown -->
+                <div class="footer-col">
+                    <h3>Solutions</h3>
+                    <div class="footer-links">
 
-          <!-- AI Services Dropdown -->
-          <div class="footer-dropdown">
-            <div class="footer-dropdown-header">
-              <span><i class="fas fa-chevron-right"></i> AI Services</span>
-              <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-            </div>
-            <div class="footer-dropdown-content">
-              <a href="AIServices.html"><i class="fas fa-chevron-right"></i> AI Services Overview</a>
-              <a href="AIStrategy.html"><i class="fas fa-chevron-right"></i> AI Strategy & Consulting</a>
-              <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> Machine Learning</a>
-              <a href="NLP.html"><i class="fas fa-chevron-right"></i> Natural Language Processing (NLP)</a>
-              <a href="ComputerVision.html"><i class="fas fa-chevron-right"></i> Computer Vision</a>
-              <a href="PredictiveAnalytics.html"><i class="fas fa-chevron-right"></i> Predictive Analysis</a>
-              <a href="ProcessAutomation.html"><i class="fas fa-chevron-right"></i> Process Automation</a>
-            </div>
-          </div>
+                        <!-- Next-Gen Tech Dropdown -->
+                        <div class="footer-dropdown">
+                            <div class="footer-dropdown-header">
+                                <span><i class="fas fa-chevron-right"></i> Next-Gen Tech</span>
+                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                            </div>
+                            <div class="footer-dropdown-content">
+                                <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> AI & Machine
+                                    Learning</a>
+                                <a href="CloudSolutions.html"><i class="fas fa-chevron-right"></i> Cloud Solutions</a>
+                            </div>
+                        </div>
 
-          <!-- Core Development Dropdown -->
-          <div class="footer-dropdown">
-            <div class="footer-dropdown-header">
-              <span><i class="fas fa-chevron-right"></i> Core Development</span>
-              <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-            </div>
-            <div class="footer-dropdown-content">
-              <a href="CustomSoftware.html"><i class="fas fa-chevron-right"></i> Custom Software Development</a>
-              <a href="MobileDevelopment.html"><i class="fas fa-chevron-right"></i> Mobile App Development</a>
-            </div>
-          </div>
+                        <!-- AI Services Dropdown -->
+                        <div class="footer-dropdown">
+                            <div class="footer-dropdown-header">
+                                <span><i class="fas fa-chevron-right"></i> AI Services</span>
+                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                            </div>
+                            <div class="footer-dropdown-content">
+                                <a href="AIServices.html"><i class="fas fa-chevron-right"></i> AI Services Overview</a>
+                                <a href="AIStrategy.html"><i class="fas fa-chevron-right"></i> AI Strategy &
+                                    Consulting</a>
+                                <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> Machine Learning</a>
+                                <a href="NLP.html"><i class="fas fa-chevron-right"></i> Natural Language Processing
+                                    (NLP)</a>
+                                <a href="ComputerVision.html"><i class="fas fa-chevron-right"></i> Computer Vision</a>
+                                <a href="PredictiveAnalytics.html"><i class="fas fa-chevron-right"></i> Predictive
+                                    Analysis</a>
+                                <a href="ProcessAutomation.html"><i class="fas fa-chevron-right"></i> Process
+                                    Automation</a>
+                            </div>
+                        </div>
 
-          <!-- Design & Experience Dropdown -->
-          <div class="footer-dropdown">
-            <div class="footer-dropdown-header">
-              <span><i class="fas fa-chevron-right"></i> Design & Experience</span>
-              <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-            </div>
-            <div class="footer-dropdown-content">
-              <a href="ui.html"><i class="fas fa-chevron-right"></i> UI/UX Design</a>
-            </div>
-          </div>
-        </div>
-      </div>
+                        <!-- Core Development Dropdown -->
+                        <div class="footer-dropdown">
+                            <div class="footer-dropdown-header">
+                                <span><i class="fas fa-chevron-right"></i> Core Development</span>
+                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                            </div>
+                            <div class="footer-dropdown-content">
+                                <a href="CustomSoftware.html"><i class="fas fa-chevron-right"></i> Custom Software
+                                    Development</a>
+                                <a href="MobileDevelopment.html"><i class="fas fa-chevron-right"></i> Mobile App
+                                    Development</a>
+                            </div>
+                        </div>
 
-      <!-- Insights Section -->
-      <div class="footer-col">
-        <h3>Insights</h3>
-        <div class="footer-links">
-          <a href="CaseStudies.html"><i class="fas fa-chevron-right"></i> Case Studies</a>
-          <a href="Blogs.html"><i class="fas fa-chevron-right"></i> Blogs</a>
-          <a href="CEOdesk.html"><i class="fas fa-chevron-right"></i> From CEO's Desk</a>
-          <!-- <a href="FutureZonixtec.html"><i class="fas fa-chevron-right"></i> Future of Zonixtec</a> -->
-          <a href="FAQs.html"><i class="fas fa-chevron-right"></i> FAQs</a>
-          <a href="Guides.html"><i class="fas fa-chevron-right"></i> Guides</a>
-          <a href="HowTos.html"><i class="fas fa-chevron-right"></i> How-tos</a>
-        </div>
-      </div>
+                        <!-- Design & Experience Dropdown -->
+                        <div class="footer-dropdown">
+                            <div class="footer-dropdown-header">
+                                <span><i class="fas fa-chevron-right"></i> Design & Experience</span>
+                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                            </div>
+                            <div class="footer-dropdown-content">
+                                <a href="ui.html"><i class="fas fa-chevron-right"></i> UI/UX Design</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-      <!-- Company Section -->
-    <div class="footer-col">
-        <h3>Company</h3>
-        <div class="footer-links">
-            <a href="aboutus.html"><i class="fas fa-chevron-right"></i> About Us</a>
-            <a href="aboutus.html"><i class="fas fa-chevron-right"></i> Our Story</a>
-            <!-- <a href="aboutus.html"><i class="fas fa-chevron-right"></i> Mission & Vision</a> -->
-            <a href="aboutus.html" id="aboutLink">
-                <i class="fas fa-chevron-right"></i> Mission & Vision
-            </a>
-    
-    
-            <a href="aboutus.html" id="OurJou"><i class="fas fa-chevron-right"></i> Our Journey</a>
-            <a href="aboutus.html" id="OurCore"><i class="fas fa-chevron-right"></i> Core Values</a>
-            <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
-            <a href="Leadership.html"><i class="fas fa-chevron-right"></i> Leadership</a>
-        </div>
-    </div>
+                <!-- Insights Section -->
+                <div class="footer-col">
+                    <h3>Insights</h3>
+                    <div class="footer-links">
+                        <a href="CaseStudies.html"><i class="fas fa-chevron-right"></i> Case Studies</a>
+                        <a href="Blogs.html"><i class="fas fa-chevron-right"></i> Blogs</a>
+                        <a href="CEOdesk.html"><i class="fas fa-chevron-right"></i> From CEO's Desk</a>
+                        <!-- <a href="FutureZonixtec.html"><i class="fas fa-chevron-right"></i> Future of Zonixtec</a> -->
+                        <a href="FAQs.html"><i class="fas fa-chevron-right"></i> FAQs</a>
+                        <a href="Guides.html"><i class="fas fa-chevron-right"></i> Guides</a>
+                        <a href="HowTos.html"><i class="fas fa-chevron-right"></i> How-tos</a>
+                    </div>
+                </div>
 
-      <!-- Quick Links Section -->
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <div class="footer-links">
-          <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
-          <a href="Testimonials.html"><i class="fas fa-chevron-right"></i> Testimonials</a>
-          <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
-          <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a>
-        </div>
-      </div>
+                <!-- Company Section -->
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <div class="footer-links">
+                        <a href="aboutus.html"><i class="fas fa-chevron-right"></i> About Us</a>
+                        <a href="aboutus.html"><i class="fas fa-chevron-right"></i> Our Story</a>
+                        <!-- <a href="aboutus.html"><i class="fas fa-chevron-right"></i> Mission & Vision</a> -->
+                        <a href="aboutus.html" id="aboutLink">
+                            <i class="fas fa-chevron-right"></i> Mission & Vision
+                        </a>
 
-      <!-- Newsletter Section -->
-      <!-- <div class="footer-col">
+
+                        <a href="aboutus.html" id="OurJou"><i class="fas fa-chevron-right"></i> Our Journey</a>
+                        <a href="aboutus.html" id="OurCore"><i class="fas fa-chevron-right"></i> Core Values</a>
+                        <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
+                        <a href="Leadership.html"><i class="fas fa-chevron-right"></i> Leadership</a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
+                        <a href="Testimonials.html"><i class="fas fa-chevron-right"></i> Testimonials</a>
+                        <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
+                        <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a>
+                    </div>
+                </div>
+
+                <!-- Newsletter Section -->
+                <!-- <div class="footer-col">
         <h3>Newsletter</h3>
         <p>Subscribe to our newsletter to receive updates on our latest services, technology insights, and industry trends.</p>
         <div class="form-group" id="newsletter-group">
@@ -1979,75 +2211,84 @@
           Thank you for subscribing!
         </div>
       </div> -->
-    </div>
+            </div>
 
-    <div class="footer-bottom">
-      <p>&copy; 2024 Zonixtec. All Rights Reserved. | Designed with by Zonixtec Team</p>
-    </div>
-  </div>
-</footer>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Zonixtec. All Rights Reserved. | Designed with by Zonixtec Team</p>
+            </div>
+        </div>
+    </footer>
 
-<style>
-.footer-dropdown-content {
-  display: none;
-  margin-left: 15px;
-}
-.footer-dropdown.open .footer-dropdown-content {
-  display: block;
-}
-.footer-dropdown-header {
-  display: flex;
-  color: var(--gray);
-  /* transform: ; */
-  justify-content: space-between;
-  cursor: pointer;
-  margin: 5px 0;
-}
-.footer-dropdown-header:hover {
-  color: var(--secondary);
-}
-</style>
+    <style>
+        .footer-dropdown-content {
+            display: none;
+            margin-left: 15px;
+        }
 
-<script>
-document.querySelectorAll('.footer-dropdown-header').forEach(header => {
-  header.addEventListener('click', () => {
-    const parent = header.parentElement;
-    parent.classList.toggle('open');
-  });
-});
-</script>
+        .footer-dropdown.open .footer-dropdown-content {
+            display: block;
+        }
 
-    
+        .footer-dropdown-header {
+            display: flex;
+            color: var(--gray);
+            /* transform: ; */
+            justify-content: space-between;
+            cursor: pointer;
+            margin: 5px 0;
+        }
+
+        .footer-dropdown-header:hover {
+            color: var(--secondary);
+        }
+    </style>
+
+    <script>
+        document.querySelectorAll('.footer-dropdown-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const parent = header.parentElement;
+                parent.classList.toggle('open');
+            });
+        });
+    </script>
+
+
     <script>
         // Mobile menu functionality
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
             document.querySelector('.nav-links').classList.toggle('active');
         });
+
+
+
+
+
         
         document.addEventListener('DOMContentLoaded', function() {
             
             
+
             // Create dynamic data lines for cloud animation
             const cloudAnimation = document.querySelector('.cloud-animation');
             function createDataLine() {
                 const top = Math.random() * 200;
                 const left = Math.random() * 250;
                 const angle = (Math.random() * 40) - 20;
-                
+
                 const line = document.createElement('div');
                 line.className = 'data-line';
                 line.style.top = `${top}px`;
                 line.style.left = `${left}px`;
                 line.style.transform = `rotate(${angle}deg)`;
-                
+
                 cloudAnimation.appendChild(line);
-                
+
                 // Remove the line after animation completes
                 setTimeout(() => {
                     line.remove();
                 }, 3000);
             }
-            
+
             // Create new data lines periodically
             setInterval(createDataLine, 300);
         });
@@ -2059,93 +2300,196 @@ document.querySelectorAll('.footer-dropdown-header').forEach(header => {
     <script src="./script/chatbot.js"></script>
 
 
-    <!-- Booking Modal -->
-<div class="modal" id="bookingModal">
-    <div class="modal-content">
-        <button class="close-modal" onclick="closeBookingModal()">
-            <i class="fas fa-times"></i>
-        </button>
-        
-        <div class="modal-header">
-            <h2>Book Your Free 30-Minute Consultation</h2>
-            <p>Let's discuss how we can help transform your business</p>
+
+    <!--open booking 30 min call modal -->
+
+    <div id="bookingModal" class="booking-modal">
+        <div class="booking-modal-content">
+
+            <!-- CLOSE BUTTON -->
+            <span class="booking-modal-close" onclick="closeBookingModal()">&times;</span>
+
+            <!-- STEP PROGRESS -->
+            <div class="booking-progress-indicator">
+                <div class="booking-progress-step booking-active" id="progress1" data-step="1"></div>
+                <div class="booking-progress-line" id="line1"></div>
+                <div class="booking-progress-step" id="progress2" data-step="2"></div>
+                <div class="booking-progress-line" id="line2"></div>
+                <div class="booking-progress-step" id="progress3" data-step="3"></div>
+                <div class="booking-progress-line" id="line3"></div>
+                <div class="booking-progress-step" id="progress4" data-step="4"></div>
+            </div>
+
+            <!-- STEP 1 -->
+            <div class="booking-modal-step booking-active" id="step1">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">1</div>
+                    <h2 class="booking-step-title">Zonixtec — 30-Minute Discovery Call</h2>
+                </div>
+
+                <div class="booking-discovery-subtitle">
+                    Duration: 30 Minutes | Mode: Web Conference
+                </div>
+
+                <div class="booking-session-overview">
+                    <h4 class="booking-session-title">In this quick session, we'll cover:</h4>
+                    <div class="booking-session-items-grid">
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Introduction & Requirement Understanding</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Relevant Use Case Demo</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Technology Solutions & Offerings</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Project Roadmap & Next Steps</span>
+                        </div>
+                    </div>
+
+                    <div class="booking-discovery-goal">
+                        <strong>Goal:</strong>
+                        <p>Understand your needs and explore how Zonixtec can deliver the right tech solutions for your
+                            project.</p>
+                    </div>
+                </div>
+
+                <div class="booking-step-navigation">
+                    <div></div>
+                    <button class="booking-btn-primary" onclick="nextStep(1)">
+                        Next: Select Date <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="booking-modal-step" id="step2">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">2</div>
+                    <h2 class="booking-step-title">Select Your Preferred Date</h2>
+                </div>
+
+                <input type="text" id="dateInput" class="booking-calendar-input" placeholder="Pick a date" readonly />
+
+                <div class="booking-step-navigation">
+                    <button class="booking-btn-secondary" onclick="previousStep(2)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="booking-btn-primary" id="dateNextBtn" onclick="nextStep(2)" disabled>
+                        Next: Select Time <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="booking-modal-step" id="step3">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">3</div>
+                    <h2 class="booking-step-title">Choose Your Time Slot</h2>
+                </div>
+
+                <div class="booking-time-slots">
+                    <div class="booking-time-slot" data-time="10:30">10:30 AM</div>
+                    <div class="booking-time-slot" data-time="11:30">11:30 AM</div>
+                    <div class="booking-time-slot" data-time="12:00">12:00 PM</div>
+                    <div class="booking-time-slot" data-time="12:30">12:30 PM</div>
+                    <div class="booking-time-slot" data-time="13:00">1:00 PM</div>
+                    <div class="booking-time-slot" data-time="13:30">1:30 PM</div>
+                    <div class="booking-time-slot" data-time="14:00">2:00 PM</div>
+                    <div class="booking-time-slot" data-time="14:30">2:30 PM</div>
+                    <div class="booking-time-slot" data-time="15:00">3:00 PM</div>
+                    <div class="booking-time-slot" data-time="15:30">3:30 PM</div>
+                    <div class="booking-time-slot" data-time="16:00">4:00 PM</div>
+                    <div class="booking-time-slot" data-time="16:30">4:30 PM</div>
+                    <div class="booking-time-slot" data-time="17:00">5:00 PM</div>
+                </div>
+
+                <div class="booking-step-navigation">
+                    <button class="booking-btn-secondary" onclick="previousStep(3)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="booking-btn-primary" id="timeNextBtn" onclick="nextStep(3)" disabled>
+                        Next: Your Info <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="booking-modal-step" id="step4">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">4</div>
+                    <h2 class="booking-step-title">Your Information</h2>
+                </div>
+
+                <form class="booking-modal-form" id="bookingFormPage">
+
+                    <div class="form-group-row">
+                        <label for="bookingName">Full Name</label>
+                        <input type="text" id="bookingName" placeholder="Enter your full name" required />
+                    </div>
+                    <span class="error-text" id="nameError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingEmail">Email</label>
+                        <input type="email" id="bookingEmail" placeholder="Enter your email" required />
+                    </div>
+                    <span class="error-text" id="emailError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingPhone">Phone</label>
+                        <input type="tel" id="bookingPhone" placeholder="Enter your phone number" required />
+                    </div>
+                    <span class="error-text" id="phoneError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingCompany">Company</label>
+                        <input type="text" id="bookingCompany" placeholder="Company (optional)" />
+                    </div>
+
+                    <div class="form-group-row">
+                        <label for="bookingMessage">Message</label>
+                        <textarea id="bookingMessage" placeholder="Describe what services you need..."></textarea>
+                    </div>
+
+                    <div class="booking-step-navigation">
+                        <button type="button" class="booking-btn-secondary" onclick="previousStep(4)">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </button>
+
+                        <button type="submit" class="booking-btn-primary">
+                            <i class="fas fa-calendar-check"></i> Book My Free Consultation
+                        </button>
+                    </div>
+
+                </form>
+
+
+
+            </div>
+
+            <!-- SUCCESS -->
+            <div id="bookingSuccessPage" class="booking-success-message">
+                <i class="fas fa-check-circle"></i>
+                <h3>Your Call is Booked!</h3>
+                <p>Our team will contact you shortly. Thank you!</p>
+            </div>
+
         </div>
-
-        <form class="booking-form" id="bookingForm">
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Full Name <span>*</span></label>
-                    <input type="text" id="bookingName" placeholder="Enter your full name" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Email Address <span>*</span></label>
-                    <input type="email" id="bookingEmail" placeholder="your@email.com" required>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Phone Number <span>*</span></label>
-                    <input type="tel" id="bookingPhone" placeholder="+91 999999999" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Company Name</label>
-                    <input type="text" id="bookingCompany" placeholder="Your company (optional)">
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Preferred Date <span>*</span></label>
-                    <input type="date" id="bookingDate" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Preferred Time <span>*</span></label>
-                    <input type="time" id="bookingTime" required>
-                </div>
-            </div>
-
-            <div class="form-group-modal">
-                <label>Service Interested In <span>*</span></label>
-                <select id="bookingService" required>
-                    <option value="">Select a service</option>
-                    <option value="CRM Solutions">CRM Solutions</option>
-                    <option value="ERP Solutions">ERP Solutions</option>
-                    <option value="Billing Software">Billing Software</option>
-                    <option value="Website Development">Website Development</option>
-                    <option value="Mobile App Development">Mobile App Development</option>
-                    <option value="AI Solutions">AI Solutions</option>
-                    <option value="Cloud Solutions">Cloud Solutions</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="UI/UX Design">UI/UX Design</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-
-            <div class="form-group-modal">
-                <label>Message / Additional Details</label>
-                <textarea id="bookingMessage" placeholder="Tell us about your project or questions..."></textarea>
-            </div>
-
-            <button type="submit" class="submit-booking-btn">
-                <i class="fas fa-calendar-check"></i> Book My Call
-            </button>
-        </form>
     </div>
-</div>
-
-<!-- Success Message Overlay -->
-<div class="success-message" id="bookingSuccess">
-    <i class="fas fa-check-circle"></i> 
-    <strong>Your Call is Booked!</strong>
-    <p>Our team will connect with you as soon as possible. Thank you for choosing Zonixtec!</p>
-</div>
 
 
     <!-- Booking Modal Script -->
     <script src="./script/booking-modal.js"></script>
     <script src="./script/navbar.js"></script>
+    <script src="./script/30min-booking.js"></script>
+
     <script src="./script/allabout.js"></script>
 
 </body>
+
 </html>

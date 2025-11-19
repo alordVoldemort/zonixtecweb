@@ -95,6 +95,137 @@
     .filter-tab:hover {
       border-color: var(--primary);
     }
+    /* FIX TABLE WRAPPER */
+.table-container {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    overflow-x: auto; /* ENABLE HORIZONTAL SCROLL FOR MOBILE */
+}
+
+/* FIX TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 850px; /* keeps columns readable */
+}
+
+/* HEADER ROW */
+table thead th {
+    background: #f0f4ff;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a237e;
+    border-bottom: 2px solid #e0e0e0;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* BODY ROW */
+table tbody td {
+    padding: 14px;
+    font-size: 14px;
+    border-bottom: 1px solid #efefef;
+    vertical-align: middle;
+    color: #333;
+}
+
+/* STRIPED ROWS */
+table tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+/* HOVER EFFECT */
+table tbody tr:hover {
+    background: #e8f0ff;
+    transition: 0.2s;
+}
+
+/* CONTACT INFO INSIDE TABLE */
+.booking-details i {
+    font-size: 12px;
+    margin-right: 5px;
+    color: var(--primary);
+}
+
+/* STATUS BADGES FIX */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    min-width: 85px;
+    text-align: center;
+}
+
+/* ACTION BUTTONS FIX */
+.action-btns {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    padding: 6px 10px !important;
+    font-size: 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* TABLE TITLE FIX */
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.table-header h2 {
+    font-size: 20px;
+    color: #111;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* REFRESH BUTTON FIX */
+.table-actions button {
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: #e3f2fd;
+    border: 1px solid #90caf9;
+    color: #0d47a1;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.table-actions button:hover {
+    background: #bbdefb;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .table-container {
+        padding: 12px;
+        border-radius: 10px;
+    }
+    table {
+        min-width: 700px; /* keep layout readable */
+    }
+    table thead th,
+    table tbody td {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+
   </style>
 </head>
 

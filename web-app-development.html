@@ -15,6 +15,10 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="./CSS/30min-model.css">
+
     <style>
         :root {
             --primary: #0066ff;
@@ -360,9 +364,27 @@
             font-weight: 500;
         }
 
+        .advantage-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .advantage-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .advantage-list i {
+            color: var(--secondary);
+            margin-top: 5px;
+            flex-shrink: 0;
+        }
+
         /* Flashcard Services Section */
         .flashcards-section {
-            margin-bottom: 80px;
+            margin-bottom: 0px;
         }
 
         .flashcards-title {
@@ -475,17 +497,6 @@
             box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
         }
 
-        /* Features Section */
-        .features-section {
-            margin-bottom: 80px;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
         .feature-card {
             background: rgba(15, 23, 42, 0.6);
             border-radius: 15px;
@@ -525,6 +536,56 @@
         }
 
         .feature-desc {
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+        /* Challenges Section */
+        .challenges-section {
+            position: relative;
+            padding: 80px 0;
+            margin-bottom: 8px;
+
+        }
+
+        .challenges-container {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 20px;
+            padding: 13px;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+        }
+
+        .challenges-title {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .challenges-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .challenge-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .challenge-icon {
+            color: #ef4444;
+            margin-right: 15px;
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .challenge-text {
             color: #94a3b8;
             line-height: 1.7;
         }
@@ -939,7 +1000,9 @@
             width: 100%;
         }
 
-        .sett{
+        .sett {
+          margin: 7px;
+        .sett {
             margin: 7px;
         }
 
@@ -1153,6 +1216,114 @@
             transform: translateX(5px);
         }
 
+
+        .overview-section {
+            background: rgba(10, 10, 26, 0.7);
+            border-radius: 10px;
+            padding: 60px;
+            margin-bottom: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .overview-section h2 {
+            text-align: center;
+            color: var(--secondary);
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+        }
+
+        .overview-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .overview-text {
+            font-size: 1.1rem;
+            color: var(--gray);
+            line-height: 1.8;
+            text-align: left;
+            /* Ensure text is left-aligned */
+        }
+
+        .overview-text p {
+            margin-bottom: 20px;
+            text-align: justify;
+            /* Optional: makes text look more polished */
+        }
+
+        .overview-highlight-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .overview-highlight {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--secondary);
+            text-align: center;
+            padding: 30px;
+            background: rgba(0, 102, 255, 0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(0, 102, 255, 0.3);
+            line-height: 1.4;
+        }
+
+        /* Features Section */
+        .features-section {
+            margin-bottom: 30px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-item {
+            background: rgba(10, 10, 26, 0.7);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            border-color: var(--success);
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(39, 174, 96, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--success);
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .feature-content h3 {
+            color: var(--light);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-content p {
+            color: var(--gray);
+            margin: 0;
+        }
+
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -1234,14 +1405,16 @@
                 </a>
                 <div class="nav-links">
 
-                  <a href="#" class="about-toggle">About Us</a>
-                    
+                    <a href="#" class="about-toggle">About Us</a>
+
                     <!-- ABOUT DROPDOWN PANEL -->
                     <div class="about-dropdown">
-                        <div><h2>About Us</h2></div>
+                        <div>
+                            <h2>About Us</h2>
+                        </div>
 
                         <div class="about-container">
-                            
+
                             <div class="about-links">
                                 <div>
                                     <a href="aboutus.html">About Zonixtec</a>
@@ -1254,11 +1427,12 @@
                                     <a href="#">Case Study</a>
                                 </div>
                             </div>
-                    
+
                             <span class="about-close">&times;</span>
-                    
+
                             <div class="about-image">
-                                <img src="./Assets/ai-nuclear-energy-background-future-innovation-disruptive-technology 3.png" alt="">
+                                <img src="./Assets/ai-nuclear-energy-background-future-innovation-disruptive-technology 3.png"
+                                    alt="">
                             </div>
                         </div>
                     </div>
@@ -1306,56 +1480,42 @@
         <div class="container">
             <div class="services-hero-content">
                 <h1 class="services-hero-title">Web App Development Services</h1>
-                <p class="hero-subtitle">Build Smart, Scale Fast, Perform Better.</p>
-                <p class="hero-description">At Zonixtec, we transform ideas into powerful web applications that empower
+                <p class="hero-subtitle">Our Web App Development services focus on creating interactive,
+                    secure, and high-performing applications that deliver exceptional user experiences.</p>
+                <!-- <p class="hero-description">At Zonixtec, we transform ideas into powerful web applications that empower
                     businesses to scale seamlessly. Our Web App Development services focus on creating interactive,
                     secure, and high-performing applications that deliver exceptional user experiences—whether it's a
-                    business automation tool, enterprise platform, or customer-facing app.</p>
+                    business automation tool, enterprise platform, or customer-facing app.</p> -->
                 <a href="booking.html?service=web-app-development" class="cta-button">Let's Build Your Web App →</a>
             </div>
         </div>
     </section>
 
-    <!-- Web App Overview Section -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="services-overview">
-                <div class="services-intro">
-                    <p class="section-subtitle">OUR EXPERTISE</p>
-                    <h2>Custom Web Applications for Your Business Needs</h2>
-                    <p>We develop web applications tailored to your business objectives, ensuring performance,
-                        reliability, and scalability across every layer. From automating workflows to managing complex
-                        data, our solutions are designed to boost efficiency and drive growth.</p>
-                    <p>With expertise in modern frameworks and cloud technologies, we build applications that not only
-                        meet today's requirements but are also ready for tomorrow's challenges.</p>
 
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <div class="stat-value">100%</div>
-                            <div class="stat-label">Custom Solutions</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-value">50%</div>
-                            <div class="stat-label">Faster Development</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-value">24<span class="sett">/</span>7</div>
-                            <div class="stat-label">Support & Maintenance</div>
-                        </div>
-                    </div>
+    <div class="container">
+        <div class="overview-section">
+            <h2>Build Smart | Scale Fast | Perform Better</h2>
+
+            <div class="overview-content">
+                <div class="overview-text">
+                    <p>At Zonixtec, we transform ideas into powerful web applications that empower businesses to
+                        scale seamlessly.
+                    <p>Our Web App Development services focus on creating interactive, secure,
+                        and high-performing applications that deliver exceptional user experiences—whether it’s a
+                        business automation tool, enterprise platform, or customer-facing app.</p>
+                    </p>
+
                 </div>
-                <div class="services-image">
-                    <!-- Image with fallback placeholder -->
-                    <img src="./uploads/wdd1.jpg" alt="Web App Development"
-                        onerror="this.style.display='none'; document.getElementById('image-placeholder').style.display='flex';">
-                    <div class="image-placeholder" id="image-placeholder" style="display:none;">
-                        <i class="fas fa-code"></i>
-                        <p>Web App Development</p>
-                    </div>
+                <div class="overview-highlight-container">
+                    <img src="./uploads/wdd1.jpg" alt="Web App Development" -->
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+
+
+
 
     <!-- Key Offerings Section -->
     <section class="section-padding flashcards-section">
@@ -1475,110 +1635,146 @@
     </section>
 
     <!-- Key Features Section -->
-    <section class="section-padding features-section">
+    <!-- Features Section -->
+    <section class="features-section section-padding">
         <div class="container">
-            <h2 class="section-title">Why Choose Our Web App Development</h2>
+            <h2 class="section-title">Features of Our <span>Solutions</span></h2>
+
             <div class="features-grid">
-                <div class="feature-card">
+                <div class="feature-item">
                     <div class="feature-icon">
-                        <i class="fas fa-rocket"></i>
+                        <i class="fas fa-laptop"></i>
                     </div>
-                    <h3 class="feature-title">High Performance</h3>
-                    <p class="feature-desc">We build web applications optimized for speed and performance, ensuring fast
-                        load times and smooth user interactions even under heavy traffic.</p>
+                    <div class="feature-content">
+                        <h3>Cross-Platform Compatibility</h3>
+                        <p>Applications that work smoothly across desktop, mobile, and tablets with fully responsive
+                            layouts.</p>
+                    </div>
                 </div>
 
-                <div class="feature-card">
+                <div class="feature-item">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="feature-title">Security First</h3>
-                    <p class="feature-desc">Security is integrated into every layer of our development process,
-                        protecting your data and users from potential threats.</p>
+                    <div class="feature-content">
+                        <h3>Secure User Authentication</h3>
+                        <p>Role-based access control and encrypted login systems that protect users and sensitive
+                            business data.</p>
+                    </div>
                 </div>
 
-                <div class="feature-card">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Real-Time Analytics & Dashboards</h3>
+                        <p>Instant insights with live reports, visual dashboards, and performance tracking for faster
+                            decisions.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
                     <div class="feature-icon">
                         <i class="fas fa-expand-arrows-alt"></i>
                     </div>
-                    <h3 class="feature-title">Scalable Architecture</h3>
-                    <p class="feature-desc">Our applications are built with scalable architectures that grow with your
-                        business, handling increased users and data without performance degradation.</p>
+                    <div class="feature-content">
+                        <h3>Scalable Architecture</h3>
+                        <p>A sturdy backend designed to handle growing users, data, and business needs without
+                            performance drops.</p>
+                    </div>
                 </div>
 
-                <div class="feature-card">
+                <div class="feature-item">
                     <div class="feature-icon">
-                        <i class="fas fa-mobile"></i>
+                        <i class="fas fa-plug"></i>
                     </div>
-                    <h3 class="feature-title">Responsive Design</h3>
-                    <p class="feature-desc">We create web applications that provide optimal viewing experiences across
-                        all devices, from desktops to smartphones.</p>
+                    <div class="feature-content">
+                        <h3>API-First Development</h3>
+                        <p>Seamless integration with third-party tools, CRMs, payment gateways, and internal systems
+                            through powerful APIs.</p>
+                    </div>
                 </div>
 
-                <div class="feature-card">
+                <div class="feature-item">
                     <div class="feature-icon">
-                        <i class="fas fa-sync"></i>
+                        <i class="fas fa-rocket"></i>
                     </div>
-                    <h3 class="feature-title">Agile Development</h3>
-                    <p class="feature-desc">We follow agile methodologies to deliver incremental value, incorporate
-                        feedback, and ensure your project stays aligned with business goals.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
+                    <div class="feature-content">
+                        <h3>CI/CD Support</h3>
+                        <p>Fast and reliable updates with automated testing, continuous deployment, and zero-downtime
+                            releases.</p>
                     </div>
-                    <h3 class="feature-title">Ongoing Support</h3>
-                    <p class="feature-desc">We provide continuous maintenance and support to keep your web application
-                        secure, updated, and performing at its best.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Development Process Section -->
-    <!-- <section class="section-padding process-section">
-        <div class="container">
-            <h2 class="section-title">Our Web App Development Process</h2>
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3 class="step-title">Discovery & Planning</h3>
-                    <p class="step-desc">We analyze your requirements, define project scope, and create a detailed development roadmap.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3 class="step-title">UI/UX Design</h3>
-                    <p class="step-desc">Our designers create intuitive and engaging user interfaces that enhance user experience.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3 class="step-title">Development</h3>
-                    <p class="step-desc">Our developers build your web application using modern technologies and best practices.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3 class="step-title">Testing & QA</h3>
-                    <p class="step-desc">We conduct rigorous testing to ensure functionality, performance, and security standards.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">5</div>
-                    <h3 class="step-title">Deployment</h3>
-                    <p class="step-desc">We deploy your application to production environments with minimal downtime.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">6</div>
-                    <h3 class="step-title">Support & Maintenance</h3>
-                    <p class="step-desc">We provide ongoing support, updates, and enhancements to keep your application running smoothly.</p>
+    <!-- Advantages Section -->
+    <section class="section-padding advantage-section">
+        <div class="advantage-section">
+            <h2 class="section-title">What We <span>Bring</span></h2>
+
+            <div class="advantage-content">
+                <div style="text-align: center;">
+                    <p>We don’t just build web apps—we build digital solutions that transform operations.</p>
+
+                    <ul class="advantage-list"
+                        style="list-style: none; padding: 0; display: inline-block; text-align: left;">
+                        <li><i class="fas fa-check"></i> Agile development for faster time-to-market</li>
+                        <li><i class="fas fa-check"></i> Cloud-native and microservices-ready architecture</li>
+                        <li><i class="fas fa-check"></i> Tailored user experience and design flow</li>
+                        <li><i class="fas fa-check"></i> Enterprise-grade security and compliance</li>
+                        <li><i class="fas fa-check"></i> Continuous improvement with performance monitoring</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
+
+
+    <!-- Challenges Section -->
+    <section class="challenges-section section-padding">
+        <div class="container">
+            <div class="challenges-container">
+                <h2 class="challenges-title">Challenges Without Modern Web Apps</h2>
+                <div class="challenges-list">
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p class="challenge-text">Inefficient manual workflows are slowing productivity</p>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p class="challenge-text">Data silos and disconnected systems</p>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p class="challenge-text">Security vulnerabilities due to outdated infrastructure</p>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p class="challenge-text">Poor scalability during user or data growth</p>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p class="challenge-text">Limited accessibility and performance issues</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
 
     <!-- Development Process Section -->
     <section class="section-padding process-section">
@@ -1698,61 +1894,53 @@
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question">
-                        What is the typical timeline for developing a web application?
+                        What industries can benefit from web app development?
                         <i class="fas fa-chevron-down faq-toggle"></i>
                     </div>
                     <div class="faq-answer">
-                        The timeline depends on the complexity and features of your web application. A simple
-                        application may take 4-8 weeks, while more complex enterprise solutions can take 3-6 months. We
-                        provide a detailed timeline after the initial discovery phase.
+                        All industries—from logistics and healthcare to fintech and education—benefit from secure and
+scalable web applications.
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        Do you provide post-development support and maintenance?
+                        What’s the difference between a website and a web app?
                         <i class="fas fa-chevron-down faq-toggle"></i>
                     </div>
                     <div class="faq-answer">
-                        Yes, we offer comprehensive support and maintenance packages that include bug fixes, security
-                        updates, performance optimization, and feature enhancements to ensure your web application
-                        remains secure and up-to-date.
+                        A website shares information, while a web app allows users to interact, perform actions, and
+process data in real time.
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        Can you integrate third-party APIs into my web application?
+                        Can you develop a custom app from scratch?
                         <i class="fas fa-chevron-down faq-toggle"></i>
                     </div>
                     <div class="faq-answer">
-                        Absolutely. We have extensive experience integrating various third-party APIs including payment
-                        gateways, CRM systems, email services, social media platforms, and more to extend the
-                        functionality of your web application.
+                        Yes! We specialize in end-to-end custom web app development tailored to your business goals.
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        How do you ensure the security of web applications?
+                        Do you offer cloud hosting and deployment?
                         <i class="fas fa-chevron-down faq-toggle"></i>
                     </div>
                     <div class="faq-answer">
-                        We follow security best practices throughout the development process, including secure coding
-                        standards, regular security testing, data encryption, authentication and authorization
-                        mechanisms, and compliance with industry security standards.
+                       Absolutely. We deploy apps on secure cloud platforms like AWS, Azure, or Google Cloud.
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        Can you migrate my existing web application to a new technology stack?
+                        Will you maintain and update the app after launch?
                         <i class="fas fa-chevron-down faq-toggle"></i>
                     </div>
                     <div class="faq-answer">
-                        Yes, we specialize in application modernization and migration services. We can help migrate your
-                        legacy applications to modern, scalable technology stacks while preserving data integrity and
-                        business logic.
+                        Yes, we provide continuous support, updates, and performance optimization services.
                     </div>
                 </div>
             </div>
@@ -1767,7 +1955,8 @@
                 <p class="cta-subtitle">Let's discuss your project requirements and create a custom web application that
                     drives your business forward. Our team is ready to bring your vision to life with cutting-edge
                     technology and innovative solutions.</p>
-                <button class="cta-button-large" onclick="window.location.href='booking.html?service=web-app-development'">Start Your Project
+                <button class="cta-button-large"
+                    onclick="window.location.href='booking.html?service=web-app-development'">Start Your Project
                     Today</button>
             </div>
         </div>
@@ -1988,92 +2177,194 @@
     <script src="./script/chatbot.js"></script>
 
 
-    <!-- Booking Modal -->
-    <div class="modal" id="bookingModal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeBookingModal()">
-                <i class="fas fa-times"></i>
-            </button>
+    <!--open booking 30 min call modal -->
 
-            <div class="modal-header">
-                <h2>Book Your Free 30-Minute Consultation</h2>
-                <p>Let's discuss how we can help transform your business</p>
+    <div id="bookingModal" class="booking-modal">
+        <div class="booking-modal-content">
+
+            <!-- CLOSE BUTTON -->
+            <span class="booking-modal-close" onclick="closeBookingModal()">&times;</span>
+
+            <!-- STEP PROGRESS -->
+            <div class="booking-progress-indicator">
+                <div class="booking-progress-step booking-active" id="progress1" data-step="1"></div>
+                <div class="booking-progress-line" id="line1"></div>
+                <div class="booking-progress-step" id="progress2" data-step="2"></div>
+                <div class="booking-progress-line" id="line2"></div>
+                <div class="booking-progress-step" id="progress3" data-step="3"></div>
+                <div class="booking-progress-line" id="line3"></div>
+                <div class="booking-progress-step" id="progress4" data-step="4"></div>
             </div>
 
-            <form class="booking-form" id="bookingForm">
-                <div class="form-row">
-                    <div class="form-group-modal">
-                        <label>Full Name <span>*</span></label>
-                        <input type="text" id="bookingName" placeholder="Enter your full name" required>
+            <!-- STEP 1 -->
+            <div class="booking-modal-step booking-active" id="step1">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">1</div>
+                    <h2 class="booking-step-title">Zonixtec — 30-Minute Discovery Call</h2>
+                </div>
+
+                <div class="booking-discovery-subtitle">
+                    Duration: 30 Minutes | Mode: Web Conference
+                </div>
+
+                <div class="booking-session-overview">
+                    <h4 class="booking-session-title">In this quick session, we'll cover:</h4>
+                    <div class="booking-session-items-grid">
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Introduction & Requirement Understanding</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Relevant Use Case Demo</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Technology Solutions & Offerings</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Project Roadmap & Next Steps</span>
+                        </div>
                     </div>
-                    <div class="form-group-modal">
-                        <label>Email Address <span>*</span></label>
-                        <input type="email" id="bookingEmail" placeholder="your@email.com" required>
+
+                    <div class="booking-discovery-goal">
+                        <strong>Goal:</strong>
+                        <p>Understand your needs and explore how Zonixtec can deliver the right tech solutions for your
+                            project.</p>
                     </div>
                 </div>
 
-                <div class="form-row">
-                    <div class="form-group-modal">
-                        <label>Phone Number <span>*</span></label>
-                        <input type="tel" id="bookingPhone" placeholder="+91 999999999" required>
-                    </div>
-                    <div class="form-group-modal">
-                        <label>Company Name</label>
-                        <input type="text" id="bookingCompany" placeholder="Your company (optional)">
-                    </div>
+                <div class="booking-step-navigation">
+                    <div></div>
+                    <button class="booking-btn-primary" onclick="nextStep(1)">
+                        Next: Select Date <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="booking-modal-step" id="step2">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">2</div>
+                    <h2 class="booking-step-title">Select Your Preferred Date</h2>
                 </div>
 
-                <div class="form-row">
-                    <div class="form-group-modal">
-                        <label>Preferred Date <span>*</span></label>
-                        <input type="date" id="bookingDate" required>
+                <input type="text" id="dateInput" class="booking-calendar-input" placeholder="Pick a date" readonly />
+
+                <div class="booking-step-navigation">
+                    <button class="booking-btn-secondary" onclick="previousStep(2)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="booking-btn-primary" id="dateNextBtn" onclick="nextStep(2)" disabled>
+                        Next: Select Time <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="booking-modal-step" id="step3">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">3</div>
+                    <h2 class="booking-step-title">Choose Your Time Slot</h2>
+                </div>
+
+                <div class="booking-time-slots">
+                    <div class="booking-time-slot" data-time="10:30">10:30 AM</div>
+                    <div class="booking-time-slot" data-time="11:30">11:30 AM</div>
+                    <div class="booking-time-slot" data-time="12:00">12:00 PM</div>
+                    <div class="booking-time-slot" data-time="12:30">12:30 PM</div>
+                    <div class="booking-time-slot" data-time="13:00">1:00 PM</div>
+                    <div class="booking-time-slot" data-time="13:30">1:30 PM</div>
+                    <div class="booking-time-slot" data-time="14:00">2:00 PM</div>
+                    <div class="booking-time-slot" data-time="14:30">2:30 PM</div>
+                    <div class="booking-time-slot" data-time="15:00">3:00 PM</div>
+                    <div class="booking-time-slot" data-time="15:30">3:30 PM</div>
+                    <div class="booking-time-slot" data-time="16:00">4:00 PM</div>
+                    <div class="booking-time-slot" data-time="16:30">4:30 PM</div>
+                    <div class="booking-time-slot" data-time="17:00">5:00 PM</div>
+                </div>
+
+                <div class="booking-step-navigation">
+                    <button class="booking-btn-secondary" onclick="previousStep(3)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="booking-btn-primary" id="timeNextBtn" onclick="nextStep(3)" disabled>
+                        Next: Your Info <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="booking-modal-step" id="step4">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">4</div>
+                    <h2 class="booking-step-title">Your Information</h2>
+                </div>
+
+                <form class="booking-modal-form" id="bookingFormPage">
+
+                    <div class="form-group-row">
+                        <label for="bookingName">Full Name</label>
+                        <input type="text" id="bookingName" placeholder="Enter your full name" required />
                     </div>
-                    <div class="form-group-modal">
-                        <label>Preferred Time <span>*</span></label>
-                        <input type="time" id="bookingTime" required>
+                    <span class="error-text" id="nameError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingEmail">Email</label>
+                        <input type="email" id="bookingEmail" placeholder="Enter your email" required />
                     </div>
-                </div>
+                    <span class="error-text" id="emailError"></span>
 
-                <div class="form-group-modal">
-                    <label>Service Interested In <span>*</span></label>
-                    <select id="bookingService" required>
-                        <option value="">Select a service</option>
-                        <option value="CRM Solutions">CRM Solutions</option>
-                        <option value="ERP Solutions">ERP Solutions</option>
-                        <option value="Billing Software">Billing Software</option>
-                        <option value="Website Development">Website Development</option>
-                        <option value="Mobile App Development">Mobile App Development</option>
-                        <option value="AI Solutions">AI Solutions</option>
-                        <option value="Cloud Solutions">Cloud Solutions</option>
-                        <option value="Digital Marketing">Digital Marketing</option>
-                        <option value="UI/UX Design">UI/UX Design</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
+                    <div class="form-group-row">
+                        <label for="bookingPhone">Phone</label>
+                        <input type="tel" id="bookingPhone" placeholder="Enter your phone number" required />
+                    </div>
+                    <span class="error-text" id="phoneError"></span>
 
-                <div class="form-group-modal">
-                    <label>Message / Additional Details</label>
-                    <textarea id="bookingMessage" placeholder="Tell us about your project or questions..."></textarea>
-                </div>
+                    <div class="form-group-row">
+                        <label for="bookingCompany">Company</label>
+                        <input type="text" id="bookingCompany" placeholder="Company (optional)" />
+                    </div>
 
-                <button type="submit" class="submit-booking-btn">
-                    <i class="fas fa-calendar-check"></i> Book My Call
-                </button>
-            </form>
+                    <div class="form-group-row">
+                        <label for="bookingMessage">Message</label>
+                        <textarea id="bookingMessage" placeholder="Describe what services you need..."></textarea>
+                    </div>
+
+                    <div class="booking-step-navigation">
+                        <button type="button" class="booking-btn-secondary" onclick="previousStep(4)">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </button>
+
+                        <button type="submit" class="booking-btn-primary">
+                            <i class="fas fa-calendar-check"></i> Book My Free Consultation
+                        </button>
+                    </div>
+
+                </form>
+
+
+
+            </div>
+
+            <!-- SUCCESS -->
+            <div id="bookingSuccessPage" class="booking-success-message">
+                <i class="fas fa-check-circle"></i>
+                <h3>Your Call is Booked!</h3>
+                <p>Our team will contact you shortly. Thank you!</p>
+            </div>
+
         </div>
-    </div>
-
-    <!-- Success Message Overlay -->
-    <div class="success-message" id="bookingSuccess">
-        <i class="fas fa-check-circle"></i>
-        <strong>Your Call is Booked!</strong>
-        <p>Our team will connect with you as soon as possible. Thank you for choosing Zonixtec!</p>
     </div>
 
 
     <!-- Booking Modal Script -->
     <script src="./script/booking-modal.js"></script>
     <script src="./script/navbar.js"></script>
+
+    <script src="./script/30min-booking.js"></script>
+
     <script src="./script/allabout.js"></script>
 
 </body>

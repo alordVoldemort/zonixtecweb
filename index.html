@@ -5,13 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
     <!-- Favicon -->
     <link rel="icon" href="./Assets/WhatsApp Image 2025-10-15 at 15.47.06.jpeg" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="./CSS/allDropdown.css">
+
+
     <link rel="stylesheet" href="./CSS/chatbot.css">
 
-    <!-- Responsive Fixes CSS -->
 
+    <!-- Responsive Fixes CSS -->
+    <link rel="stylesheet" href="./CSS/30min-model.css">
 
     <!-- Navbar CSS -->
     <link rel="stylesheet" href="./CSS/navbar.css">
@@ -269,71 +275,73 @@
 
         /* Prevent layout shifts on mobile */
         /* Consolidated Mobile Responsive Styles */
-@media (max-width: 768px) {
-    /* Ensure consistent container padding */
-    .container {
-        padding: 0 15px;
-    }
-    
-    /* Hero section adjustments for fixed header */
-    .hero {
-        margin-top: 70px; /* Account for fixed header */
-        height: calc(100vh - 70px);
-        min-height: 400px;
-    }
-    
-    /* Fix any potential z-index conflicts */
-    .hero-content {
-        z-index: 1;
-    }
-    
-    /* Ensure proper spacing in other sections */
-    .section-padding {
-        padding: 60px 0;
-    }
-    
-    /* Adjust section titles for mobile */
-    .section-title {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-    }
-    
-    /* Services grid adjustment */
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    /* Testimonials adjustment */
-    .testimonials-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
+        @media (max-width: 768px) {
 
-}
+            /* Ensure consistent container padding */
+            .container {
+                padding: 0 15px;
+            }
 
-/* Very small screen optimizations */
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 1.8rem;
-        line-height: 1.2;
-    }
-    
-    .hero p {
-        font-size: 1rem;
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-        gap: 12px;
-    }
-    
-    .secondary-button {
-        width: 100%;
-        max-width: 250px;
-        text-align: center;
-    }
-}
+            /* Hero section adjustments for fixed header */
+            .hero {
+                margin-top: 70px;
+                /* Account for fixed header */
+                height: calc(100vh - 70px);
+                min-height: 400px;
+            }
+
+            /* Fix any potential z-index conflicts */
+            .hero-content {
+                z-index: 1;
+            }
+
+            /* Ensure proper spacing in other sections */
+            .section-padding {
+                padding: 60px 0;
+            }
+
+            /* Adjust section titles for mobile */
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            /* Services grid adjustment */
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            /* Testimonials adjustment */
+            .testimonials-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+        }
+
+        /* Very small screen optimizations */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+                line-height: 1.2;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .secondary-button {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+            }
+        }
 
         /* Fix viewport height issues on mobile */
         .hero {
@@ -672,7 +680,7 @@
         .about-imagee {
             flex: 1 1 300px;
             min-width: 250px;
-            text-align: center;
+            text-align: end;
         }
 
         .about-imagee img {
@@ -1488,43 +1496,44 @@
         }
 
         .social-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: #f5f6fa;
-    border-radius: 50%;
-    color: var(--primary);
-    font-size: 1.4rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.08);
-    text-decoration: none;
-    /* Remove mobile tap highlight */
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    user-select: none;
-    /* Prevent focus outline on click */
-    outline: none;
-}
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #f5f6fa;
+            border-radius: 50%;
+            color: var(--primary);
+            font-size: 1.4rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.08);
+            text-decoration: none;
+            /* Remove mobile tap highlight */
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
+            /* Prevent focus outline on click */
+            outline: none;
+        }
 
-.social-links a:hover {
-    background: var(--primary);
-    color: #fff;
-    box-shadow: 0 4px 16px rgba(52, 152, 219, 0.18);
-    transform: translateY(-2px);
-}
+        .social-links a:hover {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(52, 152, 219, 0.18);
+            transform: translateY(-2px);
+        }
 
-/* Remove any active/focus states that cause square highlights */
-.social-links a:active,
-.social-links a:focus {
-    background: var(--primary);
-    color: #fff;
-    transform: scale(0.95);
-    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.18);
-    outline: none;
-}
+        /* Remove any active/focus states that cause square highlights */
+        .social-links a:active,
+        .social-links a:focus {
+            background: var(--primary);
+            color: #fff;
+            transform: scale(0.95);
+            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.18);
+            outline: none;
+        }
+
         .contact-form {
             background: rgba(15, 23, 42, 0.85);
             padding: 30px;
@@ -2675,51 +2684,43 @@
             line-height: 1.6;
             margin: 0;
         }
+
         /* Required field asterisk styling */
-.required-asterisk {
-    color: var(--accent);
-    font-weight: bold;
-    margin-left: 2px;
-}
+        .required-asterisk {
+            color: var(--accent);
+            font-weight: bold;
+            margin-left: 2px;
+        }
 
-/* Form group label styling */
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    color: var(--light);
-    font-weight: 500;
-}
+        /* Form group label styling */
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--light);
+            font-weight: 500;
+        }
 
-/* Validation hint styling */
-.validation-hint {
-    display: block;
-    margin-top: 5px;
-    font-size: 0.8rem;
-    color: var(--gray);
-    opacity: 0.8;
-}
+        /* Validation hint styling */
+        .validation-hint {
+            display: block;
+            margin-top: 5px;
+            font-size: 0.8rem;
+            color: var(--gray);
+            opacity: 0.8;
+        }
 
-/* Invalid input styling */
-.form-control:invalid {
-    border-color: var(--accent);
-    background: rgba(255, 51, 102, 0.05);
-}
+        /* Invalid input styling */
 
-.form-control:valid {
-    border-color: var(--success);
-    background: rgba(39, 174, 96, 0.05);
-}
+        /* Focus state for better UX */
+        .form-control:focus:invalid {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(255, 51, 102, 0.2);
+        }
 
-/* Focus state for better UX */
-.form-control:focus:invalid {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 2px rgba(255, 51, 102, 0.2);
-}
-
-.form-control:focus:valid {
-    border-color: var(--success);
-    box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.2);
-}
+        .form-control:focus:valid {
+            border-color: var(--success);
+            box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.2);
+        }
 
         /* Responsive Modal */
         @media (max-width: 768px) {
@@ -2772,17 +2773,17 @@
         }
 
         @media (max-width: 768px) {
-    .social-links a {
-        -webkit-tap-highlight-color: transparent;
-        -webkit-touch-callout: none;
-    }
-    
-    .social-links a:active {
-        transform: scale(0.95);
-        background: var(--primary);
-        color: #fff;
-    }
-}
+            .social-links a {
+                -webkit-tap-highlight-color: transparent;
+                -webkit-touch-callout: none;
+            }
+
+            .social-links a:active {
+                transform: scale(0.95);
+                background: var(--primary);
+                color: #fff;
+            }
+        }
 
 
 
@@ -2854,182 +2855,184 @@
         }
 
         /* iPad and Tablet Specific Navbar Fixes */
-@media (min-width: 769px) and (max-width: 1024px) {
-    /* Navbar container adjustments */
-    header .container {
-        padding: 0 20px;
-    }
-    
-    /* Nav links spacing and alignment */
-    .nav-links {
-        gap: 20px;
-        justify-content: flex-end;
-        align-items: center;
-    }
-    
-    /* Individual nav items */
-    .nav-links a {
-        font-size: 0.9rem;
-        padding: 8px 12px;
-        white-space: nowrap;
-    }
-    
-    /* CTA button specific styling for tablets */
-    .nav-links .cta-buttons {
-        font-size: 0.85rem;
-        padding: 10px 16px;
-        white-space: nowrap;
-        margin-left: 10px;
-    }
-    
-    /* Dropdown menu adjustments */
-    .dropdown-content {
-        min-width: 200px;
-        right: 0;
-        left: auto;
-    }
-    
-    /* Logo sizing */
-    .logo img {
-        height: 35px;
-    }
-    
-    /* Ensure even spacing */
-    .nav-links > *:not(:last-child) {
-        margin-right: 5px;
-    }
-}
+        @media (min-width: 769px) and (max-width: 1024px) {
 
-/* Additional iPad Pro specific fixes */
-@media (min-width: 1025px) and (max-width: 1366px) {
-    .nav-links {
-        gap: 25px;
-    }
-    
-    .nav-links a {
-        font-size: 0.95rem;
-        padding: 10px 15px;
-    }
-    
-    .nav-links .cta-buttons {
-        font-size: 0.9rem;
-        padding: 12px 20px;
-    }
-}
+            /* Navbar container adjustments */
+            header .container {
+                padding: 0 20px;
+            }
 
-/* Prevent mobile menu from showing on tablets */
-@media (min-width: 769px) {
-    .mobile-menu-btn {
-        display: none !important;
-    }
-    
-    .nav-links {
-        display: flex !important;
-        flex-direction: row;
-        align-items: center;
-    }
-}
+            /* Nav links spacing and alignment */
+            .nav-links {
+                gap: 20px;
+                justify-content: flex-end;
+                align-items: center;
+            }
 
-/* Ensure dropdowns work properly on tablets */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-    
-    .dropdown-content {
-        position: absolute;
-        top: 100%;
-        background: rgba(10, 10, 26, 0.95);
-        backdrop-filter: blur(15px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        padding: 15px 0;
-    }
-    
-    .dropdown-scroll {
-        max-height: 300px;
-        overflow-y: auto;
-    }
-    
-    .dropdown-content a {
-        padding: 10px 20px;
-        font-size: 0.85rem;
-    }
-    /* Mobile Menu Overlay */
-.mobile-menu-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    backdrop-filter: blur(5px);
-}
+            /* Individual nav items */
+            .nav-links a {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+                white-space: nowrap;
+            }
 
-.mobile-menu-overlay.active {
-    display: block;
-}
+            /* CTA button specific styling for tablets */
+            .nav-links .cta-buttons {
+                font-size: 0.85rem;
+                padding: 10px 16px;
+                white-space: nowrap;
+                margin-left: 10px;
+            }
 
-/* Mobile menu button active state */
-.mobile-menu-btn.active .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-}
+            /* Dropdown menu adjustments */
+            .dropdown-content {
+                min-width: 200px;
+                right: 0;
+                left: auto;
+            }
 
-.mobile-menu-btn.active .hamburger-line:nth-child(2) {
-    opacity: 0;
-}
+            /* Logo sizing */
+            .logo img {
+                height: 35px;
+            }
 
-.mobile-menu-btn.active .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-}
+            /* Ensure even spacing */
+            .nav-links>*:not(:last-child) {
+                margin-right: 5px;
+            }
+        }
 
-/* Close button for mobile menu */
-.mobile-close-btn {
-    display: none;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    color: var(--light);
-    font-size: 1.5rem;
-    cursor: pointer;
-    z-index: 1002;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
+        /* Additional iPad Pro specific fixes */
+        @media (min-width: 1025px) and (max-width: 1366px) {
+            .nav-links {
+                gap: 25px;
+            }
 
-.mobile-close-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
+            .nav-links a {
+                font-size: 0.95rem;
+                padding: 10px 15px;
+            }
 
-/* Ensure mobile menu appears above everything */
-.nav-links.active {
-    z-index: 1001;
-}
+            .nav-links .cta-buttons {
+                font-size: 0.9rem;
+                padding: 12px 20px;
+            }
+        }
 
-@media (max-width: 768px) {
-    .mobile-close-btn {
-        display: flex;
-    }
-    
-    /* Prevent body scroll when menu is open */
-    body.mobile-menu-open {
-        overflow: hidden;
-    }
-    
-    /* Ensure mobile menu button has proper z-index */
-    .mobile-menu-btn {
-        z-index: 1002;
-    }
-}
-}
+        /* Prevent mobile menu from showing on tablets */
+        @media (min-width: 769px) {
+            .mobile-menu-btn {
+                display: none !important;
+            }
+
+            .nav-links {
+                display: flex !important;
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        /* Ensure dropdowns work properly on tablets */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown-content {
+                position: absolute;
+                top: 100%;
+                background: rgba(10, 10, 26, 0.95);
+                backdrop-filter: blur(15px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+                padding: 15px 0;
+            }
+
+            .dropdown-scroll {
+                max-height: 300px;
+                overflow-y: auto;
+            }
+
+            .dropdown-content a {
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+
+            /* Mobile Menu Overlay */
+            .mobile-menu-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 999;
+                backdrop-filter: blur(5px);
+            }
+
+            .mobile-menu-overlay.active {
+                display: block;
+            }
+
+            /* Mobile menu button active state */
+            .mobile-menu-btn.active .hamburger-line:nth-child(1) {
+                transform: rotate(45deg) translate(6px, 6px);
+            }
+
+            .mobile-menu-btn.active .hamburger-line:nth-child(2) {
+                opacity: 0;
+            }
+
+            .mobile-menu-btn.active .hamburger-line:nth-child(3) {
+                transform: rotate(-45deg) translate(6px, -6px);
+            }
+
+            /* Close button for mobile menu */
+            .mobile-close-btn {
+                display: none;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                background: none;
+                border: none;
+                color: var(--light);
+                font-size: 1.5rem;
+                cursor: pointer;
+                z-index: 1002;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+            }
+
+            .mobile-close-btn:hover {
+                background: rgba(255, 255, 255, 0.1);
+            }
+
+            /* Ensure mobile menu appears above everything */
+            .nav-links.active {
+                z-index: 1001;
+            }
+
+            @media (max-width: 768px) {
+                .mobile-close-btn {
+                    display: flex;
+                }
+
+                /* Prevent body scroll when menu is open */
+                body.mobile-menu-open {
+                    overflow: hidden;
+                }
+
+                /* Ensure mobile menu button has proper z-index */
+                .mobile-menu-btn {
+                    z-index: 1002;
+                }
+            }
+        }
     </style>
 </head>
 
@@ -3047,13 +3050,15 @@
     </div>
 
     <!-- Header -->
-     <header id="header">
+    <header id="header">
         <div class="container">
             <nav>
                 <a href="index.html" class="logo">
                     <img src="./Assets/Logo.svg" alt="Zonixtec Logo" style="height: 40px; width: auto;">
                 </a>
                 <div class="nav-links">
+
+
                     
                     <!-- <a href="aboutus.html">About Us</a> -->
                     <!-- ABOUT DROPDOWN TRIGGER -->
@@ -3088,7 +3093,42 @@
                     
 
 
-                    
+
+                    <!-- <a href="aboutus.html">About Us</a> -->
+                    <!-- ABOUT DROPDOWN TRIGGER -->
+                    <a href="#" class="about-toggle">About Us</a>
+
+                    <!-- ABOUT DROPDOWN PANEL -->
+                    <div class="about-dropdown">
+                        <div>
+                            <h2>About Us</h2>
+                        </div>
+
+                        <div class="about-container">
+
+                            <div class="about-links">
+                                <div>
+                                    <a href="aboutus.html">About Zonixtec</a>
+                                    <a href="Why-Zonixtec.html">Why Zonixtec?</a>
+                                    <a href="#">Our Journey</a>
+                                </div>
+                                <div>
+                                    <a href="#">From CEO’s Desk</a>
+                                    <a href="#">Leadership</a>
+                                    <a href="#">Case Study</a>
+                                </div>
+                            </div>
+
+                            <span class="about-close">&times;</span>
+
+                            <div class="about-image">
+                                <img src="./Assets/ai-nuclear-energy-background-future-innovation-disruptive-technology 3.png"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div class="dropdown">
                         <a href="Services.html" class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-content">
@@ -3113,15 +3153,19 @@
                     <a href="carrer.html">Career</a>
                     <a href="contact.html">Contact</a>
                     <a href="javascript:void(0);" class="cta-buttons" onclick="openBookingModal()">
-                        <i class="fas fa-phone-alt"></i>Book A 30 Min Call
+                        <i class="fas fa-phone-alt"></i> Book A 30 Min Call
                     </a>
+
                 </div>
-                
+
+                <!-- BOOKING MODAL For Each Page -->
+
+
                 <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
-    <span class="hamburger-line"></span>
-    <span class="hamburger-line"></span>
-    <span class="hamburger-line"></span>
-</button>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
             </nav>
         </div>
     </header>
@@ -3232,7 +3276,7 @@
     </section>
 
     <!-- About Us Section with Scroll Animation -->
-     <section class="about section-padding" id="about">
+    <section class="about section-padding" id="about">
         <div class="container">
             <h1 class="section-title">About <span class="">Zonixtec</span></h1>
             <div class="about-container">
@@ -3252,6 +3296,189 @@
             </div>
         </div>
     </section>
+
+    <!--open booking 30 min call modal -->
+
+    <div id="bookingModal" class="booking-modal">
+        <div class="booking-modal-content">
+
+            <!-- CLOSE BUTTON -->
+            <span class="booking-modal-close" onclick="closeBookingModal()">&times;</span>
+
+            <!-- STEP PROGRESS -->
+            <div class="booking-progress-indicator">
+                <div class="booking-progress-step booking-active" id="progress1" data-step="1"></div>
+                <div class="booking-progress-line" id="line1"></div>
+                <div class="booking-progress-step" id="progress2" data-step="2"></div>
+                <div class="booking-progress-line" id="line2"></div>
+                <div class="booking-progress-step" id="progress3" data-step="3"></div>
+                <div class="booking-progress-line" id="line3"></div>
+                <div class="booking-progress-step" id="progress4" data-step="4"></div>
+            </div>
+
+            <!-- STEP 1 -->
+            <div class="booking-modal-step booking-active" id="step1">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">1</div>
+                    <h2 class="booking-step-title">Zonixtec — 30-Minute Discovery Call</h2>
+                </div>
+
+                <div class="booking-discovery-subtitle">
+                    Duration: 30 Minutes | Mode: Web Conference
+                </div>
+
+                <div class="booking-session-overview">
+                    <h4 class="booking-session-title">In this quick session, we'll cover:</h4>
+                    <div class="booking-session-items-grid">
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Introduction & Requirement Understanding</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Relevant Use Case Demo</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Technology Solutions & Offerings</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Project Roadmap & Next Steps</span>
+                        </div>
+                    </div>
+
+                    <div class="booking-discovery-goal">
+                        <strong>Goal:</strong>
+                        <p>Understand your needs and explore how Zonixtec can deliver the right tech solutions for your
+                            project.</p>
+                    </div>
+                </div>
+
+                <div class="booking-step-navigation">
+                    <div></div>
+                    <button class="booking-btn-primary" onclick="nextStep(1)">
+                        Next: Select Date <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="booking-modal-step" id="step2">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">2</div>
+                    <h2 class="booking-step-title">Select Your Preferred Date</h2>
+                </div>
+
+                <input type="text" id="dateInput" class="booking-calendar-input" placeholder="Pick a date" readonly />
+
+                <div class="booking-step-navigation">
+                    <button class="booking-btn-secondary" onclick="previousStep(2)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="booking-btn-primary" id="dateNextBtn" onclick="nextStep(2)" disabled>
+                        Next: Select Time <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="booking-modal-step" id="step3">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">3</div>
+                    <h2 class="booking-step-title">Choose Your Time Slot</h2>
+                </div>
+
+                <div class="booking-time-slots">
+                    <div class="booking-time-slot" data-time="10:30">10:30 AM</div>
+                    <div class="booking-time-slot" data-time="11:30">11:30 AM</div>
+                    <div class="booking-time-slot" data-time="12:00">12:00 PM</div>
+                    <div class="booking-time-slot" data-time="12:30">12:30 PM</div>
+                    <div class="booking-time-slot" data-time="13:00">1:00 PM</div>
+                    <div class="booking-time-slot" data-time="13:30">1:30 PM</div>
+                    <div class="booking-time-slot" data-time="14:00">2:00 PM</div>
+                    <div class="booking-time-slot" data-time="14:30">2:30 PM</div>
+                    <div class="booking-time-slot" data-time="15:00">3:00 PM</div>
+                    <div class="booking-time-slot" data-time="15:30">3:30 PM</div>
+                    <div class="booking-time-slot" data-time="16:00">4:00 PM</div>
+                    <div class="booking-time-slot" data-time="16:30">4:30 PM</div>
+                    <div class="booking-time-slot" data-time="17:00">5:00 PM</div>
+                </div>
+
+                <div class="booking-step-navigation">
+                    <button class="booking-btn-secondary" onclick="previousStep(3)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="booking-btn-primary" id="timeNextBtn" onclick="nextStep(3)" disabled>
+                        Next: Your Info <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="booking-modal-step" id="step4">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">4</div>
+                    <h2 class="booking-step-title">Your Information</h2>
+                </div>
+
+                <form class="booking-modal-form" id="bookingFormPage">
+
+                    <div class="form-group-row">
+                        <label for="bookingName">Full Name</label>
+                        <input type="text" id="bookingName" placeholder="Enter your full name" required />
+                    </div>
+                    <span class="error-text" id="nameError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingEmail">Email</label>
+                        <input type="email" id="bookingEmail" placeholder="Enter your email" required />
+                    </div>
+                    <span class="error-text" id="emailError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingPhone">Phone</label>
+                        <input type="tel" id="bookingPhone" placeholder="Enter your phone number" required />
+                    </div>
+                    <span class="error-text" id="phoneError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingCompany">Company</label>
+                        <input type="text" id="bookingCompany" placeholder="Company (optional)" />
+                    </div>
+
+                    <div class="form-group-row">
+                        <label for="bookingMessage">Message</label>
+                        <textarea id="bookingMessage" placeholder="Describe what services you need..."></textarea>
+                    </div>
+
+                    <div class="booking-step-navigation">
+                        <button type="button" class="booking-btn-secondary" onclick="previousStep(4)">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </button>
+
+                        <button type="submit" class="booking-btn-primary">
+                            <i class="fas fa-calendar-check"></i> Book My Free Consultation
+                        </button>
+                    </div>
+
+                </form>
+
+
+
+            </div>
+
+            <!-- SUCCESS -->
+            <div id="bookingSuccessPage" class="booking-success-message">
+                <i class="fas fa-check-circle"></i>
+                <h3>Your Call is Booked!</h3>
+                <p>Our team will contact you shortly. Thank you!</p>
+            </div>
+
+        </div>
+    </div>
+
+
 
     <!-- Services Section -->
     <section class="services-section section-padding" id="services">
@@ -3535,114 +3762,97 @@
 
     <!-- Contact Section -->
     <!-- Contact Section -->
-<section class="contact section-padding" id="contact">
-    <div class="container">
-        <div class="section-header">
-            <h2>Get In Touch</h2>
-            <p>Ready to start your next project? Connect with our team to discuss your requirements and find the
-                right solution.</p>
-        </div>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div>
-                    <h3>Contact Information</h3>
-                    <p>Have questions about our software development services or want to discuss a potential
-                        project? Reach out to us through any of the channels below.</p>
-                </div>
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Our Location</h4>
-                            <a href="https://www.google.com/maps?q=Zonixtec+IT+Services+PVT+LTD+2nd+Floor,+Vasukamal+Express,+Rohan+Sehar+Ln,+Pan+Card+Club+Rd,+behind+Beverly+Hills+Society,+Samarth+Colony,+Baner"
-                                target="_blank" rel="noopener">
-                                Zonixtec IT Services PVT LTD 2nd Floor, Vasukamal Express, Rohan Sehar Ln, Pan Card
-                                Club Rd, behind Beverly Hills Society, Samarth Colony, Baner 411045, Pune,
-                                Maharashtra, India
-                            </a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Call Us</h4>
-                            <a href="tel:+919209670926">+91 9209670926</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Email Us</h4>
-                            <a href="mailto:info@zonixtec.com">support@office.zonixtec.com</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/company/zonixtec-it-services-private-limited/"
-                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/zonixtec_it_services" aria-label="Instagram"><i
-                            class="fab fa-instagram"></i></a>
-                </div>
+    <section class="contact section-padding" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Ready to start your next project? Connect with our team to discuss your requirements and find the
+                    right solution.</p>
             </div>
-            <div class="contact-form">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Your Name <span class="required-asterisk">*</span></label>
-                        <input type="text" id="name" name="name" class="form-control" required
-                            pattern="^[A-Za-z\s]{2,}$" 
-                            title="Please enter at least 2 characters (letters and spaces only)" 
-                            inputmode="text"
-                            autocomplete="name" 
-                            minlength="2"
-                            maxlength="100"
-                            onkeypress="return /[a-zA-Z\s]/.test(event.key)">
-                        <small class="validation-hint">Minimum 2 characters required</small>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div>
+                        <h3>Contact Information</h3>
+                        <p>Have questions about our software development services or want to discuss a potential
+                            project? Reach out to us through any of the channels below.</p>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Your Email <span class="required-asterisk">*</span></label>
-                        <input type="email" 
-       id="email" 
-       name="email" 
-       class="form-control" 
-       required
-       pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-       title="Please enter a valid email address (e.g., name@example.com)"
-       autocomplete="email"
-       inputmode="email"
-       maxlength="100">
-                        <small class="validation-hint">Enter a valid email address</small>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Our Location</h4>
+                                <a href="https://www.google.com/maps?q=Zonixtec+IT+Services+PVT+LTD+2nd+Floor,+Vasukamal+Express,+Rohan+Sehar+Ln,+Pan+Card+Club+Rd,+behind+Beverly+Hills+Society,+Samarth+Colony,+Baner"
+                                    target="_blank" rel="noopener">
+                                    Zonixtec IT Services PVT LTD 2nd Floor, Vasukamal Express, Rohan Sehar Ln, Pan Card
+                                    Club Rd, behind Beverly Hills Society, Samarth Colony, Baner 411045, Pune,
+                                    Maharashtra, India
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Call Us</h4>
+                                <a href="tel:+919209670926">+91 9209670926</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email Us</h4>
+                                <a href="mailto:info@zonixtec.com">support@office.zonixtec.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/zonixtec-it-services-private-limited/"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/zonixtec_it_services" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name <span class="required-asterisk">*</span></label>
+                            <input type="text" id="name" name="name" class="form-control" required inputmode="text"
+                                autocomplete="name" maxlength="100" onkeypress="return /[a-zA-Z\s]/.test(event.key)">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email <span class="required-asterisk">*</span></label>
+                            <input type="email" id="email" name="email" class="form-control" required
+                                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                title="Please enter a valid email address (e.g., name@example.com)" autocomplete="email"
+                                inputmode="email" maxlength="100">
+                            <small class="validation-hint">Enter a valid email address</small>
 
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject <span class="required-asterisk">*</span></label>
+                            <input type="text" id="subject" name="subject" class="form-control" required minlength="5"
+                                maxlength="200" title="Please enter at least 5 characters">
+                            <small class="validation-hint">Minimum 5 characters required</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message <span class="required-asterisk">*</span></label>
+                            <textarea id="message" name="message" class="form-control" required minlength="10"
+                                maxlength="1000" title="Please enter at least 10 characters"></textarea>
+                            <small class="validation-hint">Minimum 10 characters required</small>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                    <div id="form-message" style="display: none; margin-top: 15px; padding: 10px; border-radius: 5px;">
                     </div>
-                    <div class="form-group">
-                        <label for="subject">Subject <span class="required-asterisk">*</span></label>
-                        <input type="text" id="subject" name="subject" class="form-control" required
-                            minlength="5"
-                            maxlength="200"
-                            title="Please enter at least 5 characters">
-                        <small class="validation-hint">Minimum 5 characters required</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Your Message <span class="required-asterisk">*</span></label>
-                        <textarea id="message" name="message" class="form-control" required
-                            minlength="10"
-                            maxlength="1000"
-                            title="Please enter at least 10 characters"></textarea>
-                        <small class="validation-hint">Minimum 10 characters required</small>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-                <div id="form-message" style="display: none; margin-top: 15px; padding: 10px; border-radius: 5px;">
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -3899,91 +4109,91 @@
 
         // Contact Form Functionality with localStorage database
         // Contact Form with LocalStorage Database (Working Solution)
-document.addEventListener('DOMContentLoaded', function () {
-    const contactForm = document.getElementById('contactForm');
-    const formMessage = document.getElementById('form-message');
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactForm = document.getElementById('contactForm');
+            const formMessage = document.getElementById('form-message');
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
 
-            const submitBtn = contactForm.querySelector('.submit-btn');
-            const originalText = submitBtn.textContent;
+                    const submitBtn = contactForm.querySelector('.submit-btn');
+                    const originalText = submitBtn.textContent;
 
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Saving...';
-            formMessage.style.display = 'none';
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Saving...';
+                    formMessage.style.display = 'none';
 
-            const formData = {
-                id: Date.now(), // Unique ID
-                name: document.getElementById('name').value.trim(),
-                email: document.getElementById('email').value.trim(),
-                subject: document.getElementById('subject').value.trim(),
-                message: document.getElementById('message').value.trim(),
-                timestamp: new Date().toLocaleString(),
-                ip: 'local',
-                status: 'new'
-            };
+                    const formData = {
+                        id: Date.now(), // Unique ID
+                        name: document.getElementById('name').value.trim(),
+                        email: document.getElementById('email').value.trim(),
+                        subject: document.getElementById('subject').value.trim(),
+                        message: document.getElementById('message').value.trim(),
+                        timestamp: new Date().toLocaleString(),
+                        ip: 'local',
+                        status: 'new'
+                    };
 
-            // Enhanced Validation
-            if (!formData.name || !formData.email || !formData.subject || !formData.message) {
-                showMessage('Please fill in all required fields.', 'error');
-                submitBtn.disabled = false;
-                submitBtn.textContent = originalText;
-                return;
+                    // Enhanced Validation
+                    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+                        showMessage('Please fill in all required fields.', 'error');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalText;
+                        return;
+                    }
+
+                    // Name validation (min 2 characters)
+                    if (formData.name.length < 2) {
+                        showMessage('Name must be at least 2 characters long.', 'error');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalText;
+                        return;
+                    }
+
+                    // Subject validation (min 5 characters)
+                    if (formData.subject.length < 5) {
+                        showMessage('Subject must be at least 5 characters long.', 'error');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalText;
+                        return;
+                    }
+
+                    // Message validation (min 10 characters)
+                    if (formData.message.length < 10) {
+                        showMessage('Message must be at least 10 characters long.', 'error');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalText;
+                        return;
+                    }
+
+                    if (!isValidEmail(formData.email)) {
+                        showMessage('Please enter a valid email address.', 'error');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalText;
+                        return;
+                    }
+
+                    // Save to localStorage database
+                    try {
+                        saveToLocalDatabase(formData);
+                        showMessage('✅ Thank you! Your message has been saved successfully. We will contact you soon.', 'success');
+                        contactForm.reset();
+
+                        // Log to console for verification
+                        console.log('📁 Saved to Local Database:', formData);
+                        displayAllMessages(); // Show all saved messages in console
+
+                    } catch (error) {
+                        showMessage('Thank you! Message received. (Temporary storage)', 'success');
+                        contactForm.reset();
+                        console.log('Form data:', formData);
+                    } finally {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalText;
+                    }
+                });
             }
-
-            // Name validation (min 2 characters)
-            if (formData.name.length < 2) {
-                showMessage('Name must be at least 2 characters long.', 'error');
-                submitBtn.disabled = false;
-                submitBtn.textContent = originalText;
-                return;
-            }
-
-            // Subject validation (min 5 characters)
-            if (formData.subject.length < 5) {
-                showMessage('Subject must be at least 5 characters long.', 'error');
-                submitBtn.disabled = false;
-                submitBtn.textContent = originalText;
-                return;
-            }
-
-            // Message validation (min 10 characters)
-            if (formData.message.length < 10) {
-                showMessage('Message must be at least 10 characters long.', 'error');
-                submitBtn.disabled = false;
-                submitBtn.textContent = originalText;
-                return;
-            }
-
-            if (!isValidEmail(formData.email)) {
-                showMessage('Please enter a valid email address.', 'error');
-                submitBtn.disabled = false;
-                submitBtn.textContent = originalText;
-                return;
-            }
-
-            // Save to localStorage database
-            try {
-                saveToLocalDatabase(formData);
-                showMessage('✅ Thank you! Your message has been saved successfully. We will contact you soon.', 'success');
-                contactForm.reset();
-
-                // Log to console for verification
-                console.log('📁 Saved to Local Database:', formData);
-                displayAllMessages(); // Show all saved messages in console
-
-            } catch (error) {
-                showMessage('Thank you! Message received. (Temporary storage)', 'success');
-                contactForm.reset();
-                console.log('Form data:', formData);
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.textContent = originalText;
-            }
-        });
-    }
 
             // Save to localStorage database
             function saveToLocalDatabase(formData) {
@@ -4293,192 +4503,11 @@ document.addEventListener('DOMContentLoaded', function () {
     </script>
 
     <!-- Booking Modal -->
-    <div class="modal" id="bookingModal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeBookingModal()">
-                <i class="fas fa-times"></i>
-            </button>
+    <!-- Placeholder where booking modal will load -->
+    <div id="bookingModalContainer"></div>
 
-            <div class="modal-header">
-                <h2>Book Your Free 30-Minute Consultation</h2>
-                <p>Let's discuss how we can help transform your business</p>
-            </div>
 
-            <form class="booking-form" id="bookingForm">
-                <div class="form-row">
-                    <div class="form-group-modal">
-                        <label>Full Name <span>*</span></label>
-                        <input type="text" id="bookingName" placeholder="Enter your full name" required>
-                    </div>
-                    <div class="form-group-modal">
-                        <label>Email Address <span>*</span></label>
-                        <input type="email" id="bookingEmail" placeholder="your@email.com" required>
-                    </div>
-                </div>
 
-                <div class="form-row">
-                    <div class="form-group-modal">
-                        <label>Phone Number <span>*</span></label>
-                        <input type="tel" id="bookingPhone" placeholder="+91 999999999" required>
-                    </div>
-                    <div class="form-group-modal">
-                        <label>Company Name</label>
-                        <input type="text" id="bookingCompany" placeholder="Your company (optional)">
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group-modal">
-                        <label>Preferred Date <span>*</span></label>
-                        <input type="date" id="bookingDate" required>
-                    </div>
-                    <div class="form-group-modal">
-                        <label>Preferred Time <span>*</span></label>
-                        <input type="time" id="bookingTime" required>
-                    </div>
-                </div>
-
-                <div class="form-group-modal">
-                    <label>Service Interested In <span>*</span></label>
-                    <select id="bookingService" required>
-                        <option value="">Select a service</option>
-                        <option value="CRM Solutions">CRM Solutions</option>
-                        <option value="ERP Solutions">ERP Solutions</option>
-                        <option value="Billing Software">Billing Software</option>
-                        <option value="Website Development">Website Development</option>
-                        <option value="Mobile App Development">Mobile App Development</option>
-                        <option value="AI Solutions">AI Solutions</option>
-                        <option value="Cloud Solutions">Cloud Solutions</option>
-                        <option value="Digital Marketing">Digital Marketing</option>
-                        <option value="UI/UX Design">UI/UX Design</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
-
-                <div class="form-group-modal">
-                    <label>Message / Additional Details</label>
-                    <textarea id="bookingMessage" placeholder="Tell us about your project or questions..."></textarea>
-                </div>
-
-                <button type="submit" class="submit-booking-btn">
-                    <i class="fas fa-calendar-check"></i> Book My Call
-                </button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Success Message Overlay -->
-    <div class="success-message" id="bookingSuccess">
-        <i class="fas fa-check-circle"></i>
-        <strong>Your Call is Booked!</strong>
-        <p>Our team will connect with you as soon as possible. Thank you for choosing Zonixtec!</p>
-    </div>
-
-    <script>
-        // Booking Modal Functions
-        function openBookingModal() {
-            const modal = document.getElementById('bookingModal');
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-
-            // Set minimum date to today
-            const today = new Date().toISOString().split('T')[0];
-            document.getElementById('bookingDate').setAttribute('min', today);
-        }
-
-        function closeBookingModal() {
-            const modal = document.getElementById('bookingModal');
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close modal when clicking outside
-        document.getElementById('bookingModal')?.addEventListener('click', function (e) {
-            if (e.target === this) {
-                closeBookingModal();
-            }
-        });
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') {
-                closeBookingModal();
-            }
-        });
-
-        // Handle booking form submission
-        document.getElementById('bookingForm')?.addEventListener('submit', async function (e) {
-            e.preventDefault();
-
-            const submitBtn = this.querySelector('.submit-booking-btn');
-            const successMessage = document.getElementById('bookingSuccess');
-            const originalText = submitBtn.innerHTML;
-
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Booking...';
-
-            // Collect form data
-            const bookingData = {
-                name: document.getElementById('bookingName').value.trim(),
-                email: document.getElementById('bookingEmail').value.trim(),
-                phone: document.getElementById('bookingPhone').value.trim(),
-                company: document.getElementById('bookingCompany').value.trim(),
-                bookingDate: document.getElementById('bookingDate').value,
-                bookingTime: document.getElementById('bookingTime').value,
-                service: document.getElementById('bookingService').value,
-                message: document.getElementById('bookingMessage').value.trim()
-            };
-
-            try {
-                // Send to database API
-                const apiPath = 'https://zonixtec.com/server/booking/save-booking.php';
-
-                console.log('📤 Sending booking to:', apiPath);
-                console.log('📋 Data:', bookingData);
-
-                const response = await fetch(apiPath, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(bookingData)
-                });
-
-                console.log('📡 Response status:', response.status);
-
-                const result = await response.json();
-                console.log('� Response data:', result);
-
-                if (result.success) {
-                    console.log('✅ SUCCESS! Booking saved to database. ID:', result.bookingId);
-
-                    // Show success message
-                    setTimeout(() => {
-                        successMessage.classList.add('show');
-                        this.reset();
-                        submitBtn.disabled = false;
-                        submitBtn.innerHTML = originalText;
-
-                        // Close modal after 3 seconds
-                        setTimeout(() => {
-                            closeBookingModal();
-                            successMessage.classList.remove('show');
-                        }, 3000);
-                    }, 500);
-                } else {
-                    console.error('❌ FAILED:', result.message);
-                    if (result.error) console.error('🔍 Details:', result.error);
-                    throw new Error(result.message || 'Failed to save booking');
-                }
-
-            } catch (error) {
-                console.error('💥 ERROR:', error.message);
-                alert('Error submitting booking:\n\n' + error.message + '\n\nCheck console (F12) for details.');
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalText;
-            }
-        });
-    </script>
 
     <!-- About Section Auto-Scroll Animation -->
     <script>
@@ -4537,76 +4566,78 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // Tablet navbar alignment fix
-function optimizeNavbarForTablet() {
-    const nav = document.querySelector('nav');
-    const navLinks = document.querySelector('.nav-links');
-    const isTablet = window.innerWidth >= 769 && window.innerWidth <= 1024;
-    
-    if (isTablet && navLinks) {
-        // Ensure proper flex alignment
-        navLinks.style.display = 'flex';
-        navLinks.style.alignItems = 'center';
-        navLinks.style.justifyContent = 'flex-end';
-        navLinks.style.gap = '20px';
-        navLinks.style.flexWrap = 'nowrap';
-        
-        // Adjust CTA button spacing
-        const ctaButton = document.querySelector('.cta-buttons');
-        if (ctaButton) {
-            ctaButton.style.marginLeft = '10px';
-            ctaButton.style.flexShrink = '0';
-        }
-        
-        // Adjust dropdown positioning
-        const dropdowns = document.querySelectorAll('.dropdown');
-        dropdowns.forEach(dropdown => {
-            dropdown.style.position = 'relative';
-        });
-    }
-}
+        function optimizeNavbarForTablet() {
+            const nav = document.querySelector('nav');
+            const navLinks = document.querySelector('.nav-links');
+            const isTablet = window.innerWidth >= 769 && window.innerWidth <= 1024;
 
-// Run on load and resize
-document.addEventListener('DOMContentLoaded', optimizeNavbarForTablet);
-window.addEventListener('resize', optimizeNavbarForTablet);
+            if (isTablet && navLinks) {
+                // Ensure proper flex alignment
+                navLinks.style.display = 'flex';
+                navLinks.style.alignItems = 'center';
+                navLinks.style.justifyContent = 'flex-end';
+                navLinks.style.gap = '20px';
+                navLinks.style.flexWrap = 'nowrap';
 
-// Handle tablet touch events for dropdowns
-document.addEventListener('DOMContentLoaded', function() {
-    const isTablet = window.innerWidth >= 769 && window.innerWidth <= 1024;
-    
-    if (isTablet) {
-        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-        
-        dropdownToggles.forEach(toggle => {
-            toggle.addEventListener('touchstart', function(e) {
-                e.preventDefault();
-                const dropdown = this.parentElement;
-                const isOpen = dropdown.classList.contains('active');
-                
-                // Close all other dropdowns
-                document.querySelectorAll('.dropdown.active').forEach(d => {
-                    if (d !== dropdown) d.classList.remove('active');
+                // Adjust CTA button spacing
+                const ctaButton = document.querySelector('.cta-buttons');
+                if (ctaButton) {
+                    ctaButton.style.marginLeft = '10px';
+                    ctaButton.style.flexShrink = '0';
+                }
+
+                // Adjust dropdown positioning
+                const dropdowns = document.querySelectorAll('.dropdown');
+                dropdowns.forEach(dropdown => {
+                    dropdown.style.position = 'relative';
                 });
-                
-                // Toggle current dropdown
-                dropdown.classList.toggle('active');
-            });
-        });
-        
-        // Close dropdowns when clicking outside
-        document.addEventListener('touchstart', function(e) {
-            if (!e.target.closest('.dropdown')) {
-                document.querySelectorAll('.dropdown.active').forEach(dropdown => {
-                    dropdown.classList.remove('active');
+            }
+        }
+
+        // Run on load and resize
+        document.addEventListener('DOMContentLoaded', optimizeNavbarForTablet);
+        window.addEventListener('resize', optimizeNavbarForTablet);
+
+        // Handle tablet touch events for dropdowns
+        document.addEventListener('DOMContentLoaded', function () {
+            const isTablet = window.innerWidth >= 769 && window.innerWidth <= 1024;
+
+            if (isTablet) {
+                const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+                dropdownToggles.forEach(toggle => {
+                    toggle.addEventListener('touchstart', function (e) {
+                        e.preventDefault();
+                        const dropdown = this.parentElement;
+                        const isOpen = dropdown.classList.contains('active');
+
+                        // Close all other dropdowns
+                        document.querySelectorAll('.dropdown.active').forEach(d => {
+                            if (d !== dropdown) d.classList.remove('active');
+                        });
+
+                        // Toggle current dropdown
+                        dropdown.classList.toggle('active');
+                    });
+                });
+
+                // Close dropdowns when clicking outside
+                document.addEventListener('touchstart', function (e) {
+                    if (!e.target.closest('.dropdown')) {
+                        document.querySelectorAll('.dropdown.active').forEach(dropdown => {
+                            dropdown.classList.remove('active');
+                        });
+                    }
                 });
             }
         });
-    }
-});
-    </script>   
+
+    </script>
+     
 
 
     <script>
-       document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function () {
             const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 
             // ——— DESKTOP: Hover (mouseenter/leave) ———
@@ -4685,13 +4716,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+    // Booking Modal Functionality for the multi-step form //
+
+
+
+    //end Booking Modal Functionality //
+
 
     <script src="Customscroll.js"></script>
-    
+    <script src="./script/30min-booking.js"></script>
 
     <!-- Chatbot -->
     
     <script src="./script/chatbot.js"></script>
+    <script src="./script/navbar.js"></script>
+    <script src="./script/allabout.js"></script>
+
     
 <script src="./script/navbar.js"></script>
 <script src="./script/allabout.js"></script>

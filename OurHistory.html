@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <title>Our Journey Timeline</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="stylesheet" href="./CSS/allDropdown.css" />
-    <link rel="stylesheet" href="CustomDrop.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our History - Zonixtec</title>
+
+    <!-- Default Styles -->
+    <link rel="stylesheet" href="./CSS/allDropdown.css">
+    <link rel="stylesheet" href="./CSS/chatbot.css">
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Our Journey Timeline</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./CSS/allDropdown.css">
+    <link rel="stylesheet" href="CustomDrop.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -37,6 +41,43 @@
         --gray: #888;
         --success: #27ae60;
       }
+
+
+        :root {
+            --primary: #0066ff;
+            --secondary: #00f2ff;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #94a3b8;
+            --tech-gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+    
+
+        :root {
+            --primary: #0066ff;
+            --primary-dark: #0044cc;
+            --secondary: #00f2ff;
+            --accent: #ff3366;
+            --dark: #050511;
+            --dark-light: #0a0a1a;
+            --light: #f5f5f5;
+            --gray: #888;
+            --success: #27ae60;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
       * {
         margin: 0;
@@ -1729,14 +1770,28 @@
         .client-text {
           max-width: 600px !important;
           text-align: center;
+
+ <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
         .client-image {
           text-align: center;
         }
 
+
         .client-image img {
           max-width: 380px !important;
+
+        .section-padding {
+            padding: 100px 0;
+
+            padding: 60px 0;
         }
       }
 
@@ -1760,6 +1815,42 @@
         .section-title::after {
           left: 40px;
           transform: none;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            text-align: center !important;
+            margin-bottom: 60px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--tech-gradient);
+            border-radius: 2px;
+        }
+
+        /* OUR HISTORY */
+
+        /* HEADER */
+        header {
+            background: rgba(15, 23, 42, 0.95);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+
         }
 
         .section-padding {
@@ -1814,8 +1905,118 @@
         }
 
         .history-image img {
+
           border-radius: 10px;
           margin: 0;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.1);
+        }
+
+        /* OUR JOURNEY TIMELINE */
+        .journey {
+            position: relative;
+            padding: 100px 0;
+        }
+
+        .timeline {
+            position: relative;
+            margin: 0 auto;
+            max-width: 900px;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(var(--secondary), var(--primary));
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 30px 40px;
+            box-sizing: border-box;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(0, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 25px;
+            color: #e2e8f0;
+            position: relative;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .timeline-content.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-year {
+            color: var(--secondary);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content h3 {
+            color: var(--light);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content p {
+            font-size: 0.95rem;
+            color: #cbd5e1;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--tech-gradient);
+            color: #fff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            z-index: 1;
+        }
+
+        /* OUR STORY SECTION */
+        .story-section {
+            text-align: center;
+            background: url('./Assets/c5450f760d121373030f6b020aeb3e43\ 1.png') center/cover no-repeat;
+            padding: 100px 40px;
+            border-radius: 12px;
+            margin-top: 100px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.1);
+            display: block;
         }
 
         /* Story Section Mobile */
@@ -1923,17 +2124,37 @@
         .container {
           padding: 0 15px;
         }
-
         .section-title {
           font-size: 1.5rem;
+        .story-section h2 {
+            font-family: 'Orbitron', sans-serif;
+
+            margin-bottom: 40px;
+
+            margin-bottom: 30px;
+            font-size: 2.4rem;
         }
 
         .logo img {
           height: 35px;
         }
 
+
         .story-section h2 {
           font-size: 1.5rem;
+
+        /* CTA */
+
+        /* CTA SECTION */
+
+        .cta-section {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            padding: 60px 30px;
+            border-radius: 12px;
+            text-align: center;
+            color: var(--dark);
+            margin-top: 80px;
+            margin: 80px 0 40px;
         }
 
         .cta-section h2 {
@@ -1945,10 +2166,53 @@
           font-size: 0.9rem;
           gap: 8px;
         }
-
         /* Timeline Extra Small Mobile */
         .timeline-row {
           padding-left: 70px;
+
+        .cta-button img {
+            width: 22px;
+            height: 22px;
+            filter: brightness(0) invert(1);
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover img {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        @media(max-width: 900px) {
+            .history-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                text-align: left !important;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-content {
+                margin-left: 60px;
+            }
+
+            .timeline-icon {
+                left: 20px;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ✅ HEADER (Default) -->
+        .cta-button i {
+            font-size: 18px;
         }
 
         .timeline-card {
@@ -2558,6 +2822,7 @@
 
   <body>
     <!-- Header -->
+
     <header id="header">
       <div class="container">
         <nav>
@@ -2596,9 +2861,246 @@
                     src="./Assets/ai-nuclear-energy-background-future-innovation-disruptive-technology 3.png"
                     alt=""
                   />
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+
+                    <img src="./Assets/Logo.svg" alt="Zonixtec Logo" style="height: 40px;">
+                </a>
+                <div class="nav-links">
+                    <a href="aboutus.html">About Us</a>
+                    <a href="Why-Zonixtec.html">Why Zonixtec</a>
+                    <a href="our-history.html" class="active">Our History</a>
+                    <a href="carrer.html">Career</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+                    <img src="./Assets/Logo.svg" alt="Zonixtec Logo" style="height: 40px; width: auto;">
+                </a>
+                <div class="nav-links">
+
+                   <a href="#" class="about-toggle">About Us</a>
+                    
+                    <!-- ABOUT DROPDOWN PANEL -->
+                    <div class="about-dropdown">
+                        <div><h2>About Us</h2></div>
+
+                        <div class="about-container">
+                            
+                            <div class="about-links">
+                                <div>
+                                    <a href="aboutus.html">About Zonixtec</a>
+                                    <a href="Why-Zonixtec.html">Why Zonixtec?</a>
+                                    <a href="#">Our Journey</a>
+                                </div>
+                                <div>
+                                    <a href="#">From CEO’s Desk</a>
+                                    <a href="#">Leadership</a>
+                                    <a href="#">Case Study</a>
+                                </div>
+                            </div>
+                    
+                            <span class="about-close">&times;</span>
+                    
+                            <div class="about-image">
+                                <img src="./Assets/ai-nuclear-energy-background-future-innovation-disruptive-technology 3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Services Dropdown -->
+                    <div class="dropdown">
+                        <a href="Services.html" class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <div class="dropdown-scroll">
+                                <a href="web-design-development.html">Web Design & Development</a>
+                                <a href="web-app-development.html">Web App Development</a>
+                                <a href="CustomSoftware.html">Custom Software Development</a>
+                                <a href="crm-solutions.html">Custom CRM Solutions</a>
+                                <a href="erp-solutions.html">Custom ERP Solutions</a>
+                                <a href="Billing-invoice.html">Billing-Invoice Solutions</a>
+                                <a href="AIStrategy.html">AI Strategy & Consulting</a>
+                                <a href="DigitalMarketing.html">Digital Marketing Services</a>
+                                <a href="MobileDevelopment.html">Mobile App Development</a>
+                                <a href="ui.html">UI/UX Design Services</a>
+                                <a href="CloudSolutions.html">Cloud Solutions</a>
+                                 <a href="hrms-solutions.html">HRMS Solutions</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="carrer.html">Career</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="javascript:void(0);" class="cta-buttons" onclick="openBookingModal()">
+                        <i class="fas fa-phone-alt"></i>Book A 30 Min Call
+                    </a>
+                </div>
+
+                <button class="mobile-menu-btn" aria-label="Toggle mobile menu"
+                    onclick="window.toggleMobileMenu && window.toggleMobileMenu()">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+
+            </nav>
+        </div>
+    </header>
+    <!-- ✅ MAIN CONTENT -->
+    <main style="margin-top:120px;">
+
+        <!-- OUR HISTORY -->
+        <section class="section-padding">
+            <div class="container history-section">
+                <div class="history-text">
+                    <h2 class="section-title" style="text-align:left;">OUR HISTORY</h2>
+
+
+
+
+    <!-- MAIN CONTENT -->
+    <main style="margin-top: 100px;">
+
+        <!-- OUR HISTORY -->
+        <section class="section-padding">
+            <h2 class="section-title" style="text-align:left;">OUR HISTORY</h2>
+            <div class="container history-section">
+                <div class="history-text">
+
+                    <p>
+                        Zonixtec was founded in 2024 with a simple goal: to build digital solutions that help businesses
+                        work smarter. What began with five passionate developers in a small room has now grown into
+                        a fast-moving technology company offering CRM, ERP, HRMS, custom software, mobile apps,
+                        and cloud solutions.
+                    </p>
+                </div>
+                <div class="history-image">
+                    <img src="./Assets/e52ed230048cf45505f7862b56b19a99 1.png" alt="Zonixtec history image">
                 </div>
               </div>
             </div>
+        </section>
+
+        <!-- OUR JOURNEY TIMELINE -->
+        <section class="journey section-padding">
+            <div class="container">
+                <h2 class="section-title">Our Journey</h2>
+                <p class="section-subtitle">Your Trusted Partner for Reliable & Scalable Digital Solutions</p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024</div>
+                            <h3>Foundation</h3>
+                            <p>We started Zonixtec with a clear belief that technology should solve real problems. Our
+                                first team set the tone for innovation and customer-focused development.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fa fa-handshake"></i></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024</div>
+                            <h3>First Major Client</h3>
+                            <p>Our first CRM system delivered a 45% sales improvement. This milestone proved our ability
+                                to build impactful, reliable, and scalable business solutions.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fa fa-building"></i></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024</div>
+                            <h3>Opening Our First Office</h3>
+                            <p>We moved from a small room to our first office — creating a dedicated space for
+                                collaboration, brainstorming, and stronger teamwork.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fa fa-sun"></i></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2025</div>
+                            <h3>New Dedicated Workspace</h3>
+                            <p>We set up our full-scale office and expanded our services. With improved infrastructure,
+                                we strengthened our expertise in CRM, ERP, and mobile app development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR STORY IN A FEW WORDS -->
+        <section class="story-section">
+            <h2>Our Story in a Few Words</h2>
+            
+            <p>
+                Zonixtec has grown from a small team of passionate developers into a trusted technology partner for
+                businesses seeking reliable, modern, and scalable digital solutions.
+            </p>
+            <p>
+                From building our first CRM solution to expanding into ERP systems, custom software, mobile apps, and
+                cloud services, every milestone has strengthened our mission—to create technology that simplifies
+                operations and drives real business impact.
+            </p>
+            <p>
+                Today, we continue to grow, innovate, and serve clients across industries with the same dedication we
+                started with. For us, this is just the beginning of a much bigger journey.
+            </p>
+        </section>
+
+        <!-- TIMELINE IMAGE -->
+        <!-- TIMELINE IMAGE -->
+<section class="journey-section">
+        <div class="container">
+            <h2 class="journey-title">Our Journey</h2>
+            <p class="journey-subtitle">Your Trusted Partner for Reliable & Scalable Digital Solutions</p>
+            
+            <div class="timeline-container">
+                <!-- Standard Line (Mobile & Tablet) -->
+                <div class="timeline-line"></div>
+                
+                <!-- Custom Image Line (Desktop/Laptop only) -->
+                <div class="timeline-image-line">
+                    <img src="./Assets/Line 25.png" alt="Timeline Path">
+                </div>
+
+                <!-- 2024 - Foundation -->
+                <div class="timeline-row left">
+                    <div class="timeline-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-year-badge">2024</span>
+                        <h3>Foundation</h3>
+                        <p>We started Zonixtec with a clear belief that technology should solve real problems, not create new ones. Our first team of five set the tone for innovation and customer-focused development.</p>
+                    </div>
+                </div>
+
+                <!-- 2024 - First Major Client -->
+                <div class="timeline-row right">
+                    <div class="timeline-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-year-badge">2024</span>
+                        <h3>First Major Client</h3>
+                        <p>Our first custom CRM system delivered a 45% sales improvement for a client. This milestone proved our ability to build impactful, reliable, and scalable business solutions.</p>
+                    </div>
+                </div>
+
+                <!-- 2024 - Opening Our First Office -->
+                <div id="settu">
+                    <div class="timeline-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-year-badge">2024</span>
+                        <h3>Opening Our First Office</h3>
+                        <p>We moved from a small room to our first office, creating a dedicated space for collaboration, brainstorming, and stronger teamwork.</p>
+                    </div>
+                </div>
 
             <!-- Services Dropdown -->
             <div class="dropdown">
@@ -2693,6 +3195,31 @@
             <div class="timeline-image-line">
               <img src="./Assets/Line 25.png" alt="Timeline Path" />
             </div>
+
+        <!-- CTA SECTION -->
+        <div class="container">
+            <div class="cta-section">
+
+                <h2>Let’s Have a Small Talk</h2>
+                <a href="#" class="cta-button">
+                    <img src="./Assets/phone-call 1.svg" alt="Phone Icon"> Book 30 Min Call
+
+                <h2>Let's Have a Small Talk</h2>
+                <a href="javascript:void(0);" onclick="openBookingModal()" class="cta-button">
+                    <i class="fas fa-phone"></i> Book 30 Min Call
+
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- ✅ FOOTER (Default) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Zonixtec. All Rights Reserved. | Designed by Zonixtec Team</p>
 
             <!-- 2024 - Foundation -->
             <div class="timeline-row left">
@@ -2977,6 +3504,9 @@
               <a href="Leadership.html"
                 ><i class="fas fa-chevron-right"></i> Leadership</a
               >
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Zonixtec. All Rights Reserved. | Designed with by Zonixtec Team</p>
             </div>
           </div>
 
@@ -3012,6 +3542,23 @@
         </div>
       </div>
     </footer>
+
+    <!-- SCROLL ANIMATION SCRIPT -->
+    <script>
+        const items = document.querySelectorAll('.timeline-content');
+        const revealOnScroll = () => {
+            const triggerBottom = window.innerHeight * 0.85;
+            items.forEach(item => {
+                const rect = item.getBoundingClientRect();
+                if (rect.top < triggerBottom) item.classList.add('visible');
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+    </script>
+
+    <script src="./script/navbar.js"></script>
+    <script src="./script/chatbot.js"></script>
 
     <style>
       .footer-dropdown-content {
@@ -3199,4 +3746,10 @@
 
     <script src="./script/allabout.js"></script>
   </body>
+</html>
+
+
+
+</body>
+
 </html>

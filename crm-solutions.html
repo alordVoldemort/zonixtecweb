@@ -5,15 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRM Solutions | Zonixtec - Transform Customer Relationships</title>
+
+    <meta name="description"
+        content="Empower your business with Zonixtec's CRM solutions—custom-built platforms for sales automation, customer engagement, and data-driven decision-making.">
+
     <link rel="stylesheet" href="./CSS/allDropdown.css">
     <meta name="description" content="Empower your business with Zonixtec's CRM solutions—custom-built platforms for sales automation, customer engagement, and data-driven decision-making.">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="./Assets/WhatsApp Image 2025-10-15 at 15.47.06.jpeg" sizes="32x32" type="image/png">
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="./CSS/30min-model.css">
     <style>
         :root {
             --primary: #2563eb;
@@ -69,13 +76,14 @@
         }
 
         .section-title {
+            margin-top: 80px;
             font-size: 2.5rem;
             font-family: 'Orbitron', sans-serif;
             text-align: center;
             margin-bottom: 3rem;
             position: relative;
         }
-        
+
         .section-title span {
             color: var(--secondary);
             position: relative;
@@ -478,7 +486,7 @@
         }
 
         /* Technology Stack Section */
-         /* Technology Stack */
+        /* Technology Stack */
         .tech-section {
             background: rgba(10, 10, 26, 0.7);
             border-radius: 10px;
@@ -486,37 +494,37 @@
             margin-bottom: 60px;
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
+
         .tech-section h2 {
             text-align: center;
             color: var(--secondary);
             margin-bottom: 40px;
             font-family: 'Orbitron', sans-serif;
         }
-        
+
         .tech-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
         }
-        
+
         .tech-category {
             text-align: center;
         }
-        
+
         .tech-category h3 {
             color: var(--light);
             margin-bottom: 20px;
             font-size: 1.3rem;
             font-family: 'Orbitron', sans-serif;
         }
-        
+
         .tech-items {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-        
+
         .tech-item {
             background: rgba(255, 255, 255, 0.05);
             padding: 12px 15px;
@@ -524,7 +532,6 @@
             color: var(--gray);
             transition: all 0.3s ease;
         }
-        
         .tech-itemm {
             background: rgba(255, 255, 255, 0.05);
             padding: 12px 15px;
@@ -1157,8 +1164,9 @@
                         <i class="fas fa-phone-alt"></i>Book A 30 Min Call
                     </a>
                 </div>
-                
-                <button class="mobile-menu-btn" aria-label="Toggle mobile menu" onclick="window.toggleMobileMenu && window.toggleMobileMenu()">
+
+                <button class="mobile-menu-btn" aria-label="Toggle mobile menu"
+                    onclick="window.toggleMobileMenu && window.toggleMobileMenu()">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -1172,8 +1180,16 @@
             <div class="container">
                 <div class="crm-hero">
                     <h1 class="hero-title">Custom CRM Solutions</h1>
+
                     <h2 class="hero-subtitle">Transform Customer Relationships with Intelligent CRM Systems</h2>
-                    <p class="hero-description">At Zonixtec, we build intelligent CRM systems that help businesses manage customer relationships seamlessly. Our CRM solutions go beyond tracking interactions—they empower your sales, marketing, and service teams with actionable insights, automation, and unified communication channels. Whether you're a startup or an enterprise, we create CRMs that adapt to your workflow, not the other way around.</p>
+                    <p class="hero-description">At Zonixtec, we build intelligent CRM systems that help businesses
+                        manage customer relationships seamlessly. Our CRM solutions go beyond tracking interactions—they
+                        empower your sales, marketing, and service teams with actionable insights, automation, and
+                        unified communication channels. Whether you're a startup or an enterprise, we create CRMs that
+                        adapt to your workflow, not the other way around.</p>
+
+                    <p class="hero-description">Our CRM solutions go beyond tracking interactions—they empower your sales, marketing, and service teams with actionable insights, automation, and unified communication channels.</p>
+
                     <a href="booking.html?service=crm-solutions" class="cta-button">Start Your CRM Project</a>
                 </div>
 
@@ -1185,7 +1201,8 @@
                                 <i class="fas fa-cogs"></i>
                             </div>
                             <h3 class="service-type-title">Custom CRM Development</h3>
-                            <p class="service-type-text">Tailor-made systems aligned with your unique sales, marketing, and support processes.</p>
+                            <p class="service-type-text">Tailor-made systems aligned with your unique sales, marketing,
+                                and support processes.</p>
                         </div>
 
                         <div class="service-type-card">
@@ -1193,7 +1210,8 @@
                                 <i class="fas fa-link"></i>
                             </div>
                             <h3 class="service-type-title">CRM Integration</h3>
-                            <p class="service-type-text">Seamlessly connect your existing tools (ERP, email, telephony, etc.) for unified data flow.</p>
+                            <p class="service-type-text">Seamlessly connect your existing tools (ERP, email, telephony,
+                                etc.) for unified data flow.</p>
                         </div>
 
                         <div class="service-type-card">
@@ -1201,7 +1219,8 @@
                                 <i class="fas fa-robot"></i>
                             </div>
                             <h3 class="service-type-title">Sales & Marketing Automation</h3>
-                            <p class="service-type-text">Automate repetitive tasks—lead management, email campaigns, and follow-ups.</p>
+                            <p class="service-type-text">Automate repetitive tasks—lead management, email campaigns, and
+                                follow-ups.</p>
                         </div>
 
                         <div class="service-type-card">
@@ -1209,7 +1228,8 @@
                                 <i class="fas fa-chart-bar"></i>
                             </div>
                             <h3 class="service-type-title">Analytics & Reporting</h3>
-                            <p class="service-type-text">Get real-time insights into sales performance and customer behavior.</p>
+                            <p class="service-type-text">Get real-time insights into sales performance and customer
+                                behavior.</p>
                         </div>
 
                         <div class="service-type-card">
@@ -1229,7 +1249,8 @@
                             <i class="fas fa-users"></i>
                         </div>
                         <h3 class="benefit-title">360° Customer View</h3>
-                        <p class="benefit-text">Centralized customer database with complete visibility into all interactions, purchase history, and communication touchpoints.</p>
+                        <p class="benefit-text">Centralized customer database with complete visibility into all
+                            interactions, purchase history, and communication touchpoints.</p>
                     </div>
 
                     <div class="benefit-card">
@@ -1237,7 +1258,8 @@
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <h3 class="benefit-title">Sales Pipeline Management</h3>
-                        <p class="benefit-text">Advanced lead scoring, pipeline tracking, and sales forecasting with real-time analytics to boost conversion rates.</p>
+                        <p class="benefit-text">Advanced lead scoring, pipeline tracking, and sales forecasting with
+                            real-time analytics to boost conversion rates.</p>
                     </div>
 
                     <div class="benefit-card">
@@ -1245,7 +1267,8 @@
                             <i class="fas fa-robot"></i>
                         </div>
                         <h3 class="benefit-title">Automated Workflows</h3>
-                        <p class="benefit-text">Smart automation for follow-ups, notifications, and task assignments to eliminate manual work and increase efficiency.</p>
+                        <p class="benefit-text">Smart automation for follow-ups, notifications, and task assignments to
+                            eliminate manual work and increase efficiency.</p>
                     </div>
 
                     <div class="benefit-card">
@@ -1253,7 +1276,8 @@
                             <i class="fas fa-shield-alt"></i>
                         </div>
                         <h3 class="benefit-title">Security & Access Control</h3>
-                        <p class="benefit-text">Role-based permissions and advanced data security measures to protect sensitive customer information.</p>
+                        <p class="benefit-text">Role-based permissions and advanced data security measures to protect
+                            sensitive customer information.</p>
                     </div>
 
                     <div class="benefit-card">
@@ -1261,7 +1285,8 @@
                             <i class="fas fa-plug"></i>
                         </div>
                         <h3 class="benefit-title">Seamless Integrations</h3>
-                        <p class="benefit-text">Connect with third-party apps, APIs, and existing tools for unified data flow across your business ecosystem.</p>
+                        <p class="benefit-text">Connect with third-party apps, APIs, and existing tools for unified data
+                            flow across your business ecosystem.</p>
                     </div>
 
                     <div class="benefit-card">
@@ -1269,7 +1294,8 @@
                             <i class="fas fa-tachometer-alt"></i>
                         </div>
                         <h3 class="benefit-title">Custom Dashboards</h3>
-                        <p class="benefit-text">Personalized analytics dashboards with KPI tracking and real-time reporting for data-driven decision making.</p>
+                        <p class="benefit-text">Personalized analytics dashboards with KPI tracking and real-time
+                            reporting for data-driven decision making.</p>
                     </div>
                 </div>
 
@@ -1320,7 +1346,7 @@
 
                 <div class="what-we-bring">
                     <div class="what-we-bring-container">
-                        <h2 class="what-we-bring-title">What We Bring to the Table</h2>
+                        <h2 class="what-we-bring-title">What We Bring</h2>
                         <div class="what-we-bring-list">
                             <div class="what-we-bring-item">
                                 <div class="what-we-bring-icon">
@@ -1332,7 +1358,8 @@
                                 <div class="what-we-bring-icon">
                                     <i class="fas fa-check-circle"></i>
                                 </div>
-                                <p class="what-we-bring-text">Seamless integration with ERP, social media, and communication tools</p>
+                                <p class="what-we-bring-text">Seamless integration with ERP, social media, and
+                                    communication tools</p>
                             </div>
                             <div class="what-we-bring-item">
                                 <div class="what-we-bring-icon">
@@ -1368,42 +1395,121 @@
                         <div class="process-step">
                             <div class="step-number">1</div>
                             <h3 class="step-title">Requirement Analysis</h3>
-                            <p class="step-description">Understand your business model, sales process, and goals to define CRM requirements.</p>
+                            <p class="step-description">Understand your business model, sales process, and goals to
+                                define CRM requirements.</p>
                         </div>
 
                         <div class="process-step">
                             <div class="step-number">2</div>
                             <h3 class="step-title">Design & Architecture</h3>
-                            <p class="step-description">Create data models, workflows, and UI/UX layouts for your CRM system.</p>
+                            <p class="step-description">Create data models, workflows, and UI/UX layouts for your CRM
+                                system.</p>
                         </div>
 
                         <div class="process-step">
                             <div class="step-number">3</div>
                             <h3 class="step-title">Development & Integration</h3>
-                            <p class="step-description">Build and connect CRM modules with your existing systems and tools.</p>
+                            <p class="step-description">Build and connect CRM modules with your existing systems and
+                                tools.</p>
                         </div>
 
                         <div class="process-step">
                             <div class="step-number">4</div>
                             <h3 class="step-title">Testing & Quality Assurance</h3>
-                            <p class="step-description">Validate data accuracy, security, and performance of the CRM system.</p>
+                            <p class="step-description">Validate data accuracy, security, and performance of the CRM
+                                system.</p>
                         </div>
 
                         <div class="process-step">
                             <div class="step-number">5</div>
                             <h3 class="step-title">Deployment</h3>
-                            <p class="step-description">Implement the CRM solution with minimal disruption to your operations.</p>
+                            <p class="step-description">Implement the CRM solution with minimal disruption to your
+                                operations.</p>
                         </div>
 
                         <div class="process-step">
                             <div class="step-number">6</div>
                             <h3 class="step-title">Training & Support</h3>
-                            <p class="step-description">Onboard your team and provide ongoing support for optimal CRM usage.</p>
+                            <p class="step-description">Onboard your team and provide ongoing support for optimal CRM
+                                usage.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Technology Stack -->
+
+                <div class="tech-section">
+                    <h2>Our Technology Stack</h2>
+
+                    <div class="tech-grid">
+                        <div class="tech-category">
+                            <h3>Frontend Technologies</h3>
+                            <div class="tech-items">
+                                <div class="tech-item">React</div>
+                                <div class="tech-item">Angular</div>
+                                <div class="tech-item">Vue.js</div>
+                                <div class="tech-item">TypeScript</div>
+                                <div class="tech-item">HTML5/CSS3</div>
+                            </div>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3>Backend Technologies</h3>
+                            <div class="tech-items">
+                                <div class="tech-item">Node.js</div>
+                                <div class="tech-item">Python</div>
+                                <div class="tech-item">Java</div>
+                                <div class="tech-item">.NET</div>
+                                <div class="tech-item">PHP</div>
+                            </div>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3>Databases</h3>
+                            <div class="tech-items">
+                                <div class="tech-itemm">PostgreSQL</div>
+                                <div class="tech-item">MySQL</div>
+                                <div class="tech-item">MongoDB</div>
+                                <div class="tech-item">Redis</div>
+                                <div class="tech-item">SQL Server</div>
+                            </div>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3>CRM Platforms</h3>
+                            <div class="tech-items">
+                                <div class="tech-itemm">Salesforce</div>
+                                <div class="tech-item">HubSpot</div>
+                                <div class="tech-item">Zoho</div>
+                                <div class="tech-item">Microsoft Dynamics</div>
+                                <div class="tech-item">Custom Solutions</div>
+                            </div>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3>Cloud & Integration</h3>
+                            <div class="tech-items">
+                                <div class="tech-item">AWS</div>
+                                <div class="tech-item">Azure</div>
+                                <div class="tech-item">Google Cloud</div>
+                                <div class="tech-item">REST APIs</div>
+                                <div class="tech-item">Webhooks</div>
+                            </div>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3>AI & Analytics</h3>
+                            <div class="tech-items">
+                                <div class="tech-item">Machine Learning</div>
+                                <div class="tech-item">Predictive Analytics</div>
+                                <div class="tech-item">Data Visualization</div>
+                                <div class="tech-item">Business Intelligence</div>
+                                <div class="tech-item">Automation Tools</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 <div class="tech-section">
     <h2>Our Technology Stack</h2>
     
@@ -1476,6 +1582,7 @@
     </div>
 </div>
 
+
                 <div class="impact-section">
                     <div class="impact-container">
                         <h2 class="impact-title">Business Impact</h2>
@@ -1519,11 +1626,13 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="cta-container">
                     <h2 class="cta-title">Ready to Transform Your Customer Relationships?</h2>
-                    <p class="cta-description">Let's build a CRM solution that drives growth, improves efficiency, and enhances customer satisfaction. Contact us for a free consultation and discover how our CRM expertise can benefit your business.</p>
-                    <a href="booking.html?service=crm-solutions" class="cta-button-large">Schedule a Free Consultation</a>
+                    <p class="cta-description">Let's build a CRM solution that drives growth, improves efficiency, and
+                        enhances customer satisfaction. Contact us for a free consultation and discover how our CRM
+                        expertise can benefit your business.</p>
+                    <a href="booking.html?service=crm-solutions" class="cta-button-large">Schedule a Free
+                        Consultation</a>
                 </div>
 
                 <div class="faq-section">
@@ -1534,7 +1643,10 @@
                                 What industries can benefit from a CRM?
                                 <span class="faq-toggle fas fa-chevron-down"></span>
                             </div>
-                            <p class="faq-answer" style="display:none;">Every industry—retail, finance, healthcare, real estate, and more—can benefit from improved customer relationship management. CRMs help businesses of all sizes streamline customer interactions and improve sales processes.</p>
+                            <p class="faq-answer" style="display:none;">Every industry—retail, finance, healthcare, real
+                                estate, and more—can benefit from improved customer relationship management. CRMs help
+                                businesses of all sizes streamline customer interactions and improve sales processes.
+                            </p>
                         </div>
 
                         <div class="faq-item">
@@ -1542,7 +1654,9 @@
                                 Can you integrate CRM with my existing tools?
                                 <span class="faq-toggle fas fa-chevron-down"></span>
                             </div>
-                            <p class="faq-answer" style="display:none;">Yes, we integrate with ERPs, accounting tools, marketing software, and communication platforms. Our CRM solutions are designed to work seamlessly with your existing technology ecosystem.</p>
+                            <p class="faq-answer" style="display:none;">Yes, we integrate with ERPs, accounting tools,
+                                marketing software, and communication platforms. Our CRM solutions are designed to work
+                                seamlessly with your existing technology ecosystem.</p>
                         </div>
 
                         <div class="faq-item">
@@ -1550,7 +1664,10 @@
                                 Is a custom CRM better than ready-made ones like Salesforce or HubSpot?
                                 <span class="faq-toggle fas fa-chevron-down"></span>
                             </div>
-                            <p class="faq-answer" style="display:none;">A custom CRM offers flexibility, scalability, and control—perfect for businesses with unique workflows or data needs. While off-the-shelf solutions work for standard requirements, custom CRMs are tailored to your specific business processes.</p>
+                            <p class="faq-answer" style="display:none;">A custom CRM offers flexibility, scalability,
+                                and control—perfect for businesses with unique workflows or data needs. While
+                                off-the-shelf solutions work for standard requirements, custom CRMs are tailored to your
+                                specific business processes.</p>
                         </div>
 
                         <div class="faq-item">
@@ -1558,7 +1675,9 @@
                                 Do you provide cloud-based CRM solutions?
                                 <span class="faq-toggle fas fa-chevron-down"></span>
                             </div>
-                            <p class="faq-answer" style="display:none;">Absolutely. We build both on-premise and cloud-based CRMs, depending on your requirements. Cloud-based solutions offer accessibility from anywhere and reduced IT infrastructure costs.</p>
+                            <p class="faq-answer" style="display:none;">Absolutely. We build both on-premise and
+                                cloud-based CRMs, depending on your requirements. Cloud-based solutions offer
+                                accessibility from anywhere and reduced IT infrastructure costs.</p>
                         </div>
 
                         <div class="faq-item">
@@ -1566,10 +1685,20 @@
                                 How secure is my CRM data?
                                 <span class="faq-toggle fas fa-chevron-down"></span>
                             </div>
-                            <p class="faq-answer" style="display:none;">We implement encryption, access control, and compliance measures to ensure complete data security. Our CRMs include role-based permissions and audit trails to protect sensitive customer information.</p>
+                            <p class="faq-answer" style="display:none;">We implement encryption, access control, and
+                                compliance measures to ensure complete data security. Our CRMs include role-based
+                                permissions and audit trails to protect sensitive customer information.</p>
                         </div>
                     </div>
                 </div>
+                
+                <div class="cta-container">
+                    <h2 class="cta-title">Ready to Transform Your Customer Relationships?</h2>
+                    <p class="cta-description">Let's build a CRM solution that drives growth, improves efficiency, and enhances customer satisfaction. Contact us for a free consultation and discover how our CRM expertise can benefit your business.</p>
+                    <a href="booking.html?service=crm-solutions" class="cta-button-large">Schedule a Free Consultation</a>
+                </div>
+
+        
                 <script>
                     document.addEventListener('DOMContentLoaded', function () {
                         const faqItems = document.querySelectorAll('.faq-item');
@@ -1783,92 +1912,195 @@
     <script src="./script/chatbot.js"></script>
 
 
-    <!-- Booking Modal -->
-<div class="modal" id="bookingModal">
-    <div class="modal-content">
-        <button class="close-modal" onclick="closeBookingModal()">
-            <i class="fas fa-times"></i>
-        </button>
-        
-        <div class="modal-header">
-            <h2>Book Your Free 30-Minute Consultation</h2>
-            <p>Let's discuss how we can help transform your business</p>
+   <!--open booking 30 min call modal -->
+
+    <div id="bookingModal" class="booking-modal">
+        <div class="booking-modal-content">
+
+            <!-- CLOSE BUTTON -->
+            <span class="booking-modal-close" onclick="closeBookingModal()">&times;</span>
+
+            <!-- STEP PROGRESS -->
+            <div class="booking-progress-indicator">
+                <div class="booking-progress-step booking-active" id="progress1" data-step="1"></div>
+                <div class="booking-progress-line" id="line1"></div>
+                <div class="booking-progress-step" id="progress2" data-step="2"></div>
+                <div class="booking-progress-line" id="line2"></div>
+                <div class="booking-progress-step" id="progress3" data-step="3"></div>
+                <div class="booking-progress-line" id="line3"></div>
+                <div class="booking-progress-step" id="progress4" data-step="4"></div>
+            </div>
+
+            <!-- STEP 1 -->
+            <div class="booking-modal-step booking-active" id="step1">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">1</div>
+                    <h2 class="booking-step-title">Zonixtec — 30-Minute Discovery Call</h2>
+                </div>
+
+                <div class="booking-discovery-subtitle">
+                    Duration: 30 Minutes | Mode: Web Conference
+                </div>
+
+                <div class="booking-session-overview">
+                    <h4 class="booking-session-title">In this quick session, we'll cover:</h4>
+                    <div class="booking-session-items-grid">
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Introduction & Requirement Understanding</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Relevant Use Case Demo</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Technology Solutions & Offerings</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Project Roadmap & Next Steps</span>
+                        </div>
+                    </div>
+
+                    <div class="booking-discovery-goal">
+                        <strong>Goal:</strong>
+                        <p>Understand your needs and explore how Zonixtec can deliver the right tech solutions for your
+                            project.</p>
+                    </div>
+                </div>
+
+                <div class="booking-step-navigation">
+                    <div></div>
+                    <button class="booking-btn-primary" onclick="nextStep(1)">
+                        Next: Select Date <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="booking-modal-step" id="step2">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">2</div>
+                    <h2 class="booking-step-title">Select Your Preferred Date</h2>
+                </div>
+
+                <input type="text" id="dateInput" class="booking-calendar-input" placeholder="Pick a date" readonly />
+
+                <div class="booking-step-navigation">
+                    <button class="booking-btn-secondary" onclick="previousStep(2)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="booking-btn-primary" id="dateNextBtn" onclick="nextStep(2)" disabled>
+                        Next: Select Time <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="booking-modal-step" id="step3">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">3</div>
+                    <h2 class="booking-step-title">Choose Your Time Slot</h2>
+                </div>
+
+                <div class="booking-time-slots">
+                    <div class="booking-time-slot" data-time="10:30">10:30 AM</div>
+                    <div class="booking-time-slot" data-time="11:30">11:30 AM</div>
+                    <div class="booking-time-slot" data-time="12:00">12:00 PM</div>
+                    <div class="booking-time-slot" data-time="12:30">12:30 PM</div>
+                    <div class="booking-time-slot" data-time="13:00">1:00 PM</div>
+                    <div class="booking-time-slot" data-time="13:30">1:30 PM</div>
+                    <div class="booking-time-slot" data-time="14:00">2:00 PM</div>
+                    <div class="booking-time-slot" data-time="14:30">2:30 PM</div>
+                    <div class="booking-time-slot" data-time="15:00">3:00 PM</div>
+                    <div class="booking-time-slot" data-time="15:30">3:30 PM</div>
+                    <div class="booking-time-slot" data-time="16:00">4:00 PM</div>
+                    <div class="booking-time-slot" data-time="16:30">4:30 PM</div>
+                    <div class="booking-time-slot" data-time="17:00">5:00 PM</div>
+                </div>
+
+                <div class="booking-step-navigation">
+                    <button class="booking-btn-secondary" onclick="previousStep(3)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="booking-btn-primary" id="timeNextBtn" onclick="nextStep(3)" disabled>
+                        Next: Your Info <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="booking-modal-step" id="step4">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">4</div>
+                    <h2 class="booking-step-title">Your Information</h2>
+                </div>
+
+                <form class="booking-modal-form" id="bookingFormPage">
+
+                    <div class="form-group-row">
+                        <label for="bookingName">Full Name</label>
+                        <input type="text" id="bookingName" placeholder="Enter your full name" required />
+                    </div>
+                    <span class="error-text" id="nameError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingEmail">Email</label>
+                        <input type="email" id="bookingEmail" placeholder="Enter your email" required />
+                    </div>
+                    <span class="error-text" id="emailError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingPhone">Phone</label>
+                        <input type="tel" id="bookingPhone" placeholder="Enter your phone number" required />
+                    </div>
+                    <span class="error-text" id="phoneError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingCompany">Company</label>
+                        <input type="text" id="bookingCompany" placeholder="Company (optional)" />
+                    </div>
+
+                    <div class="form-group-row">
+                        <label for="bookingMessage">Message</label>
+                        <textarea id="bookingMessage" placeholder="Describe what services you need..."></textarea>
+                    </div>
+
+                    <div class="booking-step-navigation">
+                        <button type="button" class="booking-btn-secondary" onclick="previousStep(4)">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </button>
+
+                        <button type="submit" class="booking-btn-primary">
+                            <i class="fas fa-calendar-check"></i> Book My Free Consultation
+                        </button>
+                    </div>
+
+                </form>
+
+
+
+            </div>
+
+            <!-- SUCCESS -->
+            <div id="bookingSuccessPage" class="booking-success-message">
+                <i class="fas fa-check-circle"></i>
+                <h3>Your Call is Booked!</h3>
+                <p>Our team will contact you shortly. Thank you!</p>
+            </div>
+
         </div>
-
-        <form class="booking-form" id="bookingForm">
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Full Name <span>*</span></label>
-                    <input type="text" id="bookingName" placeholder="Enter your full name" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Email Address <span>*</span></label>
-                    <input type="email" id="bookingEmail" placeholder="your@email.com" required>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Phone Number <span>*</span></label>
-                    <input type="tel" id="bookingPhone" placeholder="+91 999999999" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Company Name</label>
-                    <input type="text" id="bookingCompany" placeholder="Your company (optional)">
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Preferred Date <span>*</span></label>
-                    <input type="date" id="bookingDate" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Preferred Time <span>*</span></label>
-                    <input type="time" id="bookingTime" required>
-                </div>
-            </div>
-
-            <div class="form-group-modal">
-                <label>Service Interested In <span>*</span></label>
-                <select id="bookingService" required>
-                    <option value="">Select a service</option>
-                    <option value="CRM Solutions">CRM Solutions</option>
-                    <option value="ERP Solutions">ERP Solutions</option>
-                    <option value="Billing Software">Billing Software</option>
-                    <option value="Website Development">Website Development</option>
-                    <option value="Mobile App Development">Mobile App Development</option>
-                    <option value="AI Solutions">AI Solutions</option>
-                    <option value="Cloud Solutions">Cloud Solutions</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="UI/UX Design">UI/UX Design</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-
-            <div class="form-group-modal">
-                <label>Message / Additional Details</label>
-                <textarea id="bookingMessage" placeholder="Tell us about your project or questions..."></textarea>
-            </div>
-
-            <button type="submit" class="submit-booking-btn">
-                <i class="fas fa-calendar-check"></i> Book My Call
-            </button>
-        </form>
     </div>
-</div>
 
-<!-- Success Message Overlay -->
-<div class="success-message" id="bookingSuccess">
-    <i class="fas fa-check-circle"></i> 
-    <strong>Your Call is Booked!</strong>
-    <p>Our team will connect with you as soon as possible. Thank you for choosing Zonixtec!</p>
-</div>
 
 
     <!-- Booking Modal Script -->
     <script src="./script/booking-modal.js"></script>
     <script src="./script/navbar.js"></script>
+
+    <script src="./script/30min-booking.js"></script>
+
     <script src="./script/allabout.js"></script>
 
 </body>

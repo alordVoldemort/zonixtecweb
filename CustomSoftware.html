@@ -14,6 +14,10 @@ We design scalable, secure, and user-friendly applications tailored to your busi
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="./CSS/30min-model.css">
+
 
     <style>
         :root {
@@ -76,7 +80,7 @@ We design scalable, secure, and user-friendly applications tailored to your busi
             margin-bottom: 3rem;
             position: relative;
         }
-        
+
         .section-title span {
             color: var(--secondary);
             position: relative;
@@ -489,24 +493,24 @@ We design scalable, secure, and user-friendly applications tailored to your busi
             margin-bottom: 60px;
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
+
         .tech-section h2 {
             text-align: center;
             font-family: 'Orbitron', sans-serif;
             color: var(--secondary);
             margin-bottom: 40px;
         }
-        
+
         .tech-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
         }
-        
+
         .tech-category {
             text-align: center;
         }
-        
+
         .tech-category h3 {
             color: var(--light);
             margin-bottom: 20px;
@@ -514,13 +518,13 @@ We design scalable, secure, and user-friendly applications tailored to your busi
             font-size: 1.3rem;
             font-family: 'Orbitron', sans-serif;
         }
-        
+
         .tech-items {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-        
+
         .tech-item {
             background: rgba(255, 255, 255, 0.05);
             padding: 12px 15px;
@@ -537,13 +541,13 @@ We design scalable, secure, and user-friendly applications tailored to your busi
             margin-top: 30px;
             transition: all 0.3s ease;
         }
-        
+
         .tech-item:hover {
             background: rgba(255, 255, 255, 0.08);
             color: var(--light);
             transform: translateY(-3px);
         }
-        
+
 
         .impact-section {
             margin-bottom: 80px;
@@ -915,273 +919,275 @@ We design scalable, secure, and user-friendly applications tailored to your busi
             color: #ef4444;
             margin: 0 5px;
         }
+
         /* ===== RESPONSIVE FIXES ===== */
-@media (max-width: 1200px) {
-    .process-steps {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-    }
-    
-    .process-steps::before {
-        display: none;
-    }
-    
-    .process-step {
-        flex: 0 0 calc(33.333% - 20px);
-        margin-bottom: 30px;
-    }
-}
+        @media (max-width: 1200px) {
+            .process-steps {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 30px;
+            }
 
-@media (max-width: 992px) {
-    .hero-title {
-        font-size: 2.8rem;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .process-step {
-        flex: 0 0 calc(50% - 20px);
-    }
-    
-    .tech-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-    
-    .footer-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-}
+            .process-steps::before {
+                display: none;
+            }
 
-@media (max-width: 768px) {
-    .container {
-        padding: 0 15px;
-    }
-    
-    .software-section {
-        padding: 120px 0 60px;
-    }
-    
-    .software-hero {
-        margin: 0 auto 50px;
-    }
-    
-    .hero-title {
-        font-size: 2.2rem;
-        line-height: 1.3;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
-    
-    .hero-description {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-    
-    .benefits-grid,
-    .service-types-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .benefit-card,
-    .service-type-card {
-        padding: 20px;
-    }
-    
-    .process-steps {
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-    }
-    
-    .process-step {
-        flex: 0 0 100%;
-        max-width: 300px;
-    }
-    
-    .step-number {
-        width: 60px;
-        height: 60px;
-        font-size: 1.4rem;
-    }
-    
-    .tech-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .tech-section {
-        padding: 40px 20px;
-        margin: 40px 0;
-    }
-    
-    .challenges-container,
-    .what-we-bring-container,
-    .impact-container,
-    .faq-section {
-        padding: 30px 20px;
-    }
-    
-    .challenges-title,
-    .what-we-bring-title,
-    .impact-title,
-    .faq-title {
-        font-size: 1.8rem;
-    }
-    
-    .cta-container {
-        padding: 40px 20px;
-        margin-bottom: 50px;
-    }
-    
-    .cta-title {
-        font-size: 1.8rem;
-    }
-    
-    .cta-description {
-        font-size: 1rem;
-    }
-    
-    .footer-container {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-    
-    .footer-col {
-        padding: 15px 0;
-    }
-}
+            .process-step {
+                flex: 0 0 calc(33.333% - 20px);
+                margin-bottom: 30px;
+            }
+        }
 
-@media (max-width: 576px) {
-    .hero-title {
-        font-size: 1.8rem;
-    }
-    
-    .section-title {
-        font-size: 1.6rem;
-    }
-    
-    .benefit-icon,
-    .service-type-icon {
-        font-size: 2rem;
-    }
-    
-    .benefit-title,
-    .service-type-title {
-        font-size: 1.3rem;
-    }
-    
-    .process-step {
-        max-width: 100%;
-        padding: 0 10px;
-    }
-    
-    .step-title {
-        font-size: 1.1rem;
-    }
-    
-    .step-description {
-        font-size: 0.9rem;
-    }
-    
-    .cta-button,
-    .cta-button-large {
-        width: 100%;
-        text-align: center;
-        padding: 12px 20px;
-    }
-    
-    .faq-question {
-        font-size: 1.1rem;
-    }
-}
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
 
-/* Fix for mobile menu */
-@media (max-width: 768px) {
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        max-width: 300px;
-        height: 100vh;
-        background: rgba(15, 23, 42, 0.98);
-        backdrop-filter: blur(10px);
-        flex-direction: column;
-        justify-content: flex-start;
-        padding-top: 80px;
-        gap: 20px;
-        transition: right 0.3s ease;
-        z-index: 999;
-        overflow-y: auto;
-    }
-    
-    .nav-links.active {
-        right: 0;
-    }
-    
-    .nav-links a {
-        padding: 12px 20px;
-        width: 100%;
-        text-align: left;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .dropdown-content {
-        position: static;
-        background: transparent;
-        box-shadow: none;
-        border: none;
-        padding: 10px 0 10px 20px;
-    }
-    
-    .dropdown-content a {
-        margin: 5px 0;
-        padding: 8px 15px;
-    }
-}
+            .section-title {
+                font-size: 2rem;
+            }
 
-/* Fix for form elements on mobile */
-@media (max-width: 768px) {
-    .form-row {
-        flex-direction: column;
-    }
-    
-    .form-group-modal {
-        width: 100%;
-    }
-}
+            .process-step {
+                flex: 0 0 calc(50% - 20px);
+            }
 
-/* Ensure images are responsive */
-img {
-    max-width: 100%;
-    height: auto;
-}
+            .tech-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
 
-/* Improve touch targets for mobile */
-@media (max-width: 768px) {
-    .cta-button,
-    .cta-button-large,
-    .nav-links a {
-        min-height: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .faq-question {
-        min-height: 44px;
-        display: flex;
-        align-items: center;
-    }
-}
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .software-section {
+                padding: 120px 0 60px;
+            }
+
+            .software-hero {
+                margin: 0 auto 50px;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+                line-height: 1.3;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+
+            .benefits-grid,
+            .service-types-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .benefit-card,
+            .service-type-card {
+                padding: 20px;
+            }
+
+            .process-steps {
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+            }
+
+            .process-step {
+                flex: 0 0 100%;
+                max-width: 300px;
+            }
+
+            .step-number {
+                width: 60px;
+                height: 60px;
+                font-size: 1.4rem;
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .tech-section {
+                padding: 40px 20px;
+                margin: 40px 0;
+            }
+
+            .challenges-container,
+            .what-we-bring-container,
+            .impact-container,
+            .faq-section {
+                padding: 30px 20px;
+            }
+
+            .challenges-title,
+            .what-we-bring-title,
+            .impact-title,
+            .faq-title {
+                font-size: 1.8rem;
+            }
+
+            .cta-container {
+                padding: 40px 20px;
+                margin-bottom: 50px;
+            }
+
+            .cta-title {
+                font-size: 1.8rem;
+            }
+
+            .cta-description {
+                font-size: 1rem;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .footer-col {
+                padding: 15px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .benefit-icon,
+            .service-type-icon {
+                font-size: 2rem;
+            }
+
+            .benefit-title,
+            .service-type-title {
+                font-size: 1.3rem;
+            }
+
+            .process-step {
+                max-width: 100%;
+                padding: 0 10px;
+            }
+
+            .step-title {
+                font-size: 1.1rem;
+            }
+
+            .step-description {
+                font-size: 0.9rem;
+            }
+
+            .cta-button,
+            .cta-button-large {
+                width: 100%;
+                text-align: center;
+                padding: 12px 20px;
+            }
+
+            .faq-question {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Fix for mobile menu */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background: rgba(15, 23, 42, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-top: 80px;
+                gap: 20px;
+                transition: right 0.3s ease;
+                z-index: 999;
+                overflow-y: auto;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links a {
+                padding: 12px 20px;
+                width: 100%;
+                text-align: left;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .dropdown-content {
+                position: static;
+                background: transparent;
+                box-shadow: none;
+                border: none;
+                padding: 10px 0 10px 20px;
+            }
+
+            .dropdown-content a {
+                margin: 5px 0;
+                padding: 8px 15px;
+            }
+        }
+
+        /* Fix for form elements on mobile */
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+            }
+
+            .form-group-modal {
+                width: 100%;
+            }
+        }
+
+        /* Ensure images are responsive */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Improve touch targets for mobile */
+        @media (max-width: 768px) {
+
+            .cta-button,
+            .cta-button-large,
+            .nav-links a {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .faq-question {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+            }
+        }
 
         @media (min-width: 768px) {
 
@@ -1448,8 +1454,9 @@ img {
                         <i class="fas fa-phone-alt"></i>Book A 30 Min Call
                     </a>
                 </div>
-                
-                <button class="mobile-menu-btn" aria-label="Toggle mobile menu" onclick="window.toggleMobileMenu && window.toggleMobileMenu()">
+
+                <button class="mobile-menu-btn" aria-label="Toggle mobile menu"
+                    onclick="window.toggleMobileMenu && window.toggleMobileMenu()">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -1463,16 +1470,11 @@ img {
             <div class="container">
                 <div class="software-hero">
                     <h1 class="hero-title">Custom Software Development</h1>
-                    <h2 class="hero-subtitle">Tailored Solutions for Your Unique Business Needs</h2>
-                    <p class="hero-description">In today's digital-first world, every business needs software that truly
-                        aligns with its unique
-                        vision. Off-the-shelf products often fall short, leaving gaps in performance, scalability, and
-                        customer experience.
+                    <p class="hero-description">
                         At Zonixtec, we specialize in custom software development that adapts to your exact needs.
                         From concept to deployment, we design secure, scalable, and future-ready applications that
                         help you stay ahead of the competition.
-                        Whether you need enterprise solutions, SaaS products, or workflow automation tools, our
-                        tailored approach ensures your software works seamlessly for your business.</p>
+                    </p>
                     <a href="booking.html?service=custom-software" class="cta-button">Start Your Project</a>
                 </div>
 
@@ -1630,7 +1632,7 @@ img {
 
                 <div class="what-we-bring">
                     <div class="what-we-bring-container">
-                        <h2 class="what-we-bring-title">What We Bring to the Table</h2>
+                        <h2 class="what-we-bring-title">What We Bring</h2>
                         <div class="what-we-bring-list">
                             <div class="what-we-bring-item">
                                 <div class="what-we-bring-icon">
@@ -1720,6 +1722,63 @@ img {
                 </div>
 
                 <!-- Technology Stack -->
+                <div class="tech-section">
+                    <h2>Our Technology Stack</h2>
+
+                    <div class="tech-grid">
+                        <div class="tech-category">
+                            <h3>Languages & Frameworks</h3>
+                            <div class="tech-items">
+                                <div class="tech-item">HTML5</div>
+                                <div class="tech-item">CSS3</div>
+                                <div class="tech-item">JavaScript</div>
+                                <div class="tech-item">React</div>
+                                <div class="tech-item">Angular</div>
+                                <div class="tech-item">Node.js</div>
+                            </div>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3>Backend Technologies</h3>
+                            <div class="tech-items">
+                                <div class="tech-item">PHP</div>
+                                <div class="tech-item">Python</div>
+                                <div class="tech-item">Express.js</div>
+                                <div class="tech-item">Laravel</div>
+                            </div>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3>Databases</h3>
+                            <div class="tech-items">
+                                <div class="tech-itemm">MongoDB</div>
+                                <div class="tech-item">MySQL</div>
+                                <div class="tech-item">PostgreSQL</div>
+                            </div>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3>CMS Platforms</h3>
+                            <div class="tech-items">
+                                <div class="tech-itemm">WordPress</div>
+                                <div class="tech-item">Drupal</div>
+                                <div class="tech-item">Strapi</div>
+                                <div class="tech-item">Shopify</div>
+                            </div>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3>Cloud & Hosting</h3>
+                            <div class="tech-items">
+                                <div class="tech-item">AWS</div>
+                                <div class="tech-item">Azure</div>
+                                <div class="tech-item">Google Cloud</div>
+                                <div class="tech-item">DigitalOcean</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 <div class="tech-section">
     <h2>Our Technology Stack</h2>
     
@@ -1776,6 +1835,7 @@ img {
         </div>
     </div>
 </div>
+>>>>>>> main
 
                 <div class="impact-section">
                     <div class="impact-container">
@@ -1821,70 +1881,63 @@ img {
                     </div>
                 </div>
 
-                <div class="cta-container">
-                    <h2 class="cta-title">Ready to Transform Your Business?</h2>
-                    <p class="cta-description">Let's discuss how our custom software solutions can address your unique
-                        challenges and drive your business forward. Our team of experts is ready to turn your vision
-                        into reality.</p>
-                    <a href="booking.html?service=custom-software" class="cta-button-large">Schedule a Free Consultation</a>
-                </div>
-
                 <div class="faq-section">
                     <h2 class="faq-title">Frequently Asked Questions</h2>
                     <div class="faq-container">
                         <div class="faq-item">
                             <div class="faq-question">
-                                How long does custom software development take?
+                                Why should I choose custom software over ready-made solutions?
                                 <span class="faq-toggle fas fa-chevron-down"></span>
                             </div>
-                            <p class="faq-answer" style="display:none;">The timeline varies based on project complexity,
-                                features and requirements. Simple applications may take 2-3 months, while enterprise
-                                solutions can take 6-12 months. We provide a detailed timeline after our initial
-                                discovery phase.</p>
+                            <p class="faq-answer" style="display:none;">Custom software is designed for your unique needs, ensuring flexibility, scalability, and
+long-term ROI that off-the-shelf products can’t match.</p>
                         </div>
 
                         <div class="faq-item">
                             <div class="faq-question">
-                                How much does custom software cost?
+                                How long does it take to build custom software?
                                 <span class="faq-toggle fas fa-chevron-down"></span>
                             </div>
-                            <p class="faq-answer" style="display:none;">Costs depend on project scope, complexity, and
-                                technology stack. We offer transparent pricing models - fixed price for well-defined
-                                projects and time & materials for evolving requirements.</p>
+                            <p class="faq-answer" style="display:none;">It depends on project complexity, but typically ranges from 2–6 months. We use agile
+methodology for faster delivery.</p>
                         </div>
 
                         <div class="faq-item">
                             <div class="faq-question">
-                                How do you ensure the software meets our needs?
+                                Will my software be scalable in the future?
                                 <span class="faq-toggle fas fa-chevron-down"></span>
                             </div>
-                            <p class="faq-answer" style="display:none;">We follow an iterative development approach with
-                                regular demos and feedback sessions. You'll see progress at every stage and have
-                                opportunities to request adjustments, ensuring the final product aligns perfectly with
-                                your expectations.</p>
+                            <p class="faq-answer" style="display:none;">Yes! We design all solutions with scalability in mind, ensuring they grow with your business.</p>
                         </div>
 
                         <div class="faq-item">
                             <div class="faq-question">
-                                What ongoing support do you provide?
+                                Do you provide support after deployment?
                                 <span class="faq-toggle fas fa-chevron-down"></span>
                             </div>
-                            <p class="faq-answer" style="display:none;">We offer comprehensive support packages
-                                including bug fixes, updates, feature enhancements, performance monitoring, and security
-                                patches. Our support can be scaled to match your operational needs.</p>
+                            <p class="faq-answer" style="display:none;">Absolutely. We offer continuous monitoring, updates, and maintenance services.</p>
                         </div>
 
                         <div class="faq-item">
                             <div class="faq-question">
-                                Can you integrate with our existing systems?
+                                 Can you integrate my existing systems into the new software?
                                 <span class="faq-toggle fas fa-chevron-down"></span>
                             </div>
-                            <p class="faq-answer" style="display:none;">Absolutely! Our solutions are designed to
-                                integrate seamlessly with your current software ecosystem. We have extensive experience
-                                with APIs, data migration, and creating middleware for smooth interoperability.</p>
+                            <p class="faq-answer" style="display:none;">Yes, our integration experts ensure smooth connectivity with CRMs, ERPs, payment systems,
+and other tools you already use.</p>
                         </div>
                     </div>
                 </div>
+
+                <div class="cta-container">
+                    <h2 class="cta-title">Ready to Transform Your Business?</h2>
+                    <p class="cta-description">Let's discuss how our custom software solutions can address your unique
+                        challenges and drive your business forward. Our team of experts is ready to turn your vision
+                        into reality.</p>
+                    <a href="booking.html?service=custom-software" class="cta-button-large">Schedule a Free
+                        Consultation</a>
+                </div>
+
                 <script>
                     document.addEventListener('DOMContentLoaded', function () {
                         const faqItems = document.querySelectorAll('.faq-item');
@@ -2099,92 +2152,196 @@ img {
 
 
     <!-- Booking Modal -->
-<div class="modal" id="bookingModal">
-    <div class="modal-content">
-        <button class="close-modal" onclick="closeBookingModal()">
-            <i class="fas fa-times"></i>
-        </button>
-        
-        <div class="modal-header">
-            <h2>Book Your Free 30-Minute Consultation</h2>
-            <p>Let's discuss how we can help transform your business</p>
+    <!--open booking 30 min call modal -->
+
+    <div id="bookingModal" class="booking-modal">
+        <div class="booking-modal-content">
+
+            <!-- CLOSE BUTTON -->
+            <span class="booking-modal-close" onclick="closeBookingModal()">&times;</span>
+
+            <!-- STEP PROGRESS -->
+            <div class="booking-progress-indicator">
+                <div class="booking-progress-step booking-active" id="progress1" data-step="1"></div>
+                <div class="booking-progress-line" id="line1"></div>
+                <div class="booking-progress-step" id="progress2" data-step="2"></div>
+                <div class="booking-progress-line" id="line2"></div>
+                <div class="booking-progress-step" id="progress3" data-step="3"></div>
+                <div class="booking-progress-line" id="line3"></div>
+                <div class="booking-progress-step" id="progress4" data-step="4"></div>
+            </div>
+
+            <!-- STEP 1 -->
+            <div class="booking-modal-step booking-active" id="step1">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">1</div>
+                    <h2 class="booking-step-title">Zonixtec — 30-Minute Discovery Call</h2>
+                </div>
+
+                <div class="booking-discovery-subtitle">
+                    Duration: 30 Minutes | Mode: Web Conference
+                </div>
+
+                <div class="booking-session-overview">
+                    <h4 class="booking-session-title">In this quick session, we'll cover:</h4>
+                    <div class="booking-session-items-grid">
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Introduction & Requirement Understanding</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Relevant Use Case Demo</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Technology Solutions & Offerings</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Project Roadmap & Next Steps</span>
+                        </div>
+                    </div>
+
+                    <div class="booking-discovery-goal">
+                        <strong>Goal:</strong>
+                        <p>Understand your needs and explore how Zonixtec can deliver the right tech solutions for your
+                            project.</p>
+                    </div>
+                </div>
+
+                <div class="booking-step-navigation">
+                    <div></div>
+                    <button class="booking-btn-primary" onclick="nextStep(1)">
+                        Next: Select Date <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="booking-modal-step" id="step2">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">2</div>
+                    <h2 class="booking-step-title">Select Your Preferred Date</h2>
+                </div>
+
+                <input type="text" id="dateInput" class="booking-calendar-input" placeholder="Pick a date" readonly />
+
+                <div class="booking-step-navigation">
+                    <button class="booking-btn-secondary" onclick="previousStep(2)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="booking-btn-primary" id="dateNextBtn" onclick="nextStep(2)" disabled>
+                        Next: Select Time <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="booking-modal-step" id="step3">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">3</div>
+                    <h2 class="booking-step-title">Choose Your Time Slot</h2>
+                </div>
+
+                <div class="booking-time-slots">
+                    <div class="booking-time-slot" data-time="10:30">10:30 AM</div>
+                    <div class="booking-time-slot" data-time="11:30">11:30 AM</div>
+                    <div class="booking-time-slot" data-time="12:00">12:00 PM</div>
+                    <div class="booking-time-slot" data-time="12:30">12:30 PM</div>
+                    <div class="booking-time-slot" data-time="13:00">1:00 PM</div>
+                    <div class="booking-time-slot" data-time="13:30">1:30 PM</div>
+                    <div class="booking-time-slot" data-time="14:00">2:00 PM</div>
+                    <div class="booking-time-slot" data-time="14:30">2:30 PM</div>
+                    <div class="booking-time-slot" data-time="15:00">3:00 PM</div>
+                    <div class="booking-time-slot" data-time="15:30">3:30 PM</div>
+                    <div class="booking-time-slot" data-time="16:00">4:00 PM</div>
+                    <div class="booking-time-slot" data-time="16:30">4:30 PM</div>
+                    <div class="booking-time-slot" data-time="17:00">5:00 PM</div>
+                </div>
+
+                <div class="booking-step-navigation">
+                    <button class="booking-btn-secondary" onclick="previousStep(3)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="booking-btn-primary" id="timeNextBtn" onclick="nextStep(3)" disabled>
+                        Next: Your Info <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="booking-modal-step" id="step4">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">4</div>
+                    <h2 class="booking-step-title">Your Information</h2>
+                </div>
+
+                <form class="booking-modal-form" id="bookingFormPage">
+
+                    <div class="form-group-row">
+                        <label for="bookingName">Full Name</label>
+                        <input type="text" id="bookingName" placeholder="Enter your full name" required />
+                    </div>
+                    <span class="error-text" id="nameError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingEmail">Email</label>
+                        <input type="email" id="bookingEmail" placeholder="Enter your email" required />
+                    </div>
+                    <span class="error-text" id="emailError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingPhone">Phone</label>
+                        <input type="tel" id="bookingPhone" placeholder="Enter your phone number" required />
+                    </div>
+                    <span class="error-text" id="phoneError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingCompany">Company</label>
+                        <input type="text" id="bookingCompany" placeholder="Company (optional)" />
+                    </div>
+
+                    <div class="form-group-row">
+                        <label for="bookingMessage">Message</label>
+                        <textarea id="bookingMessage" placeholder="Describe what services you need..."></textarea>
+                    </div>
+
+                    <div class="booking-step-navigation">
+                        <button type="button" class="booking-btn-secondary" onclick="previousStep(4)">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </button>
+
+                        <button type="submit" class="booking-btn-primary">
+                            <i class="fas fa-calendar-check"></i> Book My Free Consultation
+                        </button>
+                    </div>
+
+                </form>
+
+
+
+            </div>
+
+            <!-- SUCCESS -->
+            <div id="bookingSuccessPage" class="booking-success-message">
+                <i class="fas fa-check-circle"></i>
+                <h3>Your Call is Booked!</h3>
+                <p>Our team will contact you shortly. Thank you!</p>
+            </div>
+
         </div>
-
-        <form class="booking-form" id="bookingForm">
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Full Name <span>*</span></label>
-                    <input type="text" id="bookingName" placeholder="Enter your full name" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Email Address <span>*</span></label>
-                    <input type="email" id="bookingEmail" placeholder="your@email.com" required>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Phone Number <span>*</span></label>
-                    <input type="tel" id="bookingPhone" placeholder="+91 999999999" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Company Name</label>
-                    <input type="text" id="bookingCompany" placeholder="Your company (optional)">
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Preferred Date <span>*</span></label>
-                    <input type="date" id="bookingDate" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Preferred Time <span>*</span></label>
-                    <input type="time" id="bookingTime" required>
-                </div>
-            </div>
-
-            <div class="form-group-modal">
-                <label>Service Interested In <span>*</span></label>
-                <select id="bookingService" required>
-                    <option value="">Select a service</option>
-                    <option value="CRM Solutions">CRM Solutions</option>
-                    <option value="ERP Solutions">ERP Solutions</option>
-                    <option value="Billing Software">Billing Software</option>
-                    <option value="Website Development">Website Development</option>
-                    <option value="Mobile App Development">Mobile App Development</option>
-                    <option value="AI Solutions">AI Solutions</option>
-                    <option value="Cloud Solutions">Cloud Solutions</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="UI/UX Design">UI/UX Design</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-
-            <div class="form-group-modal">
-                <label>Message / Additional Details</label>
-                <textarea id="bookingMessage" placeholder="Tell us about your project or questions..."></textarea>
-            </div>
-
-            <button type="submit" class="submit-booking-btn">
-                <i class="fas fa-calendar-check"></i> Book My Call
-            </button>
-        </form>
     </div>
-</div>
-
-<!-- Success Message Overlay -->
-<div class="success-message" id="bookingSuccess">
-    <i class="fas fa-check-circle"></i> 
-    <strong>Your Call is Booked!</strong>
-    <p>Our team will connect with you as soon as possible. Thank you for choosing Zonixtec!</p>
-</div>
 
 
     <!-- Booking Modal Script -->
     <script src="./script/booking-modal.js"></script>
     <script src="./script/navbar.js"></script>
+
+    <script src="./script/30min-booking.js"></script>
+
     <script src="./script/allabout.js"></script>
+
 
 </body>
 
