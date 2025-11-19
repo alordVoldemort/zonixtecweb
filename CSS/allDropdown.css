@@ -1,11 +1,9 @@
-
-
 /* ================================
    ABOUT US MEGA DROPDOWN PANEL
 ==================================*/
-/* .about-dropdown {
+.about-dropdown {
     position: fixed;
-    top: 110px;
+    top: 67px;
     left: 0;
     width: 100%;
     height: 0;
@@ -13,30 +11,42 @@
     background: #001343;
     transition: height 0.45s ease;
     z-index: 9999;
-} */
 
-.about-dropdown {
+
+}
+
+*/ .about-dropdown {
     position: fixed;
     /* top: 66px; */
-    top:100px;
+    top: 100px;
     /* margin-left: 93px; */
     left: 0;
     width: 100%;
     height: 0;
     overflow: hidden;
     background: #001343;
-    transition: height 0.45s 
-ease;
+    transition: height 0.45s ease;
     z-index: 9999;
+
 }
 
 /* Show Panel */
 .about-dropdown.active {
+
+    height: 80vh;
+
     height: 62vh;
+
 }
 
 /* Title */
-.about-dropdown > div:first-child h2 {
+.about-dropdown>div:first-child h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+    margin: 40px 0 20px 6%;
+    font-family: "Poppins", sans-serif;
+
     font-size: 36px;
     font-weight: 400;
     color: #fff;
@@ -46,6 +56,7 @@ ease;
 
 /* Content Layout */
 .about-container {
+    width: 90%;
     width: 100%;
     margin: auto;
     display: flex;
@@ -64,7 +75,7 @@ ease;
 
 .about-links a {
     display: block;
-    color: rgba(255,255,255,0.85);
+    color: rgba(255, 255, 255, 0.85);
     font-size: 18px;
     margin: 14px 0;
     transition: 0.25s;
@@ -103,8 +114,15 @@ ease;
 
 /* Float Animation */
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
 }
 
 
@@ -124,12 +142,12 @@ ease;
 
 /* ✅ Tablets ≤ 1024px */
 @media (max-width: 1024px) {
+    .about-dropdown {
 
-     .about-dropdown {
+        top: 98px;
 
-    top: 98px;
-    
-}
+    }
+
     .about-links {
         gap: 60px;
     }
@@ -176,35 +194,30 @@ ease;
 
 /* ✅ Small phones ≤ 576px */
 @media (max-width: 576px) {
-
-
-
     .about-container {
-    width: 100%;
-    margin: auto;
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: flex-start;
-    padding: 10px 0;
-    color: white;
-}
+        width: 100%;
+        margin: auto;
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: flex-start;
+        padding: 10px 0;
+        color: white;
+    }
 
     .about-dropdown {
-    position: fixed;
-    top: 66px;
-    margin-left: 110px;
-    left: 0;
-    width: 100%;
-    height: 0;
-    overflow: hidden;
-    background: #001343;
-    transition: height 0.45s 
-ease;
-    z-index: 9999;
-}
+        position: fixed;
+        top: 66px;
+        margin-left: 110px;
+        left: 0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        background: #001343;
+        transition: height 0.45s ease;
+        z-index: 9999;
+    }
 
-
-    .about-dropdown > div:first-child h2 {
+    .about-dropdown>div:first-child h2 {
         font-size: 36px;
         margin-left: 5%;
     }
@@ -224,7 +237,7 @@ ease;
 
 /* ✅ Extra-small phones ≤ 480px */
 @media (max-width: 480px) {
-    .about-dropdown > div:first-child h2 {
+    .about-dropdown>div:first-child h2 {
         font-size: 30px;
         margin: 25px 0 15px 5%;
     }

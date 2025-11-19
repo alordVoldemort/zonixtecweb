@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="./CSS/allDropdown.css">
     <link rel="icon" href="./Assets/WhatsApp Image 2025-10-15 at 15.47.06.jpeg" sizes="32x32" type="image/png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./CSS/30min-model.css">
     <style>
         :root {
             --primary: #0066ff;
@@ -213,6 +216,7 @@
             transform: rotate(180deg);
         }
 
+
         /*
          .dropdown-content {
             display: none;
@@ -236,7 +240,7 @@
         }
         */
 
-        
+
 
         .dropdown-content a {
             display: block;
@@ -337,12 +341,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                to bottom,
-                rgba(0, 0, 0, 0.4) 0%,
-                rgba(0, 0, 0, 0.6) 50%,
-                rgba(0, 0, 0, 0.7) 100%
-            );
+            background: linear-gradient(to bottom,
+                    rgba(0, 0, 0, 0.4) 0%,
+                    rgba(0, 0, 0, 0.6) 50%,
+                    rgba(0, 0, 0, 0.7) 100%);
             z-index: 1;
         }
 
@@ -391,6 +393,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -699,6 +702,16 @@
 
             .member-designation {
                 font-size: 0.95rem;
+            }
+
+
+            .dropdown-scroll::-webkit-scrollbar-thumb {
+                background: var(--secondary);
+                border-radius: 3px;
+            }
+
+            .dropdown-scroll::-webkit-scrollbar-thumb:hover {
+                background: var(--primary);
             }
         }
 
@@ -1491,8 +1504,13 @@
         }
 
         @keyframes slideBackground {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
         }
 
         .impact-title {
@@ -1520,8 +1538,13 @@
         }
 
         @keyframes textGlow {
-            0% { text-shadow: 0 0 5px rgba(0, 242, 255, 0.5); }
-            100% { text-shadow: 0 0 20px rgba(0, 242, 255, 0.8), 0 0 30px rgba(0, 242, 255, 0.6); }
+            0% {
+                text-shadow: 0 0 5px rgba(0, 242, 255, 0.5);
+            }
+
+            100% {
+                text-shadow: 0 0 20px rgba(0, 242, 255, 0.8), 0 0 30px rgba(0, 242, 255, 0.6);
+            }
         }
 
         .impact-grid {
@@ -1546,10 +1569,21 @@
             animation: cardFadeIn 0.8s ease forwards;
         }
 
-        .impact-card:nth-child(1) { animation-delay: 0.2s; }
-        .impact-card:nth-child(2) { animation-delay: 0.4s; }
-        .impact-card:nth-child(3) { animation-delay: 0.6s; }
-        .impact-card:nth-child(4) { animation-delay: 0.8s; }
+        .impact-card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .impact-card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .impact-card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .impact-card:nth-child(4) {
+            animation-delay: 0.8s;
+        }
 
         @keyframes cardFadeIn {
             to {
@@ -1575,7 +1609,7 @@
         .impact-card:hover {
             transform: translateY(-15px) scale(1.05);
             border-color: rgba(0, 242, 255, 0.3);
-            box-shadow: 
+            box-shadow:
                 0 20px 40px rgba(0, 0, 0, 0.2),
                 0 0 30px rgba(0, 242, 255, 0.2);
         }
@@ -1620,8 +1654,15 @@
         }
 
         @keyframes iconPulse {
-            0%, 100% { transform: translateY(-5px) scale(1.1); }
-            50% { transform: translateY(-8px) scale(1.15); }
+
+            0%,
+            100% {
+                transform: translateY(-5px) scale(1.1);
+            }
+
+            50% {
+                transform: translateY(-8px) scale(1.15);
+            }
         }
 
         .impact-number {
@@ -1673,8 +1714,17 @@
         }
 
         @keyframes borderGlow {
-            0%, 100% { opacity: 0; transform: rotate(0deg); }
-            50% { opacity: 1; transform: rotate(1deg); }
+
+            0%,
+            100% {
+                opacity: 0;
+                transform: rotate(0deg);
+            }
+
+            50% {
+                opacity: 1;
+                transform: rotate(1deg);
+            }
         }
 
         /* Responsive adjustments */
@@ -1683,11 +1733,11 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 40px;
             }
-            
+
             .impact-card {
                 padding: 35px 20px;
             }
-            
+
             .impact-number {
                 font-size: 3.5rem;
             }
@@ -1698,30 +1748,30 @@
                 padding: 60px 0;
                 margin-top: 40px;
             }
-            
+
             .impact-title {
                 font-size: 2rem;
                 margin-bottom: 40px;
             }
-            
+
             .impact-grid {
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
-            
+
             .impact-card {
                 padding: 30px 20px;
                 margin: 0 10px;
             }
-            
+
             .impact-number {
                 font-size: 3rem;
             }
-            
+
             .impact-icon {
                 font-size: 2.5rem;
             }
-            
+
             .impact-label {
                 font-size: 1.1rem;
             }
@@ -1729,6 +1779,7 @@
 
         /* Reduced motion for accessibility */
         @media (prefers-reduced-motion: reduce) {
+
             .impact-card,
             .impact-icon,
             .impact-number,
@@ -1736,11 +1787,11 @@
                 animation: none;
                 transition: none;
             }
-            
+
             .impact-section::before {
                 animation: none;
             }
-            
+
             .impact-title span {
                 animation: none;
             }
@@ -1938,9 +1989,10 @@
 
         @media (max-width: 768px) {
 
-                    .dropdown-scroll {
-        max-height: 250px; /* Smaller scroll container for mobile */
-    }
+            .dropdown-scroll {
+                max-height: 250px;
+                /* Smaller scroll container for mobile */
+            }
 
 
 
@@ -2060,13 +2112,15 @@
                 </a>
                 <div class="nav-links">
 
-                     <a href="#" class="about-toggle">About Us</a>
-                     <!-- ABOUT DROPDOWN PANEL -->
+                    <a href="#" class="about-toggle">About Us</a>
+                    <!-- ABOUT DROPDOWN PANEL -->
                     <div class="about-dropdown">
-                        <div><h2>About Us</h2></div>
+                        <div>
+                            <h2>About Us</h2>
+                        </div>
 
                         <div class="about-container">
-                            
+
                             <div class="about-links">
                                 <div>
                                     <a href="aboutus.html">About Zonixtec</a>
@@ -2079,15 +2133,16 @@
                                     <a href="#">Case Study</a>
                                 </div>
                             </div>
-                    
+
                             <span class="about-close">&times;</span>
-                    
+
                             <div class="about-image">
-                                <img src="./Assets/ai-nuclear-energy-background-future-innovation-disruptive-technology 3.png" alt="">
+                                <img src="./Assets/ai-nuclear-energy-background-future-innovation-disruptive-technology 3.png"
+                                    alt="">
                             </div>
                         </div>
                     </div>
-                    
+
 
                     <!-- Services Dropdown -->
                     <div class="dropdown">
@@ -2112,12 +2167,15 @@
 
                     <a href="carrer.html">Career</a>
                     <a href="contact.html">Contact</a>
+
                     <a href="javascript:void(0);" class="cta-buttons" onclick="openBookingModal()">
-                        <i class="fas fa-phone-alt"></i>Book A 30 Min Call
+                        <i class="fas fa-phone-alt"></i> Book A 30 Min Call
                     </a>
+
                 </div>
-                
-                <button class="mobile-menu-btn" aria-label="Toggle mobile menu" onclick="window.toggleMobileMenu && window.toggleMobileMenu()">
+
+                <button class="mobile-menu-btn" aria-label="Toggle mobile menu"
+                    onclick="window.toggleMobileMenu && window.toggleMobileMenu()">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -2177,7 +2235,7 @@
     </section>
 
     <!-- Mission & Vision -->
-   <section class="section-padding" id="mission">
+    <section class="section-padding" id="mission">
         <div class="container">
             <div class="mission-vision">
                 <div class="mission">
@@ -2210,14 +2268,16 @@
                     <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
                     <h3 class="value-title">Innovation</h3>
                     <p>We constantly explore <strong>high-end technologies</strong> and new approaches to deliver
-                        <strong>cutting-edge solutions</strong> that solve complex business challenges.</p>
+                        <strong>cutting-edge solutions</strong> that solve complex business challenges.
+                    </p>
                 </div>
 
                 <div class="value-card">
                     <div class="value-icon"><i class="fas fa-users"></i></div>
                     <h3 class="value-title">Collaboration</h3>
                     <p>We believe in working closely with our clients to understand their unique needs and
-                        <strong>co-create solutions</strong> that drive real value.</p>
+                        <strong>co-create solutions</strong> that drive real value.
+                    </p>
                 </div>
 
                 <div class="value-card">
@@ -2251,6 +2311,183 @@
             </div>
         </div>
     </section>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="booking-modal">
+        <div class="booking-modal-content">
+
+            <!-- CLOSE BUTTON -->
+            <span class="booking-modal-close" onclick="closeBookingModal()">&times;</span>
+
+            <!-- STEP PROGRESS -->
+            <div class="booking-progress-indicator">
+                <div class="booking-progress-step booking-active" id="progress1" data-step="1"></div>
+                <div class="booking-progress-line" id="line1"></div>
+                <div class="booking-progress-step" id="progress2" data-step="2"></div>
+                <div class="booking-progress-line" id="line2"></div>
+                <div class="booking-progress-step" id="progress3" data-step="3"></div>
+                <div class="booking-progress-line" id="line3"></div>
+                <div class="booking-progress-step" id="progress4" data-step="4"></div>
+            </div>
+
+            <!-- STEP 1 -->
+            <div class="booking-modal-step booking-active" id="step1">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">1</div>
+                    <h2 class="booking-step-title">Zonixtec — 30-Minute Discovery Call</h2>
+                </div>
+
+                <div class="booking-discovery-subtitle">
+                    Duration: 30 Minutes | Mode: Web Conference
+                </div>
+
+                <div class="booking-session-overview">
+                    <h4 class="booking-session-title">In this quick session, we'll cover:</h4>
+                    <div class="booking-session-items-grid">
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Introduction & Requirement Understanding</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Relevant Use Case Demo</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Technology Solutions & Offerings</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Project Roadmap & Next Steps</span>
+                        </div>
+                    </div>
+
+                    <div class="booking-discovery-goal">
+                        <strong>Goal:</strong>
+                        <p>Understand your needs and explore how Zonixtec can deliver the right tech solutions for your
+                            project.</p>
+                    </div>
+                </div>
+
+                <div class="booking-step-navigation">
+                    <div></div>
+                    <button class="booking-btn-primary" onclick="nextStep(1)">
+                        Next: Select Date <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="booking-modal-step" id="step2">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">2</div>
+                    <h2 class="booking-step-title">Select Your Preferred Date</h2>
+                </div>
+
+                <input type="text" id="dateInput" class="booking-calendar-input" placeholder="Pick a date" readonly />
+
+                <div class="booking-step-navigation">
+                    <button class="booking-btn-secondary" onclick="previousStep(2)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="booking-btn-primary" id="dateNextBtn" onclick="nextStep(2)" disabled>
+                        Next: Select Time <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="booking-modal-step" id="step3">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">3</div>
+                    <h2 class="booking-step-title">Choose Your Time Slot</h2>
+                </div>
+
+                <div class="booking-time-slots">
+                    <div class="booking-time-slot" data-time="10:30">10:30 AM</div>
+                    <div class="booking-time-slot" data-time="11:30">11:30 AM</div>
+                    <div class="booking-time-slot" data-time="12:00">12:00 PM</div>
+                    <div class="booking-time-slot" data-time="12:30">12:30 PM</div>
+                    <div class="booking-time-slot" data-time="13:00">1:00 PM</div>
+                    <div class="booking-time-slot" data-time="13:30">1:30 PM</div>
+                    <div class="booking-time-slot" data-time="14:00">2:00 PM</div>
+                    <div class="booking-time-slot" data-time="14:30">2:30 PM</div>
+                    <div class="booking-time-slot" data-time="15:00">3:00 PM</div>
+                    <div class="booking-time-slot" data-time="15:30">3:30 PM</div>
+                    <div class="booking-time-slot" data-time="16:00">4:00 PM</div>
+                    <div class="booking-time-slot" data-time="16:30">4:30 PM</div>
+                    <div class="booking-time-slot" data-time="17:00">5:00 PM</div>
+                </div>
+
+                <div class="booking-step-navigation">
+                    <button class="booking-btn-secondary" onclick="previousStep(3)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="booking-btn-primary" id="timeNextBtn" onclick="nextStep(3)" disabled>
+                        Next: Your Info <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="booking-modal-step" id="step4">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">4</div>
+                    <h2 class="booking-step-title">Your Information</h2>
+                </div>
+
+                <form class="booking-modal-form" id="bookingFormPage">
+
+                    <div class="form-group-row">
+                        <label for="bookingName">Full Name</label>
+                        <input type="text" id="bookingName" placeholder="Enter your full name" required />
+                    </div>
+                    <span class="error-text" id="nameError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingEmail">Email</label>
+                        <input type="email" id="bookingEmail" placeholder="Enter your email" required />
+                    </div>
+                    <span class="error-text" id="emailError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingPhone">Phone</label>
+                        <input type="tel" id="bookingPhone" placeholder="Enter your phone number" required />
+                    </div>
+                    <span class="error-text" id="phoneError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingCompany">Company</label>
+                        <input type="text" id="bookingCompany" placeholder="Company (optional)" />
+                    </div>
+
+                    <div class="form-group-row">
+                        <label for="bookingMessage">Message</label>
+                        <textarea id="bookingMessage" placeholder="Describe what services you need..."></textarea>
+                    </div>
+
+                    <div class="booking-step-navigation">
+                        <button type="button" class="booking-btn-secondary" onclick="previousStep(4)">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </button>
+
+                        <button type="submit" class="booking-btn-primary">
+                            <i class="fas fa-calendar-check"></i> Book My Free Consultation
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- SUCCESS -->
+            <div id="bookingSuccessPage" class="booking-success-message">
+                <i class="fas fa-check-circle"></i>
+                <h3>Your Call is Booked!</h3>
+                <p>Our team will contact you shortly. Thank you!</p>
+            </div>
+
+        </div>
+    </div>
 
     <!-- Our Journey -->
     <section class="section-padding" id="journey">
@@ -2310,11 +2547,13 @@
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
                                 <div class="member-photo-placeholder">
-                                    <i class="fas fa-user-circle" style="font-size: 100px; color: var(--secondary);"></i>
+                                    <i class="fas fa-user-circle"
+                                        style="font-size: 100px; color: var(--secondary);"></i>
                                 </div>
                                 <h3 class="member-name">Shubham Chavhan</h3>
                                 <p class="member-designation">CEO & Founder</p>
-                                <a href="https://www.linkedin.com/in/shubham-chavhan-84035b168/" target="_blank" class="linkedin-btn">
+                                <a href="https://www.linkedin.com/in/shubham-chavhan-84035b168/" target="_blank"
+                                    class="linkedin-btn">
                                     <i class="fab fa-linkedin"></i> Connect on LinkedIn
                                 </a>
                             </div>
@@ -2325,7 +2564,8 @@
                                         strategic initiatives and innovation roadmap. His leadership combines
                                         entrepreneurial foresight with technical excellence, positioning the company as
                                         a trusted IT partner for global businesses.</p>
-                                    <a href="https://www.linkedin.com/in/shubham-chavhan-84035b168/" target="_blank" class="linkedin-btn">
+                                    <a href="https://www.linkedin.com/in/shubham-chavhan-84035b168/" target="_blank"
+                                        class="linkedin-btn">
                                         <i class="fab fa-linkedin"></i> Connect
                                     </a>
                                 </div>
@@ -2338,11 +2578,13 @@
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
                                 <div class="member-photo-placeholder">
-                                    <i class="fas fa-user-circle" style="font-size: 100px; color: var(--secondary);"></i>
+                                    <i class="fas fa-user-circle"
+                                        style="font-size: 100px; color: var(--secondary);"></i>
                                 </div>
                                 <h3 class="member-name">Rushikesh Bendal</h3>
                                 <p class="member-designation">Co-Chairman</p>
-                                <a href="https://www.linkedin.com/in/rushikesh-bendal-688458364/" target="_blank" class="linkedin-btn">
+                                <a href="https://www.linkedin.com/in/rushikesh-bendal-688458364/" target="_blank"
+                                    class="linkedin-btn">
                                     <i class="fab fa-linkedin"></i> Connect on LinkedIn
                                 </a>
                             </div>
@@ -2353,7 +2595,8 @@
                                         organization's growth remains aligned with its mission and values. His
                                         structured decision-making and operational insight strengthen the company's
                                         foundation for sustainable success.</p>
-                                    <a href="https://www.linkedin.com/in/rushikesh-bendal-688458364/" target="_blank" class="linkedin-btn">
+                                    <a href="https://www.linkedin.com/in/rushikesh-bendal-688458364/" target="_blank"
+                                        class="linkedin-btn">
                                         <i class="fab fa-linkedin"></i> Connect
                                     </a>
                                 </div>
@@ -2365,7 +2608,8 @@
 
             <!-- Explore All Team Button -->
             <div style="text-align: center; margin-top: 60px;">
-                <a href="Leadership.html" class="cta-button" style="display: inline-flex; align-items: center; gap: 10px; font-size: 1.1rem; padding: 18px 40px;">
+                <a href="Leadership.html" class="cta-button"
+                    style="display: inline-flex; align-items: center; gap: 10px; font-size: 1.1rem; padding: 18px 40px;">
                     <i class="fas fa-users"></i>
                     Explore Our Complete Leadership Team
                     <i class="fas fa-arrow-right"></i>
@@ -2387,7 +2631,7 @@
                         <span class="impact-number" data-target="15">0</span>
                         <p class="impact-label">Projects Successfully Delivered</p>
                     </div>
-                    
+
                     <div class="impact-card">
                         <div class="impact-icon">
                             <i class="fas fa-users-cog"></i>
@@ -2395,7 +2639,7 @@
                         <span class="impact-number" data-target="15">0</span>
                         <p class="impact-label">Skilled Developers & Engineers</p>
                     </div>
-                    
+
                     <div class="impact-card">
                         <div class="impact-icon">
                             <i class="fas fa-industry"></i>
@@ -2403,7 +2647,7 @@
                         <span class="impact-number" data-target="5">0</span>
                         <p class="impact-label">Industries Served</p>
                     </div>
-                    
+
                     <div class="impact-card">
                         <div class="impact-icon">
                             <i class="fas fa-rocket"></i>
@@ -2417,12 +2661,14 @@
     </section>
 
     <!-- CEO Message -->
-        <!-- CEO Message -->
+    <!-- CEO Message -->
     <section class="section-padding" id="ceo-message">
         <div class="container">
             <div class="ceo-section">
                 <div class="ceo-content">
-                    <p>"Zonixtec was founded with a single vision — to make technology accessible, scalable, and transformative for every business. Every project we take on is driven by passion, precision, and purpose."</p>
+                    <p>"Zonixtec was founded with a single vision — to make technology accessible, scalable, and
+                        transformative for every business. Every project we take on is driven by passion, precision, and
+                        purpose."</p>
                 </div>
                 <div class="ceo-signature">
                     <div class="ceo-avatar">SC</div>
@@ -2435,225 +2681,6 @@
         </div>
     </section>
 
-
-
-    <!-- Client Story - Kaleshwari Temple -->
-    <!-- <section class="section-padding" id="client-story">
-        <div class="container">
-            <h1 class="section-title">Client <span>Success Story</span></h1>
-            <p class="hero-subtitle">How Kaleshwari Mandir Found Its Digital Devotees</p>
-
-            <div class="client-story">
-                <div class="client-header">
-                    <h2>Kaleshwari Mandir Annadan Chhatra Trust</h2>
-                    <p>Making spirituality accessible anytime, anywhere through digital transformation</p>
-                </div>
-
-                <div class="client-details">
-                    <div class="client-detail-box">
-                        <h4>Client Name</h4>
-                        <p>Kaleshwari Mandir Annadan Chhatra Trust</p>
-                    </div>
-                    <div class="client-detail-box">
-                        <h4>Industry</h4>
-                        <p>Religious & Non-Profit</p>
-                    </div>
-                    <div class="client-detail-box">
-                        <h4>Primary Goal</h4>
-                        <p>Extend temple's reach beyond physical boundaries</p>
-                    </div>
-                    <div class="client-detail-box">
-                        <h4>Platform</h4>
-                        <p>Bilingual responsive website (English & Marathi)</p>
-                    </div>
-                </div>
-
-                <div class="client-content">
-                    <div class="client-text">
-                        <h3>The Client</h3>
-                        <p>Kaleshwari Mandir – a centuries-old temple known for its cultural significance and spiritual
-                            presence. While the temple had a strong offline following of devotees, they struggled to
-                            reach the newer generation that prefers engaging digitally.</p>
-                        <p>Their vision was simple yet powerful: make <strong>the divine experience accessible to
-                                everyone, anytime, anywhere.</strong></p>
-                    </div>
-                    <div class="client-image"></div>
-                </div>
-
-                <div class="pain-points">
-                    <h3>The Pain Points</h3>
-                    <div class="points-grid">
-                        <div class="point-item">
-                            <i class="fas fa-exclamation-triangle"></i>
-                            <p>Devotees had trouble finding accurate details about darshan timings, upcoming events, and
-                                rituals</p>
-                        </div>
-                        <div class="point-item">
-                            <i class="fas fa-chart-line"></i>
-                            <p>Lack of online presence meant missed opportunities for connecting with younger
-                                generations</p>
-                        </div>
-                        <div class="point-item">
-                            <i class="fas fa-sync-alt"></i>
-                            <p>Festival announcements reached people late, resulting in poor participation</p>
-                        </div>
-                        <div class="point-item">
-                            <i class="fas fa-users"></i>
-                            <p>Drop in engagement, high confusion among devotees, and lost donations</p>
-                        </div>
-                    </div>
-                    <p style="text-align: center; margin-top: 20px; font-style: italic; color: var(--gray);">"We
-                        realized that while faith was strong, the bridge to reach people in today's digital world was
-                        missing." – Committee Member, Kaleshwari Mandir</p>
-                </div>
-
-                <div class="solution-section">
-                    <h3>Why They Chose Us</h3>
-                    <div class="solution-features">
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <p>The temple needed a <strong>solution that was simple, trustworthy, and devotional in
-                                    tone</strong> – not a flashy corporate website</p>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <p>They wanted something that truly reflected their identity while solving practical
-                                problems</p>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <p>They chose us because we promised <strong>clarity, accessibility, and devotion-packed
-                                    simplicity</strong></p>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <p>Our goal was not just to build a website but to <strong>build a digital prasad
-                                    thali</strong> – something every devotee could consume with ease</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="solution-section">
-                    <h3>The Solution</h3>
-                    <div class="solution-features">
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <p>Displayed real-time darshan timings and festival updates</p>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <p>Shared the temple's history, rituals, and cultural significance</p>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <p>Allowed devotees to view event schedules and participate in online rituals</p>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <p>Created a "Digital presence" that honored tradition but worked with modern convenience
-                            </p>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <p>No complex tech, no heavy jargon – just a <strong>smooth, spiritual digital home</strong>
-                                for the temple</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="journey-section">
-                    <h3>The Journey</h3>
-                    <div class="journey-content">
-                        <p>At first, there was hesitation – would devotees visit the website? Some committee members
-                            feared it might "lose the personal touch."</p>
-                        <p>The early days were a mix of <strong>facepalm moments</strong>:</p>
-                        <ul style="color: var(--gray); margin: 15px 0 15px 20px;">
-                            <li>Some elders struggled to share content online</li>
-                            <li>Event images were sometimes uploaded late</li>
-                            <li>Mobile responsiveness had to be reworked twice to match simple usability</li>
-                        </ul>
-                        <p>But with continuous feedback and collaborative adjustments, things started falling into
-                            place. Slowly, the <strong>website turned into a reliable source of truth</strong> for
-                            devotees.</p>
-                        <p style="font-style: italic; margin-top: 20px;">"We didn't just get a website; we got a partner
-                            who understood our faith and helped us adapt without losing our tradition." – <strong>Shri.
-                                Krishnal Maharaj Tagunde, Kaleshwari Mandir</strong></p>
-                    </div>
-                </div>
-
-                <div class="results-section">
-                    <h3>The Results</h3>
-                    <div class="results-grid">
-                        <div class="result-item">
-                            <div class="result-value">48%</div>
-                            <div class="result-label">Increase in event participation</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-value">63%</div>
-                            <div class="result-label">Fewer queries about darshan timings</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-value">27%</div>
-                            <div class="result-label">Growth in donations</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-value">100%</div>
-                            <div class="result-label">Younger devotees connected</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="comparison-section">
-                    <h3>Before vs After</h3>
-                    <div class="comparison-table">
-                        <div class="comparison-col">
-                            <div class="comparison-header">Before</div>
-                            <div class="comparison-list">
-                                <div class="comparison-item">Devotees are confused about timings/events</div>
-                                <div class="comparison-item">Poor festival participation</div>
-                                <div class="comparison-item">No online identity</div>
-                                <div class="comparison-item">Limited reach (local only)</div>
-                            </div>
-                        </div>
-                        <div class="comparison-col">
-                            <div class="comparison-header">After</div>
-                            <div class="comparison-list">
-                                <div class="comparison-item">Clear, updated schedules online</div>
-                                <div class="comparison-item">48% higher engagement</div>
-                                <div class="comparison-item">Trusted digital home for the temple</div>
-                                <div class="comparison-item">Global reach – even NRI devotees stay connected</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-section">
-                    <h3>Client Testimonial</h3>
-                    <div class="testimonial">
-                        "This website has become our temple's digital prasad. Simple, pure, and connecting thousands of
-                        hearts. We never thought technology could preserve devotion this beautifully - Even from miles
-                        away, devotees can offer seva, see darshan, and be part of Annadan. It's as if Kaleshwari Mata
-                        herself is blessing every home."
-                    </div>
-                    <div class="testimonial-author">– Shri. Machindra Maharaj Walanj, Kaleshwari Mandir</div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- CTA Section -->
-    <!-- <section class="section-padding" id="cta">
-        <div class="container">
-            <div class="cta-section">
-                <h2>Your organization doesn't need to be a temple to face the same struggle.</h2>
-                <p>Whether you're a cultural body, NGO, or spiritual trust, the problem is real: <strong>without a
-                        digital presence, people can't find you.</strong></p>
-                <p>See how we can do the same for you. Let's bring your community closer – digitally and meaningfully.
-                </p>
-                <a href="contact.html" class="cta-button">Connect With Your Community</a>
-            </div>
-        </div>
-    </section> -->
 
     <!-- Career Section -->
     <section class="section-padding" id="career">
@@ -2781,7 +2808,7 @@
                         <a href="Leadership.html"><i class="fas fa-chevron-right"></i> Leadership</a>
                     </div>
                 </div>
-                
+
 
 
                 <!-- Quick Links Section -->
@@ -2847,7 +2874,7 @@
         });
     </script>
 
-<!-- <script>
+    <!-- <script>
     window.addEventListener('load', () => {
         // Check if the user came by clicking the link
         if (sessionStorage.getItem('scrollAfterLoad') === 'true') {
@@ -2936,68 +2963,68 @@
 
 
         window.addEventListener('load', () => {
-                // Check if the user came by clicking the link
-                if (sessionStorage.getItem('scrollAfterLoad') === 'true') {
-                    window.scrollBy(0, 700); // scroll down 700px
-                    sessionStorage.removeItem('scrollAfterLoad'); // reset flag
-                }
-            });
+            // Check if the user came by clicking the link
+            if (sessionStorage.getItem('scrollAfterLoad') === 'true') {
+                window.scrollBy(0, 700); // scroll down 700px
+                sessionStorage.removeItem('scrollAfterLoad'); // reset flag
+            }
+        });
 
-            document.getElementById('aboutLink').addEventListener('click', () => {
-                    sessionStorage.setItem('scrollAfterLoad', 'true');
-                });
-
-
-
-                        window.addEventListener('load', () => {
-                                // Check if the user came by clicking the link
-                                if (sessionStorage.getItem('scrollAfterLoad2') === 'true') {
-                                    window.scrollBy(0, 2200); // scroll down 700px
-                                    sessionStorage.removeItem('scrollAfterLoad2'); // reset flag
-                                }
-                            });
-
-                            document.getElementById('OurJou').addEventListener('click', () => {
-                                sessionStorage.setItem('scrollAfterLoad2', 'true');
-                            });
+        document.getElementById('aboutLink').addEventListener('click', () => {
+            sessionStorage.setItem('scrollAfterLoad', 'true');
+        });
 
 
 
-                            window.addEventListener('load', () => {
-                                    // Check if the user came by clicking the link
-                                    if (sessionStorage.getItem('scrollAfterLoad3') === 'true') {
-                                        window.scrollBy(0, 1200); // scroll down 700px
-                                        sessionStorage.removeItem('scrollAfterLoad3'); // reset flag
-                                    }
-                                });
+        window.addEventListener('load', () => {
+            // Check if the user came by clicking the link
+            if (sessionStorage.getItem('scrollAfterLoad2') === 'true') {
+                window.scrollBy(0, 2200); // scroll down 700px
+                sessionStorage.removeItem('scrollAfterLoad2'); // reset flag
+            }
+        });
 
-                                document.getElementById('OurCore').addEventListener('click', () => {
-                                    sessionStorage.setItem('scrollAfterLoad3', 'true');
-                                });
+        document.getElementById('OurJou').addEventListener('click', () => {
+            sessionStorage.setItem('scrollAfterLoad2', 'true');
+        });
+
+
+
+        window.addEventListener('load', () => {
+            // Check if the user came by clicking the link
+            if (sessionStorage.getItem('scrollAfterLoad3') === 'true') {
+                window.scrollBy(0, 1200); // scroll down 700px
+                sessionStorage.removeItem('scrollAfterLoad3'); // reset flag
+            }
+        });
+
+        document.getElementById('OurCore').addEventListener('click', () => {
+            sessionStorage.setItem('scrollAfterLoad3', 'true');
+        });
 
         // Enhanced Animated Number Counter with Professional Effects
         function animateNumbers() {
             const numberElements = document.querySelectorAll('.impact-number');
-            
+
             numberElements.forEach((element, index) => {
                 const target = parseInt(element.getAttribute('data-target'));
                 const duration = 2500; // 2.5 seconds for smoother animation
                 const startDelay = index * 200; // Stagger animation for each card
-                
+
                 // Add initial animation class
                 element.parentElement.classList.add('animating');
-                
+
                 setTimeout(() => {
                     let current = 0;
                     const increment = target / (duration / 16); // 60fps
-                    
+
                     const timer = setInterval(() => {
                         current += increment;
-                        
+
                         if (current >= target) {
                             current = target;
                             clearInterval(timer);
-                            
+
                             // Add final formatting with smooth transition
                             const cardIndex = Array.from(numberElements).indexOf(element);
                             setTimeout(() => {
@@ -3006,7 +3033,7 @@
                                 } else {
                                     element.textContent = Math.floor(current) + '+';
                                 }
-                                
+
                                 // Add completion effect
                                 element.style.transform = 'scale(1.1)';
                                 setTimeout(() => {
@@ -3054,13 +3081,13 @@
         }
 
 
-                            
 
 
 
 
 
-        
+
+
     </script>
 
     <!-- Chatbot -->
@@ -3068,98 +3095,26 @@
     <script src="./script/chatbot.js"></script>
 
 
-    <!-- Booking Modal -->
-<div class="modal" id="bookingModal">
-    <div class="modal-content">
-        <button class="close-modal" onclick="closeBookingModal()">
-            <i class="fas fa-times"></i>
-        </button>
-        
-        <div class="modal-header">
-            <h2>Book Your Free 30-Minute Consultation</h2>
-            <p>Let's discuss how we can help transform your business</p>
-        </div>
 
-        <form class="booking-form" id="bookingForm">
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Full Name <span>*</span></label>
-                    <input type="text" id="bookingName" placeholder="Enter your full name" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Email Address <span>*</span></label>
-                    <input type="email" id="bookingEmail" placeholder="your@email.com" required>
-                </div>
-            </div>
 
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Phone Number <span>*</span></label>
-                    <input type="tel" id="bookingPhone" placeholder="+91 999999999" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Company Name</label>
-                    <input type="text" id="bookingCompany" placeholder="Your company (optional)">
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Preferred Date <span>*</span></label>
-                    <input type="date" id="bookingDate" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Preferred Time <span>*</span></label>
-                    <input type="time" id="bookingTime" required>
-                </div>
-            </div>
-
-            <div class="form-group-modal">
-                <label>Service Interested In <span>*</span></label>
-                <select id="bookingService" required>
-                    <option value="">Select a service</option>
-                    <option value="CRM Solutions">CRM Solutions</option>
-                    <option value="ERP Solutions">ERP Solutions</option>
-                    <option value="Billing Software">Billing Software</option>
-                    <option value="Website Development">Website Development</option>
-                    <option value="Mobile App Development">Mobile App Development</option>
-                    <option value="AI Solutions">AI Solutions</option>
-                    <option value="Cloud Solutions">Cloud Solutions</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="UI/UX Design">UI/UX Design</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-
-            <div class="form-group-modal">
-                <label>Message / Additional Details</label>
-                <textarea id="bookingMessage" placeholder="Tell us about your project or questions..."></textarea>
-            </div>
-
-            <button type="submit" class="submit-booking-btn">
-                <i class="fas fa-calendar-check"></i> Book My Call
-            </button>
-        </form>
+    <!-- Success Message Overlay -->
+    <div class="success-message" id="bookingSuccess">
+        <i class="fas fa-check-circle"></i>
+        <strong>Your Call is Booked!</strong>
+        <p>Our team will connect with you as soon as possible. Thank you for choosing Zonixtec!</p>
     </div>
-</div>
-
-<!-- Success Message Overlay -->
-<div class="success-message" id="bookingSuccess">
-    <i class="fas fa-check-circle"></i> 
-    <strong>Your Call is Booked!</strong>
-    <p>Our team will connect with you as soon as possible. Thank you for choosing Zonixtec!</p>
-</div>
 
 
     <!-- Booking Modal Script -->
     <script src="./script/booking-modal.js"></script>
     <script src="./script/navbar.js"></script>
 
+    <script src="./script/30min-booking.js"></script>
+
     <script src="./script/allabout.js"></script>
-    
-    
+
+
 
 </body>
 
 </html>
-

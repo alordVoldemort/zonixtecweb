@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="./CSS/allDropdown.css">
     <link rel="stylesheet" href="./CSS/chatbot.css">
     <link rel="stylesheet" href="./CSS/navbar.css">
+
     <link rel="stylesheet" href="./CSS/booking-modal.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -170,6 +172,7 @@
         padding: 60px 0;
     }
 }</style>
+
     <style>
         :root {
             --primary: #0066ff;
@@ -223,6 +226,7 @@
         .containerr {
             width: 100%;
             overflow: hidden;
+            max-width: 900px;
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 20px;
@@ -374,6 +378,8 @@
             /* background: rgba(30, 41, 59, 0.9);
             border-radius: 15px;
             padding: 39px 25px 34px 25px; */
+            max-width: 300px;
+            min-width: 220px;
             /* max-width: 300px; */
             max-width: 1900px;
             min-width: 420px;
@@ -387,6 +393,7 @@
 
         .feature-box img {
             width: 100%;
+            max-width: 256px;
             max-width: 456px;
             margin-bottom: 18px;
             filter: drop-shadow(0px 5px 10px #00f2ff33);
@@ -425,6 +432,7 @@
             /* background: rgba(30, 41, 59, 0.85); */
             /* border-radius: 14px; */
             padding: 22px 10px 18px 10px;
+            min-width: 170px;
             min-width: 208px;
             max-width: 220px;
             text-align: center;
@@ -465,6 +473,7 @@
         .testimonial-container {
             display: flex;
             gap: 34px;
+            transition: transform 0.4s ease-in-out;
             /* transition: transform 0.4s ease-in-out; */
                 transition: transform 0.9s cubic-bezier(0.25, 0.1, 0.25, 1); /* smoother & slower */
             padding: 20px 0;
@@ -505,6 +514,7 @@
         }
 
         .testimonial-controls {
+            display: inline-flex;
             display: none;
             gap: 18px;
             justify-content: center;
@@ -512,6 +522,7 @@
         }
 
         .testimonial-controls1 {
+            display: inline-flex;
             display: none;
             gap: 18px;
             justify-content: center;
@@ -519,12 +530,14 @@
         }
 
         .testimonial-controls2 {
+            display: inline-flex;
             display: none;
             gap: 18px;
             justify-content: center;
             margin-bottom: 25px;
         }
         .testimonial-controls3 {
+            display: inline-flex;
             display: none;
             gap: 18px;
             justify-content: center;
@@ -704,15 +717,7 @@
             border-top: 1px solid rgba(255, 255, 255, 0.05);
             color: var(--gray);
             font-size: 0.9rem;
-        }
-
-
-
-
-
-
-
-        
+        }  
 
         .dropdown-content a {
             display: block;
@@ -803,44 +808,6 @@
 
         @media (max-width: 768px) {
 
-            
-
-
-             .containerr {
-            width: 100%;
-            overflow: hidden;
-            max-width: 1100px;
-            margin: 0 auto;
-            
-        }
-
-
-
-
-
-            .feature-box {
-            /* background: rgba(30, 41, 59, 0.9);
-            border-radius: 15px;
-            padding: 39px 25px 34px 25px; */
-            max-width: 300px;
-            /* max-width: 1900px; */
-            min-width: 352px;
-            flex: 1 1 280px;
-            text-align: center;
-            box-shadow: 0 8px 28px 0 rgba(0, 36, 64, .09);
-            border: 1px solid #23334a;
-            position: relative;
-            transition: transform 0.18s;
-        }
-
-        .feature-box img {
-            width: 100%;
-            max-width: 456px;
-            margin-bottom: 18px;
-            filter: drop-shadow(0px 5px 10px #00f2ff33);
-        }
-
-
             .benefits-row {
             display: list-item;
             flex-wrap: wrap;
@@ -898,8 +865,6 @@
         }
 
         @media (max-width: 600px) {
-
-            
             .section-title {
                 font-size: 1.3rem;
             }
@@ -934,9 +899,6 @@
             
         }
     </style>
-
-
-   
 </head>
 
 <body>
@@ -1044,6 +1006,66 @@
         </section>
 
         <!-- What Makes Different Section -->
+
+        <section class="section-padding">
+            <h2 class="section-title">What Makes Zonixtec Different</h2>
+            <p class="section-subtitle">Your Trusted Partner for Reliable & Scalable Digital Solutions</p>
+            <div class="container">
+                <div class="testimonial-controls1">
+                    <button id="featurePrev" class="testimonial-nav1" aria-label="Previous">
+                        <i class="fa fa-chevron-circle-left"></i>
+                    </button>
+                    <button id="featureNext" class="testimonial-nav1" aria-label="Next">
+                        <i class="fa fa-chevron-circle-right"></i>
+                    </button>
+                </div>
+                
+                <div class="containerr testimonial1">
+                    <div id="feature-list" class="testimonial-container">
+                    <div class="feature-box">
+                        <img src="./Assets/Image (1).png"
+                            style="width: 100%; height: 200px; background: rgba(100, 200, 255, 0.1); border-radius: 10px; margin-bottom: 18px; display: flex; align-items: center; justify-content: center; color: var(--secondary);">
+                        </img>
+                        <h3>Complete In-House Development Team</h3>
+                        <p>Planning, design, coding, testing, deployment, and maintenance — everything is handled by our
+                            skilled in-house engineers. This means faster delivery and better quality control.</p>
+                    </div>
+                    <div class="feature-box">
+                        <img src="./Assets/Image (1).png"
+                            style="width: 100%; height: 200px; background: rgba(100, 200, 255, 0.1); border-radius: 10px; margin-bottom: 18px; display: flex; align-items: center; justify-content: center; color: var(--secondary);">
+                        </img>
+                        <h3>Complete In-House Development Team</h3>
+                        <p>Planning, design, coding, testing, deployment, and maintenance — everything is handled by our
+                            skilled in-house engineers. This means faster delivery and better quality control.</p>
+                    </div>
+                    <div class="feature-box">
+                        <img src="./Assets/Image (1).png"
+                            style="width: 100%; height: 200px; background: rgba(100, 200, 255, 0.1); border-radius: 10px; margin-bottom: 18px; display: flex; align-items: center; justify-content: center; color: var(--secondary);">
+                        Feature Image</img>
+                        <h3>Reliable, Secure & Scalable Technology</h3>
+                        <p>Every solution is built to perform consistently and grow with your business. Whether you're a
+                            startup or an enterprise, we develop systems that stay fast, stable, and future-ready.</p>
+                    </div>
+                    <div class="feature-box">
+                        <img src="./Assets/Image (1).png"
+                            style="width: 100%; height: 200px; background: rgba(100, 200, 255, 0.1); border-radius: 10px; margin-bottom: 18px; display: flex; align-items: center; justify-content: center; color: var(--secondary);">
+                        Feature Image</img>
+                        <h3>Clear Communication & Transparent Processes</h3>
+                        <p>You'll always know what's happening with your project. We share progress openly, solve
+                            concerns
+                            quickly, and ensure a smooth development experience from start to finish.</p>
+                    </div>
+                    <div class="feature-box">
+                        <img src="./Assets/Image (1).png"
+                            style="width: 100%; height: 200px; background: rgba(100, 200, 255, 0.1); border-radius: 10px; margin-bottom: 18px; display: flex; align-items: center; justify-content: center; color: var(--secondary);">
+                        Feature Image</img>
+                        <h3>Clear Communication & Transparent Processes</h3>
+                        <p>You'll always know what's happening with your project. We share progress openly, solve
+                            concerns
+                            quickly, and ensure a smooth development experience from start to finish.</p>
+                    </div>
+                </div>
+
         <!-- What Makes Zonixtec Different Section -->
         <section class="section-padding">
             <h2 class="section-title">What Makes Zonixtec Different</h2>
@@ -1104,10 +1126,69 @@
                 </div>
             </div>
         </section>
+            <!-- Benefits Section -->
+        <section class="section-padding">
+            <h2 class="section-title">How Choosing Zonixtec Helps Your Business</h2>
+            <p class="section-subtitle">Your Trusted Partner for Reliable & Scalable Digital Solutions</p>
 
 
+            <div class="containerrr">
+                <div class="testimonial-controls3">
+                    <button id="testimonialPrev" class="testimonial-nav" aria-label="Previous">
+                        <i class="fa fa-chevron-circle-left"></i>
+                    </button>
+                    <button id="testimonialNext" class="testimonial-nav" aria-label="Next">
+                        <i class="fa fa-chevron-circle-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="container benefits-row">
+                <!-- <div class="containerr testimonial1"> -->
+                    <div id="feature-list" class="testimonial-container">
+                        <div class="benefit-box">
+                            <img src="./Assets/Faster workflow execution.png"> </img>
+                        </div>
+                        <div class="benefit-box">
+                            <!-- <img src="./Assets/Faster workflow execution.png"
+                                                                                    style="width: 100%; height: 150px; background: rgba(100, 200, 255, 0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--secondary); margin-bottom: 14px;">
+                                                                                    </img> -->
+                            <img src="./Assets/Faster workflow execution.png"> </img>
+                        </div>
+                        <div class="benefit-box">
+                            <img src="./Assets/Faster workflow execution.png"> </img>
+                        </div>
+                        <div class="benefit-box">
+                            <img src="./Assets/Faster workflow execution.png"> </img>
+                        </div>
 
+                    </div>
+                
+            </div>
 
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section-padding" id="testimonials">
+            <h2 class="section-title">Client Testimonials</h2>
+            <p class="section-subtitle" style="margin-bottom:24px;">
+                Discover what our clients say about working with Zonixtec and the transformative impact our software
+                solutions have made on their businesses.
+            </p>
+
+            <div class="container">
+                <div class="testimonial-controls">
+                    <button id="testimonialPrev" class="testimonial-nav" aria-label="Previous">
+                        <i class="fa fa-chevron-circle-left"></i>
+                    </button>
+                    <button id="testimonialNext" class="testimonial-nav" aria-label="Next">
+                        <i class="fa fa-chevron-circle-right"></i>
+                    </button>
+                </div>
+
+                <div class="testimonial-wrapper">
+                    <div id="testimonial-list" class="testimonial-container">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-card">
 
 
         <!-- How Choosing Zonixtec Helps Your Business -->
@@ -1241,6 +1322,10 @@
                                 productivity increased by 50%."
                             </p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
       </div>
     </div>
   </div>
@@ -1380,8 +1465,6 @@
         </footer>
 
 
-
-
          <!-- Chatbot -->
      <script src="./script/chatbot.js"></script>
 
@@ -1467,8 +1550,6 @@
         <strong>Your Call is Booked!</strong>
         <p>Our team will connect with you as soon as possible. Thank you for choosing Zonixtec!</p>
     </div>
-
-
     </main>
 
 
@@ -1516,7 +1597,8 @@
         function startFeatureAutoSlide() {
             featureAutoSlide = setInterval(() => {
                 scrollFeatures(1);
-            }, 1000); // every 1 seconds
+            }, 1000); // every 4 seconds
+
         }
 
         function stopFeatureAutoSlide() {
@@ -1549,10 +1631,79 @@
         startFeatureAutoSlide();
     </script>
     
-   
+    <script>
+        // ==============================
+        // CLIENT TESTIMONIAL SLIDER (AUTO + MANUAL)
+        // ==============================
+        let testimonialIndex = 0;
+        const testimonialList = document.getElementById('testimonial-list');
+        const testimonials = testimonialList.children;
+        const testimonialPrev = document.getElementById('testimonialPrev');
+        const testimonialNext = document.getElementById('testimonialNext');
+        let testimonialAutoSlide;
 
-    
-    
+        function getVisibleCards() {
+            return window.innerWidth > 880 ? 2 : 1;
+        }
+
+        function updateTestimonialButtons() {
+            const visibleCards = getVisibleCards();
+            const maxIndex = testimonials.length - visibleCards;
+            testimonialPrev.disabled = testimonialIndex === 0;
+            testimonialNext.disabled = testimonialIndex >= maxIndex;
+        }
+
+        function scrollTestimonials(direction) {
+            const visibleCards = getVisibleCards();
+            const maxIndex = testimonials.length - visibleCards;
+            testimonialIndex += direction;
+
+            if (testimonialIndex < 0) testimonialIndex = 0;
+            if (testimonialIndex > maxIndex) testimonialIndex = 0; // loop back to start
+
+            const cardWidth = testimonials[0].offsetWidth;
+            const gap = 34;
+            const offset = testimonialIndex * (cardWidth + gap);
+            testimonialList.style.transform = `translateX(-${offset}px)`;
+            updateTestimonialButtons();
+        }
+
+        // Auto-slide setup
+        function startTestimonialAutoSlide() {
+            testimonialAutoSlide = setInterval(() => {
+                scrollTestimonials(1);
+            }, 1000); // every 5 seconds
+        }
+
+        function stopTestimonialAutoSlide() {
+            clearInterval(testimonialAutoSlide);
+        }
+
+        testimonialPrev.addEventListener("click", () => {
+            stopTestimonialAutoSlide();
+            scrollTestimonials(-1);
+            startTestimonialAutoSlide();
+        });
+
+        testimonialNext.addEventListener("click", () => {
+            stopTestimonialAutoSlide();
+            scrollTestimonials(1);
+            startTestimonialAutoSlide();
+        });
+
+        testimonialList.addEventListener("mouseenter", stopTestimonialAutoSlide);
+        testimonialList.addEventListener("mouseleave", startTestimonialAutoSlide);
+
+        window.addEventListener("resize", () => {
+            testimonialIndex = 0;
+            testimonialList.style.transform = "translateX(0)";
+            updateTestimonialButtons();
+        });
+
+        updateTestimonialButtons();
+        startTestimonialAutoSlide();
+    </script>
+
     <script>
         // Header animation on load
         document.addEventListener('DOMContentLoaded', function () {
@@ -2080,6 +2231,9 @@
         window.changeSlide = changeSlide;
     </script>
 
+    <script src="./script/navbar.js"></script>
+    <script src="./script/chatbot.js"></script>
+    <script src="./script/allabout.js"></script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
