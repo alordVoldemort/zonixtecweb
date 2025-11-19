@@ -1,149 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leadership | Zonixtec - Meet Our Team</title>
-    <link rel="stylesheet" href="./CSS/allDropdown.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" href="./Assets/WhatsApp Image 2025-10-15 at 15.47.06.jpeg" sizes="32x32" type="image/png">
-    <link rel="stylesheet" href="CustomDrop.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./CSS/allDropdown.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      rel="icon"
+      href="./Assets/WhatsApp Image 2025-10-15 at 15.47.06.jpeg"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="CustomDrop.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <style>
-        :root {
-            --primary: #0066ff;
-            --primary-dark: #0044cc;
-            --secondary: #00f2ff;
-            --accent: #ff3366;
-            --dark: #050511;
-            --dark-light: #0a0a1a;
-            --light: #f5f5f5;
-            --gray: #888;
-            --success: #27ae60;
-            --card-gradient: linear-gradient(135deg, #292655, #504CA2);
-        }
+      :root {
+        --primary: #0066ff;
+        --primary-dark: #0044cc;
+        --secondary: #00f2ff;
+        --accent: #ff3366;
+        --dark: #050511;
+        --dark-light: #0a0a1a;
+        --light: #f5f5f5;
+        --gray: #888;
+        --success: #27ae60;
+        --card-gradient: linear-gradient(135deg, #292655, #504ca2);
+      }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: var(--light);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+        color: var(--light);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Orbitron", sans-serif;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
 
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
 
-        .section-padding {
-            padding: 60px 0;
-        }
+      .section-padding {
+        padding: 50px 0;
+      }
 
-        .section-title {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
-        }
+      .section-title {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        position: relative;
+      }
 
-        .section-title span {
-            color: var(--white);
-        }
+      .section-title span {
+        color: var(--white);
+      }
 
-        .hero-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: var(--gray);
-            margin-bottom: 3rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+      .hero-subtitle {
+        text-align: center;
+        font-size: 1.2rem;
+        color: var(--gray);
+        margin-bottom: 3rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-        /* Header Styles */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
+      /* Header Styles */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+      }
 
-        header.scrolled {
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-        }
+      header.scrolled {
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+      }
 
-        .logo {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--light);
-            text-decoration: none;
-        }
+      .logo {
+        font-family: "Orbitron", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--light);
+        text-decoration: none;
+      }
 
-        .logo span {
-            color: var(--secondary);
-        }
+      .logo span {
+        color: var(--secondary);
+      }
 
-        .cta-buttons {
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            color: var(--dark);
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
+      .cta-buttons {
+        background: linear-gradient(45deg, var(--primary), var(--secondary));
+        color: var(--dark);
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
 
-        .cta-buttons:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 102, 255, 0.3);
-        }
+      .cta-buttons:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 102, 255, 0.3);
+      }
 
-        .mobile-menu-btn {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--light);
-        }
-        
-        /* Updated Leader Card Styles */
-    .leader-card {
-        background: linear-gradient(135deg, #292655, #504CA2);
+      .mobile-menu-btn {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--light);
+      }
+
+      /* Updated Leader Card Styles */
+      .leader-card {
+        background: linear-gradient(135deg, #292655, #504ca2);
         border-radius: 15px;
         padding: 40px 30px;
         text-align: center;
@@ -154,67 +162,68 @@
         flex-direction: column;
         align-items: center;
         height: 480px;
-    }
+        overflow: visible;
+      }
 
-    .leader-card:hover {
+      .leader-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-    }
+      }
 
-    .member-photo {
+      .member-photo {
         width: 120px;
         height: 120px;
         margin-bottom: 25px;
         display: flex;
         align-items: center;
         justify-content: center;
-    }
+      }
 
-    .member-photo img {
-            width: 65px;
-            height: 65px;
-            object-fit: cover;
+      .member-photo img {
+        width: 65px;
+        height: 65px;
+        object-fit: cover;
+      }
 
-    }
-
-    .member-img {
+      .member-img {
         width: 120px;
         height: 120px;
         object-fit: coverss;
+      }
 
-    }
-
-    .member-name {
+      .member-name {
         font-size: 1.4rem;
         color: #ffffff;
         margin-bottom: 8px;
         text-align: center;
         font-weight: 600;
-        font-family: 'Poppins', sans-serif;
-    }
+        font-family: "Poppins", sans-serif;
+      }
 
-    .member-designation {
+      .member-designation {
         color: rgba(255, 255, 255, 0.9);
         font-size: 1rem;
         margin-bottom: 20px;
         font-weight: 500;
         text-align: center;
         line-height: 1.4;
-        font-family: 'Poppins', sans-serif;
-    }
+        font-family: "Poppins", sans-serif;
+      }
 
-    .member-description {
+      .member-description {
         color: rgba(255, 255, 255, 0.85);
         margin-bottom: 25px;
         line-height: 1.6;
         font-size: 0.95rem;
         text-align: center;
         flex-grow: 1;
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
         font-weight: 400;
-    }
+        overflow: visible;
+        word-wrap: break-word;
+      }
 
-    .linkedin-btn {
+      .linkedin-btn {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -228,149 +237,149 @@
         transition: all 0.3s ease;
         font-size: 0.95rem;
         border: 1.5px solid rgba(255, 255, 255, 0.3);
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
         min-width: 180px;
         margin-top: -11px;
-    }
+      }
 
-    .linkedin-btn:hover {
+      .linkedin-btn:hover {
         background: rgba(255, 255, 255, 0.1);
         border-color: rgba(255, 255, 255, 0.5);
         transform: translateY(-2px);
-    }
+      }
 
-    .linkedin-text {
+      .linkedin-text {
         font-weight: 500;
-    }
+      }
 
-    .linkedin-icon {
-  width: 20px;
-  height: 20px;
-}
+      .linkedin-icon {
+        width: 20px;
+        height: 20px;
+      }
 
-    .linkedin-arrow {
+      .linkedin-arrow {
         font-weight: 400;
         font-size: 1.1rem;
         margin-left: 4px;
-    }
+      }
 
-    /* Custom 2-3-2 Grid Layout */
-    .leadership-container {
+      /* Custom 2-3-2 Grid Layout */
+      .leadership-container {
         display: flex;
         flex-direction: column;
         gap: 40px;
-    }
+      }
 
-    .leadership-row {
+      .leadership-row {
         display: flex;
         justify-content: center;
         gap: 30px;
         flex-wrap: wrap;
-    }
+      }
 
-    .row-2-cards .leader-card {
+      .row-2-cards .leader-card {
         flex: 0 0 calc(36% - 15px);
         max-width: calc(36% - 15px);
-    }
+      }
 
-    .row-3-cards .leader-card {
+      .row-3-cards .leader-card {
         flex: 0 0 calc(33.333% - 20px);
         max-width: calc(36% - 15px);
-    }
+      }
 
-    /* Responsive Styles */
-    @media (max-width: 992px) {
+      /* Responsive Styles */
+      @media (max-width: 992px) {
         .row-3-cards .leader-card {
-            flex: 0 0 calc(50% - 15px);
-            max-width: calc(50% - 15px);
+          flex: 0 0 calc(50% - 15px);
+          max-width: calc(50% - 15px);
         }
-        
-        .leader-card {
-            height: auto;
-            min-height: 480px;
-        }
-    }
 
-    @media (max-width: 768px) {
+        .leader-card {
+          height: auto;
+          min-height: 480px;
+          overflow: visible;
+        }
+      }
+
+      @media (max-width: 768px) {
         .row-2-cards .leader-card,
         .row-3-cards .leader-card {
-            flex: 0 0 100%;
-            max-width: 100%;
+          flex: 0 0 100%;
+          max-width: 100%;
         }
-        
+
         .leader-card {
-            padding: 30px 25px;
-            min-height: 450px;
+          padding: 30px 25px;
+          min-height: 450px;
         }
-        
+
         .member-photo {
-            width: 100%;
-            height: 100%;
+          width: 100%;
+          height: 100%;
         }
         .member-photo img {
-            width: 65px;
-            height: 65px;
-            object-fit: cover;
-
+          width: 65px;
+          height: 65px;
+          object-fit: cover;
         }
-        
+
         .member-img {
-            width: 100px;
-            height: 100px;
+          width: 100px;
+          height: 100px;
         }
-        
-        .member-name {
-            font-size: 1.2rem;
-        }
-        
-        .member-designation {
-            font-size: 0.9rem;
-        }
-        
-        .member-description {
-            font-size: 0.9rem;
-        }
-    }
 
-    @media (max-width: 576px) {
+        .member-name {
+          font-size: 1.2rem;
+        }
+
+        .member-designation {
+          font-size: 0.9rem;
+        }
+
+        .member-description {
+          font-size: 0.9rem;
+        }
+      }
+
+      @media (max-width: 576px) {
         .leader-card {
-            padding: 25px 20px;
-            min-height: 420px;
+          padding: 25px 20px;
+          min-height: 420px;
         }
-        
+
         .member-photo {
-            width: 90px;
-            height: 90px;
+          width: 90px;
+          height: 90px;
         }
-        
+
         .member-img {
-            width: 90px;
-            height: 90px;
+          width: 90px;
+          height: 90px;
         }
-        
+
         .member-name {
-            font-size: 1.1rem;
+          font-size: 1.1rem;
         }
-        
+
         .member-designation {
-            font-size: 0.85rem;
+          font-size: 0.85rem;
         }
-        
+
         .member-description {
-            font-size: 0.85rem;
+          font-size: 0.85rem;
         }
-        
+
         .linkedin-btn {
-            min-width: 160px;
-            font-size: 0.9rem;
-            padding: 8px 16px;
+          min-width: 160px;
+          font-size: 0.9rem;
+          padding: 8px 16px;
         }
-    }
+      }
 
-        /* Stats Section */
+      /* Stats Section */
 
-    .stats-section::before {
-        content: '';
+      .stats-section::before {
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -378,9 +387,9 @@
         bottom: 0;
         background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
         opacity: 0.6;
-    }
+      }
 
-    .stats-container {
+      .stats-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 40px;
@@ -388,1027 +397,1309 @@
         margin: 0 auto;
         position: relative;
         z-index: 2;
-    }
+      }
 
-    .stat-card {
+      .stat-card {
         text-align: center;
         padding: 40px 20px;
-        background: linear-gradient(135deg, #2B2859, #0DB1BA);
+        background: linear-gradient(135deg, #2b2859, #0db1ba);
         border-radius: 16px;
         transition: all 0.3s ease;
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.2);
         position: relative;
         overflow: hidden;
-    }
+      }
 
-    .stat-card::before {
-        content: '';
+      .stat-card::before {
+        content: "";
         position: absolute;
         top: 0;
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, #2B2859, #0DB1BA);
+        background: linear-gradient(135deg, #2b2859, #0db1ba);
         transition: left 0.6s ease;
-    }
+      }
 
-    /* .stat-card:hover::before {
+      /* .stat-card:hover::before {
         left: 100%;
     } */
 
-    /* .stat-card:hover {
+      /* .stat-card:hover {
         transform: translateY(-8px);
         background: linear-gradient(135deg, #2B2859, #0DB1BA);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
     } */
 
-    .stat-number {
+      .stat-number {
         font-size: 4rem;
         font-weight: 700;
         color: #ffffff;
         margin-bottom: 15px;
-        font-family: 'Orbitron', sans-serif;
+        font-family: "Orbitron", sans-serif;
         text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         line-height: 1;
         display: block;
-    }
+      }
 
-    .stat-label {
+      .stat-label {
         color: rgba(255, 255, 255, 0.9);
         font-size: 1.3rem;
         font-weight: 500;
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
         letter-spacing: 0.5px;
-    }
+      }
 
-    /* Responsive Styles */
-    @media (max-width: 992px) {
+      /* Responsive Styles */
+      @media (max-width: 992px) {
         .stats-container {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            max-width: 800px;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 30px;
+          max-width: 800px;
         }
-        
-        .stat-number {
-            font-size: 3.5rem;
-        }
-        
-        .stat-label {
-            font-size: 1.2rem;
-        }
-        
-        .stat-card {
-            padding: 35px 20px;
-        }
-    }
 
-    @media (max-width: 768px) {
+        .stat-number {
+          font-size: 3.5rem;
+        }
+
+        .stat-label {
+          font-size: 1.2rem;
+        }
+
+        .stat-card {
+          padding: 35px 20px;
+        }
+      }
+
+      @media (max-width: 768px) {
         .stats-container {
-            grid-template-columns: 1fr;
-            gap: 25px;
-            max-width: 400px;
+          grid-template-columns: 1fr;
+          gap: 25px;
+          max-width: 400px;
         }
-        
+
         .stats-section {
-            padding: 60px 0;
-            margin-top: 40px;
+          padding: 60px 0;
+          margin-top: 40px;
         }
-        
-        .stat-number {
-            font-size: 3.2rem;
-        }
-        
-        .stat-label {
-            font-size: 1.1rem;
-        }
-        
-        .stat-card {
-            padding: 30px 20px;
-        }
-    }
 
-    @media (max-width: 576px) {
+        .stat-number {
+          font-size: 3.2rem;
+        }
+
+        .stat-label {
+          font-size: 1.1rem;
+        }
+
+        .stat-card {
+          padding: 30px 20px;
+        }
+      }
+
+      @media (max-width: 576px) {
         .stats-section {
-            padding: 50px 20px;
-            border-radius: 15px;
+          padding: 50px 20px;
+          border-radius: 15px;
         }
-        
+
         .stat-number {
-            font-size: 2.8rem;
+          font-size: 2.8rem;
         }
-        
+
         .stat-label {
-            font-size: 1rem;
+          font-size: 1rem;
         }
-        
+
         .stat-card {
-            padding: 25px 15px;
+          padding: 25px 15px;
         }
-    }
+      }
 
-    @media (max-width: 480px) {
+      @media (max-width: 480px) {
         .stat-number {
-            font-size: 2.5rem;
+          font-size: 2.5rem;
         }
-        
+
         .stat-label {
-            font-size: 0.95rem;
+          font-size: 0.95rem;
         }
-    }
+      }
 
-        /* CTA Section */
-        .cta-section {
-            padding: 60px 40px;
-            text-align: center;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            color: var(--dark);
-            border-radius: 15px;
-            margin-top: 60px;
+      /* CTA Section */
+      .cta-section {
+        padding: 60px 40px;
+        text-align: center;
+        background: linear-gradient(45deg, var(--primary), var(--secondary));
+        color: var(--dark);
+        border-radius: 15px;
+        margin-top: 60px;
+      }
+
+      .cta-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      .cta-section p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: var(--dark);
+        color: var(--light);
+        padding: 13px 72px;
+        border-radius: 13px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Footer */
+      .footer {
+        padding: 0px 0 20px;
+        margin-top: 80px;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(150px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-col h3 {
+        color: var(--secondary);
+        margin-bottom: 20px;
+        font-size: 1.3rem;
+      }
+
+      .footer-col p {
+        color: var(--gray);
+        margin-bottom: 20px;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .footer-links a {
+        color: var(--gray);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .footer-links a:hover {
+        color: var(--secondary);
+      }
+
+      .footer-links a i {
+        font-size: 0.8rem;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        color: var(--gray);
+      }
+
+      /* Footer Dropdown Styles */
+      .footer-dropdown-content {
+        display: none;
+        margin-left: 15px;
+      }
+
+      .footer-dropdown.open .footer-dropdown-content {
+        display: block;
+      }
+
+      .footer-dropdown-header {
+        display: flex;
+        color: var(--gray);
+        justify-content: space-between;
+        cursor: pointer;
+        margin: 5px 0;
+      }
+
+      .footer-dropdown-header:hover {
+        color: var(--secondary);
+      }
+
+      /* Responsive Styles */
+
+      /* iPad Pro and larger tablets (1024px - 1200px) */
+      @media (min-width: 993px) and (max-width: 1200px) {
+        .leader-card {
+          height: auto;
+          min-height: 520px;
+          overflow: visible;
         }
 
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+        .member-description {
+          font-size: 0.9rem;
+          line-height: 1.5;
+        }
+      }
+
+      /* iPad Air (820px - 992px) */
+      @media (min-width: 820px) and (max-width: 992px) {
+        .leader-card {
+          height: auto;
+          min-height: 540px;
+          overflow: visible;
+          padding: 35px 25px;
         }
 
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+        .member-description {
+          font-size: 0.9rem;
+          line-height: 1.5;
+          margin-bottom: 20px;
         }
 
-        .cta-button {
-            display: inline-block;
-            background: var(--dark);
-            color: var(--light);
-            padding: 13px 72px;
-            border-radius: 13px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
+        .member-name {
+          font-size: 1.3rem;
+          margin-bottom: 6px;
         }
 
-        .cta-button:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        .member-designation {
+          font-size: 0.95rem;
+          margin-bottom: 18px;
+        }
+      }
+
+      /* Tablet View (768px - 992px) */
+      @media (max-width: 992px) {
+        .section-title {
+          font-size: 2rem;
         }
 
-        /* Footer */
-        .footer {
-            padding: 60px 0 20px;
-            margin-top: 80px;
+        .section-header h2 {
+          font-size: 2rem;
+        }
+
+        .section-header p,
+        .hero-subtitle {
+          font-size: 1rem;
+        }
+
+        /* Make 3-card row display 2 cards per row on tablet */
+        .row-3-cards .leader-card {
+          flex: 0 0 calc(50% - 15px);
+          max-width: calc(50% - 15px);
+        }
+
+        .leader-card {
+          height: auto;
+          min-height: 520px;
+          overflow: visible;
+        }
+
+        .member-description {
+          font-size: 0.9rem;
+          line-height: 1.5;
+        }
+
+        .member-photo-placeholder {
+          width: 120px;
+          height: 120px;
+        }
+
+        .member-photo-placeholder i {
+          font-size: 80px !important;
+        }
+
+        .member-name {
+          font-size: 1.3rem;
+        }
+
+        .member-designation {
+          font-size: 0.95rem;
+        }
+
+        .stats-container {
+          grid-template-columns: repeat(2, 1fr);
         }
 
         .footer-container {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(150px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* Mobile View (576px - 768px) */
+      @media (max-width: 768px) {
+        .container {
+          padding: 0 15px;
         }
 
-        .footer-col h3 {
-            color: var(--secondary);
-            margin-bottom: 20px;
-            font-size: 1.3rem;
+        .mobile-menu-btn {
+          display: block;
         }
 
-        .footer-col p {
-            color: var(--gray);
-            margin-bottom: 20px;
+        .section-padding {
+          padding: 40px 0;
         }
 
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+        .section-title {
+          font-size: 1.8rem;
+          margin-bottom: 2rem;
         }
 
-        .footer-links a {
-            color: var(--gray);
-            text-decoration: none;
-            transition: color 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .hero-subtitle {
+          font-size: 0.95rem;
+          margin-bottom: 2rem;
         }
 
-        .footer-links a:hover {
-            color: var(--secondary);
+        .section-header {
+          margin-bottom: 40px;
         }
 
-        .footer-links a i {
-            font-size: 0.8rem;
+        .section-header h2 {
+          font-size: 1.8rem;
         }
 
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            color: var(--gray);
+        .section-header p {
+          font-size: 0.95rem;
+          padding: 0 10px;
         }
 
-        /* Footer Dropdown Styles */
-        .footer-dropdown-content {
-            display: none;
-            margin-left: 15px;
+        .leadership-container {
+          gap: 30px;
         }
 
-        .footer-dropdown.open .footer-dropdown-content {
-            display: block;
+        .leadership-row {
+          gap: 20px;
         }
 
-        .footer-dropdown-header {
-            display: flex;
-            color: var(--gray);
-            justify-content: space-between;
-            cursor: pointer;
-            margin: 5px 0;
+        /* All cards full width on mobile */
+        .row-2-cards .leader-card,
+        .row-3-cards .leader-card {
+          flex: 0 0 100%;
+          max-width: 100%;
         }
 
-        .footer-dropdown-header:hover {
-            color: var(--secondary);
+        .leader-card {
+          height: auto;
+          min-height: 380px;
         }
 
-        /* Responsive Styles */
-
-        /* Tablet View (768px - 992px) */
-        @media (max-width: 992px) {
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .section-header h2 {
-                font-size: 2rem;
-            }
-
-            .section-header p,
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-
-            /* Make 3-card row display 2 cards per row on tablet */
-            .row-3-cards .leader-card {
-                flex: 0 0 calc(50% - 15px);
-                max-width: calc(50% - 15px);
-            }
-
-            .leader-card {
-                height: 400px;
-            }
-
-            .member-photo-placeholder {
-                width: 120px;
-                height: 120px;
-            }
-
-            .member-photo-placeholder i {
-                font-size: 80px !important;
-            }
-
-            .member-name {
-                font-size: 1.3rem;
-            }
-
-            .member-designation {
-                font-size: 0.95rem;
-            }
-
-            .stats-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .footer-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        .leader-card {
+          padding: 30px 25px;
         }
 
-        /* Mobile View (576px - 768px) */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 15px;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .section-padding {
-                padding: 40px 0;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-                margin-bottom: 2rem;
-            }
-
-            .hero-subtitle {
-                font-size: 0.95rem;
-                margin-bottom: 2rem;
-            }
-
-            .section-header {
-                margin-bottom: 40px;
-            }
-
-            .section-header h2 {
-                font-size: 1.8rem;
-            }
-
-            .section-header p {
-                font-size: 0.95rem;
-                padding: 0 10px;
-            }
-
-            .leadership-container {
-                gap: 30px;
-            }
-
-            .leadership-row {
-                gap: 20px;
-            }
-
-            /* All cards full width on mobile */
-            .row-2-cards .leader-card,
-            .row-3-cards .leader-card {
-                flex: 0 0 100%;
-                max-width: 100%;
-            }
-
-            .leader-card {
-                height: auto;
-                min-height: 380px;
-            }
-
-            .leader-card {
-                padding: 30px 25px;
-            }
-
-            .member-photo-placeholder {
-                width: 100px;
-                height: 100px;
-                margin-bottom: 20px;
-            }
-
-            .member-photo-placeholder i {
-                font-size: 70px !important;
-            }
-
-            .member-name {
-                font-size: 1.2rem;
-                margin-bottom: 8px;
-            }
-
-            .member-designation {
-                font-size: 0.9rem;
-                margin-bottom: 20px;
-                padding: 0 10px;
-            }
-
-            .member-description {
-                font-size: 0.9rem;
-                margin-bottom: 20px;
-            }
-
-            .linkedin-btn {
-                padding: 8px 16px;
-                font-size: 0.85rem;
-            }
-
-            .stats-section {
-                padding: 40px 20px;
-                margin-top: 40px;
-            }
-
-            .stats-container {
-                gap: 20px;
-            }
-
-            .stat-number {
-                font-size: 2.5rem;
-            }
-
-            .stat-label {
-                font-size: 1rem;
-            }
-
-            .cta-section {
-                padding: 40px 25px;
-                margin-top: 40px;
-            }
-
-            .cta-section h2 {
-                font-size: 1.8rem;
-            }
-
-            .cta-section p {
-                font-size: 1rem;
-            }
-
-            .cta-button {
-                padding: 12px 25px;
-                font-size: 1rem;
-            }
-
-            .footer {
-                margin-top: 60px;
-            }
-
-            .footer-container {
-                gap: 30px;
-            }
+        .member-photo-placeholder {
+          width: 100px;
+          height: 100px;
+          margin-bottom: 20px;
         }
 
-        /* Small Mobile View (below 576px) */
-        @media (max-width: 576px) {
-            .logo {
-                font-size: 1.5rem;
-            }
-
-            .section-title {
-                font-size: 1.5rem;
-            }
-
-            .hero-subtitle {
-                font-size: 0.9rem;
-            }
-
-            .section-header h2 {
-                font-size: 1.5rem;
-            }
-
-            .leader-card {
-                padding: 25px 20px;
-                min-height: 360px;
-            }
-
-            .member-photo-placeholder {
-                width: 90px;
-                height: 90px;
-            }
-
-            .member-photo-placeholder i {
-                font-size: 60px !important;
-            }
-
-            .member-name {
-                font-size: 1.1rem;
-            }
-
-            .member-designation {
-                font-size: 0.85rem;
-            }
-
-            .member-description {
-                font-size: 0.85rem;
-            }
-
-            .linkedin-btn {
-                padding: 7px 14px;
-                font-size: 0.8rem;
-            }
-
-            .stats-container {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-
-            .stat-number {
-                font-size: 2rem;
-            }
-
-            .stat-label {
-                font-size: 0.95rem;
-            }
-
-            .cta-section {
-                padding: 30px 20px;
-            }
-
-            .cta-section h2 {
-                font-size: 1.5rem;
-            }
-
-            .cta-section p {
-                font-size: 0.9rem;
-            }
-
-            .footer-container {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
+        .member-photo-placeholder i {
+          font-size: 70px !important;
         }
 
-        /* Extra small devices (landscape phones) */
-        @media (max-width: 480px) {
-            .leader-card {
-                min-height: 340px;
-            }
-
-            .member-designation {
-                font-size: 0.8rem;
-                line-height: 1.3;
-            }
+        .member-name {
+          font-size: 1.2rem;
+          margin-bottom: 8px;
         }
+
+        .member-designation {
+          font-size: 0.9rem;
+          margin-bottom: 20px;
+          padding: 0 10px;
+        }
+
+        .member-description {
+          font-size: 0.9rem;
+          margin-bottom: 20px;
+        }
+
+        .linkedin-btn {
+          padding: 8px 16px;
+          font-size: 0.85rem;
+        }
+
+        .stats-section {
+          padding: 40px 20px;
+          margin-top: 40px;
+        }
+
+        .stats-container {
+          gap: 20px;
+        }
+
+        .stat-number {
+          font-size: 2.5rem;
+        }
+
+        .stat-label {
+          font-size: 1rem;
+        }
+
+        .cta-section {
+          padding: 40px 25px;
+          margin-top: 40px;
+        }
+
+        .cta-section h2 {
+          font-size: 1.8rem;
+        }
+
+        .cta-section p {
+          font-size: 1rem;
+        }
+
+        .cta-button {
+          padding: 12px 25px;
+          font-size: 1rem;
+        }
+
+        .footer {
+          margin-top: 60px;
+        }
+
+        .footer-container {
+          gap: 30px;
+        }
+      }
+
+      /* Small Mobile View (below 576px) */
+      @media (max-width: 576px) {
+        .logo {
+          font-size: 1.5rem;
+        }
+
+        .section-title {
+          font-size: 1.5rem;
+        }
+
+        .hero-subtitle {
+          font-size: 0.9rem;
+        }
+
+        .section-header h2 {
+          font-size: 1.5rem;
+        }
+
+        .leader-card {
+          padding: 25px 20px;
+          min-height: 360px;
+        }
+
+        .member-photo-placeholder {
+          width: 90px;
+          height: 90px;
+        }
+
+        .member-photo-placeholder i {
+          font-size: 60px !important;
+        }
+
+        .member-name {
+          font-size: 1.1rem;
+        }
+
+        .member-designation {
+          font-size: 0.85rem;
+        }
+
+        .member-description {
+          font-size: 0.85rem;
+        }
+
+        .linkedin-btn {
+          padding: 7px 14px;
+          font-size: 0.8rem;
+        }
+
+        .stats-container {
+          grid-template-columns: 1fr;
+          gap: 15px;
+        }
+
+        .stat-number {
+          font-size: 2rem;
+        }
+
+        .stat-label {
+          font-size: 0.95rem;
+        }
+
+        .cta-section {
+          padding: 30px 20px;
+        }
+
+        .cta-section h2 {
+          font-size: 1.5rem;
+        }
+
+        .cta-section p {
+          font-size: 0.9rem;
+        }
+
+        .footer-container {
+          grid-template-columns: 1fr;
+          gap: 25px;
+        }
+      }
+
+      /* Extra small devices (landscape phones) */
+      @media (max-width: 480px) {
+        .leader-card {
+          min-height: 340px;
+        }
+
+        .member-designation {
+          font-size: 0.8rem;
+          line-height: 1.3;
+        }
+      }
     </style>
     <!-- Responsive Fixes CSS -->
 
     <!-- Navbar CSS -->
-    <link rel="stylesheet" href="./CSS/navbar.css">
-    <link rel="stylesheet" href="./CSS/booking-modal.css">
-</head>
+    <link rel="stylesheet" href="./CSS/navbar.css" />
+    <link rel="stylesheet" href="./CSS/booking-modal.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Header -->
     <header id="header">
-        <div class="container">
-            <nav>
-                <a href="index.html" class="logo">
-                    <img src="./Assets/Logo.svg" alt="Zonixtec Logo" style="height: 40px; width: auto;">
-                </a>
-                <div class="nav-links">
+      <div class="container">
+        <nav>
+          <a href="index.html" class="logo">
+            <img
+              src="./Assets/Logo.svg"
+              alt="Zonixtec Logo"
+              style="height: 40px; width: auto"
+            />
+          </a>
+          <div class="nav-links">
+            <a href="#" class="about-toggle">About Us</a>
+            <!-- ABOUT DROPDOWN PANEL -->
+            <div class="about-dropdown">
+              <div><h2>About Us</h2></div>
 
-                    <a href="#" class="about-toggle">About Us</a>
-                     <!-- ABOUT DROPDOWN PANEL -->
-                    <div class="about-dropdown">
-                        <div><h2>About Us</h2></div>
-
-                        <div class="about-container">
-                            
-                            <div class="about-links">
-                                <div>
-                                    <a href="aboutus.html">About Zonixtec</a>
-                                    <a href="Why-Zonixtec.html">Why Zonixtec?</a>
-                                    <a href="#">Our Journey</a>
-                                </div>
-                                <div>
-                                    <a href="#">From CEO’s Desk</a>
-                                    <a href="#">Leadership</a>
-                                    <a href="#">Case Study</a>
-                                </div>
-                            </div>
-                    
-                            <span class="about-close">&times;</span>
-                    
-                            <div class="about-image">
-                                <img src="./Assets/ai-nuclear-energy-background-future-innovation-disruptive-technology 3.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Services Dropdown -->
-                    <div class="dropdown">
-                        <a href="Services.html" class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
-                        <div class="dropdown-content">
-                            <div class="dropdown-scroll">
-                                <a href="web-design-development.html">Web Design & Development</a>
-                                <a href="web-app-development.html">Web App Development</a>
-                                <a href="CustomSoftware.html">Custom Software Development</a>
-                                <a href="crm-solutions.html">Custom CRM Solutions</a>
-                                <a href="erp-solutions.html">Custom ERP Solutions</a>
-                                <a href="Billing-invoice.html">Billing-Invoice Solutions</a>
-                                <a href="AIStrategy.html">AI Strategy & Consulting</a>
-                                <a href="DigitalMarketing.html">Digital Marketing Services</a>
-                                <a href="MobileDevelopment.html">Mobile App Development</a>
-                                <a href="ui.html">UI/UX Design Services</a>
-                                <a href="CloudSolutions.html">Cloud Solutions</a>
-                                <a href="hrms-solutions.html">HRMS Solutions</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a href="carrer.html">Career</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="javascript:void(0);" class="cta-buttons" onclick="openBookingModal()">
-                        <i class="fas fa-phone-alt"></i>Book A 30 Min Call
-                    </a>
+              <div class="about-container">
+                <div class="about-links">
+                  <div>
+                    <a href="aboutus.html">About Zonixtec</a>
+                    <a href="Why-Zonixtec.html">Why Zonixtec?</a>
+                    <a href="#">Our Journey</a>
+                  </div>
+                  <div>
+                    <a href="#">From CEO’s Desk</a>
+                    <a href="#">Leadership</a>
+                    <a href="#">Case Study</a>
+                  </div>
                 </div>
-                
-                <button class="mobile-menu-btn" aria-label="Toggle mobile menu" onclick="window.toggleMobileMenu && window.toggleMobileMenu()">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
-            </nav>
-        </div>
+
+                <span class="about-close">&times;</span>
+
+                <div class="about-image">
+                  <img
+                    src="./Assets/ai-nuclear-energy-background-future-innovation-disruptive-technology 3.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Services Dropdown -->
+            <div class="dropdown">
+              <a href="Services.html" class="dropdown-toggle"
+                >Services <i class="fas fa-chevron-down"></i
+              ></a>
+              <div class="dropdown-content">
+                <div class="dropdown-scroll">
+                  <a href="web-design-development.html"
+                    >Web Design & Development</a
+                  >
+                  <a href="web-app-development.html">Web App Development</a>
+                  <a href="CustomSoftware.html">Custom Software Development</a>
+                  <a href="crm-solutions.html">Custom CRM Solutions</a>
+                  <a href="erp-solutions.html">Custom ERP Solutions</a>
+                  <a href="Billing-invoice.html">Billing-Invoice Solutions</a>
+                  <a href="AIStrategy.html">AI Strategy & Consulting</a>
+                  <a href="DigitalMarketing.html">Digital Marketing Services</a>
+                  <a href="MobileDevelopment.html">Mobile App Development</a>
+                  <a href="ui.html">UI/UX Design Services</a>
+                  <a href="CloudSolutions.html">Cloud Solutions</a>
+                  <a href="hrms-solutions.html">HRMS Solutions</a>
+                </div>
+              </div>
+            </div>
+
+            <a href="carrer.html">Career</a>
+            <a href="contact.html">Contact</a>
+            <a
+              href="javascript:void(0);"
+              class="cta-buttons"
+              onclick="openBookingModal()"
+            >
+              <i class="fas fa-phone-alt"></i>Book A 30 Min Call
+            </a>
+          </div>
+
+          <button
+            class="mobile-menu-btn"
+            aria-label="Toggle mobile menu"
+            onclick="window.toggleMobileMenu && window.toggleMobileMenu()"
+          >
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </nav>
+      </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="section-padding" style="padding-top: 140px;">
-        <div class="container">
-            <h1 class="section-title">Our <span>Leadership</span></h1>
-            <p class="hero-subtitle">Meet the visionary leaders driving innovation and excellence at Zonixtec. Our team
-                combines decades of experience with cutting-edge expertise to deliver exceptional solutions.</p>
-        </div>
+    <section
+      class="section-padding"
+      style="padding-top: 110px; padding-bottom: 0"
+    >
+      <div class="container">
+        <h1 class="section-title">Our <span>Leadership</span></h1>
+        <p class="hero-subtitle">
+          Meet the visionary leaders driving innovation and excellence at
+          Zonixtec. Our team combines decades of experience with cutting-edge
+          expertise to deliver exceptional solutions.
+        </p>
+      </div>
     </section>
 
     <!-- Leadership Section -->
 
-<section class="leadership-section section-padding">
-    <div class="container">
-
+    <section class="leadership-section section-padding">
+      <div class="container">
         <div class="leadership-container">
-            <!-- First Row - 2 Cards -->
-            <div class="leadership-row row-2-cards">
-                <!-- Leader 1 -->
-                <div class="leader-card">
-                    <div class="member-photo">
-                        <img src="./Assets//Frame 1686551447 (1).png" alt="Shubham Chavhan">
-                    </div>
-                    <h3 class="member-name">Mr.Shubham Chavhan</h3>
-                    <p class="member-designation"> Co-Founder & CEO</p>
-                    <p class="member-description">Mr. Shubham leads Zonixtec with a focus on business excellence, strategic innovation, and operational growth. His entrepreneurial foresight and results-driven leadership have shaped Zonixtec into a trusted partner for global digital transformation.</p>
-                    <a href="https://www.linkedin.com/in/shubham-chavhan-84035b168/" class="linkedin-btn" target="_blank">
-  <img src="Assets/linkedin-option-svgrepo-com 1.png" alt="LinkedIn" class="linkedin-icon">
-  <span class="linkedin-text">Connect on LinkedIn</span>
-  <span class="linkedin-arrow">→</span>
-</a>
-
-                </div>
-
-                <!-- Leader 2 -->
-                <div class="leader-card">
-                    <div class="member-photo">
-                        <img src="./Assets//Frame 1686551447 (1).png" alt="Rushikesh Bendal">
-                    </div>
-                    <h3 class="member-name">Mr.Rushikesh Bendal</h3>
-                    <p class="member-designation">Co-Chairman</p>
-                    <p class="member-description">Mr. Rushikesh plays a vital role in defining long-term strategy and ensuring strong governance across all company operations. His ability to balance innovation with structure keeps Zonixtec aligned with its mission, values, and growth goals — creating a stable foundation for the future.</p>
-                    <a href="https://www.linkedin.com/in/rushikesh-bendal-688458364/" class="linkedin-btn" target="_blank">
-  <img src="./Assets//linkedin-option-svgrepo-com 1.png" alt="LinkedIn" class="linkedin-icon">
-  <span class="linkedin-text">Connect on LinkedIn</span>
-  <span class="linkedin-arrow">→</span>
-</a>
-
-                </div>
+          <!-- First Row - 2 Cards -->
+          <div class="leadership-row row-2-cards">
+            <!-- Leader 1 -->
+            <div class="leader-card">
+              <div class="member-photo">
+                <img
+                  src="./Assets//Frame 1686551447 (1).png"
+                  alt="Shubham Chavhan"
+                />
+              </div>
+              <h3 class="member-name">Mr.Shubham Chavhan</h3>
+              <p class="member-designation">Co-Founder & CEO</p>
+              <p class="member-description">
+                Mr. Shubham leads Zonixtec with a focus on business excellence,
+                strategic innovation, and operational growth. His
+                entrepreneurial foresight and results-driven leadership have
+                shaped Zonixtec into a trusted partner for global digital
+                transformation.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/shubham-chavhan-84035b168/"
+                class="linkedin-btn"
+                target="_blank"
+              >
+                <img
+                  src="Assets/linkedin-option-svgrepo-com 1.png"
+                  alt="LinkedIn"
+                  class="linkedin-icon"
+                />
+                <span class="linkedin-text">Connect on LinkedIn</span>
+                <span class="linkedin-arrow">→</span>
+              </a>
             </div>
 
-            <!-- Second Row - 3 Cards -->
-            <div class="leadership-row row-3-cards">
-                <!-- Leader 3 -->
-                <div class="leader-card">
-                    <div class="member-photo">
-                        <img src="./Assets//Frame 1686551447 (1).png" alt="Chetan Patil">
-                    </div>
-                    <h3 class="member-name">Mr. Chetan Patil</h3>
-                    <p class="member-designation">Chief - Management </p>
-                    <p class="member-description">Mr. Chetan is responsible for strengthening client relationships and driving business growth. He focuses on understanding client needs, nurturing long-term partnerships, and leading non-technical teams that boost sales, customer engagement, and overall client satisfaction.</p>
-                    <a href="https://www.linkedin.com/in/chetan-patil-38b02422b/" target="_blank" class="linkedin-btn">
-  <img src="./Assets//linkedin-option-svgrepo-com 1.png" alt="LinkedIn" class="linkedin-icon">
-  <span class="linkedin-text">Connect on LinkedIn</span>
-  <span class="linkedin-arrow">→</span>
-</a>
+            <!-- Leader 2 -->
+            <div class="leader-card">
+              <div class="member-photo">
+                <img
+                  src="./Assets//Frame 1686551447 (1).png"
+                  alt="Rushikesh Bendal"
+                />
+              </div>
+              <h3 class="member-name">Mr.Rushikesh Bendal</h3>
+              <p class="member-designation">Co-Chairman</p>
+              <p class="member-description">
+                Mr. Rushikesh plays a vital role in defining long-term strategy
+                and ensuring strong governance across all company operations.
+                His ability to balance innovation with structure keeps Zonixtec
+                aligned with its mission, values, and growth goals — creating a
+                stable foundation for the future.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/rushikesh-bendal-688458364/"
+                class="linkedin-btn"
+                target="_blank"
+              >
+                <img
+                  src="./Assets//linkedin-option-svgrepo-com 1.png"
+                  alt="LinkedIn"
+                  class="linkedin-icon"
+                />
+                <span class="linkedin-text">Connect on LinkedIn</span>
+                <span class="linkedin-arrow">→</span>
+              </a>
+            </div>
+          </div>
 
-                </div>
-
-                <!-- Leader 4 -->
-                <div class="leader-card">
-                    <div class="member-photo">
-                        <img src="./Assets//Frame 1686551447 (1).png" alt="Anjali Garje">
-                    </div>
-                    <h3 class="member-name">Ms. Anjali Garje</h3>
-                    <p class="member-designation">Chief - Human Resources</p>
-                    <p class="member-description">Ms. Anjali drives Zonixtec’s people strategy with empathy and precision. Her approach fosters a culture of collaboration, inclusivity, and performance. She ensures that talent growth aligns seamlessly with organizational goals, creating a strong and motivated workforce.</p>
-                    <a href="https://www.linkedin.com/in/anjali-garje-01ba38218/" target="_blank" class="linkedin-btn">
-  <img src="./Assets//linkedin-option-svgrepo-com 1.png" alt="LinkedIn" class="linkedin-icon">
-  <span class="linkedin-text">Connect on LinkedIn</span>
-  <span class="linkedin-arrow">→</span>
-</a>
-
-                </div>
-
-                <!-- Leader 5 -->
-                <div class="leader-card">
-                    <div class="member-photo">
-                        <img src="./Assets//Frame 1686551447 (1).png" alt="Omkar Thorat">
-                    </div>
-                    <h3 class="member-name">Mr. Omkar Thorat</h3>
-                    <p class="member-designation">Chief - Operations</p>
-                    <p class="member-description">Mr. Omkar oversees project execution and technical excellence across all development teams. His leadership ensures that every project is delivered with precision, on schedule, and up to the highest standards of quality. He ensures Zonixtec’s technical foundation strong and future-ready.</p>
-                   <a href="https://www.linkedin.com/in/thoratomkar2920/" target="_blank" class="linkedin-btn">
-  <img src="./Assets//linkedin-option-svgrepo-com 1.png" alt="LinkedIn" class="linkedin-icon">
-  <span class="linkedin-text">Connect on LinkedIn</span>
-  <span class="linkedin-arrow">→</span>
-</a>
-
-                </div>
+          <!-- Second Row - 3 Cards -->
+          <div class="leadership-row row-3-cards">
+            <!-- Leader 3 -->
+            <div class="leader-card">
+              <div class="member-photo">
+                <img
+                  src="./Assets//Frame 1686551447 (1).png"
+                  alt="Chetan Patil"
+                />
+              </div>
+              <h3 class="member-name">Mr. Chetan Patil</h3>
+              <p class="member-designation">Chief - Management</p>
+              <p class="member-description">
+                Mr. Chetan is responsible for strengthening client relationships
+                and driving business growth. He focuses on understanding client
+                needs, nurturing long-term partnerships, and leading
+                non-technical teams that boost sales, customer engagement, and
+                overall client satisfaction.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/chetan-patil-38b02422b/"
+                target="_blank"
+                class="linkedin-btn"
+              >
+                <img
+                  src="./Assets//linkedin-option-svgrepo-com 1.png"
+                  alt="LinkedIn"
+                  class="linkedin-icon"
+                />
+                <span class="linkedin-text">Connect on LinkedIn</span>
+                <span class="linkedin-arrow">→</span>
+              </a>
             </div>
 
-            <!-- Third Row - 2 Cards -->
-            <div class="leadership-row row-2-cards">
-                <!-- Leader 6 -->
-                <div class="leader-card">
-                    <div class="member-photo">
-                        <img src="./Assets//Frame 1686551447 (1).png" alt="Sanket Pawar">
-                    </div>
-                    <h3 class="member-name">Mr. Sanket Pawar</h3>
-                    <p class="member-designation">Executive Head – Business Development & Administration</p>
-                    <p class="member-description">Mr. Sanket leads initiatives that expand Zonixtec’s business reach and strengthen market presence. His expertise in client engagement and administrative efficiency drives sustainable growth and operational clarity.</p>
-                    <a href="https://www.linkedin.com/in/sanket-pawar-6137a1265/" target="_blank" class="linkedin-btn">
-  <img src="./Assets//linkedin-option-svgrepo-com 1.png" alt="LinkedIn" class="linkedin-icon">
-  <span class="linkedin-text">Connect on LinkedIn</span>
-  <span class="linkedin-arrow">→</span>
-</a>
-
-                </div>
-
-                <!-- Leader 7 -->
-                <div class="leader-card">
-                    <div class="member-photo">
-                        <img src="./Assets//Frame 1686551447 (1).png" alt="Aniket Sangale" >
-                    </div>
-                    <h3 class="member-name">Mr. Aniket Sangale</h3>
-                    <p class="member-designation">Executive Head – Client Satisfaction & Technical Success</p>
-                    <p class="member-description">Mr. Aniket bridges the gap between innovation and implementation. His technical understanding combined with a customer-first approach ensures every solution we deliver meets performance, reliability, and client success benchmarks</p>
-                    <a href="https://www.linkedin.com/in/aniket-sangale-199320268/" target="_blank" class="linkedin-btn">
-  <img src="Assets//linkedin-option-svgrepo-com 1.png" alt="LinkedIn" class="linkedin-icon">
-  <span class="linkedin-text">Connect on LinkedIn</span>
-  <span class="linkedin-arrow">→</span>
-</a>
-
-                </div>
+            <!-- Leader 4 -->
+            <div class="leader-card">
+              <div class="member-photo">
+                <img
+                  src="./Assets//Frame 1686551447 (1).png"
+                  alt="Anjali Garje"
+                />
+              </div>
+              <h3 class="member-name">Ms. Anjali Garje</h3>
+              <p class="member-designation">Chief - Human Resources</p>
+              <p class="member-description">
+                Ms. Anjali drives Zonixtec’s people strategy with empathy and
+                precision. Her approach fosters a culture of collaboration,
+                inclusivity, and performance. She ensures that talent growth
+                aligns seamlessly with organizational goals, creating a strong
+                and motivated workforce.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/anjali-garje-01ba38218/"
+                target="_blank"
+                class="linkedin-btn"
+              >
+                <img
+                  src="./Assets//linkedin-option-svgrepo-com 1.png"
+                  alt="LinkedIn"
+                  class="linkedin-icon"
+                />
+                <span class="linkedin-text">Connect on LinkedIn</span>
+                <span class="linkedin-arrow">→</span>
+              </a>
             </div>
+
+            <!-- Leader 5 -->
+            <div class="leader-card">
+              <div class="member-photo">
+                <img
+                  src="./Assets//Frame 1686551447 (1).png"
+                  alt="Omkar Thorat"
+                />
+              </div>
+              <h3 class="member-name">Mr. Omkar Thorat</h3>
+              <p class="member-designation">Chief - Operations</p>
+              <p class="member-description">
+                Mr. Omkar oversees project execution and technical excellence
+                across all development teams. His leadership ensures that every
+                project is delivered with precision, on schedule, and up to the
+                highest standards of quality. He ensures Zonixtec’s technical
+                foundation strong and future-ready.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/thoratomkar2920/"
+                target="_blank"
+                class="linkedin-btn"
+              >
+                <img
+                  src="./Assets//linkedin-option-svgrepo-com 1.png"
+                  alt="LinkedIn"
+                  class="linkedin-icon"
+                />
+                <span class="linkedin-text">Connect on LinkedIn</span>
+                <span class="linkedin-arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Third Row - 2 Cards -->
+          <div class="leadership-row row-2-cards">
+            <!-- Leader 6 -->
+            <div class="leader-card">
+              <div class="member-photo">
+                <img
+                  src="./Assets//Frame 1686551447 (1).png"
+                  alt="Sanket Pawar"
+                />
+              </div>
+              <h3 class="member-name">Mr. Sanket Pawar</h3>
+              <p class="member-designation">
+                Executive Head – Business Development & Administration
+              </p>
+              <p class="member-description">
+                Mr. Sanket leads initiatives that expand Zonixtec’s business
+                reach and strengthen market presence. His expertise in client
+                engagement and administrative efficiency drives sustainable
+                growth and operational clarity.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/sanket-pawar-6137a1265/"
+                target="_blank"
+                class="linkedin-btn"
+              >
+                <img
+                  src="./Assets//linkedin-option-svgrepo-com 1.png"
+                  alt="LinkedIn"
+                  class="linkedin-icon"
+                />
+                <span class="linkedin-text">Connect on LinkedIn</span>
+                <span class="linkedin-arrow">→</span>
+              </a>
+            </div>
+
+            <!-- Leader 7 -->
+            <div class="leader-card">
+              <div class="member-photo">
+                <img
+                  src="./Assets//Frame 1686551447 (1).png"
+                  alt="Aniket Sangale"
+                />
+              </div>
+              <h3 class="member-name">Mr. Aniket Sangale</h3>
+              <p class="member-designation">
+                Executive Head – Client Satisfaction & Technical Success
+              </p>
+              <p class="member-description">
+                Mr. Aniket bridges the gap between innovation and
+                implementation. His technical understanding combined with a
+                customer-first approach ensures every solution we deliver meets
+                performance, reliability, and client success benchmarks
+              </p>
+              <a
+                href="https://www.linkedin.com/in/aniket-sangale-199320268/"
+                target="_blank"
+                class="linkedin-btn"
+              >
+                <img
+                  src="Assets//linkedin-option-svgrepo-com 1.png"
+                  alt="LinkedIn"
+                  class="linkedin-icon"
+                />
+                <span class="linkedin-text">Connect on LinkedIn</span>
+                <span class="linkedin-arrow">→</span>
+              </a>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-
-<!-- Stats Section -->
-<section class="section-padding">
-    <div class="container">
+    <!-- Stats Section -->
+    <section class="section-padding">
+      <div class="container">
         <div class="stats-section">
-            <div class="stats-container">
-                <div class="stat-card">
-                    <div class="stat-number">12+</div>
-                    <div class="stat-label">Projects Delivered</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">8+</div>
-                    <div class="stat-label">Active Clients</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">4+</div>
-                    <div class="stat-label">Core Service Domains</div>
-                </div>
+          <div class="stats-container">
+            <div class="stat-card">
+              <div class="stat-number">12+</div>
+              <div class="stat-label">Projects Delivered</div>
             </div>
+            <div class="stat-card">
+              <div class="stat-number">8+</div>
+              <div class="stat-label">Active Clients</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">4+</div>
+              <div class="stat-label">Core Service Domains</div>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
     <!-- CTA Section -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="cta-section">
-                <h2>Join Our Team</h2>
-                <p>We're always looking for talented individuals who are passionate about technology and innovation.
-                    Explore career opportunities at Zonixtec.</p>
-                <a href="carrer.html" class="cta-button">View Open Positions &nbsp;&nbsp;<span>→</span></a>
-            </div>
+    <section class="section-padding" style="padding: 0px 0 30px">
+      <div class="container">
+        <div class="cta-section">
+          <h2>Join Our Team</h2>
+          <p>
+            We're always looking for talented individuals who are passionate
+            about technology and innovation. Explore career opportunities at
+            Zonixtec.
+          </p>
+          <a href="carrer.html" class="cta-button"
+            >View Open Positions &nbsp;&nbsp;<span>→</span></a
+          >
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-container">
-                <!-- Solutions Section with Dropdown -->
-                <div class="footer-col">
-                    <h3>Solutions</h3>
-                    <div class="footer-links">
-
-                        <!-- Next-Gen Tech Dropdown -->
-                        <div class="footer-dropdown">
-                            <div class="footer-dropdown-header">
-                                <span><i class="fas fa-chevron-right"></i> Next-Gen Tech</span>
-                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-                            </div>
-                            <div class="footer-dropdown-content">
-                                <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> AI & Machine
-                                    Learning</a>
-                                <a href="CloudSolutions.html"><i class="fas fa-chevron-right"></i> Cloud Solutions</a>
-                            </div>
-                        </div>
-
-                        <!-- AI Services Dropdown -->
-                        <div class="footer-dropdown">
-                            <div class="footer-dropdown-header">
-                                <span><i class="fas fa-chevron-right"></i> AI Services</span>
-                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-                            </div>
-                            <div class="footer-dropdown-content">
-                                <a href="AIServices.html"><i class="fas fa-chevron-right"></i> AI Services Overview</a>
-                                <a href="AIStrategy.html"><i class="fas fa-chevron-right"></i> AI Strategy &
-                                    Consulting</a>
-                                <a href="MachineLearning.html"><i class="fas fa-chevron-right"></i> Machine Learning</a>
-                                <a href="NLP.html"><i class="fas fa-chevron-right"></i> Natural Language Processing
-                                    (NLP)</a>
-                                <a href="ComputerVision.html"><i class="fas fa-chevron-right"></i> Computer Vision</a>
-                                <a href="PredictiveAnalytics.html"><i class="fas fa-chevron-right"></i> Predictive
-                                    Analysis</a>
-                                <a href="ProcessAutomation.html"><i class="fas fa-chevron-right"></i> Process
-                                    Automation</a>
-                            </div>
-                        </div>
-
-                        <!-- Core Development Dropdown -->
-                        <div class="footer-dropdown">
-                            <div class="footer-dropdown-header">
-                                <span><i class="fas fa-chevron-right"></i> Core Development</span>
-                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-                            </div>
-                            <div class="footer-dropdown-content">
-                                <a href="CustomSoftware.html"><i class="fas fa-chevron-right"></i> Custom Software
-                                    Development</a>
-                                <a href="MobileDevelopment.html"><i class="fas fa-chevron-right"></i> Mobile App
-                                    Development</a>
-                            </div>
-                        </div>
-
-                        <!-- Design & Experience Dropdown -->
-                        <div class="footer-dropdown">
-                            <div class="footer-dropdown-header">
-                                <span><i class="fas fa-chevron-right"></i> Design & Experience</span>
-                                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
-                            </div>
-                            <div class="footer-dropdown-content">
-                                <a href="ui.html"><i class="fas fa-chevron-right"></i> UI/UX Design</a>
-                            </div>
-                        </div>
-                    </div>
+      <div class="container">
+        <div class="footer-container">
+          <!-- Solutions Section with Dropdown -->
+          <div class="footer-col">
+            <h3>Solutions</h3>
+            <div class="footer-links">
+              <!-- Next-Gen Tech Dropdown -->
+              <div class="footer-dropdown">
+                <div class="footer-dropdown-header">
+                  <span
+                    ><i class="fas fa-chevron-right"></i> Next-Gen Tech</span
+                  >
+                  <span class="dropdown-toggle"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
                 </div>
-
-                <!-- Insights Section -->
-                <div class="footer-col">
-                    <h3>Insights</h3>
-                    <div class="footer-links">
-                        <a href="CaseStudies.html"><i class="fas fa-chevron-right"></i> Case Studies</a>
-                        <a href="Blogs.html"><i class="fas fa-chevron-right"></i> Blogs</a>
-                        <a href="CEOdesk.html"><i class="fas fa-chevron-right"></i> From CEO's Desk</a>
-                        <a href="FAQs.html"><i class="fas fa-chevron-right"></i> FAQs</a>
-                        <a href="Guides.html"><i class="fas fa-chevron-right"></i> Guides</a>
-                        <a href="HowTos.html"><i class="fas fa-chevron-right"></i> How-tos</a>
-                    </div>
+                <div class="footer-dropdown-content">
+                  <a href="MachineLearning.html"
+                    ><i class="fas fa-chevron-right"></i> AI & Machine
+                    Learning</a
+                  >
+                  <a href="CloudSolutions.html"
+                    ><i class="fas fa-chevron-right"></i> Cloud Solutions</a
+                  >
                 </div>
+              </div>
 
-                <!-- Company Section -->
-                <div class="footer-col">
-                    <h3>Company</h3>
-                    <div class="footer-links">
-                        <a href="aboutus.html"><i class="fas fa-chevron-right"></i> About Us</a>
-                        <a href="aboutus.html"><i class="fas fa-chevron-right"></i> Our Story</a>
-                        <a href="aboutus.html" id="aboutLink">
-                            <i class="fas fa-chevron-right"></i> Mission & Vision
-                        </a>
-                        <a href="aboutus.html" id="OurJou"><i class="fas fa-chevron-right"></i> Our Journey</a>
-                        <a href="aboutus.html" id="OurCore"><i class="fas fa-chevron-right"></i> Core Values</a>
-                        <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
-                        <a href="Leadership.html"><i class="fas fa-chevron-right"></i> Leadership</a>
-                    </div>
+              <!-- AI Services Dropdown -->
+              <div class="footer-dropdown">
+                <div class="footer-dropdown-header">
+                  <span><i class="fas fa-chevron-right"></i> AI Services</span>
+                  <span class="dropdown-toggle"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
                 </div>
+                <div class="footer-dropdown-content">
+                  <a href="AIServices.html"
+                    ><i class="fas fa-chevron-right"></i> AI Services
+                    Overview</a
+                  >
+                  <a href="AIStrategy.html"
+                    ><i class="fas fa-chevron-right"></i> AI Strategy &
+                    Consulting</a
+                  >
+                  <a href="MachineLearning.html"
+                    ><i class="fas fa-chevron-right"></i> Machine Learning</a
+                  >
+                  <a href="NLP.html"
+                    ><i class="fas fa-chevron-right"></i> Natural Language
+                    Processing (NLP)</a
+                  >
+                  <a href="ComputerVision.html"
+                    ><i class="fas fa-chevron-right"></i> Computer Vision</a
+                  >
+                  <a href="PredictiveAnalytics.html"
+                    ><i class="fas fa-chevron-right"></i> Predictive Analysis</a
+                  >
+                  <a href="ProcessAutomation.html"
+                    ><i class="fas fa-chevron-right"></i> Process Automation</a
+                  >
+                </div>
+              </div>
 
-                <!-- Quick Links Section -->
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <div class="footer-links">
-                        <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
-                        <a href="Testimonials.html"><i class="fas fa-chevron-right"></i> Testimonials</a>
-                        <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
-                        <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a>
-                    </div>
+              <!-- Core Development Dropdown -->
+              <div class="footer-dropdown">
+                <div class="footer-dropdown-header">
+                  <span
+                    ><i class="fas fa-chevron-right"></i> Core Development</span
+                  >
+                  <span class="dropdown-toggle"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
                 </div>
+                <div class="footer-dropdown-content">
+                  <a href="CustomSoftware.html"
+                    ><i class="fas fa-chevron-right"></i> Custom Software
+                    Development</a
+                  >
+                  <a href="MobileDevelopment.html"
+                    ><i class="fas fa-chevron-right"></i> Mobile App
+                    Development</a
+                  >
+                </div>
+              </div>
+
+              <!-- Design & Experience Dropdown -->
+              <div class="footer-dropdown">
+                <div class="footer-dropdown-header">
+                  <span
+                    ><i class="fas fa-chevron-right"></i> Design &
+                    Experience</span
+                  >
+                  <span class="dropdown-toggle"
+                    ><i class="fas fa-chevron-down"></i
+                  ></span>
+                </div>
+                <div class="footer-dropdown-content">
+                  <a href="ui.html"
+                    ><i class="fas fa-chevron-right"></i> UI/UX Design</a
+                  >
+                </div>
+              </div>
             </div>
+          </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2024 Zonixtec. All Rights Reserved. | Designed with by Zonixtec Team</p>
+          <!-- Insights Section -->
+          <div class="footer-col">
+            <h3>Insights</h3>
+            <div class="footer-links">
+              <a href="CaseStudies.html"
+                ><i class="fas fa-chevron-right"></i> Case Studies</a
+              >
+              <a href="Blogs.html"
+                ><i class="fas fa-chevron-right"></i> Blogs</a
+              >
+              <a href="CEOdesk.html"
+                ><i class="fas fa-chevron-right"></i> From CEO's Desk</a
+              >
+              <a href="FAQs.html"><i class="fas fa-chevron-right"></i> FAQs</a>
+              <a href="Guides.html"
+                ><i class="fas fa-chevron-right"></i> Guides</a
+              >
+              <a href="HowTos.html"
+                ><i class="fas fa-chevron-right"></i> How-tos</a
+              >
             </div>
+          </div>
+
+          <!-- Company Section -->
+          <div class="footer-col">
+            <h3>Company</h3>
+            <div class="footer-links">
+              <a href="aboutus.html"
+                ><i class="fas fa-chevron-right"></i> About Us</a
+              >
+              <a href="aboutus.html"
+                ><i class="fas fa-chevron-right"></i> Our Story</a
+              >
+              <a href="aboutus.html" id="aboutLink">
+                <i class="fas fa-chevron-right"></i> Mission & Vision
+              </a>
+              <a href="aboutus.html" id="OurJou"
+                ><i class="fas fa-chevron-right"></i> Our Journey</a
+              >
+              <a href="aboutus.html" id="OurCore"
+                ><i class="fas fa-chevron-right"></i> Core Values</a
+              >
+              <a href="carrer.html"
+                ><i class="fas fa-chevron-right"></i> Careers</a
+              >
+              <a href="Leadership.html"
+                ><i class="fas fa-chevron-right"></i> Leadership</a
+              >
+            </div>
+          </div>
+
+          <!-- Quick Links Section -->
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <div class="footer-links">
+              <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
+              <a href="Testimonials.html"
+                ><i class="fas fa-chevron-right"></i> Testimonials</a
+              >
+              <a href="carrer.html"
+                ><i class="fas fa-chevron-right"></i> Careers</a
+              >
+              <a href="contact.html"
+                ><i class="fas fa-chevron-right"></i> Contact Us</a
+              >
+            </div>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 Zonixtec. All Rights Reserved. | Designed with by
+            Zonixtec Team
+          </p>
+        </div>
+      </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
-            document.querySelector('.nav-links').classList.toggle('active');
+      // Mobile menu toggle
+      document
+        .querySelector(".mobile-menu-btn")
+        .addEventListener("click", function () {
+          document.querySelector(".nav-links").classList.toggle("active");
         });
 
-        // Header scroll effect
-        window.addEventListener('scroll', function () {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+      // Header scroll effect
+      window.addEventListener("scroll", function () {
+        const header = document.getElementById("header");
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
 
-        // Close mobile menu when clicking on a link
-        // document.querySelectorAll('.nav-links a').forEach(link => {
-        //     link.addEventListener('click', () => {
-        //         document.querySelector('.nav-links').classList.remove('active');
-        //     });
-        // });
+      // Close mobile menu when clicking on a link
+      // document.querySelectorAll('.nav-links a').forEach(link => {
+      //     link.addEventListener('click', () => {
+      //         document.querySelector('.nav-links').classList.remove('active');
+      //     });
+      // });
 
-        // Footer dropdown functionality
-        document.querySelectorAll('.footer-dropdown-header').forEach(header => {
-            header.addEventListener('click', () => {
-                const parent = header.parentElement;
-                parent.classList.toggle('open');
-            });
+      // Footer dropdown functionality
+      document.querySelectorAll(".footer-dropdown-header").forEach((header) => {
+        header.addEventListener("click", () => {
+          const parent = header.parentElement;
+          parent.classList.toggle("open");
         });
+      });
     </script>
 
     <!-- Chatbot -->
-    <link rel="stylesheet" href="./CSS/chatbot.css">
+    <link rel="stylesheet" href="./CSS/chatbot.css" />
     <script src="./script/chatbot.js"></script>
 
     <!-- Booking Modal -->
     <div class="modal" id="bookingModal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeBookingModal()">
-                <i class="fas fa-times"></i>
-            </button>
-            
-            <div class="modal-header">
-                <h2>Book Your Free 30-Minute Consultation</h2>
-                <p>Let's discuss how we can help transform your business</p>
-            </div>
+      <div class="modal-content">
+        <button class="close-modal" onclick="closeBookingModal()">
+          <i class="fas fa-times"></i>
+        </button>
 
-            <form class="booking-form" id="bookingForm">
-                <div class="form-row">
-                    <div class="form-group-modal">
-                        <label>Full Name <span>*</span></label>
-                        <input type="text" id="bookingName" placeholder="Enter your full name" required>
-                    </div>
-                    <div class="form-group-modal">
-                        <label>Email Address <span>*</span></label>
-                        <input type="email" id="bookingEmail" placeholder="your@email.com" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group-modal">
-                        <label>Phone Number <span>*</span></label>
-                        <input type="tel" id="bookingPhone" placeholder="+91 999999999" required>
-                    </div>
-                    <div class="form-group-modal">
-                        <label>Company Name</label>
-                        <input type="text" id="bookingCompany" placeholder="Your company (optional)">
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group-modal">
-                        <label>Preferred Date <span>*</span></label>
-                        <input type="date" id="bookingDate" required>
-                    </div>
-                    <div class="form-group-modal">
-                        <label>Preferred Time <span>*</span></label>
-                        <input type="time" id="bookingTime" required>
-                    </div>
-                </div>
-
-                <div class="form-group-modal">
-                    <label>Service Interested In <span>*</span></label>
-                    <select id="bookingService" required>
-                        <option value="">Select a service</option>
-                        <option value="CRM Solutions">CRM Solutions</option>
-                        <option value="ERP Solutions">ERP Solutions</option>
-                        <option value="Billing Software">Billing Software</option>
-                        <option value="Website Development">Website Development</option>
-                        <option value="Mobile App Development">Mobile App Development</option>
-                        <option value="AI Solutions">AI Solutions</option>
-                        <option value="Cloud Solutions">Cloud Solutions</option>
-                        <option value="Digital Marketing">Digital Marketing</option>
-                        <option value="UI/UX Design">UI/UX Design</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
-
-                <div class="form-group-modal">
-                    <label>Message / Additional Details</label>
-                    <textarea id="bookingMessage" placeholder="Tell us about your project or questions..."></textarea>
-                </div>
-
-                <button type="submit" class="submit-booking-btn">
-                    <i class="fas fa-calendar-check"></i> Book My Call
-                </button>
-            </form>
+        <div class="modal-header">
+          <h2>Book Your Free 30-Minute Consultation</h2>
+          <p>Let's discuss how we can help transform your business</p>
         </div>
+
+        <form class="booking-form" id="bookingForm">
+          <div class="form-row">
+            <div class="form-group-modal">
+              <label>Full Name <span>*</span></label>
+              <input
+                type="text"
+                id="bookingName"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+            <div class="form-group-modal">
+              <label>Email Address <span>*</span></label>
+              <input
+                type="email"
+                id="bookingEmail"
+                placeholder="your@email.com"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group-modal">
+              <label>Phone Number <span>*</span></label>
+              <input
+                type="tel"
+                id="bookingPhone"
+                placeholder="+91 999999999"
+                required
+              />
+            </div>
+            <div class="form-group-modal">
+              <label>Company Name</label>
+              <input
+                type="text"
+                id="bookingCompany"
+                placeholder="Your company (optional)"
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group-modal">
+              <label>Preferred Date <span>*</span></label>
+              <input type="date" id="bookingDate" required />
+            </div>
+            <div class="form-group-modal">
+              <label>Preferred Time <span>*</span></label>
+              <input type="time" id="bookingTime" required />
+            </div>
+          </div>
+
+          <div class="form-group-modal">
+            <label>Service Interested In <span>*</span></label>
+            <select id="bookingService" required>
+              <option value="">Select a service</option>
+              <option value="CRM Solutions">CRM Solutions</option>
+              <option value="ERP Solutions">ERP Solutions</option>
+              <option value="Billing Software">Billing Software</option>
+              <option value="Website Development">Website Development</option>
+              <option value="Mobile App Development">
+                Mobile App Development
+              </option>
+              <option value="AI Solutions">AI Solutions</option>
+              <option value="Cloud Solutions">Cloud Solutions</option>
+              <option value="Digital Marketing">Digital Marketing</option>
+              <option value="UI/UX Design">UI/UX Design</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group-modal">
+            <label>Message / Additional Details</label>
+            <textarea
+              id="bookingMessage"
+              placeholder="Tell us about your project or questions..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-booking-btn">
+            <i class="fas fa-calendar-check"></i> Book My Call
+          </button>
+        </form>
+      </div>
     </div>
 
     <!-- Success Message Overlay -->
     <div class="success-message" id="bookingSuccess">
-        <i class="fas fa-check-circle"></i> 
-        <strong>Your Call is Booked!</strong>
-        <p>Our team will connect with you as soon as possible. Thank you for choosing Zonixtec!</p>
+      <i class="fas fa-check-circle"></i>
+      <strong>Your Call is Booked!</strong>
+      <p>
+        Our team will connect with you as soon as possible. Thank you for
+        choosing Zonixtec!
+      </p>
     </div>
 
     <!-- Booking Modal Script -->
     <script src="./script/booking-modal.js"></script>
     <script src="./script/allabout.js"></script>
-
-</body>
-
+  </body>
 </html>
