@@ -2113,6 +2113,15 @@
           message: false,
         };
 
+        // Track if fields have been touched (user has interacted)
+        const touchedFields = {
+          name: false,
+          email: false,
+          phone: false,
+          subject: false,
+          message: false,
+        };
+
         // Validation Functions
         function validateName(value) {
           const trimmed = value.trim();
@@ -2212,7 +2221,9 @@
           input,
           errorElement,
           isValid,
-          errorMessage
+          errorMessage,
+          fieldName,
+          showError = false
         ) {
           if (isValid) {
             input.classList.remove("error");
@@ -2220,66 +2231,97 @@
             errorElement.textContent = "";
           } else {
             input.classList.remove("valid");
-            input.classList.add("error");
-            errorElement.textContent = errorMessage;
+            // Only show error if explicitly requested (on blur or submit)
+            // Don't show errors while user is actively typing
+            if (showError) {
+              input.classList.add("error");
+              errorElement.textContent = errorMessage;
+            } else {
+              // Don't show error visually yet, just track state
+              input.classList.remove("error");
+              errorElement.textContent = "";
+            }
           }
         }
 
         // Real-time validation handlers
-        function handleNameValidation() {
+        function handleNameValidation(showError = false) {
           const result = validateName(nameInput.value);
           validationState.name = result.valid;
           updateFieldValidation(
             nameInput,
             nameError,
             result.valid,
-            result.message
+            result.message,
+            "name",
+            showError
           );
         }
 
-        function handleEmailValidation() {
+        function handleEmailValidation(showError = false) {
           const result = validateEmail(emailInput.value);
           validationState.email = result.valid;
           updateFieldValidation(
             emailInput,
             emailError,
             result.valid,
-            result.message
+            result.message,
+            "email",
+            showError
           );
         }
 
-        function handlePhoneValidation() {
+        function handlePhoneValidation(showError = false) {
+          // Store cursor position before modifying value
+          const cursorPosition = phoneInput.selectionStart;
+          const originalValue = phoneInput.value;
+          
           // Only allow digits
-          phoneInput.value = phoneInput.value.replace(/\D/g, "");
+          const digitsOnly = originalValue.replace(/\D/g, "");
+          
+          // Only update if value changed to preserve cursor position
+          if (digitsOnly !== originalValue) {
+            phoneInput.value = digitsOnly;
+            // Restore cursor position (adjust for removed characters)
+            const newPosition = Math.min(cursorPosition, digitsOnly.length);
+            phoneInput.setSelectionRange(newPosition, newPosition);
+          }
+          
           const result = validatePhone(phoneInput.value);
           validationState.phone = result.valid;
           updateFieldValidation(
             phoneInput,
             phoneError,
             result.valid,
-            result.message
+            result.message,
+            "phone",
+            showError
           );
         }
 
-        function handleSubjectValidation() {
+        function handleSubjectValidation(showError = false) {
           const result = validateSubject(subjectInput.value);
           validationState.subject = result.valid;
           updateFieldValidation(
             subjectInput,
             subjectError,
             result.valid,
-            result.message
+            result.message,
+            "subject",
+            showError
           );
         }
 
-        function handleMessageValidation() {
+        function handleMessageValidation(showError = false) {
           const result = validateMessage(messageInput.value);
           validationState.message = result.valid;
           updateFieldValidation(
             messageInput,
             messageError,
             result.valid,
-            result.message
+            result.message,
+            "message",
+            showError
           );
         }
 
@@ -2291,34 +2333,68 @@
         }
 
         // Attach event listeners for real-time validation
-        nameInput.addEventListener("input", handleNameValidation);
-        nameInput.addEventListener("keyup", handleNameValidation);
-        nameInput.addEventListener("blur", handleNameValidation);
+        // On input: validate silently (don't show errors while typing)
+        // On blur: show errors when user leaves the field
+        nameInput.addEventListener("input", function() {
+          touchedFields.name = true;
+          handleNameValidation(false); // Don't show error while typing
+        });
+        nameInput.addEventListener("blur", function() {
+          touchedFields.name = true;
+          handleNameValidation(true); // Show error on blur
+        });
 
-        emailInput.addEventListener("input", handleEmailValidation);
-        emailInput.addEventListener("keyup", handleEmailValidation);
-        emailInput.addEventListener("blur", handleEmailValidation);
+        emailInput.addEventListener("input", function() {
+          touchedFields.email = true;
+          handleEmailValidation(false);
+        });
+        emailInput.addEventListener("blur", function() {
+          touchedFields.email = true;
+          handleEmailValidation(true);
+        });
 
-        phoneInput.addEventListener("input", handlePhoneValidation);
-        phoneInput.addEventListener("keyup", handlePhoneValidation);
-        phoneInput.addEventListener("blur", handlePhoneValidation);
+        phoneInput.addEventListener("input", function() {
+          touchedFields.phone = true;
+          handlePhoneValidation(false);
+        });
+        phoneInput.addEventListener("blur", function() {
+          touchedFields.phone = true;
+          handlePhoneValidation(true);
+        });
 
-        subjectInput.addEventListener("input", handleSubjectValidation);
-        subjectInput.addEventListener("keyup", handleSubjectValidation);
-        subjectInput.addEventListener("blur", handleSubjectValidation);
+        subjectInput.addEventListener("input", function() {
+          touchedFields.subject = true;
+          handleSubjectValidation(false);
+        });
+        subjectInput.addEventListener("blur", function() {
+          touchedFields.subject = true;
+          handleSubjectValidation(true);
+        });
 
-        messageInput.addEventListener("input", handleMessageValidation);
-        messageInput.addEventListener("keyup", handleMessageValidation);
-        messageInput.addEventListener("blur", handleMessageValidation);
+        messageInput.addEventListener("input", function() {
+          touchedFields.message = true;
+          handleMessageValidation(false);
+        });
+        messageInput.addEventListener("blur", function() {
+          touchedFields.message = true;
+          handleMessageValidation(true);
+        });
 
         // Form submission validation
         form.addEventListener("submit", function (e) {
-          // Validate all fields on submit
-          handleNameValidation();
-          handleEmailValidation();
-          handlePhoneValidation();
-          handleSubjectValidation();
-          handleMessageValidation();
+          // Mark all fields as touched and show all errors on submit
+          touchedFields.name = true;
+          touchedFields.email = true;
+          touchedFields.phone = true;
+          touchedFields.subject = true;
+          touchedFields.message = true;
+          
+          // Validate all fields on submit and show errors
+          handleNameValidation(true);
+          handleEmailValidation(true);
+          handlePhoneValidation(true);
+          handleSubjectValidation(true);
+          handleMessageValidation(true);
 
           if (!isFormValid()) {
             e.preventDefault();
