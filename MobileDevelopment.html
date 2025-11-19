@@ -277,6 +277,57 @@
         .phone-btn:hover {
             background: var(--tech-gradient);
         }
+        
+         /* Features Section */
+        .features-section {
+            margin-bottom: 60px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-item {
+            background: rgba(10, 10, 26, 0.7);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            border-color: var(--success);
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(39, 174, 96, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--success);
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .feature-content h3 {
+            color: var(--light);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-content p {
+            color: var(--gray);
+            margin: 0;
+        }
 
         .features-grid {
             display: grid;
@@ -663,31 +714,54 @@
         }
 
         /* Challenges Section */
-        .challenges-section {
+       .challenges-section {
             margin-bottom: 80px;
         }
 
+        .challenges-container {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 20px;
+            padding: 13px;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+        }
+
+        .challenges-title {
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
         .challenges-list {
-            max-width: 800px;
-            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
 
         .challenge-item {
-            background: rgba(15, 23, 42, 0.6);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-left: 4px solid var(--primary);
             display: flex;
-            align-items: center;
+            align-items: flex-start;
+            margin-bottom: 15px;
         }
 
         .challenge-icon {
             color: #ef4444;
             margin-right: 15px;
             font-size: 1.2rem;
+            margin-top: 3px;
         }
 
+        .challenge-text {
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+
+    
         /* Impact Section */
         .impact-section {
             margin-bottom: 80px;
@@ -1312,11 +1386,15 @@
         <div class="container">
             <div class="mobile-hero">
                 <h1 class="hero-title">Transform Your Business with Mobile Innovation</h1>
-                <p class="hero-subtitle">Cutting-edge Mobile Solutions for the Modern World</p>
                 <p class="hero-description">
                     At Zonixtec, we craft innovative mobile applications that transform user experiences. Our mobile
                     development expertise spans iOS, Android, and cross-platform solutions designed to elevate your
                     business to new heights.
+
+                    At Zonixtec, we specialize in creating mobile apps that do more than just look
+good—they perform, engage, and deliver measurable business value. Whether you need a
+native iOS app, a powerful Android solution, or a cross-platform app, our team ensures a
+smooth user experience and cutting-edge functionality that scales with your business.
                 </p>
                 <a href="booking.html?service=mobile-development" class="cta-button-large">Start Your App Journey
                     Today</a>
@@ -1417,8 +1495,13 @@
                             <i class="fab fa-apple"></i>
                         </div>
                         <h3 class="service-title">iOS App Development</h3>
+ 
                         <p class="service-description">Native iOS applications built with Swift and SwiftUI, optimized
                             for all Apple devices and following Apple's design guidelines.</p>
+
+                        <p class="service-description">Secure, reliable, and performance-driven apps for Apple
+devices.</p>
+
                     </div>
 
                     <div class="service-card">
@@ -1428,6 +1511,8 @@
                         <h3 class="service-title">Android App Development</h3>
                         <p class="service-description">Native Android applications using Kotlin and Java, designed for
                             diverse device compatibility and optimal performance.</p>
+
+                        <p class="service-description">Scalable apps that reach millions of Android users.</p>
                     </div>
 
                     <div class="service-card">
@@ -1437,6 +1522,10 @@
                         <h3 class="service-title">Cross-Platform Development</h3>
                         <p class="service-description">Efficient cross-platform solutions using React Native and Flutter
                             for consistent experiences across iOS and Android.</p>
+
+                        <h3 class="service-title">Cross-Platform App Development</h3>
+                        <p class="service-description">Cost-effective apps with one codebase for
+multiple platforms.</p>
                     </div>
 
                     <div class="service-card">
@@ -1464,6 +1553,78 @@
                         <h3 class="service-title">Mobile Game Development</h3>
                         <p class="service-description">Engaging mobile games with captivating graphics, smooth gameplay,
                             and monetization strategies.</p>
+
+                        <h3 class="service-title">Progressive Web Apps (PWAs) </h3>
+                        <p class="service-description">Lightweight apps with an app-like experience on
+browsers.</p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Features Section -->
+            <div class="features-section">
+                <h2 class="section-title">Features of Our <span>Solutions</span></h2>
+
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Intuitive UI/UX</h3>
+                            <p>Superior user experience designed to engage visitors and drive conversions.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>SEO-Optimized Structure</h3>
+                            <p>Built with search engine visibility in mind from the ground up.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Scalable Architecture</h3>
+                            <p>Future-proof solutions designed for long-term growth and expansion.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Fast-Loading Performance</h3>
+                            <p>Optimized for speed with mobile responsiveness as a core feature.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Secure Coding Practices</h3>
+                            <p>Robust security measures and data protection protocols implemented throughout.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Seamless Integration</h3>
+                            <p>Easy integration with APIs, CRMs, payment systems, and third-party services.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1651,7 +1812,6 @@
     </div>
 </div>
             
->>>>>>> main
             <!-- Challenges Section -->
             <div class="challenges-section">
                 <h2 class="section-title">Overcoming Mobile Development Challenges</h2>
@@ -1691,10 +1851,38 @@
                     <div class="challenge-item">
                         <div class="challenge-icon">
                             <i class="fas fa-exclamation-triangle"></i>
+                <div class="challenges-container">
+                    <h2 class="challenges-title">Challenges Without Mobile App Development</h2>
+                    <div class="challenges-list">
+                        <div class="challenge-item">
+                            <div class="challenge-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <p class="challenge-text">Losing mobile-first customers to competitors</p>
                         </div>
-                        <div>
-                            <h3>Platform Guidelines</h3>
-                            <p>Navigating the complex approval processes and guidelines of app stores.</p>
+                        <div class="challenge-item">
+                            <div class="challenge-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <p class="challenge-text">Lack of direct engagement with users.</p>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <p class="challenge-text">Difficulty in offering personalized experiences.</p>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <p class="challenge-text">Missed revenue opportunities in app-driven marketplaces.</p>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <p class="challenge-text">Poor brand visibility in the mobile ecosystem.</p>
                         </div>
                     </div>
                 </div>
@@ -1811,9 +1999,6 @@
                 </div>
             </div>
 
-
-
-=======
             <!-- FAQ Section -->
 <div class="faq-section">
     <h2 class="section-title">Frequently Asked Questions</h2>
@@ -1824,37 +2009,30 @@
                 <i class="fas fa-chevron-down"></i>
             </div>
             <div class="faq-answer">
-                <p>The timeline varies based on complexity, features, and platform. A basic app can take 2-4 months, while more complex applications may require 6+ months. We provide detailed timelines after understanding your specific requirements.</p>
+                <p>It depends on the complexity and features. Simple apps may take 2-3 months, while
+feature-rich apps can take 6+ months.</p>
             </div>
         </div>
         
         <div class="faq-item">
             <div class="faq-question">
-                <span>Should I choose native or cross-platform development?</span>
+                <span>Do you build apps for both iOS and Android?</span>
                 <i class="fas fa-chevron-down"></i>
             </div>
             <div class="faq-answer">
-                <p>Native development offers optimal performance and platform-specific features, while cross-platform solutions are more cost-effective and faster to develop. We'll help you choose the right approach based on your budget, timeline, and performance requirements.</p>
+                <p>Yes, we develop native apps for iOS & Android, as well as cross-platform apps to cover both
+with a single codebase.</p>
             </div>
         </div>
         
         <div class="faq-item">
             <div class="faq-question">
-                <span>How much does mobile app development cost?</span>
+                <span>Can you help upgrade or maintain an existing app?</span>
                 <i class="fas fa-chevron-down"></i>
             </div>
             <div class="faq-answer">
-                <p>Costs vary significantly based on features, complexity, and platforms. Basic apps start around $15,000, while enterprise solutions can range from $50,000 to $200,000+. We provide transparent pricing after a detailed requirements analysis.</p>
-            </div>
-        </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>Do you provide post-launch support?</span>
-                <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-                <p>Yes, we offer comprehensive post-launch support including bug fixes, updates for new OS versions, feature enhancements, and performance monitoring. We provide flexible support packages to meet your ongoing needs.</p>
+                <p>Absolutely! We provide app modernization, upgrades, bug fixes, and ongoing maintenance
+services.</p>
             </div>
         </div>
         
@@ -1864,7 +2042,19 @@
                 <i class="fas fa-chevron-down"></i>
             </div>
             <div class="faq-answer">
-                <p>We implement multiple security layers including data encryption, secure API communication, biometric authentication, code obfuscation, and regular security audits. We follow industry best practices and compliance standards for data protection.</p>
+                <p>We follow best practices like encryption, secure authentication, API protection, and regular
+security audits.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Will you also help publish my app to the App Store/Google Play?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Yes, our team assists in end-to-end deployment, including app store compliance, submission,
+and approvals.</p>
             </div>
         </div>
     </div>
@@ -2049,6 +2239,7 @@
         </div>
       </div> -->
             </div>
+    </div>
 
             <div class="footer-bottom">
                 <p>&copy; 2024 Zonixtec. All Rights Reserved. | Designed with by Zonixtec Team</p>
@@ -2131,9 +2322,6 @@
         //         menuIcon.classList.add('fa-bars');
         //     });
         // });
-
-
-       
 
         // Newsletter functionality
         document.addEventListener('DOMContentLoaded', function () {
