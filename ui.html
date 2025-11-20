@@ -22,6 +22,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="./CSS/30min-model.css">
     <style>
       :root {
         --primary: #2563eb;
@@ -148,16 +151,16 @@
         color: var(--secondary);
       }
 
-      .logo i {
-        margin-right: 10px;
-        color: var(--secondary);
-        font-size: 1.5rem;
-      }
-      /* ===== Dropdown Styles ===== */
-      .dropdown {
-        position: relative;
-        display: inline-block;
-      }
+        .logo i {
+            margin-right: 10px;
+            color: var(--secondary);
+            font-size: 1.5rem;
+        }
+        /* ===== Dropdown Styles ===== */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
 
       .dropdown-toggle {
         display: flex;
@@ -392,144 +395,89 @@
         font-weight: 600;
       }
 
-      .service-text {
-        color: #94a3b8;
-        line-height: 1.7;
-      }
-      /* Features Section */
-        .features-section {
-            margin-bottom: 60px;
+        .service-text {
+            color: #94a3b8;
+            line-height: 1.7;
         }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
+        /* Challenges & Solutions Section */
+        /* Challenges & Solutions Section */
+.challenges-solutions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
 
-        .feature-item {
-            background: rgba(10, 10, 26, 0.7);
-            padding: 25px;
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            transition: all 0.3s ease;
-        }
+.challenges-column, .solutions-column {
+    background: rgba(15, 23, 42, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid rgba(100, 116, 139, 0.2);
+}
 
-        .feature-item:hover {
-            border-color: var(--success);
-            transform: translateY(-5px);
-        }
+.challenges-title {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
 
-        .feature-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(39, 174, 96, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--success);
-            font-size: 1.3rem;
-            flex-shrink: 0;
-        }
+.column-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: var(--secondary);
+    position: relative;
+}
 
-        .feature-content h3 {
-            color: var(--light);
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
+.column-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--secondary);
+    border-radius: 2px;
+}
 
-        .feature-content p {
-            color: var(--gray);
-            margin: 0;
-        }
+.challenges-list, .solutions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
-        
-      /* Challenges & Solutions Section */
-      /* Challenges & Solutions Section */
-      .challenges-solutions-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        margin-top: 30px;
-      }
+.challenge-item, .solution-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
 
-      .challenges-column,
-      .solutions-column {
-        background: rgba(15, 23, 42, 0.3);
-        border-radius: 15px;
-        padding: 30px;
-        border: 1px solid rgba(100, 116, 139, 0.2);
-      }
+.challenge-icon {
+    color: #ef4444;
+    margin-right: 15px;
+    font-size: 1.2rem;
+    margin-top: 3px;
+}
 
-      .challenges-title {
-        text-align: center;
-        font-family: "Orbitron", sans-serif;
-        font-size: 2.2rem;
-        margin-bottom: 50px;
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
+.solution-icon {
+    color: var(--success);
+    margin-right: 15px;
+    font-size: 1.2rem;
+    margin-top: 3px;
+}
 
-      .column-title {
-        font-family: "Orbitron", sans-serif;
-        font-size: 1.5rem;
-        margin-bottom: 25px;
-        text-align: center;
-        color: var(--secondary);
-        position: relative;
-      }
-
-      .column-title::after {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 50px;
-        height: 3px;
-        background: var(--secondary);
-        border-radius: 2px;
-      }
-
-      .challenges-list,
-      .solutions-list {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      .challenge-item,
-      .solution-item {
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 10px;
-      }
-
-      .challenge-icon {
-        color: #ef4444;
-        margin-right: 15px;
-        font-size: 1.2rem;
-        margin-top: 3px;
-      }
-
-      .solution-icon {
-        color: var(--success);
-        margin-right: 15px;
-        font-size: 1.2rem;
-        margin-top: 3px;
-      }
-
-      .challenge-text,
-      .solution-text {
-        color: #94a3b8;
-        line-height: 1.7;
-      }
+.challenge-text, .solution-text {
+    color: #94a3b8;
+    line-height: 1.7;
+}
 
       /* Process Section */
       .process-section {
@@ -587,61 +535,61 @@
         font-size: 0.95rem;
       }
 
-      /* Technology Stack Section */
-      .tech-section {
-        background: rgba(10, 10, 26, 0.7);
-        border-radius: 10px;
-        padding: 60px;
-        margin-bottom: 60px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-      }
-
-      .tech-section h2 {
-        text-align: center;
-        color: var(--secondary);
-        margin-bottom: 40px;
-        font-family: "Orbitron", sans-serif;
-      }
-
-      .tech-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 30px;
-      }
-
-      .tech-category {
-        text-align: center;
-      }
-
-      .tech-category h3 {
-        color: var(--light);
-        margin-bottom: 20px;
-        font-size: 1.3rem;
-        font-family: "Orbitron", sans-serif;
-      }
-
-      .tech-items {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .tech-item {
-        background: rgba(255, 255, 255, 0.05);
-        padding: 12px 15px;
-        border-radius: 8px;
-        color: var(--gray);
-        transition: all 0.3s ease;
-      }
-
-      .tech-itemm {
-        background: rgba(255, 255, 255, 0.05);
-        padding: 12px 15px;
-        border-radius: 8px;
-        color: var(--gray);
-        margin-top: 30px;
-        transition: all 0.3s ease;
-      }
+        /* Technology Stack Section */
+        .tech-section {
+            background: rgba(10, 10, 26, 0.7);
+            border-radius: 10px;
+            padding: 60px;
+            margin-bottom: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .tech-section h2 {
+            text-align: center;
+            color: var(--secondary);
+            margin-bottom: 40px;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .tech-category {
+            text-align: center;
+        }
+        
+        .tech-category h3 {
+            color: var(--light);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .tech-items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .tech-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 15px;
+            border-radius: 8px;
+            color: var(--gray);
+            transition: all 0.3s ease;
+        }
+        
+        .tech-itemm {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 15px;
+            border-radius: 8px;
+            color: var(--gray);
+            margin-top: 30px;
+            transition: all 0.3s ease;
+        }
 
       .tech-item:hover {
         background: rgba(255, 255, 255, 0.08);
@@ -822,14 +770,14 @@
         padding-bottom: 10px;
       }
 
-      .hamburger-line {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: var(--light);
-        margin: 5px 0;
-        transition: all 0.3s ease;
-      }
+        .hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--light);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
 
       /* .footer-col h3::after {
             content: '';
@@ -1047,15 +995,16 @@
           padding: 18px 1px;
         }
 
-        .footer-col h3 {
-          font-family: "Orbitron", sans-serif;
-          font-size: 1.3rem;
-          margin-bottom: 20px;
-          color: var(--secondary);
-          position: relative;
-          padding-bottom: 10px;
+            .footer-col h3 {
+                font-family: 'Orbitron', sans-serif;
+                font-size: 1.3rem;
+                margin-bottom: 20px;
+                color: var(--secondary);
+                position: relative;
+                padding-bottom: 10px;
+            }
+
         }
-      }
 
       /* ===== RESPONSIVE FIXES ===== */
       @media (max-width: 1200px) {
@@ -1382,28 +1331,20 @@
               </div>
             </div>
 
-            <a href="carrer.html">Career</a>
-            <a href="contact.html">Contact</a>
-            <a
-              href="javascript:void(0);"
-              class="cta-buttons"
-              onclick="openBookingModal()"
-            >
-              <i class="fas fa-phone-alt"></i>Book A 30 Min Call
-            </a>
-          </div>
-
-          <button
-            class="mobile-menu-btn"
-            aria-label="Toggle mobile menu"
-            onclick="window.toggleMobileMenu && window.toggleMobileMenu()"
-          >
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-          </button>
-        </nav>
-      </div>
+                    <a href="carrer.html">Career</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="javascript:void(0);" class="cta-buttons" onclick="openBookingModal()">
+                        <i class="fas fa-phone-alt"></i>Book A 30 Min Call
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-btn" aria-label="Toggle mobile menu" onclick="window.toggleMobileMenu && window.toggleMobileMenu()">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </nav>
+        </div>
     </header>
 
     <section class="section-padding">
@@ -1506,164 +1447,87 @@
             </p>
           </div>
 
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fas fa-book"></i>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="service-title">Design System & Guidelines</h3>
+                    <p class="service-text">Establishing comprehensive design systems to ensure consistent brand
+                        identity across all touchpoints.</p>
+                </div>
             </div>
-            <h3 class="service-title">Design System & Guidelines</h3>
-            <p class="service-text">
-              Establishing comprehensive design systems to ensure consistent
-              brand identity across all touchpoints.
-            </p>
-          </div>
-        </div>
 
-        <!-- Features Section -->
-            <div class="features-section">
-                <h2 class="section-title">Features of Our <span>Solutions</span></h2>
-
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-user-friends"></i>
-                        </div>
-                        <div class="feature-content">
-                            <h3>User-Centered Approach</h3>
-                            <p>Every screen is designed with real user behavior in mind to improve usability and satisfaction.</p>
-                        </div>
-                    </div>
-
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <div class="feature-content">
-                            <h3>Engaging Visuals & Intuitive Navigation</h3>
-                            <p>Clean layouts and smooth navigation flow help users find what they need quickly and effortlessly.</p>
-                        </div>
-                    </div>
-
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-expand-arrows-alt"></i>
-                        </div>
-                        <div class="feature-content">
-                            <h3>Cross-Platform Compatibility</h3>
-                            <p>Designs that look and perform consistently across mobile, tablet, and desktop devices.</p>
-                        </div>
-                    </div>
-
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-tachometer-alt"></i>
-                        </div>
-                        <div class="feature-content">
-                            <h3>Scalable & Future-Ready Designs</h3>
-                            <p>Flexible UI structures that can grow as your product expands without redesigning everything.</p>
-                        </div>
-                    </div>
-
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div class="feature-content">
-                            <h3>Data-Driven Insights for Better Conversions</h3>
-                            <p>Design decisions supported by analytics, helping you increase engagement and user conversions.</p>
-                        </div>
-                    </div>
-
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-plug"></i>
-                        </div>
-                        <div class="feature-content">
-                            <h3>Accessibility-Ready Interfaces</h3>
-                            <p>Inclusive designs that ensure every user can navigate and use your product with ease.</p>
-                        </div>
-                 </div>
-            </div>
-        </div>
+            <!-- Challenges & Solutions -->
+            <!-- Challenges & Solutions Section -->
+<div class="challenges-section">
+    <div class="challenges-container">
+        <h2 class="challenges-title">Challenges & Solutions</h2>
         
-        <!-- Challenges & Solutions -->
-        <!-- Challenges & Solutions Section -->
-        <div class="challenges-section">
-          <div class="challenges-container">
-            <h2 class="challenges-title">Challenges & Solutions</h2>
-
-            <div class="challenges-solutions-grid">
-              <!-- Challenges Column -->
-              <div class="challenges-column">
+        <div class="challenges-solutions-grid">
+            <!-- Challenges Column -->
+            <div class="challenges-column">
                 <h3 class="column-title">Challenges Without UI/UX Design</h3>
                 <div class="challenges-list">
-                  <div class="challenge-item">
-                    <div class="challenge-icon">
-                      <i class="fas fa-exclamation-circle"></i>
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p class="challenge-text">Confusing navigation frustrates users</p>
                     </div>
-                    <p class="challenge-text">
-                      Confusing navigation frustrates users
-                    </p>
-                  </div>
-                  <div class="challenge-item">
-                    <div class="challenge-icon">
-                      <i class="fas fa-exclamation-circle"></i>
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p class="challenge-text">Poor user engagement lowers retention</p>
                     </div>
-                    <p class="challenge-text">
-                      Poor user engagement lowers retention
-                    </p>
-                  </div>
-                  <div class="challenge-item">
-                    <div class="challenge-icon">
-                      <i class="fas fa-exclamation-circle"></i>
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p class="challenge-text">Outdated visuals harm brand credibility</p>
                     </div>
-                    <p class="challenge-text">
-                      Outdated visuals harm brand credibility
-                    </p>
-                  </div>
-                  <div class="challenge-item">
-                    <div class="challenge-icon">
-                      <i class="fas fa-exclamation-circle"></i>
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p class="challenge-text">Higher bounce rates and lower conversions</p>
                     </div>
-                    <p class="challenge-text">
-                      Higher bounce rates and lower conversions
-                    </p>
-                  </div>
                 </div>
-              </div>
-
-              <!-- Solutions Column -->
-              <div class="solutions-column">
+            </div>
+            
+            <!-- Solutions Column -->
+            <div class="solutions-column">
                 <h3 class="column-title">Our Solutions</h3>
                 <div class="solutions-list">
-                  <div class="solution-item">
-                    <div class="solution-icon">
-                      <i class="fas fa-check-circle"></i>
+                    <div class="solution-item">
+                        <div class="solution-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <p class="solution-text">Increase user satisfaction</p>
                     </div>
-                    <p class="solution-text">Increase user satisfaction</p>
-                  </div>
-                  <div class="solution-item">
-                    <div class="solution-icon">
-                      <i class="fas fa-check-circle"></i>
+                    <div class="solution-item">
+                        <div class="solution-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <p class="solution-text">Boost retention rates</p>
                     </div>
-                    <p class="solution-text">Boost retention rates</p>
-                  </div>
-                  <div class="solution-item">
-                    <div class="solution-icon">
-                      <i class="fas fa-check-circle"></i>
+                    <div class="solution-item">
+                        <div class="solution-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <p class="solution-text">Improve overall brand value</p>
                     </div>
-                    <p class="solution-text">Improve overall brand value</p>
-                  </div>
-                  <div class="solution-item">
-                    <div class="solution-icon">
-                      <i class="fas fa-check-circle"></i>
+                    <div class="solution-item">
+                        <div class="solution-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <p class="solution-text">Drive higher conversions</p>
                     </div>
-                    <p class="solution-text">Drive higher conversions</p>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
+    </div>
+</div>
 
         <!-- Process Section -->
         <div class="process-section">
@@ -1717,25 +1581,25 @@
           </div>
         </div>
 
-        <!-- Technology Stack -->
-        <div class="tech-section">
-          <h2>Our Design Technology Stack</h2>
+            <!-- Technology Stack -->
+<div class="tech-section">
+    <h2>Our Design Technology Stack</h2>
 
-          <div class="tech-grid">
-            <div class="tech-category">
-              <h3>Design & Prototyping</h3>
-              <div class="tech-items">
+    <div class="tech-grid">
+        <div class="tech-category">
+            <h3>Design & Prototyping</h3>
+            <div class="tech-items">
                 <div class="tech-item">Figma</div>
                 <div class="tech-item">Adobe XD</div>
                 <div class="tech-item">Sketch</div>
                 <div class="tech-item">InVision Studio</div>
                 <div class="tech-item">Proto.io</div>
-              </div>
             </div>
-
-            <div class="tech-category">
-              <h3>Collaboration & Wireframing</h3>
-              <div class="tech-items">
+        </div>
+        
+        <div class="tech-category">
+            <h3>Collaboration & Wireframing</h3>
+            <div class="tech-items">
                 <div class="tech-item">Miro</div>
                 <div class="tech-item">Figma Jam</div>
                 <div class="tech-item">Whimsical</div>
@@ -1828,21 +1692,16 @@
           </div>
         </div>
 
-        <!-- CTA Section -->
-        <div class="cta-container">
-          <h2 class="cta-title">Ready to Transform Your Digital Experience?</h2>
-          <p class="cta-description">
-            Let's collaborate to create intuitive, beautiful, and effective
-            designs that engage your users and drive business growth. Our design
-            team is ready to bring your vision to life.
-          </p>
-          <button
-            class="cta-button-large"
-            onclick="window.location.href='booking.html?service=ui-ux-design'"
-          >
-            Start Your Design Project Today
-          </button>
-        </div>
+            <!-- CTA Section -->
+            <div class="cta-container">
+                <h2 class="cta-title">Ready to Transform Your Digital Experience?</h2>
+                <p class="cta-description">
+                    Let's collaborate to create intuitive, beautiful, and effective designs that engage your users and
+                    drive business growth. Our design team is ready to bring your vision to life.
+                </p>
+                <button class="cta-button-large" onclick="window.location.href='booking.html?service=ui-ux-design'">Start Your Design Project
+                    Today</button>
+            </div>
 
         <!-- FAQ Section -->
         <div class="faq-section">
@@ -2151,9 +2010,9 @@
     </script>
 
     <script>
-      // Mobile menu toggle
-      const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
-      const navLinks = document.querySelector(".nav-links");
+        // Mobile menu toggle
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
 
       if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener("click", function () {
@@ -2195,20 +2054,20 @@
         }
       });
 
-      // Close menu when clicking on a link
-      document.querySelectorAll(".nav-links a").forEach((link) => {
-        link.addEventListener("click", () => {
-          navLinks.classList.remove("active");
-
-          // Reset hamburger animation
-          const hamburgerLines = document.querySelectorAll(".hamburger-line");
-          hamburgerLines[0].style.transform = "none";
-          hamburgerLines[1].style.opacity = "1";
-          hamburgerLines[2].style.transform = "none";
-        });
-      });
-      // FAQ toggle functionality
-      const faqItems = document.querySelectorAll(".faq-item");
+// Close menu when clicking on a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        
+        // Reset hamburger animation
+        const hamburgerLines = document.querySelectorAll('.hamburger-line');
+        hamburgerLines[0].style.transform = 'none';
+        hamburgerLines[1].style.opacity = '1';
+        hamburgerLines[2].style.transform = 'none';
+    });
+});
+        // FAQ toggle functionality
+        const faqItems = document.querySelectorAll('.faq-item');
 
       faqItems.forEach((item) => {
         const question = item.querySelector(".faq-question");
@@ -2255,116 +2114,92 @@
     <script src="./script/chatbot.js"></script>
 
     <!-- Booking Modal -->
-    <div class="modal" id="bookingModal">
-      <div class="modal-content">
+<div class="modal" id="bookingModal">
+    <div class="modal-content">
         <button class="close-modal" onclick="closeBookingModal()">
-          <i class="fas fa-times"></i>
+            <i class="fas fa-times"></i>
         </button>
-
+        
         <div class="modal-header">
-          <h2>Book Your Free 30-Minute Consultation</h2>
-          <p>Let's discuss how we can help transform your business</p>
+            <h2>Book Your Free 30-Minute Consultation</h2>
+            <p>Let's discuss how we can help transform your business</p>
         </div>
 
         <form class="booking-form" id="bookingForm">
-          <div class="form-row">
-            <div class="form-group-modal">
-              <label>Full Name <span>*</span></label>
-              <input
-                type="text"
-                id="bookingName"
-                placeholder="Enter your full name"
-                required
-              />
+            <div class="form-row">
+                <div class="form-group-modal">
+                    <label>Full Name <span>*</span></label>
+                    <input type="text" id="bookingName" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group-modal">
+                    <label>Email Address <span>*</span></label>
+                    <input type="email" id="bookingEmail" placeholder="your@email.com" required>
+                </div>
             </div>
-            <div class="form-group-modal">
-              <label>Email Address <span>*</span></label>
-              <input
-                type="email"
-                id="bookingEmail"
-                placeholder="your@email.com"
-                required
-              />
-            </div>
-          </div>
 
-          <div class="form-row">
-            <div class="form-group-modal">
-              <label>Phone Number <span>*</span></label>
-              <input
-                type="tel"
-                id="bookingPhone"
-                placeholder="+91 999999999"
-                required
-              />
+            <div class="form-row">
+                <div class="form-group-modal">
+                    <label>Phone Number <span>*</span></label>
+                    <input type="tel" id="bookingPhone" placeholder="+91 999999999" required>
+                </div>
+                <div class="form-group-modal">
+                    <label>Company Name</label>
+                    <input type="text" id="bookingCompany" placeholder="Your company (optional)">
+                </div>
             </div>
-            <div class="form-group-modal">
-              <label>Company Name</label>
-              <input
-                type="text"
-                id="bookingCompany"
-                placeholder="Your company (optional)"
-              />
+
+            <div class="form-row">
+                <div class="form-group-modal">
+                    <label>Preferred Date <span>*</span></label>
+                    <input type="date" id="bookingDate" required>
+                </div>
+                <div class="form-group-modal">
+                    <label>Preferred Time <span>*</span></label>
+                    <input type="time" id="bookingTime" required>
+                </div>
             </div>
-          </div>
 
-          <div class="form-row">
             <div class="form-group-modal">
-              <label>Preferred Date <span>*</span></label>
-              <input type="date" id="bookingDate" required />
+                <label>Service Interested In <span>*</span></label>
+                <select id="bookingService" required>
+                    <option value="">Select a service</option>
+                    <option value="CRM Solutions">CRM Solutions</option>
+                    <option value="ERP Solutions">ERP Solutions</option>
+                    <option value="Billing Software">Billing Software</option>
+                    <option value="Website Development">Website Development</option>
+                    <option value="Mobile App Development">Mobile App Development</option>
+                    <option value="AI Solutions">AI Solutions</option>
+                    <option value="Cloud Solutions">Cloud Solutions</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                    <option value="UI/UX Design">UI/UX Design</option>
+                    <option value="Other">Other</option>
+                </select>
             </div>
+
             <div class="form-group-modal">
-              <label>Preferred Time <span>*</span></label>
-              <input type="time" id="bookingTime" required />
+                <label>Message / Additional Details</label>
+                <textarea id="bookingMessage" placeholder="Tell us about your project or questions..."></textarea>
             </div>
-          </div>
 
-          <div class="form-group-modal">
-            <label>Service Interested In <span>*</span></label>
-            <select id="bookingService" required>
-              <option value="">Select a service</option>
-              <option value="CRM Solutions">CRM Solutions</option>
-              <option value="ERP Solutions">ERP Solutions</option>
-              <option value="Billing Software">Billing Software</option>
-              <option value="Website Development">Website Development</option>
-              <option value="Mobile App Development">
-                Mobile App Development
-              </option>
-              <option value="AI Solutions">AI Solutions</option>
-              <option value="Cloud Solutions">Cloud Solutions</option>
-              <option value="Digital Marketing">Digital Marketing</option>
-              <option value="UI/UX Design">UI/UX Design</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-
-          <div class="form-group-modal">
-            <label>Message / Additional Details</label>
-            <textarea
-              id="bookingMessage"
-              placeholder="Tell us about your project or questions..."
-            ></textarea>
-          </div>
-
-          <button type="submit" class="submit-booking-btn">
-            <i class="fas fa-calendar-check"></i> Book My Call
-          </button>
+            <button type="submit" class="submit-booking-btn">
+                <i class="fas fa-calendar-check"></i> Book My Call
+            </button>
         </form>
-      </div>
     </div>
+</div>
 
-    <!-- Success Message Overlay -->
-    <div class="success-message" id="bookingSuccess">
-      <i class="fas fa-check-circle"></i>
-      <strong>Your Call is Booked!</strong>
-      <p>
-        Our team will connect with you as soon as possible. Thank you for
-        choosing Zonixtec!
-      </p>
-    </div>
+<!-- Success Message Overlay -->
+<div class="success-message" id="bookingSuccess">
+    <i class="fas fa-check-circle"></i> 
+    <strong>Your Call is Booked!</strong>
+    <p>Our team will connect with you as soon as possible. Thank you for choosing Zonixtec!</p>
+</div>
+
 
     <!-- Booking Modal Script -->
     <script src="./script/booking-modal.js"></script>
+    <script src="./script/30min-booking.js"></script>
+
     <script src="./script/allabout.js"></script>
   </body>
 </html>

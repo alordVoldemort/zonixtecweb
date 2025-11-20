@@ -11,7 +11,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <style>
+        <link rel="stylesheet" href="CSS/30min-model.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+   <style>
         :root {
             --primary: #0066ff;
             --primary-dark: #0044cc;
@@ -197,7 +200,7 @@
 
         /* Career Hero Section */
         .career-hero {
-            padding: 200px 0 100px;
+            padding: 130px 0 100px;
             position: relative;
             overflow: hidden;
         }
@@ -317,12 +320,12 @@
         .search-input {
             flex: 1;
             padding: 12px 15px;
-            border-radius: 8px;
+            border-radius: 5px;
             border: 1px solid rgba(100, 116, 139, 0.3);
             background: rgba(15, 23, 42, 0.5);
             color: var(--light);
             font-size: 1rem;
-            min-height: 48px;
+            height: 48px; /* Match dropdown height */
             transition: all 0.3s ease;
         }
 
@@ -341,7 +344,7 @@
             color: white;
             border: none;
             padding: 12px 25px;
-            border-radius: 8px;
+            border-radius: 5px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -352,6 +355,9 @@
             font-size: 1rem;
             white-space: nowrap;
             min-height: 48px;
+            height: 48px;
+            width: 100%;
+            max-width: 330px;
         }
 
         .search-btn:hover {
@@ -365,7 +371,7 @@
 
         /* Job Listings */
         .job-listings {
-            margin: 80px 0;
+            margin: 0px 0;
         }
 
         .job-card {
@@ -1032,28 +1038,220 @@
         }
 
         /* ===== Mobile Responsive Styles ===== */
-        @media (max-width: 1200px) {
+        /* Desktop/Laptop (above 1366px) - Default styles apply */
+        
+        /* iPad Pro (1024px to 1366px) - Larger Tablet */
+        @media (min-width: 1024px) and (max-width: 1366px) {
+            .career-hero {
+                padding: 180px 0 80px;
+            }
+
+            .career-hero-title {
+                font-size: 3.4rem;
+            }
+
+            .career-hero-content {
+                padding-top: 50px;
+                grid-template-columns: 1fr 1fr;
+                gap: 45px;
+            }
+
+            .hero-text {
+                padding-right: 20px;
+            }
+
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
+
+            .hero-description {
+                font-size: 1.1rem;
+            }
+
             .section-padding {
-                padding: 80px 0;
+                padding: 70px 0;
+            }
+
+            .section-title {
+                font-size: 2.3rem;
+            }
+
+            .search-container {
+                padding: 30px;
+                margin: 0px 0;
+            }
+
+            .search-filters {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .search-box {
+                margin-top: 20px;
+            }
+
+            .search-input {
+                height: 48px;
+            }
+
+            .search-btn {
+                height: 48px;
+                min-height: 48px;
+            }
+
+            .job-listings {
+                margin: 0px 0;
+            }
+
+            .job-card {
+                padding: 25px;
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .life-grid,
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 25px;
+            }
+
+            .why-join-us,
+            .life-at-zonixtec,
+            .employee-benefits,
+            .faq-section,
+            .stats-section {
+                margin: 70px 0;
             }
         }
 
-        @media (max-width: 992px) {
+        /* iPad Mini & iPad Air (768px to 1023px) - Smaller Tablets */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .career-hero {
+                padding: 160px 0 60px;
+            }
+
             .career-hero-title {
-                font-size: 3.2rem;
+                font-size: 2.8rem;
             }
 
             .career-hero-content {
                 grid-template-columns: 1fr;
+                gap: 30px;
             }
 
             .hero-text {
+                padding-top: 75px;
                 padding-right: 0;
                 text-align: center;
             }
+
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .hero-image img {
+                max-width: 90%;
+            }
+
+            .section-padding {
+                padding: 50px 0;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .search-container {
+                padding: 20px;
+                margin: 40px 0;
+            }
+
+            .search-filters {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .search-box {
+                margin-top: 15px;
+                flex-direction: column;
+            }
+
+            .search-input {
+                width: 100%;
+                height: 48px;
+            }
+
+            .search-btn {
+                width: 100%;
+                justify-content: center;
+                min-height: 48px;
+                height: 48px;
+            }
+
+            .job-listings {
+                margin: 0px 0;
+            }
+
+            .job-card {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            .job-title {
+                font-size: 1.4rem;
+            }
+
+            .values-grid,
+            .life-grid,
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                margin-top: 30px;
+            }
+
+            .value-card,
+            .life-card,
+            .benefit-card {
+                padding: 25px;
+            }
+
+            .why-join-us,
+            .life-at-zonixtec,
+            .employee-benefits,
+            .faq-section,
+            .stats-section {
+                margin: 60px 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .custom-application {
+                padding: 40px 30px;
+                margin: 60px 0;
+            }
+
+            .custom-title {
+                font-size: 2rem;
+            }
         }
 
-        @media (max-width: 768px) {
+        /* Mobile View (below 768px) */
+        @media (max-width: 767px) {
 
             /* Header adjustments */
             .logo {
@@ -1088,15 +1286,38 @@
 
             /* Hero section */
             .career-hero {
-                padding: 150px 0 50px;
+                padding: 140px 0 50px;
+            }
+
+            .career-hero-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .hero-text {
+                order: 1;
+                padding-right: 0;
+                text-align: center;
             }
 
             .career-hero-title {
                 font-size: 2.8rem;
+                margin-bottom: 20px;
             }
 
             .hero-subtitle {
                 font-size: 1.3rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .hero-image {
+                order: 2;
+                margin-top: 20px;
             }
 
             /* Search section responsive */
@@ -1115,6 +1336,8 @@
             .search-input {
                 padding: 14px 15px;
                 font-size: 1rem;
+                width: 100%;
+                height: auto;
             }
 
             .search-filters {
@@ -1741,7 +1964,7 @@
                     </div>
 
 
-                    <a href="carrer.html">Career</a>
+                    <a href="carrer.html">Careers</a>
                     <a href="contact.html">Contact</a>
                     <a href="javascript:void(0);" class="cta-buttons" onclick="openBookingModal()">
                         <i class="fas fa-phone-alt"></i>Book A 30 Min Call
@@ -2179,7 +2402,6 @@
         <div class="footer-links">
           <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
           <a href="Testimonials.html"><i class="fas fa-chevron-right"></i> Testimonials</a>
-          <a href="carrer.html"><i class="fas fa-chevron-right"></i> Careers</a>
           <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a>
         </div>
       </div>
@@ -2769,79 +2991,187 @@ document.querySelectorAll('.footer-dropdown-header').forEach(header => {
 
 
     <!-- Booking Modal -->
-<div class="modal" id="bookingModal">
-    <div class="modal-content">
-        <button class="close-modal" onclick="closeBookingModal()">
-            <i class="fas fa-times"></i>
-        </button>
-        
-        <div class="modal-header">
-            <h2>Book Your Free 30-Minute Consultation</h2>
-            <p>Let's discuss how we can help transform your business</p>
+ <!--open booking 30 min call modal -->
+
+    <div id="bookingModal" class="booking-modal">
+        <div class="booking-modal-content">
+
+            <!-- CLOSE BUTTON -->
+            <span class="booking-modal-close" onclick="closeBookingModal()">&times;</span>
+
+            <!-- STEP PROGRESS -->
+            <div class="booking-progress-indicator">
+                <div class="booking-progress-step booking-active" id="progress1" data-step="1"></div>
+                <div class="booking-progress-line" id="line1"></div>
+                <div class="booking-progress-step" id="progress2" data-step="2"></div>
+                <div class="booking-progress-line" id="line2"></div>
+                <div class="booking-progress-step" id="progress3" data-step="3"></div>
+                <div class="booking-progress-line" id="line3"></div>
+                <div class="booking-progress-step" id="progress4" data-step="4"></div>
+            </div>
+
+            <!-- STEP 1 -->
+            <div class="booking-modal-step booking-active" id="step1">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">1</div>
+                    <h2 class="booking-step-title">Zonixtec — 30-Minute Discovery Call</h2>
+                </div>
+
+                <div class="booking-discovery-subtitle">
+                    Duration: 30 Minutes | Mode: Web Conference
+                </div>
+
+                <div class="booking-session-overview">
+                    <h4 class="booking-session-title">In this quick session, we'll cover:</h4>
+                    <div class="booking-session-items-grid">
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Introduction & Requirement Understanding</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Relevant Use Case Demo</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Technology Solutions & Offerings</span>
+                        </div>
+                        <div class="booking-session-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Project Roadmap & Next Steps</span>
+                        </div>
+                    </div>
+
+                    <div class="booking-discovery-goal">
+                        <strong>Goal:</strong>
+                        <p>Understand your needs and explore how Zonixtec can deliver the right tech solutions for your
+                            project.</p>
+                    </div>
+                </div>
+
+                <div class="booking-step-navigation">
+                    <div></div>
+                    <button class="booking-btn-primary" onclick="nextStep(1)">
+                        Next: Select Date <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="booking-modal-step" id="step2">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">2</div>
+                    <h2 class="booking-step-title">Select Your Preferred Date</h2>
+                </div>
+
+                <input type="text" id="dateInput" class="booking-calendar-input" placeholder="Pick a date" readonly />
+
+                <div class="booking-step-navigation">
+                    <button class="booking-btn-secondary" onclick="previousStep(2)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="booking-btn-primary" id="dateNextBtn" onclick="nextStep(2)" disabled>
+                        Next: Select Time <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="booking-modal-step" id="step3">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">3</div>
+                    <h2 class="booking-step-title">Choose Your Time Slot</h2>
+                </div>
+
+                <div class="booking-time-slots">
+                    <div class="booking-time-slot" data-time="10:30">10:30 AM</div>
+                    <div class="booking-time-slot" data-time="11:30">11:30 AM</div>
+                    <div class="booking-time-slot" data-time="12:00">12:00 PM</div>
+                    <div class="booking-time-slot" data-time="12:30">12:30 PM</div>
+                    <div class="booking-time-slot" data-time="13:00">1:00 PM</div>
+                    <div class="booking-time-slot" data-time="13:30">1:30 PM</div>
+                    <div class="booking-time-slot" data-time="14:00">2:00 PM</div>
+                    <div class="booking-time-slot" data-time="14:30">2:30 PM</div>
+                    <div class="booking-time-slot" data-time="15:00">3:00 PM</div>
+                    <div class="booking-time-slot" data-time="15:30">3:30 PM</div>
+                    <div class="booking-time-slot" data-time="16:00">4:00 PM</div>
+                    <div class="booking-time-slot" data-time="16:30">4:30 PM</div>
+                    <div class="booking-time-slot" data-time="17:00">5:00 PM</div>
+                </div>
+
+                <div class="booking-step-navigation">
+                    <button class="booking-btn-secondary" onclick="previousStep(3)">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="booking-btn-primary" id="timeNextBtn" onclick="nextStep(3)" disabled>
+                        Next: Your Info <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="booking-modal-step" id="step4">
+                <div class="booking-step-header">
+                    <div class="booking-step-number">4</div>
+                    <h2 class="booking-step-title">Your Information</h2>
+                </div>
+
+                <form class="booking-modal-form" id="bookingFormPage">
+
+                    <div class="form-group-row">
+                        <label for="bookingName">Full Name</label>
+                        <input type="text" id="bookingName" placeholder="Enter your full name" required />
+                    </div>
+                    <span class="error-text" id="nameError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingEmail">Email</label>
+                        <input type="email" id="bookingEmail" placeholder="Enter your email" required />
+                    </div>
+                    <span class="error-text" id="emailError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingPhone">Phone</label>
+                        <input type="tel" id="bookingPhone" placeholder="Enter your phone number" required />
+                    </div>
+                    <span class="error-text" id="phoneError"></span>
+
+                    <div class="form-group-row">
+                        <label for="bookingCompany">Company</label>
+                        <input type="text" id="bookingCompany" placeholder="Company (optional)" />
+                    </div>
+
+                    <div class="form-group-row">
+                        <label for="bookingMessage">Message</label>
+                        <textarea id="bookingMessage" placeholder="Describe what services you need..."></textarea>
+                    </div>
+
+                    <div class="booking-step-navigation">
+                        <button type="button" class="booking-btn-secondary" onclick="previousStep(4)">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </button>
+
+                        <button type="submit" class="booking-btn-primary">
+                            <i class="fas fa-calendar-check"></i> Book My Free Consultation
+                        </button>
+                    </div>
+
+                </form>
+
+
+
+            </div>
+
+            <!-- SUCCESS -->
+            <div id="bookingSuccessPage" class="booking-success-message">
+                <i class="fas fa-check-circle"></i>
+                <h3>Your Call is Booked!</h3>
+                <p>Our team will contact you shortly. Thank you!</p>
+            </div>
+
         </div>
-
-        <form class="booking-form" id="bookingForm">
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Full Name <span>*</span></label>
-                    <input type="text" id="bookingName" placeholder="Enter your full name" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Email Address <span>*</span></label>
-                    <input type="email" id="bookingEmail" placeholder="your@email.com" required>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Phone Number <span>*</span></label>
-                    <input type="tel" id="bookingPhone" placeholder="+91 999999999" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Company Name</label>
-                    <input type="text" id="bookingCompany" placeholder="Your company (optional)">
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group-modal">
-                    <label>Preferred Date <span>*</span></label>
-                    <input type="date" id="bookingDate" required>
-                </div>
-                <div class="form-group-modal">
-                    <label>Preferred Time <span>*</span></label>
-                    <input type="time" id="bookingTime" required>
-                </div>
-            </div>
-
-            <div class="form-group-modal">
-                <label>Service Interested In <span>*</span></label>
-                <select id="bookingService" required>
-                    <option value="">Select a service</option>
-                    <option value="CRM Solutions">CRM Solutions</option>
-                    <option value="ERP Solutions">ERP Solutions</option>
-                    <option value="Billing Software">Billing Software</option>
-                    <option value="Website Development">Website Development</option>
-                    <option value="Mobile App Development">Mobile App Development</option>
-                    <option value="AI Solutions">AI Solutions</option>
-                    <option value="Cloud Solutions">Cloud Solutions</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="UI/UX Design">UI/UX Design</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-
-            <div class="form-group-modal">
-                <label>Message / Additional Details</label>
-                <textarea id="bookingMessage" placeholder="Tell us about your project or questions..."></textarea>
-            </div>
-
-            <button type="submit" class="submit-booking-btn">
-                <i class="fas fa-calendar-check"></i> Book My Call
-            </button>
-        </form>
     </div>
-</div>
+
 
 <!-- Success Message Overlay -->
 <div class="success-message" id="bookingSuccess">
@@ -2856,6 +3186,7 @@ document.querySelectorAll('.footer-dropdown-header').forEach(header => {
     <!-- Booking Modal Script -->
     <script src="./script/booking-modal.js"></script>
     <script src="./script/navbar.js"></script>
+    <script src="./script/30min-booking.js"></script>
 
     <script src="./script/allabout.js"></script>
 
